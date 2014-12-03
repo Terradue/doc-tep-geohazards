@@ -1,0 +1,30 @@
+{# Import the theme's layout. #}
+{% extends "!layout.html" %}
+
+{# Add some extra stuff before and use existing with 'super()' call. #}
+{% block extrahead %}
+    <link rel="stylesheet" href="{{ pathto('_static/eceo.css', 1) }}" type="text/css" />
+  {{ super() }}
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+	<div class="container">
+		<img src="{{ pathto('_static/t2LogoLittleWhite.png', 1) }}">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+{% endblock %}
+
+{% block sidebar1 %}
+<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>
+{{ bsidebar() }}
+{% endblock %}

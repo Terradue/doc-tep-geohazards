@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.terradue</groupId>
+		<artifactId>t2-parent</artifactId>
+		<version>11</version>
+	</parent>
+
+	<groupId>com.terradue.tag</groupId>
+	<artifactId>doc-tep-geohazards</artifactId>
+	<packaging>rpm</packaging>
+	<description>Documentation for tep-geohazards</description>
+	<version>0.5-SNAPSHOT</version>
+	
+	<scm>
+		<connection>scm:git:git@github.com:Terradue/doc-tep-geohazards.git</connection>
+		<developerConnection>scm:git:git@github.com:Terradue/doc-tep-geohazards.git</developerConnection>
+		<url>https://github.com/Terradue/doc-tep-geohazards</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>generate-doc</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>make</executable>
+							<arguments>
+								<argument>clean</argument>
+								<argument>html</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>make</executable>
+							<arguments>
+								<argument>test</argument>
+							</arguments>
+							<successCodes>
+								<successCode>0</successCode>
+								<successCode>1</successCode>
+								<successCode>2</successCode>
+							</successCodes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> -->
+			<!-- <groupId>org.nuiton.jredmine</groupId> -->
+			<!-- <artifactId>jredmine-maven-plugin</artifactId> -->
+			<!-- <inherited>false</inherited> -->
+			<!-- </plugin> -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>rpm</id> <!-- this is used for inheritance merges -->
+						<phase>prepare-package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>${basedir}/source/assembly/package-html.xml</descriptor>
+							</descriptors>
+							<appendAssemblyId>true</appendAssemblyId>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>rpm-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<copyright>${inceptionYear}, Terradue</copyright>
+					<distribution>Terradue ${inceptionYear}</distribution>
+					<group>tag</group>
+					<packager>Terradue</packager>
+					<name>${project.artifactId}</name>
+					<defaultUsername>root</defaultUsername>
+					<defaultGroupname>root</defaultGroupname>
+					<defaultDirmode>755</defaultDirmode>
+					<defaultFilemode>644</defaultFilemode>
+					<defineStatements>
+						<defineStatement>__jar_repack 0</defineStatement>
+						<defineStatement>__os_install_post %{nil}</defineStatement>
+					</defineStatements>
+					<mappings>
+						<mapping>
+							<directory>/var/www/html/challenges</directory>
+							<filemode>755</filemode>
+							<sources>
+								<source>
+									<location>${basedir}/_build/html</location>
+								</source>
+							</sources>
+						</mapping>
+					</mappings>
+					<provides>
+						<provide>${project.artifactId}</provide>
+					</provides>
+					<requires>
+						<require>httpd &gt;= 2.0</require>
+						&gt;
+					</requires>
+					<needarch>noarch</needarch>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.terradue</groupId>
+				<artifactId>rpmdeploy-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.9</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>de.jutzig</groupId>
+				<artifactId>github-release-plugin</artifactId>
+				<version>1.0.3</version>
+				<executions>
+					<execution>
+						<id>github-upload</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>release</goal>
+						</goals>
+						<inherited>false</inherited>
+						<configuration>
+							<releaseName>v${project.version}</releaseName>
+							<tag>v${project.version}</tag>
+							<artifact>${project.build.directory}/${project.artifactId}-${project.version}-html.tar.gz</artifact>
+							<overwriteArtifact>true</overwriteArtifact>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
