@@ -6,8 +6,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   Overview <overview>
-   Community Portal User Guide <community>
-   Cloud Operations Administrator Guide <administrator>
+   Overview <overview/index>
+   Community Portal User Guide <community-guide/index>
+   Cloud Operations Administrator Guide <cloud-administrator/index>
 
 
