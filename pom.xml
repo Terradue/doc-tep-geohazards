@@ -11,7 +11,7 @@
 	<groupId>com.terradue.tag</groupId>
 	<artifactId>doc-tep-geohazards</artifactId>
 	<packaging>rpm</packaging>
-	<description>Documentation for tep-geohazards</description>
+	<description>Geohazards Thematic Exploitation Platform guide</description>
 	<version>0.5-SNAPSHOT</version>
 	
 	<scm>
