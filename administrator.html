@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Administrator Guide &mdash; E-CEO Data Challenges platform v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="E-CEO Data Challenges platform v1.0 documentation" href="index.html" />
+    <link rel="prev" title="User Guide" href="userguide.html" />
+    <link rel="stylesheet" href="_static/eceo.css" type="text/css" />
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body>
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-eceo"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img class="navbar-brand-logo" src="_static/eceo-brand-logo.png" alt="eceo-logo"/></a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>1.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li>
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#purpose-of-the-software">Purpose of the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#challenges-phases">Challenges Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#challenges-user-roles">Challenges User Roles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html#home-page">Home page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html#menu-bar">Menu bar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#challenges-links">Challenges links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#notifications">Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#support">Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="userguide.html#user-information">User information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="userguide.html#user-profile">User profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="userguide.html#user-certificate">User certificate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html#challenge-view">Challenge view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userguide.html#error-messages">Error messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Administrator Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#role-description">Role description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#challenge-view">Challenge view</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#global-description">Global description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-packages">Data packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-package-items-management">Data package items management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environments">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#criteria-importance-weights">Criteria importance weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#participants-applications">Participants applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-metrics">Evaluation metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-results">Evaluation results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ranking">Ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manage-users">Manage Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-data-series">Manage Data Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-environments">Manage Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-criteria">Manage Criteria</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Administrator Guide</a><ul>
+<li><a class="reference internal" href="#role-description">Role description</a></li>
+<li><a class="reference internal" href="#challenge-view">Challenge view</a><ul>
+<li><a class="reference internal" href="#global-description">Global description</a></li>
+<li><a class="reference internal" href="#data-packages">Data packages</a></li>
+<li><a class="reference internal" href="#data-package-items-management">Data package items management</a></li>
+<li><a class="reference internal" href="#users">Users</a></li>
+<li><a class="reference internal" href="#environments">Environments</a></li>
+<li><a class="reference internal" href="#criteria-importance-weights">Criteria importance weights</a></li>
+<li><a class="reference internal" href="#participants-applications">Participants applications</a></li>
+<li><a class="reference internal" href="#evaluation-metrics">Evaluation metrics</a></li>
+<li><a class="reference internal" href="#evaluation-results">Evaluation results</a></li>
+<li><a class="reference internal" href="#ranking">Ranking</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#settings">Settings</a><ul>
+<li><a class="reference internal" href="#manage-users">Manage Users</a></li>
+<li><a class="reference internal" href="#manage-data-series">Manage Data Series</a></li>
+<li><a class="reference internal" href="#manage-environments">Manage Environments</a></li>
+<li><a class="reference internal" href="#manage-criteria">Manage Criteria</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="userguide.html" title="Previous Chapter: User Guide"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; User Guide</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-challenges/blob/master/source/administrator.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Administrator Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#role-description">Role description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#challenge-view">Challenge view</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#global-description">Global description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-packages">Data packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-package-items-management">Data package items management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environments">Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#criteria-importance-weights">Criteria importance weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#participants-applications">Participants applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-metrics">Evaluation metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-results">Evaluation results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ranking">Ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manage-users">Manage Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-data-series">Manage Data Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-environments">Manage Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-criteria">Manage Criteria</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-challenges/blob/master/source/administrator.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="administrator-guide">
+<h1>Administrator Guide<a class="headerlink" href="#administrator-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="role-description">
+<h2>Role description<a class="headerlink" href="#role-description" title="Permalink to this headline">¶</a></h2>
+<p>An <strong>administrator</strong> in E-CEO platform will be in charge of administrating one or several challenges.
+Challenge <strong>administrators</strong> will use the platform to:</p>
+<ul class="simple">
+<li>set-up environments (<a class="reference internal" href="#environments">Environments</a> and <a class="reference internal" href="#manage-environments">Manage Environments</a>),</li>
+<li>define series (<a class="reference internal" href="#manage-data-series">Manage Data Series</a>),</li>
+<li>define evaluation criteria (<a class="reference internal" href="#criteria-importance-weights">Criteria importance weights</a> and <a class="reference internal" href="#manage-criteria">Manage Criteria</a>),</li>
+<li>manage users (<a class="reference internal" href="#users">Users</a> and <a class="reference internal" href="#manage-users">Manage Users</a>),</li>
+<li>validate participant applications (<a class="reference internal" href="#participants-applications">Participants applications</a>)</li>
+</ul>
+<p>Note that <strong>administrator</strong> can also do all actions that <strong>initiator</strong> or <strong>evaluator</strong> can do.</p>
+</div>
+<div class="section" id="challenge-view">
+<h2>Challenge view<a class="headerlink" href="#challenge-view" title="Permalink to this headline">¶</a></h2>
+<p>The challenge view contains all the different pages associated to a challenge. The pages are accessible from a vertical menu bar on the left.
+The accessible pages are not the same depending on the role of the challenge.</p>
+<p>The list of pages accessible for an <strong>administrator</strong> are:</p>
+<ul class="simple">
+<li><img alt="contestviewmenuhome.png" src="includes/sum/contestview_menu_home.png" /> Challenge description</li>
+<li><img alt="contestviewmenudatapackage.png" src="includes/sum/contestview_menu_datapackage.png" /> Data packages</li>
+<li><img alt="contestviewmenuusers.png" src="includes/sum/contestview_menu_users.png" /> Challenge users</li>
+<li><img alt="contestviewmenuenvironments.png" src="includes/sum/contestview_menu_environments.png" /> Environments</li>
+<li><img alt="contestviewmenucriteria.png" src="includes/sum/contestview_menu_criteria.png" /> Criteria importance/weights</li>
+<li><img alt="contestviewmenuapplications.png" src="includes/sum/contestview_menu_applications.png" /> Participants applications</li>
+<li><img alt="contestviewmenumetrics.png" src="includes/sum/contestview_menu_metrics.png" /> Evaluation metrics</li>
+<li><img alt="contestviewmenuevaluationresults.png" src="includes/sum/contestview_menu_evaluationresults.png" /> Evaluation results</li>
+<li><img alt="contestviewmenuranking.png" src="includes/sum/contestview_menu_ranking.png" /> Ranking</li>
+</ul>
+<div class="section" id="global-description">
+<h3>Global description<a class="headerlink" href="#global-description" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Initiator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="data-packages">
+<h3>Data packages<a class="headerlink" href="#data-packages" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Initiator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="data-package-items-management">
+<h3>Data package items management<a class="headerlink" href="#data-package-items-management" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Initiator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="users">
+<h3>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Initiator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="environments">
+<h3>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Initiator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="criteria-importance-weights">
+<h3>Criteria importance weights<a class="headerlink" href="#criteria-importance-weights" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Evaluator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="participants-applications">
+<h3>Participants applications<a class="headerlink" href="#participants-applications" title="Permalink to this headline">¶</a></h3>
+<p>Inside the challenge view, the application part contains the information about the applications the administrator needs to validate.</p>
+<div align="center" class="align-center"><img alt="includes/sum/contestview_applications_admin.png" class="align-center" src="includes/sum/contestview_applications_admin.png" /></div>
+<p>The Administrator can then decide to <strong>Validate the application</strong> or <strong>Discard the application</strong> if he juges its not suitable for being evaluated, by clicking on the corresponding button.</p>
+</div>
+<div class="section" id="evaluation-metrics">
+<h3>Evaluation metrics<a class="headerlink" href="#evaluation-metrics" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Evaluator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="evaluation-results">
+<h3>Evaluation results<a class="headerlink" href="#evaluation-results" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to
+<tt class="xref doc docutils literal"><span class="pre">Evaluator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+<div class="section" id="ranking">
+<h3>Ranking<a class="headerlink" href="#ranking" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <tt class="xref doc docutils literal"><span class="pre">Evaluator</span> <span class="pre">Guide</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manage-users">
+<h3>Manage Users<a class="headerlink" href="#manage-users" title="Permalink to this headline">¶</a></h3>
+<p>From the <strong>Settings</strong> <img alt="settings.png" src="includes/sum/settings.png" /> from the menu bar, select <strong>Manage User</strong>.</p>
+<p>To manage users for a challenge, if not selected, select the tab <strong>Users by Challenges</strong>.</p>
+<div align="center" class="align-center"><img alt="includes/sum/user_management.png" class="align-center" src="includes/sum/user_management.png" /></div>
+<p>Click on <strong>change</strong> to change either the Initiator or the Evaluator of the challenge, and then select the user you want to choose.</p>
+<p>Click on <strong>manage</strong> to accept or reject participants for a challenge. From there, you can Accept <img alt="accept.png" src="includes/sum/accept.png" /> or Deny <img alt="denied.png" src="includes/sum/denied.png" /> a user.</p>
+<div align="center" class="align-center"><img alt="includes/sum/participant_management.png" class="align-center" src="includes/sum/participant_management.png" /></div>
+<p>To manage users in general, if not selected, select the tab <strong>All Users</strong>.</p>
+<p>From there it is possible to set a user as global Initiator (this user will have rights to create a new challenge).</p>
+<div align="center" class="align-center"><img alt="includes/sum/user_management3.png" class="align-center" src="includes/sum/user_management3.png" /></div>
+</div>
+<div class="section" id="manage-data-series">
+<h3>Manage Data Series<a class="headerlink" href="#manage-data-series" title="Permalink to this headline">¶</a></h3>
+<p>From the <strong>Settings</strong> <img alt="settings.png" src="includes/sum/settings.png" /> from the menu bar, select <strong>Manage Series</strong>. The list of existing series will appear. To create a new one click on <strong>Add Data Series</strong>.
+Once all the fields filled, save by clicking <strong>Insert</strong>.</p>
+<div align="center" class="align-center"><img alt="includes/sum/series_creation.png" class="align-center" src="includes/sum/series_creation.png" /></div>
+</div>
+<div class="section" id="manage-environments">
+<h3>Manage Environments<a class="headerlink" href="#manage-environments" title="Permalink to this headline">¶</a></h3>
+<p>From the <strong>Settings</strong> <img alt="settings.png" src="includes/sum/settings.png" /> from the menu bar, select <strong>Manage</strong> <strong>Environments</strong>.</p>
+<div align="center" class="align-center"><img alt="includes/sum/manage_environment.png" class="align-center" src="includes/sum/manage_environment.png" /></div>
+<p>The Template Settings part allow to select the provider, virtual network and template for the challenge. These settings will be used when the environments are generated.
+To create a new environment, click on <strong>Create</strong>.</p>
+<p>It is also possible to stop <img alt="stopenv.png" src="includes/sum/stop_env.png" />, resume <img alt="startenv.png" src="includes/sum/start_env.png" /> or delete <img alt="deleteenv.png" src="includes/sum/delete_env.png" /> an existing environment.</p>
+</div>
+<div class="section" id="manage-criteria">
+<h3>Manage Criteria<a class="headerlink" href="#manage-criteria" title="Permalink to this headline">¶</a></h3>
+<p>From the control panel, select <strong>Manage</strong> <strong>Criteria</strong>.</p>
+<p>The Administrator can manage the criteria (independently of challenges) from this page by creating new ones <img alt="newcriterion.png" src="includes/sum/new_criterion.png" /> or deleting definitively existing ones <img alt="newcriterionDescription.png" src="includes/sum/new_criterion_Description.png" />.
+The “Unit/Dimension” field is a list representing the unit of the value of the criterion.</p>
+<p>The “Quantification” and “Normalization” fields are both meant to contain formulas. To write a formula, add “$$” in the beginning and in the end of the latex formula. The formula will be displayed on the right part.</p>
+<p>The “Quantificationlogic” is the logic used for normalization of the value obtained after quantification. It can be chosen between “Higher is Better” and “Lower is Better”.</p>
+<p>The “Actor” field indicates who is calculating the value of the criterion. It could be the system or the evaluator.
+Save the new criterion by clickin on <strong>Save Criterion</strong>.
+Clicking on <strong>Show info / Modify Criteria</strong> will open the Criteria view.</p>
+<div align="center" class="align-center"><img alt="includes/sum/criterion_page.png" class="align-center" src="includes/sum/criterion_page.png" /></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>
