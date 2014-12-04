@@ -116,12 +116,11 @@
 								<successCode>1</successCode>
 								<successCode>2</successCode>
 							</successCodes>
-						<configuration>
-					<frameworkVersion>4.0</frameworkVersion>
-						</configuration>
 					</execution>
-					
 				</executions>
+				<configuration>
+					<frameworkVersion>4.0</frameworkVersion>
+				</configuration>
 			</plugin>
 			<!-- <plugin> -->
 			<!-- <groupId>org.nuiton.jredmine</groupId> -->
