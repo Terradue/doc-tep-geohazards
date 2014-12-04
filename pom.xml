@@ -12,7 +12,23 @@
 	<artifactId>doc-tep-geohazards</artifactId>
 	<packaging>rpm</packaging>
 	<description>Geohazards Thematic Exploitation Platform guide</description>
-	<version>0.5-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.terradue.infra</groupId>
+			<artifactId>corporate-doc</artifactId>
+			<type>zip</type>
+			<classifier>plantuml</classifier>
+			<version>1.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<properties>
+		<github.global.server>github</github.global.server>
+		<github.site.repositoryName>doc-tep-geohazards-arch</github.site.repositoryName>
+		<github.site.repositoryOwner>Terradue</github.site.repositoryOwner>
+	</properties>
 	
 	<scm>
 		<connection>scm:git:git@github.com:Terradue/doc-tep-geohazards.git</connection>
@@ -23,6 +39,25 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>include-plantuml</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<classifier>plantuml</classifier>
+							<failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+							<outputDirectory>includes</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
@@ -40,6 +75,20 @@
 							<arguments>
 								<argument>clean</argument>
 								<argument>html</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>generate-nojekyll</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>${basedir}/_build/html</workingDirectory>
+							<executable>touch</executable>
+							<arguments>
+								<argument>.nojekyll</argument>
 							</arguments>
 						</configuration>
 					</execution>
@@ -67,8 +116,11 @@
 								<successCode>1</successCode>
 								<successCode>2</successCode>
 							</successCodes>
+						<configuration>
+					<frameworkVersion>4.0</frameworkVersion>
 						</configuration>
 					</execution>
+					
 				</executions>
 			</plugin>
 			<!-- <plugin> -->
@@ -115,7 +167,7 @@
 					</defineStatements>
 					<mappings>
 						<mapping>
-							<directory>/var/www/html/challenges</directory>
+							<directory>/var/www/html/tep-geohazards</directory>
 							<filemode>755</filemode>
 							<sources>
 								<source>
@@ -170,6 +222,35 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+		</plugins>
+		<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.10</version>
+				<configuration>
+					<message>Creating site for ${project.version}</message>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site-deploy</phase>
+						<configuration>
+							<outputDirectory>${basedir}/_build/html</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<skip>true</skip>
+					<skipDeploy>true</skipDeploy>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
