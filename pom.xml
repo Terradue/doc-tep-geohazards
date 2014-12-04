@@ -26,7 +26,7 @@
 
 	<properties>
 		<github.global.server>github</github.global.server>
-		<github.site.repositoryName>doc-tep-geohazards-arch</github.site.repositoryName>
+		<github.site.repositoryName>doc-tep-geohazards</github.site.repositoryName>
 		<github.site.repositoryOwner>Terradue</github.site.repositoryOwner>
 	</properties>
 	
@@ -116,12 +116,12 @@
 								<successCode>1</successCode>
 								<successCode>2</successCode>
 							</successCodes>
-						<configuration>
-					<frameworkVersion>4.0</frameworkVersion>
 						</configuration>
 					</execution>
-					
 				</executions>
+				<configuration>
+					<frameworkVersion>4.0</frameworkVersion>
+				</configuration>
 			</plugin>
 			<!-- <plugin> -->
 			<!-- <groupId>org.nuiton.jredmine</groupId> -->
@@ -223,7 +223,6 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
 		<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
@@ -254,6 +253,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
 

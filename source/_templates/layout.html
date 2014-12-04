@@ -3,7 +3,8 @@
 
 {# Add some extra stuff before and use existing with 'super()' call. #}
 {% block extrahead %}
-    <link rel="stylesheet" href="{{ pathto('_static/eceo.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/terradue.css', 1) }}" type="text/css" />
+    <script src="{{ pathto('_static/affixTrick.js', 1) }}"></script>
   {{ super() }}
 {% endblock %}
 
@@ -16,8 +17,35 @@
 </footer>
 {% endblock %}
 
+
+{% if theme_bootstrap_version == "3" %}
+  {%- macro bsidebarNew() %}
+      {%- if render_sidebar %}
+      <div class="{{ bs_span_prefix }}3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary">
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+  {%- endmacro %}
+{% else %}
+  {%- macro bsidebarNew() %}
+      {%- if render_sidebar %}
+      <div class="{{ bs_span_prefix }}3">
+        <div id="sidebar" class="bs-sidenavNew well">
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+  {%- endmacro %}
+{% endif %}
+
 {% block sidebar1 %}
-<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <p class="first admonition-title">
         Warning
@@ -25,6 +53,6 @@
     <p class="last">
         This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
     </p>
-</div>
-{{ bsidebar() }}
+</div>-->
+{{ bsidebarNew() }}
 {% endblock %}

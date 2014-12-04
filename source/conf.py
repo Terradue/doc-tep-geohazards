@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# E-CEO Data Challenges platform documentation build configuration file, created by
-# sphinx-quickstart on Wed Mar 26 11:35:03 2014.
+# Developer Cloud Sandbox documentation build configuration file, created by
+# sphinx-quickstart on Tue Mar 25 20:23:11 2014.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -12,7 +13,6 @@
 # serve to show the default.
 
 import sys, os
-
 import sphinx_bootstrap_theme
 
 sys.path.append(os.path.abspath('ext'))
@@ -25,7 +25,7 @@ sys.path.append(os.path.abspath('ext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo','githubpath']
+extensions = ['sphinx.ext.todo','githubpath', 'sphinxcontrib.plantuml']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'E-CEO Data Challenges platform'
+project = u'Geohazards Thematic Exploitation Platform Architecture'
 copyright = u'2014, Terradue'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -63,7 +63,7 @@ release = '1.0'
 #today_fmt = '%B %d, %Y'
 
 # List of documents that shouldn't be included in the build.
-#unused_docs = []
+unused_docs = []
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
@@ -90,7 +90,7 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 # Github path
-github_repo = "https://github.com/Terradue/doc-challenges"
+github_repo = "https://github.com/Terradue/doc-tep-geohazards-arch"
 github_branch = "master"
 
 # -- Options for HTML output ---------------------------------------------------
@@ -166,7 +166,7 @@ html_sidebars = {'**': ['alltoc.html', 'sourcelink.html', 'searchbox.html']}
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'E-CEODataChallengesplatformdoc'
+htmlhelp_basename = 'TepQwArchdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -180,8 +180,8 @@ htmlhelp_basename = 'E-CEODataChallengesplatformdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'E-CEODataChallengesplatform.tex', u'E-CEO Data Challenges platform Documentation',
-   u'Fabrice Brito', 'manual'),
+  ('index', 'TepQwArch.tex', u'Tep QuickWin Architecture Documentation',
+   u'Terradue', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -201,6 +201,15 @@ latex_documents = [
 # If false, no module index is generated.
 #latex_use_modindex = True
 
+# -- Options for manual page output --------------------------------------------
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+#man_pages = [
+#    ('reference/man/bash_commands_functions/miscellaneous/ciop-appcheck', 'ciop-appcheck', 'Application Validity Checker', ['Terradue Team <support@terradue.com>'], 7),
+#    ('reference/man/bash_commands_functions/catalogue/ciop-casmeta', 'ciop-casmeta', 'Catalogue metadata', ['Terradue Team <support@terradue.com>'], 7),
+#    ('reference/man/bash_commands_functions/catalogue/ciop-catcp', 'ciop-catcp', 'Catalogue metadata copy', ['Terradue Team <support@terradue.com>'], 7),
+#]
+
+# If true, show URL addresses after external links.
+#man_show_urls = False
