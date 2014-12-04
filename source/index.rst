@@ -7,10 +7,7 @@ Contents:
    :maxdepth: 2
    
    Overview <overview>
-   User Guide <userguide>
-   Administrator Guide <administrator>
-   Initiator Guide <initiator>
-   Evaluator Guide <evaluator>
-   Participant Guide <participant>
+   Community Portal User Guide <community>
+   Cloud Operations Administrator Guide <administrator>
 
 
