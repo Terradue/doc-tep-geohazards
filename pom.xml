@@ -116,6 +116,7 @@
 								<successCode>1</successCode>
 								<successCode>2</successCode>
 							</successCodes>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>
@@ -222,7 +223,6 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
 		<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
@@ -253,6 +253,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
 
