@@ -122,6 +122,8 @@ body {
 #navbar {
 	border-radius: 0px !important;
 	box-shadow: 0px 0px 8px black;
+	background: white;
+	height: 58px;
 }
 #navbarSpacer {
 	height: 50px;
@@ -133,6 +135,12 @@ body {
 
 .navbar-brand {
 	padding: 9px;
+}
+
+/* only for t2 logo */
+#navbar .navbar-header .navbar-brand > img {
+	width: 102px;
+	margin-top: 3px;
 }
 
 #sidebar {
