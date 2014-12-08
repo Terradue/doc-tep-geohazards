@@ -3,11 +3,11 @@ Menu bar
 
 The menu bar is always visible, apart from the geobrowser page. It contains the following links:
 
-- Home (`Home`_),
-- Observations & Measurements (`Observations & Measurements`_),
-- Information Processing (`Information Processing`_),
-- Community (`Community`_),
-- EO sector Collaboration (`EO sector Collaboration`_)
+- `Home`_,
+- `Observations & Measurements`_,
+- `Information Processing`_,
+- `Community`_,
+- `EO sector Collaboration`_
 
 Home
 ----
