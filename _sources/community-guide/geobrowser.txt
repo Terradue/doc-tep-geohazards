@@ -73,11 +73,11 @@ It is composed of two sub tabs:
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
 
-.. |geobrowser_button_plus.png| image:: ../includes/sum/geobrowser_button_plus.png
-.. |geobrowser_button_minus.png| image:: ../includes/sum/geobrowser_button_minus.png
-.. |geobrowser_button_search.png| image:: ../includes/sum/geobrowser_button_search.png
-.. |geobrowser_button_polygon.png| image:: ../includes/sum/geobrowser_button_polygon.png
-.. |geobrowser_button_recbox.png| image:: ../includes/sum/geobrowser_button_recbox.png
-.. |geobrowser_button_dynamicsearch.png| image:: ../includes/sum/geobrowser_button_dynamicsearch.png
-.. |geobrowser_button_fullscreen.png| image:: ../includes/sum/geobrowser_button_fullscreen.png
-.. |geobrowser_button_layers.png| image:: ../includes/sum/geobrowser_button_layers.png
+.. |geobrowser_button_plus.png| image:: ../includes/geobrowser_button_plus.png
+.. |geobrowser_button_minus.png| image:: ../includes/geobrowser_button_minus.png
+.. |geobrowser_button_search.png| image:: ../includes/geobrowser_button_search.png
+.. |geobrowser_button_polygon.png| image:: ../includes/geobrowser_button_polygon.png
+.. |geobrowser_button_recbox.png| image:: ../includes/geobrowser_button_recbox.png
+.. |geobrowser_button_dynamicsearch.png| image:: ../includes/geobrowser_button_dynamicsearch.png
+.. |geobrowser_button_fullscreen.png| image:: ../includes/geobrowser_button_fullscreen.png
+.. |geobrowser_button_layers.png| image:: ../includes/geobrowser_button_layers.png
