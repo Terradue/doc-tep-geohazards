@@ -62,6 +62,9 @@ On the right, the features from the current basket.
 Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the *Save* button) and shared with other users (by ticking the *Want to make it public?* box).
 Saved Data packages can then be loaded (by clicking on the *Load* button).
 
+Cloud Processing services
+-------------------------
+
 Processing services tab
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -70,11 +73,11 @@ It is composed of two sub tabs:
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
 
-.. |geobrowser_button_plus.png| image:: includes/sum/geobrowser_button_plus.png
-.. |geobrowser_button_minus.png| image:: includes/sum/geobrowser_button_minus.png
-.. |geobrowser_button_search.png| image:: includes/sum/geobrowser_button_search.png
-.. |geobrowser_button_polygon.png| image:: includes/sum/geobrowser_button_polygon.png
-.. |geobrowser_button_recbox.png| image:: includes/sum/geobrowser_button_recbox.png
-.. |geobrowser_button_dynamicsearch.png| image:: includes/sum/geobrowser_button_dynamicsearch.png
-.. |geobrowser_button_fullscreen.png| image:: includes/sum/geobrowser_button_fullscreen.png
-.. |geobrowser_button_layers.png| image:: includes/sum/geobrowser_button_layers.png
+.. |geobrowser_button_plus.png| image:: ../includes/sum/geobrowser_button_plus.png
+.. |geobrowser_button_minus.png| image:: ../includes/sum/geobrowser_button_minus.png
+.. |geobrowser_button_search.png| image:: ../includes/sum/geobrowser_button_search.png
+.. |geobrowser_button_polygon.png| image:: ../includes/sum/geobrowser_button_polygon.png
+.. |geobrowser_button_recbox.png| image:: ../includes/sum/geobrowser_button_recbox.png
+.. |geobrowser_button_dynamicsearch.png| image:: ../includes/sum/geobrowser_button_dynamicsearch.png
+.. |geobrowser_button_fullscreen.png| image:: ../includes/sum/geobrowser_button_fullscreen.png
+.. |geobrowser_button_layers.png| image:: ../includes/sum/geobrowser_button_layers.png
