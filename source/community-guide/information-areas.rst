@@ -13,7 +13,7 @@ Directly on the homepage, the user can find:
 . image:: img/tweets.png
 	:align: center
 
-- a list of the most recent posts from the tep geohazards `Tumblr blog <http://geohazards-tep.tumblr.com>`.
+- a list of the most recent posts from the tep geohazards `Tumblr blog <http://geohazards-tep.tumblr.com>`_.
 
 . image:: img/tumblr.png
 	:align: center

@@ -9,6 +9,9 @@ The menu bar is always visible, apart from the geobrowser page. It contains the 
 - `Community`_,
 - `EO sector Collaboration`_
 
+. image:: ../includes/home_menubar.png
+	:align: center
+
 Home
 ----
 
