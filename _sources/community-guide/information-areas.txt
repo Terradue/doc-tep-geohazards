@@ -26,7 +26,7 @@ A list of the most recent feeds from selected twitter accounts (with associated 
 Blog
 ----
 
-A list of the most recent posts from the tep geohazards `Tumblr blog <http://geohazards-tep.tumblr.com>`.
+A list of the most recent posts from the tep geohazards `Tumblr blog <http://geohazards-tep.tumblr.com>`_.
 
 .. image:: ../includes/news_tumblr.png
 	:align: center

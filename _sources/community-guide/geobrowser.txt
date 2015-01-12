@@ -19,9 +19,10 @@ Map
 The map is just a simple map, on which you can zoom in, zoom out and navigate.
 Some buttons maybe used to interact with the map:
 
+-  |geobrowser_button_search.png| search area
 -  |geobrowser_button_plus.png| Zoom in
 -  |geobrowser_button_minus.png| Zoom out
--  |geobrowser_button_search.png| Open query search tab
+-  |geobrowser_button_query.png| Open query search tab
 -  |geobrowser_button_polygon.png| Edit the search bbox by drawing a polygon on the map
 -  |geobrowser_button_recbox.png| Edit the search bbox by drawing a rectangle on the map
 -  |geobrowser_button_dynamicsearch.png| Enable/Disable dynamic search (the search bbox is the current view on the map)
@@ -73,9 +74,10 @@ It is composed of two sub tabs:
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
 
+.. |geobrowser_button_search.png| image:: ../includes/geobrowser_button_search.png
 .. |geobrowser_button_plus.png| image:: ../includes/geobrowser_button_plus.png
 .. |geobrowser_button_minus.png| image:: ../includes/geobrowser_button_minus.png
-.. |geobrowser_button_search.png| image:: ../includes/geobrowser_button_search.png
+.. |geobrowser_button_query.png| image:: ../includes/geobrowser_button_query.png
 .. |geobrowser_button_polygon.png| image:: ../includes/geobrowser_button_polygon.png
 .. |geobrowser_button_recbox.png| image:: ../includes/geobrowser_button_recbox.png
 .. |geobrowser_button_dynamicsearch.png| image:: ../includes/geobrowser_button_dynamicsearch.png
