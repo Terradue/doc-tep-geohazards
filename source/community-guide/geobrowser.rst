@@ -4,14 +4,14 @@ GeoBrowser area for data and Cloud processing services
 GeoBrowser
 ----------
 
-. image:: ../includes/geobrowser.png
+.. image:: ../includes/geobrowser.png
 	:align: center
 
 The GeoBrowser is composed of:
-- a `Map`_, where the user can make search query and see results
-- `Contexts`_ links
-- `Results tab`_ (initialy hidden)
-_ `Processing services tab`_ (initialy hidden)
+	- a `Map`_, where the user can make search query and see results
+	- `Contexts`_ links
+	- `Results tab`_ (initialy hidden)
+	- `Processing services tab`_ (initialy hidden)
 
 Map
 ~~~
@@ -31,7 +31,7 @@ Some buttons maybe used to interact with the map:
 
 It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.
 
-. image:: ../includes/geobrowser_timebar.png
+.. image:: ../includes/geobrowser_timebar.png
 	:align: center
 
 Once all parameters are set, bbox chosen
@@ -54,7 +54,7 @@ The existing pre-defined contexts are:
 Results tab
 ~~~~~~~~~~~
 
-. image:: ../includes/geobrowser_resulttab.png
+.. image:: ../includes/geobrowser_resulttab.png
 	:align: center
 
 The result tab is divided in two parts.

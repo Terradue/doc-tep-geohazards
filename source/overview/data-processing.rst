@@ -5,7 +5,7 @@ The portal is a data processing facility, where users can easily *create* new pr
 
 Creating a new processing service can be done from the Cloud Dashboard.
 
-The list of existing processing services is available from the :doc:`Processing services tab <../community-guide/geobrowser>`.
+The list of existing processing services is available from the :doc:`Processing services tab <../community-guide/geobrowser#processing-services-tab>`.
 
 The list of existing and accessible jobs is available from the :doc:`Processing services tab <../community-guide/geobrowser>`.
 
