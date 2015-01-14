@@ -103,20 +103,12 @@
 <li class="toctree-l3"><a class="reference internal" href="menu-bar.html#eo-sector-collaboration">EO sector Collaboration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="information-areas.html">Information areas (Blog, News, ...)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="information-areas.html#featured-stories">Featured stories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="information-areas.html#news">News</a></li>
-<li class="toctree-l3"><a class="reference internal" href="information-areas.html#blog">Blog</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="information-areas.html">Information areas (Blog, News, ...)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">GeoBrowser area for data and Cloud processing services</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#map">Map</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contexts">Contexts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#results-tab">Results tab</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cloud-processing-services">Cloud Processing services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
 </ul>
 </li>
@@ -147,9 +139,6 @@
 <li><a class="reference internal" href="#map">Map</a></li>
 <li><a class="reference internal" href="#contexts">Contexts</a></li>
 <li><a class="reference internal" href="#results-tab">Results tab</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#cloud-processing-services">Cloud Processing services</a><ul>
 <li><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
 </ul>
 </li>
@@ -209,9 +198,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#map">Map</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contexts">Contexts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#results-tab">Results tab</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cloud-processing-services">Cloud Processing services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
 </ul>
 </li>
@@ -241,7 +227,18 @@
 <h1>GeoBrowser area for data and Cloud processing services<a class="headerlink" href="#geobrowser-area-for-data-and-cloud-processing-services" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="geobrowser">
 <h2>GeoBrowser<a class="headerlink" href="#geobrowser" title="Permalink to this headline">¶</a></h2>
-<div align="center" class="align-center"><img alt="../_images/geobrowser.png" class="align-center" src="../_images/geobrowser.png" /></div>
+<dl class="docutils">
+<dt>. image:: ../includes/geobrowser.png</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">align:</th><td class="field-body">center</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <p>The GeoBrowser is composed of:
 - a <a class="reference internal" href="#map">Map</a>, where the user can make search query and see results
 - <a class="reference internal" href="#contexts">Contexts</a> links
@@ -255,7 +252,7 @@ Some buttons maybe used to interact with the map:</p>
 <li><img alt="geobrowser_button_search.png" src="../_images/geobrowser_button_search.png" /> search area</li>
 <li><img alt="geobrowser_button_plus.png" src="../_images/geobrowser_button_plus.png" /> Zoom in</li>
 <li><img alt="geobrowser_button_minus.png" src="../_images/geobrowser_button_minus.png" /> Zoom out</li>
-<li><img alt="geobrowser_button_query.png" src="../_images/geobrowser_button_query.png" /> Open query search tab</li>
+<li><a href="#id1"><span class="problematic" id="id2">|geobrowser_button_query.png|</span></a> Open query search tab</li>
 <li><img alt="geobrowser_button_polygon.png" src="../_images/geobrowser_button_polygon.png" /> Edit the search bbox by drawing a polygon on the map</li>
 <li><img alt="geobrowser_button_recbox.png" src="../_images/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
 <li><img alt="geobrowser_button_dynamicsearch.png" src="../_images/geobrowser_button_dynamicsearch.png" /> Enable/Disable dynamic search (the search bbox is the current view on the map)</li>
@@ -263,12 +260,34 @@ Some buttons maybe used to interact with the map:</p>
 <li><img alt="geobrowser_button_layers.png" src="../_images/geobrowser_button_layers.png" /> Change the background of the map | Select layers to be displayed.</li>
 </ul>
 <p>It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.</p>
-<div align="center" class="align-center"><img alt="../_images/geobrowser_timebar.png" class="align-center" src="../_images/geobrowser_timebar.png" /></div>
+<dl class="docutils">
+<dt>. image:: ../includes/geobrowser_timebar.png</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">align:</th><td class="field-body">center</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <p>Once all parameters are set, bbox chosen</p>
 </div>
 <div class="section" id="contexts">
 <h3>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h3>
-<div align="center" class="align-center"><img alt="../_images/geobrowser_contexts.png" class="align-center" src="../_images/geobrowser_contexts.png" /></div>
+<dl class="docutils">
+<dt>. image:: ../includes/geobrowser_contexts.png</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">align:</th><td class="field-body">center</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <p>Some pre-defined context are accessible on the top of the map.
 One context is the result of a query on a specific catalog with pre-defined search parameters.
 The existing pre-defined contexts are:
@@ -280,16 +299,24 @@ The existing pre-defined contexts are:
 </div>
 <div class="section" id="results-tab">
 <h3>Results tab<a class="headerlink" href="#results-tab" title="Permalink to this headline">¶</a></h3>
-<div align="center" class="align-center"><img alt="../_images/geobrowser_resulttab.png" class="align-center" src="../_images/geobrowser_resulttab.png" /></div>
+<dl class="docutils">
+<dt>. image:: ../includes/geobrowser_resulttab.png</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">align:</th><td class="field-body">center</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <p>The result tab is divided in two parts.
 On the left, the list of current results displayed on the map.
 On the right, the features from the current basket.
 Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the <em>Save</em> button) and shared with other users (by ticking the <em>Want to make it public?</em> box).
 Saved Data packages can then be loaded (by clicking on the <em>Load</em> button).</p>
 </div>
-</div>
-<div class="section" id="cloud-processing-services">
-<h2>Cloud Processing services<a class="headerlink" href="#cloud-processing-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="processing-services-tab">
 <h3>Processing services tab<a class="headerlink" href="#processing-services-tab" title="Permalink to this headline">¶</a></h3>
 <p>Processing services tab can be expanded by clicking on <em>Processing Services</em> on the right on the map.
