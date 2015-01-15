@@ -1,6 +1,7 @@
 A Community Portal
 ==================
 
+
 The portal homepage gives the user quick access to recent community inputs: 
 	- up-to-date social feeds (twitter, rss, tumblr posts, ...), 
 	- featured stories related to geohazards,
