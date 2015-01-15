@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>A data processing facility &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
+    <title>Reproducibility &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform Architecture v1.0 documentation" href="../index.html" />
     <link rel="up" title="Geohazards thematic exploitation platform guide" href="index.html" />
-    <link rel="next" title="Cloud Operations Administrator Guide" href="../cloud-administrator/index.html" />
-    <link rel="prev" title="A Community Portal" href="data.html" />
+    <link rel="next" title="Sharing" href="sharing.html" />
+    <link rel="prev" title="Visualisation" href="visualisation.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -95,7 +95,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="platform/menu-bar.html">Menu bar</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="platform/menu-bar.html#home">Home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="platform/menu-bar.html#observations-measurements">Observations &amp; Measurements</a></li>
@@ -118,8 +118,12 @@
 <li class="toctree-l3"><a class="reference internal" href="platform/results-sharing.html">Results sharing area</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -139,7 +143,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">A data processing facility</a></li>
+<li><a class="reference internal" href="#">Reproducibility</a></li>
 </ul>
 </ul>
 </li>
@@ -149,11 +153,11 @@
               
                 
   <li>
-    <a href="data.html" title="Previous Chapter: A Community Portal"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; A Community Port...</span>
+    <a href="visualisation.html" title="Previous Chapter: Visualisation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Visualisation</span>
     </a>
   </li>
   <li>
-    <a href="../cloud-administrator/index.html" title="Next Chapter: Cloud Operations Administrator Guide"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Cloud Operations... &raquo;</span>
+    <a href="sharing.html" title="Next Chapter: Sharing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Sharing &raquo;</span>
     </a>
   </li>
               
@@ -187,9 +191,13 @@
         <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
@@ -209,13 +217,8 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="a-data-processing-facility">
-<h1>A data processing facility<a class="headerlink" href="#a-data-processing-facility" title="Permalink to this headline">¶</a></h1>
-<p>The portal is a data processing facility, where users can easily <strong>create</strong> new processing services, <strong>re-use</strong> existing processing services, <strong>process</strong> data, access and <strong>reproduce</strong> processing jobs.</p>
-<p>Creating a new processing service can be done from the Cloud Dashboard.</p>
-<p>The list of existing <strong>processing services</strong> is available from the <tt class="xref doc docutils literal"><span class="pre">Processing</span> <span class="pre">services</span> <span class="pre">tab</span></tt>.</p>
-<p>The list of existing and accessible <strong>jobs</strong> is available from the <tt class="xref doc docutils literal"><span class="pre">Processing</span> <span class="pre">services</span> <span class="pre">tab</span></tt>.</p>
-<p><strong>Processing</strong> of data selected on the geobrowser can be done from the <tt class="xref doc docutils literal"><span class="pre">Processing</span> <span class="pre">services</span> <span class="pre">tab</span></tt>.</p>
+  <div class="section" id="reproducibility">
+<h1>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this headline">¶</a></h1>
 </div>
 
 

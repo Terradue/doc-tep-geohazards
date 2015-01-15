@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>A Community Portal &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
+    <title>Data &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform Architecture v1.0 documentation" href="../index.html" />
     <link rel="up" title="Geohazards thematic exploitation platform guide" href="index.html" />
-    <link rel="next" title="A data processing facility" href="reproducibility.html" />
-    <link rel="prev" title="Results sharing area" href="platform/results-sharing.html" />
+    <link rel="next" title="Processing" href="processing.html" />
+    <link rel="prev" title="User" href="user.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -95,7 +95,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="platform/menu-bar.html">Menu bar</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="platform/menu-bar.html#home">Home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="platform/menu-bar.html#observations-measurements">Observations &amp; Measurements</a></li>
@@ -118,8 +118,12 @@
 <li class="toctree-l3"><a class="reference internal" href="platform/results-sharing.html">Results sharing area</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -139,7 +143,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">A Community Portal</a></li>
+<li><a class="reference internal" href="#">Data</a></li>
 </ul>
 </ul>
 </li>
@@ -149,11 +153,11 @@
               
                 
   <li>
-    <a href="platform/results-sharing.html" title="Previous Chapter: Results sharing area"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Results sharing ...</span>
+    <a href="user.html" title="Previous Chapter: User"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; User</span>
     </a>
   </li>
   <li>
-    <a href="reproducibility.html" title="Next Chapter: A data processing facility"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">A data processin... &raquo;</span>
+    <a href="processing.html" title="Next Chapter: Processing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Processing &raquo;</span>
     </a>
   </li>
               
@@ -187,9 +191,13 @@
         <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
@@ -209,19 +217,8 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="a-community-portal">
-<h1>A Community Portal<a class="headerlink" href="#a-community-portal" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>The portal homepage gives the user quick access to recent community inputs:</dt>
-<dd><ul class="first last simple">
-<li>up-to-date social feeds (twitter, rss, tumblr posts, ...),</li>
-<li>featured stories related to geohazards,</li>
-<li>last shared achievements.</li>
-</ul>
-</dd>
-</dl>
-<p>Thus, users are kept up to date with last news or products from the geohazards community.</p>
-<p>The portal is also meant to give the user the ability to easily share its work with the community and give other users access to its results.</p>
+  <div class="section" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
