@@ -118,7 +118,13 @@
 <li class="toctree-l3"><a class="reference internal" href="platform/results-sharing.html">Results sharing area</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">User</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#profile">Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#certificate">Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloud">Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
@@ -143,7 +149,13 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">User</a></li>
+<li><a class="reference internal" href="#">User</a><ul>
+<li><a class="reference internal" href="#profile">Profile</a></li>
+<li><a class="reference internal" href="#certificate">Certificate</a></li>
+<li><a class="reference internal" href="#cloud">Cloud</a></li>
+<li><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -192,7 +204,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">User</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#profile">Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#certificate">Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloud">Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
@@ -219,11 +237,34 @@
       
   <div class="section" id="user">
 <h1>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h1>
-<div align="center" class="align-center"><img alt="../_images/user.png" class="align-center" src="../_images/user.png" /></div>
-<p>User must <strong>sign-in</strong> using <strong>EO-SSO</strong>.</p>
-<p>User can access its <strong>Cloud</strong> account.</p>
-<p>User is linked to its <strong>Github</strong> account.</p>
-<p>User must provide a valid <strong>certificate</strong> to prove its identity.</p>
+<div align="center" class="align-center"><img alt="../_images/user.png" class="align-center" src="../_images/user.png" style="height: 400px;" /></div>
+<p>User must sign-in using <strong>EO-SSO</strong>.</p>
+<p>User can access his <strong>Cloud</strong> account by providing a valid <strong>certificate</strong> to prove his identity.</p>
+<p>User can link his <strong>Github</strong> account.</p>
+<div class="section" id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
+<div align="center" class="align-center"><img alt="../_images/user_profile.png" class="align-center" src="../_images/user_profile.png" /></div>
+<p>From the profile page, user can edit information about him (name, email, ...).
+He can as well access the page of hit EO-SSO account.</p>
+</div>
+<div class="section" id="certificate">
+<h2>Certificate<a class="headerlink" href="#certificate" title="Permalink to this headline">¶</a></h2>
+<p>Certificate is the key to access the cloud environment.</p>
+<p>Users can request a new certificate to Terradue&#8217;s support (clicking <em>Request certificate</em> button). It will automatically be added to the user profile.</p>
+<p>Users can also use an existing certificate and upload it to the portal.</p>
+</div>
+<div class="section" id="cloud">
+<h2>Cloud<a class="headerlink" href="#cloud" title="Permalink to this headline">¶</a></h2>
+<p>From this page, users can check everything is alright to access the Cloud Dashboard.
+If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
+Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).</p>
+<div align="center" class="align-center"><img alt="../_images/sunstone_logo.png" class="align-center" src="../_images/sunstone_logo.png" /></div>
+</div>
+<div class="section" id="github">
+<h2>Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p>Users can link their github account to their profile.
+They will be asked to add the public key associated to their certificate to their github account. This will allow them to develop on Sandboxes and use github as a version control and sharing system.</p>
+</div>
 </div>
 
 
