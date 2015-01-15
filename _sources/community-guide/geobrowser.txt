@@ -7,6 +7,7 @@ GeoBrowser
 .. image:: ../includes/geobrowser.png
 	:align: center
 
+
 The GeoBrowser is composed of:
 	- a `Map`_, where the user can make search query and see results
 	- `Contexts`_ links
@@ -39,7 +40,7 @@ Once all parameters are set, bbox chosen
 Contexts
 ~~~~~~~~
 
-. image:: ../includes/geobrowser_contexts.png
+.. image:: ../includes/geobrowser_contexts.png
 	:align: center
 
 Some pre-defined context are accessible on the top of the map.
@@ -66,10 +67,15 @@ Saved Data packages can then be loaded (by clicking on the *Load* button).
 Processing services tab
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Processing services tab can be expanded by clicking on *Processing Services* on the right on the map.
+Processing services tab can be expanded by clicking on *Processing Services* on the right of the map.
 It is composed of two sub tabs:
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
+
+.. image:: ../includes/geobrowser_jobs.png
+	:align: center
+
+
 
 .. |geobrowser_button_plus.png| image:: ../includes/geobrowser_button_plus.png
 .. |geobrowser_button_minus.png| image:: ../includes/geobrowser_button_minus.png
