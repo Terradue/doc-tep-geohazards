@@ -5,7 +5,7 @@ The Cloud platform is powered by OpenNebula, and gives to the user the possibili
 
 It is accessible by clicking on the Sunstone logo from the **Cloud Dashboard** page.
 
-.. image:: ../includes/cloud_dashboard.png
+.. image:: ../includes/sunstone_logo.png
 	:align: center
 
 Certificate must be registered in the browser to access the Cloud dashboard.
