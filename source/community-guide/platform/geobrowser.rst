@@ -4,7 +4,7 @@ GeoBrowser area for data and Cloud processing services
 GeoBrowser
 ----------
 
-.. image:: ../includes/geobrowser.png
+.. image:: ../../includes/geobrowser.png
 	:align: center
 
 
@@ -32,7 +32,7 @@ Some buttons maybe used to interact with the map:
 
 It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.
 
-.. image:: ../includes/geobrowser_timebar.png
+.. image:: ../../includes/geobrowser_timebar.png
 	:align: center
 
 Once all parameters are set, bbox chosen
@@ -40,7 +40,7 @@ Once all parameters are set, bbox chosen
 Contexts
 ~~~~~~~~
 
-.. image:: ../includes/geobrowser_contexts.png
+.. image:: ../../includes/geobrowser_contexts.png
 	:align: center
 
 Some pre-defined context are accessible on the top of the map.
@@ -55,7 +55,7 @@ The existing pre-defined contexts are:
 Results tab
 ~~~~~~~~~~~
 
-.. image:: ../includes/geobrowser_resulttab.png
+.. image:: ../../includes/geobrowser_resulttab.png
 	:align: center
 
 The result tab is divided in two parts.
@@ -72,16 +72,16 @@ It is composed of two sub tabs:
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
 
-.. image:: ../includes/geobrowser_jobs.png
+.. image:: ../../includes/geobrowser_jobs.png
 	:align: center
 
 
 
-.. |geobrowser_button_plus.png| image:: ../includes/geobrowser_button_plus.png
-.. |geobrowser_button_minus.png| image:: ../includes/geobrowser_button_minus.png
-.. |geobrowser_button_search.png| image:: ../includes/geobrowser_button_search.png
-.. |geobrowser_button_polygon.png| image:: ../includes/geobrowser_button_polygon.png
-.. |geobrowser_button_recbox.png| image:: ../includes/geobrowser_button_recbox.png
-.. |geobrowser_button_dynamicsearch.png| image:: ../includes/geobrowser_button_dynamicsearch.png
-.. |geobrowser_button_fullscreen.png| image:: ../includes/geobrowser_button_fullscreen.png
-.. |geobrowser_button_layers.png| image:: ../includes/geobrowser_button_layers.png
+.. |geobrowser_button_plus.png| image:: ../../includes/geobrowser_button_plus.png
+.. |geobrowser_button_minus.png| image:: ../../includes/geobrowser_button_minus.png
+.. |geobrowser_button_search.png| image:: ../../includes/geobrowser_button_search.png
+.. |geobrowser_button_polygon.png| image:: ../../includes/geobrowser_button_polygon.png
+.. |geobrowser_button_recbox.png| image:: ./../includes/geobrowser_button_recbox.png
+.. |geobrowser_button_dynamicsearch.png| image:: ../../includes/geobrowser_button_dynamicsearch.png
+.. |geobrowser_button_fullscreen.png| image:: ../../includes/geobrowser_button_fullscreen.png
+.. |geobrowser_button_layers.png| image:: ../../includes/geobrowser_button_layers.png
