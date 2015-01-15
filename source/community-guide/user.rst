@@ -3,7 +3,7 @@ User
 
 .. image:: ../includes/user.png
 	:align: center
-	:height: 400px
+	:scale: 50 %
 
 User must sign-in using **EO-SSO**.
 
