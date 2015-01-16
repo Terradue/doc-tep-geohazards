@@ -26,4 +26,4 @@ To create a job:
 |bulb| *Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input*
 To visualize the result of the job, see :doc:`Visualisation <visualisation>`
 
-|bulb| .. image:: ../includes/bulb.png
+.. |bulb| image:: ../includes/bulb.png
