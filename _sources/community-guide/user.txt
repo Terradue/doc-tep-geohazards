@@ -3,7 +3,7 @@ User
 
 .. image:: ../includes/user.png
 	:align: center
-	:width: 200px
+	:width: 300px
 
 User must sign-in using **EO-SSO**.
 
@@ -14,51 +14,79 @@ User can link his **Github** account.
 Sign in
 -------
 
-Once you are registered to ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
+Once registered on ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
 
 Edit your profile
 -----------------
 
 .. image:: ../includes/user_profile.png
 	:align: center
-	:scale: 70%
+	:scale: 80%
 	
-1. Edit your information such as first and last names, email, ... (username can not be modified though).
-2. Once your done, just click on **Submit** to save your changes.
+Fill in your profile:
 
-*Note*: Directly access your EO-SSO account by clicking on **EO-SSO account**.
+1. Edit information such as first and last names, email, ... (username can not be modified though).
+2. Once you are done, just click on **Submit** to save your changes.
+
+*Note*: Direct access to your EO-SSO account is provided by clicking on **EO-SSO account**.
 
 Upload your certificate
 -----------------------
 
 .. image:: ../includes/user_certificate.png
 	:align: center
-	:scale: 70%
+	:scale: 80%
 
-Certificate is the key to access the cloud environment.
+Certificate is the key to access the cloud environment, it is thus very important that you set it correctly in your profile.
 
-Users can request a new certificate to Terradue's support (clicking *Request certificate* button). It will automatically be added to the user profile.
+No certificate
+~~~~~~~~~~~~~~
 
-Users can also use an existing certificate and upload it to the portal.
+If you don't have yet any valid certificate:
 
-Cloud
------
+1. Request a new one to Terradue (clicking *Request certificate* button). 
+2. The new certificate, once created, will automatically be added to your profile.
+
+Existing certificate
+~~~~~~~~~~~~~~~~~~~~
+
+If you already have a valid certificate and you want to use it:
+
+1. Select a valid **PEM** certificate from your computer by clicking **Select file**.
+2. Once the correct file is chosen, click on **Upload file**.
+3. Your certificate is automatically added to your profile.
+
+Access the Cloud Dashboard
+--------------------------
+
+If you can see the cloud logo |sunstone_logo|, congratulations, all is correctly set up.
+Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula).
+
+If you cannot see the cloud logo, something is missing in your profile. Please check:
+
+1. You have a valid certificate stored in your user profile. If not, see `Upload your certificate`_.
+2. You have an account created on the Cloud Controller. If not, create one by clicking on **Create**.
 
 From this page, users can check everything is alright to access the Cloud Dashboard.
 If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
 Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).
 
-.. image:: ../includes/sunstone_logo.png
-	:align: center
-	:scale: 70%
+.. |sunstone_logo| image:: ../includes/sunstone_logo.png :width: 100px
 
-Github
-------
+Link your Github account
+------------------------
 
 .. image:: ../includes/user_github.png
 	:align: center
 	:scale: 70%
 
-Users can link their github account to their profile.
-They will be asked to add the public key associated to their certificate to their github account. This will allow them to develop on Sandboxes and use github as a version control and sharing system.
+Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Sandboxes. You can also release and share your code there.
 
+*Note*: Link your github account is not mandatory but highly recommanded.
+
+To link your Github account:
+
+1. Fill in your github name and validate by clicking on |user_github_edit|.
+2. You should add your ssh public key to your github account. If you don't have a Terradue certificate, you will need to add it manually. Finally click on **Add your public key** and accept the request on your Github account.
+
+.. |user_github_edit| image:: ../includes/user_github_edit.png
