@@ -9,6 +9,7 @@ GeoBrowser
 
 
 The GeoBrowser is composed of:
+
 	- a `Map`_, where the user can make search query and see results
 	- `Contexts`_ links
 	- `Results tab`_ (initialy hidden)
@@ -46,6 +47,7 @@ Contexts
 Some pre-defined context are accessible on the top of the map.
 One context is the result of a query on a specific catalog with pre-defined search parameters.
 The existing pre-defined contexts are:
+
 - EO data
 - EO results (standard)
 - EO results (advanced)
@@ -69,6 +71,7 @@ Processing services tab
 
 Processing services tab can be expanded by clicking on *Processing Services* on the right of the map.
 It is composed of two sub tabs:
+
 - *Services*, displaying the list of available Processing Services
 - *Jobs*, displaying the list of available jobs for the current users
 

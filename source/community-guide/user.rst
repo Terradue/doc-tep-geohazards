@@ -82,7 +82,9 @@ Link your Github account
 
 Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Sandboxes. You can also release and share your code there.
 
-*Note*: Link your github account is not mandatory but highly recommanded.
+|bulb| *Link your github account is not mandatory but highly recommanded.*
+
+.. |bulb| image:: ../includes/bulb.png
 
 To link your Github account:
 
