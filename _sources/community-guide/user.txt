@@ -59,7 +59,7 @@ If you already have a valid certificate and you want to use it:
 Access the Cloud Dashboard
 --------------------------
 
-If you can see the cloud logo |sunstone_logo|, congratulations, all is correctly set up.
+If you can see the cloud logo |sunstone_logo.png|, congratulations, all is correctly set up.
 Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula).
 
 If you cannot see the cloud logo, something is missing in your profile. Please check:
@@ -71,7 +71,7 @@ From this page, users can check everything is alright to access the Cloud Dashbo
 If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
 Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).
 
-.. |sunstone_logo| image:: ../includes/sunstone_logo.png :width: 100px
+.. |sunstone_logo.png| image:: ../includes/sunstone_logo.png :width: 100px
 
 Link your Github account
 ------------------------
@@ -86,7 +86,7 @@ Link your Github account to your profile will allow you to use Github as Softwar
 
 To link your Github account:
 
-1. Fill in your github name and validate by clicking on |user_github_edit|.
+1. Fill in your github name and validate by clicking on |user_github_edit.png|.
 2. You should add your ssh public key to your github account. If you don't have a Terradue certificate, you will need to add it manually. Finally click on **Add your public key** and accept the request on your Github account.
 
-.. |user_github_edit| image:: ../includes/user_github_edit.png
+.. |user_github_edit.png| image:: ../includes/user_github_edit.png
