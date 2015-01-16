@@ -119,8 +119,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">User</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#profile">Profile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#certificate">Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sign-in">Sign in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cloud">Cloud</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
 </ul>
@@ -155,8 +156,9 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">User</a><ul>
-<li><a class="reference internal" href="#profile">Profile</a></li>
-<li><a class="reference internal" href="#certificate">Certificate</a></li>
+<li><a class="reference internal" href="#sign-in">Sign in</a></li>
+<li><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
+<li><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a></li>
 <li><a class="reference internal" href="#cloud">Cloud</a></li>
 <li><a class="reference internal" href="#github">Github</a></li>
 </ul>
@@ -210,8 +212,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">User</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#profile">Profile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#certificate">Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sign-in">Sign in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cloud">Cloud</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#github">Github</a></li>
 </ul>
@@ -242,20 +245,28 @@
       
   <div class="section" id="user">
 <h1>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/user.png"><div align="center" class="align-center"><img alt="../_images/user.png" class="align-center" src="../_images/user.png" style="width: 561.5px; height: 461.5px;" /></div>
-</a>
+<div align="center" class="align-center"><img alt="../_images/user.png" class="align-center" src="../_images/user.png" style="width: 200px;" /></div>
 <p>User must sign-in using <strong>EO-SSO</strong>.</p>
 <p>User can access his <strong>Cloud</strong> account by providing a valid <strong>certificate</strong> to prove his identity.</p>
 <p>User can link his <strong>Github</strong> account.</p>
-<div class="section" id="profile">
-<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
-<div align="center" class="align-center"><img alt="../_images/user_profile.png" class="align-center" src="../_images/user_profile.png" /></div>
-<p>From the profile page, user can edit information about him (name, email, ...).
-He can as well access the page of hit EO-SSO account.</p>
+<div class="section" id="sign-in">
+<h2>Sign in<a class="headerlink" href="#sign-in" title="Permalink to this headline">¶</a></h2>
+<p>Once you are registered to ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.</p>
 </div>
-<div class="section" id="certificate">
-<h2>Certificate<a class="headerlink" href="#certificate" title="Permalink to this headline">¶</a></h2>
-<div align="center" class="align-center"><img alt="../_images/user_certificate.png" class="align-center" src="../_images/user_certificate.png" /></div>
+<div class="section" id="edit-your-profile">
+<h2>Edit your profile<a class="headerlink" href="#edit-your-profile" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/user_profile.png"><div align="center" class="align-center"><img alt="../_images/user_profile.png" class="align-center" src="../_images/user_profile.png" style="width: 488.6px; height: 390.6px;" /></div>
+</a>
+<ol class="arabic simple">
+<li>Edit your information such as first and last names, email, ... (username can not be modified though).</li>
+<li>Once your done, just click on <strong>Submit</strong> to save your changes.</li>
+</ol>
+<p><em>Note</em>: Directly access your EO-SSO account by clicking on <strong>EO-SSO account</strong>.</p>
+</div>
+<div class="section" id="upload-your-certificate">
+<h2>Upload your certificate<a class="headerlink" href="#upload-your-certificate" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/user_certificate.png"><div align="center" class="align-center"><img alt="../_images/user_certificate.png" class="align-center" src="../_images/user_certificate.png" style="width: 873.6px; height: 325.5px;" /></div>
+</a>
 <p>Certificate is the key to access the cloud environment.</p>
 <p>Users can request a new certificate to Terradue&#8217;s support (clicking <em>Request certificate</em> button). It will automatically be added to the user profile.</p>
 <p>Users can also use an existing certificate and upload it to the portal.</p>
@@ -265,11 +276,13 @@ He can as well access the page of hit EO-SSO account.</p>
 <p>From this page, users can check everything is alright to access the Cloud Dashboard.
 If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
 Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).</p>
-<div align="center" class="align-center"><img alt="../_images/sunstone_logo.png" class="align-center" src="../_images/sunstone_logo.png" /></div>
+<a class="reference internal image-reference" href="../_images/sunstone_logo.png"><div align="center" class="align-center"><img alt="../_images/sunstone_logo.png" class="align-center" src="../_images/sunstone_logo.png" style="width: 274.4px; height: 78.4px;" /></div>
+</a>
 </div>
 <div class="section" id="github">
 <h2>Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
-<div align="center" class="align-center"><img alt="../_images/user_github.png" class="align-center" src="../_images/user_github.png" /></div>
+<a class="reference internal image-reference" href="../_images/user_github.png"><div align="center" class="align-center"><img alt="../_images/user_github.png" class="align-center" src="../_images/user_github.png" style="width: 747.6px; height: 233.1px;" /></div>
+</a>
 <p>Users can link their github account to their profile.
 They will be asked to add the public key associated to their certificate to their github account. This will allow them to develop on Sandboxes and use github as a version control and sharing system.</p>
 </div>
