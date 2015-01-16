@@ -71,7 +71,7 @@ From this page, users can check everything is alright to access the Cloud Dashbo
 If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
 Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).
 
-.. |sunstone_logo.png| image:: ../includes/sunstone_logo.png :width: 100px
+.. |sunstone_logo.png| image:: ../includes/sunstone_logo-small.png
 
 Link your Github account
 ------------------------

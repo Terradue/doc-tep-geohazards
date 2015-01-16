@@ -9,5 +9,9 @@ Reproducibility
 	:align: center
 	:scale: 50 %
 
-- restarting a job with the same parameters
-- using a share link to data, processing
+Discover existing jobs
+----------------------
+
+Reprocess existing job
+----------------------
+
