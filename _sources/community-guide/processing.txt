@@ -25,7 +25,10 @@ To create a job:
 
 1. Select the service you want to use (see `Discover existing WPS `_).
 2. Fill in the different parameters needed by the service.
+
 |bulb.png| *Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input*
-To visualize the result of the job, see :doc:`Visualisation <visualisation>`
+
+3. Click on **Run Job**
+4. To visualize the result of the job, see :doc:`Visualisation <visualisation>`
 
 .. |bulb.png| image:: ../includes/bulb.png
