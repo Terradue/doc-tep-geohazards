@@ -7,12 +7,24 @@ Data
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
 
-Discover new data
------------------
+Discover data
+-------------
 
-If you want to find very specific data
-If he needs more specific data, he can query the catalogue using particular parameters (keywords, time, area of interest, ...).
-Result data will be automatically displayed on the map and listed on the results tab.
+Data discovery is made through the map. To get specific data:
+
+1. Focus on an area of the geobrowser.
+2. Select a time period on the time slider.
+3. Click on |search| to open the query tab.
+4. Fill in specific parameters.
+5. Click on **Search**.
+6. Results appers on the map and the **Results Table**.
+7. Click on a result (directly on the map or in the Results table) to get more info about this result.
+
+.. |search| image:: ../includes/geobrowser_button_query.png
+
+.. image:: ../includes/geobrowser_map_data.png
+	:align: center
+	:scale: 75%
 
 Discover contextualized data
 ----------------------------
@@ -37,10 +49,6 @@ To access data related to a specific event:
 2. Focus on one event.
 3. Click on **Select data**.
 4. Data related to this event is automatically added to the result tab and displayed on the map.
-
-.. image:: ../includes/geobrowser_map_data.png
-	:align: center
-	:scale: 75%
 
 Select data in your basket
 --------------------------
@@ -95,3 +103,9 @@ To clear your current basket:
 Use data in a process
 ---------------------
 
+1. Select a WPS and open it.
+2. The list of parameters is visible.
+3. Drag data from the **Results Table** and drop it over the selected parameter (only selected items are added).
+4. **OR** drag data from the **Features Basket** and drop it over the selected parameter (all items from the basket are added).
+5. In case of several items, it creates one occurence of the parameter per item.
+6. Data are ready to be used in the process. Click on **Run process* to actually run the process.
