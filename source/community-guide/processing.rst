@@ -20,7 +20,7 @@ Create a new job
 
 To create a new job:
 
-1. Select the service you want to use (see `Discover existing WPS `_).
+1. Select the service you want to use (see `Discover existing WPS`_).
 2. Fill in the different parameters needed by the service.
 
 |bulb| *Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input*
