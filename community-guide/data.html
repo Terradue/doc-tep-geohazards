@@ -109,8 +109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="platform/geobrowser.html#geobrowser">GeoBrowser</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#map">Map</a></li>
 <li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#contexts">Contexts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#results-tab">Results tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#results-table">Results table</a></li>
+<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#features-basket">Features basket</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="platform/geobrowser.html#cloud-processing">Cloud Processing</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#processing-services-tab">Processing services tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#jobs-tab">Jobs tab</a></li>
 </ul>
 </li>
 </ul>
@@ -132,9 +137,12 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-new-data">Discover new data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discover-contextualized-data">Discover contextualized data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-data-in-your-basket">Select data in your basket</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-new-data-package">Create a new data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-basket-as-data-package">Save basket as data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#load-an-existing-data-package">Load an existing data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-the-basket">Clear the basket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-data-in-a-process">Use data in a process</a></li>
 </ul>
 </li>
@@ -172,9 +180,12 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Data</a><ul>
 <li><a class="reference internal" href="#discover-new-data">Discover new data</a></li>
+<li><a class="reference internal" href="#discover-contextualized-data">Discover contextualized data</a></li>
+<li><a class="reference internal" href="#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li><a class="reference internal" href="#select-data-in-your-basket">Select data in your basket</a></li>
-<li><a class="reference internal" href="#create-a-new-data-package">Create a new data package</a></li>
+<li><a class="reference internal" href="#save-basket-as-data-package">Save basket as data package</a></li>
 <li><a class="reference internal" href="#load-an-existing-data-package">Load an existing data package</a></li>
+<li><a class="reference internal" href="#clear-the-basket">Clear the basket</a></li>
 <li><a class="reference internal" href="#use-data-in-a-process">Use data in a process</a></li>
 </ul>
 </li>
@@ -229,9 +240,12 @@
 <li class="toctree-l2"><a class="reference internal" href="user.html">User</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-new-data">Discover new data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discover-contextualized-data">Discover contextualized data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-data-in-your-basket">Select data in your basket</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-new-data-package">Create a new data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-basket-as-data-package">Save basket as data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#load-an-existing-data-package">Load an existing data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-the-basket">Clear the basket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-data-in-a-process">Use data in a process</a></li>
 </ul>
 </li>
@@ -262,26 +276,80 @@
 <h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/data.png"><div align="center" class="align-center"><img alt="../_images/data.png" class="align-center" src="../_images/data.png" style="width: 626.5px; height: 213.0px;" /></div>
 </a>
+<p>Discovery of data is made through the <a class="reference internal" href="platform/geobrowser.html"><em>geobrowser</em></a>).</p>
 <div class="section" id="discover-new-data">
 <h2>Discover new data<a class="headerlink" href="#discover-new-data" title="Permalink to this headline">¶</a></h2>
-<p>Discovery of data is made through the geobrowser.
-By default, data from</p>
-<p>users can see on the map data related to specific geohazards events (provided by the disaster charter).
+<p>If you want to find very specific data
 If he needs more specific data, he can query the catalogue using particular parameters (keywords, time, area of interest, ...).
 Result data will be automatically displayed on the map and listed on the results tab.</p>
 </div>
+<div class="section" id="discover-contextualized-data">
+<h2>Discover contextualized data<a class="headerlink" href="#discover-contextualized-data" title="Permalink to this headline">¶</a></h2>
+<p>Data related to a specific context can be accessed by clicking on one of the available context on the top-right of the browser.</p>
+<p>Currently existing contexts are:</p>
+<ul class="simple">
+<li>EO data</li>
+<li>EO processing</li>
+<li>Publications</li>
+<li>Community</li>
+</ul>
+<p>Once clicked on a context, data automatically appear on the map.</p>
+</div>
+<div class="section" id="discover-data-related-to-a-specific-event">
+<h2>Discover data related to a specific event<a class="headerlink" href="#discover-data-related-to-a-specific-event" title="Permalink to this headline">¶</a></h2>
+<p>To access data related to a specific event:</p>
+<ol class="arabic simple">
+<li>Access the geobrowser, by default, data related to specific geohazards events (provided by the disaster charter) are displayed on the map.</li>
+<li>Focus on one event.</li>
+<li>Click on <strong>Select data</strong>.</li>
+<li>Data related to this event is automatically added to the result tab and displayed on the map.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/geobrowser_map_data.png"><div align="center" class="align-center"><img alt="../_images/geobrowser_map_data.png" class="align-center" src="../_images/geobrowser_map_data.png" style="width: 228.75px; height: 370.5px;" /></div>
+</a>
+</div>
 <div class="section" id="select-data-in-your-basket">
 <h2>Select data in your basket<a class="headerlink" href="#select-data-in-your-basket" title="Permalink to this headline">¶</a></h2>
-<p>Data can be selected on the map as well as on the result tab.
-1.</p>
+<p>Data can be selected on the map as well as on the result tab.</p>
+<ol class="arabic simple">
+<li>Click on data on the map to make it appera on the <strong>Results Table</strong>.</li>
+<li>Drag data from the <strong>Results Table</strong> to the <strong>Features Basket</strong>.</li>
+<li>Data appears on the <strong>Features Basket</strong>.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/geobrowser_basket.png"><div align="center" class="align-center"><img alt="../_images/geobrowser_basket.png" class="align-center" src="../_images/geobrowser_basket.png" style="width: 297.0px; height: 72.0px;" /></div>
+</a>
 </div>
-<div class="section" id="create-a-new-data-package">
-<h2>Create a new data package<a class="headerlink" href="#create-a-new-data-package" title="Permalink to this headline">¶</a></h2>
-<p>Set of data can be saved as <strong>Data Package</strong>.
-Data packages can be <strong>private</strong> and simply reused later by the user who created them and reused later or <strong>public</strong> and shared with other users who will be able to use them for their processes.</p>
+<div class="section" id="save-basket-as-data-package">
+<h2>Save basket as data package<a class="headerlink" href="#save-basket-as-data-package" title="Permalink to this headline">¶</a></h2>
+<p>To create a new data package:</p>
+<ol class="arabic simple">
+<li>Add all data you want in the <strong>Features Basket</strong>.</li>
+<li>Click on <strong>Save</strong>.</li>
+<li>Choose a name for the data package.</li>
+<li>Tick the box if you want to make it public (means that everybody can access it).</li>
+<li>Click on <strong>Save</strong>.</li>
+<li>The data package is saved on the platform, you can re-access it later.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/geobrowser_dp_save.png"><div align="center" class="align-center"><img alt="../_images/geobrowser_dp_save.png" class="align-center" src="../_images/geobrowser_dp_save.png" style="width: 408.75px; height: 172.5px;" /></div>
+</a>
 </div>
 <div class="section" id="load-an-existing-data-package">
 <h2>Load an existing data package<a class="headerlink" href="#load-an-existing-data-package" title="Permalink to this headline">¶</a></h2>
+<p>To access a previously saved data package:</p>
+<ol class="arabic simple">
+<li>Click on <strong>Load</strong>.</li>
+<li>Select a data package on the list.</li>
+<li>All data from the data package are added into the current basket.</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/geobrowser_dp_load.png"><div align="center" class="align-center"><img alt="../_images/geobrowser_dp_load.png" class="align-center" src="../_images/geobrowser_dp_load.png" style="width: 417.0px; height: 180.0px;" /></div>
+</a>
+</div>
+<div class="section" id="clear-the-basket">
+<h2>Clear the basket<a class="headerlink" href="#clear-the-basket" title="Permalink to this headline">¶</a></h2>
+<p>To clear your current basket:</p>
+<ol class="arabic simple">
+<li>Click on <strong>Remove all</strong> on the basket tab.</li>
+<li>Your basket is now empty.</li>
+</ol>
 </div>
 <div class="section" id="use-data-in-a-process">
 <h2>Use data in a process<a class="headerlink" href="#use-data-in-a-process" title="Permalink to this headline">¶</a></h2>

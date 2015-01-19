@@ -109,8 +109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#map">Map</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#contexts">Contexts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#results-tab">Results tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#results-table">Results table</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#features-basket">Features basket</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cloud-processing">Cloud Processing</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#jobs-tab">Jobs tab</a></li>
 </ul>
 </li>
 </ul>
@@ -132,9 +137,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#discover-new-data">Discover new data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data.html#discover-contextualized-data">Discover contextualized data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data.html#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#select-data-in-your-basket">Select data in your basket</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data.html#create-a-new-data-package">Create a new data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data.html#save-basket-as-data-package">Save basket as data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#load-an-existing-data-package">Load an existing data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data.html#clear-the-basket">Clear the basket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#use-data-in-a-process">Use data in a process</a></li>
 </ul>
 </li>
@@ -174,8 +182,13 @@
 <li><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li><a class="reference internal" href="#map">Map</a></li>
 <li><a class="reference internal" href="#contexts">Contexts</a></li>
-<li><a class="reference internal" href="#results-tab">Results tab</a></li>
+<li><a class="reference internal" href="#results-table">Results table</a></li>
+<li><a class="reference internal" href="#features-basket">Features basket</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cloud-processing">Cloud Processing</a><ul>
 <li><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
+<li><a class="reference internal" href="#jobs-tab">Jobs tab</a></li>
 </ul>
 </li>
 </ul>
@@ -232,6 +245,7 @@
 <li class="toctree-l3"><a class="reference internal" href="information-areas.html">Information areas (Blog, News, ...)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">GeoBrowser area for data and Cloud processing services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#geobrowser">GeoBrowser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloud-processing">Cloud Processing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="results-sharing.html">Results sharing area</a></li>
@@ -272,7 +286,8 @@
 <div><ul class="simple">
 <li>a <a class="reference internal" href="#map">Map</a>, where the user can make search query and see results</li>
 <li><a class="reference internal" href="#contexts">Contexts</a> links</li>
-<li><a class="reference internal" href="#results-tab">Results tab</a> (initialy hidden)</li>
+<li><a class="reference internal" href="#results-table">Results table</a> (initialy hidden)</li>
+<li><a class="reference internal" href="#features-basket">Features Basket</a> (initialy hidden)</li>
 <li><a class="reference internal" href="#processing-services-tab">Processing services tab</a> (initialy hidden)</li>
 </ul>
 </div></blockquote>
@@ -284,9 +299,9 @@ Some buttons maybe used to interact with the map:</p>
 <li><img alt="geobrowser_button_search.png" src="../../_images/geobrowser_button_search.png" /> search area</li>
 <li><img alt="geobrowser_button_plus.png" src="../../_images/geobrowser_button_plus.png" /> Zoom in</li>
 <li><img alt="geobrowser_button_minus.png" src="../../_images/geobrowser_button_minus.png" /> Zoom out</li>
-<li><a href="#id1"><span class="problematic" id="id2">|geobrowser_button_query.png|</span></a> Open query search tab</li>
+<li><img alt="geobrowser_button_query.png" src="../../_images/geobrowser_button_query.png" /> Open query search tab</li>
 <li><img alt="geobrowser_button_polygon.png" src="../../_images/geobrowser_button_polygon.png" /> Edit the search bbox by drawing a polygon on the map</li>
-<li><img alt="geobrowser_button_recbox.png" src="community-guide/includes/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
+<li><img alt="geobrowser_button_recbox.png" src="../../_images/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
 <li><img alt="geobrowser_button_dynamicsearch.png" src="../../_images/geobrowser_button_dynamicsearch.png" /> Enable/Disable dynamic search (the search bbox is the current view on the map)</li>
 <li><img alt="geobrowser_button_fullscreen.png" src="../../_images/geobrowser_button_fullscreen.png" /> Put the map in full screen</li>
 <li><img alt="geobrowser_button_layers.png" src="../../_images/geobrowser_button_layers.png" /> Change the background of the map | Select layers to be displayed.</li>
@@ -303,14 +318,13 @@ One context is the result of a query on a specific catalog with pre-defined sear
 The existing pre-defined contexts are:</p>
 <ul class="simple">
 <li>EO data</li>
-<li>EO results (standard)</li>
-<li>EO results (advanced)</li>
+<li>EO processing</li>
 <li>Publications</li>
 <li>Community</li>
 </ul>
 </div>
-<div class="section" id="results-tab">
-<h3>Results tab<a class="headerlink" href="#results-tab" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="results-table">
+<h3>Results table<a class="headerlink" href="#results-table" title="Permalink to this headline">¶</a></h3>
 <div align="center" class="align-center"><img alt="../../_images/geobrowser_resulttab.png" class="align-center" src="../../_images/geobrowser_resulttab.png" /></div>
 <p>The result tab is divided in two parts.
 On the left, the list of current results displayed on the map.
@@ -318,14 +332,23 @@ On the right, the features from the current basket.
 Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the <em>Save</em> button) and shared with other users (by ticking the <em>Want to make it public?</em> box).
 Saved Data packages can then be loaded (by clicking on the <em>Load</em> button).</p>
 </div>
+<div class="section" id="features-basket">
+<h3>Features basket<a class="headerlink" href="#features-basket" title="Permalink to this headline">¶</a></h3>
+<div align="center" class="align-center"><img alt="../../_images/geobrowser_basket.png" class="align-center" src="../../_images/geobrowser_basket.png" /></div>
+</div>
+</div>
+<div class="section" id="cloud-processing">
+<h2>Cloud Processing<a class="headerlink" href="#cloud-processing" title="Permalink to this headline">¶</a></h2>
+<p>Processing services tab can be expanded by clicking on <em>Processing Services</em> on the right of the map.
+It is composed of two sub tabs.</p>
 <div class="section" id="processing-services-tab">
 <h3>Processing services tab<a class="headerlink" href="#processing-services-tab" title="Permalink to this headline">¶</a></h3>
-<p>Processing services tab can be expanded by clicking on <em>Processing Services</em> on the right of the map.
-It is composed of two sub tabs:</p>
-<ul class="simple">
-<li><em>Services</em>, displaying the list of available Processing Services</li>
-<li><em>Jobs</em>, displaying the list of available jobs for the current users</li>
-</ul>
+<p>This tab contains the list of available Processing Services. Usually, only 20 Processing services are displayed. If you are looking for a specific one, you can filter the results using the <strong>Filter services</strong> input.</p>
+</div>
+<div class="section" id="jobs-tab">
+<h3>Jobs tab<a class="headerlink" href="#jobs-tab" title="Permalink to this headline">¶</a></h3>
+<p>This tab contains the list of available jobs associated to your user.
+Details on jobs can be accessed by clicking on the title of the job.</p>
 <div align="center" class="align-center"><img alt="../../_images/geobrowser_jobs.png" class="align-center" src="../../_images/geobrowser_jobs.png" /></div>
 </div>
 </div>

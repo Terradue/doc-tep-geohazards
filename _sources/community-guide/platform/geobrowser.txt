@@ -12,7 +12,8 @@ The GeoBrowser is composed of:
 
 	- a `Map`_, where the user can make search query and see results
 	- `Contexts`_ links
-	- `Results tab`_ (initialy hidden)
+	- `Results table`_ (initialy hidden)
+	- `Features Basket`_ (initialy hidden)
 	- `Processing services tab`_ (initialy hidden)
 
 Map
@@ -49,13 +50,12 @@ One context is the result of a query on a specific catalog with pre-defined sear
 The existing pre-defined contexts are:
 
 - EO data
-- EO results (standard)
-- EO results (advanced)
+- EO processing
 - Publications
 - Community
 
-Results tab
-~~~~~~~~~~~
+Results table
+~~~~~~~~~~~~~
 
 .. image:: ../../includes/geobrowser_resulttab.png
 	:align: center
@@ -66,25 +66,41 @@ On the right, the features from the current basket.
 Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the *Save* button) and shared with other users (by ticking the *Want to make it public?* box).
 Saved Data packages can then be loaded (by clicking on the *Load* button).
 
+Features basket
+~~~~~~~~~~~~~~~
+
+.. image:: ../../includes/geobrowser_basket.png
+	:align: center
+
+
+
+Cloud Processing
+----------------
+
+Processing services tab can be expanded by clicking on *Processing Services* on the right of the map.
+It is composed of two sub tabs.
+
 Processing services tab
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Processing services tab can be expanded by clicking on *Processing Services* on the right of the map.
-It is composed of two sub tabs:
+This tab contains the list of available Processing Services. Usually, only 20 Processing services are displayed. If you are looking for a specific one, you can filter the results using the **Filter services** input.
 
-- *Services*, displaying the list of available Processing Services
-- *Jobs*, displaying the list of available jobs for the current users
+Jobs tab
+~~~~~~~~
+
+This tab contains the list of available jobs associated to your user.
+Details on jobs can be accessed by clicking on the title of the job.
 
 .. image:: ../../includes/geobrowser_jobs.png
 	:align: center
 
 
-
+.. |geobrowser_button_query.png| image:: ../../includes/geobrowser_button_query.png
 .. |geobrowser_button_plus.png| image:: ../../includes/geobrowser_button_plus.png
 .. |geobrowser_button_minus.png| image:: ../../includes/geobrowser_button_minus.png
 .. |geobrowser_button_search.png| image:: ../../includes/geobrowser_button_search.png
 .. |geobrowser_button_polygon.png| image:: ../../includes/geobrowser_button_polygon.png
-.. |geobrowser_button_recbox.png| image:: ./../includes/geobrowser_button_recbox.png
+.. |geobrowser_button_recbox.png| image:: ../../includes/geobrowser_button_recbox.png
 .. |geobrowser_button_dynamicsearch.png| image:: ../../includes/geobrowser_button_dynamicsearch.png
 .. |geobrowser_button_fullscreen.png| image:: ../../includes/geobrowser_button_fullscreen.png
 .. |geobrowser_button_layers.png| image:: ../../includes/geobrowser_button_layers.png
