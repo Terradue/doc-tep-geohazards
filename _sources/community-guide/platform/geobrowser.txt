@@ -12,8 +12,7 @@ The GeoBrowser is composed of:
 
 	- a `Map`_, where the user can make search query and see results
 	- `Contexts`_ links
-	- `Results table`_ (initialy hidden)
-	- `Features Basket`_ (initialy hidden)
+	- `Results`_ tab (initialy hidden)
 	- `Processing services tab`_ (initialy hidden)
 
 Map
@@ -54,24 +53,19 @@ The existing pre-defined contexts are:
 - Publications
 - Community
 
-Results table
-~~~~~~~~~~~~~
+Results
+~~~~~~~
 
 .. image:: ../../includes/geobrowser_resulttab.png
 	:align: center
 
-The result tab is divided in two parts.
-On the left, the list of current results displayed on the map.
-On the right, the features from the current basket.
-Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the *Save* button) and shared with other users (by ticking the *Want to make it public?* box).
-Saved Data packages can then be loaded (by clicking on the *Load* button).
+The result tab is divided in two parts:
 
-Features basket
-~~~~~~~~~~~~~~~
+- On the left, the **Results Table** showing the list of current results displayed on the map. Results are paginatd, only 20 items are displayed, select another page to discover more products.
+- On the right, the **Features Basket** showing all data in the current basket.
 
-.. image:: ../../includes/geobrowser_basket.png
-	:align: center
-
+Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package and shared with other users.
+Saved Data packages can then be loaded into the basket. (see :doc:`data <../data>` for more details)
 
 
 Cloud Processing

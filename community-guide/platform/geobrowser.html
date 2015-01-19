@@ -109,8 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#map">Map</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#contexts">Contexts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#results-table">Results table</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#features-basket">Features basket</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#results">Results</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#cloud-processing">Cloud Processing</a><ul>
@@ -136,7 +135,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data.html#discover-new-data">Discover new data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data.html#discover-data">Discover data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#discover-contextualized-data">Discover contextualized data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data.html#select-data-in-your-basket">Select data in your basket</a></li>
@@ -152,13 +151,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../processing.html#access-created-jobs">Access created jobs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../visualisation.html">Visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualisation.html">Visualisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visualisation.html#access-job-result">Access job result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualisation.html#visualize-result-on-the-map">Visualize result on the map</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../reproducibility.html">Reproducibility</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reproducibility.html#discover-existing-jobs">Discover existing jobs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reproducibility.html#reprocess-existing-job">Reprocess existing job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-process-result">Share process result</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -182,8 +188,7 @@
 <li><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li><a class="reference internal" href="#map">Map</a></li>
 <li><a class="reference internal" href="#contexts">Contexts</a></li>
-<li><a class="reference internal" href="#results-table">Results table</a></li>
-<li><a class="reference internal" href="#features-basket">Features basket</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#cloud-processing">Cloud Processing</a><ul>
@@ -286,8 +291,7 @@
 <div><ul class="simple">
 <li>a <a class="reference internal" href="#map">Map</a>, where the user can make search query and see results</li>
 <li><a class="reference internal" href="#contexts">Contexts</a> links</li>
-<li><a class="reference internal" href="#results-table">Results table</a> (initialy hidden)</li>
-<li><a class="reference internal" href="#features-basket">Features Basket</a> (initialy hidden)</li>
+<li><a class="reference internal" href="#results">Results</a> tab (initialy hidden)</li>
 <li><a class="reference internal" href="#processing-services-tab">Processing services tab</a> (initialy hidden)</li>
 </ul>
 </div></blockquote>
@@ -323,18 +327,16 @@ The existing pre-defined contexts are:</p>
 <li>Community</li>
 </ul>
 </div>
-<div class="section" id="results-table">
-<h3>Results table<a class="headerlink" href="#results-table" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
 <div align="center" class="align-center"><img alt="../../_images/geobrowser_resulttab.png" class="align-center" src="../../_images/geobrowser_resulttab.png" /></div>
-<p>The result tab is divided in two parts.
-On the left, the list of current results displayed on the map.
-On the right, the features from the current basket.
-Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package (clicking on the <em>Save</em> button) and shared with other users (by ticking the <em>Want to make it public?</em> box).
-Saved Data packages can then be loaded (by clicking on the <em>Load</em> button).</p>
-</div>
-<div class="section" id="features-basket">
-<h3>Features basket<a class="headerlink" href="#features-basket" title="Permalink to this headline">¶</a></h3>
-<div align="center" class="align-center"><img alt="../../_images/geobrowser_basket.png" class="align-center" src="../../_images/geobrowser_basket.png" /></div>
+<p>The result tab is divided in two parts:</p>
+<ul class="simple">
+<li>On the left, the <strong>Results Table</strong> showing the list of current results displayed on the map. Results are paginatd, only 20 items are displayed, select another page to discover more products.</li>
+<li>On the right, the <strong>Features Basket</strong> showing all data in the current basket.</li>
+</ul>
+<p>Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package and shared with other users.
+Saved Data packages can then be loaded into the basket. (see <a class="reference internal" href="../data.html"><em>data</em></a> for more details)</p>
 </div>
 </div>
 <div class="section" id="cloud-processing">

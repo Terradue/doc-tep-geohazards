@@ -109,8 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="platform/geobrowser.html#geobrowser">GeoBrowser</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#map">Map</a></li>
 <li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#contexts">Contexts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#results-table">Results table</a></li>
-<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#features-basket">Features basket</a></li>
+<li class="toctree-l5"><a class="reference internal" href="platform/geobrowser.html#results">Results</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="platform/geobrowser.html#cloud-processing">Cloud Processing</a><ul>
@@ -136,7 +135,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="data.html#discover-new-data">Discover new data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data.html#discover-data">Discover data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html#discover-contextualized-data">Discover contextualized data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html#select-data-in-your-basket">Select data in your basket</a></li>
@@ -152,13 +151,20 @@
 <li class="toctree-l3"><a class="reference internal" href="processing.html#access-created-jobs">Access created jobs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="visualisation.html#access-job-result">Access job result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualisation.html#visualize-result-on-the-map">Visualize result on the map</a></li>
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Reproducibility</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-existing-jobs">Discover existing jobs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reprocess-existing-job">Reprocess existing job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sharing.html#share-process-result">Share process result</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -266,10 +272,22 @@
 </a>
 <div class="section" id="discover-existing-jobs">
 <h2>Discover existing jobs<a class="headerlink" href="#discover-existing-jobs" title="Permalink to this headline">¶</a></h2>
-<p>See <tt class="xref doc docutils literal"><span class="pre">Access</span> <span class="pre">created</span> <span class="pre">jobs</span></tt>.</p>
+<p>To see list of already processed jobs:</p>
+<ol class="arabic simple">
+<li>Open the <strong>Processing Services</strong> tab.</li>
+<li>Click on <strong>Jobs</strong>.</li>
+<li>Select a job from the list and open it by clicking on it.</li>
+</ol>
 </div>
 <div class="section" id="reprocess-existing-job">
 <h2>Reprocess existing job<a class="headerlink" href="#reprocess-existing-job" title="Permalink to this headline">¶</a></h2>
+<p>To reprocess an existing job:</p>
+<ol class="arabic simple">
+<li>Select a job (see <a class="reference internal" href="#discover-existing-jobs">Discover existing jobs</a>)</li>
+<li>In the <strong>Parameters</strong> part, click on <strong>Resubmit job</strong>.</li>
+<li>Previously used parameters are set by default, you can let them or change them.</li>
+<li>Click on <strong>Run job</strong>.</li>
+</ol>
 </div>
 </div>
 
