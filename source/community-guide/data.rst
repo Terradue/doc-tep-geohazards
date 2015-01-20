@@ -11,8 +11,7 @@ Data
 	:scale: 100%
 	:figclass: img-border
 
-.. image:: ../includes/geobrowser_map_data.png
-	:align: left
+.. figure:: ../includes/geobrowser_basket.png
 	:scale: 75%
 	:figclass: img-border
 
