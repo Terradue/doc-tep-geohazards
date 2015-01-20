@@ -1,9 +1,10 @@
 Reproducibility
 ===============
 
-.. image:: ../includes/reproducibility.png
+.. figure:: ../includes/reproducibility.png
 	:align: center
 	:scale: 30%
+	:figclass: img-container-border
 
 Discover existing jobs
 ----------------------

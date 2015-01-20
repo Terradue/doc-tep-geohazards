@@ -1,9 +1,10 @@
 User
 ====
 
-.. image:: ../includes/user.png
+.. figure:: ../includes/user.png
 	:align: center
-	:width: 300px
+	:width: 30%
+	:figclass: img-container-border
 
 User must sign-in using **EO-SSO**.
 
@@ -19,8 +20,8 @@ Once registered on ESA EO Single Sign On (EOSSO), you can simply sign-in using t
 Edit your profile
 -----------------
 
-.. image:: ../includes/user_profile.png
-	:align: center
+.. figure:: ../includes/user_profile.png
+	:figclass: img-border
 	:scale: 80%
 	
 Fill in your profile:
@@ -33,8 +34,8 @@ Fill in your profile:
 Upload your certificate
 -----------------------
 
-.. image:: ../includes/user_certificate.png
-	:align: center
+.. figure:: ../includes/user_certificate.png
+	:figclass: img-border
 	:scale: 80%
 
 Certificate is the key to access the cloud environment, it is thus very important that you set it correctly in your profile.
@@ -76,8 +77,8 @@ Once all is good, the Sunstone logo will be displayed and clickable to redirect 
 Link your Github account
 ------------------------
 
-.. image:: ../includes/user_github.png
-	:align: center
+.. figure:: ../includes/user_github.png
+	:figclass: img-border
 	:scale: 70%
 
 Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Sandboxes. You can also release and share your code there.

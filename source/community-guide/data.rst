@@ -1,25 +1,6 @@
 Data
 ====
 
-max width, no borders
-
-.. figure:: ../includes/data.png
-	:figclass: img-max-width
-
-max width, borders
-
-.. figure:: ../includes/data.png
-	:figclass: img-border img-max-width
-
-set width, align left, border on image
-
-.. figure:: ../includes/data.png
-	:scale: 30%
-	:align: center
-	:figclass: img-border
-
-set width, align center, border on the image container (the whole row)
-
 .. figure:: ../includes/data.png
 	:scale: 30%
 	:align: center
@@ -81,8 +62,6 @@ Data can be selected on the map as well as on the result tab.
 3. Data appears on the **Features Basket**.
 
 .. figure:: ../includes/geobrowser_basket.png
-	:align: center
-	:scale: 75%
 	:figclass: img-border
 
 Save basket as data package
@@ -98,7 +77,6 @@ To create a new data package:
 6. The data package is saved on the platform, you can re-access it later.
 
 .. figure:: ../includes/geobrowser_dp_save.png
-	:align: center
 	:scale: 75%
 	:figclass: img-border
 
@@ -112,7 +90,6 @@ To access a previously saved data package:
 3. All data from the data package are added into the current basket.
 
 .. figure:: ../includes/geobrowser_dp_load.png
-	:align: center
 	:scale: 75%
 	:figclass: img-border
 

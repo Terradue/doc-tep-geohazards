@@ -1,15 +1,16 @@
 Visualisation
 =============
 
-.. image:: ../includes/visualisation.png
+.. figure:: ../includes/visualisation.png
 	:align: center
-	:scale: 50 %
+	:scale: 50%
+	:figclass: img-container-border
 
 Access job result
 -----------------
 
-.. image:: ../includes/job_results.png
-	:align: center
+.. figure:: ../includes/job_results.png
+	:figclass: img-border
 	:scale: 50 %
 
 To visualize job's result:

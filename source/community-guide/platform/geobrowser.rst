@@ -4,8 +4,8 @@ GeoBrowser area for data and Cloud processing services
 GeoBrowser
 ----------
 
-.. image:: ../../includes/geobrowser.png
-	:align: center
+.. figure:: ../../includes/geobrowser.png
+	:figclass: img-border
 
 
 The GeoBrowser is composed of:
@@ -33,16 +33,16 @@ Some buttons maybe used to interact with the map:
 
 It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.
 
-.. image:: ../../includes/geobrowser_timebar.png
-	:align: center
+.. figure:: ../../includes/geobrowser_timebar.png
+	:figclass: img-border
 
 Once all parameters are set, bbox chosen
 
 Contexts
 ~~~~~~~~
 
-.. image:: ../../includes/geobrowser_contexts.png
-	:align: center
+.. figure:: ../../includes/geobrowser_contexts.png
+	:figclass: img-border
 
 Some pre-defined context are accessible on the top of the map.
 One context is the result of a query on a specific catalog with pre-defined search parameters.
@@ -56,8 +56,8 @@ The existing pre-defined contexts are:
 Results
 ~~~~~~~
 
-.. image:: ../../includes/geobrowser_resulttab.png
-	:align: center
+.. figure:: ../../includes/geobrowser_resulttab.png
+	:figclass: img-border
 
 The result tab is divided in two parts:
 
@@ -85,8 +85,8 @@ Jobs tab
 This tab contains the list of available jobs associated to your user.
 Details on jobs can be accessed by clicking on the title of the job.
 
-.. image:: ../../includes/geobrowser_jobs.png
-	:align: center
+.. figure:: ../../includes/geobrowser_jobs.png
+	:figclass: img-border
 
 
 .. |geobrowser_button_query.png| image:: ../../includes/geobrowser_button_query.png
