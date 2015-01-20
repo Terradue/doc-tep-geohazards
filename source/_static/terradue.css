@@ -518,6 +518,6 @@ li.toctree-l4 > a {
 	background-color: #f5f5f5;
 }
 
-div.img-border {
-  border-width: 5;
+.img-border {
+  border: 2px solid black;
 }

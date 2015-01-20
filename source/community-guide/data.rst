@@ -23,7 +23,7 @@ Data discovery is made through the map. To get specific data:
 
 .. |search| image:: ../includes/geobrowser_button_query.png
 
-.. figure:: ../includes/geobrowser_map_data.png
+.. image:: ../includes/geobrowser_map_data.png
 	:align: center
 	:scale: 75%
 	:figclass: img-border
@@ -78,9 +78,10 @@ To create a new data package:
 5. Click on **Save**.
 6. The data package is saved on the platform, you can re-access it later.
 
-.. image:: ../includes/geobrowser_dp_save.png
+.. figure:: ../includes/geobrowser_dp_save.png
 	:align: center
 	:scale: 75%
+	:figclass: img-border
 
 Load an existing data package
 -----------------------------
@@ -91,9 +92,10 @@ To access a previously saved data package:
 2. Select a data package on the list.
 3. All data from the data package are added into the current basket.
 
-.. image:: ../includes/geobrowser_dp_load.png
+.. figure:: ../includes/geobrowser_dp_load.png
 	:align: center
 	:scale: 75%
+	:figclass: img-border
 
 Clear the basket
 ----------------
