@@ -6,6 +6,15 @@ Data
 	:scale: 50%
 	:figclass: img-border
 
+.. figure:: ../includes/data.png
+	:align: center
+	:scale: 100%
+	:figclass: img-border
+
+.. image:: ../includes/geobrowser_map_data.png
+	:scale: 75%
+	:figclass: img-border
+
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
 
 Discover data
