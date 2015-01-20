@@ -12,6 +12,7 @@ Data
 	:figclass: img-border
 
 .. image:: ../includes/geobrowser_map_data.png
+	:align: left
 	:scale: 75%
 	:figclass: img-border
 
