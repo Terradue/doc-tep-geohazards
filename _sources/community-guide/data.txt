@@ -6,7 +6,11 @@ Data
 	:align: center
 	:figclass: img-container-border
 
-Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
+Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`. 
+
+You can search for specific data by creating a query to a catalogue, look for specific events or simply see amongst the contextualized results what can be interesting for you.
+
+Put data in your basket and save it for later, or simply drag and drop data as a parameter of a process.
 
 Discover data
 -------------

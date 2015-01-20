@@ -7,7 +7,7 @@ Contents:
    :maxdepth: 2
    
    Platform overview <platform/index>
-   User <user>
+   User Profile <user>
    Data <data>
    Processing <processing>
    Visualisation <visualisation>

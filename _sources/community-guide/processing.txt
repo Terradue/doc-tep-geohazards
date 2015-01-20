@@ -6,6 +6,8 @@ Processing
 	:figclass: img-container-border
 	:scale: 50%
 
+Select some products on the geobrowser, find an appropriate Web Procesing Service and immediately run it. Your job will be saved and accessible at any time.
+
 Discover existing WPS 
 ---------------------
 

@@ -1,16 +1,13 @@
-User
-====
+User Profile
+============
 
 .. figure:: ../includes/user.png
 	:align: center
 	:width: 30%
 	:figclass: img-container-border
 
-User must sign-in using **EO-SSO**.
 
-User can access his **Cloud** account by providing a valid **certificate** to prove his identity.
-
-User can link his **Github** account.
+Find out how to sign-in using **EO-SSO**, access your **Cloud** account by providing a valid **certificate** and prove your identity, or even link your profile with your **Github** account.
 
 Sign in
 -------
@@ -35,7 +32,7 @@ Upload your certificate
 -----------------------
 
 .. figure:: ../includes/user_certificate.png
-	:figclass: img-border
+	:figclass: img-border img-max-width
 	:scale: 80%
 
 Certificate is the key to access the cloud environment, it is thus very important that you set it correctly in your profile.
