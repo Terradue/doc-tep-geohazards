@@ -220,9 +220,6 @@ a {
 	color: #3b5998;
 }
 
-img.align-center, .figure.align-center, object.align-center {
-	max-width: 100%;
-}
 
 
 /* add the github logo to source link */
@@ -531,4 +528,10 @@ li.toctree-l4 > a {
 }
 .img-max-width img {
 	width: 100% !important;
+}
+.figure {
+	margin-bottom: 10px;
+}
+img.align-center, .figure.align-center, object.align-center {
+	max-width: 100%;
 }
