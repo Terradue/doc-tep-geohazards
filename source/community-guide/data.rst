@@ -10,7 +10,7 @@ Data
 	:figclass: img-border img-max-width
 
 .. figure:: ../includes/geobrowser_basket.png
-	:scale: 50
+	:scale: 50%
 	:figclass: img-border
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
