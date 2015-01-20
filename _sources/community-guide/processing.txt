@@ -1,8 +1,9 @@
 Processing
 ==========
 
-.. image:: ../includes/processing.png
+.. figure:: ../includes/processing.png
 	:align: center
+	:figclass: img-container-border
 	:scale: 50%
 
 Discover existing WPS 

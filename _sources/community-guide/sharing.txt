@@ -1,9 +1,10 @@
 Sharing
 =======
 
-.. image:: ../includes/sharing.png
+.. figure:: ../includes/sharing.png
 	:align: center
-	:scale: 50 %
+	:scale: 50%
+	:figclass: img-container-border
 
 Share process result
 --------------------
