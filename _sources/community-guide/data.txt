@@ -59,10 +59,10 @@ Data can be selected on the map as well as on the result tab.
 2. Drag data from the **Results Table** to the **Features Basket**.
 3. Data appears on the **Features Basket**.
 
-.. image:: ../includes/geobrowser_basket.png
+.. figure:: ../includes/geobrowser_basket.png
 	:align: center
 	:scale: 75%
-	:border: 1
+	:figclass: special
 
 Save basket as data package
 ---------------------------
