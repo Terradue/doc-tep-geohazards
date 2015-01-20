@@ -1,9 +1,10 @@
 Data
 ====
 
-.. image:: ../includes/data.png
+.. figure:: ../includes/data.png
 	:align: center
 	:scale: 50%
+	:figclass: img-border
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
 
@@ -22,9 +23,10 @@ Data discovery is made through the map. To get specific data:
 
 .. |search| image:: ../includes/geobrowser_button_query.png
 
-.. image:: ../includes/geobrowser_map_data.png
+.. figure:: ../includes/geobrowser_map_data.png
 	:align: center
 	:scale: 75%
+	:figclass: img-border
 
 Discover contextualized data
 ----------------------------
@@ -62,7 +64,7 @@ Data can be selected on the map as well as on the result tab.
 .. figure:: ../includes/geobrowser_basket.png
 	:align: center
 	:scale: 75%
-	:figclass: special
+	:figclass: img-border
 
 Save basket as data package
 ---------------------------
