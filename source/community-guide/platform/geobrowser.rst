@@ -5,7 +5,7 @@ GeoBrowser
 ----------
 
 .. figure:: ../../includes/geobrowser.png
-	:figclass: img-border
+	:figclass: img-border img-max-width
 
 
 The GeoBrowser is composed of:
