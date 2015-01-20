@@ -1,17 +1,29 @@
 Data
 ====
 
+max width, no borders
+
 .. figure:: ../includes/data.png
-	:align: center
-	:scale: 50%
-	:figclass: img-border
+	:figclass: img-max-width
+
+max width, borders
 
 .. figure:: ../includes/data.png
 	:figclass: img-border img-max-width
 
-.. figure:: ../includes/geobrowser_basket.png
-	:scale: 50%
+set width, align left, border on image
+
+.. figure:: ../includes/data.png
+	:scale: 30%
+	:align: center
 	:figclass: img-border
+
+set width, align center, border on the image container (the whole row)
+
+.. figure:: ../includes/data.png
+	:scale: 30%
+	:align: center
+	:figclass: img-container-border
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`).
 

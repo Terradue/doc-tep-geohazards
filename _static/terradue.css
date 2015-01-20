@@ -518,6 +518,15 @@ li.toctree-l4 > a {
 	background-color: #f5f5f5;
 }
 
-.img-border {
-  border: 2px solid black;
+/* image rendering */
+.img-border img {
+	border: 2px solid gray;
+	border-radius: 6px;
+	padding: 5px;
+}
+.img-container-border {
+	border: 2px solid black;
+}
+.img-max-width img {
+	width: 100% !important;
 }
