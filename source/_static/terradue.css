@@ -522,7 +522,7 @@ li.toctree-l4 > a {
 	padding: 5px;
 }
 .img-container-border {
-	border: 2px solid black;
+	border: 2px solid gray;
 	border-radius: 6px;
 	padding: 5px;
 }
