@@ -62,6 +62,7 @@ Data can be selected on the map as well as on the result tab.
 .. image:: ../includes/geobrowser_basket.png
 	:align: center
 	:scale: 75%
+	:border: 1
 
 Save basket as data package
 ---------------------------
