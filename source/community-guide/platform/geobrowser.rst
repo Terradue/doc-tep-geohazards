@@ -34,7 +34,7 @@ Some buttons maybe used to interact with the map:
 It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.
 
 .. figure:: ../../includes/geobrowser_timebar.png
-	:figclass: img-border
+	:figclass: img-border img-max-width
 
 Once all parameters are set, bbox chosen
 
@@ -57,7 +57,7 @@ Results
 ~~~~~~~
 
 .. figure:: ../../includes/geobrowser_resulttab.png
-	:figclass: img-border
+	:figclass: img-border img-max-width
 
 The result tab is divided in two parts:
 
