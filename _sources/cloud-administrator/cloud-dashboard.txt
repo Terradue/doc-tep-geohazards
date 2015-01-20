@@ -3,10 +3,10 @@ Cloud Platform dashboard
 
 The Cloud platform is powered by OpenNebula, and gives to the user the possibility to create and manage Processing Services.
 
-It is accessible by clicking on the Sunstone logo from the **Cloud Dashboard** page.
+It is accessible by clicking on the Sunstone logo |sunstone_logo| from the **Cloud Dashboard** page.
 
-.. image:: ../includes/sunstone_logo.png
-	:align: center
+.. |sunstone_logo| image:: ../includes/sunstone_logo-small.png
+
 
 Certificate must be registered in the browser to access the Cloud dashboard.
 
