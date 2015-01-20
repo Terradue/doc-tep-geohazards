@@ -7,6 +7,7 @@ Directly on the homepage, the user can find:
 
 .. figure:: ../../includes/news_features.png
 	:figclass: img-border
+	:width: 600px
 
 - a list of the most recent feeds from selected twitter accounts (with associated keywords to really focus the results on the geohazards)
 
