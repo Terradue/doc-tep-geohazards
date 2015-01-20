@@ -2,20 +2,24 @@ Data
 ====
 
 max width, no borders
+
 .. figure:: ../includes/data.png
 	:figclass: img-max-width
 
 max width, borders
+
 .. figure:: ../includes/data.png
 	:figclass: img-border img-max-width
 
 set width, align left, border on image
+
 .. figure:: ../includes/data.png
 	:scale: 30%
 	:align: center
 	:figclass: img-border
 
 set width, align center, border on the image container (the whole row)
+
 .. figure:: ../includes/geobrowser_basket.png
 	:scale: 30%
 	:align: center
