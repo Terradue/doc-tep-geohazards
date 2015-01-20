@@ -20,7 +20,7 @@ set width, align left, border on image
 
 set width, align center, border on the image container (the whole row)
 
-.. figure:: ../includes/geobrowser_basket.png
+.. figure:: ../includes/data.png
 	:scale: 30%
 	:align: center
 	:figclass: img-container-border
