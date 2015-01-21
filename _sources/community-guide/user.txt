@@ -28,6 +28,17 @@ Fill in your profile:
 
 *Note*: Direct access to your EO-SSO account is provided by clicking on **EO-SSO account**.
 
+Change your password
+--------------------
+
+To change your EO-SSO password:
+
+1. On your profile page, click on **EO-SSO account**.
+2. On the EO-SSO account page, click on **Change user password**.
+3. Write your old password, and your new password (twice).
+4. Click on **Submit**.
+5. Your password is updated.
+
 Upload your certificate
 -----------------------
 
