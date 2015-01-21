@@ -9,8 +9,8 @@ Sharing
 Share your processing jobs and results with the community and allow other users to reproduce or modify your processes.
 You can even share your favorite Processing Service or a data package you created.
 
-Share the result of a process
------------------------------
+Share a job
+-----------
 
 To share a process you just created and executed:
 
