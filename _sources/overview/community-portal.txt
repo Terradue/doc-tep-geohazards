@@ -9,14 +9,12 @@ It is meant to be used by the following kind of users:
 - processor provider
 - end user
 
-The portal homepage gather in the same place most of the recent community inputs:
+The portal homepage is a social place that gather in the same place most of the recent community inputs:
 
 - up-to-date social feeds (twitter, rss, tumblr posts, ...), 
 - featured stories related to geohazards,
 - last shared achievements.
 
-It keeps you up to date with last news or products from the geohazards community in a really simple way.
+It keeps you up to date with last news or products from the geohazards community in a really simple way and gives you the ability to easily share and collaborate with the community the work you've done. Using the platform will make you contribute actively to the community and access last achievements produced by others.
 
-The platform gives you the ability to easily share and collaborate with the community the work you've done. Using the platform will make you contribute actively to the community and access last achievements produced by others.
-
-The homepage will dynamically change according to the type of user, so the user can quickly access what is important for him.
+The homepage is also a quick access to your workspace and dynamically change according to the type of user to make the user experience even more easy.
