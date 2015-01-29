@@ -107,7 +107,12 @@
 <li class="toctree-l3"><a class="reference internal" href="information-areas.html">Information areas (Blog, News, ...)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">GeoBrowser area for data and Cloud processing services</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#map">Map</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#map">Map</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#data-results-layer">Data Results layer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#disaster-charter-layer">Disaster charter layer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#density-map-layer">Density map layer</a></li>
+</ul>
+</li>
 <li class="toctree-l5"><a class="reference internal" href="#contexts">Contexts</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#results">Results</a></li>
 </ul>
@@ -190,7 +195,12 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">GeoBrowser area for data and Cloud processing services</a><ul>
 <li><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
-<li><a class="reference internal" href="#map">Map</a></li>
+<li><a class="reference internal" href="#map">Map</a><ul>
+<li><a class="reference internal" href="#data-results-layer">Data Results layer</a></li>
+<li><a class="reference internal" href="#disaster-charter-layer">Disaster charter layer</a></li>
+<li><a class="reference internal" href="#density-map-layer">Density map layer</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#contexts">Contexts</a></li>
 <li><a class="reference internal" href="#results">Results</a></li>
 </ul>
@@ -303,8 +313,8 @@
 </div></blockquote>
 <div class="section" id="map">
 <h3>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
-<p>The map is just a simple map, on which you can zoom in, zoom out and navigate.
-Some buttons maybe used to interact with the map:</p>
+<p>The map is just a simple map, on which you can zoom in, zoom out and navigate.</p>
+<p>Some buttons maybe used to interact with the map:</p>
 <ul class="simple">
 <li><img alt="geobrowser_button_search.png" src="../../_images/geobrowser_button_search.png" /> search area</li>
 <li><img alt="geobrowser_button_plus.png" src="../../_images/geobrowser_button_plus.png" /> Zoom in</li>
@@ -320,7 +330,26 @@ Some buttons maybe used to interact with the map:</p>
 <div class="img-border img-max-width figure">
 <img alt="../../_images/geobrowser_timebar.png" src="../../_images/geobrowser_timebar.png" />
 </div>
-<p>Once all parameters are set, bbox chosen</p>
+<p>It is also possible to add layers on the map:</p>
+<div class="section" id="data-results-layer">
+<h4>Data Results layer<a class="headerlink" href="#data-results-layer" title="Permalink to this headline">¶</a></h4>
+<p>Display the results (orange polygons) of the current search or context.</p>
+</div>
+<div class="section" id="disaster-charter-layer">
+<h4>Disaster charter layer<a class="headerlink" href="#disaster-charter-layer" title="Permalink to this headline">¶</a></h4>
+<p>Add disaster events on the map (list of events comes from <a class="reference external" href="https://www.disasterscharter.org">https://www.disasterscharter.org</a>).
+For a better visibility, events are grouped by location, accordingly to the zoom level. If you zoom in, grouped events will split into smaller groups or unique events:</p>
+<ul class="simple">
+<li><img alt="geobrowser_disaster_big_group.png" src="../../_images/geobrowser_disaster_big_group.png" /> group of more than 10 events</li>
+<li><img alt="geobrowser_disaster_small_group.png" src="../../_images/geobrowser_disaster_small_group.png" /> group of less than 10 events</li>
+<li><img alt="geobrowser_disaster_event.png" src="../../_images/geobrowser_disaster_event.png" /> unique event</li>
+</ul>
+<p>You can click on a unique event and get related data or access the webpage related to this event.</p>
+</div>
+<div class="section" id="density-map-layer">
+<h4>Density map layer<a class="headerlink" href="#density-map-layer" title="Permalink to this headline">¶</a></h4>
+<p>Currently disactivated.</p>
+</div>
 </div>
 <div class="section" id="contexts">
 <h3>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h3>

@@ -53,11 +53,11 @@ To access data related to a specific event:
 
 1. Access the geobrowser, by default, data related to specific geohazards events (provided by the disaster charter) are displayed on the map.
 2. Focus on one event.
-3. Click on **Select data**.
+3. Click on **Search data for event**.
 4. Data related to this event is automatically added to the result tab and displayed on the map.
 
 .. figure:: ../includes/geobrowser_data_event.png
-	:figclass: img-border img-max-width
+	:figclass: img-border
 
 Select data in your basket
 --------------------------

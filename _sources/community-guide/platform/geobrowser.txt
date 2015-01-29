@@ -19,6 +19,7 @@ Map
 ~~~
 
 The map is just a simple map, on which you can zoom in, zoom out and navigate.
+
 Some buttons maybe used to interact with the map:
 
 -  |geobrowser_button_search.png| search area
@@ -36,7 +37,32 @@ It is also possible to directly select on the map the temporal parameter of the 
 .. figure:: ../../includes/geobrowser_timebar.png
 	:figclass: img-border img-max-width
 
-Once all parameters are set, bbox chosen
+
+It is also possible to add layers on the map:
+
+Data Results layer
+******************
+
+Display the results (orange polygons) of the current search or context.
+
+Disaster charter layer
+**********************
+
+Add disaster events on the map (list of events comes from https://www.disasterscharter.org).
+For a better visibility, events are grouped by location, accordingly to the zoom level. If you zoom in, grouped events will split into smaller groups or unique events:
+
+-  |geobrowser_disaster_big_group.png| group of more than 10 events
+-  |geobrowser_disaster_small_group.png| group of less than 10 events
+-  |geobrowser_disaster_event.png| unique event
+
+You can click on a unique event and get related data or access the webpage related to this event.
+
+
+Density map layer
+*****************
+
+Currently disactivated.
+
 
 Contexts
 ~~~~~~~~
@@ -98,3 +124,6 @@ Details on jobs can be accessed by clicking on the title of the job.
 .. |geobrowser_button_dynamicsearch.png| image:: ../../includes/geobrowser_button_dynamicsearch.png
 .. |geobrowser_button_fullscreen.png| image:: ../../includes/geobrowser_button_fullscreen.png
 .. |geobrowser_button_layers.png| image:: ../../includes/geobrowser_button_layers.png
+.. |geobrowser_disaster_big_group.png| image:: ../../includes/geobrowser_disaster_big_group.png
+.. |geobrowser_disaster_small_group.png| image:: ../../includes/geobrowser_disaster_small_group.png
+.. |geobrowser_disaster_event.png| image:: ../../includes/geobrowser_disaster_event.png
