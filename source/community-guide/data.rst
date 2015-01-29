@@ -56,7 +56,7 @@ To access data related to a specific event:
 3. Click on **Select data**.
 4. Data related to this event is automatically added to the result tab and displayed on the map.
 
-.. figure:: ../../includes/geobrowser_data_event.png
+.. figure:: ../includes/geobrowser_data_event.png
 	:figclass: img-border img-max-width
 
 Select data in your basket
