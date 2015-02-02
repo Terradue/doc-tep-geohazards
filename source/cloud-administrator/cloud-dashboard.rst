@@ -7,13 +7,13 @@ It is accessible by clicking on the Sunstone logo |sunstone_logo| from the **Clo
 
 .. |sunstone_logo| image:: ../includes/sunstone_logo-small.png
 
-
 Certificate must be registered in the browser to access the Cloud dashboard.
 
 .. image:: ../includes/cloud_dashboard.png
 	:align: center
 
 From the cloud dashboard, user can:
+
 -  |cloud_dahsboard_plus.png| Create a new Virtual Machine
 -  |cloud_dahsboard_list.png| List all Virtual Machines
 
