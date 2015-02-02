@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Profile &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
+    <title>Cloud dashboard &mdash; Geohazards Thematic Exploitation Platform Architecture v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform Architecture v1.0 documentation" href="../index.html" />
     <link rel="up" title="Geohazards thematic exploitation platform guide" href="index.html" />
-    <link rel="next" title="Data" href="data.html" />
-    <link rel="prev" title="Results sharing area" href="platform/results-sharing.html" />
+    <link rel="next" title="Cloud Operations Administrator Guide" href="../cloud-administrator/index.html" />
+    <link rel="prev" title="Sharing" href="sharing.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -127,17 +127,17 @@
 <li class="toctree-l3"><a class="reference internal" href="platform/results-sharing.html">Results sharing area</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Profile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sign-in">Sign in</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#change-your-password">Change your password</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#no-certificate">No certificate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#existing-certificate">Existing certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user.html#sign-in">Sign in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#edit-your-profile">Edit your profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#change-your-password">Change your password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#upload-your-certificate">Upload your certificate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user.html#no-certificate">No certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user.html#existing-certificate">Existing certificate</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#link-your-github-account">Link your Github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#link-your-github-account">Link your Github account</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a><ul>
@@ -174,9 +174,9 @@
 <li class="toctree-l3"><a class="reference internal" href="sharing.html#share-a-data-package">Share a Data Package</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html">Cloud Dashboard</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cloud.html#access-the-cloud-dashboard">Access the cloud dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cloud.html#access-an-esa-cloud-toolbox">Access an ESA Cloud Toolbox</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Cloud Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-cloud-dashboard">Access the cloud dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-an-esa-cloud-toolbox">Access an ESA Cloud Toolbox</a></li>
 </ul>
 </li>
 </ul>
@@ -198,17 +198,9 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">User Profile</a><ul>
-<li><a class="reference internal" href="#sign-in">Sign in</a></li>
-<li><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
-<li><a class="reference internal" href="#change-your-password">Change your password</a></li>
-<li><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a><ul>
-<li><a class="reference internal" href="#no-certificate">No certificate</a></li>
-<li><a class="reference internal" href="#existing-certificate">Existing certificate</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
-<li><a class="reference internal" href="#link-your-github-account">Link your Github account</a></li>
+<li><a class="reference internal" href="#">Cloud dashboard</a><ul>
+<li><a class="reference internal" href="#access-the-cloud-dashboard">Access the cloud dashboard</a></li>
+<li><a class="reference internal" href="#access-an-esa-cloud-toolbox">Access an ESA Cloud Toolbox</a></li>
 </ul>
 </li>
 </ul>
@@ -220,11 +212,11 @@
               
                 
   <li>
-    <a href="platform/results-sharing.html" title="Previous Chapter: Results sharing area"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Results sharing ...</span>
+    <a href="sharing.html" title="Previous Chapter: Sharing"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Sharing</span>
     </a>
   </li>
   <li>
-    <a href="data.html" title="Next Chapter: Data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Data &raquo;</span>
+    <a href="../cloud-administrator/index.html" title="Next Chapter: Cloud Operations Administrator Guide"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Cloud Operations... &raquo;</span>
     </a>
   </li>
               
@@ -233,7 +225,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards-arch/blob/master/source/community-guide/user.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards-arch/blob/master/source/community-guide/cloud.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -259,31 +251,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Profile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sign-in">Sign in</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#edit-your-profile">Edit your profile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#change-your-password">Change your password</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#upload-your-certificate">Upload your certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#no-certificate">No certificate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#existing-certificate">Existing certificate</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#link-your-github-account">Link your Github account</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">User Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html">Cloud Dashboard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Cloud Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-cloud-dashboard">Access the cloud dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-an-esa-cloud-toolbox">Access an ESA Cloud Toolbox</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards-arch/blob/master/source/community-guide/user.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards-arch/blob/master/source/community-guide/cloud.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -297,88 +281,43 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="user-profile">
-<h1>User Profile<a class="headerlink" href="#user-profile" title="Permalink to this headline">¶</a></h1>
-<div class="img-container-border figure align-center">
-<img alt="../_images/user.png" src="../_images/user.png" style="width: 30%;" />
-</div>
-<p>Find out how to sign-in using <strong>EO-SSO</strong>, access your <strong>Cloud</strong> account by providing a valid <strong>certificate</strong> and prove your identity, or even link your profile with your <strong>Github</strong> account.</p>
-<div class="section" id="sign-in">
-<h2>Sign in<a class="headerlink" href="#sign-in" title="Permalink to this headline">¶</a></h2>
-<p>Once registered on ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.</p>
-</div>
-<div class="section" id="edit-your-profile">
-<h2>Edit your profile<a class="headerlink" href="#edit-your-profile" title="Permalink to this headline">¶</a></h2>
-<div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/user_profile.png"><img alt="../_images/user_profile.png" src="../_images/user_profile.png" style="width: 558.4px; height: 446.4px;" /></a>
-</div>
-<p>Fill in your profile:</p>
-<ol class="arabic simple">
-<li>Edit information such as first and last names, email, ... (username can not be modified though).</li>
-<li>Once you are done, just click on <strong>Submit</strong> to save your changes.</li>
-</ol>
-<p><img alt="bulb" src="../_images/bulb.png" /> <em>Direct access to your EO-SSO account is provided by clicking on **EO-SSO account</em>.</p>
-</div>
-<div class="section" id="change-your-password">
-<h2>Change your password<a class="headerlink" href="#change-your-password" title="Permalink to this headline">¶</a></h2>
-<p>To change your EO-SSO password:</p>
-<ol class="arabic simple">
-<li>On your profile page, click on <strong>EO-SSO account</strong>.</li>
-<li>On the EO-SSO account page, click on <strong>Change user password</strong>.</li>
-<li>Write your old password, and your new password (twice).</li>
-<li>Click on <strong>Submit</strong>.</li>
-<li>Your password is updated.</li>
-</ol>
-</div>
-<div class="section" id="upload-your-certificate">
-<h2>Upload your certificate<a class="headerlink" href="#upload-your-certificate" title="Permalink to this headline">¶</a></h2>
-<div class="img-border img-max-width figure">
-<a class="reference internal image-reference" href="../_images/user_certificate.png"><img alt="../_images/user_certificate.png" src="../_images/user_certificate.png" style="width: 998.4px; height: 372.0px;" /></a>
-</div>
-<p>Certificate is the key to access the cloud environment, it is thus very important that you set it correctly in your profile.</p>
-<div class="section" id="no-certificate">
-<h3>No certificate<a class="headerlink" href="#no-certificate" title="Permalink to this headline">¶</a></h3>
-<p>If you don&#8217;t have yet any valid certificate:</p>
-<ol class="arabic simple">
-<li>Request a new one to Terradue (clicking <em>Request certificate</em> button).</li>
-<li>The new certificate, once created, will automatically be added to your profile.</li>
-</ol>
-</div>
-<div class="section" id="existing-certificate">
-<h3>Existing certificate<a class="headerlink" href="#existing-certificate" title="Permalink to this headline">¶</a></h3>
-<p>If you already have a valid certificate and you want to use it:</p>
-<ol class="arabic simple">
-<li>Select a valid <strong>PEM</strong> certificate from your computer by clicking <strong>Select file</strong>.</li>
-<li>Once the correct file is chosen, click on <strong>Upload file</strong>.</li>
-<li>Your certificate is automatically added to your profile.</li>
-</ol>
-</div>
-</div>
+  <div class="section" id="cloud-dashboard">
+<h1>Cloud dashboard<a class="headerlink" href="#cloud-dashboard" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="access-the-cloud-dashboard">
-<h2>Access the Cloud Dashboard<a class="headerlink" href="#access-the-cloud-dashboard" title="Permalink to this headline">¶</a></h2>
-<p>If you can see the cloud logo <img alt="sunstone_logo.png" src="../_images/sunstone_logo-small.png" />, congratulations, all is correctly set up.
-Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula).</p>
-<p>If you cannot see the cloud logo, something is missing in your profile. Please check:</p>
-<ol class="arabic simple">
-<li>You have a valid certificate stored in your user profile. If not, see <a class="reference internal" href="#upload-your-certificate">Upload your certificate</a>.</li>
-<li>You have an account created on the Cloud Controller. If not, create one by clicking on <strong>Create</strong>.</li>
-</ol>
-<p>From this page, users can check everything is alright to access the Cloud Dashboard.
-If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
-Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).</p>
-</div>
-<div class="section" id="link-your-github-account">
-<h2>Link your Github account<a class="headerlink" href="#link-your-github-account" title="Permalink to this headline">¶</a></h2>
+<h2>Access the cloud dashboard<a class="headerlink" href="#access-the-cloud-dashboard" title="Permalink to this headline">¶</a></h2>
+<p>The Cloud platform is powered by OpenNebula, and gives to the user the possibility to create and manage Processing Services.</p>
+<p>It is accessible by clicking on the Sunstone logo <img alt="sunstone_logo" src="../_images/sunstone_logo-small.png" /> from the <strong>Cloud Dashboard</strong> page.</p>
+<p>Certificate must be registered in the browser to access the Cloud dashboard.</p>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/user_github.png"><img alt="../_images/user_github.png" src="../_images/user_github.png" style="width: 747.6px; height: 233.1px;" /></a>
+<img alt="includes/cloud_dahsboard.png" src="includes/cloud_dahsboard.png" />
 </div>
-<p>Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Sandboxes. You can also release and share your code there.</p>
-<p><img alt="bulb" src="../_images/bulb.png" /> <em>Link your github account is not mandatory but highly recommanded.</em></p>
-<p>To link your Github account:</p>
+<p>From the cloud dashboard, user can:</p>
+<ul class="simple">
+<li><img alt="cloud_dahsboard_plus.png" src="../_images/cloud_dahsboard_plus.png" /> Create a new Virtual Machine</li>
+<li><img alt="cloud_dahsboard_list.png" src="../_images/cloud_dahsboard_list.png" /> List all Virtual Machines</li>
+</ul>
+<blockquote>
+<div><p>To create your own ESA Cloud Toolbox:</p>
 <ol class="arabic simple">
-<li>Fill in your github name and validate by clicking on <img alt="user_github_edit.png" src="../_images/user_github_edit.png" />.</li>
-<li>You should add your ssh public key to your github account. If you don&#8217;t have a Terradue certificate, you will need to add it manually. Finally click on <strong>Add your public key</strong> and accept the request on your Github account.</li>
+<li>Access the cloud dashboard (see <a class="reference internal" href="#access-the-cloud-dashboard">Access the cloud dashboard</a>).</li>
+<li>Click on <img alt="cloud_dahsboard_plus.png" src="../_images/cloud_dahsboard_plus.png" /> to create a new Virtual Machine.</li>
+<li>Set the Virtual Machine name (e.g &#8216;my esa toolbox&#8217;).</li>
+<li>Select the <strong>ESA Cloud Toolbox</strong> template.</li>
+<li>Click on <strong>Create</strong>.</li>
 </ol>
+</div></blockquote>
+<div class="img-border figure">
+<img alt="../_images/cloud_esatoolbox_create.png" src="../_images/cloud_esatoolbox_create.png" />
+</div>
+</div>
+<div class="section" id="access-an-esa-cloud-toolbox">
+<h2>Access an ESA Cloud Toolbox<a class="headerlink" href="#access-an-esa-cloud-toolbox" title="Permalink to this headline">¶</a></h2>
+<p>Now, to access your ESA Cloud Toolbox:</p>
+<ol class="arabic simple">
+<li>Access the cloud dashboard (see <a class="reference internal" href="#access-the-cloud-dashboard">Access the cloud dashboard</a>).</li>
+<li>Click on the Virtual Machine corresponding to your Esa Cloud Toolbox.</li>
+</ol>
+<p><img alt="bulb" src="../_images/bulb.png" /> <em>You may have to allow your browser to open new pop-ups and allow unsafe script load.</em></p>
 </div>
 </div>
 

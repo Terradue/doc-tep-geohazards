@@ -26,7 +26,7 @@ Fill in your profile:
 1. Edit information such as first and last names, email, ... (username can not be modified though).
 2. Once you are done, just click on **Submit** to save your changes.
 
-*Note*: Direct access to your EO-SSO account is provided by clicking on **EO-SSO account**.
+|bulb| *Direct access to your EO-SSO account is provided by clicking on **EO-SSO account*.
 
 Change your password
 --------------------
