@@ -21,17 +21,17 @@ From the cloud dashboard, user can:
 -  |cloud_dahsboard_list.png| List all Virtual Machines
 
 
- Create an ESA Cloud Toolbox
- ---------------------------
+Create an ESA Cloud Toolbox
+---------------------------
 
- To create your own ESA Cloud Toolbox:
+To create your own ESA Cloud Toolbox:
 
- 1. Access the cloud dashboard (see `Access the cloud dashboard`_).
- 2. Click on |cloud_dahsboard_plus.png| to create a new Virtual Machine.
- 3. Set the Virtual Machine name (e.g 'my esa toolbox').
- 4. Select the **ESA Cloud Toolbox** template.
- 5. Click on **Create**.
- 6. Wait for the VM to be deployed.
+1. Access the cloud dashboard (see `Access the cloud dashboard`_).
+2. Click on |cloud_dahsboard_plus.png| to create a new Virtual Machine.
+3. Set the Virtual Machine name (e.g 'my esa toolbox').
+4. Select the **ESA Cloud Toolbox** template.
+5. Click on **Create**.
+6. Wait for the VM to be deployed.
 
 .. figure:: ../includes/cloud_esatoolbox_create.png
 	:figclass: img-border
