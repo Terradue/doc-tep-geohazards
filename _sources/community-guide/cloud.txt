@@ -12,7 +12,7 @@ It is accessible by clicking on the Sunstone logo |sunstone_logo| from the **Clo
 
 Certificate must be registered in the browser to access the Cloud dashboard.
 
-.. figure:: ../includes/cloud_dahsboard.png
+.. figure:: ../includes/cloud_dashboard.png
 	:figclass: img-border
 
 From the cloud dashboard, user can:
@@ -30,6 +30,7 @@ From the cloud dashboard, user can:
  3. Set the Virtual Machine name (e.g 'my esa toolbox').
  4. Select the **ESA Cloud Toolbox** template.
  5. Click on **Create**.
+ 6. Wait for the VM to be deployed.
 
 .. figure:: ../includes/cloud_esatoolbox_create.png
 	:figclass: img-border
@@ -44,9 +45,20 @@ Now, to access your ESA Cloud Toolbox:
 
 |bulb| *You may have to allow your browser to open new pop-ups and allow unsafe script load.*
 
+3. Enter your username: **pi**
+.. figure:: ../includes/cloud_esatoolbox_username.png
+	:figclass: img-border
+4. Enter your password: **piuser2014**
+.. figure:: ../includes/cloud_esatoolbox_pwd1.png
+	:figclass: img-border
+5. Now to set a new password, re-enter the password: **piuser2014**
+.. figure:: ../includes/cloud_esatoolbox_pwd2.png
+	:figclass: img-border
+6. And finally enter (twice) your new password: e.g **blablabla**
+.. figure:: ../includes/cloud_esatoolbox_pwd3.png
+	:figclass: img-border
 
-
-
+portal data import: download les donnees sur le volume 
 
 
 .. |bulb| image:: ../includes/bulb.png
