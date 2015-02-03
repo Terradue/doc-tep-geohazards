@@ -1,11 +1,11 @@
-Geohazards thematic exploitation platform guide
-===============================================
+Tutorials
+=========
 
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
-   Interferogram generation with ADORE DORIS <adore>
+   Interferogram generation with ADORE DORIS<adore>
 
 

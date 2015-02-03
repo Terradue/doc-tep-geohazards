@@ -9,6 +9,6 @@ Contents:
    Overview <overview/index>
    Community Portal User Guide <community-guide/index>
    Cloud Operations Administrator Guide <cloud-administrator/index>
-   Processing tutorials<tutorials/index>
+   Processing tutorials <tutorials/index>
 
 
