@@ -20,6 +20,7 @@ From the cloud dashboard, user can:
 -  |cloud_dahsboard_plus.png| Create a new Virtual Machine
 -  |cloud_dahsboard_list.png| List all Virtual Machines
 
+
  Create an ESA Cloud Toolbox
  ---------------------------
 
@@ -35,6 +36,7 @@ From the cloud dashboard, user can:
 .. figure:: ../includes/cloud_esatoolbox_create.png
 	:figclass: img-border
 
+
 Access an ESA Cloud Toolbox
 ---------------------------
 
@@ -42,15 +44,10 @@ Now, to access your ESA Cloud Toolbox:
 
 1. Access the cloud dashboard (see `Access the cloud dashboard`_).
 2. Click on the Virtual Machine corresponding to your Esa Cloud Toolbox.
-
 |bulb| *You may have to allow your browser to open new pop-ups and allow unsafe script load.*
-
 3. Enter your username: **pi**
-.. figure:: ../includes/cloud_esatoolbox_username.png
-	:figclass: img-border
-4. Enter your password: **piuser2014**
-.. figure:: ../includes/cloud_esatoolbox_pwd1.png
-	:figclass: img-border
+|cloud_esatoolbox_username|
+4. Enter your password: **piuser2014** |cloud_esatoolbox_pwd1|
 5. Now to set a new password, re-enter the password: **piuser2014**
 .. figure:: ../includes/cloud_esatoolbox_pwd2.png
 	:figclass: img-border
@@ -64,3 +61,5 @@ portal data import: download les donnees sur le volume
 .. |bulb| image:: ../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../includes/cloud_dahsboard_plus.png
 .. |cloud_dahsboard_list.png| image:: ../includes/cloud_dahsboard_list.png
+.. |cloud_esatoolbox_username| figure:: ../includes/cloud_esatoolbox_username.png :figclass: img-border
+.. |cloud_esatoolbox_pwd1| figure:: ../includes/cloud_esatoolbox_pwd1.png :figclass: img-border
