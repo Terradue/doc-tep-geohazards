@@ -40,13 +40,13 @@ Access a Developer Cloud Sandbox
 To connect your Developer Cloud Sandbox you need a secure connection with the Terradue's infrastructure. Following this guide you will be able to access your Sandbox through the Secure Shell (SSH) network protocol.
 
 Prerequisites
--------------
+^^^^^^^^^^^^^
 
 - You have the <sandbox ip> value,
 - You are connected to the Terradue's VPN and therefore to the GEP Laboratory (see :ref:`laboratory`).
 
 Download the Certificate in PEM format
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Go to https://ca.terradue.com/gpodcs/cgi/certdown.cgi?U=name@organization.com (use your registration e-mail instead of name@organization.com),
 
@@ -61,7 +61,7 @@ Download the Certificate in PEM format
 .. _connecting_from_unix_linux_mac:
 
 Connecting from Unix / Linux / Mac
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Open a Terminal,
 
@@ -79,10 +79,10 @@ That's all :-)
 .. _connecting_from_windows:
 
 Connecting from Windows
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Download and install PuTTY
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************
 
 PuTTY is a well-known freely available SSH client http://www.putty.org/. To download and install it:
 
@@ -91,7 +91,7 @@ PuTTY is a well-known freely available SSH client http://www.putty.org/. To down
 - Unzip the downloaded file in a location of your filesystem that you prefer.
   
 Generate a Private Key from the PEM Certificate
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***********************************************
 
 PuTTY needs a private key file (.ppk). Here the procedure to generate it from a PEM Certificate:
 
@@ -131,7 +131,7 @@ Use the import function in the puttygen GUI:
 - Store securely in your filesystem the private key generated, naming it in <yourcertificate>.ppk .
 
 Connect with PuTTY
-^^^^^^^^^^^^^^^^^^
+******************
 
 - Open a Command Prompt and type:
 

@@ -208,14 +208,16 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Developer Cloud Sandbox</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#create-a-developer-cloud-sandbox">Create a Developer Cloud Sandbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#download-the-certificate-in-pem-format">Download the Certificate in PEM format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connecting-from-unix-linux-mac">Connecting from Unix / Linux / Mac</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connecting-from-windows">Connecting from Windows</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#download-and-install-putty">Download and install PuTTY</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#generate-a-private-key-from-the-pem-certificate">Generate a Private Key from the PEM Certificate</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#connect-with-putty">Connect with PuTTY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#download-the-certificate-in-pem-format">Download the Certificate in PEM format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#connecting-from-unix-linux-mac">Connecting from Unix / Linux / Mac</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#connecting-from-windows">Connecting from Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#download-and-install-putty">Download and install PuTTY</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#generate-a-private-key-from-the-pem-certificate">Generate a Private Key from the PEM Certificate</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#connect-with-putty">Connect with PuTTY</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -276,7 +278,7 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Developer Cloud Sandbox</a><ul>
 <li><a class="reference internal" href="#create-a-developer-cloud-sandbox">Create a Developer Cloud Sandbox</a></li>
-<li><a class="reference internal" href="#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a></li>
+<li><a class="reference internal" href="#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a><ul>
 <li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li><a class="reference internal" href="#download-the-certificate-in-pem-format">Download the Certificate in PEM format</a></li>
 <li><a class="reference internal" href="#connecting-from-unix-linux-mac">Connecting from Unix / Linux / Mac</a></li>
@@ -284,6 +286,8 @@
 <li><a class="reference internal" href="#download-and-install-putty">Download and install PuTTY</a></li>
 <li><a class="reference internal" href="#generate-a-private-key-from-the-pem-certificate">Generate a Private Key from the PEM Certificate</a></li>
 <li><a class="reference internal" href="#connect-with-putty">Connect with PuTTY</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -349,10 +353,6 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">Developer Cloud Sandbox</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#create-a-developer-cloud-sandbox">Create a Developer Cloud Sandbox</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#download-the-certificate-in-pem-format">Download the Certificate in PEM format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connecting-from-unix-linux-mac">Connecting from Unix / Linux / Mac</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connecting-from-windows">Connecting from Windows</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="github.html">Using Github</a></li>
@@ -409,16 +409,15 @@
 <div class="section" id="access-a-developer-cloud-sandbox">
 <h2>Access a Developer Cloud Sandbox<a class="headerlink" href="#access-a-developer-cloud-sandbox" title="Permalink to this headline">¶</a></h2>
 <p>To connect your Developer Cloud Sandbox you need a secure connection with the Terradue&#8217;s infrastructure. Following this guide you will be able to access your Sandbox through the Secure Shell (SSH) network protocol.</p>
-</div>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>You have the &lt;sandbox ip&gt; value,</li>
 <li>You are connected to the Terradue&#8217;s VPN and therefore to the GEP Laboratory (see <a class="reference internal" href="laboratory.html#laboratory"><em>Join the GEP Laboratory</em></a>).</li>
 </ul>
 </div>
 <div class="section" id="download-the-certificate-in-pem-format">
-<h2>Download the Certificate in PEM format<a class="headerlink" href="#download-the-certificate-in-pem-format" title="Permalink to this headline">¶</a></h2>
+<h3>Download the Certificate in PEM format<a class="headerlink" href="#download-the-certificate-in-pem-format" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Go to <a class="reference external" href="https://ca.terradue.com/gpodcs/cgi/certdown.cgi?U=name&#64;organization.com">https://ca.terradue.com/gpodcs/cgi/certdown.cgi?U=name&#64;organization.com</a> (use your registration e-mail instead of <a class="reference external" href="mailto:name&#37;&#52;&#48;organization&#46;com">name<span>&#64;</span>organization<span>&#46;</span>com</a>),</li>
 <li>Choose as <strong>Certificate Format</strong> the PEM,<ul>
@@ -430,7 +429,7 @@
 </ul>
 </div>
 <div class="section" id="connecting-from-unix-linux-mac">
-<span id="id1"></span><h2>Connecting from Unix / Linux / Mac<a class="headerlink" href="#connecting-from-unix-linux-mac" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h3>Connecting from Unix / Linux / Mac<a class="headerlink" href="#connecting-from-unix-linux-mac" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Open a Terminal,</li>
 <li>Type:</li>
@@ -445,9 +444,9 @@ ssh -i &lt;yourcertificate.pem&gt; &lt;umsso name&gt;@&lt;sandbox_host&gt;
 <p>That&#8217;s all :-)</p>
 </div>
 <div class="section" id="connecting-from-windows">
-<span id="id2"></span><h2>Connecting from Windows<a class="headerlink" href="#connecting-from-windows" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h3>Connecting from Windows<a class="headerlink" href="#connecting-from-windows" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="download-and-install-putty">
-<h3>Download and install PuTTY<a class="headerlink" href="#download-and-install-putty" title="Permalink to this headline">¶</a></h3>
+<h4>Download and install PuTTY<a class="headerlink" href="#download-and-install-putty" title="Permalink to this headline">¶</a></h4>
 <p>PuTTY is a well-known freely available SSH client <a class="reference external" href="http://www.putty.org/">http://www.putty.org/</a>. To download and install it:</p>
 <ul class="simple">
 <li>Go to <a class="reference external" href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip">http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip</a>,</li>
@@ -455,7 +454,7 @@ ssh -i &lt;yourcertificate.pem&gt; &lt;umsso name&gt;@&lt;sandbox_host&gt;
 </ul>
 </div>
 <div class="section" id="generate-a-private-key-from-the-pem-certificate">
-<h3>Generate a Private Key from the PEM Certificate<a class="headerlink" href="#generate-a-private-key-from-the-pem-certificate" title="Permalink to this headline">¶</a></h3>
+<h4>Generate a Private Key from the PEM Certificate<a class="headerlink" href="#generate-a-private-key-from-the-pem-certificate" title="Permalink to this headline">¶</a></h4>
 <p>PuTTY needs a private key file (.ppk). Here the procedure to generate it from a PEM Certificate:</p>
 <ul class="simple">
 <li>Open the PEM Certificate <strong>Unencrypted key format</strong> with a text editor (e.g. Notepad),</li>
@@ -492,7 +491,7 @@ MII....
 </ul>
 </div>
 <div class="section" id="connect-with-putty">
-<h3>Connect with PuTTY<a class="headerlink" href="#connect-with-putty" title="Permalink to this headline">¶</a></h3>
+<h4>Connect with PuTTY<a class="headerlink" href="#connect-with-putty" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Open a Command Prompt and type:</li>
 </ul>
@@ -503,6 +502,7 @@ MII....
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The PEM certificate is not used to access the system with PuTTY. Only the generated &lt;yourcertificate&gt;.ppk file is needed.</p>
+</div>
 </div>
 </div>
 </div>
