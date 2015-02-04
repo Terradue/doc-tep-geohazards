@@ -64,7 +64,7 @@ Select data in your basket
 
 Data can be selected on the map as well as on the result tab.
 
-1. Click on data on the map to make it appera on the **Results Table**.
+1. Click on data on the map to make it appear on the **Results Table**.
 2. Drag data from the **Results Table** to the **Features Basket**.
 3. Data appears on the **Features Basket**.
 
