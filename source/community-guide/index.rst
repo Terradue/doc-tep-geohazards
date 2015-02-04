@@ -13,6 +13,6 @@ Contents:
    Visualisation <visualisation>
    Reproducibility <reproducibility>
    Sharing <sharing>
-   Cloud Dashboard <cloud/index>
+   Cloud Resources <cloud/index>
 
 

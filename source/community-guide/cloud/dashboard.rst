@@ -1,7 +1,7 @@
 .. _dashboard:
 
-Access the Cloud Dashboard
-==========================
+Cloud Dashboard
+================
 
 The Cloud platform is powered by OpenNebula, and gives to the user the possibility to create and manage Processing Services.
 
