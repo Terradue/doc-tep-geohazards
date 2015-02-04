@@ -1,3 +1,5 @@
+.. _user-profile:
+
 User Profile
 ============
 
