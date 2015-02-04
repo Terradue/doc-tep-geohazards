@@ -1,12 +1,45 @@
-Access a Developer Cloud Sandbox
-================================
+Create an Developer Cloud Toolbox
+=================================
+
+To create your own Developer Cloud Toolbox:
+
+- Access the Cloud Dashboard (see :ref:`dashboard`)
+- Click on |plus.png| to create a new Developer Cloud Sandbox
+- Type the Developer Cloud Sandbox name
+- Select the **Developer Cloud Sandbox** template
+
+.. figure:: assets/sandbox_create.png
+	:figclass: align-center
+        :width: 600px
+        :align: center
+        :alt: alternate text
+
+- Click on **Create**
+- Wait for the Developer Cloud Sandbox to be deployed
+
+.. figure:: assets/sandbox_deploy.png
+	:figclass: align-center
+        :width: 600px
+        :align: center
+        :alt: alternate text
+
+- Annotate the *<sandbox ip>* value:
+
+.. figure:: assets/sandbox_ip.png
+	:figclass: align-center
+        :align: center
+        :alt: alternate text
+
+
+Access your Developer Cloud Sandbox
+===================================
 
 To connect your Developer Cloud Sandbox you need a secure connection with the Terradue's infrastructure. Following this guide you will be able to access your Sandbox through the Secure Shell (SSH) network protocol.
 
 Prerequisites
 -------------
 
-- You have the <sandbox_user> and the <sandbox_host> information,
+- You have the <sandbox user> and the <sandbox ip> information,
 - You are connected to the Terradue's VPN and therefore to the GEP Laboratory (see :ref:`laboratory`).
 
 Download the Certificate in PEM format
@@ -107,3 +140,5 @@ That's all :-)
 
 .. NOTE::
   The PEM certificate is not used to access the system with PuTTY. Only the generated <yourcertificate>.ppk file is needed.
+
+.. |plus.png| image:: assets/plus.png

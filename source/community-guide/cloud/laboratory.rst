@@ -1,6 +1,6 @@
 .. _laboratory:
 
-Join your GEP Laboratory
+Join the GEP Laboratory
 ########################
 
 A GEP Laboratory is a virtual network on the Terradue's Cloud Platform dedicated to the hosting of your Cloud services.
