@@ -12,8 +12,8 @@ To create your own Developer Cloud Toolbox:
 - Select the **Developer Cloud Sandbox** template
 
 .. figure:: assets/sandbox_create.png
-	:figclass: img-border
-        :width: 250px
+	:figclass: align-center
+        :width: 450px
         :align: center
         :alt: alternate text
 
@@ -21,15 +21,15 @@ To create your own Developer Cloud Toolbox:
 - Wait for the Developer Cloud Sandbox to be deployed
 
 .. figure:: assets/sandbox_deploy.png
-	:figclass: img-border
-        :width: 250px
+	:figclass: align-center
+        :width: 450px
         :align: center
         :alt: alternate text
 
 - Annotate the *<sandbox ip>* value:
 
 .. figure:: assets/sandbox_ip.png
-	:figclass: img-border
+	:figclass: align-center
         :align: center
         :alt: alternate text
 
