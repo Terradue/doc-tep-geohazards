@@ -13,7 +13,7 @@ The GEP laboratory has a one-to-one relationship with the corresponding GEP GitH
 Organizing the GitHub teams
 +++++++++++++++++++++++++++
 
-Whithin a GEP GitHub organization, you can organize as many teams including any number of members (typically developers).
+Within a GEP GitHub organization, you can organize as many teams including any number of members (typically developers).
 
 Owners have full access to all repositories and have admin rights to the organization. 
 
