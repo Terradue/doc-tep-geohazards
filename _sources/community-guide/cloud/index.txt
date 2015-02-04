@@ -1,11 +1,11 @@
-Geohazards thematic exploitation Cloud Dashboard guide
-======================================================
+Cloud Dashboard
+================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
    
-   Cloud Dashboard <cloud>
+   Dashboard <cloud>
 
 
