@@ -39,7 +39,7 @@ To connect your Developer Cloud Sandbox you need a secure connection with the Te
 Prerequisites
 -------------
 
-- You have the <sandbox user> and the <sandbox ip> information,
+- You have the <sandbox ip> value,
 - You are connected to the Terradue's VPN and therefore to the GEP Laboratory (see :ref:`laboratory`).
 
 Download the Certificate in PEM format
@@ -67,7 +67,7 @@ Connecting from Unix / Linux / Mac
 .. code-block:: bash
 
   chmod 600 <yourcertificate.pem>
-  ssh -i <yourcertificate.pem> <sandbox_user>@<sandbox_host>
+  ssh -i <yourcertificate.pem> <umsso name>@<sandbox_host>
 
 - If you chose PEM format when you downloaded the Certificate, provide the passphrase when prompted.
 
@@ -134,7 +134,7 @@ Connect with PuTTY
 
 .. code-block:: bash
 
-  putty -i <yourcertificate>.ppk <sandbox_user>@<sandbox_host>
+  putty -i <yourcertificate>.ppk <umsso name>@<sandbox ip>
 
 That's all :-)
 

@@ -174,7 +174,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-a-data-package">Share a Data Package</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloud Dashboard</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloud Resources</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dashboard.html">Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="laboratory.html">Join the GEP Laboratory</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="laboratory.html#prerequisites">Prerequisites</a></li>
@@ -324,7 +324,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloud Dashboard</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloud Resources</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dashboard.html">Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="laboratory.html">Join the GEP Laboratory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esa_toolbox.html">ESA Cloud Toolbox</a></li>
@@ -362,7 +362,7 @@
 <h1>Create a Developer Cloud Toolbox<a class="headerlink" href="#create-a-developer-cloud-toolbox" title="Permalink to this headline">¶</a></h1>
 <p>To create your own Developer Cloud Toolbox:</p>
 <ul class="simple">
-<li>Access the Cloud Dashboard (see <a class="reference internal" href="dashboard.html#dashboard"><em>Access the Cloud Dashboard</em></a>)</li>
+<li>Access the Cloud Dashboard (see <a class="reference internal" href="dashboard.html#dashboard"><em>Cloud Dashboard</em></a>)</li>
 <li>Click on <img alt="plus.png" src="../../_images/plus.png" /> to create a new Developer Cloud Sandbox</li>
 <li>Type the Developer Cloud Sandbox name</li>
 <li>Select the <strong>Developer Cloud Sandbox</strong> template</li>
@@ -390,7 +390,7 @@
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>You have the &lt;sandbox user&gt; and the &lt;sandbox ip&gt; information,</li>
+<li>You have the &lt;sandbox ip&gt; value,</li>
 <li>You are connected to the Terradue&#8217;s VPN and therefore to the GEP Laboratory (see <a class="reference internal" href="laboratory.html#laboratory"><em>Join the GEP Laboratory</em></a>).</li>
 </ul>
 </div>
@@ -413,7 +413,7 @@
 <li>Type:</li>
 </ul>
 <div class="highlight-bash"><div class="highlight"><pre>chmod 600 &lt;yourcertificate.pem&gt;
-ssh -i &lt;yourcertificate.pem&gt; &lt;sandbox_user&gt;@&lt;sandbox_host&gt;
+ssh -i &lt;yourcertificate.pem&gt; &lt;umsso name&gt;@&lt;sandbox_host&gt;
 </pre></div>
 </div>
 <ul class="simple">
@@ -473,7 +473,7 @@ MII....
 <ul class="simple">
 <li>Open a Command Prompt and type:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>putty -i &lt;yourcertificate&gt;.ppk &lt;sandbox_user&gt;@&lt;sandbox_host&gt;
+<div class="highlight-bash"><div class="highlight"><pre>putty -i &lt;yourcertificate&gt;.ppk &lt;umsso name&gt;@&lt;sandbox ip&gt;
 </pre></div>
 </div>
 <p>That&#8217;s all :-)</p>
