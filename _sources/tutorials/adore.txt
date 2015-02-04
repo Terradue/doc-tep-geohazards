@@ -89,4 +89,7 @@ Run the job
 .. figure:: ../includes/tuto_adore_12.png
 	:figclass: img-border
 
-* Note that currently, the processing results are not shown on the Portal. This will be upgraded soon.
+Notes
+=====
+
+Currently the processing results are not shown on the Portal. This will be upgraded soon.
