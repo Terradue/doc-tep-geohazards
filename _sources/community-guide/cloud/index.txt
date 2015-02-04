@@ -8,5 +8,6 @@ Contents:
    
    Dashboard <dashboard>
    ESA Cloud Toolbox <esa_toolbox>
+   Sandbox <sandbox/index>
 
 
