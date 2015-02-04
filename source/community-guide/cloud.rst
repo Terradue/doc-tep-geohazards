@@ -52,9 +52,12 @@ For the first connection:
 3. Enter your username: **pi** |cloud_esatoolbox_username|
 4. Enter your password: **piuser2014** |cloud_esatoolbox_pwd1|
 5. Now to set a new password, re-enter the password: **piuser2014**
+
 .. figure:: ../includes/cloud_esatoolbox_pwd2.png
 	:figclass: img-border
-6. And finally enter (twice) your new password: e.g **blablabla**
+
+6. And finally enter (twice) your new password:
+
 .. figure:: ../includes/cloud_esatoolbox_pwd3.png
 	:figclass: img-border
 
