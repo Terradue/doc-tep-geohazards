@@ -6,6 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   Dashboard <cloud>
+   Dashboard <dashboard>
+   ESA Cloud Toolbox <esa_toolbox>
 
 
