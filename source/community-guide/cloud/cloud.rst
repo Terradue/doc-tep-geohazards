@@ -65,4 +65,4 @@ For the first connection:
 .. |cloud_dahsboard_plus.png| image:: ../includes/cloud_dahsboard_plus.png
 .. |cloud_dahsboard_list.png| image:: ../includes/cloud_dahsboard_list.png
 .. |cloud_esatoolbox_username| image:: ../includes/cloud_esatoolbox_username.png
-.. |cloud_esatoolbox_pwd1| figure:: ../includes/cloud_esatoolbox_pwd1.png :figclass: img-border
+.. |cloud_esatoolbox_pwd1| figure:: ../includes/cloud_esatoolbox_pwd1.png
