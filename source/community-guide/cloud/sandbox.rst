@@ -1,4 +1,4 @@
-Create a Developer Cloud Toolbox
+Create a Developer Cloud Sandbox
 =================================
 
 To create your own Developer Cloud Toolbox:
