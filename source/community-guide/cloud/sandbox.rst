@@ -39,7 +39,7 @@ To connect your Developer Cloud Sandbox you need a secure connection with the Te
 Prerequisites
 -------------
 
-- You have the <sandbox user> and the <sandbox ip> information,
+- You have the <sandbox user> [1]_ and the <sandbox ip> information,
 - You are connected to the Terradue's VPN and therefore to the GEP Laboratory (see :ref:`laboratory`).
 
 Download the Certificate in PEM format
