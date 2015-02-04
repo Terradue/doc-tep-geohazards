@@ -1,7 +1,7 @@
 Cloud dashboard
 ===============
 
-Access the cloud dashboard
+Access the Cloud Dashboard
 --------------------------
 
 The Cloud platform is powered by OpenNebula, and gives to the user the possibility to create and manage Processing Services.
@@ -57,9 +57,6 @@ For the first connection:
 6. And finally enter (twice) your new password: e.g **blablabla**
 .. figure:: ../includes/cloud_esatoolbox_pwd3.png
 	:figclass: img-border
-
-portal data import: download les donnees sur le volume 
-
 
 .. |bulb| image:: ../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../includes/cloud_dahsboard_plus.png
