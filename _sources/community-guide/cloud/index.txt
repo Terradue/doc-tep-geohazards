@@ -1,4 +1,4 @@
-Cloud Dashboard
+Cloud Resources
 ================
 
 Contents:
@@ -6,8 +6,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   Dashboard <dashboard>
+   Cloud Dashboard <dashboard>
+   Join the GEP Laboratory <laboratory>
    ESA Cloud Toolbox <esa_toolbox>
-   Sandbox <sandbox/index>
-
+   Developer Cloud Sandbox <sandbox>
 
