@@ -1,5 +1,8 @@
+Developer Cloud Sandbox
+=======================
+
 Create a Developer Cloud Sandbox
-=================================
+--------------------------------
 
 To create your own Developer Cloud Toolbox:
 
@@ -32,7 +35,7 @@ To create your own Developer Cloud Toolbox:
 
 
 Access a Developer Cloud Sandbox
-=================================
+--------------------------------
 
 To connect your Developer Cloud Sandbox you need a secure connection with the Terradue's infrastructure. Following this guide you will be able to access your Sandbox through the Secure Shell (SSH) network protocol.
 
