@@ -22,7 +22,7 @@ Data discovery is made through the map. To get specific data:
 3. Click on |search| to open the query tab.
 4. Fill in specific parameters.
 5. Click on **Search**.
-6. Results appers on the map and the **Results Table**.
+6. Results appear on the map and the **Results Table**.
 7. Click on a result (directly on the map or in the Results table) to get more info about this result.
 
 .. |search| image:: ../includes/geobrowser_button_query.png
