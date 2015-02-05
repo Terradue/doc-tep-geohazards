@@ -43,7 +43,7 @@ Prerequisites
 ^^^^^^^^^^^^^
 
 - You have the <sandbox ip> value,
-- You are connected to the Terradue's VPN and therefore to the GEP Laboratory (see :ref:`laboratory`).
+- You are connected to the GEP Laboratory (see :ref:`laboratory`).
 
 Download the Certificate in PEM format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

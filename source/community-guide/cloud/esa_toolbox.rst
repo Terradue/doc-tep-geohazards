@@ -20,7 +20,15 @@ To create your own ESA Cloud Toolbox:
 Access an ESA Cloud Toolbox
 ---------------------------
 
-Now, to access your ESA Cloud Toolbox:
+Prerequisites
+^^^^^^^^^^^^^
+
+- You are connected to the GEP Laboratory (see :ref:`laboratory`).
+
+Procedure
+^^^^^^^^^
+
+To access your ESA Cloud Toolbox:
 
 - Access the Cloud Dashboard (see :ref:`dashboard`)
 - Click on *details* button of the Virtual Machine corresponding to your Esa Cloud Toolbox 
@@ -48,19 +56,17 @@ Now, to access your ESA Cloud Toolbox:
 
 |bulb| *You may have to allow your browser to open new pop-ups and allow unsafe script load.*
 
-For the first connection:
-
 - Enter your username: **pi** |cloud_esatoolbox_username|
-- Enter your password: **piuser2014** |cloud_esatoolbox_pwd1|
-- Now to set a new password, re-enter the password: **piuser2014**
+- Enter your password: **piuser2014**
+- *(Only for the first connection)* Now to set a new password, re-enter the password: **piuser2014**
 
 .. figure:: ../../includes/cloud_esatoolbox_pwd2.png
         :figclass: align-center
 
-- And finally enter (twice) your new password:
+- *(Only for the first connection)* And finally enter (twice) your new password:
 
 .. figure:: ../../includes/cloud_esatoolbox_pwd3.png
-	:figclass: img-border
+        :figclass: align-center
 
 .. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
