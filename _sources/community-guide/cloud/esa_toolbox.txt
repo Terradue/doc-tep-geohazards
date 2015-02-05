@@ -71,4 +71,3 @@ To access your ESA Cloud Toolbox:
 .. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
 .. |cloud_esatoolbox_username| image:: ../../includes/cloud_esatoolbox_username.png
-.. |cloud_esatoolbox_pwd1| figure:: ../../includes/cloud_esatoolbox_pwd1.png
