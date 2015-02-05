@@ -6,15 +6,15 @@ Create an ESA Cloud Toolbox
 
 To create your own ESA Cloud Toolbox:
 
-1. Access the cloud dashboard (see :ref:`dashboard`).
-2. Click on |cloud_dahsboard_plus.png| to create a new Virtual Machine.
-3. Set the Virtual Machine name (e.g 'my esa toolbox').
-4. Select the **ESA Cloud Toolbox** template.
-5. Click on **Create**.
-6. Wait for the VM to be deployed.
+- Access the cloud dashboard (see :ref:`dashboard`)
+- Click on |cloud_dahsboard_plus.png| to create a new Virtual Machine
+- Set the Virtual Machine name (e.g 'my esa toolbox')
+- Select the **ESA Cloud Toolbox** template
+- Click on **Create**
+- Wait for the VM to be deployed.
 
 .. figure:: ../../includes/cloud_esatoolbox_create.png
-	:figclass: img-border
+        :figclass: align-center
 
 
 Access an ESA Cloud Toolbox
@@ -22,27 +22,47 @@ Access an ESA Cloud Toolbox
 
 Now, to access your ESA Cloud Toolbox:
 
-1. Access the cloud dashboard (see :ref:`dashboard`).
-2. Click on the Virtual Machine corresponding to your Esa Cloud Toolbox. 
+- Access the Cloud Dashboard (see :ref:`dashboard`)
+- Click on *details* button of the Virtual Machine corresponding to your Esa Cloud Toolbox 
+
+.. figure:: assets/esa_toolbox_1.png
+        :figclass: align-center
+        :align: center
+        :alt: alternate text
+
+- Click on the *VNC* button, as shown in the following picture:
+
+.. figure:: assets/esa_toolbox_1.png
+        :figclass: align-center
+        :width: 600px
+        :align: center
+        :alt: alternate text
+
+- See the VNC screen: 
+
+.. figure:: assets/esa_toolbox_1.png
+        :figclass: align-center
+        :width: 600px
+        :align: center
+        :alt: alternate text
 
 |bulb| *You may have to allow your browser to open new pop-ups and allow unsafe script load.*
 
 For the first connection:
 
-3. Enter your username: **pi** |cloud_esatoolbox_username|
-4. Enter your password: **piuser2014** |cloud_esatoolbox_pwd1|
-5. Now to set a new password, re-enter the password: **piuser2014**
+- Enter your username: **pi** |cloud_esatoolbox_username|
+- Enter your password: **piuser2014** |cloud_esatoolbox_pwd1|
+- Now to set a new password, re-enter the password: **piuser2014**
 
 .. figure:: ../../includes/cloud_esatoolbox_pwd2.png
-	:figclass: img-border
+        :figclass: align-center
 
-6. And finally enter (twice) your new password:
+- And finally enter (twice) your new password:
 
 .. figure:: ../../includes/cloud_esatoolbox_pwd3.png
 	:figclass: img-border
 
 .. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
-.. |cloud_dahsboard_list.png| image:: ../../includes/cloud_dahsboard_list.png
 .. |cloud_esatoolbox_username| image:: ../../includes/cloud_esatoolbox_username.png
 .. |cloud_esatoolbox_pwd1| figure:: ../../includes/cloud_esatoolbox_pwd1.png
