@@ -32,7 +32,7 @@ Now, to access your ESA Cloud Toolbox:
 
 - Click on the *VNC* button, as shown in the following picture:
 
-.. figure:: assets/esa_toolbox_1.png
+.. figure:: assets/esa_toolbox_2.png
         :figclass: align-center
         :width: 600px
         :align: center
@@ -40,7 +40,7 @@ Now, to access your ESA Cloud Toolbox:
 
 - See the VNC screen: 
 
-.. figure:: assets/esa_toolbox_1.png
+.. figure:: assets/esa_toolbox_3.png
         :figclass: align-center
         :width: 600px
         :align: center
