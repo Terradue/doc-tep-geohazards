@@ -10,7 +10,7 @@ Select the processing
 
 .. figure:: assets/tuto_adore_1.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Fill the parameters
@@ -23,33 +23,33 @@ Slave product reference
 
 .. figure:: assets/tuto_adore_2.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * Click on Show Other Parameters:
 
 .. figure:: assets/tuto_adore_3.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * Type in the **time:start** field the value **2008-03-26** and in the **time:end** field the value **2008-03-26**, then click on the button **Search**:
 
 .. figure:: assets/tuto_adore_4.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * Drag and Drop the first result (the one with **Track 129**) in the *Slave product reference* field:
 
 .. figure:: assets/tuto_adore_5.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 .. figure:: assets/tuto_adore_6.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Master product reference
@@ -59,14 +59,14 @@ Master product reference
 
 .. figure:: assets/tuto_adore_7.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * Drag and drop the result in the *Master product reference* field:
 
 .. figure:: assets/tuto_adore_8.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Point of Interest
@@ -86,7 +86,7 @@ Settings for ADORE Doris separated by comma
 
 .. figure:: assets/tuto_adore_9.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Run the job
@@ -96,21 +96,21 @@ Run the job
 
 .. figure:: assets/tuto_adore_10.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * See the Running Job:
 
 .. figure:: assets/tuto_adore_11.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 * After about 20 minutes, see the Successful Job:
 
 .. figure:: assets/tuto_adore_12.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Notes
