@@ -74,7 +74,7 @@ Point of Interest
 
 * Type
   
-.. code-block:: parameter
+.. code-block:: adore-parameter
   
   POINT(13.4 42.35)
   
@@ -85,7 +85,7 @@ Extent
 
 * Type
   
-.. code-block:: parameter
+.. code-block:: adore-parameter
  
   2000,2000
 
@@ -96,7 +96,7 @@ Settings for ADORE Doris separated by comma
 
 * Type
   
-.. code-block:: parameter
+.. code-block:: adore-parameter
 
   cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"
 
