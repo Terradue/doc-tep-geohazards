@@ -14,7 +14,7 @@ and exploited through cloud appliances bound to a proper usage policy.
 I am a data provider, how can I proceed to get registered on GEP ?
 ------------------------------------------------------------------
 
-For the time period of the Platofrm Validation with early adopters, 
+For the time period of the Platform Validation with early adopters, 
 a data provider partner can interact very simply with the support team, in order to add a catalog entry on the platform.
 
 This is the minimum capability offered at this stage. 
