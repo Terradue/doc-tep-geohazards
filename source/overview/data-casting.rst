@@ -22,7 +22,7 @@ In the future, it is planed to offer authorized Data Providers with a service fo
 
 To get more information:
 
-Contact ESA geohazards-tep at esa.int
+Contact us: geohazards-tep at esa.int
 
 Indicate the resources you would like to promote on the platform,
 and the usage policies to be bound with the provided data resources.
