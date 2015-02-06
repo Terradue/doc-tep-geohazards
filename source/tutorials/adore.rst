@@ -75,16 +75,18 @@ Point of Interest
 * Type
   
 .. code-block:: bash
+  
   POINT(13.4 42.35)
   
 in the *Point of Interest* field:
 
-Extend
+Extent
 ------
 
 * Type
   
 .. code-block:: bash
+ 
   2000,2000
 
 in the *Extend*:
@@ -95,6 +97,7 @@ Settings for ADORE Doris separated by comma
 * Type
   
 .. code-block:: bash
+
   cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"
 
 in the *Settings for ADORE Doris separated by comma* field:
