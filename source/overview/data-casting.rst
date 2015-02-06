@@ -5,7 +5,7 @@ Context
 -------
 
 The Platform allows data providers to promote the usage of their hosted data,
-by having dedicated catalogues to manage series/datasets selected for exploition with the platform' services.
+by having dedicated catalogues to manage series/datasets selected for exploitation with the platform' services.
 
 These provided data resources can be searched and retrieved by users from the platform, 
 and exploited through cloud appliances bound to a proper usage policy.
