@@ -60,8 +60,10 @@ To access your ESA Cloud Toolbox:
 - Enter your password: **piuser2014**
 - *(Only for the first connection)* Now to set a new password, re-enter the password: **piuser2014**
 
-.. figure:: ../../includes/cloud_esatoolbox_pwd2.png
+.. figure:: assets/password2.png
         :figclass: align-center
+
+|bulb| *Before to perform this step, be sure to see a screen similar to the image below, that is without any other text (e.g. "You are required to change your password immediately (root enforced)")*
 
 - *(Only for the first connection)* And finally enter (twice) your new password:
 
