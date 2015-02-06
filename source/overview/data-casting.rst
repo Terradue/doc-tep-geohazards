@@ -15,7 +15,8 @@ I am a data provider, how can I proceed to get registered on GEP ?
 ------------------------------------------------------------------
 
 For the time period of the Platofrm Validation with early adopters, 
-a data provider partner can interact very simplywith the support team, in order to add a catalog entry on the platform.
+a data provider partner can interact very simply with the support team, in order to add a catalog entry on the platform.
+
 This is the minimum capability offered at this stage. 
 In the future, it is planed to offer authorized Data Providers with a service for self-registration of their dataset series.
 
