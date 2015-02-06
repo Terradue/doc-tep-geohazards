@@ -74,7 +74,7 @@ Point of Interest
 
 * Type
   
-.. code-block::
+.. code-block:: console-output
   
   POINT(13.4 42.35)
   
@@ -85,7 +85,7 @@ Extent
 
 * Type
   
-.. code-block::
+.. code-block:: bash
  
   2000,2000
 
