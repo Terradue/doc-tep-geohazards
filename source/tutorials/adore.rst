@@ -72,17 +72,32 @@ Master product reference
 Point of Interest
 -----------------
 
-* Type **POINT(13.4 42.35)** in the *Point of Interest* field:
+* Type
+  
+.. code-block:: bash
+  POINT(13.4 42.35)
+  
+in the *Point of Interest* field:
 
 Extend
 ------
 
-* Type **2000,2000** in the *Extend*:
+* Type
+  
+.. code-block:: bash
+  2000,2000
+
+in the *Extend*:
 
 Settings for ADORE Doris separated by comma
 -------------------------------------------
 
-* Type **cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"** in the *Settings for ADORE Doris separated by comma* field:
+* Type
+  
+.. code-block:: bash
+  cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"
+
+in the *Settings for ADORE Doris separated by comma* field:
 
 .. figure:: assets/tuto_adore_9.png
 	:figclass: align-center
@@ -113,7 +128,12 @@ Run the job
         :width: 750px
         :align: center
 
-Notes
-=====
+* Click on the button *Show results on map*, then on the *20090311_20080326_cint.tiff* result on the *Results Table* in the bottom left side
 
-Currently the processing results are not shown on the Portal. This will be upgraded soon.
+* See the result on map: 
+
+.. figure:: assets/tuto_adore_13.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
