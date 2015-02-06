@@ -136,4 +136,3 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
-
