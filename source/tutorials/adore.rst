@@ -19,7 +19,7 @@ Fill the parameters
 Slave product reference
 -----------------------
 
-* Type **ASA_IMS_1P** in the Search Terms field (1) and then click on lens icon (2):
+* Type **ASA_IMS_1P** in the Search Terms field (1) and then click on the lens icon (2):
 
 .. figure:: assets/tuto_adore_2.png
 	:figclass: align-center
