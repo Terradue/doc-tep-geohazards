@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Interferogram generation with ADORE DORIS &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <title>GMTSAR Interferometric Processor &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -281,18 +281,14 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Interferogram generation with ADORE DORIS</a><ul>
+<li><a class="reference internal" href="#">GMTSAR Interferometric Processor</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
 <li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li><a class="reference internal" href="#point-of-interest">Point of Interest</a></li>
-<li><a class="reference internal" href="#extend">Extend</a></li>
-<li><a class="reference internal" href="#settings-for-adore-doris-separated-by-comma">Settings for ADORE Doris separated by comma</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -352,16 +348,16 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="interferogram-generation-with-adore-doris">
-<h1>Interferogram generation with ADORE DORIS<a class="headerlink" href="#interferogram-generation-with-adore-doris" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="gmtsar-interferometric-processor">
+<h1>GMTSAR Interferometric Processor<a class="headerlink" href="#gmtsar-interferometric-processor" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a>)</li>
-<li>Select the “Interferogram generation with ADORE DORIS” processor:</li>
+<li>Select the “GMTSAR Interferometric Processor” processor:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_1.png" src="../_images/tuto_adore_1.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_1.png" src="../_images/tuto_gmtsar_1.png" style="width: 750px;" />
 </div>
 </div>
 <div class="section" id="fill-the-parameters">
@@ -369,94 +365,61 @@
 <div class="section" id="slave-product-reference">
 <h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Type <strong>ASA_IMS_1P</strong> in the Search Terms field (1) and then click on lens icon (2):</li>
+<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on lens icon (2):</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_2.png" src="../_images/tuto_adore_2.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_2.png" src="../_images/tuto_gmtsar_2.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>Click on Show Other Parameters:</li>
+<li>Click on Show Other Parameters, type in the <strong>time:start</strong> field the value <strong>2010-05-02T17:50:16</strong> and in the <strong>time:end</strong> field the value <strong>2010-05-02T17:50:16</strong>, then click on the button <strong>Search</strong>:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_3.png" src="../_images/tuto_adore_3.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_3.png" src="../_images/tuto_gmtsar_3.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>Type in the <strong>time:start</strong> field the value <strong>2008-03-26</strong> and in the <strong>time:end</strong> field the value <strong>2008-03-26</strong>, then click on the button <strong>Search</strong>:</li>
+<li>Drag and Drop the first result in the <em>Slave product reference</em> field:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_4.png" src="../_images/tuto_adore_4.png" style="width: 600px;" />
-</div>
-<ul class="simple">
-<li>Drag and Drop the first result (the one with <strong>Track 129</strong>) in the <em>Slave product reference</em> field:</li>
-</ul>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_5.png" src="../_images/tuto_adore_5.png" style="width: 600px;" />
-</div>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_6.png" src="../_images/tuto_adore_6.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_4.png" src="../_images/tuto_gmtsar_4.png" style="width: 750px;" />
 </div>
 </div>
 <div class="section" id="master-product-reference">
 <h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Perform the same procedure described previously (<a class="reference internal" href="#slave-product-reference">Slave product reference</a>), using as values <strong>2009-03-11</strong> in the <strong>time:start</strong> field and in the <strong>time:end</strong> field:</li>
+<li>Perform the same procedure described previously (<a class="reference internal" href="#slave-product-reference">Slave product reference</a>), using as values <strong>2010-03-28T17:50:04</strong> in the <strong>time:start</strong> field and in the <strong>time:end</strong> field:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_7.png" src="../_images/tuto_adore_7.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_5.png" src="../_images/tuto_gmtsar_5.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>Drag and drop the result in the <em>Master product reference</em> field:</li>
+<li>Drag and drop the first result in the <em>Master product reference</em> field:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_8.png" src="../_images/tuto_adore_8.png" style="width: 600px;" />
-</div>
-</div>
-<div class="section" id="point-of-interest">
-<h3>Point of Interest<a class="headerlink" href="#point-of-interest" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Type <strong>POINT(13.4 42.35)</strong> in the <em>Point of Interest</em> field:</li>
-</ul>
-</div>
-<div class="section" id="extend">
-<h3>Extend<a class="headerlink" href="#extend" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Type <strong>2000,2000</strong> in the <em>Extend</em>:</li>
-</ul>
-</div>
-<div class="section" id="settings-for-adore-doris-separated-by-comma">
-<h3>Settings for ADORE Doris separated by comma<a class="headerlink" href="#settings-for-adore-doris-separated-by-comma" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Type <strong>cc_winsize=&#8221;128 128&#8221;,fc_acc=&#8221;8 8&#8221;,int_multilook=&#8221;4 4&#8221;,coh_multilook=&#8221;4 4&#8221;,dumpbaseline=&#8221;15 10&#8221;</strong> in the <em>Settings for ADORE Doris separated by comma</em> field:</li>
-</ul>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_9.png" src="../_images/tuto_adore_9.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_6.png" src="../_images/tuto_gmtsar_6.png" style="width: 750px;" />
 </div>
 </div>
 </div>
 <div class="section" id="run-the-job">
 <h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click on the button Run Job:</li>
+<li>Click on the button Run Job and see the Running Job</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_10.png" src="../_images/tuto_adore_10.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_7.png" src="../_images/tuto_gmtsar_7.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>See the Running Job:</li>
+<li>After about 25 minutes, see the Successful Job:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_11.png" src="../_images/tuto_adore_11.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_8.png" src="../_images/tuto_gmtsar_8.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>After about 20 minutes, see the Successful Job:</li>
+<li>Click on the button <em>Show results on map</em>, then on the <em>phase_mask_ll.tiff</em> result on the <em>Results Table</em> in the bottom left side</li>
+<li>See the result on map:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_adore_12.png" src="../_images/tuto_adore_12.png" style="width: 600px;" />
+<img alt="../_images/tuto_gmtsar_9.png" src="../_images/tuto_gmtsar_9.png" style="width: 750px;" />
 </div>
-</div>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<p>Currently the processing results are not shown on the Portal. This will be upgraded soon.</p>
 </div>
 </div>
 

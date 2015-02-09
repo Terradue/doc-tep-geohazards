@@ -1,16 +1,16 @@
-Interferogram generation with ADORE DORIS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMTSAR Interferometric Processor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select the processing
 =====================
 
 * Login to the platform (see :doc:`user <../community-guide/user>`)
 
-* Select the “Interferogram generation with ADORE DORIS” processor:
+* Select the “GMTSAR Interferometric Processor” processor:
 
-.. figure:: assets/tuto_adore_1.png
+.. figure:: assets/tuto_gmtsar_1.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Fill the parameters
@@ -19,101 +19,66 @@ Fill the parameters
 Slave product reference
 -----------------------
 
-* Type **ASA_IMS_1P** in the Search Terms field (1) and then click on lens icon (2):
+* Type **ASA_IM__0P** in the Search Terms field (1) and then click on lens icon (2):
 
-.. figure:: assets/tuto_adore_2.png
+.. figure:: assets/tuto_gmtsar_2.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
-* Click on Show Other Parameters:
+* Click on Show Other Parameters, type in the **time:start** field the value **2010-05-02T17:50:16** and in the **time:end** field the value **2010-05-02T17:50:16**, then click on the button **Search**:
 
-.. figure:: assets/tuto_adore_3.png
+.. figure:: assets/tuto_gmtsar_3.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
-* Type in the **time:start** field the value **2008-03-26** and in the **time:end** field the value **2008-03-26**, then click on the button **Search**:
+* Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/tuto_adore_4.png
+.. figure:: assets/tuto_gmtsar_4.png
 	:figclass: align-center
-        :width: 600px
-        :align: center
-
-* Drag and Drop the first result (the one with **Track 129**) in the *Slave product reference* field:
-
-.. figure:: assets/tuto_adore_5.png
-	:figclass: align-center
-        :width: 600px
-        :align: center
-
-.. figure:: assets/tuto_adore_6.png
-	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Master product reference
 ------------------------
 
-* Perform the same procedure described previously (`Slave product reference`_), using as values **2009-03-11** in the **time:start** field and in the **time:end** field:
+* Perform the same procedure described previously (`Slave product reference`_), using as values **2010-03-28T17:50:04** in the **time:start** field and in the **time:end** field:
 
-.. figure:: assets/tuto_adore_7.png
+.. figure:: assets/tuto_gmtsar_5.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
-* Drag and drop the result in the *Master product reference* field:
+* Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/tuto_adore_8.png
+.. figure:: assets/tuto_gmtsar_6.png
 	:figclass: align-center
-        :width: 600px
-        :align: center
-
-Point of Interest
------------------
-
-* Type **POINT(13.4 42.35)** in the *Point of Interest* field:
-
-Extend
-------
-
-* Type **2000,2000** in the *Extend*:
-
-Settings for ADORE Doris separated by comma
--------------------------------------------
-
-* Type **cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"** in the *Settings for ADORE Doris separated by comma* field:
-
-.. figure:: assets/tuto_adore_9.png
-	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
 Run the job
 ===========
 
-* Click on the button Run Job:
+* Click on the button Run Job and see the Running Job
 
-.. figure:: assets/tuto_adore_10.png
+.. figure:: assets/tuto_gmtsar_7.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
-* See the Running Job:
+* After about 25 minutes, see the Successful Job:
 
-.. figure:: assets/tuto_adore_11.png
+.. figure:: assets/tuto_gmtsar_8.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
 
-* After about 20 minutes, see the Successful Job:
+* Click on the button *Show results on map*, then on the *phase_mask_ll.tiff* result on the *Results Table* in the bottom left side
 
-.. figure:: assets/tuto_adore_12.png
+* See the result on map: 
+
+.. figure:: assets/tuto_gmtsar_9.png
 	:figclass: align-center
-        :width: 600px
+        :width: 750px
         :align: center
-
-Notes
-=====
-
-Currently the processing results are not shown on the Portal. This will be upgraded soon.
