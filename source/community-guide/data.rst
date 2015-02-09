@@ -25,6 +25,8 @@ Data discovery is made through the map. To get specific data:
 6. Results appear on the map and the **Results Table**.
 7. Click on a result (directly on the map or in the Results table) to get more info about this result.
 
+.. tip:: in the *Search Term* field supported wildcards are '*', which matches any character sequence (including the empty one), and '?', which matches any single character.
+
 .. |search| image:: ../includes/geobrowser_button_query.png
 
 .. image:: ../includes/geobrowser_map_data.png
