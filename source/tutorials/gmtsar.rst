@@ -1,5 +1,5 @@
-GMTSAR Interferometric Processor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interferogram generation with GMTSAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select the processing
 =====================
