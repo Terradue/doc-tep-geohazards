@@ -4,7 +4,7 @@ Interferogram generation with ADORE DORIS
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>`)
+* Login to the platform (see :doc:`user <../community-guide/user>` section)
 
 * Select the “Interferogram generation with ADORE DORIS” processor:
 
