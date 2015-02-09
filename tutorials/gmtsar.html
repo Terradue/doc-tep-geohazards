@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GMTSAR Interferometric Processor &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <title>Interferogram generation with GMTSAR &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -29,6 +29,8 @@
     <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform v1.0 documentation" href="../index.html" />
+    <link rel="up" title="Tutorials" href="index.html" />
+    <link rel="prev" title="Interferogram generation with ADORE DORIS" href="adore.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -84,7 +86,7 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../overview/purpose.html">Purpose of the Geohazards Thematic Exploitation Platform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../overview/community-portal.html">A Community Portal</a></li>
@@ -252,7 +254,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../cloud-administrator/cloud-dashboard.html">Cloud Platform dashboard</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="adore.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="adore.html#fill-the-parameters">Fill the parameters</a><ul>
@@ -264,6 +266,16 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="adore.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Interferogram generation with GMTSAR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +293,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">GMTSAR Interferometric Processor</a><ul>
+<li><a class="reference internal" href="#">Interferogram generation with GMTSAR</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
@@ -299,6 +311,10 @@
             
               
                 
+  <li>
+    <a href="adore.html" title="Previous Chapter: Interferogram generation with ADORE DORIS"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Interferogram ge...</span>
+    </a>
+  </li>
               
             
             
@@ -327,11 +343,24 @@
 </div>-->
 
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Interferogram generation with GMTSAR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <div id="sourcelink">
   <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/gmtsar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
@@ -348,24 +377,25 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="gmtsar-interferometric-processor">
-<h1>GMTSAR Interferometric Processor<a class="headerlink" href="#gmtsar-interferometric-processor" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="interferogram-generation-with-gmtsar">
+<h1>Interferogram generation with GMTSAR<a class="headerlink" href="#interferogram-generation-with-gmtsar" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a>)</li>
-<li>Select the “GMTSAR Interferometric Processor” processor:</li>
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Select the processing service “GMTSAR Interferometric Processor”:</li>
 </ul>
 <div class="align-center figure align-center">
 <img alt="../_images/tuto_gmtsar_1.png" src="../_images/tuto_gmtsar_1.png" style="width: 750px;" />
 </div>
+<p>The &#8220;GMTSAR Interferometric Processor&#8221; panel is displayed with parameters values to be filled-in.</p>
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="slave-product-reference">
 <h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on lens icon (2):</li>
+<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on the lens icon (2):</li>
 </ul>
 <div class="align-center figure align-center">
 <img alt="../_images/tuto_gmtsar_2.png" src="../_images/tuto_gmtsar_2.png" style="width: 750px;" />
@@ -386,7 +416,7 @@
 <div class="section" id="master-product-reference">
 <h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Perform the same procedure described previously (<a class="reference internal" href="#slave-product-reference">Slave product reference</a>), using as values <strong>2010-03-28T17:50:04</strong> in the <strong>time:start</strong> field and in the <strong>time:end</strong> field:</li>
+<li>Perform the same procedure described previously (<a class="reference internal" href="#slave-product-reference">Slave product reference</a>), using the value <strong>2010-03-28T17:50:04</strong> in both the <strong>time:start</strong> field and the <strong>time:end</strong> field:</li>
 </ul>
 <div class="align-center figure align-center">
 <img alt="../_images/tuto_gmtsar_5.png" src="../_images/tuto_gmtsar_5.png" style="width: 750px;" />

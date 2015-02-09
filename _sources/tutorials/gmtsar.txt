@@ -1,17 +1,19 @@
-GMTSAR Interferometric Processor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interferogram generation with GMTSAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>`)
+* Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the “GMTSAR Interferometric Processor” processor:
+* Select the processing service “GMTSAR Interferometric Processor”:
 
 .. figure:: assets/tuto_gmtsar_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
+The "GMTSAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
 
 Fill the parameters
 ===================
@@ -19,7 +21,7 @@ Fill the parameters
 Slave product reference
 -----------------------
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on lens icon (2):
+* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
 
 .. figure:: assets/tuto_gmtsar_2.png
 	:figclass: align-center
@@ -43,7 +45,7 @@ Slave product reference
 Master product reference
 ------------------------
 
-* Perform the same procedure described previously (`Slave product reference`_), using as values **2010-03-28T17:50:04** in the **time:start** field and in the **time:end** field:
+* Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28T17:50:04** in both the **time:start** field and the **time:end** field:
 
 .. figure:: assets/tuto_gmtsar_5.png
 	:figclass: align-center
