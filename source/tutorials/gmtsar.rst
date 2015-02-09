@@ -4,7 +4,7 @@ GMTSAR Interferometric Processor
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>`)
+* Login to the platform (see :doc:`user <../community-guide/user>` section)
 
 * Select the “GMTSAR Interferometric Processor” processor:
 
