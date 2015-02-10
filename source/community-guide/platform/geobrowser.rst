@@ -37,6 +37,7 @@ It is also possible to directly select on the map the temporal parameter of the 
 .. figure:: ../../includes/geobrowser_timebar.png
 	:figclass: img-border img-max-width
 
+.. tip:: in the *Search Term* field supported wildcards are '*', which matches any character sequence (including the empty one), and '?', which matches any single character.
 
 It is also possible to add layers on the map:
 

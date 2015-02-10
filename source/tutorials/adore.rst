@@ -4,14 +4,16 @@ Interferogram generation with ADORE DORIS
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>`)
+* Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the “Interferogram generation with ADORE DORIS” processor:
+* Select the processing service “ADORE DORIS interferometric processor”:
 
 .. figure:: assets/tuto_adore_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
+        
+The "ADORE DORIS Interferometric Processor" panel is displayed with parameters values to be filled-in.
 
 Fill the parameters
 ===================
@@ -19,7 +21,7 @@ Fill the parameters
 Slave product reference
 -----------------------
 
-* Type **ASA_IMS_1P** in the Search Terms field (1) and then click on lens icon (2):
+* Type **ASA_IMS_1P** in the Search Terms field (1) and then click on the lens icon (2):
 
 .. figure:: assets/tuto_adore_2.png
 	:figclass: align-center
@@ -72,17 +74,35 @@ Master product reference
 Point of Interest
 -----------------
 
-* Type **POINT(13.4 42.35)** in the *Point of Interest* field:
+* Type
+  
+.. code-block:: adore-parameter
+  
+  POINT(13.4 42.35)
+  
+in the *Point of Interest* field:
 
-Extend
+Extent
 ------
 
-* Type **2000,2000** in the *Extend*:
+* Type
+  
+.. code-block:: adore-parameter
+ 
+  2000,2000
+
+in the *Extend*:
 
 Settings for ADORE Doris separated by comma
 -------------------------------------------
 
-* Type **cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"** in the *Settings for ADORE Doris separated by comma* field:
+* Type
+  
+.. code-block:: adore-parameter
+
+  cc_winsize="128 128",fc_acc="8 8",int_multilook="4 4",coh_multilook="4 4",dumpbaseline="15 10"
+
+in the *Settings for ADORE Doris separated by comma* field:
 
 .. figure:: assets/tuto_adore_9.png
 	:figclass: align-center
@@ -113,7 +133,11 @@ Run the job
         :width: 750px
         :align: center
 
-Notes
-=====
+* Click on the button *Show results on map*, then on the *20090311_20080326_cint.tiff* result on the *Results Table* in the bottom left side
 
-Currently the processing results are not shown on the Portal. This will be upgraded soon.
+* See the result on map: 
+
+.. figure:: assets/tuto_adore_13.png
+	:figclass: align-center
+        :width: 750px
+        :align: center

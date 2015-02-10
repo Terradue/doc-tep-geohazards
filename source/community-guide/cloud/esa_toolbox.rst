@@ -60,6 +60,12 @@ To access your ESA Cloud Toolbox:
 - Enter your username: **pi**
 - Enter your password: **piuser2014**
 - *(Only for the first connection)* Now to set a new password, re-enter the password: **piuser2014**
+
+.. figure:: assets/password2.png
+        :figclass: align-center
+
+|bulb| *Before to perform this step, be sure to see a screen similar to the image below, that is without any other text (e.g. "You are required to change your password immediately (root enforced)")*
+
 - *(Only for the first connection)* And finally enter (twice) your new password:
 
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
