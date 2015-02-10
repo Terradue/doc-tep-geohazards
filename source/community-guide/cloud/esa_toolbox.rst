@@ -46,6 +46,9 @@ To access your ESA Cloud Toolbox:
         :align: center
         :alt: alternate text
 
+.. NOTE::
+        You may have to allow your browser to open new pop-ups and allow unsafe script load.
+
 - See the VNC screen: 
 
 .. figure:: assets/esa_toolbox_3.png
@@ -54,20 +57,9 @@ To access your ESA Cloud Toolbox:
         :align: center
         :alt: alternate text
 
-|bulb| *You may have to allow your browser to open new pop-ups and allow unsafe script load.*
-
-- Enter your username: **pi** |cloud_esatoolbox_username|
+- Enter your username: **pi**
 - Enter your password: **piuser2014**
 - *(Only for the first connection)* Now to set a new password, re-enter the password: **piuser2014**
-
-.. figure:: ../../includes/cloud_esatoolbox_pwd2.png
-        :figclass: align-center
-
 - *(Only for the first connection)* And finally enter (twice) your new password:
 
-.. figure:: ../../includes/cloud_esatoolbox_pwd3.png
-        :figclass: align-center
-
-.. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
-.. |cloud_esatoolbox_username| image:: ../../includes/cloud_esatoolbox_username.png
