@@ -1,5 +1,5 @@
-GAMMA Level-0 WPS
-~~~~~~~~~~~~~~~~~
+G-POD GAMMA Level0 Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select the processing
 =====================
