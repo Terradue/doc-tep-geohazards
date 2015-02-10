@@ -8,3 +8,4 @@ Contents:
    
    Interferogram generation with ADORE DORIS<adore>
    Interferogram generation with GMTSAR<gmtsar>
+   GAMMA Level-0 WPS<gamma_L0>
