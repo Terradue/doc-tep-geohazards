@@ -55,7 +55,7 @@ VNC Connection
 
 *(Option 2 - using a VNC client)*
 
-- Download and install a VNC client (`UltraVNC <http://www.uvnc.com/downloads/ultravnc.html>` or `RealVNC <https://www.realvnc.com/>` or `TightVNC <http://www.tightvnc.com/>`)
+- Download and install a VNC client (e.g., `UltraVNC <http://www.uvnc.com/downloads/ultravnc.html>`_ or `RealVNC <https://www.realvnc.com/>`_ or `TightVNC <http://www.tightvnc.com/>`_)
 
 - Open the VNC client and connect to:
 
