@@ -26,7 +26,13 @@ Fill the parameters
 Computing Element
 -----------------
 
-* Choose **CE 01 SL6 UK*** in the *Computing Element* field.
+* Select 
+
+.. code-block:: adore-parameter
+  
+  CE 01 SL6 UK 
+
+in the *Computing Element* field.
 
 .. figure:: assets/tuto_gamma_2.png
 	:figclass: align-center
@@ -75,7 +81,13 @@ in the *End Date* field:
 Priority
 --------
 
-* Choose **0.25** in the *Priority* field.
+* Select 
+
+.. code-block:: adore-parameter
+  
+  0.25 
+
+in the *Priority* field.
 
 .. figure:: assets/tuto_gamma_3.png
     :figclass: align-center
