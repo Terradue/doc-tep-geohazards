@@ -45,7 +45,7 @@ Master product reference
 Slave product reference
 ------------------------
 
-* Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28T17:50:16** in both the **time:start** field and the **time:end** field then drag and drop the first result in the *ASAR Slave product catalogue entry* field:
+* Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28T17:50:19** in both the **time:start** field and the **time:end** field then drag and drop the first result in the *ASAR Slave product catalogue entry* field:
 
 .. figure:: assets/tuto_roi_pac_5.png
 	:figclass: align-center
