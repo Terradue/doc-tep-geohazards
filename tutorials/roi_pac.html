@@ -283,7 +283,16 @@
 <li class="toctree-l3"><a class="reference internal" href="gmtsar.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">ROI_PAC on Hadoop Cloud Sandbox (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">ROI_PAC on Hadoop Cloud Sandbox (upcoming!)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service (upcoming!)</a></li>
@@ -321,7 +330,16 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">ROI_PAC on Hadoop Cloud Sandbox</a></li>
+<li><a class="reference internal" href="#">ROI_PAC on Hadoop Cloud Sandbox</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -373,7 +391,16 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">ROI_PAC on Hadoop Cloud Sandbox (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">ROI_PAC on Hadoop Cloud Sandbox (upcoming!)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service (upcoming!)</a></li>
@@ -403,9 +430,72 @@
       
   <div class="section" id="roi-pac-on-hadoop-cloud-sandbox">
 <h1>ROI_PAC on Hadoop Cloud Sandbox<a class="headerlink" href="#roi-pac-on-hadoop-cloud-sandbox" title="Permalink to this headline">¶</a></h1>
-<p>Upcoming!</p>
-<p>This How-To guide will present a step-by-step example to run the service from the Geohazards Portal interface.
-Meanwhile, you can address inquiries to geohazards-tep at esa.int</p>
+<div class="section" id="select-the-processing">
+<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Select the processing service “Repeat Orbit Interferometry Package (ROI_PAC)”:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_1.png" src="../_images/tuto_roi_pac_1.png" style="width: 750px;" />
+</div>
+<p>The &#8220;Repeat Orbit Interferometry Package (ROI_PAC)&#8221; panel is displayed with parameters values to be filled-in.</p>
+</div>
+<div class="section" id="fill-the-parameters">
+<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="master-product-reference">
+<h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on the lens icon (2):</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_2.png" src="../_images/tuto_roi_pac_2.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Click on Show Other Parameters, type in the <strong>time:start</strong> field the value <strong>2010-05-02T17:50:16</strong> and in the <strong>time:end</strong> field the value <strong>2010-05-02T17:50:16</strong>, then click on the button <strong>Search</strong>:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_3.png" src="../_images/tuto_roi_pac_3.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Drag and Drop the first result in the <em>ASAR Master product catalogue entry</em> field:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_4.png" src="../_images/tuto_roi_pac_4.png" style="width: 750px;" />
+</div>
+</div>
+<div class="section" id="slave-product-reference">
+<h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Perform the same procedure described previously (<a class="reference internal" href="#master-product-reference">Master product reference</a>), using the value <strong>2010-03-28T17:50:19</strong> in both the <strong>time:start</strong> field and the <strong>time:end</strong> field then drag and drop the first result in the <em>ASAR Slave product catalogue entry</em> field:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_5.png" src="../_images/tuto_roi_pac_5.png" style="width: 750px;" />
+</div>
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on the button Run Job and see the Running Job</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_6.png" src="../_images/tuto_roi_pac_6.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>After about 20 minutes, see the Successful Job:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_7.png" src="../_images/tuto_roi_pac_7.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Click on the button <em>Show results on map</em>, then on the <em>geo_100328-100502.unw.phase.tif</em> result on the <em>Results Table</em> in the bottom left side</li>
+<li>See the result on map:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_roi_pac_8.png" src="../_images/tuto_roi_pac_8.png" style="width: 750px;" />
+</div>
+</div>
 </div>
 
 
