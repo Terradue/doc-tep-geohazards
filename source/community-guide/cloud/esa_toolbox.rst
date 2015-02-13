@@ -88,10 +88,10 @@ that is, without any other text (e.g. "You are required to change your password 
 
 - *(Only for the first connection)* And finally enter (twice) your new password:
 
-Access the datapackage(s) rapatriated from the GEP Portal
----------------------------------------------------------
+Access the datapackages retrieved from the GEP Portal
+-----------------------------------------------------
 
-To access the GEP Portal data, that was made available locally to the CloudToolbox by an administrator, 
+To access the GEP Portal data that was made available locally to the CloudToolbox by an administrator, 
 just follow this procedure:
 
 - Click on the *Computer* icon, then on *Filesystem* icon:
@@ -114,3 +114,6 @@ just follow this procedure:
 
 .. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
+
+To request the configuration of your CloudToolbox with a datapackage previously defined on the GEP Portal, 
+contact the support via email to tep-geohazards at esa.int , providing the Portal URL of the requested datapackage.
