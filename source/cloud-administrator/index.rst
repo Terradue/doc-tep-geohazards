@@ -7,3 +7,4 @@ Contents:
     :maxdepth: 2
 
     Cloud Platform dashboard<cloud-dashboard>
+    Portal Data Import within ESA CloudToolbox<cloud-import>

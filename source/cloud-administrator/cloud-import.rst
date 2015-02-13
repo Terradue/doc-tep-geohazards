@@ -4,7 +4,7 @@ Portal Data Import within ESA CloudToolbox
 * Access the CloudToolbox to be configured with a datapackage 
 (for access guidance, see :doc:`ESA Toolbox Guide <../community-guide/cloud/esa_toolbox>` section)
 
-* From the CloudToolbo desktop, click on the *Portal Data Import* icon:
+* From the CloudToolbox desktop, click on the *Portal Data Import* icon:
 
 .. figure:: assets/import_1.png
 	:figclass: align-center 
