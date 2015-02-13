@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Portal Data Import within the ESA Cloud Toolbox &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <title>Portal Data Import within ESA CloudToolbox &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -29,6 +29,9 @@
     <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform v1.0 documentation" href="../index.html" />
+    <link rel="up" title="Cloud Operations Administrator Guide" href="index.html" />
+    <link rel="next" title="Tutorials" href="../tutorials/index.html" />
+    <link rel="prev" title="Cloud Platform dashboard" href="cloud-dashboard.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -84,7 +87,7 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../overview/purpose.html">Purpose of the Geohazards Thematic Exploitation Platform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../overview/community-portal.html">A Community Portal</a></li>
@@ -253,8 +256,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Cloud Operations Administrator Guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cloud Operations Administrator Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cloud-dashboard.html">Cloud Platform dashboard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Portal Data Import within ESA CloudToolbox</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a><ul>
@@ -328,7 +332,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Portal Data Import within the ESA Cloud Toolbox</a></li>
+<li><a class="reference internal" href="#">Portal Data Import within ESA CloudToolbox</a></li>
 </ul>
 </ul>
 </li>
@@ -337,6 +341,14 @@
             
               
                 
+  <li>
+    <a href="cloud-dashboard.html" title="Previous Chapter: Cloud Platform dashboard"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Cloud Platform d...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../tutorials/index.html" title="Next Chapter: Tutorials"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Tutorials &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -365,10 +377,14 @@
 </div>-->
 
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cloud Operations Administrator Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cloud-dashboard.html">Cloud Platform dashboard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Portal Data Import within ESA CloudToolbox</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
@@ -386,17 +402,20 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="portal-data-import-within-the-esa-cloud-toolbox">
-<h1>Portal Data Import within the ESA Cloud Toolbox<a class="headerlink" href="#portal-data-import-within-the-esa-cloud-toolbox" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="portal-data-import-within-esa-cloudtoolbox">
+<h1>Portal Data Import within ESA CloudToolbox<a class="headerlink" href="#portal-data-import-within-esa-cloudtoolbox" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Access the ESA Cloud Toolbox (see <a class="reference internal" href="../community-guide/cloud/esa_toolbox.html"><em>ESA Toolbox Guide</em></a> section)</li>
-<li>Click on the <em>Portal Data Import</em> icon:</li>
+<li>Access the CloudToolbox to be configured with a datapackage</li>
+</ul>
+<p>(for access guidance, see <a class="reference internal" href="../community-guide/cloud/esa_toolbox.html"><em>ESA Toolbox Guide</em></a> section)</p>
+<ul class="simple">
+<li>From the CloudToolbox desktop, click on the <em>Portal Data Import</em> icon:</li>
 </ul>
 <div class="align-center figure align-center">
 <img alt="../_images/import_1.png" src="../_images/import_1.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>Type the following url when asked:</li>
+<li>Type a datapackage URL when prompted, use the following datapackage example URL to test the import:</li>
 </ul>
 <div class="highlight-url"><pre>https://geohazards-tep.eo.esa.int/t2api/data/package/Iran%20earthquake/description?key=b2a6c5ca-bfab-4f08-b3d8-6e2eb3b78e5c</pre>
 </div>
@@ -404,14 +423,15 @@
 <img alt="../_images/import_2.png" src="../_images/import_2.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>See the downloading process:</li>
+<li>Check the downloading process:</li>
 </ul>
 <div class="align-center figure align-center">
 <img alt="../_images/import_3.png" src="../_images/import_3.png" style="width: 750px;" />
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">You may need to configure specific credentials in order to be able to download data. Contact the Terradue&#8217;s Support at <a class="reference external" href="https://support.terradue.com">https://support.terradue.com</a></p>
+<p class="last">You need to have specific Portal credentials configured, in order to be able to download data from the Portal.
+Contact the Operations Support team at Terradue to proceed <a class="reference external" href="https://support.terradue.com">https://support.terradue.com</a></p>
 </div>
 </div>
 
