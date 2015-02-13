@@ -8,7 +8,7 @@ Contents:
    
    Interferogram generation with ADORE DORIS<adore>
    Interferogram generation with GMTSAR<gmtsar>
-   ROI_PAC on Hadoop Cloud Sandbox (upcoming!)<roi_pac>
+   ROI_PAC on Hadoop Cloud Sandbox<roi_pac>
    G-POD GAMMA DInSAR Service (upcoming!)<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service (upcoming!)<gpod-sbas-insar>
    G-POD NEST InSAR Service (upcoming!)<gpod-nest-insar>
