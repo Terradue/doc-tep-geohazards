@@ -1,7 +1,7 @@
 Portal Data Import within the ESA Cloud Toolbox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Access the ESA Cloud Toolbox (see :doc:`user <../community-guide/user>` section)
+* Access the ESA Cloud Toolbox (see :doc:`ESA Toolbox Guide <../community-guide/cloud/esa_toolbox>` section)
 
 * Click on the *Portal Data Import* icon:
 
