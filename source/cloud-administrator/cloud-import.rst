@@ -1,16 +1,17 @@
-Portal Data Import within the ESA Cloud Toolbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Portal Data Import within ESA CloudToolbox
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Access the ESA Cloud Toolbox (see :doc:`ESA Toolbox Guide <../community-guide/cloud/esa_toolbox>` section)
+* Access the CloudToolbox to be configured with a datapackage 
+(for access guidance, see :doc:`ESA Toolbox Guide <../community-guide/cloud/esa_toolbox>` section)
 
-* Click on the *Portal Data Import* icon:
+* From the CloudToolbo desktop, click on the *Portal Data Import* icon:
 
 .. figure:: assets/import_1.png
 	:figclass: align-center 
         :width: 750px
         :align: center
 
-* Type the following url when asked:
+* Type a datapackage URL when prompted, use the following datapackage example URL to test the import:
 
 .. code-block:: url
   
@@ -21,7 +22,7 @@ Portal Data Import within the ESA Cloud Toolbox
         :width: 750px
         :align: center
 
-* See the downloading process:
+* Check the downloading process:
 
 .. figure:: assets/import_3.png
 	:figclass: align-center
@@ -29,4 +30,5 @@ Portal Data Import within the ESA Cloud Toolbox
         :align: center
 
 .. WARNING::
- You may need to configure specific credentials in order to be able to download data. Contact the Terradue's Support at https://support.terradue.com 
+ You need to have specific Portal credentials configured, in order to be able to download data from the Portal. 
+ Contact the Operations Support team at Terradue to proceed https://support.terradue.com 
