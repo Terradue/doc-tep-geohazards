@@ -110,4 +110,5 @@ To access the Portal data, made locally available from a systems administrator, 
         :figclass: align-center
         :width: 750px
 
+.. |bulb| image:: ../../includes/bulb.png
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
