@@ -87,4 +87,27 @@ User Login
 
 - *(Only for the first connection)* And finally enter (twice) your new password:
 
+Access the Portal Data on the ESA Cloud Toolbox
+-----------------------------------------------
+
+To access the Portal data, made locally available from a systems administrator, just follow this procedure:
+
+- Click on the *Computer* icon, then on *Filesystem* icon:
+
+.. figure:: assets/esa_toolbox_data_1.png
+        :figclass: align-center
+        :width: 750px
+
+- Click on the *data* icon:
+
+.. figure:: assets/esa_toolbox_data_2.png
+        :figclass: align-center
+        :width: 750px
+
+- See the available data:
+
+.. figure:: assets/esa_toolbox_data_3.png
+        :figclass: align-center
+        :width: 750px
+
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
