@@ -116,5 +116,5 @@ just follow this procedure:
 .. |cloud_dahsboard_plus.png| image:: ../../includes/cloud_dahsboard_plus.png
 
 .. WARNING::
-To request the configuration of your CloudToolbox with a datapackage previously defined on the GEP Portal, 
-contact the support via email to tep-geohazards at esa.int , providing the Portal URL of the requested datapackage.
+  To request the configuration of your CloudToolbox with a datapackage previously defined on the GEP Portal, 
+  contact the support via email to tep-geohazards at esa.int , providing the Portal URL of the requested datapackage.
