@@ -32,3 +32,6 @@ To visualize results on the map:
 2. If a layer is detected, you can display it on the map from the **Results** part of the job description.
 3. Click on **Show results on map**.
 4. The layer is displayed on the map.
+
+.. WARNING::
+  You may need to be connected to the GEP Virtual Private Network (see :ref:`laboratory`), in order to download the results. 
