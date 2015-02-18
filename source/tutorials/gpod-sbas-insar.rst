@@ -54,12 +54,6 @@ Fill the parameters
   
   40.858049
 
-* As *Lat*, type:
-
-.. code-block:: sbas-parameter
-  
-  40.858049
-
 * As *Lon*, type:
 
 .. code-block:: sbas-parameter
