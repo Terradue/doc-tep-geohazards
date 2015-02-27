@@ -1,7 +1,7 @@
 ESA CloudToolbox
 =================
 
-The ESA CloudToolbox is a virtual machine that offers a flexible amount of CPUs, RAM and dedicated storage, tailored to user needs and type of machine required. When needed, users can request upgrades of the configuration (for example, asking more processing power) at any time, compatibly with the Cloud infrastructure constraints.
+The ESA CloudToolbox is a Virtual Machine (VM) that offers a flexible amount of CPUs, RAM and dedicated storage, tailored to user needs and type of machine required. When needed, users can request upgrades of the configuration (for example, asking more processing power) at any time, compatibly with the Cloud infrastructure constraints.
 A pre-built VM template offers ready-to-use machines for SAR Interferometric processing or generic EO data processing. However, besides free and licensed software tools (e.g. Sentinel-1 toolbox, NEST, GAMMA, Matlab, etc) that can be installed on the machines, users may request installation of additional tools.
 
 Create a CloudToolbox
