@@ -12,7 +12,7 @@
 	<artifactId>doc-tep-geohazards</artifactId>
 	<packaging>rpm</packaging>
 	<description>Geohazards Thematic Exploitation Platform guide</description>
-	<version>0.1.1-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	
 	<dependencies>
 		<dependency>
@@ -205,7 +205,7 @@
 			<plugin>
 				<groupId>de.jutzig</groupId>
 				<artifactId>github-release-plugin</artifactId>
-				<version>1.0.3</version>
+				<version>1.1.0</version>
 				<executions>
 					<execution>
 						<id>github-upload</id>
