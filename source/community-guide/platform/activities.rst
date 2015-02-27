@@ -10,7 +10,6 @@ The user will see activities amongst:
 - ... (other type of activities will be available soon)
 
 .. figure:: ../../includes/activities.png
-	:figclass: img-border
-	:width: 600px
+	:figclass: img-border img-max-width
 
 If the user is allowed to, he will be able to access the entity related to the activity by clicking on the name of this entity. A new page will be open on this entity.
