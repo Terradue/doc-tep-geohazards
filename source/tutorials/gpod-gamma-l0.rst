@@ -47,13 +47,11 @@ Task Caption
 Bounding Box
 ------------
 
-* Type
+* As *Bounding Box* (format: minLon, minLat, maxLon, maxLat), type:
   
 .. code-block:: adore-parameter
   
   12.7,41.7,13.3,42
-  
-in the *Bounding Box* field:
 
 
 Start Date
@@ -65,7 +63,7 @@ Start Date
   
   2008-11-23
   
-in the *Start Date* field:
+in the *Start Date* field.
 
 End Date
 --------
@@ -76,7 +74,7 @@ End Date
   
   2008-11-24
   
-in the *End Date* field:
+in the *End Date* field.
 
 Priority
 --------
