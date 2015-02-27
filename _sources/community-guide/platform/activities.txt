@@ -5,6 +5,7 @@ The portal gives the user a quick view of last activities performed by himself o
 This page is accessible from the home page, by clicking on **Activities**.
 
 The user will see activities amongst:
+
 - job creation
 - data package creation
 - ... (other type of activities will be available soon)
