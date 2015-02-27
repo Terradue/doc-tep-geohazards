@@ -24,7 +24,7 @@ Fill the parameters
 
   SBAS Tutorial Task
 
-* As *Bounding Box*, type:
+* As *Bounding Box* (format: minLon, minLat, maxLon, maxLat), type:
 
 .. code-block:: sbas-parameter
  
@@ -66,7 +66,7 @@ Fill the parameters
 
 .. code-block:: sbas-parameter
   
-  13  
+  33  
 
 * As *CM_UTM*, type:
 
