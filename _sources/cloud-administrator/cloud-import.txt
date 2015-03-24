@@ -30,5 +30,4 @@ Portal Data Import within ESA CloudToolbox
         :align: center
 
 .. WARNING::
- You need to have specific Portal credentials configured, in order to be able to download data from the Portal. 
- Contact the Operations Support team at Terradue to proceed https://support.terradue.com 
+"You need to have specific credentials in order to be able to download data from the Portal. Contact the Operations Support team at Terradue to proceed https://support.terradue.com"
