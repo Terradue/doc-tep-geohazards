@@ -2,7 +2,7 @@
 
 This is the official repository of Tep Geohazards platform's Documentation. This
 documentation is live at:
-[http://docs.terradue.com/geohazards](http://docs.terradue.com/geohazards).
+[http://terradue.github.io/doc-tep-geohazards](http://terradue.github.io/doc-tep-geohazards).
 
 You are encouraged to fork this repo and send us pull requests!
 
