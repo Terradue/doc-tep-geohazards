@@ -56,6 +56,9 @@ VNC Connection
 .. NOTE::
         You may have to allow your browser to open new pop-ups and allow unsafe script load.
 
+.. NOTE::
+        Firefox (> 3.5) and Chrome browsers are supported. Internet Explorer, Opera and others are not supported and may not work well. The option 2 is recommended in this case.
+
 *(Option 2 - using a VNC client)*
 
 - Download and install a VNC client (e.g., `UltraVNC <http://www.uvnc.com/downloads/ultravnc.html>`_ or `RealVNC <https://www.realvnc.com/>`_ or `TightVNC <http://www.tightvnc.com/>`_)
