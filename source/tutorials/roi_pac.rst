@@ -28,7 +28,10 @@ Master product reference
         :width: 750px
         :align: center
 
-* Click on Show Other Parameters, type in the **time:start** field the value **2010-05-02T17:50:16** and in the **time:end** field the value **2010-05-02T17:50:16**, then click on the button **Search**:
+* Click on Show Other Parameters, type the value **2010-05-02** and apply this date value in both:
+- time:start field
+- time:end field 
+then click on the button **Search**:
 
 .. figure:: assets/tuto_roi_pac_3.png
 	:figclass: align-center
@@ -45,7 +48,10 @@ Master product reference
 Slave product reference
 ------------------------
 
-* Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28T17:50:19** in both the **time:start** field and the **time:end** field then drag and drop the first result in the *ASAR Slave product catalogue entry* field:
+* Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28**. Apply this date value in both:
+- time:start field
+- time:end field 
+Pick one of the results having the same track, then drag and drop one of the results in the *ASAR Slave product catalogue entry* field:
 
 .. figure:: assets/tuto_roi_pac_5.png
 	:figclass: align-center
