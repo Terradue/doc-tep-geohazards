@@ -28,7 +28,10 @@ Slave product reference
         :width: 750px
         :align: center
 
-* Click on Show Other Parameters, type in the **time:start** field the value **2010-05-02T17:50:16** and in the **time:end** field the value **2010-05-02T17:50:16**, then click on the button **Search**:
+* Click on Show Other Parametersand apply the date value **2010-05-02** in both:
+- time:start field
+- time:end field 
+then click on the button **Search**:
 
 .. figure:: assets/tuto_gmtsar_3.png
 	:figclass: align-center
@@ -45,7 +48,7 @@ Slave product reference
 Master product reference
 ------------------------
 
-* Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28T17:50:04** in both the **time:start** field and the **time:end** field:
+* Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
 .. figure:: assets/tuto_gmtsar_5.png
 	:figclass: align-center

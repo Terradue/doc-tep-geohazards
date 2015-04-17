@@ -28,7 +28,7 @@ Master product reference
         :width: 750px
         :align: center
 
-* Click on Show Other Parameters, type the value **2010-05-02** and apply this date value in both:
+* Click on Show Other Parameters apply the date value **2010-05-02** in both:
 - time:start field
 - time:end field 
 then click on the button **Search**:
