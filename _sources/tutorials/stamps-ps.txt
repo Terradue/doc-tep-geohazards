@@ -162,7 +162,8 @@ To check for wrapped and unwrapped interferograms in order to identify unreliabl
 
 .. code-block:: matlab
 
-			ps_plot('w') & ps_plot('u')
+			ps_plot('w')
+			ps_plot('u')
 
 
 .. code-block:: matlab
