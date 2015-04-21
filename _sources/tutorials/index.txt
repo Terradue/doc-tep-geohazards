@@ -17,4 +17,4 @@ Contents:
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ASAR Service (upcoming!)<gpod-pf-asar>
    G-POD PF-ERS Service (upcoming!)<gpod-pf-ers>
-   Digital Elevation Model generation with STRM (upcoming!)<srtm>
+   Digital Elevation Model generation with STRM<srtm>
