@@ -74,7 +74,7 @@ Run the job
 
 * Click on the button *Show results on map*, then on the tgz result on the *Results Table* in the bottom left side
 
-* See the result on map: 
+* You can also download the .tgz file: 
 
 .. figure:: assets/tuto_srtm_8.png
 	:figclass: align-center
