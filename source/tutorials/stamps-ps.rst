@@ -149,20 +149,20 @@ Check for bad interferograms:
 
 For getting general information on the interferograms (i.e. baseline, estimated noise), which 	gives you a good indication of bad interferograms, do:
 
-		.. code-block:: matlab
+.. code-block:: matlab
 
-  			ps_info
+  ps_info
 
 To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:
 
-		.. code-block:: matlab
+.. code-block:: matlab
 
-  			ps_plot('w') & ps_plot('u')
+			ps_plot('w') & ps_plot('u')
 
 
-		.. code-block:: consmatlabole
+.. code-block:: matlab
 
-  			setparm('drop_ifg',[ “Number of IFG” ])
+			setparm('drop_ifg',[ “Number of IFG” ])
 
 Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (faster).
 
@@ -171,24 +171,26 @@ Lowering noise in your data:
 
 PS Weeding (Chapter 6.4 of StaMPS manual)
 
-			* play around with the parameters weed_standard_dev as well as weed_max_noise using the 	>>setparm command
-			* rerun from step 4 until the end:
+* play around with the parameters weed_standard_dev as well as weed_max_noise using the 	>>setparm command
+* re-run from step 4 until the end:
 
-		.. code-block:: matlab
+.. code-block:: matlab
 
-	   stamps(4,8)
+  stamps(4,8)
 
 PS Merge (Chapter 6.5 of StaMPS manual)
 
 This is another way of reducing noise is to resample your data
 
-			* use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to 	your needs
-			* rerun from step 5 until the end
+* use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to 	your needs
+* re-run from step 5 until the end
 
-.. note:: If you change merge_resaample_size, you also should consider changing the unwrap grid for step 6
+.. note:: If you change merge_resample_size, you also should consider changing the unwrap grid for step 6
 
 Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
 --------------------------------------------------------
 
-StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength & scn_time_win
-For the processing conducted on the cloud, standard parameters from StaMPS are used. It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
+StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
+For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.
+
+It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
