@@ -305,7 +305,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
@@ -359,7 +364,12 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a></li>
+<li><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
+<li><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
+<li><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
+<li><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -423,7 +433,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
@@ -490,10 +505,7 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><strong>stamps processing</strong>:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>changed parameters:</dt>
+<dt><strong>StaMPS processing</strong>:</dt>
 <dd><ul class="first last simple">
 <li>density_rand: 5</li>
 <li>weed_zero: &#8216;y&#8217;</li>
@@ -502,24 +514,15 @@
 </dd>
 </dl>
 </li>
-</ul>
-</dd>
-</dl>
+<li><p class="first"><strong>published output</strong>:</p>
 </li>
-<li><dl class="first docutils">
-<dt><strong>published output</strong>:</dt>
-<dd><blockquote class="first">
+</ul>
+<blockquote>
 <div><ul class="simple">
 <li>DEM</li>
-</ul>
-</div></blockquote>
-<ul class="last simple">
 <li>StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS</li>
 </ul>
-</dd>
-</dl>
-</li>
-</ul>
+</div></blockquote>
 <p>For plotting and exporting of IFGs, velocities &amp; time series see Chapter 9 of StaMPS manual</p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
@@ -534,6 +537,8 @@
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<p>We have prepared a public Data Package with a stack of Envisat ASAR Image Mode Level 0 (ASA_IM__0P) track 336 over Istanbul.
+The Data Package is called &#8220;Istanbul StaMPS tutorial&#8221;, select it from the Data Package list.</p>
 <div class="section" id="orbit-files">
 <h3>Orbit files<a class="headerlink" href="#orbit-files" title="Permalink to this headline">¶</a></h3>
 <p>Select the orbit file type to use with the SAR stack to process.</p>
@@ -611,59 +616,62 @@
 <p>If you have a working matlab environment, you can treat the downloaded folder as if you would have processed it locally.</p>
 <p>The most computer intensive processing steps of StaMPS are 2 &amp; 3. Those are for the preliminary selection of stable scatterers.
 If you are not happy with your results, it is however recommended to start with step 4 or higher i.e.</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span>&gt;stamps<span class="o">(</span>4,4<span class="o">)</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">stamps</span><span class="p">(</span>4<span class="p">,</span>4<span class="p">)</span>
 </pre></div>
 </div>
-<ul>
-<li><p class="first">Check for bad interferograms:</p>
+<div class="section" id="check-for-bad-interferograms">
+<h3>Check for bad interferograms:<a class="headerlink" href="#check-for-bad-interferograms" title="Permalink to this headline">¶</a></h3>
+<p>For getting general information on the interferograms (i.e. baseline, estimated noise), which   gives you a good indication of bad interferograms, do:</p>
 <blockquote>
-<div><p>For getting general information on the interferograms (i.e. baseline, estimated noise), which   gives you a good indication of bad interferograms, do:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span>&gt;ps_info
+<div><div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_info</span>
 </pre></div>
 </div>
-<p>To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span>&gt;ps_plot<span class="o">(</span><span class="s1">&#39;w&#39;</span><span class="o">)</span> &amp; ps_plot<span class="o">(</span><span class="s1">&#39;u&#39;</span><span class="o">)</span>
-</pre></div>
-</div>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span>&gt;setparm<span class="o">(</span><span class="s1">&#39;drop_ifg&#39;</span>,<span class="o">[</span> “Number of IFG” <span class="o">])</span>
-</pre></div>
-</div>
-<p>Then rerun stamps from step 3 (it may take a while though) or faster from step 4</p>
 </div></blockquote>
-</li>
-<li><p class="first">Lowering noise in your data:</p>
+<p>To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>PS Weeding (Chapter 6.4 of StaMPS manual)</dt>
-<dd><ul class="first simple">
+<div><div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;u&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-consmatlabole"><pre>setparm('drop_ifg',[ “Number of IFG” ])</pre>
+</div>
+</div></blockquote>
+<p>Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (faster).</p>
+</div>
+<div class="section" id="lowering-noise-in-your-data">
+<h3>Lowering noise in your data:<a class="headerlink" href="#lowering-noise-in-your-data" title="Permalink to this headline">¶</a></h3>
+<p>PS Weeding (Chapter 6.4 of StaMPS manual)</p>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><ul class="simple">
 <li>play around with the parameters weed_standard_dev as well as weed_max_noise using the         &gt;&gt;setparm command</li>
 <li>rerun from step 4 until the end:</li>
 </ul>
-<div class="last highlight-console"><div class="highlight"><pre><span class="gp">&gt;</span>&gt;stamps<span class="o">(</span>4,8<span class="o">)</span>
+</div></blockquote>
+<div class="highlight-matlab"><div class="highlight"><pre>
 </pre></div>
 </div>
-</dd>
-<dt>PS Merge (Chapter 6.5 of StaMPS manual)</dt>
-<dd><ul class="first last simple">
-<li>another way of reducing noise is to resample your data</li>
+</div></blockquote>
+<p>stamps(4,8)</p>
+</div></blockquote>
+<p>PS Merge (Chapter 6.5 of StaMPS manual)</p>
+<p>This is another way of reducing noise is to resample your data</p>
+<blockquote>
+<div><ul class="simple">
 <li>use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to    your needs</li>
 <li>rerun from step 5 until the end</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you change merge_resaample_size, you also should consider changing the unwrap grid for step 6</p>
 </div>
-</div></blockquote>
-</li>
-<li><p class="first">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</p>
-<blockquote>
-<div><p>StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength &amp; scn_time_win
+</div>
+<div class="section" id="spatio-temporal-filtering-chapter-6-8-of-stamps-manual">
+<h3>Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)<a class="headerlink" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual" title="Permalink to this headline">¶</a></h3>
+<p>StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength &amp; scn_time_win
 For the processing conducted on the cloud, standard parameters from StaMPS are used. It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.</p>
-</div></blockquote>
-</li>
-</ul>
+</div>
 </div>
 </div>
 

@@ -21,14 +21,13 @@ The processing follows in principle the manual of StaMPS:
 * **stack preparation (i.e. mt_prep script)**
 	* amplitude dispersion: 0.42
 	*	 mt_prep 0.42 5 4 50 200
-* **stamps processing**:
-	 * changed parameters:
-		* density_rand: 5
-		* weed_zero: 'y'
-		* StaMPS steps conducted : 1-8
+* **StaMPS processing**:
+	* density_rand: 5
+	* weed_zero: 'y'
+	* StaMPS steps conducted : 1-8
 * **published output**:
-		* DEM
-	 * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
+ * DEM
+ * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
 For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
 
@@ -49,6 +48,10 @@ The "StaMPS Permanent Scatterer" panel is displayed with parameters values to be
 
 Fill the parameters
 ===================
+
+We have prepared a public Data Package with a stack of Envisat ASAR Image Mode Level 0 (ASA_IM__0P) track 336 over Istanbul.
+The Data Package is called "Istanbul StaMPS tutorial", select it from the Data Package list.
+
 
 Orbit files
 -----------
@@ -137,49 +140,55 @@ If you have a working matlab environment, you can treat the downloaded folder as
 The most computer intensive processing steps of StaMPS are 2 & 3. Those are for the preliminary selection of stable scatterers.
 If you are not happy with your results, it is however recommended to start with step 4 or higher i.e.
 
-.. code-block:: console
+.. code-block:: matlab
 
-		>>stamps(4,4)
+		stamps(4,4)
 
-* Check for bad interferograms:
+Check for bad interferograms:
+-----------------------------
 
-		For getting general information on the interferograms (i.e. baseline, estimated noise), which 	gives you a good indication of bad interferograms, do:
+For getting general information on the interferograms (i.e. baseline, estimated noise), which 	gives you a good indication of bad interferograms, do:
 
-		.. code-block:: console
+		.. code-block:: matlab
 
-  			>>ps_info
+  			ps_info
 
-		To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:
+To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:
 
-		.. code-block:: console
+		.. code-block:: matlab
 
-  			>>ps_plot('w') & ps_plot('u')
+  			ps_plot('w') & ps_plot('u')
 
 
-		.. code-block:: console
+		.. code-block:: consmatlabole
 
-  			>>setparm('drop_ifg',[ “Number of IFG” ])
+  			setparm('drop_ifg',[ “Number of IFG” ])
 
-		Then rerun stamps from step 3 (it may take a while though) or faster from step 4
+Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (faster).
 
-* Lowering noise in your data:
+Lowering noise in your data:
+----------------------------
 
-		PS Weeding (Chapter 6.4 of StaMPS manual)
-			- play around with the parameters weed_standard_dev as well as weed_max_noise using the 	>>setparm command
-			- rerun from step 4 until the end:
+PS Weeding (Chapter 6.4 of StaMPS manual)
 
-			.. code-block:: console
+			* play around with the parameters weed_standard_dev as well as weed_max_noise using the 	>>setparm command
+			* rerun from step 4 until the end:
 
-	  			>>stamps(4,8)
+		.. code-block:: matlab
 
-		PS Merge (Chapter 6.5 of StaMPS manual)
-			- another way of reducing noise is to resample your data
-			- use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to 	your needs
-			- rerun from step 5 until the end
+	   stamps(4,8)
 
-		.. note:: If you change merge_resaample_size, you also should consider changing the unwrap grid for step 6
+PS Merge (Chapter 6.5 of StaMPS manual)
 
-* Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
+This is another way of reducing noise is to resample your data
 
-		StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength & scn_time_win
-		For the processing conducted on the cloud, standard parameters from StaMPS are used. It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
+			* use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to 	your needs
+			* rerun from step 5 until the end
+
+.. note:: If you change merge_resaample_size, you also should consider changing the unwrap grid for step 6
+
+Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
+--------------------------------------------------------
+
+StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength & scn_time_win
+For the processing conducted on the cloud, standard parameters from StaMPS are used. It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
