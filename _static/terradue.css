@@ -130,7 +130,7 @@ body {
 }
 
 #navbar .navbar-brand > img {
-	width: 150px;	
+	width: 150px;
 }
 
 .navbar-brand {
@@ -391,7 +391,7 @@ li.toctree-l4 > a {
 	background-image: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);
-	
+
 	background-color: #dff0d8;
 	border-color: #b2dba1;
 	color: #3c763d;
@@ -417,7 +417,8 @@ li.toctree-l4 > a {
 .highlight-xml:before,
 .highlight-bash:before,
 .highlight-python:before,
-.highlight-r:before
+.highlight-r:before,
+.highlight-matlab:before
 {
 	font-size: 10px;
 	border: 1px solid #ccc;
@@ -448,6 +449,9 @@ li.toctree-l4 > a {
 .highlight-r:before {
 	content: "R";
 }
+.highlight-matlab:before {
+	content: "matlab";
+}
 /* resolve sphinx-bootstrap css conflict */
 .container[class^="context-"], .container[class*=" context-"] {
 	width: auto;
@@ -474,7 +478,8 @@ li.toctree-l4 > a {
 .highlight-xml pre,
 .highlight-bash pre,
 .highlight-python pre,
-.highlight-r pre
+.highlight-r pre,
+.highlight-matlab pre
 {
 	border-top-left-radius: 0px;
 }
@@ -492,6 +497,12 @@ li.toctree-l4 > a {
 
 .highlight-console pre>span.go:before {
 	content: "$";
+	margin-right: 9px;
+	color: #eee;
+}
+
+.highlight-matlab pre>span.go:before {
+	content: ">>";
 	margin-right: 9px;
 	color: #eee;
 }

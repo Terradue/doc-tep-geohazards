@@ -622,55 +622,44 @@ If you are not happy with your results, it is however recommended to start with 
 <div class="section" id="check-for-bad-interferograms">
 <h3>Check for bad interferograms:<a class="headerlink" href="#check-for-bad-interferograms" title="Permalink to this headline">¶</a></h3>
 <p>For getting general information on the interferograms (i.e. baseline, estimated noise), which   gives you a good indication of bad interferograms, do:</p>
-<blockquote>
-<div><div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_info</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_info</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:</p>
-<blockquote>
-<div><div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;u&#39;</span><span class="p">)</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;u&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-consmatlabole"><pre>setparm('drop_ifg',[ “Number of IFG” ])</pre>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">setparm</span><span class="p">(</span><span class="s">&#39;drop_ifg&#39;</span><span class="p">,[</span> “<span class="n">Number</span> <span class="n">of</span> <span class="n">IFG</span>” <span class="p">])</span>
+</pre></div>
 </div>
-</div></blockquote>
 <p>Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (faster).</p>
 </div>
 <div class="section" id="lowering-noise-in-your-data">
 <h3>Lowering noise in your data:<a class="headerlink" href="#lowering-noise-in-your-data" title="Permalink to this headline">¶</a></h3>
 <p>PS Weeding (Chapter 6.4 of StaMPS manual)</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>play around with the parameters weed_standard_dev as well as weed_max_noise using the         &gt;&gt;setparm command</li>
-<li>rerun from step 4 until the end:</li>
+<li>re-run from step 4 until the end:</li>
 </ul>
-</div></blockquote>
-<div class="highlight-matlab"><div class="highlight"><pre>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">stamps</span><span class="p">(</span>4<span class="p">,</span>8<span class="p">)</span>
 </pre></div>
 </div>
-</div></blockquote>
-<p>stamps(4,8)</p>
-</div></blockquote>
 <p>PS Merge (Chapter 6.5 of StaMPS manual)</p>
 <p>This is another way of reducing noise is to resample your data</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to    your needs</li>
-<li>rerun from step 5 until the end</li>
+<li>re-run from step 5 until the end</li>
 </ul>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you change merge_resaample_size, you also should consider changing the unwrap grid for step 6</p>
+<p class="last">If you change merge_resample_size, you also should consider changing the unwrap grid for step 6</p>
 </div>
 </div>
 <div class="section" id="spatio-temporal-filtering-chapter-6-8-of-stamps-manual">
 <h3>Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)<a class="headerlink" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual" title="Permalink to this headline">¶</a></h3>
-<p>StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength &amp; scn_time_win
-For the processing conducted on the cloud, standard parameters from StaMPS are used. It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.</p>
+<p>StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
+For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.</p>
+<p>It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.</p>
 </div>
 </div>
 </div>
