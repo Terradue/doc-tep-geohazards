@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Digital Elevation Model generation with STRM &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <title>SRTM Digital Elevation Model on Hadoop Cloud Sandbox &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -321,7 +321,16 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Digital Elevation Model generation with STRM (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Digital Elevation Model generation with STRM (upcoming!)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#format-of-the-generated-dem">Format of the generated DEM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -337,7 +346,16 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Digital Elevation Model generation with STRM</a></li>
+<li><a class="reference internal" href="#">SRTM Digital Elevation Model on Hadoop Cloud Sandbox</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li><a class="reference internal" href="#format-of-the-generated-dem">Format of the generated DEM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -394,7 +412,16 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Digital Elevation Model generation with STRM (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Digital Elevation Model generation with STRM (upcoming!)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#format-of-the-generated-dem">Format of the generated DEM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -413,11 +440,79 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="digital-elevation-model-generation-with-strm">
-<h1>Digital Elevation Model generation with STRM<a class="headerlink" href="#digital-elevation-model-generation-with-strm" title="Permalink to this headline">¶</a></h1>
-<p>Upcoming!</p>
-<p>This How-To guide will present a step-by-step example to run the service from the Geohazards Portal interface.
-Meanwhile, you can address inquiries to geohazards-tep at esa.int</p>
+  <div class="section" id="srtm-digital-elevation-model-on-hadoop-cloud-sandbox">
+<h1>SRTM Digital Elevation Model on Hadoop Cloud Sandbox<a class="headerlink" href="#srtm-digital-elevation-model-on-hadoop-cloud-sandbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="select-the-processing">
+<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Select the processing service “SRTM Digital Elevation Model”:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_1.png" src="../_images/tuto_srtm_1.png" style="width: 750px;" />
+</div>
+<p>The &#8220;SRTM Digital Elevation Model&#8221; panel is displayed with parameters values to be filled-in.</p>
+</div>
+<div class="section" id="fill-the-parameters">
+<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="master-product-reference">
+<h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on the lens icon (2):</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_2.png" src="../_images/tuto_srtm_2.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Click on Show Other Parameters and apply the date value <strong>2010-05-02</strong> in both:</li>
+</ul>
+<ul class="simple">
+<li>time:start field</li>
+<li>time:end field</li>
+</ul>
+<p>then click on the button <strong>Search</strong>:</p>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_3.png" src="../_images/tuto_srtm_3.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Drag and Drop the first result in the <em>SAR product catalogue entry(ies) in RDF format</em> field:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_4.png" src="../_images/tuto_srtm_4.png" style="width: 750px;" />
+</div>
+</div>
+<div class="section" id="format-of-the-generated-dem">
+<h3>Format of the generated DEM<a class="headerlink" href="#format-of-the-generated-dem" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fill the <em>Format of the generated DEM (roi_pac or gamma)</em> filed with <strong>gamma</strong> or <strong>roi_pac</strong></li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_5.png" src="../_images/tuto_srtm_5.png" style="width: 750px;" />
+</div>
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on the button Run Job and see the Running Job</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_6.png" src="../_images/tuto_srtm_6.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>After few minutes, see the Successful Job:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_7.png" src="../_images/tuto_srtm_7.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Click on the button <em>Show results on map</em>, then on the tgz result on the <em>Results Table</em> in the bottom left side</li>
+<li>You can also download the .tgz file:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_srtm_8.png" src="../_images/tuto_srtm_8.png" style="width: 750px;" />
+</div>
+</div>
 </div>
 
 
