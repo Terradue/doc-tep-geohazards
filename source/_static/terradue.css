@@ -501,10 +501,10 @@ li.toctree-l4 > a {
 	color: #eee;
 }
 
-.highlight-matlab pre>span:before {
+.highlight-matlab pre:before {
 	content: ">>";
 	margin-right: 9px;
-	color: #eee;
+	color: #333;
 }
 
 /* custom captions */
