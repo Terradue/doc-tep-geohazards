@@ -11,26 +11,31 @@ This processing service uses the StaMPS version 3.3b1, patched:
 The processing follows in principle the manual of StaMPS:
 
 * **Focalization**: done by ROI-PAC
-* **Area selection**: full frame will be used
+
+* **Area selection**: full frame is used
+
 * **Automatic Master selection**: uses the script master_select from StaMPS to choose optimal master based on temporal 	and spatial baseline as well as Doppler shift
+
 * **IFG-generation**: done by DORIS (version 4.02) using the scripts provided by StaMPS package:
 	* step_coarse run with 500 windows in order to assure proper coarse correlation also in 	presence of water in the scenes
 	* step_coreg_simple used for fine-coregistration
 	* a final check on CPM_data files for every slave in order to exclude scenes with failed co-registration is included (i.e. CPM_data > 4 Kbyte)
 	* resampling, ifg generation and geocoding is done by standard StaMPS-Doris scripts.
+
 * **stack preparation (i.e. mt_prep script)**
 	* amplitude dispersion: 0.42
 	*	 mt_prep 0.42 5 4 50 200
+
 * **StaMPS processing**:
 	* density_rand: 5
 	* weed_zero: 'y'
 	* StaMPS steps conducted : 1-8
+
 * **published output**:
  * DEM
  * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
 For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
-
 
 Select the processing
 =====================
