@@ -501,7 +501,7 @@ li.toctree-l4 > a {
 	color: #eee;
 }
 
-.highlight-matlab pre:before {
+.highlight-matlab pre>span.n:before {
 	content: ">>";
 	margin-right: 9px;
 	color: #333;
