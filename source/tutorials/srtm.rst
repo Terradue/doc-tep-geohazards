@@ -18,7 +18,7 @@ The "SRTM Digital Elevation Model" panel is displayed with parameters values to 
 Fill the parameters
 ===================
 
-Master product reference
+SAR product catalogue entry
 -----------------------
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
