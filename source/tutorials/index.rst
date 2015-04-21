@@ -5,10 +5,11 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   
+
    Interferogram generation with ADORE DORIS<adore>
    Interferogram generation with GMTSAR<gmtsar>
    ROI_PAC on Hadoop Cloud Sandbox<roi_pac>
+   StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service (upcoming!)<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>
    G-POD NEST InSAR Service (upcoming!)<gpod-nest-insar>
