@@ -4,7 +4,7 @@ SRTM Digital Elevation Model on Hadoop Cloud Sandbox
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
+* Login to the platform (see :doc:`User Profile <../community-guide/user>` section)
 
 * Select the processing service “SRTM Digital Elevation Model”:
 
@@ -18,7 +18,7 @@ The "SRTM Digital Elevation Model" panel is displayed with parameters values to 
 Fill the parameters
 ===================
 
-Master product reference
+SAR product catalogue entry
 -----------------------
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
