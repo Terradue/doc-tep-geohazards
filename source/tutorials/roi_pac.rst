@@ -1,5 +1,5 @@
-ROI_PAC on Hadoop Cloud Sandbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interferogram generation with ROI_PAC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tutorial processes a pair of Envisat ASAR data with ROI_PAC (Repeat Orbit Interferometry PACkage) [#f1]_, a software package jointly created by the Jet Propulsion Laboratory division of NASA and CalTech for processing SAR data to create InSAR (Interferometric synthetic aperture radar) images, or 'interferograms'. This geodetic method uses two or more synthetic aperture radar (SAR) scenes to generate maps of surface deformation or digital elevation models, using differences in the phase of the waves returning to the radar sensor. The technique can potentially measure centimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.
 
@@ -8,6 +8,7 @@ The tutorial uses a coseismic pair of Envisat ASAR Image Mode Level 0 for the 20
 The 2010 Baja California earthquake (also known as 2010 Easter earthquake, 2010 Sierra El Mayor earthquake, or 2010 El Mayor – Cucapah earthquake) was an earthquake of 7.2 magnitude on the moment magnitude scale. It started 26 kilometers (16 mi) south of Guadalupe Victoria, Baja California, Mexico, at a depth of 10 km (6.2 mi).
 Learn more about the event in the `2010 Baja California earthquake Wikipedia <http://en.wikipedia.org/wiki/2010_Baja_California_earthquake>`_ entry.
 
+The processing service code is available in the GitHub repository `geohazards-tep/InSAR-ROI_PAC <https://github.com/geohazards-tep/InSAR-ROI_PAC>`_.
 
 Select the processing
 =====================
@@ -93,6 +94,6 @@ Run the job
         :align: center
 
 
-.. rubric:: Footnotes
+.. rubric:: References
 
 .. [#f1] `ROI_PAC Website <http://aws.roipac.org/cgi-bin/moin.cgi>`_
