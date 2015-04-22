@@ -35,7 +35,7 @@ The processing follows in principle the manual of StaMPS [#f2]_:
  * DEM
  * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
-For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual [#f2]_
+For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
 
 Select the processing
 =====================
@@ -175,7 +175,7 @@ Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (fast
 Lowering noise in your data:
 ----------------------------
 
-PS Weeding (Chapter 6.4 of StaMPS manual [#f2]_)
+PS Weeding (Chapter 6.4 of StaMPS manual)
 
 * play around with the parameters weed_standard_dev as well as weed_max_noise using
 
@@ -198,7 +198,7 @@ This is another way of reducing noise is to resample your data
 
 .. note:: If you change merge_resample_size, you also should consider changing the unwrap grid for step 6
 
-Spatio-temporal filtering (Chapter 6.8 of StaMPS manual [#f2]_)
+Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
 ---------------------------------------------------------------
 
 StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
