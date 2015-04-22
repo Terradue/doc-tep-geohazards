@@ -308,7 +308,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual )</a></li>
 </ul>
 </li>
 </ul>
@@ -367,7 +367,7 @@
 <li><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
 <li><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
 <li><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
-<li><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+<li><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual )</a></li>
 </ul>
 </li>
 </ul>
@@ -436,7 +436,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#reprocess-on-your-own">Reprocess on your own</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#check-for-bad-interferograms">Check for bad interferograms:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual )</a></li>
 </ul>
 </li>
 </ul>
@@ -471,21 +471,21 @@
   <div class="section" id="stamps-permanent-scatterer-processing">
 <h1>StaMPS Permanent Scatterer processing<a class="headerlink" href="#stamps-permanent-scatterer-processing" title="Permalink to this headline">¶</a></h1>
 <p>This processing service is in beta phase.</p>
-<p>This processing service uses the StaMPS version 3.3b1, patched:</p>
+<p>This processing service uses the StaMPS <a class="footnote-reference" href="#f1" id="id1">[1]</a> version 3.3b1, patched:</p>
 <ul class="simple">
 <li>Includes computation of Oscillator drift from ENVISAT ASAR imagery, which led to orbital ramps (Estimation of Spatially-Correlated-Look-Angle becomes therefore unnecessary during StaMPS processing step 7, i.e. scla_deramp parameter is set to &#8216;n&#8217;).</li>
 <li>StaMPS output folder is compatible with the TRAIN toolbox for atmospheric correction (<a class="reference external" href="http://davidbekaert.com/">http://davidbekaert.com/</a>)</li>
 </ul>
-<p>The processing follows in principle the manual of StaMPS:</p>
+<p>The processing follows in principle the manual of StaMPS <a class="footnote-reference" href="#f2" id="id2">[2]</a>:</p>
 <ul>
-<li><p class="first"><strong>Focalization</strong>: done by ROI-PAC</p>
+<li><p class="first"><strong>Focalization</strong>: done by ROI-PAC <a class="footnote-reference" href="#f3" id="id3">[3]</a></p>
 </li>
 <li><p class="first"><strong>Area selection</strong>: full frame is used</p>
 </li>
 <li><p class="first"><strong>Automatic Master selection</strong>: uses the script master_select from StaMPS to choose optimal master based on temporal  and spatial baseline as well as Doppler shift</p>
 </li>
 <li><dl class="first docutils">
-<dt><strong>IFG-generation</strong>: done by DORIS (version 4.02) using the scripts provided by StaMPS package:</dt>
+<dt><strong>IFG-generation</strong>: done by DORIS (version 4.02) <a class="footnote-reference" href="#f4" id="id4">[4]</a> using the scripts provided by StaMPS package:</dt>
 <dd><ul class="first last simple">
 <li>step_coarse run with 500 windows in order to assure proper coarse correlation also in         presence of water in the scenes</li>
 <li>step_coreg_simple used for fine-coregistration</li>
@@ -523,7 +523,7 @@
 <li>StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS</li>
 </ul>
 </div></blockquote>
-<p>For plotting and exporting of IFGs, velocities &amp; time series see Chapter 9 of StaMPS manual</p>
+<p>For plotting and exporting of IFGs, velocities &amp; time series see Chapter 9 of StaMPS manual <a class="footnote-reference" href="#f2" id="id5">[2]</a></p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -637,9 +637,14 @@ If you are not happy with your results, it is however recommended to start with 
 </div>
 <div class="section" id="lowering-noise-in-your-data">
 <h3>Lowering noise in your data:<a class="headerlink" href="#lowering-noise-in-your-data" title="Permalink to this headline">¶</a></h3>
-<p>PS Weeding (Chapter 6.4 of StaMPS manual)</p>
+<p>PS Weeding (Chapter 6.4 of StaMPS manual <a class="footnote-reference" href="#f2" id="id6">[2]</a>)</p>
 <ul class="simple">
-<li>play around with the parameters weed_standard_dev as well as weed_max_noise using the         &gt;&gt;setparm command</li>
+<li>play around with the parameters weed_standard_dev as well as weed_max_noise using</li>
+</ul>
+<div class="highlight-matlab"><div class="highlight"><pre><span class="n">setparm</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li>re-run from step 4 until the end:</li>
 </ul>
 <div class="highlight-matlab"><div class="highlight"><pre><span class="n">stamps</span><span class="p">(</span>4<span class="p">,</span>8<span class="p">)</span>
@@ -657,10 +662,35 @@ If you are not happy with your results, it is however recommended to start with 
 </div>
 </div>
 <div class="section" id="spatio-temporal-filtering-chapter-6-8-of-stamps-manual">
-<h3>Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)<a class="headerlink" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual" title="Permalink to this headline">¶</a></h3>
+<h3>Spatio-temporal filtering (Chapter 6.8 of StaMPS manual <a class="footnote-reference" href="#f2" id="id7">[2]</a>)<a class="headerlink" href="#spatio-temporal-filtering-chapter-6-8-of-stamps-manual" title="Permalink to this headline">¶</a></h3>
 <p>StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
 For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.</p>
 <p>It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://homepages.see.leeds.ac.uk/~earahoo/stamps/">StaMPS website</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id5">2</a>, <a class="fn-backref" href="#id6">3</a>, <a class="fn-backref" href="#id7">4</a>)</em> <a class="reference external" href="http://homepages.see.leeds.ac.uk/~earahoo/stamps/StaMPS_Manual_v3.3b1.pdf">StaMPS user manual</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><a class="reference external" href="http://aws.roipac.org/cgi-bin/moin.cgi">ROI_PAC Website</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="f4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="http://doris.tudelft.nl/">DORIS web site</a></td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

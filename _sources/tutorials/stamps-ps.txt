@@ -3,20 +3,20 @@ StaMPS Permanent Scatterer processing
 
 This processing service is in beta phase.
 
-This processing service uses the StaMPS version 3.3b1, patched:
+This processing service uses the StaMPS [#f1]_ version 3.3b1, patched:
 
 * Includes computation of Oscillator drift from ENVISAT ASAR imagery, which led to orbital ramps (Estimation of Spatially-Correlated-Look-Angle becomes therefore unnecessary during StaMPS processing step 7, i.e. scla_deramp parameter is set to 'n').
 * StaMPS output folder is compatible with the TRAIN toolbox for atmospheric correction (http://davidbekaert.com/)
 
-The processing follows in principle the manual of StaMPS:
+The processing follows in principle the manual of StaMPS [#f2]_:
 
-* **Focalization**: done by ROI-PAC
+* **Focalization**: done by ROI-PAC [#f3]_
 
 * **Area selection**: full frame is used
 
 * **Automatic Master selection**: uses the script master_select from StaMPS to choose optimal master based on temporal 	and spatial baseline as well as Doppler shift
 
-* **IFG-generation**: done by DORIS (version 4.02) using the scripts provided by StaMPS package:
+* **IFG-generation**: done by DORIS (version 4.02) [#f4]_ using the scripts provided by StaMPS package:
 	* step_coarse run with 500 windows in order to assure proper coarse correlation also in 	presence of water in the scenes
 	* step_coreg_simple used for fine-coregistration
 	* a final check on CPM_data files for every slave in order to exclude scenes with failed co-registration is included (i.e. CPM_data > 4 Kbyte)
@@ -24,7 +24,7 @@ The processing follows in principle the manual of StaMPS:
 
 * **stack preparation (i.e. mt_prep script)**
 	* amplitude dispersion: 0.42
-	*	 mt_prep 0.42 5 4 50 200
+	*	mt_prep 0.42 5 4 50 200
 
 * **StaMPS processing**:
 	* density_rand: 5
@@ -35,7 +35,7 @@ The processing follows in principle the manual of StaMPS:
  * DEM
  * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
-For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
+For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual [#f2]_
 
 Select the processing
 =====================
@@ -175,9 +175,14 @@ Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (fast
 Lowering noise in your data:
 ----------------------------
 
-PS Weeding (Chapter 6.4 of StaMPS manual)
+PS Weeding (Chapter 6.4 of StaMPS manual [#f2]_)
 
-* play around with the parameters weed_standard_dev as well as weed_max_noise using the 	>>setparm command
+* play around with the parameters weed_standard_dev as well as weed_max_noise using
+
+.. code-block:: matlab
+
+		setparm
+
 * re-run from step 4 until the end:
 
 .. code-block:: matlab
@@ -193,10 +198,18 @@ This is another way of reducing noise is to resample your data
 
 .. note:: If you change merge_resample_size, you also should consider changing the unwrap grid for step 6
 
-Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
---------------------------------------------------------
+Spatio-temporal filtering (Chapter 6.8 of StaMPS manual [#f2]_)
+---------------------------------------------------------------
 
 StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
 For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.
 
 It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
+
+
+.. rubric:: Footnotes
+
+.. [#f1] `StaMPS website <http://homepages.see.leeds.ac.uk/~earahoo/stamps/>`_
+.. [#f2] `StaMPS user manual <http://homepages.see.leeds.ac.uk/~earahoo/stamps/StaMPS_Manual_v3.3b1.pdf>`_
+.. [#f3] `ROI_PAC Website <http://aws.roipac.org/cgi-bin/moin.cgi>`_
+.. [#f4] `DORIS web site <http://doris.tudelft.nl/>`_
