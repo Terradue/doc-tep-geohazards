@@ -32,8 +32,8 @@ The processing follows in principle the manual of StaMPS [#f2]_:
 	* StaMPS steps conducted : 1-8
 
 * **published output**:
- * DEM
- * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
+  * DEM
+  * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
 For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
 
@@ -143,7 +143,7 @@ Reprocess on your own
 If you have a working matlab environment, you can treat the downloaded folder as if you would have processed it locally.
 
 The most computer intensive processing steps of StaMPS are 2 & 3. Those are for the preliminary selection of stable scatterers.
-If you are not happy with your results, it is however recommended to start with step 4 or higher i.e.
+If you are not happy with your results, it is however recommended to start with step 4 or higher i.e.:
 
 .. code-block:: matlab
 
@@ -177,7 +177,7 @@ Lowering noise in your data:
 
 PS Weeding (Chapter 6.4 of StaMPS manual)
 
-* play around with the parameters weed_standard_dev as well as weed_max_noise using
+* play around with the parameters weed_standard_dev as well as weed_max_noise using:
 
 .. code-block:: matlab
 
@@ -201,7 +201,7 @@ This is another way of reducing noise is to resample your data
 Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
 ---------------------------------------------------------------
 
-StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: _scn_wavelength_ and _scn_time_win_
+StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength and scn_time_win
 For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.
 
 It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.

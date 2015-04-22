@@ -8,7 +8,7 @@ Contents:
 
    Interferogram generation with ADORE DORIS<adore>
    Interferogram generation with GMTSAR<gmtsar>
-   ROI_PAC on Hadoop Cloud Sandbox<roi_pac>
+   Interferogram generation with ROI_PAC<roi_pac>
    StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service (upcoming!)<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>
@@ -18,4 +18,4 @@ Contents:
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ASAR Service (upcoming!)<gpod-pf-asar>
    G-POD PF-ERS Service (upcoming!)<gpod-pf-ers>
-   Digital Elevation Model generation with STRM (upcoming!)<srtm>
+   Digital Elevation Model generation with SRTM (upcoming!)<srtm>
