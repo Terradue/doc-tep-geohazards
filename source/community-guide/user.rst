@@ -28,7 +28,8 @@ Fill in your profile:
 1. Edit information such as first and last names, email, ... (username can not be modified though).
 2. Once you are done, just click on **Submit** to save your changes.
 
-|bulb| *Direct access to your EO-SSO account is provided by clicking on **EO-SSO account*.
+.. NOTE::
+		Direct access to your EO-SSO account is provided by clicking on **EO-SSO account.
 
 Change your password
 --------------------
@@ -40,6 +41,14 @@ To change your EO-SSO password:
 3. Write your old password, and your new password (twice).
 4. Click on **Submit**.
 5. Your password is updated.
+
+.. NOTE::
+		If your UMSSO password is different from the one recorded in your profile, a message will appear in your profile (see image below).
+		*Terradue Support Team* needs to perform manual operations as the email is associated to the certificate and the cloud account.
+
+.. figure:: ../includes/user_profile_email_change.png
+	:figclass: img-border
+	:scale: 80%
 
 Upload your certificate
 -----------------------
@@ -66,6 +75,17 @@ If you already have a valid certificate and you want to use it:
 1. Select a valid **PEM** certificate from your computer by clicking **Select file**.
 2. Once the correct file is chosen, click on **Upload file**.
 3. Your certificate is automatically added to your profile.
+
+Remove your certificate
+-----------------------
+
+If you need to change your certificate, you need first to remove it.
+As it is link to your cloud account, *Terradue Support Team* needs to perform manual operations to remove it correctly.
+
+1. Click on *Remove Certificate*
+2. A message appear on the certificate view, confirming the request is under process.
+3. Wait until you receive an email from *Terradue Support Team* telling you the certificate has been succesfully removed.
+4. You can now upload a new certificate (see `Upload your certificate`_).
 
 Access the Cloud Dashboard
 --------------------------
