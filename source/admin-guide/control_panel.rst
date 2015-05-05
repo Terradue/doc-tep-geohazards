@@ -8,12 +8,12 @@ Control Panel
 
 The control panel gives access to the administrator to the following pages:
 
-- :doc:`data collections management <data>`
-- :doc:`wps providers management <wps_provider>`
-- :doc:`wps services management <wps_service>`
-- :doc:`feature stories management <feature>`
-- :doc:`groups management <group>`
-- :doc:`user management <user>`
+- :doc:`Data Collections management <data>`
+- :doc:`Wps Providers management <wps_provider>`
+- :doc:`Wps Services management <wps_service>`
+- :doc:`Feature Stories management <feature>`
+- :doc:`Groups management <group>`
+- :doc:`Users management <user>`
 
 .. figure:: ../includes/control_panel.png
 	:figclass: img-border img-max-width
