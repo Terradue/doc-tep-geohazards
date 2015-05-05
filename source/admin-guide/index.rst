@@ -7,6 +7,10 @@ Contents:
    :maxdepth: 2
    
    Control Panel <control_panel>
-   Users <user>
-   Features <feature>
+   Data collection management (upcoming!!)<data>
+   Wps providers management (upcoming!!)<wps_provider>
+   Wps services management (upcoming!!)<wps_service>
+   Features management (upcoming!!)<feature>
+   Groups management (upcoming!!)<group>
+   Users management<user>
   
