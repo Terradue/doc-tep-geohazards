@@ -29,7 +29,7 @@ Fill in your profile:
 2. Once you are done, just click on **Submit** to save your changes.
 
 .. NOTE::
-		Direct access to your EO-SSO account is provided by clicking on **EO-SSO account.
+		Direct access to your EO-SSO account is provided by clicking on *EO-SSO account*.
 
 Change your password
 --------------------
