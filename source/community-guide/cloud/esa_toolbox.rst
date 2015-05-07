@@ -1,3 +1,5 @@
+.. _esatoolbox:
+
 ESA CloudToolbox
 =================
 
