@@ -42,15 +42,14 @@ Procedure
 
   chmod +x s1tbx_1.1.1_Linux64_installer.sh
   sh ./s1tbx_1.1.1_Linux64_installer.sh
- 
-- See the Setup Wizard window and click on the *Next* button:
 
 .. figure:: assets/s1toolbox_3.png
         :figclass: align-center
         :align: center
+        :width: 600px
         :alt: alternate text
 
-- Click on the *Next* button:
+- See the Setup Wizard window and click on the *Next* button:
 
 .. figure:: assets/s1toolbox_4.png
         :figclass: align-center
