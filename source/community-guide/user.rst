@@ -79,6 +79,10 @@ If you already have a valid certificate and you want to use it:
 Remove your certificate
 -----------------------
 
+.. figure:: ../includes/certificate_removal.png
+	:figclass: img-border img-max-width
+	:scale: 80%
+
 If you need to change your certificate, you need first to remove it.
 As it is link to your cloud account, *Terradue Support Team* needs to perform manual operations to remove it correctly.
 
