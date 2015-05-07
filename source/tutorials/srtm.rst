@@ -4,7 +4,7 @@ SRTM Digital Elevation Model on Hadoop Cloud Sandbox
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`User Profile <../community-guide/user>` section)
+* Login to the platform (see :doc:`User Profile <../community-guide/user>` section).
 
 * Select the processing service “SRTM Digital Elevation Model”:
 
