@@ -1,9 +1,9 @@
 SENTINEL-1 Toolbox Installation
 ===============================
 
-The SENTINEL-1 Toolbox (S1TBX) consists of a collection of processing tools, data product readers and writers and a display and analysis application to support the large archive of data from ESA SAR missions including SENTINEL-1, ERS-1 & 2 and ENVISAT, as well as third party SAR data from ALOS PALSAR, TerraSAR-X, COSMO-SkyMed and RADARSAT-2. The various processing tools could be run independently from the command-line and also integrated within the graphical user interface. The Toolbox includes tools for calibration, speckle filtering, coregistration, orthorectification, mosaicking, data conversion, polarimetry and interferometry.
+The SENTINEL-1 Toolbox (S1TBX) consists in a collection of processing tools and data product readers & writers, as well as a display & analysis application, providing a support environment for handling the large archive of data from ESA SAR missions, including SENTINEL-1, ERS-1 & 2 and ENVISAT, as well as third party SAR data from ALOS PALSAR, TerraSAR-X, COSMO-SkyMed and RADARSAT-2. The various processing tools can be ran independently from the command-line, and are also integrated within the graphical user interface. The Toolbox includes notably tools for calibration, speckle filtering, coregistration, orthorectification, mosaicking, data conversion, polarimetry and interferometry.
 
-Installation on a CloudToolbox
+Installation on a GEP CloudToolbox
 -------------------------------
 
 Prerequisites
@@ -14,8 +14,8 @@ Prerequisites
 Procedure
 ^^^^^^^^^
 
-- Access the CloudToolbox
-- Open the browser and visit the website https://sentinel.esa.int/web/sentinel/toolboxes/sentinel-1
+- Access the CloudToolbox environment
+- Open the web browser and visit the website https://sentinel.esa.int/web/sentinel/toolboxes/sentinel-1
 - Download the *Linux 64-bit* version
 
 .. figure:: assets/s1toolbox_1.png
@@ -24,7 +24,7 @@ Procedure
         :width: 600px
         :alt: alternate text
 
-- Open a Terminal and type:
+- Once the download is complete, open a Terminal and type:
 
 .. code-block:: bash
 
@@ -36,7 +36,7 @@ Procedure
         :width: 600px
         :alt: alternate text
 
-- Type:
+- To start the S1TBX installation wizard, type:
 
 .. code-block:: bash
 
@@ -49,49 +49,49 @@ Procedure
         :width: 600px
         :alt: alternate text
 
-- See the Setup Wizard window and click on the *Next* button:
+- From the Setup Wizard window, click on the button *Next* :
 
 .. figure:: assets/s1toolbox_4.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- Click on the *Next* button: 
+- Click on the button *Next* : 
 
 .. figure:: assets/s1toolbox_5.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- Click on the *Next* button:
+- Click on the button *Next* :
 
 .. figure:: assets/s1toolbox_6.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- Click on the *Next* button:
+- Click on the button *Next* :
 
 .. figure:: assets/s1toolbox_7.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- Click on the *Next* button:
+- Click on the button *Next* :
 
 .. figure:: assets/s1toolbox_8.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- Click on the *Finish* button:
+- Click on the button *Finish* :
 
 .. figure:: assets/s1toolbox_9.png
         :figclass: align-center
         :align: center
         :alt: alternate text
 
-- See the SENTINEL-1 TOOLBOX 1.1.1 GUI:
+- You have now access to the S1TBX tools and to the  SENTINEL-1 TOOLBOX 1.1.1 GUI:
 
 .. figure:: assets/s1toolbox_10.png
         :figclass: align-center
