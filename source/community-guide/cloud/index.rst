@@ -11,5 +11,5 @@ Contents:
    ESA Cloud Toolbox <esa_toolbox>
    Developer Cloud Sandbox <sandbox>
    Using Github <github>
-   Installing Sentinel-1 Toolbox <s1toolbox>
+   SENTINEL-1 Toolbox Installation <s1toolbox>
 
