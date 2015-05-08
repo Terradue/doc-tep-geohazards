@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>ROI_PAC on Hadoop Cloud Sandbox &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <title>Interferogram generation with ROI_PAC &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform v1.0 documentation" href="../index.html" />
     <link rel="up" title="Tutorials" href="index.html" />
-    <link rel="next" title="StaMPS Permanent Scatterer processing" href="stamps-ps.html" />
+    <link rel="next" title="G-POD GAMMA DInSAR Service" href="gpod-gamma-dinsar.html" />
     <link rel="prev" title="Interferogram generation with GMTSAR" href="gmtsar.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
@@ -141,6 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../community-guide/user.html#existing-certificate">Existing certificate</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#remove-your-certificate">Remove your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#link-your-github-account">Link your Github account</a></li>
 </ul>
@@ -257,6 +258,19 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/control_panel.html">Control Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/data.html">Data Collection management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Features Stories management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/user.html">Users management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/user.html#certificate-removal">Certificate removal</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cloud-administrator/cloud-dashboard.html">Cloud Platform dashboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cloud-administrator/cloud-import.html">Portal Data Import within ESA CloudToolbox</a></li>
@@ -296,23 +310,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#orbit-files">Orbit files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#master-product-reference">Master product reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#slave-product-reference">Slave product reference</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#run-the-job">Run the job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#reprocess-on-your-own">Reprocess on your own</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#check-for-bad-interferograms">Check for bad interferograms:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual )</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#select-the-processing">Select the processing</a></li>
@@ -339,7 +336,16 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="srtm.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="srtm.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="srtm.html#sar-product-catalogue-entry">SAR product catalogue entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="srtm.html#format-of-the-generated-dem">Format of the generated DEM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="srtm.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -355,7 +361,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">ROI_PAC on Hadoop Cloud Sandbox</a><ul>
+<li><a class="reference internal" href="#">Interferogram generation with ROI_PAC</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
@@ -378,7 +384,7 @@
     </a>
   </li>
   <li>
-    <a href="stamps-ps.html" title="Next Chapter: StaMPS Permanent Scatterer processing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">StaMPS Permanent... &raquo;</span>
+    <a href="gpod-gamma-dinsar.html" title="Next Chapter: G-POD GAMMA DInSAR Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">G-POD GAMMA DInS... &raquo;</span>
     </a>
   </li>
               
@@ -412,6 +418,7 @@
         <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
@@ -426,7 +433,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service (upcoming!)</a></li>
@@ -435,7 +441,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM</a></li>
 </ul>
 </li>
 </ul>
@@ -454,8 +460,13 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="roi-pac-on-hadoop-cloud-sandbox">
-<h1>ROI_PAC on Hadoop Cloud Sandbox<a class="headerlink" href="#roi-pac-on-hadoop-cloud-sandbox" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="interferogram-generation-with-roi-pac">
+<h1>Interferogram generation with ROI_PAC<a class="headerlink" href="#interferogram-generation-with-roi-pac" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial processes a pair of Envisat ASAR data with ROI_PAC (Repeat Orbit Interferometry PACkage) <a class="footnote-reference" href="#f1" id="id1">[1]</a>, a software package jointly created by the Jet Propulsion Laboratory division of NASA and CalTech for processing SAR data to create InSAR (Interferometric synthetic aperture radar) images, or &#8216;interferograms&#8217;. This geodetic method uses two or more synthetic aperture radar (SAR) scenes to generate maps of surface deformation or digital elevation models, using differences in the phase of the waves returning to the radar sensor. The technique can potentially measure centimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
+<p>The tutorial uses a coseismic pair of Envisat ASAR Image Mode Level 0 for the 2010 Baja California earthquake.</p>
+<p>The 2010 Baja California earthquake (also known as 2010 Easter earthquake, 2010 Sierra El Mayor earthquake, or 2010 El Mayor – Cucapah earthquake) was an earthquake of 7.2 magnitude on the moment magnitude scale. It started 26 kilometers (16 mi) south of Guadalupe Victoria, Baja California, Mexico, at a depth of 10 km (6.2 mi).
+Learn more about the event in the <a class="reference external" href="http://en.wikipedia.org/wiki/2010_Baja_California_earthquake">2010 Baja California earthquake Wikipedia</a> entry.</p>
+<p>The processing service code is available in the GitHub repository <a class="reference external" href="https://github.com/geohazards-tep/InSAR-ROI_PAC">geohazards-tep/InSAR-ROI_PAC</a>.</p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -531,6 +542,13 @@
 <div class="align-center figure align-center">
 <img alt="../_images/tuto_roi_pac_8.png" src="../_images/tuto_roi_pac_8.png" style="width: 750px;" />
 </div>
+<p class="rubric">References</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://aws.roipac.org/cgi-bin/moin.cgi">ROI_PAC Website</a></td></tr>
+</tbody>
+</table>
 </div>
 </div>
 

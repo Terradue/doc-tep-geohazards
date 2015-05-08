@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Wps providers management &mdash; Geohazards Thematic Exploitation Platform v1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Geohazards Thematic Exploitation Platform v1.0 documentation" href="../index.html" />
+    <link rel="up" title="Geohazards thematic exploitation platform administrator guide" href="index.html" />
+    <link rel="next" title="Wps services management" href="wps_service.html" />
+    <link rel="prev" title="Data collections management" href="data.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body>
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>1.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/purpose.html">Purpose of the Geohazards Thematic Exploitation Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/community-portal.html">A Community Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/data-processing.html">A data processing facility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/data-casting.html">A data casting facility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/data-casting.html#context">Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/data-casting.html#i-am-a-data-provider-how-can-i-proceed-to-get-registered-on-gep">I am a data provider, how can I proceed to get registered on GEP ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/platform/index.html">Platform overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/platform/menu-bar.html">Menu bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/menu-bar.html#home">Home</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/menu-bar.html#observations-measurements">Observations &amp; Measurements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/menu-bar.html#information-processing">Information Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/menu-bar.html#community">Community</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/menu-bar.html#eo-sector-collaboration">EO sector Collaboration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/platform/information-areas.html">Information areas (Blog, News, ...)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/platform/geobrowser.html">GeoBrowser area for data and Cloud processing services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/geobrowser.html#geobrowser">GeoBrowser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/platform/geobrowser.html#map">Map</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/platform/geobrowser.html#data-results-layer">Data Results layer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/platform/geobrowser.html#disaster-charter-layer">Disaster charter layer</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/platform/geobrowser.html#density-map-layer">Density map layer</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/platform/geobrowser.html#contexts">Contexts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/platform/geobrowser.html#results">Results</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/platform/geobrowser.html#cloud-processing">Cloud Processing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/platform/geobrowser.html#processing-services-tab">Processing services tab</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/platform/geobrowser.html#jobs-tab">Jobs tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/platform/activities.html">Activities area</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/user.html">User Profile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#sign-in">Sign in</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#edit-your-profile">Edit your profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#change-your-password">Change your password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#upload-your-certificate">Upload your certificate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/user.html#no-certificate">No certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/user.html#existing-certificate">Existing certificate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#remove-your-certificate">Remove your certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#link-your-github-account">Link your Github account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/data.html">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#discover-data">Discover data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#discover-contextualized-data">Discover contextualized data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#select-data-in-your-basket">Select data in your basket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#save-basket-as-data-package">Save basket as data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#load-an-existing-data-package">Load an existing data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#clear-the-basket">Clear the basket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/data.html#use-data-in-a-process">Use data in a process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/processing.html">Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#discover-existing-wps">Discover existing WPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#create-a-new-job">Create a new job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#access-created-jobs">Access created jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/visualisation.html">Visualisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/visualisation.html#access-job-result">Access job result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/visualisation.html#visualize-result-on-the-map">Visualize result on the map</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/reproducibility.html">Reproducibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/reproducibility.html#discover-existing-jobs">Discover existing jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/reproducibility.html#reprocess-existing-job">Reprocess existing job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/reproducibility.html#reprocess-shared-job">Reprocess shared job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-job">Share a job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-processing-service">Share a Processing Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-data-package">Share a Data Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-data-search">Share a Data Search</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../community-guide/cloud/index.html">Cloud Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/cloud/dashboard.html">Cloud Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/cloud/laboratory.html">Join the GEP Laboratory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#import-terradue-s-ca-certificate-in-a-browser">Import Terradue&#8217;s CA certificate in a Browser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#download-your-ssl-certificate-in-pfx-format">Download your SSL Certificate in PFX format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#import-your-pfx-certificate-in-a-browser">Import your PFX Certificate in a Browser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#google-chrome">Google Chrome</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#mozilla-firefox">Mozilla Firefox</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#internet-explorer">Internet Explorer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#safari">Safari</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#install-your-openvpn-client">Install your OpenVPN Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#run-your-vpn-connection">Run your VPN Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#known-caveats">Known caveats</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#dns-issues">DNS issues</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/laboratory.html#going-further">Going further</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#how-to-use-the-openvpn-command-line-interface">How to use the OpenVPN Command Line Interface</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#how-to-manually-setup-openvpn-on-other-platforms">How to manually setup OpenVPN on other Platforms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/laboratory.html#how-to-build-and-install-openvpn">How to build and install OpenVPN</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html">ESA Cloud Toolbox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#create-a-cloudtoolbox">Create a CloudToolbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#access-the-cloudtoolbox">Access the CloudToolbox</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#procedure">Procedure</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#vnc-connection">VNC Connection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#user-login">User Login</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/esa_toolbox.html#access-the-datapackages-retrieved-from-the-gep-portal">Access the datapackages retrieved from the GEP Portal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/cloud/sandbox.html">Developer Cloud Sandbox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/sandbox.html#create-a-developer-cloud-sandbox">Create a Developer Cloud Sandbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/sandbox.html#access-a-developer-cloud-sandbox">Access a Developer Cloud Sandbox</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/sandbox.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/sandbox.html#download-the-certificate-in-pem-format">Download the Certificate in PEM format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/sandbox.html#connecting-from-unix-linux-mac">Connecting from Unix / Linux / Mac</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/sandbox.html#connecting-from-windows">Connecting from Windows</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/cloud/sandbox.html#download-and-install-putty">Download and install PuTTY</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/cloud/sandbox.html#generate-a-private-key-from-the-pem-certificate">Generate a Private Key from the PEM Certificate</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../community-guide/cloud/sandbox.html#connect-with-putty">Connect with PuTTY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/cloud/github.html">Using Github</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/github.html#gep-laboratory-and-the-github-organization">GEP Laboratory and the GitHub organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/github.html#organizing-the-github-teams">Organizing the GitHub teams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/github.html#organizing-the-repository">Organizing the repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/github.html#the-typical-application-development-workflow">The typical application development workflow</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#cloning-an-existing-repository">Cloning an existing repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#creating-a-new-repository-on-github-com">Creating a new repository on github.com</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#building-the-application">Building the application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#updating-files">Updating files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#releasing-the-application">Releasing the application</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../community-guide/cloud/github.html#documenting-the-application">Documenting the application</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../community-guide/cloud/github.html#going-further">Going further</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal Administrator Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="control_panel.html">Control Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Collection management (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Wps Providers management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wps_service.html">Wps Services management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature.html">Features Stories management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">Users management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user.html#certificate-removal">Certificate removal</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cloud-administrator/cloud-dashboard.html">Cloud Platform dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud-administrator/cloud-import.html">Portal Data Import within ESA CloudToolbox</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/adore.html">Interferogram generation with ADORE DORIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/adore.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/adore.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/adore.html#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/adore.html#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/adore.html#point-of-interest">Point of Interest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/adore.html#extent">Extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/adore.html#settings-for-adore-doris-separated-by-comma">Settings for ADORE Doris separated by comma</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/adore.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gmtsar.html">Interferogram generation with GMTSAR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gmtsar.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gmtsar.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gmtsar.html#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gmtsar.html#master-product-reference">Master product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gmtsar.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/roi_pac.html">ROI_PAC on Hadoop Cloud Sandbox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/roi_pac.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/roi_pac.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/roi_pac.html#master-product-reference">Master product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/roi_pac.html#slave-product-reference">Slave product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/roi_pac.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-sbas-insar.html">G-POD SBAS InSAR Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-sbas-insar.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-sbas-insar.html#fill-the-parameters">Fill the parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-sbas-insar.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest-insar.html">G-POD NEST InSAR Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest-coreg.html">G-POD NEST Coreg Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#computing-element">Computing Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#task-caption">Task Caption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#bounding-box">Bounding Box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#start-date">Start Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#end-date">End Date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#priority">Priority</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-pf-asar.html">G-POD PF-ASAR Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/srtm.html">Digital Elevation Model generation with STRM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/srtm.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/srtm.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/srtm.html#sar-product-catalogue-entry">SAR product catalogue entry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/srtm.html#format-of-the-generated-dem">Format of the generated DEM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/srtm.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Wps providers management</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="data.html" title="Previous Chapter: Data collections management"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Data collections...</span>
+    </a>
+  </li>
+  <li>
+    <a href="wps_service.html" title="Next Chapter: Wps services management"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Wps services man... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/admin-guide/wps_provider.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal Administrator Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="control_panel.html">Control Panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Collection management (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Wps Providers management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wps_service.html">Wps Services management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature.html">Features Stories management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">Users management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/admin-guide/wps_provider.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="wps-providers-management">
+<h1>Wps providers management<a class="headerlink" href="#wps-providers-management" title="Permalink to this headline">¶</a></h1>
+<p>Upcoming !!!</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>
