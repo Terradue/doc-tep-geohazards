@@ -1,12 +1,18 @@
-Getting Started Guide
-=====================
+Geohazards thematic exploitation platform guide
+===============================================
 
 Contents:
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 2
+   
+   Platform overview <platform/index>
+   User Profile <user>
+   Data <data>
+   Processing <processing>
+   Visualisation <visualisation>
+   Reproducibility <reproducibility>
+   Sharing <sharing>
+   Cloud Resources <cloud/index>
 
-    Menu bar<menu-bar>
-    Information areas (Blog, News, ...)<information-areas>
-    GeoBrowser area for data and Cloud processing services<geobrowser>
-    Results sharing area<results-sharing>
+

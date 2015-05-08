@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Geohazards Thematic Exploitation Platform Architecture'
+project = u'Geohazards Thematic Exploitation Platform'
 copyright = u'2014, Terradue'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -90,7 +90,7 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 # Github path
-github_repo = "https://github.com/Terradue/doc-tep-geohazards-arch"
+github_repo = "https://github.com/Terradue/doc-tep-geohazards"
 github_branch = "master"
 
 # -- Options for HTML output ---------------------------------------------------
@@ -166,7 +166,7 @@ html_sidebars = {'**': ['alltoc.html', 'sourcelink.html', 'searchbox.html']}
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'TepQwArchdoc'
+htmlhelp_basename = 'TepQwdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -180,7 +180,7 @@ htmlhelp_basename = 'TepQwArchdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'TepQwArch.tex', u'Tep QuickWin Architecture Documentation',
+  ('index', 'TepQw.tex', u'Tep QuickWin Documentation',
    u'Terradue', 'manual'),
 ]
 
