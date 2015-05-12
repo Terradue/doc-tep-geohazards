@@ -6,7 +6,7 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser :  https://geohazards-tep.eo.esa.int/geobrowser/#
+* Access the Geobrowser :  https://geohazards-tep.eo.esa.int/geobrowser/
 
 * Select the processing service “GAMMA Level-0”:
 
