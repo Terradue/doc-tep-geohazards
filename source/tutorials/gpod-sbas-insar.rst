@@ -6,73 +6,74 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “InSAR SBAS WPS”:
+* Select the processing service “InSAR SBAS”.
 
-.. figure:: assets/tuto_sbas_1.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-The "InSAR SBAS WPS" panel is displayed with parameters values to be filled-in.
+The "InSAR SBAS" panel is displayed with parameters values to be filled-in.
 
 Fill the parameters
 ===================
 
+* Select the Hawaii islands as Area of Interest (AOI) and select properly the time filters in order to get the following products:
+
+.. code-block:: sbas-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+  ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200
+
+.. figure:: assets/tuto_sbas_1.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* Drag and Drop the above products in the field *Files*:
+
+.. figure:: assets/tuto_sbas_2.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* As *Job title*, type:
+
+.. code-block:: sbas-parameter
+
+  SBAS Hawaii
+
 * As *Task Caption*, type:
 
 .. code-block:: sbas-parameter
-
-  SBAS Tutorial Task
-
-* As *Bounding Box* (format: minLon, minLat, maxLon, maxLat), type:
-
-.. code-block:: sbas-parameter
  
-  14.36,40.78,14.5,40.88
-
-* As *Start Date*, type:
-
-.. code-block:: sbas-parameter
-  
-  2008-01-01T00:00:00
-
-* As *End Date*, type:
-
-.. code-block:: sbas-parameter
-  
-  2008-06-30T23:59:59
-
-* As *Track Number*, type:
-
-.. code-block:: sbas-parameter
-  
-  129
+  SBAS Hawaii
 
 * As *Lat*, type:
 
 .. code-block:: sbas-parameter
   
-  40.858049
+  19.4455
 
 * As *Lon*, type:
 
 .. code-block:: sbas-parameter
   
-  14.310228
+  -155.61
 
-* As *Processing Mode*, select *IFG*:
-
-* As *Zone UTM*, type:
+* As *Processing Mode*, select:
 
 .. code-block:: sbas-parameter
   
-  33  
+  IFG
+
+* As *Zone_UTM*, type:
+
+.. code-block:: sbas-parameter
+  
+  5
 
 * As *CM_UTM*, type:
 
 .. code-block:: sbas-parameter
   
-  15
+  -153
+
 
 * As *Y0*, type:
 
@@ -84,8 +85,8 @@ Fill the parameters
 
   You can left all the other field as blank.
 
-.. figure:: assets/tuto_sbas_2.png
-        :figclass: align-center
+.. figure:: assets/tuto_sbas_3.jpg
+	:figclass: align-center
         :width: 750px
         :align: center
 
@@ -94,14 +95,21 @@ Run the job
 
 * Click on the button Run Job and see the Running Job:
 
-.. figure:: assets/tuto_sbas_3.png
+.. figure:: assets/tuto_sbas_4.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * After about 2 hours, see the Successful Job:
 
-.. figure:: assets/tuto_sbas_4.png
+.. figure:: assets/tuto_sbas_5.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* Download the processing results once the Job is completed:
+
+.. figure:: assets/tuto_sbas_6.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
