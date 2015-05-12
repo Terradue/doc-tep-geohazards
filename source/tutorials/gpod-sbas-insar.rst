@@ -25,12 +25,12 @@ Fill the parameters
         :width: 750px
         :align: center
 
-* Drag and Drop the above products in the field *Files*:
-
 .. figure:: assets/tuto_sbas_2.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
+
+* Drag and Drop the above products in the field *Files*.
 
 * As *Job title*, type:
 
