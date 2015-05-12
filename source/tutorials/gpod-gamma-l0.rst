@@ -33,8 +33,8 @@ Task Caption and Job Title
 --------------------------
 
 * Fill the Job Title and Task Caption parameters setting a caption value, for example:
-Job title :  GAMMA-L0
-Task Caption :  GAMMA-L0 
+	Job title :  GAMMA-L0
+	Task Caption :  GAMMA-L0 
 
 
 Run the job
