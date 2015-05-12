@@ -14,7 +14,10 @@ Fill the parameters
 ===================
 
 * Start your data search, select central Italy as your Area of Interest and select the input product : 
-ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
+
+.. code-block:: gamma-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
 
 .. figure:: assets/tuto_gamma_1.jpg
 	:figclass: align-center
@@ -32,12 +35,12 @@ ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
 Task Caption and Job Title
 --------------------------
 
-* Fill the Job Title and Task Caption parameters setting a caption value, for example:
+* Fill the *Job Title* and *Task Caption* parameters setting a caption value, for example:
+
 .. code-block:: gamma-parameter
 
-	Job title :  GAMMA-L0
-	Task Caption :  GAMMA-L0 
-
+  Job title: GAMMA-L0
+  Task Caption: GAMMA-L0 
 
 Run the job
 ===========
