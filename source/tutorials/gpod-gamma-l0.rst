@@ -16,14 +16,14 @@ Fill the parameters
 * Start your data search, select central Italy as your Area of Interest and select the input product : 
 ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
 
-.. figure:: assets/tuto_gamma_1.png
+.. figure:: assets/tuto_gamma_1.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the input product on the Files box:
 
-.. figure:: assets/tuto_gamma_2.png
+.. figure:: assets/tuto_gamma_2.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -42,14 +42,14 @@ Run the job
 
 * Click on the button Run Job:
 
-.. figure:: assets/tuto_gamma_3.png
+.. figure:: assets/tuto_gamma_3.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Wait for the job completion and download the results:
 
-.. figure:: assets/tuto_gamma_4.png
+.. figure:: assets/tuto_gamma_4.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
