@@ -33,6 +33,8 @@ Task Caption and Job Title
 --------------------------
 
 * Fill the Job Title and Task Caption parameters setting a caption value, for example:
+.. code-block:: gamma-parameter
+
 	Job title :  GAMMA-L0
 	Task Caption :  GAMMA-L0 
 
