@@ -8,6 +8,8 @@ Select the processing
 
 * Access the Geobrowser :  https://geohazards-tep.eo.esa.int/geobrowser/#
 
+* Select the processing service “GAMMA Level-0”:
+
 Fill the parameters
 ===================
 
