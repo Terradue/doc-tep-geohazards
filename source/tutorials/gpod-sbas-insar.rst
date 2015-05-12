@@ -6,6 +6,8 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
+* Access the Geobrowser : https://geohazards-tep.eo.esa.int/geobrowser/
+
 * Select the processing service “InSAR SBAS”.
 
 The "InSAR SBAS" panel is displayed with parameters values to be filled-in.
