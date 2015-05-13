@@ -4,16 +4,20 @@ G-POD GAMMA Level0 Service
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser :  https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-* Select the processing service “GAMMA Level-0”:
+* Open the tab "Processing services" from the right of the map, and then select the processing service “GAMMA Level-0”:
 
-Fill the parameters
-===================
 
-* Start your data search, select central Italy as your Area of Interest and select the input product : 
+Select the files to process
+===========================
+
+* Navigate on the map to the central Italy and define both the geo and time filters for data search.
+* Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the central Italy.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, both around 2009-02-01. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+* From this filtered search, make drag and drops from the "Results Table" to your "Features Basket", in order to select the following input file:
 
 .. code-block:: gamma-parameter
 
@@ -23,6 +27,9 @@ Fill the parameters
 	:figclass: align-center
         :width: 750px
         :align: center
+
+Fill the parameter values
+=========================
 
 * Drag and drop the input product on the Files box:
 
@@ -35,24 +42,33 @@ Fill the parameters
 Task Caption and Job Title
 --------------------------
 
-* Fill the *Job Title* and *Task Caption* parameters setting a caption value, for example:
+* As *Job title*, type:
 
 .. code-block:: gamma-parameter
 
-  Job title: GAMMA-L0
-  Task Caption: GAMMA-L0 
+  GAMMA-L0
+
+* As input *Files*, drag and drop the selected product.
+
+* As *Task Caption*, type:
+
+.. code-block:: gamma-parameter
+
+  GAMMA-L0 
 
 Run the job
 ===========
 
-* Click on the button Run Job:
+* Click on the button "Run Job" at the bottom of the GAMMA Level-0 processor tab, and monitor the progress of the running Job:
 
 .. figure:: assets/tuto_gamma_3.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Wait for the job completion and download the results:
+* Wait for the Job completion, then check the status is set as "Successful Job”.
+
+* Download the GAMMA Level-0 processing results once the Job is completed:
 
 .. figure:: assets/tuto_gamma_4.jpg
 	:figclass: align-center
