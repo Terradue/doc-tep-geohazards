@@ -31,13 +31,6 @@ Select the files to process
 Fill the parameter values
 =========================
 
-* Drag and drop the input product on the Files box:
-
-.. figure:: assets/tuto_gamma_2.jpg
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
 
 Task Caption and Job Title
 --------------------------
@@ -48,7 +41,16 @@ Task Caption and Job Title
 
   GAMMA-L0
 
-* As input *Files*, drag and drop the selected product.
+* As input *Files*, drag and drop the selected product:
+
+.. code-block:: gamma-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
+
+.. figure:: assets/tuto_gamma_2.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
 
 * As *Task Caption*, type:
 
