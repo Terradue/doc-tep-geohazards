@@ -321,7 +321,8 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">G-POD SBAS InSAR Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
@@ -330,13 +331,9 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#computing-element">Computing Element</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#task-caption">Task Caption</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#bounding-box">Bounding Box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#start-date">Start Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#end-date">End Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#priority">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#fill-the-parameter-values">Fill the parameter values</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gpod-gamma-l0.html#task-caption-and-job-title">Task Caption and Job Title</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#run-the-job">Run the job</a></li>
@@ -371,7 +368,8 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">G-POD SBAS InSAR Service</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
@@ -431,7 +429,8 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">G-POD SBAS InSAR Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
@@ -465,61 +464,78 @@
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
-<li>Select the processing service “InSAR SBAS WPS”:</li>
+<li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a> (see guidance <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Access the Geobrowser: <a class="reference external" href="https://geohazards-tep.eo.esa.int/geobrowser/">https://geohazards-tep.eo.esa.int/geobrowser/</a></li>
+<li>Open the tab &#8220;Processing services&#8221; from the right of the map, and then select the processing service “InSAR SBAS”.</li>
+</ul>
+<p>The &#8220;InSAR SBAS&#8221; panel is displayed with parameter values to be filled-in.</p>
+</div>
+<div class="section" id="select-the-files-to-process">
+<h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Navigate on the map to the Hawaii islands and define both the geo and time filters for data search.</li>
+<li>Use the spatial filter tooltip &#8220;Draw a rectangle&#8221; in order to define the search Area of Interest (AOI) over the Hawaii islands.</li>
+<li>Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2005-01-31 and then around 2007-02-01. NOTE: you can also edit precise search dates from the &#8220;Search Form&#8221; tooltip.</li>
+</ul>
+<p>From this filtered search, make drag and drops from the &#8220;Results Table&#8221; to your &#8220;Features Basket&#8221;, in order to select the following two input files:</p>
+<div class="highlight-sbas-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200</pre>
+</div>
+<ul class="simple">
+<li>Select the first input product</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_1.png" src="../_images/tuto_sbas_1.png" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_1.jpg" src="../_images/tuto_sbas_1.jpg" style="width: 750px;" />
 </div>
-<p>The &#8220;InSAR SBAS WPS&#8221; panel is displayed with parameters values to be filled-in.</p>
+<ul class="simple">
+<li>Select the second input product</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_2.jpg" src="../_images/tuto_sbas_2.jpg" style="width: 750px;" />
 </div>
-<div class="section" id="fill-the-parameters">
-<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="fill-the-parameter-values">
+<h2>Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>As <em>Job title</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><pre>SBAS Hawaii</pre>
+</div>
+<ul class="simple">
+<li>As input <em>Files</em>, drag and drop each of the two selected products.</li>
+</ul>
+<div class="highlight-sbas-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200</pre>
+</div>
 <ul class="simple">
 <li>As <em>Task Caption</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>SBAS Tutorial Task</pre>
-</div>
-<ul class="simple">
-<li>As <em>Bounding Box</em> (format: minLon, minLat, maxLon, maxLat), type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>14.36,40.78,14.5,40.88</pre>
-</div>
-<ul class="simple">
-<li>As <em>Start Date</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>2008-01-01T00:00:00</pre>
-</div>
-<ul class="simple">
-<li>As <em>End Date</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>2008-06-30T23:59:59</pre>
-</div>
-<ul class="simple">
-<li>As <em>Track Number</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>129</pre>
+<div class="highlight-sbas-parameter"><pre>SBAS Hawaii</pre>
 </div>
 <ul class="simple">
 <li>As <em>Lat</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>40.858049</pre>
+<div class="highlight-sbas-parameter"><pre>19.4455</pre>
 </div>
 <ul class="simple">
 <li>As <em>Lon</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>14.310228</pre>
+<div class="highlight-sbas-parameter"><pre>-155.61</pre>
 </div>
 <ul class="simple">
-<li>As <em>Processing Mode</em>, select <em>IFG</em>:</li>
-<li>As <em>Zone UTM</em>, type:</li>
+<li>As <em>Processing Mode</em>, select:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>33</pre>
+<div class="highlight-sbas-parameter"><pre>IFG</pre>
+</div>
+<ul class="simple">
+<li>As <em>Zone_UTM</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><pre>5</pre>
 </div>
 <ul class="simple">
 <li>As <em>CM_UTM</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>15</pre>
+<div class="highlight-sbas-parameter"><pre>-153</pre>
 </div>
 <ul class="simple">
 <li>As <em>Y0</em>, type:</li>
@@ -528,25 +544,31 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You can left all the other field as blank.</p>
+<p class="last">You can leave all the other fields as blank.</p>
 </div>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_2.png" src="../_images/tuto_sbas_2.png" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_3.jpg" src="../_images/tuto_sbas_3.jpg" style="width: 750px;" />
 </div>
 </div>
 <div class="section" id="run-the-job">
 <h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click on the button Run Job and see the Running Job:</li>
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the SBAS InSAR processor tab, and monitor the progress of the running Job:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_3.png" src="../_images/tuto_sbas_3.png" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_4.jpg" src="../_images/tuto_sbas_4.jpg" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>After about 2 hours, see the Successful Job:</li>
+<li>After about 2 hours of processing time, check the status is set as &#8220;Successful Job&#8221;:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_4.png" src="../_images/tuto_sbas_4.png" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_5.jpg" src="../_images/tuto_sbas_5.jpg" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Download the SBAS InSAR processing results once the Job is completed:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_6.jpg" src="../_images/tuto_sbas_6.jpg" style="width: 750px;" />
 </div>
 </div>
 </div>

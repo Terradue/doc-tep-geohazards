@@ -321,7 +321,8 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#fill-the-parameters">Fill the parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#fill-the-parameter-values">Fill the parameter values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gpod-sbas-insar.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
@@ -330,13 +331,9 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#computing-element">Computing Element</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#task-caption">Task Caption</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bounding-box">Bounding Box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#start-date">Start Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#end-date">End Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#priority">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-caption-and-job-title">Task Caption and Job Title</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
@@ -371,13 +368,9 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">G-POD GAMMA Level0 Service</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li><a class="reference internal" href="#computing-element">Computing Element</a></li>
-<li><a class="reference internal" href="#task-caption">Task Caption</a></li>
-<li><a class="reference internal" href="#bounding-box">Bounding Box</a></li>
-<li><a class="reference internal" href="#start-date">Start Date</a></li>
-<li><a class="reference internal" href="#end-date">End Date</a></li>
-<li><a class="reference internal" href="#priority">Priority</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a><ul>
+<li><a class="reference internal" href="#task-caption-and-job-title">Task Caption and Job Title</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
@@ -443,13 +436,9 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#computing-element">Computing Element</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#task-caption">Task Caption</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bounding-box">Bounding Box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#start-date">Start Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#end-date">End Date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#priority">Priority</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#task-caption-and-job-title">Task Caption and Job Title</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
@@ -481,97 +470,63 @@
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
-<li>Select the processing service “GAMMA Level-0 WPS”:</li>
+<li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a> (see guidance <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Access the Geobrowser: <a class="reference external" href="https://geohazards-tep.eo.esa.int/geobrowser/">https://geohazards-tep.eo.esa.int/geobrowser/</a></li>
+<li>Open the tab &#8220;Processing services&#8221; from the right of the map, and then select the processing service “GAMMA Level-0”:</li>
 </ul>
+</div>
+<div class="section" id="select-the-files-to-process">
+<h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Navigate on the map to the central Italy and define both the geo and time filters for data search.</li>
+<li>Use the spatial filter tooltip &#8220;Draw a rectangle&#8221; in order to define the search Area of Interest (AOI) over the central Italy.</li>
+<li>Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, both around 2009-02-01. NOTE: you can also edit precise search dates from the &#8220;Search Form&#8221; tooltip.</li>
+<li>From this filtered search, make drag and drops from the &#8220;Results Table&#8221; to your &#8220;Features Basket&#8221;, in order to select the following input file:</li>
+</ul>
+<div class="highlight-gamma-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79</pre>
+</div>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_gamma_1.png" src="../_images/tuto_gamma_1.png" style="width: 750px;" />
+<img alt="../_images/tuto_gamma_1.jpg" src="../_images/tuto_gamma_1.jpg" style="width: 750px;" />
 </div>
-<p>The &#8220;GAMMA Level-0 WPS&#8221; panel is displayed with parameters values to be filled-in.</p>
 </div>
-<div class="section" id="fill-the-parameters">
-<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Compress parameters is currently fixed to <strong>NOCMP</strong> value and is thus not visible on the processing service.
-Input data files are not yet available for the process.</p>
-</div>
-<div class="section" id="computing-element">
-<h3>Computing Element<a class="headerlink" href="#computing-element" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="fill-the-parameter-values">
+<h2>Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-caption-and-job-title">
+<h3>Task Caption and Job Title<a class="headerlink" href="#task-caption-and-job-title" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Select</li>
+<li>As <em>Job title</em>, type:</li>
 </ul>
-<div class="highlight-adore-parameter"><pre>CE 01 SL6 UK</pre>
+<div class="highlight-gamma-parameter"><pre>GAMMA-L0</pre>
 </div>
-<p>in the <em>Computing Element</em> field.</p>
+<ul class="simple">
+<li>As input <em>Files</em>, drag and drop the selected product:</li>
+</ul>
+<div class="highlight-gamma-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79</pre>
+</div>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_gamma_2.png" src="../_images/tuto_gamma_2.png" style="width: 750px;" />
+<img alt="../_images/tuto_gamma_2.jpg" src="../_images/tuto_gamma_2.jpg" style="width: 750px;" />
 </div>
-</div>
-<div class="section" id="task-caption">
-<h3>Task Caption<a class="headerlink" href="#task-caption" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Type any caption you want, e.g <strong>my_gamma_test</strong> * in the <em>Task Caption</em> field.</li>
+<li>As <em>Task Caption</em>, type:</li>
 </ul>
-</div>
-<div class="section" id="bounding-box">
-<h3>Bounding Box<a class="headerlink" href="#bounding-box" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>As <em>Bounding Box</em> (format: minLon, minLat, maxLon, maxLat), type:</li>
-</ul>
-<div class="highlight-adore-parameter"><pre>12.7,41.7,13.3,42</pre>
-</div>
-</div>
-<div class="section" id="start-date">
-<h3>Start Date<a class="headerlink" href="#start-date" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Type</li>
-</ul>
-<div class="highlight-adore-parameter"><pre>2008-11-23</pre>
-</div>
-<p>in the <em>Start Date</em> field.</p>
-</div>
-<div class="section" id="end-date">
-<h3>End Date<a class="headerlink" href="#end-date" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Type</li>
-</ul>
-<div class="highlight-adore-parameter"><pre>2008-11-24</pre>
-</div>
-<p>in the <em>End Date</em> field.</p>
-</div>
-<div class="section" id="priority">
-<h3>Priority<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Select</li>
-</ul>
-<div class="highlight-adore-parameter"><pre>0.25</pre>
-</div>
-<p>in the <em>Priority</em> field.</p>
-<div class="align-center width px align center figure">
-<img alt="../_images/tuto_gamma_3.png" src="../_images/tuto_gamma_3.png" />
+<div class="highlight-gamma-parameter"><pre>GAMMA-L0</pre>
 </div>
 </div>
 </div>
 <div class="section" id="run-the-job">
 <h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click on the button Run Job:</li>
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the GAMMA Level-0 processor tab, and monitor the progress of the running Job:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_gamma_4.png" src="../_images/tuto_gamma_4.png" style="width: 750px;" />
+<img alt="../_images/tuto_gamma_3.jpg" src="../_images/tuto_gamma_3.jpg" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>See the Running Job:</li>
+<li>Wait for the Job completion, then check the status is set as &#8220;Successful Job”.</li>
+<li>Download the GAMMA Level-0 processing results once the Job is completed:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_gamma_5.png" src="../_images/tuto_gamma_5.png" style="width: 750px;" />
-</div>
-<ul class="simple">
-<li>After about 8 minutes, see the Successful Job:</li>
-</ul>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_gamma_6.png" src="../_images/tuto_gamma_6.png" style="width: 750px;" />
+<img alt="../_images/tuto_gamma_4.jpg" src="../_images/tuto_gamma_4.jpg" style="width: 750px;" />
 </div>
 </div>
 </div>

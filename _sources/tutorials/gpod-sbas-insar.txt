@@ -4,75 +4,94 @@ G-POD SBAS InSAR Service
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “InSAR SBAS WPS”:
+* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-.. figure:: assets/tuto_sbas_1.png
+* Open the tab "Processing services" from the right of the map, and then select the processing service “InSAR SBAS”.
+
+The "InSAR SBAS" panel is displayed with parameter values to be filled-in.
+
+Select the files to process
+===================
+
+* Navigate on the map to the Hawaii islands and define both the geo and time filters for data search.
+* Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the Hawaii islands.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2005-01-31 and then around 2007-02-01. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+
+From this filtered search, make drag and drops from the "Results Table" to your "Features Basket", in order to select the following two input files:
+
+.. code-block:: sbas-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+  ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200
+
+* Select the first input product
+
+.. figure:: assets/tuto_sbas_1.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "InSAR SBAS WPS" panel is displayed with parameters values to be filled-in.
+* Select the second input product
 
-Fill the parameters
+.. figure:: assets/tuto_sbas_2.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+Fill the parameter values
 ===================
+
+* As *Job title*, type:
+
+.. code-block:: sbas-parameter
+
+  SBAS Hawaii
+
+* As input *Files*, drag and drop each of the two selected products.
+
+.. code-block:: sbas-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+  ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200
 
 * As *Task Caption*, type:
 
 .. code-block:: sbas-parameter
-
-  SBAS Tutorial Task
-
-* As *Bounding Box* (format: minLon, minLat, maxLon, maxLat), type:
-
-.. code-block:: sbas-parameter
  
-  14.36,40.78,14.5,40.88
-
-* As *Start Date*, type:
-
-.. code-block:: sbas-parameter
-  
-  2008-01-01T00:00:00
-
-* As *End Date*, type:
-
-.. code-block:: sbas-parameter
-  
-  2008-06-30T23:59:59
-
-* As *Track Number*, type:
-
-.. code-block:: sbas-parameter
-  
-  129
+  SBAS Hawaii
 
 * As *Lat*, type:
 
 .. code-block:: sbas-parameter
   
-  40.858049
+  19.4455
 
 * As *Lon*, type:
 
 .. code-block:: sbas-parameter
   
-  14.310228
+  -155.61
 
-* As *Processing Mode*, select *IFG*:
-
-* As *Zone UTM*, type:
+* As *Processing Mode*, select:
 
 .. code-block:: sbas-parameter
   
-  33  
+  IFG
+
+* As *Zone_UTM*, type:
+
+.. code-block:: sbas-parameter
+  
+  5
 
 * As *CM_UTM*, type:
 
 .. code-block:: sbas-parameter
   
-  15
+  -153
+
 
 * As *Y0*, type:
 
@@ -82,26 +101,33 @@ Fill the parameters
 
 .. note::
 
-  You can left all the other field as blank.
+  You can leave all the other fields as blank.
 
-.. figure:: assets/tuto_sbas_2.png
-        :figclass: align-center
+.. figure:: assets/tuto_sbas_3.jpg
+	:figclass: align-center
         :width: 750px
         :align: center
 
 Run the job
 ===========
 
-* Click on the button Run Job and see the Running Job:
+* Click on the button "Run Job" at the bottom of the SBAS InSAR processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_sbas_3.png
+.. figure:: assets/tuto_sbas_4.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* After about 2 hours, see the Successful Job:
+* After about 2 hours of processing time, check the status is set as "Successful Job":
 
-.. figure:: assets/tuto_sbas_4.png
+.. figure:: assets/tuto_sbas_5.jpg
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* Download the SBAS InSAR processing results once the Job is completed:
+
+.. figure:: assets/tuto_sbas_6.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
