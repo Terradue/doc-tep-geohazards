@@ -4,18 +4,22 @@ G-POD SBAS InSAR Service
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser : https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-* Select the processing service “InSAR SBAS”.
+* Open the tab "Processing services" from the right of the map, and then select the processing service “InSAR SBAS”.
 
-The "InSAR SBAS" panel is displayed with parameters values to be filled-in.
+The "InSAR SBAS" panel is displayed with parameter values to be filled-in.
 
-Fill the parameters
+Select the files to process
 ===================
 
-* Select the Hawaii islands as Area of Interest (AOI) and select properly the time filters in order to get the following products:
+* Navigate on the map to the Hawaii islands and define both the geo and time filters for data search.
+* Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the Hawaii islands.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2005-01-31 and then around 2007-02-01. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+
+From this filtered search, make drag and drops from the "Results Table" to your "Features Basket", in order to select the following two input files:
 
 .. code-block:: sbas-parameter
 
@@ -32,13 +36,21 @@ Fill the parameters
         :width: 750px
         :align: center
 
-* Drag and Drop the above products in the field *Files*.
+Fill the parameter values
+===================
 
 * As *Job title*, type:
 
 .. code-block:: sbas-parameter
 
   SBAS Hawaii
+
+* As input *Files*, drag and drop each of the two selected products.
+
+.. code-block:: sbas-parameter
+
+  ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
+  ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200
 
 * As *Task Caption*, type:
 
@@ -85,7 +97,7 @@ Fill the parameters
 
 .. note::
 
-  You can left all the other field as blank.
+  You can leave all the other fields as blank.
 
 .. figure:: assets/tuto_sbas_3.jpg
 	:figclass: align-center
@@ -95,21 +107,21 @@ Fill the parameters
 Run the job
 ===========
 
-* Click on the button Run Job and see the Running Job:
+* Click on the button "Run Job" at the bottom of the SBAS InSAR processor tab, and monitor the progress of the running Job:
 
 .. figure:: assets/tuto_sbas_4.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* After about 2 hours, see the Successful Job:
+* After about 2 hours of processing time, check the status is set as "Successful Job":
 
 .. figure:: assets/tuto_sbas_5.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Download the processing results once the Job is completed:
+* Download the SBAS InSAR processing results once the Job is completed:
 
 .. figure:: assets/tuto_sbas_6.jpg
 	:figclass: align-center
