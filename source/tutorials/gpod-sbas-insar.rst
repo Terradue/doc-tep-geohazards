@@ -26,10 +26,14 @@ From this filtered search, make drag and drops from the "Results Table" to your 
   ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
   ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200
 
+* Select the first input product
+
 .. figure:: assets/tuto_sbas_1.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
+
+* Select the second input product
 
 .. figure:: assets/tuto_sbas_2.jpg
 	:figclass: align-center
