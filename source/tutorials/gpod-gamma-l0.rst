@@ -4,115 +4,75 @@ G-POD GAMMA Level0 Service
 Select the processing
 =====================
 
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “GAMMA Level-0 WPS”:
+* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-.. figure:: assets/tuto_gamma_1.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
-The "GAMMA Level-0 WPS" panel is displayed with parameters values to be filled-in.
-
-Fill the parameters
-===================
-
-.. NOTE::
-        Compress parameters is currently fixed to **NOCMP** value and is thus not visible on the processing service.
-        Input data files are not yet available for the process.
+* Open the tab "Processing services" from the right of the map, and then select the processing service “GAMMA Level-0”:
 
 
-Computing Element
------------------
+Select the files to process
+===========================
 
-* Select 
+* Navigate on the map to the central Italy and define both the geo and time filters for data search.
+* Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the central Italy.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, both around 2009-02-01. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+* From this filtered search, make drag and drops from the "Results Table" to your "Features Basket", in order to select the following input file:
 
-.. code-block:: adore-parameter
-  
-  CE 01 SL6 UK 
+.. code-block:: gamma-parameter
 
-in the *Computing Element* field.
+  ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
 
-.. figure:: assets/tuto_gamma_2.png
+.. figure:: assets/tuto_gamma_1.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-Task Caption
-------------
-
-* Type any caption you want, e.g **my_gamma_test** * in the *Task Caption* field.
-
-Bounding Box
-------------
-
-* As *Bounding Box* (format: minLon, minLat, maxLon, maxLat), type:
-  
-.. code-block:: adore-parameter
-  
-  12.7,41.7,13.3,42
+Fill the parameter values
+=========================
 
 
-Start Date
-----------
+Task Caption and Job Title
+--------------------------
 
-* Type
-  
-.. code-block:: adore-parameter
-  
-  2008-11-23
-  
-in the *Start Date* field.
+* As *Job title*, type:
 
-End Date
---------
+.. code-block:: gamma-parameter
 
-* Type
-  
-.. code-block:: adore-parameter
-  
-  2008-11-24
-  
-in the *End Date* field.
+  GAMMA-L0
 
-Priority
---------
+* As input *Files*, drag and drop the selected product:
 
-* Select 
+.. code-block:: gamma-parameter
 
-.. code-block:: adore-parameter
-  
-  0.25 
+  ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
 
-in the *Priority* field.
-
-.. figure:: assets/tuto_gamma_3.png
-    :figclass: align-center
+.. figure:: assets/tuto_gamma_2.jpg
+	:figclass: align-center
         :width: 750px
         :align: center
+
+* As *Task Caption*, type:
+
+.. code-block:: gamma-parameter
+
+  GAMMA-L0 
 
 Run the job
 ===========
 
-* Click on the button Run Job:
+* Click on the button "Run Job" at the bottom of the GAMMA Level-0 processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_gamma_4.png
+.. figure:: assets/tuto_gamma_3.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* See the Running Job:
+* Wait for the Job completion, then check the status is set as "Successful Job”.
 
-.. figure:: assets/tuto_gamma_5.png
+* Download the GAMMA Level-0 processing results once the Job is completed:
+
+.. figure:: assets/tuto_gamma_4.jpg
 	:figclass: align-center
         :width: 750px
         :align: center
-
-* After about 8 minutes, see the Successful Job:
-
-.. figure:: assets/tuto_gamma_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
