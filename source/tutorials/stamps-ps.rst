@@ -55,8 +55,17 @@ Fill the parameters
 ===================
 
 We have prepared a public Data Package with a stack of Envisat ASAR Image Mode Level 0 (ASA_IM__0P) track 336 over Istanbul.
-The Data Package is called "Istanbul StaMPS tutorial", select it from the Data Package list.
+The Data Package is called "Istanbul StaMPS", select it from the Data Package list.
 
+Slave product reference
+------------------------
+
+Load the public Data Package called "Instanbul StaMPS". Click on "select all". Then drag the selection over the "Slave product references of the SAR stack to process" field.
+
+.. figure:: assets/tuto_stamps_ps_2.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
 
 Orbit files
 -----------
@@ -67,6 +76,11 @@ For Envisat ASAR, select:
 
 * Precise orbit state vectors: **VOR**
 
+.. figure:: assets/tuto_stamps_ps_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
 Master product reference
 ------------------------
 
@@ -74,38 +88,25 @@ Select the candidate Master (it can be any product of the stack)
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
 
-.. figure:: assets/tuto_stamps_ps_2.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
 * Click on Show Other Parameters apply the date value **2010-05-02** in both:
 - time:start field
 - time:end field
-then click on the button **Search**:
-
-.. figure:: assets/tuto_stamps_ps_3.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-* Drag and Drop the first result in the *ASAR Master product catalogue entry* field:
 
 .. figure:: assets/tuto_stamps_ps_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-Slave product reference
-------------------------
-
-* Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28**. Apply this date value in both:
-- time:start field
-- time:end field
-
-Pick one of the results having the same track, then drag and drop one of the results in the *ASAR Slave product catalogue entry* field:
+then click on the button **Search**:
 
 .. figure:: assets/tuto_stamps_ps_5.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* Drag and Drop the highlighted result (track 336) in the *Candidate master product reference* field:
+
+.. figure:: assets/tuto_stamps_ps_6.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -115,14 +116,14 @@ Run the job
 
 * Click on the button Run Job and see the Running Job
 
-.. figure:: assets/tuto_stamps_ps_6.png
+.. figure:: assets/tuto_stamps_ps_7.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * After about 20 minutes, see the Successful Job:
 
-.. figure:: assets/tuto_stamps_ps_7.png
+.. figure:: assets/tuto_stamps_ps_8.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -131,7 +132,7 @@ Run the job
 
 * See the result on map:
 
-.. figure:: assets/tuto_stamps_ps_8.png
+.. figure:: assets/tuto_stamps_ps_9.png
 	:figclass: align-center
         :width: 750px
         :align: center
