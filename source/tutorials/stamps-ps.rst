@@ -121,22 +121,12 @@ Run the job
         :width: 750px
         :align: center
 
-* After about 20 minutes, see the Successful Job:
+* After about 22 hours, see the Successful Job:
 
 .. figure:: assets/tuto_stamps_ps_8.png
 	:figclass: align-center
         :width: 750px
         :align: center
-
-* Click on the button *Show results on map*, then on the *geo_100328-100502.unw.phase.tif* result on the *Results Table* in the bottom left side
-
-* See the result on map:
-
-.. figure:: assets/tuto_stamps_ps_9.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
 
 Reprocess on your own
 =====================
