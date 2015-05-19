@@ -86,25 +86,7 @@ Master product reference
 
 Select the candidate Master (it can be any product of the stack)
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
-
-* Click on Show Other Parameters apply the date value **2010-05-02** in both:
-- time:start field
-- time:end field
-
-.. figure:: assets/tuto_stamps_ps_4.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-then click on the button **Search**:
-
-.. figure:: assets/tuto_stamps_ps_5.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-* Drag and Drop the highlighted result (track 336) in the *Candidate master product reference* field:
+* in this tutorial, simply drag and drop the file as in the picture below (track 336) in the *Candidate master product reference* field:
 
 .. figure:: assets/tuto_stamps_ps_6.png
 	:figclass: align-center
