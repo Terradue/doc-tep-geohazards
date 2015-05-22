@@ -14,8 +14,7 @@ Select the processing
 Select the files to process
 ===========================
 
-* Click on the Data Packages button in the bottom right, within the Features Basket panel. Then select from the list the "PF-ASAR Tutorial" 
-data package, which contains the reference to the following input file:
+* Click on the Data Packages button in the bottom right, within the Features Basket panel. Then select from the list the "PF-ASAR Tutorial" data package, which contains the reference to the following input file:
 
 .. code-block:: parameter
 
@@ -37,7 +36,7 @@ Task Caption and Job Title
 
 .. code-block:: parameter
 
-  PF_ASAR
+  ASAR PF
 
 * As input *Files*, drag and drop the selected data package:
 
@@ -83,7 +82,7 @@ Run the job
 
 * Download the G-POD PF-ASAR processing results once the Job is completed:
 
-.. figure:: assets/tuto_pfasar_6.jpg
+.. figure:: assets/tuto_pfasar_6.png
 	:figclass: align-center
         :width: 750px
         :align: center
