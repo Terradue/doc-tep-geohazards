@@ -29,7 +29,7 @@ The selected data package contains the reference to the following input file:
 
 Fill the parameter values
 =========================
-Define values for the "Job title", the "Task caption" and the "Processor type".
+Define values for the "Job title", the "Input files", the "Task caption" and the "Processor type".
 
 * As *Job title*, type:
 
