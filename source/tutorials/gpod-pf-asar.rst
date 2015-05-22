@@ -38,7 +38,7 @@ Task Caption and Job Title
 
   ASAR PF
 
-* As input *Files*, drag and drop the selected data package:
+* As input *Files*, drag and drop the selected input file:
 
 .. figure:: assets/tuto_pfasar_2.png
     :figclass: align-center
