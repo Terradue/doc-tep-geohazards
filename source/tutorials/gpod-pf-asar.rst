@@ -8,7 +8,7 @@ Select the processing
 
 * Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-* Open the tab "Processing services" from the right of the map, and then select the processing service “G-POD PF-ASAR”:
+* Open the tab "Processing services" from the right of the map, then select the processing service “G-POD PF-ASAR”.
 
 
 Select the files to process
