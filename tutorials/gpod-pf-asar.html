@@ -308,7 +308,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gmtsar.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">ROI_PAC on Hadoop Cloud Sandbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="roi_pac.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="roi_pac.html#fill-the-parameters">Fill the parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="roi_pac.html#master-product-reference">Master product reference</a></li>
@@ -316,6 +316,23 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="roi_pac.html#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#fill-the-parameters">Fill the parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#orbit-files">Orbit files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#master-product-reference">Master product reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#run-the-job">Run the job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stamps-ps.html#reprocess-on-your-own">Reprocess on your own</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#check-for-bad-interferograms">Check for bad interferograms:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#lowering-noise-in-your-data">Lowering noise in your data:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stamps-ps.html#spatio-temporal-filtering-chapter-6-8-of-stamps-manual">Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
@@ -339,9 +356,15 @@
 <li class="toctree-l3"><a class="reference internal" href="gpod-gamma-l0.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">G-POD PF-ASAR Service (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">G-POD PF-ASAR Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="srtm.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="srtm.html#fill-the-parameters">Fill the parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="srtm.html#sar-product-catalogue-entry">SAR product catalogue entry</a></li>
@@ -366,7 +389,13 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">G-POD PF-ASAR Service</a></li>
+<li><a class="reference internal" href="#">G-POD PF-ASAR Service</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -419,16 +448,23 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">ROI_PAC on Hadoop Cloud Sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">G-POD PF-ASAR Service (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">G-POD PF-ASAR Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with STRM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 </ul>
 </li>
 </ul>
@@ -449,9 +485,76 @@
       
   <div class="section" id="g-pod-pf-asar-service">
 <h1>G-POD PF-ASAR Service<a class="headerlink" href="#g-pod-pf-asar-service" title="Permalink to this headline">¶</a></h1>
-<p>Upcoming!</p>
-<p>This How-To guide will present a step-by-step example to run the service from the Geohazards Portal interface.
-Meanwhile, you can address inquiries to geohazards-tep at esa.int</p>
+<div class="section" id="select-the-processing">
+<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a> (see guidance <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
+<li>Access the Geobrowser: <a class="reference external" href="https://geohazards-tep.eo.esa.int/geobrowser/">https://geohazards-tep.eo.esa.int/geobrowser/</a></li>
+<li>Open the tab &#8220;Processing services&#8221; from the right of the map, then select the processing service “G-POD PF-ASAR”.</li>
+</ul>
+</div>
+<div class="section" id="select-the-files-to-process">
+<h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on the <em>Data Packages</em> button in the bottom right of the screen, within the Features Basket panel.</li>
+</ul>
+<p>Then select from the list the &#8220;PF-ASAR Tutorial&#8221; data package and click on <em>load</em>.
+The selected data package contains the reference to the following input file:</p>
+<div class="highlight-parameter"><pre>ASA_IM__0CNPAM20101021_091838_000000172094_00036_45180_1559.N1</pre>
+</div>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_1.png" src="../_images/tuto_pfasar_1.png" style="width: 750px;" />
+</div>
+</div>
+<div class="section" id="fill-the-parameter-values">
+<h2>Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h2>
+<p>Define values for the &#8220;Job title&#8221;, the &#8220;Input files&#8221;, the &#8220;Task caption&#8221; and the &#8220;Processor type&#8221;.</p>
+<ul class="simple">
+<li>As <em>Job title</em>, type:</li>
+</ul>
+<div class="highlight-parameter"><pre>ASAR PF</pre>
+</div>
+<ul class="simple">
+<li>As input <em>Files</em>, drag and drop the selected input file:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_2.png" src="../_images/tuto_pfasar_2.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>As <em>Task Caption</em>, type:</li>
+</ul>
+<div class="highlight-parameter"><pre>PF-ASAR Tutorial</pre>
+</div>
+<ul class="simple">
+<li>As <em>Processor</em>, select from the drop-down menu the value:</li>
+</ul>
+<div class="highlight-parameter"><pre>ASAR_IMS_L1B</pre>
+</div>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_3.png" src="../_images/tuto_pfasar_3.png" style="width: 750px;" />
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the G-POD PF-ASAR processor tab, and monitor the progress of the running Job:</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_4.png" src="../_images/tuto_pfasar_4.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Wait for the Job completion, then check the status is set as &#8220;Successful Job”.</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_5.png" src="../_images/tuto_pfasar_5.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Download the G-POD PF-ASAR processing results once the Job is completed (VPN connexion required):</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_pfasar_6.png" src="../_images/tuto_pfasar_6.png" style="width: 750px;" />
+</div>
+</div>
 </div>
 
 

@@ -1,6 +1,12 @@
 Interferogram generation with GMTSAR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+GMTSAR is an open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT).
+
+This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.
+
+The GMTSAR processing service can also process several pairs master/slave (same master).
+
 Select the processing
 =====================
 
@@ -30,7 +36,7 @@ Slave product reference
 
 * Click on Show Other Parametersand apply the date value **2010-05-02** in both:
 - time:start field
-- time:end field 
+- time:end field
 then click on the button **Search**:
 
 .. figure:: assets/tuto_gmtsar_3.png
@@ -81,9 +87,14 @@ Run the job
 
 * Click on the button *Show results on map*, then on the *phase_mask_ll.tiff* result on the *Results Table* in the bottom left side
 
-* See the result on map: 
+* See the result on map:
 
 .. figure:: assets/tuto_gmtsar_9.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
+
+
+
+	http://topex.ucsd.edu/gmtsar/
