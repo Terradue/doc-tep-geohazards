@@ -12,7 +12,7 @@
 	<artifactId>doc-tep-geohazards</artifactId>
 	<packaging>rpm</packaging>
 	<description>Geohazards Thematic Exploitation Platform guide</description>
-	<version>0.3</version>
+	<version>0.4</version>
 	
 	<dependencies>
 		<dependency>
