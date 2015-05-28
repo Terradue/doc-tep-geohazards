@@ -9,7 +9,7 @@ A OWS context document contains one or more entries describing documents. Full s
 Each document is identified with a unique identifier within the collection in which it is published.
 The following example describes step by step how to publish a user result in the "EO processing" collection.
 
-* Generate the OWS document based on the following template:
+1. Generate the OWS document based on the following template:
 
 .. code-block:: xml
 
@@ -63,15 +63,22 @@ The following example describes step by step how to publish a user result in the
 	</feed>
 
 PLease note the important fields:
+
 - identifier (mandatory) : contains the unique identifier within the collection. If an entry with the same name exists, it will be overriden.
+
 - title (mandatory) : main label to be displayed in the result table of the geobrowser
+
 - published and updated (mandatory) : date for the ordering in the collection, documents are disployed in the descending order of publication.
+
 - box (mandatory) : must contain the area of interest of the entry. (minY minX maxY maxX)
+
 - date (mandatory) : on date or interval of dates serparated by a '/' (format http://en.wikipedia.org/wiki/ISO_8601)
+
 - summary (optional) : short description in text or html to be display in the popup when result is selected
+
 - offering (optional) : defines the properties of a specific service binding or inline content for an offering. In the current example, the offering is a WMS layer for quicklook visualization on the map. Whenever possible, the geobrowser shall display the offering on the map.
 
-* via a curl command or with any other REST client, POST the document to the right collection:
+2. via a curl command or with any other REST client, POST the document to the right collection:
 
 .. code-block:: curl
 
