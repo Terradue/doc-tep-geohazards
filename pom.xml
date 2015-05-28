@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.terradue</groupId>
 		<artifactId>t2-parent</artifactId>
-		<version>11</version>
+		<version>14-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.terradue.tag</groupId>
@@ -226,7 +226,7 @@
 		<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.10</version>
+				<version>0.12-SNAPSHOT</version>
 				<configuration>
 					<message>Creating site for ${project.version}</message>
 				</configuration>
