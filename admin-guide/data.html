@@ -268,7 +268,10 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal Administrator Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="control_panel.html">Control Panel</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Data Collection management (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="wps_provider.html">Wps Providers management (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wps_service.html">Wps Services management (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="feature.html">Features Stories management (upcoming!)</a></li>
@@ -389,7 +392,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Data collections management</a></li>
+<li><a class="reference internal" href="#">Data collections management</a><ul>
+<li><a class="reference internal" href="#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -439,7 +445,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal Administrator Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="control_panel.html">Control Panel</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Data Collection management (upcoming!)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="wps_provider.html">Wps Providers management (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wps_service.html">Wps Services management (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="feature.html">Features Stories management (upcoming!)</a></li>
@@ -467,7 +476,87 @@
       
   <div class="section" id="data-collections-management">
 <h1>Data collections management<a class="headerlink" href="#data-collections-management" title="Permalink to this headline">¶</a></h1>
-<p>Upcoming !!</p>
+<div class="section" id="publish-or-update-an-ows-context-document">
+<h2>Publish or update an OWS context document<a class="headerlink" href="#publish-or-update-an-ows-context-document" title="Permalink to this headline">¶</a></h2>
+<p>A OWS context document contains one or more entries describing documents. Full specification for OWS documents is available at <a class="reference external" href="http://www.opengeospatial.org/standards/owc">http://www.opengeospatial.org/standards/owc</a></p>
+<p>Each document is identified with a unique identifier within the collection in which it is published.
+The following example describes step by step how to publish a user result in the &#8220;EO processing&#8221; collection.</p>
+<ol class="arabic simple">
+<li>Generate the OWS document based on the following template:</li>
+</ol>
+<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;id&gt;</span>urn:uuid:607ba1aa-7f43-4b85-9d75-adab715dc9c5<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+        <span class="nt">&lt;id&gt;</span>ALOS.20070211_20100219.Nepal_S.2cmyr.tif<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;title</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>Himalaya / Nepal - Landslide - ALOS.20070211_20100219<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2015-05-04<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;updated&gt;</span>2015-05-04<span class="nt">&lt;/updated&gt;</span>
+    <span class="nt">&lt;summary</span> <span class="na">type=</span><span class="s">&quot;text/html&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">                                                &lt;table&gt;</span>
+<span class="cp">                                                        &lt;tbody&gt;</span>
+<span class="cp">                                                                &lt;tr valign=&quot;top&quot;&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                &lt;b&gt;Source&lt;/b&gt;&lt;/td&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                EO-WORLD</span>
+<span class="cp">                                                                        &lt;/td&gt;</span>
+<span class="cp">                                                                &lt;/tr&gt;</span>
+<span class="cp">                                                                &lt;tr valign=&quot;top&quot;&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                &lt;b&gt;Site&lt;/b&gt;&lt;/td&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;Himalaya - Nepal&lt;/td&gt;</span>
+<span class="cp">                                                                &lt;/tr&gt;</span>
+<span class="cp">                                                                &lt;tr&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                &lt;strong&gt;Platform&lt;/strong&gt;&lt;/td&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                ALOS&lt;/td&gt;</span>
+<span class="cp">                                                                &lt;/tr&gt;</span>
+<span class="cp">                                                                &lt;tr valign=&quot;top&quot;&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                &lt;b&gt;Observations&lt;/b&gt;&lt;/td&gt;</span>
+<span class="cp">                                                                        &lt;td&gt;</span>
+<span class="cp">                                                                                20070211_20100219&lt;/td&gt;</span>
+<span class="cp">                                                                &lt;/tr&gt;</span>
+<span class="cp">                                                        &lt;/tbody&gt;</span>
+<span class="cp">                                                &lt;/table&gt;</span>
+<span class="cp">&lt;p&gt;&lt;/p&gt;</span>
+<span class="cp">        ]]&gt;</span>
+    <span class="nt">&lt;/summary&gt;</span>
+    <span class="nt">&lt;identifier</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/dc/elements/1.1/&quot;</span><span class="nt">&gt;</span>ALOS.20070211_20100219.Nepal_S.2cmyr.tif<span class="nt">&lt;/identifier&gt;</span>
+    <span class="nt">&lt;box</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.georss.org/georss&quot;</span><span class="nt">&gt;</span>27.328 86.35 28.15 87.1<span class="nt">&lt;/box&gt;</span>
+    <span class="nt">&lt;offering</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.opengis.net/owc/1.0&quot;</span> <span class="na">code=</span><span class="s">&quot;http://www.opengis.net/spec/owc-atom/1.0/req/wms&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;operation</span> <span class="na">code=</span><span class="s">&quot;GetMap&quot;</span> <span class="na">method=</span><span class="s">&quot;GET&quot;</span> <span class="na">href=</span><span class="s">&quot;https://maps.eo.esa.int/erdas-apollo/coverage_public/NEPAL?service=WMS&amp;amp;version=1.1.1&amp;amp;request=GetMap&amp;amp;layers=ALOS.20070211_20100219.Nepal_S.2cmyr&amp;amp;styles=&amp;amp;bbox=86.35,27.328,87.1,28.15&amp;amp;width=1024&amp;amp;height=1024&amp;amp;srs=EPSG:4326&amp;amp;format=image/png&amp;amp;transparent=TRUE&quot;</span> <span class="na">type=</span><span class="s">&quot;image/png&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/offering&gt;</span>
+    <span class="nt">&lt;date</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/dc/elements/1.1/&quot;</span><span class="nt">&gt;</span>2007-02-11/2010-02-19<span class="nt">&lt;/date&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/feed&gt;</span>
+</pre></div>
+</div>
+<p>PLease note the important fields:</p>
+<ul class="simple">
+<li>identifier (mandatory) : contains the unique identifier within the collection. If an entry with the same name exists, it will be overriden.</li>
+<li>title (mandatory) : main label to be displayed in the result table of the geobrowser</li>
+<li>published and updated (mandatory) : date for the ordering in the collection, documents are disployed in the descending order of publication.</li>
+<li>box (mandatory) : must contain the area of interest of the entry. (minY minX maxY maxX)</li>
+<li>date (mandatory) : on date or interval of dates serparated by a &#8216;/&#8217; (format <a class="reference external" href="http://en.wikipedia.org/wiki/ISO_8601">http://en.wikipedia.org/wiki/ISO_8601</a>)</li>
+<li>summary (optional) : short description in text or html to be display in the popup when result is selected</li>
+<li>offering (optional) : defines the properties of a specific service binding or inline content for an offering. In the current example, the offering is a WMS layer for quicklook visualization on the map. Whenever possible, the geobrowser shall display the offering on the map.</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li>via a curl command or with any other REST client, POST the document to the right collection:</li>
+</ol>
+<div class="highlight-curl"><pre>curl 'http://data.terradue.int/gs/catalogue/tepqwsr/gtfeature' -H 'Pragma: no-cache' -H 'Content-Type: application/atom+xml' -H 'Accept: application/xml' -H 'Cache-Control: no-cache' -d @file.atom</pre>
+</div>
+<p>The collections to post to are:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://data.terradue.int/gs/catalogue/tepqw/gtfeature">http://data.terradue.int/gs/catalogue/tepqw/gtfeature</a> : EO data</li>
+<li><a class="reference external" href="http://data.terradue.int/gs/catalogue/tepqwsr/gtfeature">http://data.terradue.int/gs/catalogue/tepqwsr/gtfeature</a> : EO-based products</li>
+<li><a class="reference external" href="http://data.terradue.int/gs/catalogue/tepqwpub/gtfeature">http://data.terradue.int/gs/catalogue/tepqwpub/gtfeature</a> : Publications</li>
+<li><a class="reference external" href="http://data.terradue.int/gs/catalogue/users/gtfeature">http://data.terradue.int/gs/catalogue/users/gtfeature</a> : Community</li>
+</ul>
+</div>
 </div>
 
 
