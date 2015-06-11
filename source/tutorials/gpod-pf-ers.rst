@@ -17,6 +17,7 @@ Select the files to process
 * Access the Data Packages and load the public data package “PF-ERS Tutorial” which contains the following input ERS-2 SAR Level-0 product:
 
 .. code-block:: gamma-parameter
+
    SAR_IM__0PXESA19990611_101617_00000025A043_00251_21648_8002.E2
 
 .. figure:: assets/tuto_pf_ers_1.png
