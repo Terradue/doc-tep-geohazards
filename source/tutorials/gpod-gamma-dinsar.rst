@@ -1,8 +1,85 @@
 G-POD GAMMA DInSAR Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Upcoming!
+Select the processing
+=====================
 
-This How-To guide will present a step-by-step example to run the service from the Geohazards Portal interface. 
-Meanwhile, you can address inquiries to geohazards-tep at esa.int
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
 
+* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
+
+* Open the tab "Processing services" from the right of the map, and then select the processing service “GAMMA DInSAR”:
+
+
+Select the files to process
+===========================
+
+* Load the data package called “GAMMA DInSAR Tutorial” containing the following products:
+
+.. code-block:: gamma-parameter
+
+  ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
+  ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
+  
+.. figure:: assets/tuto_gamma_dinsar_1.png
+	:figclass: align-center
+        :width: 750px
+        :align: center  
+  
+Fill the parameter values
+=========================
+
+Mandatory paramters
+--------------------
+
+* As *Job title*, type:
+
+.. code-block:: gamma-parameter
+
+  GAMMA DInSAR
+
+* As input *Files*, drag and drop the selected product:
+
+.. code-block:: gamma-parameter
+
+  ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
+  ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
+
+.. figure:: assets/tuto_gamma_dinsar_2.png
+	:figclass: align-center
+        :width: 750px
+        :align: center	
+        
+* As *Bounding Box*, type:
+
+.. code-block:: gamma-parameter
+
+  12.86,42.11,13.64,42.6
+
+* As *Master File* drag and drop in the box the following product:
+
+.. code-block:: gamma-parameter
+
+  ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
+
+.. figure:: assets/tuto_gamma_dinsar_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center	
+
+Run the job
+===========
+
+* Click on the button "Run Job" at the bottom of the GAMMA DInSAR processor tab, and monitor the progress of the running Job:
+
+.. figure:: assets/tuto_gamma_dinsar_4.png
+	:figclass: align-center
+        :width: 750px
+        :align: center	
+        
+* Wait for the Job completion, then check the status is set as "Successful Job” and and download the GAMMA DInSAR processing results once the Job is completed:
+
+.. figure:: assets/tuto_gamma_dinsar_5.png
+	:figclass: align-center
+        :width: 750px
+        :align: center	
