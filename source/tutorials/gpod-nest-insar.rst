@@ -30,7 +30,7 @@ Select the files to process
 
 * Alternatively, navigate on the map to the L'Aquila region (Italy) and define both the geo and time filters for data search.
 * Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the L'Aquila region.
-* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2007-04-11 and then around 2009-03-11. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2007-04-11 and then around 2009-03-11. *NOTE*: you can also edit precise search dates from the "Search Form" tooltip.
 
 
 Fill the parameter values
