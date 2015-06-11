@@ -10,7 +10,7 @@ Contents:
    Interferogram generation with GMTSAR<gmtsar>
    Interferogram generation with ROI_PAC<roi_pac>
    StaMPS Permanent Scatterer<stamps-ps>
-   G-POD GAMMA DInSAR Service (upcoming!)<gpod-gamma-dinsar>
+   G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>
    G-POD NEST InSAR Service (upcoming!)<gpod-nest-insar>
    G-POD NEST Coreg Service (upcoming!)<gpod-nest-coreg>
