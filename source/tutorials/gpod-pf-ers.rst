@@ -19,7 +19,7 @@ Select the files to process
 .. code-block:: gamma-parameter
    SAR_IM__0PXESA19990611_101617_00000025A043_00251_21648_8002.E2
 
-.. figure:: assets/tuto_pf_ers_1.jpg
+.. figure:: assets/tuto_pf_ers_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -42,7 +42,7 @@ Mandatory paramters
 
    SAR_IM__0PXESA19990611_101617_00000025A043_00251_21648_8002.E2
 
-.. figure:: assets/tuto_pf_ers_2.jpg
+.. figure:: assets/tuto_pf_ers_2.png
 	:figclass: align-center
         :width: 750px
         :align: center   
@@ -59,7 +59,7 @@ Mandatory paramters
 
 	false
 	
-.. figure:: assets/tuto_pf_ers_3.jpg
+.. figure:: assets/tuto_pf_ers_3.png
 	:figclass: align-center
         :width: 750px
         :align: center  	
