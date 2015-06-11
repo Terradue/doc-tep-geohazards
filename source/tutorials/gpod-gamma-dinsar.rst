@@ -21,7 +21,7 @@ Select the files to process
   ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
   
-.. figure:: assets/tuto_gamma_dinsar_1.jpg
+.. figure:: assets/tuto_gamma_dinsar_1.png
 	:figclass: align-center
         :width: 750px
         :align: center  
@@ -45,7 +45,7 @@ Mandatory paramters
   ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
 
-.. figure:: assets/tuto_gamma_dinsar_2.jpg
+.. figure:: assets/tuto_gamma_dinsar_2.png
 	:figclass: align-center
         :width: 750px
         :align: center	
@@ -62,7 +62,7 @@ Mandatory paramters
 
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
 
-.. figure:: assets/tuto_gamma_dinsar_3.jpg
+.. figure:: assets/tuto_gamma_dinsar_3.png
 	:figclass: align-center
         :width: 750px
         :align: center	
@@ -72,14 +72,14 @@ Run the job
 
 * Click on the button "Run Job" at the bottom of the GAMMA DInSAR processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_gamma_dinsar_4.jpg
+.. figure:: assets/tuto_gamma_dinsar_4.png
 	:figclass: align-center
         :width: 750px
         :align: center	
         
 * Wait for the Job completion, then check the status is set as "Successful Job” and and download the GAMMA DInSAR processing results once the Job is completed:
 
-.. figure:: assets/tuto_gamma_dinsar_5.jpg
+.. figure:: assets/tuto_gamma_dinsar_5.png
 	:figclass: align-center
         :width: 750px
         :align: center	
