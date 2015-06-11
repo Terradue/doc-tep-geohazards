@@ -17,5 +17,5 @@ Contents:
    G-POD NEST Toolbox Service (upcoming!)<gpod-nest>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ASAR Service<gpod-pf-asar>
-   G-POD PF-ERS Service (upcoming!)<gpod-pf-ers>
+   G-POD PF-ERS Service<gpod-pf-ers>
    Digital Elevation Model generation with SRTM<srtm>
