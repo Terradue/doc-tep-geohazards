@@ -8,13 +8,13 @@ Select the processing
 
 * Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
-* Open the tab "Processing services" from the right of the map, and then select the processing service “PF-ERS”:
+* Open the tab "Processing services" from the right of the map, and then select the processing service “PF-ERS”.
 
 
 Select the files to process
 ===========================
 
-* Access the Data Packages and load the public data package “PF-ERS Tutorial” which contains the following input ERS-2 SAR Level-0 product:
+* From the bottom right panel, load the data package called “PF-ERS Tutorial” which contains the following input ERS-2 SAR Level-0 product:
 
 .. code-block:: gamma-parameter
 
@@ -33,7 +33,7 @@ Mandatory paramters
 
 * As *Job title*, type:
 
-.. code-block:: gamma-parameter
+.. code-block:: pf-ers-parameter
 
  PF-ERS
 
@@ -50,13 +50,13 @@ Mandatory paramters
    
 * As *Processor*, type:
 
-.. code-block:: gamma-parameter
+.. code-block:: pf-ers-parameter
 
    ERS2_IMS_L1B
    
 * As *Subset Input files before processing*, type:
 
-.. code-block:: gamma-parameter
+.. code-block:: pf-ers-parameter
 
 	false
 	
