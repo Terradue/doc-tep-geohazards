@@ -16,7 +16,7 @@ Select the files to process
 
 * Load the data package called “GAMMA DInSAR Tutorial” containing the following products:
 
-.. code-block:: gamma-parameter
+.. code-block:: gamma-dinsar-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
@@ -34,13 +34,13 @@ Mandatory paramters
 
 * As *Job title*, type:
 
-.. code-block:: gamma-parameter
+.. code-block:: gamma-dinsar-parameter
 
   GAMMA DInSAR
 
 * As input *Files*, drag and drop the selected product:
 
-.. code-block:: gamma-parameter
+.. code-block:: gamma-dinsar-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2009-04-12T09:24:26.652Z, , Track: 79
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
@@ -52,13 +52,13 @@ Mandatory paramters
         
 * As *Bounding Box*, type:
 
-.. code-block:: gamma-parameter
+.. code-block:: gamma-dinsar-parameter
 
   12.86,42.11,13.64,42.6
 
 * As *Master File* drag and drop in the box the following product:
 
-.. code-block:: gamma-parameter
+.. code-block:: gamma-dinsar-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2009-02-01T09:24:28.014Z, , Track: 79
 
