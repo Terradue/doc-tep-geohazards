@@ -17,7 +17,7 @@ Select the files to process
 
 * From the bottom right panel, load the data package called “NEST ASA_IMS_1P Pair”. The following pre and post event products over L'Aquila will appear listed in the "Features Basket" panel:
 
-.. code-block:: sbas-parameter
+.. code-block:: nest-coreg-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2007-04-11T20:47:49.989Z, , Track: 129
   ENVISAT ASAR ASA_IMS_1P, 2009-03-11T20:47:46.215Z, , Track: 129
@@ -39,7 +39,7 @@ Fill the parameter values
 
  You can edit the *Job title* to describe your processing job, e.g.:
 
-.. code-block:: sbas-parameter
+.. code-block:: nest-coreg-parameter
 
   NEST CoReg L'Aquila
 
@@ -47,7 +47,7 @@ Fill the parameter values
 
 Select the 2 files in the "Features Basket", using either the "shift" key or the "sel.all" link above the list. Drag and drop the selected products onto the "Files" parameter field.
 
-.. code-block:: sbas-parameter
+.. code-block:: nest-coreg-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2007-04-11T20:47:49.989Z, , Track: 129
   ENVISAT ASAR ASA_IMS_1P, 2009-03-11T20:47:46.215Z, , Track: 129
@@ -63,7 +63,7 @@ Drag and drop operation:
 
 Unselect all the previously selected products in the "Features basket" and then click on the following single product. Drag and drop that product to the mandatory parameter field "Master File”:
 
-.. code-block:: sbas-parameter
+.. code-block:: nest-coreg-parameter
 
   ENVISAT ASAR ASA_IMS_1P, 2007-04-11T20:47:49.989Z, , Track: 129
 
