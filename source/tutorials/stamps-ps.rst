@@ -17,7 +17,7 @@ The processing follows in principle the manual of StaMPS [#f2]_:
 * **Automatic Master selection**: uses the script master_select from StaMPS to choose optimal master based on temporal 	and spatial baseline as well as Doppler shift
 
 * **IFG-generation**: done by DORIS (version 4.02) [#f4]_ using the scripts provided by StaMPS package:
-	* step_coarse run with 500 windows in order to assure proper coarse correlation also in 	presence of water in the scenes
+	* step_coarse run with 500 windows in order to assure proper coarse correlation also in presence of water in the scenes
 	* step_coreg_simple used for fine-coregistration
 	* a final check on CPM_data files for every slave in order to exclude scenes with failed co-registration is included (i.e. CPM_data > 4 Kbyte)
 	* resampling, ifg generation and geocoding is done by standard StaMPS-Doris scripts.
@@ -35,7 +35,7 @@ The processing follows in principle the manual of StaMPS [#f2]_:
   * DEM
   * StaMPS folder containing all necessary matlab files to open it again in matlab and StaMPS
 
-For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual
+For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual.
 
 Select the processing
 =====================
@@ -60,7 +60,7 @@ The Data Package is called "Istanbul StaMPS", select it from the Data Package li
 Slave product reference
 ------------------------
 
-Load the public Data Package called "Instanbul StaMPS". Click on "select all". Then drag the selection over the "Slave product references of the SAR stack to process" field.
+Load the public Data Package called "Instanbul StaMPS". Click on "select all". Then drag the selection over the field labelled "Slave product references of the SAR stack to process".
 
 .. figure:: assets/tuto_stamps_ps_2.png
 	:figclass: align-center
@@ -115,8 +115,8 @@ Reprocess on your own
 
 If you have a working matlab environment, you can treat the downloaded folder as if you would have processed it locally.
 
-The most computer intensive processing steps of StaMPS are 2 & 3. Those are for the preliminary selection of stable scatterers.
-If you are not happy with your results, it is however recommended to start with step 4 or higher i.e.:
+The most compute-intensive processing steps of StaMPS are 2 & 3. Those are for the preliminary selection of stable scatterers.
+If you are not happy with your results, it is however recommended to start with step 4 or higher, e.g.:
 
 .. code-block:: matlab
 
@@ -125,13 +125,13 @@ If you are not happy with your results, it is however recommended to start with 
 Check for bad interferograms:
 -----------------------------
 
-For getting general information on the interferograms (i.e. baseline, estimated noise), which 	gives you a good indication of bad interferograms, do:
+For getting general information on the interferograms (i.e. baseline, estimated noise), which gives you a good indication of bad interferograms, do:
 
 .. code-block:: matlab
 
   ps_info
 
-To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them like this:
+To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them, you can proceed like this:
 
 .. code-block:: matlab
 
@@ -166,7 +166,7 @@ PS Merge (Chapter 6.5 of StaMPS manual)
 
 This is another way of reducing noise is to resample your data
 
-* use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to 	your needs
+* use the parameters merge_resample_size (in m) and merge_standard_dev to denoise to your needs
 * re-run from step 5 until the end
 
 .. note:: If you change merge_resample_size, you also should consider changing the unwrap grid for step 6
@@ -175,14 +175,14 @@ Spatio-temporal filtering (Chapter 6.8 of StaMPS manual)
 ---------------------------------------------------------------
 
 StaMPS step 8 filters the data in a way to address noise coming from atmosferic disturbances. It is steered by 2 parameters: scn_wavelength and scn_time_win
-For the StaMPS Permanent Scattere processing service, standard parameters from StaMPS are used.
+For the StaMPS Permanent Scatterer processing service, standard parameters from StaMPS are used.
 
-It is however warmly recommended to adjust those parameters according to your dataset. scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
+It is however warmly recommended to adjust those parameters according to your dataset. The parameter scn_wavelength reflects the spatial filter, while scn_time_win addresses the temporal component. Play around with these parameters in order to achieve the desired result.
 
 
 .. rubric:: Footnotes
 
 .. [#f1] `StaMPS website <http://homepages.see.leeds.ac.uk/~earahoo/stamps/>`_
 .. [#f2] `StaMPS user manual <http://homepages.see.leeds.ac.uk/~earahoo/stamps/StaMPS_Manual_v3.3b1.pdf>`_
-.. [#f3] `ROI_PAC Website <http://aws.roipac.org/cgi-bin/moin.cgi>`_
-.. [#f4] `DORIS web site <http://doris.tudelft.nl/>`_
+.. [#f3] `ROI_PAC website <http://aws.roipac.org/cgi-bin/moin.cgi>`_
+.. [#f4] `DORIS website <http://doris.tudelft.nl/>`_

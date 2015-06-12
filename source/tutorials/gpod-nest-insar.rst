@@ -1,3 +1,4 @@
+
 G-POD NEST InSAR Service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -29,7 +30,7 @@ Select the files to process
 
 * Alternatively, navigate on the map to the L'Aquila region (Italy) and define both the geo and time filters for data search.
 * Use the spatial filter tooltip "Draw a rectangle" in order to define the search Area of Interest (AOI) over the L'Aquila region.
-* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2007-04-11 and then around 2009-03-11. NOTE: you can also edit precise search dates from the "Search Form" tooltip.
+* Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2007-04-11 and then around 2009-03-11. *NOTE*: you can also edit precise search dates from the "Search Form" tooltip.
 
 
 Fill the parameter values
@@ -80,12 +81,6 @@ Drag and drop operation:
 
 Run the job
 =========
-
-* From the section "Select the result", check the different process output file encoding to be referenced by the OGC Web Processing Service output (available from the "XML Result" section of a completed Job in the user interface), depending on the file format you'll want to exploit to analyse the results:
-
-* application/rdf+xml: OpenSearch Description template, to access results in RDF encoding
-* application/atom+xml: OpenSearch Description template, to access results in ATOM encoding
-* application/metalink+xml: Distribution Package of result files, to access to the list of URLs for each available intermediate result in Metalink encoding
 
 * Click on the button "Run Job" at the bottom of the NEST InSAR processor tab, and monitor the progress of the running Job:
 
