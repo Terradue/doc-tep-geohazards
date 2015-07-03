@@ -11,10 +11,29 @@ User Profile
 
 Find out how to sign-in using **EO-SSO**, access your **Cloud** account by providing a valid **certificate** and prove your identity, or even link your profile with your **Github** account.
 
+
 Sign in
--------
+------------------------------
 
 Once registered on ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
+At the first access, you may be asked to check your inbox in order to confirm your address
+
+.. figure:: ../includes/email_confirmation1.png
+	:figclass: img-border
+	:scale: 80%
+
+If you never received the confirmation email, you can ask the system to send it again by clicking on the link **send again the confirmation email**:
+
+.. figure:: ../includes/email_confirmation2.png
+	:figclass: img-border
+	:scale: 80%
+
+After clicked the link received by email, you'll be able to see your profile page of the portal:
+
+.. figure:: ../includes/email_confirmation3.png
+	:figclass: img-border
+	:scale: 80%
+
 
 Edit your profile
 -----------------
