@@ -20,19 +20,19 @@ At the first access, you may be asked to check your inbox in order to confirm yo
 
 .. figure:: ../includes/email_confirmation1.png
 	:figclass: img-border
-	:scale: 60%
+	:scale: 80%
 
 If you never received the confirmation email, you can ask the system to send it again by clicking on the link **send again the confirmation email**:
 
 .. figure:: ../includes/email_confirmation2.png
 	:figclass: img-border
-	:scale: 60%
+	:scale: 80%
 
 After clicked the link received by email, you'll be able to see your profile page of the portal:
 
 .. figure:: ../includes/email_confirmation3.png
 	:figclass: img-border
-	:scale: 60%
+	:scale: 80%
 
 
 Edit your profile
