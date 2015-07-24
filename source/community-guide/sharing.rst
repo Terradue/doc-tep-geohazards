@@ -18,7 +18,7 @@ Whenever you want to share an object with groups, you will see the following pan
 .. figure:: ../includes/sharing_group.png
 	:align: center
 	:scale: 50%
-	:figclass: img-container-border
+	:figclass: img-border
 
 It will allow you to:
 
