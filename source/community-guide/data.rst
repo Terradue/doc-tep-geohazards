@@ -94,9 +94,10 @@ Load an existing data package
 
 To access a previously saved data package:
 
-1. Click on **Load**.
+1. Click on the **Data Packages** tab.
 2. Select a data package on the list.
-3. All data from the data package are added into the current basket.
+3. To add all the items from the data package into the current basket, click on *load*.
+4. To use the data package as the current search, click on *set as current search*.
 
 .. figure:: ../includes/geobrowser_dp_load.png
 	:scale: 75%

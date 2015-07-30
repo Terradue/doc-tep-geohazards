@@ -13,7 +13,7 @@ Find out how to sign-in using **EO-SSO**, access your **Cloud** account by provi
 
 
 Sign in
-------------------------------
+-------
 
 Once registered on ESA EO Single Sign On (EOSSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
 At the first access, you may be asked to check your inbox in order to confirm your address
@@ -136,9 +136,7 @@ Link your Github account
 
 Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Sandboxes. You can also release and share your code there.
 
-|bulb| *Link your github account is not mandatory but highly recommanded.*
-
-.. |bulb| image:: ../includes/bulb.png
+..note:: Link your github account is not mandatory but highly recommanded.
 
 To link your Github account:
 
@@ -146,3 +144,15 @@ To link your Github account:
 2. You should add your ssh public key to your github account. If you don't have a Terradue certificate, you will need to add it manually. Finally click on **Add your public key** and accept the request on your Github account.
 
 .. |user_github_edit.png| image:: ../includes/user_github_edit.png
+
+See your groups
+---------------
+
+To find out to which groups you belong, just go to the **Groups** tab on your profile page.
+The groups in which you are a member are listed here.
+
+See your usage
+--------------
+
+To find out how you are using the platform, just go to the **Usage** tab on your profile page.
+You will see what is your level for each type of usage of the platform.
