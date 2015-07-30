@@ -1,6 +1,19 @@
 Data collections management
 ===========================
 
+Manage Data Collections
+-----------------------
+
+| The Data Collections management page contains a list of all existing Data Collections in DB, with the possibility for an Administrator to *Create* a new Data Collection, *Update* or *Delete* an existing one.
+| The Administrator can also *Manage* groups that can see each Data Collection (by clicking on |manage|). This will allow him to define if the Data Collection is public (visible for all), private (visible only by the owner and administrators) or restricted only to a list of groups.
+
+| To add a group, click on |plus| in front of the group's name in the *All Groups* panel.
+| To remove a group, click on |minus| in front of the group's name in the *Allowed Groups* panel.
+
+.. |manage| image:: ../includes/groups_manage.png
+.. |plus| image:: ../includes/plus.png
+.. |minus| image:: ../includes/minus.png
+
 Publish or update an OWS context document
 -----------------------------------------
 

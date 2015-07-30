@@ -144,6 +144,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../user.html#remove-your-certificate">Remove your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user.html#link-your-github-account">Link your Github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user.html#see-your-groups">See your groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user.html#see-your-usage">See your usage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Data</a><ul>
@@ -160,7 +162,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../processing.html">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../processing.html#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../processing.html#create-a-new-job">Create a new job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../processing.html#access-created-jobs">Access created jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../processing.html#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../processing.html#delete-my-jobs">Delete my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../processing.html#make-my-jobs-public">Make my jobs public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../processing.html#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../visualisation.html">Visualisation</a><ul>
@@ -175,6 +180,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-with-groups">Share with groups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-a-job">Share a job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-a-processing-service">Share a Processing Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../sharing.html#share-a-data-package">Share a Data Package</a></li>
@@ -269,17 +275,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">Community Portal Administrator Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../admin-guide/control_panel.html">Control Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../admin-guide/data.html">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../admin-guide/data.html#manage-data-collections">Manage Data Collections</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../admin-guide/data.html#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/wps_provider.html">Wps Providers management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/wps_service.html">Wps Services management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/feature.html">Features Stories management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/wps_provider.html">Wps Providers management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/wps_service.html">Wps Services management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/data_package.html">Data Packages management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/group.html">Groups management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../admin-guide/user.html">Users management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../admin-guide/user.html#certificate-removal">Certificate removal</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/news.html">News management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../admin-guide/feature.html">Web story banners management</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -369,7 +378,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/gpod-nest-coreg.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/gpod-gamma-l0.html#select-the-files-to-process">Select the files to process</a></li>
@@ -536,7 +544,7 @@ The Developer Cloud Sandbox PaaS allows you to plug scientific applications writ
 <p>To create your own Developer Cloud Toolbox:</p>
 <ul class="simple">
 <li>Access the Cloud Dashboard (see <a class="reference internal" href="dashboard.html#dashboard"><em>Cloud Dashboard</em></a>)</li>
-<li>Click on <img alt="plus.png" src="../../_images/plus.png" /> to create a new Developer Cloud Sandbox</li>
+<li>Click on <img alt="plus.png" src="../../_images/plus1.png" /> to create a new Developer Cloud Sandbox</li>
 <li>Type the Developer Cloud Sandbox name</li>
 <li>Select the <strong>Developer Cloud Sandbox</strong> template</li>
 </ul>

@@ -144,6 +144,8 @@
 <li class="toctree-l3"><a class="reference internal" href="user.html#remove-your-certificate">Remove your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user.html#link-your-github-account">Link your Github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#see-your-groups">See your groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#see-your-usage">See your usage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a><ul>
@@ -160,7 +162,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-new-job">Create a new job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-created-jobs">Access created jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-my-jobs">Delete my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-my-jobs-public">Make my jobs public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a><ul>
@@ -175,6 +180,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sharing.html#share-with-groups">Share with groups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sharing.html#share-a-job">Share a job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sharing.html#share-a-processing-service">Share a Processing Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sharing.html#share-a-data-package">Share a Data Package</a></li>
@@ -269,17 +275,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/control_panel.html">Control Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/data.html">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#manage-data-collections">Manage Data Collections</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Features Stories management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/data_package.html">Data Packages management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/user.html">Users management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/user.html#certificate-removal">Certificate removal</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/news.html">News management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Web story banners management</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -369,7 +378,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-nest-coreg.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-files-to-process">Select the files to process</a></li>
@@ -425,7 +433,10 @@
 <li><a class="reference internal" href="#">Processing</a><ul>
 <li><a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a></li>
 <li><a class="reference internal" href="#create-a-new-job">Create a new job</a></li>
-<li><a class="reference internal" href="#access-created-jobs">Access created jobs</a></li>
+<li><a class="reference internal" href="#access-my-jobs">Access my jobs</a></li>
+<li><a class="reference internal" href="#delete-my-jobs">Delete my jobs</a></li>
+<li><a class="reference internal" href="#make-my-jobs-public">Make my jobs public</a></li>
+<li><a class="reference internal" href="#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 </ul>
@@ -481,7 +492,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-new-job">Create a new job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-created-jobs">Access created jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-my-jobs">Delete my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-my-jobs-public">Make my jobs public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
@@ -532,18 +546,56 @@
 <li>Select the service you want to use (see <a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a>).</li>
 <li>Fill in the different parameters needed by the service.</li>
 </ol>
-<p><img alt="bulb" src="../_images/bulb.png" /> <em>Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input</em></p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input</p>
+</div>
 <ol class="arabic simple" start="3">
 <li>Click on <strong>Run Job</strong></li>
 <li>To visualize the result of the job, see <a class="reference internal" href="visualisation.html"><em>Visualisation</em></a></li>
 </ol>
 </div>
-<div class="section" id="access-created-jobs">
-<h2>Access created jobs<a class="headerlink" href="#access-created-jobs" title="Permalink to this headline">¶</a></h2>
-<p>To access an existing job:</p>
+<div class="section" id="access-my-jobs">
+<h2>Access my jobs<a class="headerlink" href="#access-my-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To access my jobs:</p>
 <ol class="arabic simple">
 <li>Open the Processing Services tab by clicking on <strong>Processing Services</strong> on the right of the geobrowser&#8217;s map.</li>
-<li>Click on <strong>Jobs</strong> top en the jobs tab.</li>
+<li>Click on <strong>My Jobs</strong> on top of the Processing Services tab.</li>
+<li>The list of existing jobs (failed or success) is displayed.</li>
+<li>Click on the job title.</li>
+<li>You can now see details about the job.</li>
+</ol>
+</div>
+<div class="section" id="delete-my-jobs">
+<h2>Delete my jobs<a class="headerlink" href="#delete-my-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To delete my jobs:</p>
+<ol class="arabic simple">
+<li>Open the Processing Services tab by clicking on <strong>Processing Services</strong> on the right of the geobrowser&#8217;s map.</li>
+<li>Click on <strong>My Jobs</strong> on top of the Processing Services tab.</li>
+<li>The list of existing jobs (failed or success) is displayed.</li>
+<li>Put your mouse over the job, a small &#8220;x&#8221; appears on the right.</li>
+<li>Click on the &#8220;x&#8221;.</li>
+<li>The job is deleted</li>
+</ol>
+</div>
+<div class="section" id="make-my-jobs-public">
+<h2>Make my jobs public<a class="headerlink" href="#make-my-jobs-public" title="Permalink to this headline">¶</a></h2>
+<p>To make my jobs public:</p>
+<ol class="arabic simple">
+<li>Go to the detail view of the job (see <a class="reference internal" href="#access-my-jobs">Access my jobs</a>).</li>
+<li>See <tt class="xref doc docutils literal"><span class="pre">Share</span> <span class="pre">a</span> <span class="pre">job</span></tt> &lt;sharing&gt;`.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">On the job list, jobs with the icon <img alt="public_jobs" src="../_images/public_jobs.png" /> are the jobs you made public.</p>
+</div>
+</div>
+<div class="section" id="access-public-jobs">
+<h2>Access public jobs<a class="headerlink" href="#access-public-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To access my jobs:</p>
+<ol class="arabic simple">
+<li>Open the Processing Services tab by clicking on <strong>Processing Services</strong> on the right of the geobrowser&#8217;s map.</li>
+<li>Click on <strong>Public Jobs</strong> on top of the Processing Services tab.</li>
 <li>The list of existing jobs (failed or success) is displayed.</li>
 <li>Click on the job title.</li>
 <li>You can now see details about the job.</li>

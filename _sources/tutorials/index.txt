@@ -14,7 +14,6 @@ Contents:
    G-POD SBAS InSAR Service<gpod-sbas-insar>
    G-POD NEST InSAR Service <gpod-nest-insar>
    G-POD NEST Coreg Service <gpod-nest-coreg>
-   G-POD NEST Toolbox Service (upcoming!)<gpod-nest>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ASAR Service<gpod-pf-asar>
    G-POD PF-ERS Service<gpod-pf-ers>

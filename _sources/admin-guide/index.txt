@@ -8,9 +8,10 @@ Contents:
    
    Control Panel<control_panel>
    Data Collection management<data>
-   Wps Providers management (upcoming!)<wps_provider>
-   Wps Services management (upcoming!)<wps_service>
-   Features Stories management (upcoming!)<feature>
-   Groups management (upcoming!)<group>
+   Wps Providers management<wps_provider>
+   Wps Services management<wps_service>
+   Data Packages management<data_package>
+   Groups management<group>
    Users management<user>
-  
+   News management<news>
+   Web story banners management<feature>

@@ -30,7 +30,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform v1.0 documentation" href="../index.html" />
     <link rel="next" title="Cloud Platform dashboard" href="cloud-dashboard.html" />
-    <link rel="prev" title="Users management" href="../admin-guide/user.html" />
+    <link rel="prev" title="Web story banners management" href="../admin-guide/feature.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -143,6 +143,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#remove-your-certificate">Remove your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#link-your-github-account">Link your Github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#see-your-groups">See your groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/user.html#see-your-usage">See your usage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../community-guide/data.html">Data</a><ul>
@@ -159,7 +161,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../community-guide/processing.html">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#create-a-new-job">Create a new job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#access-created-jobs">Access created jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#delete-my-jobs">Delete my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#make-my-jobs-public">Make my jobs public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/processing.html#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../community-guide/visualisation.html">Visualisation</a><ul>
@@ -174,6 +179,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../community-guide/sharing.html">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-with-groups">Share with groups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-job">Share a job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-processing-service">Share a Processing Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../community-guide/sharing.html#share-a-data-package">Share a Data Package</a></li>
@@ -268,17 +274,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/control_panel.html">Control Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/data.html">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#manage-data-collections">Manage Data Collections</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Features Stories management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/data_package.html">Data Packages management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/user.html">Users management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/user.html#certificate-removal">Certificate removal</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/news.html">News management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Web story banners management</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Cloud Operations Administrator Guide</a><ul>
@@ -368,7 +377,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-nest-coreg.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-files-to-process">Select the files to process</a></li>
@@ -433,7 +441,7 @@
               
                 
   <li>
-    <a href="../admin-guide/user.html" title="Previous Chapter: Users management"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Users management</span>
+    <a href="../admin-guide/feature.html" title="Previous Chapter: Web story banners management"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Web story banner...</span>
     </a>
   </li>
   <li>

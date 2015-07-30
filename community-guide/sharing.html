@@ -144,6 +144,8 @@
 <li class="toctree-l3"><a class="reference internal" href="user.html#remove-your-certificate">Remove your certificate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user.html#access-the-cloud-dashboard">Access the Cloud Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user.html#link-your-github-account">Link your Github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#see-your-groups">See your groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html#see-your-usage">See your usage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a><ul>
@@ -160,7 +162,10 @@
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="processing.html#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="processing.html#create-a-new-job">Create a new job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="processing.html#access-created-jobs">Access created jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html#delete-my-jobs">Delete my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html#make-my-jobs-public">Make my jobs public</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing.html#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a><ul>
@@ -175,6 +180,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#share-with-groups">Share with groups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-job">Share a job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-processing-service">Share a Processing Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-data-package">Share a Data Package</a></li>
@@ -269,17 +275,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/control_panel.html">Control Panel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/data.html">Data Collection management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#manage-data-collections">Manage Data Collections</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/data.html#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Features Stories management (upcoming!)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management (upcoming!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_provider.html">Wps Providers management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/wps_service.html">Wps Services management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/data_package.html">Data Packages management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/group.html">Groups management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/user.html">Users management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/user.html#certificate-removal">Certificate removal</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/news.html">News management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Web story banners management</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -369,7 +378,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-nest-coreg.html#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-nest.html">G-POD NEST Toolbox Service (upcoming!)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/gpod-gamma-l0.html#select-the-files-to-process">Select the files to process</a></li>
@@ -423,6 +431,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Sharing</a><ul>
+<li><a class="reference internal" href="#share-with-groups">Share with groups</a></li>
 <li><a class="reference internal" href="#share-a-job">Share a job</a></li>
 <li><a class="reference internal" href="#share-a-processing-service">Share a Processing Service</a></li>
 <li><a class="reference internal" href="#share-a-data-package">Share a Data Package</a></li>
@@ -483,6 +492,7 @@
 <li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#share-with-groups">Share with groups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-job">Share a job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-processing-service">Share a Processing Service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#share-a-data-package">Share a Data Package</a></li>
@@ -518,14 +528,33 @@
 </div>
 <p>Share your processing jobs and results with the community and allow other users to reproduce or modify your processes.
 You can even share your favorite Processing Service or a data package you created.</p>
+<div class="section" id="share-with-groups">
+<h2>Share with groups<a class="headerlink" href="#share-with-groups" title="Permalink to this headline">¶</a></h2>
+<p>Whenever you want to share an object with groups, you will see the following panel:</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_group.png"><img alt="../_images/sharing_group.png" src="../_images/sharing_group.png" style="width: 277.0px; height: 256.5px;" /></a>
+</div>
+<p>It will allow you to:</p>
+<ul class="simple">
+<li>make the object public</li>
+<li>make the object private</li>
+<li>make the object restricted to groups, and choose to which groups you want to share it</li>
+</ul>
+</div>
 <div class="section" id="share-a-job">
 <h2>Share a job<a class="headerlink" href="#share-a-job" title="Permalink to this headline">¶</a></h2>
 <p>To share a process you just created and executed:</p>
 <ol class="arabic simple">
 <li>Access the description of the job (see <a class="reference internal" href="processing.html"><em>Access created jobs</em></a>).</li>
-<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" />.</li>
-<li>Select a group to which you want to share (or make it public).</li>
-<li>Copy the link in your clipboard and share it with your friends.</li>
+<li>Click on <img alt="manage" src="../_images/groups_manage.png" /> to edit groups (see <tt class="xref doc docutils literal"><span class="pre">Share</span> <span class="pre">with</span> <span class="pre">groups</span></tt>).</li>
+<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" /> to get the share link.</li>
+<li>Copy the link in your clipboard and share it to members of the groups</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you share the link with someone not from one of the groups allowed to see this job, he will not be able to access it</p>
+</div>
+<ol class="arabic simple" start="5">
 <li>Other users will now be able to access this job just by clicking on the link you will have share with them, see the result and even reprocess it (see <a class="reference internal" href="processing.html"><em>Reprocess existing job</em></a>).</li>
 </ol>
 </div>
@@ -534,9 +563,14 @@ You can even share your favorite Processing Service or a data package you create
 <p>To share your favorite Processing Service:</p>
 <ol class="arabic simple">
 <li>Access the <a class="reference internal" href="platform/geobrowser.html"><em>Processing Service</em></a>.</li>
-<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" />.</li>
-<li>Select a group to which you want to share (or make it public).</li>
-<li>Copy the link in your clipboard and share it with your friends.</li>
+<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" /> to get the share link.</li>
+<li>Copy the link in your clipboard and share it to members of the groups</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you share the link with someone not from one of the groups allowed to see this Processing Service, he will not be able to access it</p>
+</div>
+<ol class="arabic simple" start="4">
 <li>Other users will now be able to access this Processing Service just by clicking on the link you will have share with them. The Processing Service will also appear in their list of available Processing Services.</li>
 </ol>
 </div>
@@ -544,12 +578,18 @@ You can even share your favorite Processing Service or a data package you create
 <h2>Share a Data Package<a class="headerlink" href="#share-a-data-package" title="Permalink to this headline">¶</a></h2>
 <p>To share a Data package you just created:</p>
 <ol class="arabic simple">
-<li>Access your <a class="reference internal" href="platform/geobrowser.html"><em>Features basket</em></a>.</li>
-<li>Create or load a data package.</li>
-<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" />.</li>
-<li>Select a group to which you want to share (or make it public).</li>
-<li>Copy the link in your clipboard and share it with your friends.</li>
-<li>Other users will now be able to access this data package just by clicking on the link you will have share with them. The data package will also appear in their list when the will load a data package.</li>
+<li>Access the <a class="reference internal" href="platform/geobrowser.html"><em>Features basket</em></a> and select the <em>Data Package</em> tab.</li>
+<li>Choose one data package from the list.</li>
+</ol>
+<p>3. Click on <img alt="manage" src="../_images/groups_manage.png" /> to edit groups (see <tt class="xref doc docutils literal"><span class="pre">Share</span> <span class="pre">with</span> <span class="pre">groups</span></tt>).
+3. Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" /> to get the share link.
+5. Copy the link in your clipboard and share it to members of the groups</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you share the link with someone not from one of the groups allowed to see this data package, he will not be able to access it</p>
+</div>
+<ol class="arabic simple" start="6">
+<li>Other users will now be able to access this data package just by clicking on the link you will have share with them. The data package will also appear in the list of available data packages to be loaded.</li>
 </ol>
 </div>
 <div class="section" id="share-a-data-search">
