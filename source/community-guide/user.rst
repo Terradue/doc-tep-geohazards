@@ -84,7 +84,9 @@ No certificate
 If you don't have yet any valid certificate:
 
 1. Request a new one to Terradue (clicking *Request certificate* button). 
-2. The new certificate, once created, will automatically be added to your profile.
+2. You will receive an email with a link to download the certificate.
+3. The new certificate, once created, will automatically be added to your profile.
+
 
 Existing certificate
 ~~~~~~~~~~~~~~~~~~~~
