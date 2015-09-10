@@ -4,6 +4,10 @@ Reporting
 | The Reporting page gives the possibility to the Administrator to create a new report file about the platform usage or to access existing ones.
 | The Administrator can select a Start date and a End date. Thus, statistics present in the report will be only concerning usage between these dates.
 
+
+.. figure:: ../includes/report.png
+	:figclass: img-border img-max-width
+
 Create a new report
 -------------------
 
@@ -52,7 +56,6 @@ Information present in the report
 The following information are present on the *Usage analytics* report:
 
 - Main parameters of the report
-
     - Date of creation
     - Start date | End date
     - List of users not used for the statistics (e.g administrator users).
@@ -60,48 +63,36 @@ The following information are present on the *Usage analytics* report:
 .. note:: *This list is configurable by a database administrator only directly on the database for now.*
 
 - Usage analytics (between <start date> and <end date>)
-
     - Total number of users of the platform
     - Users who signed in for the first time, with:
-
         - Username
         - Organization
         - First login date
         - Has already cloud access or not
-
     - Active users (logged more than once), with:
-
         - Username
         - Number of logins
-
     - Wps jobs created **ordered by user name**, with:
-
         - Username
         - Wpsjob name
         - Wpsjob creation date
         - Process name
         - Has been shared or not
-
     - Wps jobs created **ordered by date**, with:
-
         - Username
         - Wpsjob name
         - Wpsjob creation date
         - Process name
         - Has been shared or not
-
     - Number of wpsjob created per user
     - Number of wpsjob created per group
     - Number of wpsjob created per service
     - Data packages created, with:
-
         - Username
         - Data package name
         - Data package creation date
         - Has been shared or not
-
     - Number of Data packages created per user
     - Number of Data packages created per group
 
-.. figure:: ../includes/report.png
-	:figclass: img-border img-max-width
+
