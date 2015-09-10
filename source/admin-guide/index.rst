@@ -14,4 +14,5 @@ Contents:
    Groups management<group>
    Users management<user>
    News management<news>
-   Web story banners management<feature>
+   Web stories banners management<feature>
+   Reporting <report>
