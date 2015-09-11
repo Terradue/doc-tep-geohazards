@@ -138,9 +138,6 @@ To access the Cloud dashboard, you will need to have a valid certificate stored 
 
 Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula, see :doc:`Cloud Dashboard <cloud/dashboard>`).
 
-.. figure:: ../../includes/cloud_dashboard.png
-	:figclass: img-border
-
 .. |sunstone_logo.png| image:: ../includes/sunstone_logo-small.png
 
 Link your Github account
