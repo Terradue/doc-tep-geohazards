@@ -115,17 +115,31 @@ As it is link to your cloud account, *Terradue Support Team* needs to perform ma
 Access the Cloud Dashboard
 --------------------------
 
-If you can see the cloud logo |sunstone_logo.png|, congratulations, all is correctly set up.
-Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula).
+To access the Cloud dashboard, you will need to have a valid certificate stored on the platform, as well as an account on the Cloud Controller.
 
-If you cannot see the cloud logo, something is missing in your profile. Please check:
 
-1. You have a valid certificate stored in your user profile. If not, see `Upload your certificate`_.
-2. You have an account created on the Cloud Controller. If not, create one by clicking on **Create**.
+1. You don't have a valid certificate stored on the platform ? See `Upload your certificate`_.
 
-From this page, users can check everything is alright to access the Cloud Dashboard.
-If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
-Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).
+.. figure:: ../includes/cloud_certificate_missing.png
+	:figclass: img-border img-max-width
+	:scale: 80%
+
+2. You don't have an account on the Cloud Controller ? Create one by clicking on **Create**.
+
+.. figure:: ../includes/cloud_account_missing.png
+	:figclass: img-border img-max-width
+	:scale: 80%
+
+3. You can see the cloud logo |sunstone_logo.png| ? Congratulations, all is correctly set up.
+
+.. figure:: ../includes/cloud_dashboard_ok.png
+	:figclass: img-border img-max-width
+	:scale: 80%
+
+Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula, see :doc:`Cloud Dashboard <cloud/dashboard>`).
+
+.. figure:: ../../includes/cloud_dashboard.png
+	:figclass: img-border
 
 .. |sunstone_logo.png| image:: ../includes/sunstone_logo-small.png
 
