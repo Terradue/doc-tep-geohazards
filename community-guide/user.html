@@ -288,7 +288,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/news.html">News management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Web story banners management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/feature.html">Web stories banners management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin-guide/report.html">Reporting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/report.html#create-a-new-report">Create a new report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/report.html#select-an-existing-report">Select an existing report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/report.html#download-a-report">Download a report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/report.html#remove-a-report">Remove a report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin-guide/report.html#information-present-in-the-report">Information present in the report</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
@@ -604,6 +612,7 @@ At the first access, you may be asked to check your inbox in order to confirm yo
 <p>If you don&#8217;t have yet any valid certificate:</p>
 <ol class="arabic simple">
 <li>Request a new one to Terradue (clicking <em>Request certificate</em> button).</li>
+<li>You will receive an email with a link to download the certificate.</li>
 <li>The new certificate, once created, will automatically be added to your profile.</li>
 </ol>
 </div>
@@ -633,16 +642,26 @@ As it is link to your cloud account, <em>Terradue Support Team</em> needs to per
 </div>
 <div class="section" id="access-the-cloud-dashboard">
 <h2>Access the Cloud Dashboard<a class="headerlink" href="#access-the-cloud-dashboard" title="Permalink to this headline">¶</a></h2>
-<p>If you can see the cloud logo <img alt="sunstone_logo.png" src="../_images/sunstone_logo-small.png" />, congratulations, all is correctly set up.
-Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula).</p>
-<p>If you cannot see the cloud logo, something is missing in your profile. Please check:</p>
+<p>To access the Cloud dashboard, you will need to have a valid certificate stored on the platform, as well as an account on the Cloud Controller.</p>
 <ol class="arabic simple">
-<li>You have a valid certificate stored in your user profile. If not, see <a class="reference internal" href="#upload-your-certificate">Upload your certificate</a>.</li>
-<li>You have an account created on the Cloud Controller. If not, create one by clicking on <strong>Create</strong>.</li>
+<li>You don&#8217;t have a valid certificate stored on the platform ? See <a class="reference internal" href="#upload-your-certificate">Upload your certificate</a>.</li>
 </ol>
-<p>From this page, users can check everything is alright to access the Cloud Dashboard.
-If not done, the user will be asked to upload a valid certificate, and to create an account on the Cloud Controller.
-Once all is good, the Sunstone logo will be displayed and clickable to redirect the user to the Cloud dashboard (powered by OpenNebula).</p>
+<div class="img-border img-max-width figure">
+<a class="reference internal image-reference" href="../_images/cloud_certificate_missing.png"><img alt="../_images/cloud_certificate_missing.png" src="../_images/cloud_certificate_missing.png" style="width: 985.6px; height: 233.6px;" /></a>
+</div>
+<ol class="arabic simple" start="2">
+<li>You don&#8217;t have an account on the Cloud Controller ? Create one by clicking on <strong>Create</strong>.</li>
+</ol>
+<div class="img-border img-max-width figure">
+<a class="reference internal image-reference" href="../_images/cloud_account_missing.png"><img alt="../_images/cloud_account_missing.png" src="../_images/cloud_account_missing.png" style="width: 1014.4px; height: 233.6px;" /></a>
+</div>
+<ol class="arabic simple" start="3">
+<li>You can see the cloud logo <img alt="sunstone_logo.png" src="../_images/sunstone_logo-small.png" /> ? Congratulations, all is correctly set up.</li>
+</ol>
+<div class="img-border img-max-width figure">
+<a class="reference internal image-reference" href="../_images/cloud_dashboard_ok.png"><img alt="../_images/cloud_dashboard_ok.png" src="../_images/cloud_dashboard_ok.png" style="width: 1005.6px; height: 319.2px;" /></a>
+</div>
+<p>Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula, see <a class="reference internal" href="cloud/dashboard.html"><em>Cloud Dashboard</em></a>).</p>
 </div>
 <div class="section" id="link-your-github-account">
 <h2>Link your Github account<a class="headerlink" href="#link-your-github-account" title="Permalink to this headline">¶</a></h2>
