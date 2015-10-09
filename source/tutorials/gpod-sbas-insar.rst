@@ -20,7 +20,6 @@ Select the processing
         :width: 750px
         :align: center
 
-The "InSAR SBAS" panel is displayed with parameter values to be filled-in.
 
 Select the files to process
 ===================
@@ -70,6 +69,8 @@ Fill the parameter values
  -0.13
  
 * As *Cut data over selected AoI* type:
+
+.. code-block:: sbas-parameter
 
   false
 
