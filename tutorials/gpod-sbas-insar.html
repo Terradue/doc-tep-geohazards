@@ -538,88 +538,72 @@
 <ul class="simple">
 <li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a> (see guidance <a class="reference internal" href="../community-guide/user.html"><em>user</em></a> section)</li>
 <li>Access the Geobrowser: <a class="reference external" href="https://geohazards-tep.eo.esa.int/geobrowser/">https://geohazards-tep.eo.esa.int/geobrowser/</a></li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_0.png" src="../_images/tuto_sbas_0.png" style="width: 750px;" />
+</div>
+<ul class="simple">
 <li>Open the tab &#8220;Processing services&#8221; from the right of the map, and then select the processing service “InSAR SBAS”.</li>
 </ul>
-<p>The &#8220;InSAR SBAS&#8221; panel is displayed with parameter values to be filled-in.</p>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_1.png" src="../_images/tuto_sbas_1.png" style="width: 750px;" />
+</div>
 </div>
 <div class="section" id="select-the-files-to-process">
 <h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Navigate on the map to the Hawaii islands and define both the geo and time filters for data search.</li>
-<li>Use the spatial filter tooltip &#8220;Draw a rectangle&#8221; in order to define the search Area of Interest (AOI) over the Hawaii islands.</li>
-<li>Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, first around 2005-01-31 and then around 2007-02-01. NOTE: you can also edit precise search dates from the &#8220;Search Form&#8221; tooltip.</li>
-</ul>
-<p>From this filtered search, make drag and drops from the &#8220;Results Table&#8221; to your &#8220;Features Basket&#8221;, in order to select the following two input files:</p>
-<div class="highlight-sbas-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
-ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200</pre>
-</div>
-<ul class="simple">
-<li>Select the first input product</li>
+<li>Browse the Data Packages looking for <em>London Desc ASAR</em> package and click on the load button to upload it.</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_1.jpg" src="../_images/tuto_sbas_1.jpg" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_2.png" src="../_images/tuto_sbas_2.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>Select the second input product</li>
+<li>Surf the map to the London (UK) Area of Interest: the browser page should appear as depicted in the next figure.</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_2.jpg" src="../_images/tuto_sbas_2.jpg" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_3.png" src="../_images/tuto_sbas_3.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Set the <em>Job Title</em> with a meaningful name (e.g. London ASAR) and push the <em>sel. all</em> button in the Feature Basket.</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_4.png" src="../_images/tuto_sbas_4.png" style="width: 750px;" />
+</div>
+<ul class="simple">
+<li>Drag all the selected data and drop them within the Files field on the right panel.</li>
+</ul>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_5.png" src="../_images/tuto_sbas_5.png" style="width: 750px;" />
 </div>
 </div>
 <div class="section" id="fill-the-parameter-values">
 <h2>Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>As <em>Job title</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>SBAS Hawaii</pre>
-</div>
-<ul class="simple">
-<li>As input <em>Files</em>, drag and drop each of the two selected products.</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>ENVISAT ASAR ASA_IM__0P, 2005-01-31T20:23:34.132Z, V/V, Track: 200
-ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200</pre>
-</div>
-<ul class="simple">
-<li>As <em>Task Caption</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>SBAS Hawaii</pre>
-</div>
-<ul class="simple">
 <li>As <em>Lat</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>19.4455</pre>
+<div class="highlight-sbas-parameter"><pre>51.5</pre>
 </div>
 <ul class="simple">
 <li>As <em>Lon</em>, type:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>-155.61</pre>
+<div class="highlight-sbas-parameter"><pre>-0.13</pre>
+</div>
+<ul class="simple">
+<li>As <em>Cut data over selected AoI</em> type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><pre>false</pre>
 </div>
 <ul class="simple">
 <li>As <em>Processing Mode</em>, select:</li>
 </ul>
-<div class="highlight-sbas-parameter"><pre>IFG</pre>
+<div class="highlight-sbas-parameter"><pre>MTA</pre>
 </div>
-<ul class="simple">
-<li>As <em>Zone_UTM</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>5</pre>
-</div>
-<ul class="simple">
-<li>As <em>CM_UTM</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>-153</pre>
-</div>
-<ul class="simple">
-<li>As <em>Y0</em>, type:</li>
-</ul>
-<div class="highlight-sbas-parameter"><pre>0</pre>
+<div class="align-center figure align-center">
+<img alt="../_images/tuto_sbas_6.png" src="../_images/tuto_sbas_6.png" style="width: 750px;" />
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You can leave all the other fields as blank.</p>
-</div>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_3.jpg" src="../_images/tuto_sbas_3.jpg" style="width: 750px;" />
+<p class="last">You can leave all the other fields unchanged.</p>
 </div>
 </div>
 <div class="section" id="run-the-job">
@@ -628,19 +612,14 @@ ENVISAT ASAR ASA_IM__0P, 2007-02-05T20:23:03.412Z, V/V, Track: 200</pre>
 <li>Click on the button &#8220;Run Job&#8221; at the bottom of the SBAS InSAR processor tab, and monitor the progress of the running Job:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_4.jpg" src="../_images/tuto_sbas_4.jpg" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_7.png" src="../_images/tuto_sbas_7.png" style="width: 750px;" />
 </div>
 <ul class="simple">
-<li>After about 2 hours of processing time, check the status is set as &#8220;Successful Job&#8221;:</li>
-</ul>
-<div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_5.jpg" src="../_images/tuto_sbas_5.jpg" style="width: 750px;" />
-</div>
-<ul class="simple">
+<li>After about 21 hours of processing time, check the status is set as &#8220;Successful Job&#8221;</li>
 <li>Download the SBAS InSAR processing results once the Job is completed:</li>
 </ul>
 <div class="align-center figure align-center">
-<img alt="../_images/tuto_sbas_6.jpg" src="../_images/tuto_sbas_6.jpg" style="width: 750px;" />
+<img alt="../_images/tuto_sbas_8.png" src="../_images/tuto_sbas_8.png" style="width: 750px;" />
 </div>
 </div>
 </div>
