@@ -87,7 +87,7 @@ Fill the parameter values
         
 .. note::
 
-  You can leave all the other fields as blank.
+  You can leave all the other fields unchanged.
 
 Run the job
 ===========
