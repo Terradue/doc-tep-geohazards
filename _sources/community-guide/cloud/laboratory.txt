@@ -92,7 +92,7 @@ Mozilla Firefox
 
 - Click the **View Certificates** button.
 
-- Click the **Authorities** tab.
+- Click the **Your Certificates** tab.
 
 - Click the **Import** button at the bottom of the screen.
 
@@ -171,8 +171,55 @@ To solve this kind of issue, add manually Terradue's DNS server as a new line in
 
   nameserver 10.16.20.14
 
-If you are using the NetworkManager tool (e.g. in the GNOME desktop environment), you should instead statically add the nameserver address 10.16.20.14 through the GUI. 
+If you are using the NetworkManager tool (e.g. in the GNOME desktop environment), you should instead statically add the nameserver address 10.16.20.14 through the GUI.
 
+HTTP proxy server
+^^^^^^^^^^^^^^^^^
+
+When the *OpenVPN Connect* client is installed behind a corporate HTTP proxy server, the connection fails because the proxy server doesn't allow the VPN traffic. Thus the *OpenVPN Connect* client is not able to automatically download the *.ovpn* configuration file.
+
+Hereafter a procedure to configure your VPN connection in that situation:
+
+* Remove any previous version of the *OpenVPN Connect* client,
+
+* Download and install the latest OpenVPN client from https://openvpn.net/index.php/open-source/downloads.html,
+
+* Go to https://access.terradue.com/?src=login,
+
+* Type as Username the email used during the registration,
+
+* Type as Password the passphrase that you chose during the registration,
+
+* Download the *client.ovpn* configuration file from the link *"Yourself (user-locked profile)"*,
+
+* Modify the *client.ovpn* as described below:
+
+* Substitute:
+
+.. code-block:: bash
+
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 tcp
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 udp
+  remote access.terradue.com 443 udp
+
+With:
+
+.. code-block:: bash
+
+  remote access.terradue.com 443 tcp
+  http-proxy <proxy_address> <proxy_port>
+  http-proxy-retry
+  
+Check with your Network Administrator the values of *<proxy_address>* *<proxy_port>*.
+
+* Put the *client.ovpn* configuration file under *<installation-dir>/config*,
+
+* Start the OpenVPN connection.
 
 Going further
 -------------
