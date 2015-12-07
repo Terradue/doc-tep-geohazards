@@ -229,5 +229,5 @@ For **Time Series Generation Mode** a .tgz folder named “result_final” is pu
         
 **Feedbacks**
 
-Users are also kindly invited to report any issue and problem encountered during the use of this service to <GEP REFERENCE/TICKETING SYSTEM> **sbas-help@irea.cnr.it** and **eo-gpod@esa.int**. Moreover, suggestions and comments are warmly appreciated in order to keep the service as much as possible appealing, effective and efficient.
+Users are also kindly invited to report any issue and problem encountered during the use of this service to https://support.terradue.com/projects/gep-cnr-irea **sbas-help@irea.cnr.it** and **eo-gpod@esa.int**. Moreover, suggestions and comments are warmly appreciated in order to keep the service as much as possible appealing, effective and efficient.
 
