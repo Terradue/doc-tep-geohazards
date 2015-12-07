@@ -199,7 +199,7 @@ For **Time Series Generation Mode** a .tgz folder named “result_final” is pu
 	
 	The second record contains the list of the epochs of acquisitions used in the time series, given as fraction of year.  In particular, the following relation explains the correspondence between the actual date and its representation as fraction of the year:
 
-							yyyy.ffff = yyyy + (mm-1)/12 + dd/365
+	yyyy.ffff = yyyy + (mm-1)/12 + dd/365
 
 	where, yyyy.ffff is the acquisition epoch represented as fraction of the year (where ffff is the decimal part), while yyyy, mm and dd 		are the year, month and day, respectively, assuming that a date is represented as: ddmmyyyy. For instance, the date 17052013 corresponds 		to: 2013 + (5-1)/12 + 17/365 = 2013.3799
 			
