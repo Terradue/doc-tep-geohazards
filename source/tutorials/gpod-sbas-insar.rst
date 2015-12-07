@@ -6,6 +6,7 @@ This tutorial describes how to submit a job for the SBAS-InSAR service to obtain
 The provided service performs the full SBAS-InSAR chain from RAW data (Level 0) focusing to displacement time series generation.
 
 The main user actions are the following:
+
 *	select the Input SAR Raw data to be processed;
 *	optionally define the area of SAR data to be processed;
 *	set input parameters/threshold (e.g. baseline, temporal coherence, …) for SBAS-InSAR processing;
@@ -88,7 +89,9 @@ For this tutorial, a pre-defined data set has been prepared to speed up data sel
 Fill the parameter values
 ===================
 
-Leave the *Bounding Box* unchanged. By the way, this field is needed when the subsequent *Cut data over selected AoI* flag is set to “true”.
+Leave the *Bounding Box* untouched (Area of Interest empty). 
+
+.. note:: This field is needed when the subsequent Cut data over selected AoI flag is set to “true”.
 
 * As *Lat*, type:
 
@@ -110,7 +113,9 @@ Leave the *Bounding Box* unchanged. By the way, this field is needed when the su
 
   false
 
-When “true”, the system automatically process the AOI identified by the *Bounding Box* selection. The area along the SAR strip is selected according to the following Figure. 
+.. note:: When “true”, the system automatically process the AOI identified by the *Bounding Box* selection. 
+
+The area along the SAR strip is selected according to the following example diagram, with definitions provided for the Area of Interest, Processed Area, and Reference point.
 
 .. figure:: assets/tuto_sbas_5_1.png
 	:figclass: align-center
@@ -123,7 +128,7 @@ Acquisitions that do not cover the selected area are automatically discarded. In
 
 .. code-block:: sbas-parameter
   
-  Time Series Generation
+	Time Series Generation (or MTA for Multi-Temporal Analysis)
 
 .. figure:: assets/tuto_sbas_6.png
 	:figclass: align-center
