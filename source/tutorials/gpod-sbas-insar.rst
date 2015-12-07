@@ -119,7 +119,7 @@ The area along the SAR strip is selected according to the following example diag
 
 .. figure:: assets/tuto_sbas_5_1.png
 	:figclass: align-center
-        :width: 550px
+        :width: 250px
         :align: center
 
 Acquisitions that do not cover the selected area are automatically discarded. In any case, within this processing mode, the size of the processed area along the azimuth direction ranges between 15000 and 40000 full resolution lines. This feature is **available only for ASAR data** and **ERS data in ASAR format** and it is particularly useful for processing the long strips.
