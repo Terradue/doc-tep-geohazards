@@ -16,9 +16,9 @@ As additional feature, the possibility to generate single or stack of interferog
 Users are encouraged to use the SBAS-InSAR service here described for scientific purposes. Please, note that commercial use (including service provisioning) of any part of this service is not allowed without express permission from the CNR-IREA Institute and ESA. 
 Being this service available for free for scientific use, please recognize the effort made by the authors by citing:
 
-=====  =====  ======
-F. Casu, S. Elefante, P. Imperatore, I. Zinno, M. Manunta, C. De Luca and R. Lanari, "SBAS-DInSAR Parallel Processing for Deformation Time-Series Computation," IEEE JSTARS, vol. 7, no. 8, pp. 3285-3296, 2014, doi: 10.1109/JSTARS.2014.2322671
-=====  =====  ======
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| "F. Casu, S. Elefante, P. Imperatore, I. Zinno, M. Manunta, C. De Luca and R. Lanari, "SBAS-DInSAR Parallel Processing for Deformation Time-Series Computation," IEEE JSTARS, vol. 7, no. 8, pp. 3285-3296, 2014, doi: 10.1109/JSTARS.2014.2322671 " |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Select the processing
 =====================
