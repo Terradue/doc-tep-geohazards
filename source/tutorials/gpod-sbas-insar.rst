@@ -135,8 +135,9 @@ Acquisitions that do not cover the selected area are automatically discarded. In
 You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
 
 For sake of completeness, in the following a brief description of each parameter is provided:
-+ **Max Perpendicular Baseline** is the maximum allowed perpendicular baseline between Master and Slave of each exploited InSAR pair;
-+ **Max Temporal Baseline** is the maximum allowed temporal separation between Master and Slave of each exploited InSAR pair;
+
+- **Max Perpendicular Baseline** is the maximum allowed perpendicular baseline between Master and Slave of each exploited InSAR pair;
+- **Max Temporal Baseline** is the maximum allowed temporal separation between Master and Slave of each exploited InSAR pair;
 + **Ground Pixel Dimension** represents the dimension of the resulting multilooked pixel of the SBAS-InSAR processing. This practically translates into number of looks along azimuth and range. As an example: 80m correspond to 20x4 looks in the ENVISAT case, while 40m to 10x2.
 + **Max Allowed Delta-Doppler** is the maximum allowed Doppler Centroid difference between Master and Slave of each exploited InSAR pair;
 + **Max Allowed Doppler Centroid** represents the maximum allowed Doppler Centroid of each SAR acquisition.
