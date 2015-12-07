@@ -135,16 +135,16 @@ Acquisitions that do not cover the selected area are automatically discarded. In
 You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
 
 For sake of completeness, in the following a brief description of each parameter is provided:
-* **Max Perpendicular Baseline** is the maximum allowed perpendicular baseline between Master and Slave of each exploited InSAR pair;
-* **Max Temporal Baseline** is the maximum allowed temporal separation between Master and Slave of each exploited InSAR pair;
-* **Ground Pixel Dimension** represents the dimension of the resulting multilooked pixel of the SBAS-InSAR processing. This practically translates into number of looks along azimuth and range. As an example: 80m correspond to 20x4 looks in the ENVISAT case, while 40m to 10x2.
-* **Max Allowed Delta-Doppler** is the maximum allowed Doppler Centroid difference between Master and Slave of each exploited InSAR pair;
-* **Max Allowed Doppler Centroid** represents the maximum allowed Doppler Centroid of each SAR acquisition.
-* **Prefer Short Time Interferograms.** If checked, the data pair selection tool prefers short time interferograms. Check it when the temporal decorrelation is high and the critical baseline is large. Note that to keep short time interferograms the perpendicular baseline threshold must be increased.
-* **Common Band Filtering** allows performing, if selected, a common band filtering in the interferogram generation.
-* **Goldstein Weight** is the exponential value of the Goldstein’s phase filter (0.5 as default value).
-* **Coh Threshold** represents the Coherence Threshold on the pixels before unwrapping and can assume values between 0.6 and 1.
-* **APS Smoothing Time Window** is the temporal window width (in days) for the APS filter on the resulting time series. 
++ **Max Perpendicular Baseline** is the maximum allowed perpendicular baseline between Master and Slave of each exploited InSAR pair;
++ **Max Temporal Baseline** is the maximum allowed temporal separation between Master and Slave of each exploited InSAR pair;
++ **Ground Pixel Dimension** represents the dimension of the resulting multilooked pixel of the SBAS-InSAR processing. This practically translates into number of looks along azimuth and range. As an example: 80m correspond to 20x4 looks in the ENVISAT case, while 40m to 10x2.
++ **Max Allowed Delta-Doppler** is the maximum allowed Doppler Centroid difference between Master and Slave of each exploited InSAR pair;
++ **Max Allowed Doppler Centroid** represents the maximum allowed Doppler Centroid of each SAR acquisition.
++ **Prefer Short Time Interferograms.** If checked, the data pair selection tool prefers short time interferograms. Check it when the temporal decorrelation is high and the critical baseline is large. Note that to keep short time interferograms the perpendicular baseline threshold must be increased.
++ **Common Band Filtering** allows performing, if selected, a common band filtering in the interferogram generation.
++ **Goldstein Weight** is the exponential value of the Goldstein’s phase filter (0.5 as default value).
++ **Coh Threshold** represents the Coherence Threshold on the pixels before unwrapping and can assume values between 0.6 and 1.
++ **APS Smoothing Time Window** is the temporal window width (in days) for the APS filter on the resulting time series. 
 
 
 Run the job
@@ -170,7 +170,7 @@ Run the job
 
 The result that the user will find on web portal are strongly depending on the selected **Processing Mode.**
 
-.. topic:: Conventions and assumptions
+	**Conventions and assumptions**
 	
 	Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.
 	Note that all the published binary files (.dat) are in 32-bit floating point raster format (if not differently specified) without any 		header information. The origin of each binary matrix is located in the Lower Left corner. 
@@ -179,6 +179,7 @@ The result that the user will find on web portal are strongly depending on the s
 	In the naming convention, the <ddmmyyyy> represents the day, month and year of a specific date while <SSS> is a three character code referring to the used sensor (e.g, ERS, ENV, ...).
 	
 	**Published Results**
+
 	For the **Interferogram Generation** Mode a .tgz folder related to each interferogram pair (in the format <ddmmyyyySSS>_<ddmmyyyySSS>.tgz) is published; each folder contains:
 	
 		+ fr.dat: Interferogram as binary file in SAR coordinates;
