@@ -171,50 +171,50 @@ Run the job
 
 The result that the user will find on web portal are strongly depending on the selected **Processing Mode.**
 
-    **Conventions and assumptions**
+**Conventions and assumptions**
 	
-    Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.
-    Note that all the published binary files (.dat) are in 32-bit floating point raster format (if not differently specified) without any 		header information. The origin of each binary matrix is located in the Lower Left corner. 
-    Results provided in SAR coordinates have the Azimuth direction along the columns (X) and Range direction along the rows (Y).
-    Results provided in GEO coordinates (Lat-Lon WGS84) have the Longitude direction along the columns (X) and the Latitude direction along the rows (Y).
-    In the naming convention, the <ddmmyyyy> represents the day, month and year of a specific date while <SSS> is a three character code referring to the used sensor (e.g, ERS, ENV, ...).
-	
-	**Published Results**
+Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.
+Note that all the published binary files (.dat) are in 32-bit floating point raster format (if not differently specified) without any 		header information. The origin of each binary matrix is located in the Lower Left corner. 
+Results provided in SAR coordinates have the Azimuth direction along the columns (X) and Range direction along the rows (Y).
+Results provided in GEO coordinates (Lat-Lon WGS84) have the Longitude direction along the columns (X) and the Latitude direction along the rows (Y).
+In the naming convention, the <ddmmyyyy> represents the day, month and year of a specific date while <SSS> is a three character code referring to the used sensor (e.g, ERS, ENV, ...).
 
-	For the **Interferogram Generation** Mode a .tgz folder related to each interferogram pair (in the format <ddmmyyyySSS>_<ddmmyyyySSS>.tgz) is published; each folder contains:
+**Published Results**
+
+For the **Interferogram Generation** Mode a .tgz folder related to each interferogram pair (in the format <ddmmyyyySSS>_<ddmmyyyySSS>.tgz) is published; each folder contains:
 	
-		+ fr.dat: Interferogram as binary file in SAR coordinates;
-		+ coh.dat: Coherence map as binary file in SAR coordinates;
-		+ fr.dat_GOLD: Interferogram filtered with Goldstein kernel as binary file in SAR coordinates;
-		+ fr.dat_GOLD_GEO_<dimLon>x<dimLat>: Geocoded Goldstein filtered interferogram as binary file;
-		+ coh.dat_GEO_<dimLon>x<dimLat>: Geocoded Coherence map as binary file;
-		+ fr.dat_<ddmmyyyySSS>_<ddmmyyyySSS>_GOLD_GEO.tif.kmz: Quick-look of the geocoded Interferogram importable in Google Earth;
-		+ the file Interferograms_Dimension.txt which contains the Azimuth and Range dimensions for the binary files provided in SAR coordinates.
+	+ fr.dat: Interferogram as binary file in SAR coordinates;
+	+ coh.dat: Coherence map as binary file in SAR coordinates;
+	+ fr.dat_GOLD: Interferogram filtered with Goldstein kernel as binary file in SAR coordinates;
+	+ fr.dat_GOLD_GEO_<dimLon>x<dimLat>: Geocoded Goldstein filtered interferogram as binary file;
+	+ coh.dat_GEO_<dimLon>x<dimLat>: Geocoded Coherence map as binary file;
+	+ fr.dat_<ddmmyyyySSS>_<ddmmyyyySSS>_GOLD_GEO.tif.kmz: Quick-look of the geocoded Interferogram importable in Google Earth;
+	+ the file Interferograms_Dimension.txt which contains the Azimuth and Range dimensions for the binary files provided in SAR coordinates.
 		
-	For **Time Series Generation Mode** a .tgz folder named “result_final” is published, which contains:
+For **Time Series Generation Mode** a .tgz folder named “result_final” is published, which contains:
 	
-		+ 	One ASCII file containing all the outputs of the SBAS-InSAR chain processing. 
+	+ 	One ASCII file containing all the outputs of the SBAS-InSAR chain processing. 
 
-			The first record contains, respectively: the number of field of each record; the number of acquisitions used in the time 	series and the measure unit for the mean displacement velocity. 
+		The first record contains, respectively: the number of field of each record; the number of acquisitions used in the time 	series and the measure unit for the mean displacement velocity. 
 
-			The second record contains the list of the epochs of acquisitions used in the time series, given as fraction of year.  In particular, the following relation explains the correspondence between the actual date and its representation as fraction of the year:
+		The second record contains the list of the epochs of acquisitions used in the time series, given as fraction of year.  In particular, the following relation explains the correspondence between the actual date and its representation as fraction of the year:
 
 .. yyyy.ffff = yyyy + (mm-1)/12 + dd/365::
 
-			where, yyyy.ffff is the acquisition epoch represented as fraction of the year (where ffff is the decimal part), while yyyy, mm and dd are the year, month and day, respectively, assuming that a date is represented as: ddmmyyyy. For instance, the date 17052013 corresponds to: 2013 + (5-1)/12 + 17/365 = 2013.3799
+		where, yyyy.ffff is the acquisition epoch represented as fraction of the year (where ffff is the decimal part), while yyyy, mm and dd are the year, month and day, respectively, assuming that a date is represented as: ddmmyyyy. For instance, the date 17052013 corresponds to: 2013 + (5-1)/12 + 17/365 = 2013.3799
 			
-			All the others records contain, per each pixel:
-			+ East and North UTM WGS84 coordinates (in meters);
-			+ Temporal coherence value;
-			+ Mean displacement velocity, calculated as linear fit of the relevant time series (in centimetres per year);
-			+ SAR coordinates (in pixels);
-			+ geographic WGS84 coordinates (latitude and longitude, in degrees);
-			+ residual topography w.r.t. the used DEM (in meters);
-			+ deformation time series (in centimetres).
+		All the others records contain, per each pixel:
+		+ East and North UTM WGS84 coordinates (in meters);
+		+ Temporal coherence value;
+		+ Mean displacement velocity, calculated as linear fit of the relevant time series (in centimetres per year);
+		+ SAR coordinates (in pixels);
+		+ geographic WGS84 coordinates (latitude and longitude, in degrees);
+		+ residual topography w.r.t. the used DEM (in meters);
+		+ deformation time series (in centimetres).
 			
-			The basic scheme of the output ASCII file is reported in Figure 1.
+		The basic scheme of the output ASCII file is reported in Figure 1.
 
-			The file name is: SBAS_output4GIS_<ddmmyyyySSS>_<ddmmyyyySSS>.txt, where the two date indicate the starting and ending acquisitions used for generating the displacement time series.
+		The file name is: SBAS_output4GIS_<ddmmyyyySSS>_<ddmmyyyySSS>.txt, where the two date indicate the starting and ending acquisitions used for generating the displacement time series.
 			
 		+ One .kmz file containing the Quick-look of the retrieved mean deformation velocity importable in Google Earth.
 		+ Two txt files named *currDates.txt* and *currPairs.txt* which contain the lists of acquisitions and interferometric pairs, respectively.
