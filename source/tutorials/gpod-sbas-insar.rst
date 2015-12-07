@@ -173,23 +173,23 @@ The result that the user will find on web portal are strongly depending on the s
 
 **Conventions and assumptions**
 	
-	Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.
-	Note that all the published binary files (.dat) are in 32-bit floating point raster format (if not differently specified) without any 			header information. The origin of each binary matrix is located in the Lower Left corner. 
-	Results provided in SAR coordinates have the Azimuth direction along the columns (X) and Range direction along the rows (Y).
-	Results provided in GEO coordinates (Lat-Lon WGS84) have the Longitude direction along the columns (X) and the Latitude direction along the rows (Y).
-	In the naming convention, the <ddmmyyyy> represents the day, month and year of a specific date while <SSS> is a three character code referring to the used sensor (e.g, ERS, ENV, ...).
+Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.
+Note that all the published binary files (.dat) are in 32-bit floating point raster format (if not differently specified) without any 			header information. The origin of each binary matrix is located in the Lower Left corner. 
+Results provided in SAR coordinates have the Azimuth direction along the columns (X) and Range direction along the rows (Y).
+Results provided in GEO coordinates (Lat-Lon WGS84) have the Longitude direction along the columns (X) and the Latitude direction along the rows (Y).
+In the naming convention, the <ddmmyyyy> represents the day, month and year of a specific date while <SSS> is a three character code referring to the used sensor (e.g, ERS, ENV, ...).
 
 **Published Results**
 
-	For the **Interferogram Generation** Mode a .tgz folder related to each interferogram pair (in the format <ddmmyyyySSS>_<ddmmyyyySSS>.tgz) is published; each folder contains:
+For the **Interferogram Generation** Mode a .tgz folder related to each interferogram pair (in the format <ddmmyyyySSS>_<ddmmyyyySSS>.tgz) is published; each folder contains:
 	
-	+ fr.dat: Interferogram as binary file in SAR coordinates;
-	+ coh.dat: Coherence map as binary file in SAR coordinates;
-	+ fr.dat_GOLD: Interferogram filtered with Goldstein kernel as binary file in SAR coordinates;
-	+ fr.dat_GOLD_GEO_<dimLon>x<dimLat>: Geocoded Goldstein filtered interferogram as binary file;
-	+ coh.dat_GEO_<dimLon>x<dimLat>: Geocoded Coherence map as binary file;
-	+ fr.dat_<ddmmyyyySSS>_<ddmmyyyySSS>_GOLD_GEO.tif.kmz: Quick-look of the geocoded Interferogram importable in Google Earth;
-	+ the file Interferograms_Dimension.txt which contains the Azimuth and Range dimensions for the binary files provided in SAR coordinates.
++ fr.dat: Interferogram as binary file in SAR coordinates;
++ coh.dat: Coherence map as binary file in SAR coordinates;
++ fr.dat_GOLD: Interferogram filtered with Goldstein kernel as binary file in SAR coordinates;
++ fr.dat_GOLD_GEO_<dimLon>x<dimLat>: Geocoded Goldstein filtered interferogram as binary file;
++ coh.dat_GEO_<dimLon>x<dimLat>: Geocoded Coherence map as binary file;
++ fr.dat_<ddmmyyyySSS>_<ddmmyyyySSS>_GOLD_GEO.tif.kmz: Quick-look of the geocoded Interferogram importable in Google Earth;
++ the file Interferograms_Dimension.txt which contains the Azimuth and Range dimensions for the binary files provided in SAR coordinates.
 		
 For **Time Series Generation Mode** a .tgz folder named “result_final” is published, which contains:
 	
