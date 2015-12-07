@@ -47,7 +47,7 @@ Select the files to process
 Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.
 
 * The algorithm accepts as inputs **ASAR** and **ERS RAW (level 0) data**. SLCs cannot be processed. The corresponding catalogue entry names are (in the brackets are the actual file names):
-	+ ENVISAT data: **ENVISAT ASAR L0** (ASA_IM__);
+	+ ENVISAT data: **ENVISAT ASAR L0** (ASA_IM\__);
 	+ ERS data in CEOS format: **ERS-x SAR IM L0** (ER0x_SAR_IM__0P), where “x” can be equal to 1 or 2;
 	+ ERS data in ASAR format: **ERS-x SAR Ex_SAR_IM__0P** (SAR_IM__0P), where “x” can be equal to 1 or 2.
 * It is very important that the user selects **images related to the same track only**. In case of use of ASAR data, also same sub-swaths have to be considered.
