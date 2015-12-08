@@ -235,6 +235,7 @@ For **Time Series Generation Mode** a .tgz folder named “result_final” is pu
 **Feedbacks**
 
 Users are also kindly invited to report any issue and problem encountered during the use of the SBAS service:
+
 *	For GEP on-boarded users, by issuing a ticket from their project support space on https://support.terradue.com 
 *	For other signed-in GEP users, by sending an email to the SBAS support team **sbas-help@irea.cnr.it** and **eo-gpod@esa.int**
 
