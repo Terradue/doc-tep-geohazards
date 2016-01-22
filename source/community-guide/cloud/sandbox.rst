@@ -44,6 +44,9 @@ Access a Developer Cloud Sandbox
 
 To connect your Developer Cloud Sandbox you need a secure connection with the Terradue's infrastructure. Following this guide you will be able to access your Sandbox through the Secure Shell (SSH) network protocol.
 
+.. WARNING::
+  The VNC access for the Developer Cloud Sandbox templates is intended only for administrator usage. The regular users shall use the Secure Shell (SSH) access, as described in this section.
+
 Prerequisites
 ^^^^^^^^^^^^^
 
