@@ -81,9 +81,8 @@ To create a new data package:
 1. Add all data you want in the **Features Basket**.
 2. Click on **Save**.
 3. Choose a name for the data package.
-4. Tick the box if you want to make it public (means that everybody can access it).
-5. Click on **Save**.
-6. The data package is saved on the platform, you can re-access it later.
+4. Click on **Save**.
+5. The data package is saved on the platform, you can re-access it later.
 
 .. figure:: ../includes/geobrowser_dp_save.png
 	:scale: 75%
