@@ -66,13 +66,13 @@ To make my jobs public:
 
 .. |public_jobs| image:: ../includes/public_jobs.png
 
-Access public jobs
+Access community jobs
 ------------------
 
-To access my jobs:
+To access the community jobs:
 
 1. Open the Processing Services tab by clicking on **Processing Services** on the right of the geobrowser's map.
-2. Click on **Public Jobs** on top of the Processing Services tab.
+2. Click on **Community Jobs** on top of the Processing Services tab.
 3. The list of existing jobs (failed or success) is displayed.
 4. Click on the job title.
 5. You can now see details about the job.
