@@ -25,6 +25,7 @@ To create a new job:
 
 1. Select the service you want to use (see `Discover existing WPS`_).
 2. Fill in the different parameters needed by the service.
+
 .. tip:: Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input (see `Use data in a process <http://terradue.github.io/doc-tep-geohazards/community-guide/data.html#use-data-in-a-process>`_)
 
 3. Click on **Run Job**
