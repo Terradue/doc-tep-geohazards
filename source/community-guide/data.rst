@@ -113,9 +113,9 @@ To clear your current basket:
 Use data in a process
 ---------------------
 
-1. Select a WPS and open it.
+1. Select one of the processing services and open it.
 2. The list of parameters is visible.
-3. Drag data from the **Results Table** and drop it over the selected parameter (only selected items are added).
-4. **OR** drag data from the **Features Basket** and drop it over the selected parameter (all items from the basket are added).
+3. Select one or more entries either from the **Results Table** or from the **Features Basket**. 
+4. Drag the data and drop it over the selected parameter.
 5. In case of several items, it creates one occurence of the parameter per item.
 6. Data are ready to be used in the process. Click on **Run process* to actually run the process.
