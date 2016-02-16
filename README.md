@@ -1,5 +1,7 @@
 # Geohazards platform Documentation
 
+[![Join the chat at https://gitter.im/geohazards-tep/doc-tep-geohazards-nsbas](https://badges.gitter.im/geohazards-tep/doc-tep-geohazards-nsbas.svg)](https://gitter.im/geohazards-tep/doc-tep-geohazards-nsbas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is the official repository of Tep Geohazards platform's Documentation. This
 documentation is live at:
 [http://terradue.github.io/doc-tep-geohazards](http://terradue.github.io/doc-tep-geohazards).
