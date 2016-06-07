@@ -3,16 +3,16 @@
 Join the GEP Laboratory
 ########################
 
-A GEP Laboratory is a virtual network on the Terradue's Cloud Platform dedicated to the hosting of your Cloud services.
-A GEP laboratory and its services are secured by user authentication (using SSL / X.509 certificates) and VPN access.
-The following sections will guide you through the procedures related to the Certificate download and VPN Setup.
+A GEP Laboratory is a virtual network on Terradue Cloud Platform, dedicated to the hosting of your Cloud resources.
+A GEP laboratory and its services are secured by VPN access and user authentication (via user generated key pair).
+The following sections will guide you through the procedures related to the VPN Setup and the encryption keys generation.
 
 .. _laboratory-prerequisites:
 
 Prerequisites
 -------------
-
-- You registered on Terradue's Portal
+- You are registered on the Geohazards Exploitation Platform https://geohazards-tep.eo.esa.int/umsso
+- You are registered on Terradue's Portal https://www.terradue.com/portal/signup
 - You received an e-mail with subject "SSH key pair and VPN Setup procedure | Join your Laboratory !".
 
 .. _install-ssh-key:
@@ -74,7 +74,7 @@ Generate a Private PuTTY key from the Private SSH key
 Install your OpenVPN Client
 ---------------------------
 
-Now you can download and install your OpenVPN Client, in order to establish a connection with Terradue's VPN server.
+Download and install your OpenVPN Client, in order to establish a connection with Terradue's VPN server.
 
 .. important::
 
