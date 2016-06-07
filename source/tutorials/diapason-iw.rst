@@ -1,7 +1,7 @@
 Sentinel-1 IW mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DIAPASON in an InSAR processing software developed by the French space agency (CNES) and 
+DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
 maintained by ALTAMIRA INFORMATION.
 
 This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.
@@ -55,7 +55,7 @@ Higher values will result in more filtering of the output interferogram  phase.
 Running the job
 ===============
 
-* Click on "Run Job" button from the processor configuration pane and wait for the job to complete.
+* Click on "Run Job" button from the processor configuration panel and wait for the job to complete.
 
 
 .. figure:: assets/tuto_diapiw_4.png
