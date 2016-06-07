@@ -78,8 +78,6 @@ VNC Connection
 
   <ESA CloudToolbox IP>:5902
 
-Further references: http://wiki.services.eoportal.org/tiki-index.php?page=CloudToolbox+FAQ
-
 User Login
 ++++++++++
 
