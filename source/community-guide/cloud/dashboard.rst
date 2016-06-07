@@ -9,7 +9,6 @@ Prerequisites
 ^^^^^^^^^^^^^
 
 - You are registered on Terradue's Portal https://www.terradue.com/portal/signup
-- You are connected to the GEP Laboratory (see :ref:`laboratory`),
 
 Access the Cloud Dashboard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
