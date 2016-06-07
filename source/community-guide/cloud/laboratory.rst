@@ -4,8 +4,7 @@ Join the GEP Laboratory
 ########################
 
 A GEP Laboratory is a virtual network on Terradue Cloud Platform, dedicated to the hosting of your Cloud resources.
-A GEP laboratory and its services are secured by VPN access and user authentication (via user generated key pair).
-The following sections will guide you through the procedures related to the VPN Setup and the encryption keys generation.
+A GEP laboratory and its services are secured by authenticated VPN access. The following sections will guide you through the procedures related to the VPN Setup.
 
 .. _laboratory-prerequisites:
 
@@ -13,63 +12,7 @@ Prerequisites
 -------------
 - You are registered on the Geohazards Exploitation Platform https://geohazards-tep.eo.esa.int/umsso
 - You are registered on Terradue's Portal https://www.terradue.com/portal/signup
-- You received an e-mail with subject "SSH key pair and VPN Setup procedure | Join your Laboratory !".
-
-.. _install-ssh-key:
-
-Generate and install the SSH key pair
-------------------------------------
-
-SSH key pair is a way to identify trusted computers without involving passwords. You can generate a SSH key pair and add the public key to your account on Terradue Cloud Platform by following the procedures below.
-
-Generate a new SSH key pair
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Go to https://www.terradue.com,
-* Click on the top-right button *Sign-in*,
-* Type your login credentials,
-* Click on the top-right button showing your username,
-* Click on **Profile**,
-* In the *Personal settings* left panel, click on **SSH keys**,
-* Click on **Generate a new SSH key pair**,
-* Type your password when requested,
-* Download the *Private SSH key*.
-
-Install the generated SSH key pair
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Linux/Unix/Mac users
-********************
-
-Store your SSH key pair into the .ssh directory in your HOME directory:
-
-.. code-block:: bash
-
-  cd <your/download/directory>
-  chmod 400 id_rsa
-  cp id_rsa $HOME/.ssh/
-
-
-Windows users
-**************
-
-Download and install PuTTY
-++++++++++++++++++++++++++
-
-PuTTY is a well-known freely available SSH client http://www.putty.org/. To download and install it:
-
-* Go to http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip,
-* Unzip the downloaded file in a location of your filesystem that you prefer.
-
-Generate a Private PuTTY key from the Private SSH key
-+++++++++++++++++++++++++++++++++++++++++++++++
-
-* Go to the unzipped putty folder,
-* Double-click on the *PUTTYGEN.EXE* executable,
-* Click on the *Import key* command from the *Conversions* menu,
-* Select the id_rsa file,
-* Click on the *Save private key* button,
-* Store the private key generated in the unzipped putty folder, naming it in *id_rsa.ppk*.
+- You received an e-mail with subject "VPN Setup procedure | Join your Laboratory !".
 
 Install your OpenVPN Client
 ---------------------------
@@ -81,8 +24,8 @@ Download and install your OpenVPN Client, in order to establish a connection wit
   if you have a previously installed VPN client (e.g. Tunnelblick) on your system, such **previously installed client must be disconnected and then be disabled** (we recommend uninstalling it).
 
 - Go to https://access.terradue.com
-- Type as Username the email used during your registration.
-- Type as Password the passphrase that you chose during the registration.
+- Type as Username the email used during your registration to the Terradue's Portal,
+- Type as Password the passphrase that you chose during the registration,
 - Once logged, all the connection setup is automatic, you must only approve the access by the new client.
 
 .. _run-your-vpn-connection:
