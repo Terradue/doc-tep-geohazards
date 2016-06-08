@@ -28,12 +28,7 @@ If you never received the confirmation email, you can ask the system to send it 
 	:figclass: img-border
 	:scale: 80%
 
-After clicked the link received by email, you'll be able to see your profile page of the portal:
-
-.. figure:: ../includes/email_confirmation3.png
-	:figclass: img-border
-	:scale: 80%
-
+After clicked the link received by email, you'll be able to see your profile page of the portal.
 
 Edit your profile
 -----------------
