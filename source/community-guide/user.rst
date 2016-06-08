@@ -12,7 +12,7 @@ User Profile
 Find out how to sign-in using **EO-SSO**, access your **Cloud** resources or even link your profile with your **Github** account.
 
 
-Sign in
+Sign-in
 -------
 
 Once registered on ESA EO Single Sign On (EO-SSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
@@ -66,35 +66,26 @@ To change your EO-SSO password:
 
 .. figure:: ../includes/user_profile_email_change.png
 	:figclass: img-border
-	:scale: 80%
 
 Access the Cloud Resources
 --------------------------
 
-To access the Cloud resources, you will need to have a valid certificate stored on the platform, as well as an account on the Cloud Controller.
+To access the Cloud resources, you will need to have an account on the Terradue Cloud Platform. To create an account:
 
+1. On your profile page, click on **Cloud Resources**
+2. Click on **Create**
 
-1. You don't have a valid certificate stored on the platform ? See `Upload your certificate`_.
-
-.. figure:: ../includes/cloud_certificate_missing.png
+.. figure:: ../includes/create_account.png
 	:figclass: img-border img-max-width
 	:scale: 80%
 
-2. You don't have an account on the Cloud Controller ? Create one by clicking on **Create**.
+3. Follow the instructions and see the Terradue Cloud Platform logo:
 
-.. figure:: ../includes/cloud_account_missing.png
+.. figure:: ../includes/cloud_resources.png
 	:figclass: img-border img-max-width
 	:scale: 80%
 
-3. You can see the cloud logo |sunstone_logo.png| ? Congratulations, all is correctly set up.
-
-.. figure:: ../includes/cloud_dashboard_ok.png
-	:figclass: img-border img-max-width
-	:scale: 80%
-
-Just click on it to be redirected to the Cloud Dashboard (powered by OpenNebula, see :doc:`Cloud Dashboard <cloud/dashboard>`).
-
-.. |sunstone_logo.png| image:: ../includes/sunstone_logo-small.png
+Just click on it to be redirected to the Cloud Dashboard, see :doc:`Cloud Dashboard <cloud/dashboard>`).
 
 Link your Github account
 ------------------------
