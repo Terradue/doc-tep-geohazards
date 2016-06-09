@@ -26,7 +26,7 @@ To create a new job:
 1. Select the service you want to use (see `Discover existing WPS`_).
 2. Fill in the different parameters needed by the service.
 
-.. tip:: Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input
+.. tip:: Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input (see `Use data in a process <http://terradue.github.io/doc-tep-geohazards/community-guide/data.html#use-data-in-a-process>`_)
 
 3. Click on **Run Job**
 4. To visualize the result of the job, see :doc:`Visualisation <visualisation>`
@@ -66,13 +66,13 @@ To make my jobs public:
 
 .. |public_jobs| image:: ../includes/public_jobs.png
 
-Access public jobs
+Access community jobs
 ------------------
 
-To access my jobs:
+To access the community jobs:
 
 1. Open the Processing Services tab by clicking on **Processing Services** on the right of the geobrowser's map.
-2. Click on **Public Jobs** on top of the Processing Services tab.
+2. Click on **Community Jobs** on top of the Processing Services tab.
 3. The list of existing jobs (failed or success) is displayed.
 4. Click on the job title.
 5. You can now see details about the job.

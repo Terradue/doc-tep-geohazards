@@ -18,3 +18,4 @@ Contents:
    G-POD PF-ASAR Service<gpod-pf-asar>
    G-POD PF-ERS Service<gpod-pf-ers>
    Digital Elevation Model generation with SRTM<srtm>
+   Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>

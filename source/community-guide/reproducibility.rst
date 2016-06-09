@@ -14,7 +14,7 @@ Discover existing jobs
 To see list of already processed jobs:
 
 1. Open the **Processing Services** tab.
-2. Click on **Jobs**.
+2. Click on either **My Jobs** or **Community Jobs**.
 3. Select a job from the list and open it by clicking on it.
 
 Reprocess existing job
