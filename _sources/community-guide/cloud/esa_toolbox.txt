@@ -40,6 +40,13 @@ VNC Connection
 *(Option 1 - using a browser)*
 
 - Access the Cloud Dashboard (see :ref:`dashboard`)
+- Annotate the <ESA CloudToolbox IP> value:
+
+.. figure:: assets/esa_toolbox_IP.png
+        :figclass: align-center
+        :align: center
+        :alt: alternate text
+        
 - Click on *details* button of the Virtual Machine corresponding to your CloudToolbox 
 
 .. figure:: assets/esa_toolbox_1.png
@@ -70,8 +77,6 @@ VNC Connection
 .. code-block:: info
 
   <ESA CloudToolbox IP>:5902
-
-Further references: http://wiki.services.eoportal.org/tiki-index.php?page=CloudToolbox+FAQ
 
 User Login
 ++++++++++

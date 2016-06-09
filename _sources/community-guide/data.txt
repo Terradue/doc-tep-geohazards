@@ -55,7 +55,7 @@ To access data related to a specific event:
 
 1. Access the geobrowser, by default, data related to specific geohazards events (provided by the disaster charter) are displayed on the map.
 2. Focus on one event.
-3. Click on **Search data for event**.
+3. Click on **Time filter**, **Spatial filter** or **Both filters** to use the event metadata to make a query.
 4. Data related to this event is automatically added to the result tab and displayed on the map.
 
 .. figure:: ../includes/geobrowser_data_event.png
@@ -81,9 +81,8 @@ To create a new data package:
 1. Add all data you want in the **Features Basket**.
 2. Click on **Save**.
 3. Choose a name for the data package.
-4. Tick the box if you want to make it public (means that everybody can access it).
-5. Click on **Save**.
-6. The data package is saved on the platform, you can re-access it later.
+4. Click on **Save**.
+5. The data package is saved on the platform, you can re-access it later.
 
 .. figure:: ../includes/geobrowser_dp_save.png
 	:scale: 75%
@@ -114,9 +113,9 @@ To clear your current basket:
 Use data in a process
 ---------------------
 
-1. Select a WPS and open it.
+1. Select one of the processing services and open it.
 2. The list of parameters is visible.
-3. Drag data from the **Results Table** and drop it over the selected parameter (only selected items are added).
-4. **OR** drag data from the **Features Basket** and drop it over the selected parameter (all items from the basket are added).
+3. Select one or more entries either from the **Results Table** or from the **Features Basket**. 
+4. Drag the data and drop it over the selected parameter.
 5. In case of several items, it creates one occurence of the parameter per item.
 6. Data are ready to be used in the process. Click on **Run process* to actually run the process.

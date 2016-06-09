@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Interferogram generation with ROI_PAC &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Sentinel-1 IW mode Interferogram generation with DIAPASON &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -32,8 +32,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../index.html" />
     <link rel="up" title="Tutorials" href="index.html" />
-    <link rel="next" title="StaMPS Permanent Scatterer processing" href="stamps-ps.html" />
-    <link rel="prev" title="Interferogram generation with GMTSAR" href="gmtsar.html" />
+    <link rel="prev" title="SRTM Digital Elevation Model on Hadoop Cloud Sandbox" href="srtm.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -108,14 +107,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Interferogram generation with ROI_PAC</a><ul>
-<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li><a class="reference internal" href="#">Sentinel-1 IW mode Interferogram generation with DIAPASON</a><ul>
+<li><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
+<li><a class="reference internal" href="#running-the-job">Running the job</a></li>
+<li><a class="reference internal" href="#view-results-on-the-map">View results on the map</a></li>
 </ul>
 </li>
 </ul>
@@ -127,11 +122,7 @@
               
                 
   <li>
-    <a href="gmtsar.html" title="Previous Chapter: Interferogram generation with GMTSAR"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Interferogram...</span>
-    </a>
-  </li>
-  <li>
-    <a href="stamps-ps.html" title="Next Chapter: StaMPS Permanent Scatterer processing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">StaMPS Perman... &raquo;</span>
+    <a href="srtm.html" title="Previous Chapter: SRTM Digital Elevation Model on Hadoop Cloud Sandbox"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; SRTM Digital ...</span>
     </a>
   </li>
               
@@ -140,7 +131,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/diapason-iw.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -170,16 +161,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Interferogram generation with ROI_PAC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
@@ -189,12 +171,17 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Sentinel-1 Interferogram generation with DIAPASON</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-results-on-the-map">View results on the map</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/diapason-iw.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -208,95 +195,73 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="interferogram-generation-with-roi-pac">
-<h1>Interferogram generation with ROI_PAC<a class="headerlink" href="#interferogram-generation-with-roi-pac" title="Permalink to this headline">¶</a></h1>
-<p>This tutorial processes a pair of Envisat ASAR data with ROI_PAC (Repeat Orbit Interferometry PACkage) <a class="footnote-reference" href="#f1" id="id1">[1]</a>, a software package jointly created by the Jet Propulsion Laboratory division of NASA and CalTech for processing SAR data to create InSAR (Interferometric synthetic aperture radar) images, or &#8216;interferograms&#8217;. This geodetic method uses two or more synthetic aperture radar (SAR) scenes to generate maps of surface deformation or digital elevation models, using differences in the phase of the waves returning to the radar sensor. The technique can potentially measure centimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
-<p>The tutorial uses a coseismic pair of Envisat ASAR Image Mode Level 0 for the 2010 Baja California earthquake.</p>
-<p>The 2010 Baja California earthquake (also known as 2010 Easter earthquake, 2010 Sierra El Mayor earthquake, or 2010 El Mayor – Cucapah earthquake) was an earthquake of 7.2 magnitude on the moment magnitude scale. It started 26 kilometers (16 mi) south of Guadalupe Victoria, Baja California, Mexico, at a depth of 10 km (6.2 mi).
-Learn more about the event in the <a class="reference external" href="http://en.wikipedia.org/wiki/2010_Baja_California_earthquake">2010 Baja California earthquake Wikipedia</a> entry.</p>
-<p>The processing service code is available in the GitHub repository <a class="reference external" href="https://github.com/geohazards-tep/InSAR-ROI_PAC">geohazards-tep/InSAR-ROI_PAC</a>.</p>
-<div class="section" id="select-the-processing">
-<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="sentinel-1-iw-mode-interferogram-generation-with-diapason">
+<h1>Sentinel-1 IW mode Interferogram generation with DIAPASON<a class="headerlink" href="#sentinel-1-iw-mode-interferogram-generation-with-diapason" title="Permalink to this headline">¶</a></h1>
+<p>DIAPASON is an InSAR processing software developed by the French space agency (CNES) and
+maintained by ALTAMIRA INFORMATION.</p>
+<p>This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.</p>
+<div class="section" id="processor-configuration">
+<h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
-<li>Select the processing service “Repeat Orbit Interferometry Package (ROI_PAC)”:</li>
+<li>The user shall login on the GEP and in the &#8220;Processing Services&#8221; section , select the &#8220;DIAPASON InSAR Sentinel-1 TOPSAR&#8221; service from the &#8220;services&#8221; tab.</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_1.png"><img alt="../_images/tuto_roi_pac_1.png" src="../_images/tuto_roi_pac_1.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_1.png"><img alt="../_images/tuto_diapiw_1.png" src="../_images/tuto_diapiw_1.png" style="width: 750px;" /></a>
 </div>
-<p>The &#8220;Repeat Orbit Interferometry Package (ROI_PAC)&#8221; panel is displayed with parameters values to be filled-in.</p>
-</div>
-<div class="section" id="fill-the-parameters">
-<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="master-product-reference">
-<h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on the lens icon (2):</li>
+<li>Select an area on the map . In the &#8220;Search Terms&#8221; field , you may type &#8220;IW AND SLC&#8221; to search for</li>
+</ul>
+<p>the correct product type covering the area</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_2.png"><img alt="../_images/tuto_diapiw_2.png" src="../_images/tuto_diapiw_2.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Choose the image pair to be processed from the &#8220;Current search result&#8221; pane.</li>
+</ul>
+<p>Drag and Drop the image to be used as master  into the &#8220;Sentinel-1 IW master&#8221; field, then select the slave image into the &#8220;Sentinel-1 IW slave&#8221; field.</p>
+<p>The images shall be from the same track.</p>
+<ul class="simple">
+<li>Set the polarization to process from the &#8220;polarization&#8221; drow-down list</li>
+</ul>
+<p>The available polarizations for the images appear on the list from the &#8220;Current search result&#8221; pane.
+The selected polarization should be available on each of the two images.</p>
+<ul class="simple">
+<li>Optionally you may choose to process an area of interest.</li>
+</ul>
+<p>You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the &#8220;Area of interest&#8221; field. This will set the current area selected on the map as area of interest for the processing.
+When left blank , the area processed is the intersection between the two input images.</p>
+<ul class="simple">
+<li>Set the Goldstein filter factor</li>
+</ul>
+<p>The value for the Goldstein filter exponential factor shall be a floating point value between 0 and 1.
+Higher values will result in more filtering of the output interferogram  phase.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_3.png"><img alt="../_images/tuto_diapiw_3.png" src="../_images/tuto_diapiw_3.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="running-the-job">
+<h2>Running the job<a class="headerlink" href="#running-the-job" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on &#8220;Run Job&#8221; button from the processor configuration panel and wait for the job to complete.</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_2.png"><img alt="../_images/tuto_roi_pac_2.png" src="../_images/tuto_roi_pac_2.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_4.png"><img alt="../_images/tuto_diapiw_4.png" src="../_images/tuto_diapiw_4.png" style="width: 750px;" /></a>
 </div>
+</div>
+<div class="section" id="view-results-on-the-map">
+<h2>View results on the map<a class="headerlink" href="#view-results-on-the-map" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click on Show Other Parameters apply the date value <strong>2010-05-02</strong> in both:</li>
+<li>Click on the <em>Show results on map</em> button after the job is completed.</li>
 </ul>
-<ul class="simple">
-<li>time:start field</li>
-<li>time:end field</li>
-</ul>
-<p>then click on the button <strong>Search</strong>:</p>
+<p>After successful completion of the job , the interferometric phase ,amplitude and coherence files should appear on the <em>Results Table</em>.
+The files that can be displayed on the map are the files with the .png extension.</p>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_3.png"><img alt="../_images/tuto_roi_pac_3.png" src="../_images/tuto_roi_pac_3.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_5.png"><img alt="../_images/tuto_diapiw_5.png" src="../_images/tuto_diapiw_5.png" style="width: 750px;" /></a>
 </div>
-<ul class="simple">
-<li>Drag and Drop the first result in the <em>ASAR Master product catalogue entry</em> field:</li>
-</ul>
+<p>It is possible to download the result files , first by selecting them on the <em>Results Table</em>  , a descriptive window about the file shall appear on the map . Clicking on the &#8220;download&#8221; button retrieves the file.</p>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_4.png"><img alt="../_images/tuto_roi_pac_4.png" src="../_images/tuto_roi_pac_4.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_diapiw_6.png"><img alt="../_images/tuto_diapiw_6.png" src="../_images/tuto_diapiw_6.png" style="width: 750px;" /></a>
 </div>
-</div>
-<div class="section" id="slave-product-reference">
-<h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Perform the same procedure described previously (<a class="reference internal" href="#master-product-reference">Master product reference</a>), using the value <strong>2010-03-28</strong>. Apply this date value in both:</li>
-</ul>
-<ul class="simple">
-<li>time:start field</li>
-<li>time:end field</li>
-</ul>
-<p>Pick one of the results having the same track, then drag and drop one of the results in the <em>ASAR Slave product catalogue entry</em> field:</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_5.png"><img alt="../_images/tuto_roi_pac_5.png" src="../_images/tuto_roi_pac_5.png" style="width: 750px;" /></a>
-</div>
-</div>
-</div>
-<div class="section" id="run-the-job">
-<h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Click on the button Run Job and see the Running Job</li>
-</ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_6.png"><img alt="../_images/tuto_roi_pac_6.png" src="../_images/tuto_roi_pac_6.png" style="width: 750px;" /></a>
-</div>
-<ul class="simple">
-<li>After about 20 minutes, see the Successful Job:</li>
-</ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_7.png"><img alt="../_images/tuto_roi_pac_7.png" src="../_images/tuto_roi_pac_7.png" style="width: 750px;" /></a>
-</div>
-<ul class="simple">
-<li>Click on the button <em>Show results on map</em>, then on the <em>geo_100328-100502.unw.phase.tif</em> result on the <em>Results Table</em> in the bottom left side</li>
-<li>See the result on map:</li>
-</ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_roi_pac_8.png"><img alt="../_images/tuto_roi_pac_8.png" src="../_images/tuto_roi_pac_8.png" style="width: 750px;" /></a>
-</div>
-<p class="rubric">References</p>
-<table class="docutils footnote" frame="void" id="f1" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://aws.roipac.org/cgi-bin/moin.cgi">ROI_PAC Website</a></td></tr>
-</tbody>
-</table>
 </div>
 </div>
 
