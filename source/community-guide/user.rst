@@ -15,8 +15,8 @@ Find out how to sign-in using **EO-SSO**, access your **Cloud** resources or eve
 Sign-in
 -------
 
-Once registered on ESA EO Single Sign On (EO-SSO), you can simply sign-in using the username and password provided by ESA and you will be automatically redirected to the platform homepage.
-At the first access, you may be asked to check your inbox in order to confirm your address
+Once registered on ESA EO Single Sign On (EO-SSO), you can simply sign-in using your EO-SSO credentials (username and password), and you will be automatically signed-in and redirected to the Geohazards TEP portal.
+At the first access, you may be asked to check your inbox in order to confirm your email address (cf. message banner "Pending activation!").
 
 .. figure:: ../includes/email_confirmation1.png
 	:figclass: img-border
@@ -28,7 +28,7 @@ If you never received the confirmation email, you can ask the system to send it 
 	:figclass: img-border
 	:scale: 80%
 
-After clicked the link received by email, you'll be able to see your profile page of the portal.
+Click the link received in the confirmation email, and you'll be able to see your profile page on the portal.
 
 Edit your profile
 -----------------
@@ -39,7 +39,7 @@ Edit your profile
 	
 Fill in your profile:
 
-1. Edit information such as first and last names, email, ... (username can not be modified though).
+1. Edit information such as firstname and lastname, email address, organization (username can not be modified though).
 2. Once you are done, just click on **Submit** to save your changes.
 
 .. NOTE::
@@ -57,7 +57,7 @@ To change your EO-SSO password:
 5. Your password is updated.
 
 .. NOTE::
-    If your EO-SSO password is different from the one recorded in your profile, a message will appear in your profile (see image below).
+    If your EO-SSO email is different from the one recorded in your profile, a message will appear in your profile (see image below).
 
 .. figure:: ../includes/user_profile_email_change.png
 	:figclass: img-border
@@ -65,7 +65,7 @@ To change your EO-SSO password:
 Access the Cloud Resources
 --------------------------
 
-To access the Cloud resources, you will need to have an account on the Terradue Cloud Platform. To create an account:
+To access and use Cloud resources, you will need to have an account on Terradue Cloud Platform. To create an account:
 
 1. On your profile page, click on **Cloud Resources**
 2. Click on **Create**
@@ -89,25 +89,26 @@ Link your Github account
 	:figclass: img-border
 	:scale: 70%
 
-Link your Github account to your profile will allow you to use Github as Software repository for the developments on your Developer Cloud Sandboxes. You can also release and share your code there.
+Linking your Github account to your profile will allow you to use Github as your Software repository for your developments on a Cloud  resource of the Platform, such as a Developer Cloud Sandbox virtual machine. You can also release and share your code on GitHub.
 
 ..note:: Link your github account is not mandatory but highly recommanded.
 
 To link your Github account:
 
 1. Fill in your Github name and validate by clicking on |user_github_edit.png|.
-2. You should add a SSH public key to your Github account and finally click on **Add your public key** and accept the request on your Github account.
+2. You should add a SSH public key to your Github account, click on **Add your public key** and finally accept the request on your Github account.
 
 .. |user_github_edit.png| image:: ../includes/user_github_edit.png
 
 See your groups
 ---------------
 
-To find out to which groups you belong, just go to the **Groups** tab on your profile page.
-The groups in which you are a member are listed here.
+To find out which groups you belong to, just go to the **Groups** tab on your profile page.
+The groups for which you are a member are listed here.
+Typically, the groups are providing you with specific access rights. 
 
 See your usage
 --------------
 
 To find out how you are using the platform, just go to the **Usage** tab on your profile page.
-You will see what is your level for each type of usage of the platform.
+You will see what is your level of activity for each type of usage of the platform.
