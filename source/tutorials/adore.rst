@@ -1,6 +1,12 @@
 Interferogram generation with ADORE DORIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* L1 SLC pairs (ASA_IMS_1P)
+* TerraSAR-X SAR
+
 Select the processing
 =====================
 

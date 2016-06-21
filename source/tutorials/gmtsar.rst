@@ -7,6 +7,11 @@ This tutorial covers the typical InSAR processing to form an interferogram using
 
 The GMTSAR processing service can also process several pairs master/slave (same master).
 
+Allowed input data types
+========================
+
+* ERS and Envisat dataset
+
 Select the processing
 =====================
 

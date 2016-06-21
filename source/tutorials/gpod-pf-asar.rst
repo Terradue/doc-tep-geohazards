@@ -1,6 +1,16 @@
 G-POD PF-ASAR Service
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* ASA_APC_0P
+* ASA_APH_0P
+* ASA_APV_0P
+* ASA_IM__0P
+* ASA_WS_0P
+* CEOS
+
 Select the processing
 =====================
 

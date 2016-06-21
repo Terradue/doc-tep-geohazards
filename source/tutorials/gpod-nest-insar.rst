@@ -2,6 +2,11 @@
 G-POD NEST InSAR Service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* ASAR Level-1 SLC (IMS) 
+
 Select the processing
 =================
 

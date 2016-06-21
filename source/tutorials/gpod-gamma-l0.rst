@@ -1,6 +1,15 @@
 G-POD GAMMA Level0 Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+Level 0 dataset from:
+
+* ENVISAT ASAR Image Mode source packets 
+* VA4 - ENVISAT ASAR Image Mode source packets 
+* VA4 - ENVISAT ASAR Image Mode source packets (CEOS DRM Sites)
+
 Select the processing
 =====================
 

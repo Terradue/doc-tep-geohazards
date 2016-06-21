@@ -37,6 +37,15 @@ The processing follows in principle the manual of StaMPS [#f2]_:
 
 For plotting and exporting of IFGs, velocities & time series see Chapter 9 of StaMPS manual.
 
+Allowed input data types
+========================
+
+Level-1 SLCs from:
+
+* ERS
+* Envisat 
+* ALOS 
+
 Select the processing
 =====================
 

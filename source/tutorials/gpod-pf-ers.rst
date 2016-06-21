@@ -1,6 +1,11 @@
 G-POD PF-ERS Service
 ~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* ERS1/2 Level-0
+
 Select the processing
 =====================
 

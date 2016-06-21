@@ -10,6 +10,11 @@ Learn more about the event in the `2010 Baja California earthquake Wikipedia <ht
 
 The processing service code is available in the GitHub repository `geohazards-tep/InSAR-ROI_PAC <https://github.com/geohazards-tep/InSAR-ROI_PAC>`_.
 
+Allowed input data types
+========================
+
+*  Envisat ASAR Image Mode Level 0 (ASA_IM__0P)
+
 Select the processing
 =====================
 

@@ -1,6 +1,11 @@
 G-POD GAMMA DInSAR Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* ENVISAT Level 1 SLC
+
 Select the processing
 =====================
 

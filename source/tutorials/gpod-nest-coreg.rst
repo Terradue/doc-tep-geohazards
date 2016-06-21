@@ -1,6 +1,12 @@
 G-POD NEST CoReg Service
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Allowed input data types
+========================
+
+* ENVISAT ASAR Level-1 Image Mode SLC (IMS)
+* ENVISAT ASAR Level-1 Wide Swath Mode (WSM)
+
 Select the processing
 =================
 
