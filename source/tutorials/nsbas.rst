@@ -108,7 +108,7 @@ Run the job
         :width: 750px
         :align: center
 
-* After about **[DURATION]**, see the Successful Job:
+* After a while, see the Successful Job:
 
 .. figure:: assets/tuto_nsbas_9.png
 	:figclass: align-center
