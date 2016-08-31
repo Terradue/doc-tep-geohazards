@@ -4,8 +4,11 @@ Interferogram generation with ADORE DORIS
 Allowed input data types
 ========================
 
-* L1 SLC pairs (ASA_IMS_1P)
+* Level 1 SLC pairs from ENVISAT ASAR (ASA_IMS_1P) 
+* Level 1 SLC pairs from ERS
 * TerraSAR-X SAR
+
+Learn more from the `ADORE DORIS User Manual <http://doris.tudelft.nl/usermanual/>`_.
 
 Select the processing
 =====================
