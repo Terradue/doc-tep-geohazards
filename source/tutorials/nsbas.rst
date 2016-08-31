@@ -124,11 +124,6 @@ and a tar archive containing the interferogram stack and auxilliary products.
 * Click on the button *Show results on map*, then on one of the files ending
   in ".phase.png" in the bottom left side
 
-* See the result on map:
-
-.. figure:: assets/tuto_nsbas_10.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+* See the result on map.
 
 * Click on the *workdir.tar.bz2* file to retrieve the full dataset
