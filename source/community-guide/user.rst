@@ -62,6 +62,20 @@ To change your EO-SSO password:
 .. figure:: ../includes/user_profile_email_change.png
 	:figclass: img-border
 
+Use your API KEY
+----------------
+
+To find your API KEY, just go to the **API Key** tab on your profile page.
+To generate it click on the **Generate your API Key** button. By default, the key is hidden. 
+Just click on the **Show** button to display it or on the **Copy to clipboard** button to have it copied.
+
+Your API Key is a unique identifier used to authenticate you when doing unlogged requests.
+It is used so far to do a search query over data packages even not logged via EO-SSO:
+
+.. code-block:: curl
+	curl https://geohazards-tep.eo.esa.int/t2api/data/package/search?key=ac3r370f-40c7-4888-178f-163936rfa8df
+
+
 Access the Cloud Resources
 --------------------------
 
