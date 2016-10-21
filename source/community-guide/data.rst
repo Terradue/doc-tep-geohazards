@@ -34,6 +34,18 @@ Data discovery is made through the map. To get specific data:
 	:scale: 75%
 	:figclass: img-border
 
+Manage the search filters
+-------------------------
+
+Once you have performed a search, all filters used for this search are displayed on the window, grouped by type of filter (e.g time, spatial, earth observation, ...).
+You can then remove one filter or check the selected value (go over with the mouse during few seconds).
+
+.. image:: ../includes/geobrowser_filters.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
+
 Discover contextualized data
 ----------------------------
 
