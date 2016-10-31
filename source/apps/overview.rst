@@ -23,12 +23,34 @@ It is defined by a list of services offerings, such as:
 Find a Thematic App
 -------------------
 
+.. figure:: ../includes/apps_search_text.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
 Thematic apps can be searched from the **Thematic app webpage**. The search uses filters defined by the user, such as:
 
 	- Keywords: search within title and description of the thematic app
+
+.. figure:: ../includes/apps_search_text.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
 	- Start date: search for apps created or updated after a given date
 	- End date: search for apps created or updated before a given date
+
+.. figure:: ../includes/apps_search_time.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
 	- AOI: search for apps related to a certain area
+
+.. figure:: ../includes/apps_search_aoi.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
 
 The search is performed amongst thematic apps which are public or privates for the current user.
 

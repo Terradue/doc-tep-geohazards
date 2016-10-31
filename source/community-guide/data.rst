@@ -38,7 +38,7 @@ Manage the search filters
 -------------------------
 
 Once you have performed a search, all filters used for this search are displayed on the window, grouped by type of filter (e.g time, spatial, earth observation, ...).
-You can then remove one filter or check the selected value (go over with the mouse during few seconds).
+You can then remove one filter, remove the whole filter group or check the selected value (go over with the mouse during few seconds).
 
 .. figure:: ../includes/geobrowser_filters.png
 	:align: center
