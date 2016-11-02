@@ -19,3 +19,4 @@ Contents:
    G-POD PF-ERS Service<gpod-pf-ers>
    Digital Elevation Model generation with SRTM<srtm>
    Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>
+   SNAP S1 TOPS-IW Interferometric processor<rss_snap_s1_insar>
