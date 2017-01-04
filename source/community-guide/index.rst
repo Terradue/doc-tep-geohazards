@@ -11,7 +11,6 @@ Contents:
    Thematic Applications <apps>
    Data <data>
    Processing <processing>
-   Visualisation <visualisation>
    Reproducibility <reproducibility>
    Sharing <sharing>
    Cloud Resources <cloud/index>
