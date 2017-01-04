@@ -84,7 +84,7 @@ To visualize results on the map:
 4. The layer is displayed on the map.
 5. A popup containing results metadata is displayed by clicking on the product.
 
-.. WARNING::
+.. warning::
   You may need to be connected to the GEP Virtual Private Network (see :ref:`laboratory`), in order to download the results. 
 
 Select data in your basket
@@ -156,12 +156,15 @@ To download a data listed on the *Results Table*:
 3. Click on the button, if it exists several links to the data, a dropdown list is displayed.
 4. Click on one of the links. The download may start directly or you may be redirected to the server hosting the data for authorization.
 
-If the resource location returned by the catalogue points to a data gateway like
+Data Gateway
+~~~~~~~~~~~~
+
+If the resource location points to a data gateway url (usually the name contains **via Data Gateway**), ex:
 
 .. code-block:: url
 	https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793
 
 then the download is performed via the Data Gateway that enables many function such as caching to allow the best download performance of the data requested.
 
-.. WARNING::
+.. warning::
 	Please be aware that the Data Gateway Proxy Download may take some time to start depending of the configuration of the repository from which you perform the download. Indeed, the data gateway may be required to perform Implicit caching before delivering the data.

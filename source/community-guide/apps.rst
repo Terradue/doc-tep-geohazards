@@ -46,5 +46,3 @@ All users also have an application dedicated to the management of all items they
 It is call **My worskpace** and will give to the user the ability to manage (edit / share / delete) all items he owns amongst WPS services, data collections, data packages, WPS jobs.
 
 From this "workspace", users can also manage (create / edit / delete) their own *Thematic App* (see :ref:`app_workspace`).
-
-s
