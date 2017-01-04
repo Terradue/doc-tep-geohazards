@@ -12,6 +12,8 @@ You can search for data from a specific collection of a catalogue or from a publ
 
 Put data in your basket and save it for later, or simply drag and drop data as a parameter of a process.
 
+When the OWS Context describing the data contains the adequate information, the data can be visualized on the geobrowser (e.g as an image, as a time series, ...) and a popup containing metadata about the data will be displayed.
+
 Discover data
 -------------
 
