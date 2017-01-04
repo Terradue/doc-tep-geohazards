@@ -8,7 +8,7 @@ Data
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`. 
 
-You can search for specific data by creating a query to a catalogue, look for specific events or simply see amongst the contextualized results what can be interesting for you.
+You can search for data from a specific collection of a catalogue or from a public or private data package, look for data related to specific events, simply see amongst the proposed contextualized results, or even search within results of a processed wps job.
 
 Put data in your basket and save it for later, or simply drag and drop data as a parameter of a process.
 
@@ -73,6 +73,20 @@ To access data related to a specific event:
 .. figure:: ../includes/geobrowser_data_event.png
 	:figclass: img-border
 
+Discover data results from a processing job
+-------------------------------------------
+
+To visualize results on the map:
+
+1. Access the job (see `Discover existing jobs`_ or :doc:`Share a job <sharing>`).
+2. If a layer is detected, you can display it on the map from the **Results** part of the job description.
+3. Click on **Show results on map**.
+4. The layer is displayed on the map.
+5. A popup containing results metadata is displayed by clicking on the product.
+
+.. WARNING::
+  You may need to be connected to the GEP Virtual Private Network (see :ref:`laboratory`), in order to download the results. 
+
 Select data in your basket
 --------------------------
 
@@ -131,3 +145,23 @@ Use data in a process
 4. Drag the data and drop it over the selected parameter.
 5. In case of several items, it creates one occurence of the parameter per item.
 6. Data are ready to be used in the process. Click on **Run process* to actually run the process.
+
+Download data
+-------------
+
+To download a data listed on the *Results Table*:
+
+1. Click on the data on the list or directly on the geobrowser.
+2. A popup is displayed, containing a **Download** button.
+3. Click on the button, if it exists several links to the data, a dropdown list is displayed.
+4. Click on one of the links. The download may start directly or you may be redirected to the server hosting the data for authorization.
+
+If the resource location returned by the catalogue points to a data gateway like
+
+.. code-block:: url
+	https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793
+
+then the download is performed via the Data Gateway that enables many function such as caching to allow the best download performance of the data requested.
+
+.. WARNING::
+	Please be aware that the Data Gateway Proxy Download may take some time to start depending of the configuration of the repository from which you perform the download. Indeed, the data gateway may be required to perform Implicit caching before delivering the data.

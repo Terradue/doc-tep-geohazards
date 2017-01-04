@@ -8,6 +8,7 @@ Contents:
    
    Platform overview <platform/index>
    User Profile <user>
+   Thematic Applications <apps>
    Data <data>
    Processing <processing>
    Visualisation <visualisation>

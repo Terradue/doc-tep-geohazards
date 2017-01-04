@@ -42,6 +42,25 @@ To access my jobs:
 4. Click on the job title.
 5. You can now see details about the job.
 
+Access job result
+-----------------
+
+.. figure:: ../includes/job_results.png
+	:figclass: img-border
+	:scale: 50 %
+
+To visualize job's result:
+
+1. Select a job in the **Jobs** tab from the Processing services.
+2. Click on the job title, the following infos will appear:
+
+- **Job info**: main info about the job + access to the Status/Result location
+- **Parameters**: list of used parameters
+- **Results**: if specific actions on the result are available
+- **XML Result**: XML result returned by the WPS
+
+3. To visualize job's results on the map, please see :doc:`Discover data results from a processing job <data>`.
+
 Delete my jobs
 --------------
 
@@ -60,14 +79,14 @@ Make my jobs public
 To make my jobs public:
 
 1. Go to the detail view of the job (see `Access my jobs`_).
-2. See :doc:`Share a job` <sharing>`.
+2. See :doc:`Share a job <sharing>`.
 
 .. tip:: On the job list, jobs with the icon |public_jobs| are the jobs you made public.
 
 .. |public_jobs| image:: ../includes/public_jobs.png
 
 Access community jobs
-------------------
+---------------------
 
 To access the community jobs:
 
