@@ -42,12 +42,12 @@ The catalogue editor area is a workspace dedicated to the user in which he will 
 	:figclass: img-border
 	:scale: 70 %
 
-.. req:: HEP-TS-DES-004
+.. req:: GEP-TS-DES-004
 	:show:
 
 	This section describes the catalogue as a service functionality.
 
-.. req:: HEP-TS-DES-001
+.. req:: GEP-TS-DES-001
 	:show:
 
 	This section shows that TEP platform implement a catalogue editor.
@@ -68,7 +68,7 @@ The application shall be defined using OGC OWS Context.
 	:figclass: img-border
 	:scale: 80%
 
-.. req:: HEP-TS-FUN-015
+.. req:: GEP-TS-FUN-015
 	:show:
 
 	This section describes how a user can create its own thematic application.
