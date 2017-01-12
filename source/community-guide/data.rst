@@ -14,11 +14,6 @@ Put data in your basket and save it for later, or simply drag and drop data as a
 
 When the OWS Context describing the data contains the adequate information, the data can be visualized on the geobrowser (e.g as an image, as a time series, ...) and a popup containing metadata about the data will be displayed.
 
-.. figure:: ../includes/geobrowser_job_result_visualisation.png
-	:align: center
-	:scale: 75%
-	:figclass: img-border
-
 Discover data
 -------------
 
@@ -93,6 +88,11 @@ To visualize results on the map:
 
 .. warning::
   You may need to be connected to the GEP Virtual Private Network (see :ref:`laboratory`), in order to download the results. 
+
+ .. figure:: ../includes/geobrowser_job_result_visualisation.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
 
 Select data in your basket
 --------------------------
