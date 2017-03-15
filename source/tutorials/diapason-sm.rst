@@ -1,42 +1,72 @@
-Sentinel-1 IW mode Interferogram generation with DIAPASON
+Stripmap mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
 maintained by ALTAMIRA INFORMATION.
 
-This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.
+
+In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram
+from two Sentinel-1 images.
 
 Processor configuration
 =======================
-* The user shall login on the GEP and in the "Processing Services" section , select the "DIAPASON InSAR Sentinel-1 TOPSAR" service from the "services" tab.
+* Log in on the GEP portal and in the "services" tab , select the "DIAPASON InSAR Stripmap(SM)" service.
 
-.. figure:: assets/tuto_diapiw_1.png
+.. figure:: assets/tuto_diapsm_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC" to search for
-the correct product type covering the area 
 
-.. figure:: assets/tuto_diapiw_2.png
+* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work
+on ERS pairs or on ASAR pairs as well.
+
+
+* Select an area on the map. 
+When processing Sentinel-1 data , it is important to select the correct data type for this processor.  For this , in the "Search Terms" field you may
+type "SM AND SLC AND NOT GRD" in order to filter Sentinel-1 Stripmap SLC scenes. If you know the track number of the images you want to process , you
+may add this track number as an additionnal filter.
+When processing ERS or ASAR data , you may filter with the "Search Terms" field according to the track number.
+
+.. figure:: assets/tuto_diapsm_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Choose the image pair to be processed from the "Current search result" pane. 
-Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
 
-The images shall be from the same track.
+* Choose the image pair to be processed from the "Current search result" pane.
+
+.. figure:: assets/tuto_diapsm_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+
+Select the image to be used as master and Drag and Drop the entry into the "InSAR master" filed, then select the slave image into the "InSAR slave" field.
+Make sure the images are from the same track , and from the same mission (i.e process  Sentinel-1 with Sentinel-1 , ASAR with ASAR ,ERS with ERS).
 
 * Set the polarization to process from the "polarization" drow-down list
+This option has an effect only when processing Sentinel-1 data.The selected polarization should be available on each of the two images. 
+This option is ignored when processing ASAR or ERS data.
 
-The available polarizations for the images appear on the list from the "Current search result" pane.
-The selected polarization should be available on each of the two images. 
 
 * Optionally you may choose to process an area of interest.
 
 You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the "Area of interest" field. This will set the current area selected on the map as area of interest for the processing. 
 When left blank , the area processed is the intersection between the two input images.
+
+
+* Optionally tweak the parameters
+
+The coregistration procedure implemented in DIAPASON for stripmap data includes a cross-correlation of the images.
+A multilook is applied on the SLC images (For Sentinel-1 the multilook factors are 8x4 , 10x2 otherwise) ,and the cross-correlation is applied on the multilook images.
+
+The following cross-correlation parameters may be set by the user (window sizes are given in multilook pixels): 
+  * Correlation azimuth window size          : this is the number of rows of the cross-correlation template
+  * Correlation range window size            : this is the number of columns of the cross-correlation template
+  * Correlation range search size            : this is the number of columns of the cross-correlation search window size 
+  * Correlation azimuth search size          : this is the number of rows of the cross-correlation search window size  
+  * Minimum normalized correlation threshold : this parameter sets the minimum normalized cross correlation coefficient value (this value should be a floating-point value in the interval [0.0 and 1.0[).
 
 
 * Set the Goldstein filter factor
@@ -49,25 +79,16 @@ Higher values will result in more filtering of the output interferogram  phase.Y
 To enable the phase unwrapping of the interferogram select "true" on the drop down list. By default , the phase unwrapping is disabled. 
 
 
- 
-.. figure:: assets/tuto_diapiw_3.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
- 
 
 Running the job
 ===============
 
 * Click on "Run Job" button from the processor configuration panel and wait for the job to complete.
 
-
-.. figure:: assets/tuto_diapiw_4.png
+.. figure:: assets/tuto_diapsm_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
-
 
 
 
@@ -91,19 +112,15 @@ The products.zip file contains :
            * The interferometric phase. This is a grayscale geotiff image with phase values within [0 255].  
            * The unwrapped phase. This is the raw unwrapped phase in radians.
 
-.. figure:: assets/tuto_diapiw_5.png
+.. figure:: assets/tuto_diapsm_5.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 It is possible to download the result files , first by selecting them on the *Results Table*  , a descriptive window about the file shall appear on the map . Clicking on the "download" button retrieves the file.
 
-
-
-.. figure:: assets/tuto_diapiw_6.png
+.. figure:: assets/tuto_diapsm_6.png
 	:figclass: align-center
         :width: 750px
         :align: center
-
-
 
