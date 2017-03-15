@@ -162,7 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal Administrator Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="control_panel.html">Control Panel</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Data Collection management</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Collection management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#manage-data-collections">Manage Data Collections</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#publish-or-update-an-ows-context-document">Publish or update an OWS context document</a></li>
 </ul>
@@ -216,7 +216,7 @@ The following example describes step by step how to publish a user result in the
 <ol class="arabic simple">
 <li>Generate the OWS document based on the following template:</li>
 </ol>
-<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;id&gt;</span>urn:uuid:607ba1aa-7f43-4b85-9d75-adab715dc9c5<span class="nt">&lt;/id&gt;</span>
   <span class="nt">&lt;entry&gt;</span>
@@ -279,7 +279,7 @@ The following example describes step by step how to publish a user result in the
 <ol class="arabic simple" start="2">
 <li>via a curl command or with any other REST client, POST the document to the right collection:</li>
 </ol>
-<div class="highlight-curl"><div class="highlight"><pre>curl &#39;http://data.terradue.int/gs/catalogue/tepqwsr/gtfeature&#39; -H &#39;Pragma: no-cache&#39; -H &#39;Content-Type: application/atom+xml&#39; -H &#39;Accept: application/xml&#39; -H &#39;Cache-Control: no-cache&#39; -d @file.atom
+<div class="highlight-curl"><div class="highlight"><pre><span></span>curl &#39;http://data.terradue.int/gs/catalogue/tepqwsr/gtfeature&#39; -H &#39;Pragma: no-cache&#39; -H &#39;Content-Type: application/atom+xml&#39; -H &#39;Accept: application/xml&#39; -H &#39;Cache-Control: no-cache&#39; -d @file.atom
 </pre></div>
 </div>
 <p>The collections to post to are:</p>

@@ -32,7 +32,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../index.html" />
     <link rel="up" title="Tutorials" href="index.html" />
-    <link rel="prev" title="SRTM Digital Elevation Model on Hadoop Cloud Sandbox" href="srtm.html" />
+    <link rel="next" title="SNAP Sentinel-1 IW SLC Interferogram and Displacements" href="rss_snap_s1_insar.html" />
+    <link rel="prev" title="Stripmap mode Interferogram generation with DIAPASON" href="diapason-sm.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -122,7 +123,11 @@
               
                 
   <li>
-    <a href="srtm.html" title="Previous Chapter: SRTM Digital Elevation Model on Hadoop Cloud Sandbox"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; SRTM Digital ...</span>
+    <a href="diapason-sm.html" title="Previous Chapter: Stripmap mode Interferogram generation with DIAPASON"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Stripmap mode...</span>
+    </a>
+  </li>
+  <li>
+    <a href="rss_snap_s1_insar.html" title="Next Chapter: SNAP Sentinel-1 IW SLC Interferogram and Displacements"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">SNAP Sentinel... &raquo;</span>
     </a>
   </li>
               
@@ -171,12 +176,14 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Sentinel-1 Interferogram generation with DIAPASON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sentinel-1 Interferogram generation with DIAPASON</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#view-results-on-the-map">View results on the map</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
 </ul>
 </li>
 </ul>
@@ -234,7 +241,11 @@ When left blank , the area processed is the intersection between the two input i
 <li>Set the Goldstein filter factor</li>
 </ul>
 <p>The value for the Goldstein filter exponential factor shall be a floating point value between 0 and 1.
-Higher values will result in more filtering of the output interferogram  phase.</p>
+Higher values will result in more filtering of the output interferogram  phase.You may disable the Goldstein filter by setting the exponential factor to 0.</p>
+<ul class="simple">
+<li>Set the Phase Unwrapping flag</li>
+</ul>
+<p>To enable the phase unwrapping of the interferogram select &#8220;true&#8221; on the drop down list. By default , the phase unwrapping is disabled.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_diapiw_3.png"><img alt="../_images/tuto_diapiw_3.png" src="../_images/tuto_diapiw_3.png" style="width: 750px;" /></a>
 </div>
@@ -253,8 +264,25 @@ Higher values will result in more filtering of the output interferogram  phase.<
 <ul class="simple">
 <li>Click on the <em>Show results on map</em> button after the job is completed.</li>
 </ul>
-<p>After successful completion of the job , the interferometric phase ,amplitude and coherence files should appear on the <em>Results Table</em>.
-The files that can be displayed on the map are the files with the .png extension.</p>
+<dl class="docutils">
+<dt>After successful completion of the job , the following elements shall appear on the <em>Results Table</em>:</dt>
+<dd><ul class="first last simple">
+<li>The interferometric amplitude.</li>
+<li>The interferometric coherence.</li>
+<li>The interferometric phase. This the output interferogram as an RGB image ready to be displayed on the GeoBrowser map.</li>
+<li>A zip file products.zip containing the DIAPASON geocoded results in geotiff format ,without additionnal processing.</li>
+<li>An RGB image showing the unwrapped phase (in case the phase unwrapping processing was activated).</li>
+</ul>
+</dd>
+<dt>The products.zip file contains :</dt>
+<dd><ul class="first last simple">
+<li>The interferometric amplitude in geotiff format. This is the modulus of the complex product of the master SLC image and the coregistered slave SLC image.</li>
+<li>The interferometric coherence. This is a floating point geotiff image with values within [0.0  255.0]. Pixel values of 255.0 are equivalent to a coherence value of 1</li>
+<li>The interferometric phase. This is a grayscale geotiff image with phase values within [0 255].</li>
+<li>The unwrapped phase. This is the raw unwrapped phase in radians.</li>
+</ul>
+</dd>
+</dl>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_diapiw_5.png"><img alt="../_images/tuto_diapiw_5.png" src="../_images/tuto_diapiw_5.png" style="width: 750px;" /></a>
 </div>

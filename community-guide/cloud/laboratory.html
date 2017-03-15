@@ -181,7 +181,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Cloud Resources</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dashboard.html">Cloud Dashboard</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Join the GEP Laboratory</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Join the GEP Laboratory</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#install-your-openvpn-client">Install your OpenVPN Client</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-your-vpn-connection">Run your VPN Connection</a></li>
@@ -265,7 +265,7 @@ You shall be able to access your user dashboard here: <a class="reference extern
 <p>When the OpenVPN client is installed on a Linux/Unix OS, the OpenVPN Server is unable to alter the DNS settings on the client in question.
 A typical behaviour in such cases is that you are able to ping your Sandbox through its IPv4 address, but not through the hostname.
 To solve this kind of issue, add manually Terradue&#8217;s DNS server as a new line in your <em>/etc/resolv.conf</em> file:</p>
-<div class="highlight-bash"><div class="highlight"><pre>nameserver 10.16.20.14
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nameserver 10.16.20.14
 </pre></div>
 </div>
 <p>If you are using the NetworkManager tool (e.g. in the GNOME desktop environment), you should instead statically add the nameserver address 10.16.20.14 through the GUI.</p>
@@ -284,7 +284,7 @@ To solve this kind of issue, add manually Terradue&#8217;s DNS server as a new l
 <li>Modify the <em>client.ovpn</em> as described below:</li>
 <li>Substitute:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>remote access.terradue.com <span class="m">443</span> udp
+<div class="highlight-bash"><div class="highlight"><pre><span></span>remote access.terradue.com <span class="m">443</span> udp
 remote access.terradue.com <span class="m">443</span> udp
 remote access.terradue.com <span class="m">443</span> tcp
 remote access.terradue.com <span class="m">443</span> udp
@@ -295,7 +295,7 @@ remote access.terradue.com <span class="m">443</span> udp
 </pre></div>
 </div>
 <p>With:</p>
-<div class="highlight-bash"><div class="highlight"><pre>remote access.terradue.com <span class="m">443</span> tcp
+<div class="highlight-bash"><div class="highlight"><pre><span></span>remote access.terradue.com <span class="m">443</span> tcp
 http-proxy &lt;proxy_address&gt; &lt;proxy_port&gt;
 http-proxy-retry
 </pre></div>
@@ -317,7 +317,7 @@ It can also be useful when you want to automatically start the VPN from a startu
 <p>So you can execute the OpenVPN client through the &#8220;openvpn&#8221; command by using the prompt (Unix Shell or Windows Prompt).</p>
 <p>The CLI parameters are listed and described in the manual page of OpenVPN.
 You can check them by typing the command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>man openvpn
+<div class="highlight-bash"><div class="highlight"><pre><span></span>man openvpn
 </pre></div>
 </div>
 <p>from a Unix shell, the OpenVPN&#8217;s manual page will be displayed.
@@ -342,7 +342,7 @@ The same parameters (not prefixed by &#8211;) can also be specified in the confi
 <li>Put the files client.ovpn and cacert.pem in a same directory (suppose /etc/openvpn/).</li>
 <li>Change the current directory to /etc/openvpn/ and exec (with root privileges) the command:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>openvpn --config client.ovpn
+<div class="highlight-bash"><div class="highlight"><pre><span></span>openvpn --config client.ovpn
 </pre></div>
 </div>
 <ul class="simple">
@@ -358,19 +358,19 @@ Anyway, sometimes, above all for some Linux Distributions, you could need to bui
 <li>Download the OpenVPN&#8217;s source code from the site <a class="reference external" href="http://openvpn.net">http://openvpn.net</a>. Pick the latest stable release that is available (<em>suppose the release 2.0.9 in the rest of this document</em>);</li>
 <li>Extract the files which are stored in the zipped archive that you have downloaded by using the tar command in the following manner:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>tar xvfz openvpn-2.0.9.tar.gz
+<div class="highlight-bash"><div class="highlight"><pre><span></span>tar xvfz openvpn-2.0.9.tar.gz
 </pre></div>
 </div>
 <ul class="simple">
 <li>Change the current directory to openvpn-2.0.9 with the command:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd </span>openvpn-2.0.9
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> openvpn-2.0.9
 </pre></div>
 </div>
 <ul class="simple">
 <li>Check the system and produce the Makefiles by using the following command:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>./configure --prefix<span class="o">=</span>/usr
+<div class="highlight-bash"><div class="highlight"><pre><span></span>./configure --prefix<span class="o">=</span>/usr
 make
 make install
 </pre></div>
@@ -379,13 +379,13 @@ make install
 <ul class="simple">
 <li>Download the source package of LZO from the site <a class="reference external" href="http://www.oberhumer.com/">http://www.oberhumer.com/</a> and extract its content with the command:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>tar xvfz lzo-2.02.tar.gz
+<div class="highlight-bash"><div class="highlight"><pre><span></span>tar xvfz lzo-2.02.tar.gz
 </pre></div>
 </div>
 <ul class="simple">
 <li>Change the current directory to lzo-2.02 and install the LZO software with the commands:</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>./configure --prefix<span class="o">=</span>/usr
+<div class="highlight-bash"><div class="highlight"><pre><span></span>./configure --prefix<span class="o">=</span>/usr
 make
 make install
 </pre></div>

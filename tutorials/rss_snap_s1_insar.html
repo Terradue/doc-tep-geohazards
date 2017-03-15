@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SNAP Sentinel-1 IW SLC Interferogram and Displacements &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Tutorials" href="index.html" />
+    <link rel="prev" title="Sentinel-1 IW mode Interferogram generation with DIAPASON" href="diapason-iw.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>1.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
+<li><a class="reference internal" href="#the-interferometric-sar-technique">The interferometric SAR technique</a></li>
+<li><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+<li><a class="reference internal" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">Perform phase unwrapping and Subset Bounding Box for Unwrapping</a></li>
+<li><a class="reference internal" href="#other-parameters">Other parameters</a><ul>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li><a class="reference internal" href="#warning-on-output-products-deletion">Warning on output products deletion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="diapason-iw.html" title="Previous Chapter: Sentinel-1 IW mode Interferogram generation with DIAPASON"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Sentinel-1 IW...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-interferometric-sar-technique">The interferometric SAR technique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">Perform phase unwrapping and Subset Bounding Box for Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-parameters">Other parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warning-on-output-products-deletion">Warning on output products deletion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="snap-sentinel-1-iw-slc-interferogram-and-displacements">
+<h1>SNAP Sentinel-1 IW SLC Interferogram and Displacements<a class="headerlink" href="#snap-sentinel-1-iw-slc-interferogram-and-displacements" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the SNAP S1 TOPS-IW Interferometric processor.
+SNAP (SeNtinel?s Application Platform) <a class="footnote-reference" href="#f1" id="id1">[1]</a> is the common architecture for all Sentinel Toolboxes jointly developed by Brockmann Consult, Array Systems Computing and C-S. The interferometric processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.</p>
+<div class="section" id="the-interferometric-sar-technique">
+<h2>The interferometric SAR technique<a class="headerlink" href="#the-interferometric-sar-technique" title="Permalink to this headline">¶</a></h2>
+<p>Interferometric synthetic aperture radar (InSAR) exploits the phase difference between two complex radar SAR observations taken from slightly different sensor positions and extracts information about the earth?s surface. A SAR signal contains amplitude and phase information. The amplitude is the strength of the radar response and the phase is the fraction of one complete sine wave cycle (a single SAR wavelength). The phase of the SAR image is determined primarily by the distance between the satellite antenna and the ground targets. By combining the phase of these two images after coregistration, an interferogram can be generated whose phase is highly correlated to the terrain topography. The InSAR technique can potentially measure millimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
+</div>
+<div class="section" id="sentinel-1-interferometric-wide-swath-products">
+<h2>Sentinel-1 Interferometric Wide Swath Products<a class="headerlink" href="#sentinel-1-interferometric-wide-swath-products" title="Permalink to this headline">¶</a></h2>
+<p>The Interferometric Wide (IW) swath mode is the main acquisition mode over land for Sentinel-1. It acquires data with a 250 km swath at 5 m by 20 m spatial resolution (single look). IW mode captures three sub-swaths using Terrain Observation with Progressive Scans SAR (TOPSAR). With the TOPSAR technique, in addition to steering the beam in range as in ScanSAR, the beam is also electronically steered from backward to forward in the azimuth direction for each burst, avoiding scalloping and resulting in homogeneous image quality throughout the swath. TOPSAR mode replaces the conventional ScanSAR mode, achieving the same coverage and resolution as ScanSAR, but with a nearly uniform SNR (Signal-to-Noise Ratio) and DTAR (Distributed Target Ambiguity Ratio). IW SLC products contain one image per sub-swath and one per polarisation channel, for a total of three (single polarisation) or six (dual polarisation) images in an IW product. Each sub-swath image consists of a series of bursts, where each burst has been processed as a separate SLC image. The individually focused complex burst images are included, in azimuth time order, into a single sub-swath image with black-fill demarcation in between, similar to ENVISAT ASAR Wide ScanSAR SLC products.</p>
+<p>The tutorial uses a coseismic pair of Sentinel-1 TOPSAR IW data related to the August 2016 center Italy&#8217;s earthquake.</p>
+<p>The 2016 center Italy&#8217;s earthquake (also known as 2016 Amatrice earthquake) was an earthquake, measuring 6.2 on the moment magnitude scale, hit Central Italy on 24 August 2016 at 03:36:32 CEST (01:36 UTC). Its epicentre was close to Accumoli, with its hypocentre at a depth of 4 km, approximately 75 km (47 mi) southeast of Perugia and 45 km (28 mi) north of L&#8217;Aquila, in an area near the borders of the Umbria, Lazio, Abruzzo and Marche regions.
+Learn more about the event in the <a class="reference external" href="https://en.wikipedia.org/wiki/2016_Central_Italy_earthquake">2016 center Italy&#8217;s earthquake Wikipedia</a> entry.</p>
+<p>The processing service code is available in the GitHub repository <a class="reference external" href="https://github.com/geohazards-tep/dcs-rss-snap-s1-insar">geohazards-tep/rss-snap-s1-insar</a>.</p>
+<div class="section" id="select-the-processing">
+<h3>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
+<li>Select the processing service ?SNAP S1 TOPS-IW Interferometric processor?:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_1.png"><img alt="../_images/tuto_rss_snap_s1_insar_1.png" src="../_images/tuto_rss_snap_s1_insar_1.png" style="width: 750px;" /></a>
+</div>
+<p>The &#8220;SNAP S1 TOPS-IW Interferometric processor&#8221; panel is displayed with parameters values to be filled-in.</p>
+</div>
+<div class="section" id="fill-the-parameters">
+<h3>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="master-product-reference">
+<h2>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on the <strong>EO data</strong> icon (1) and select <strong>Sentinel-1</strong> (2), then click on the lens icon (3):</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_2.png"><img alt="../_images/tuto_rss_snap_s1_insar_2.png" src="../_images/tuto_rss_snap_s1_insar_2.png" style="width: 750px;" /></a>
+</div>
+<ul>
+<li><p class="first">Click on <strong>Show Other Parameters</strong> and apply the following values:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Product type <strong>SLC</strong> in <strong>eop:productType</strong> field</p>
+<blockquote>
+<div><ul class="simple">
+<li>Platform <strong>S1A</strong> in <strong>eop:platform</strong> field</li>
+<li>Track number <strong>22</strong> in <strong>eop:track</strong> field</li>
+<li>Spatial search box <strong>13.1,42.65,13.35,42.9</strong> in <strong>geo:box</strong> field</li>
+<li>Date value <strong>2016-08-21</strong> in both <strong>time:start</strong> and <strong>time:end</strong> fields</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>then click on the button <strong>Search</strong>:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_3.png"><img alt="../_images/tuto_rss_snap_s1_insar_3.png" src="../_images/tuto_rss_snap_s1_insar_3.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Drag and Drop the result in the <em>Master product reference</em> field:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_4.png"><img alt="../_images/tuto_rss_snap_s1_insar_4.png" src="../_images/tuto_rss_snap_s1_insar_4.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="slave-product-reference">
+<h2>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Perform the same procedure described previously (<a class="reference internal" href="#master-product-reference">Master product reference</a>), using the value <strong>2016-09-02</strong>. Apply this date value in both:</li>
+</ul>
+<ul class="simple">
+<li>time:start field</li>
+<li>time:end field</li>
+</ul>
+<p>Pick the result, then drag and drop one of the results in the <em>Slave product reference</em> field:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_5.png"><img alt="../_images/tuto_rss_snap_s1_insar_5.png" src="../_images/tuto_rss_snap_s1_insar_5.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">
+<h2>Perform phase unwrapping and Subset Bounding Box for Unwrapping<a class="headerlink" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping" title="Permalink to this headline">¶</a></h2>
+<p>If also the displacement of the earthquake&#8217;s epicentre is desired:</p>
+<ul class="simple">
+<li>Click on the <strong>Perform phase unwrapping</strong> setting (1) and select <strong>true</strong></li>
+<li>Click on the <strong>Get from current search</strong> button (2) near the <strong>Subset Bounding Box for Unwrapping</strong> parameter box. It should be automatically filled with <strong>13.1,42.65,13.35,42.9</strong>, as already set during the previous <a class="reference internal" href="#master-product-reference">Master product reference</a> selection procedure.</li>
+</ul>
+<p><strong>NOTE</strong>: The <em>Subset Bounding Box for Unwrapping</em> parameter is mandatory even if the phase unwrapping is not requested (i.e. when &#8220;Perform phase unwrapping&#8221;=false). Please put &#8220;-180.0,-56.0,180.0,60.0&#8221; as bounding box value in case of wrapped interferogram generation only.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_6.png"><img alt="../_images/tuto_rss_snap_s1_insar_6.png" src="../_images/tuto_rss_snap_s1_insar_6.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="other-parameters">
+<h2>Other parameters<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Product polarisation</strong>: <strong>VV</strong> as the default value;</li>
+<li><strong>Orbit type</strong>: <strong>Sentinel Restituted (Auto Download)</strong> as the default value;</li>
+<li><strong>Azimuth coherence window size</strong>: <strong>6</strong> as the default value;</li>
+<li><strong>Range coherence window size</strong>: <strong>20</strong> as the default value;</li>
+<li><strong>DEM type</strong>: <strong>SRTM 3 Sec</strong> ;</li>
+<li><strong>Azimuth Multilook factor</strong>: <strong>1</strong> as the default value;</li>
+<li><strong>Range Multilook factor</strong>: <strong>4</strong> as the default value;</li>
+<li><strong>Pixel spacing in meters</strong>: <strong>15.0</strong> as the default value.</li>
+</ul>
+<div class="section" id="run-the-job">
+<h3>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Click on the button <strong>Run Job</strong> and see the Running Job</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_7.png"><img alt="../_images/tuto_rss_snap_s1_insar_7.png" src="../_images/tuto_rss_snap_s1_insar_7.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>After the processing end (it can take some hours), see the Successful Job:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_8.png"><img alt="../_images/tuto_rss_snap_s1_insar_8.png" src="../_images/tuto_rss_snap_s1_insar_8.png" style="width: 750px;" /></a>
+</div>
+<ul>
+<li><p class="first">Click on the button <em>Show results</em>, then on the results on the <em>Results Table</em> in the bottom left side:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>coh_VV_21Aug2016_02Sep2016.png</strong>:  coeherence quick-look product;</li>
+<li><strong>displacement_ifg_srd_VV_21Aug2016_02Sep2016.png</strong>:  displacement quick-look product;</li>
+<li><strong>phase_ifg_srd_VV_21Aug2016_02Sep2016.png</strong>: interferometric phase quick-look product.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">See the result on map:</p>
+</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_9.png"><img alt="../_images/tuto_rss_snap_s1_insar_9.png" src="../_images/tuto_rss_snap_s1_insar_9.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_10.png"><img alt="../_images/tuto_rss_snap_s1_insar_10.png" src="../_images/tuto_rss_snap_s1_insar_10.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_11.png"><img alt="../_images/tuto_rss_snap_s1_insar_11.png" src="../_images/tuto_rss_snap_s1_insar_11.png" style="width: 750px;" /></a>
+</div>
+<p>It is possible to download the tif products and/or the png quick-look products by clicking on the product name and then on the &#8220;Download&#8221; button (1).</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_12.png"><img alt="../_images/tuto_rss_snap_s1_insar_12.png" src="../_images/tuto_rss_snap_s1_insar_12.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="warning-on-output-products-deletion">
+<h3>Warning on output products deletion<a class="headerlink" href="#warning-on-output-products-deletion" title="Permalink to this headline">¶</a></h3>
+<p>Please note that the generated output (in particular the .tiff products) are not stored in a persistent manner on the platform.
+The Tiff products will be automatically deleted after two weeks.</p>
+<p class="rubric">References</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://step.esa.int/main/toolboxes/snap">SNAP Website</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

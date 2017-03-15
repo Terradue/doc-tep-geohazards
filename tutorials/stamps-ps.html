@@ -178,7 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">StaMPS Permanent Scatterer</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">StaMPS Permanent Scatterer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
@@ -203,7 +203,9 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
 </ul>
 </li>
 </ul>
@@ -338,21 +340,21 @@ The Data Package is called &#8220;Istanbul StaMPS&#8221;, select it from the Dat
 <p>If you have a working matlab environment, you can treat the downloaded folder as if you would have processed it locally.</p>
 <p>The most compute-intensive processing steps of StaMPS are 2 &amp; 3. Those are for the preliminary selection of stable scatterers.
 If you are not happy with your results, it is however recommended to start with step 4 or higher, e.g.:</p>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">stamps</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">stamps</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="check-for-bad-interferograms">
 <h3>Check for bad interferograms:<a class="headerlink" href="#check-for-bad-interferograms" title="Permalink to this headline">¶</a></h3>
 <p>For getting general information on the interferograms (i.e. baseline, estimated noise), which gives you a good indication of bad interferograms, do:</p>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_info</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">ps_info</span>
 </pre></div>
 </div>
 <p>To check for wrapped and unwrapped interferograms in order to identify unreliable ones and exclude them, you can proceed like this:</p>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
 <span class="n">ps_plot</span><span class="p">(</span><span class="s">&#39;u&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">setparm</span><span class="p">(</span><span class="s">&#39;drop_ifg&#39;</span><span class="p">,[</span> “<span class="n">Number</span> <span class="n">of</span> <span class="n">IFG</span>” <span class="p">])</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">setparm</span><span class="p">(</span><span class="s">&#39;drop_ifg&#39;</span><span class="p">,[</span> “<span class="n">Number</span> <span class="n">of</span> <span class="n">IFG</span>” <span class="p">])</span>
 </pre></div>
 </div>
 <p>Then re-run StaMPS from step 3 (it may take a while though) or from step 4 (faster).</p>
@@ -363,13 +365,13 @@ If you are not happy with your results, it is however recommended to start with 
 <ul class="simple">
 <li>play around with the parameters weed_standard_dev as well as weed_max_noise using:</li>
 </ul>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">setparm</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">setparm</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>re-run from step 4 until the end:</li>
 </ul>
-<div class="highlight-matlab"><div class="highlight"><pre><span class="n">stamps</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<div class="highlight-matlab"><div class="highlight"><pre><span></span><span class="n">stamps</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>PS Merge (Chapter 6.5 of StaMPS manual)</p>

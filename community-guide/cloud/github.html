@@ -183,7 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="laboratory.html">Join the GEP Laboratory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esa_toolbox.html">ESA Cloud Toolbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sandbox.html">Developer Cloud Sandbox</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Using Github</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using Github</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#gep-laboratory-and-the-github-organization">GEP Laboratory and the GitHub organization</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#organizing-the-github-teams">Organizing the GitHub teams</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#organizing-the-repository">Organizing the repository</a></li>
@@ -241,10 +241,10 @@
 <div class="section" id="organizing-the-repository">
 <h2>Organizing the repository<a class="headerlink" href="#organizing-the-repository" title="Permalink to this headline">¶</a></h2>
 <p>The repository should follow the structure below:</p>
-<div class="highlight-bash"><div class="highlight"><pre>README.md <span class="c"># the markdown file used to generate the html summary seen at the bottom of projects.</span>
-.gitignore <span class="c"># Git uses it to determine which files and directories to ignore, before making a commit.</span>
-pom.xml <span class="c"># the Project Object Model file containing information about the project and configuration details used by Maven to build the project</span>
-/src <span class="c"># root folder of the application</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>README.md <span class="c1"># the markdown file used to generate the html summary seen at the bottom of projects.</span>
+.gitignore <span class="c1"># Git uses it to determine which files and directories to ignore, before making a commit.</span>
+pom.xml <span class="c1"># the Project Object Model file containing information about the project and configuration details used by Maven to build the project</span>
+/src <span class="c1"># root folder of the application</span>
   /main
     /app-resources
       application.xml
@@ -254,12 +254,12 @@ pom.xml <span class="c"># the Project Object Model file containing information a
         /bin
       /job_template2
         ...
-    /java <span class="c"># if your application has Java code</span>
-    /resources <span class="c"># resources used to build the application</span>
-    /R <span class="c"># if you application has R code</span>
-    /python <span class="c"># if you application uses python code</span>
+    /java <span class="c1"># if your application has Java code</span>
+    /resources <span class="c1"># resources used to build the application</span>
+    /R <span class="c1"># if you application has R code</span>
+    /python <span class="c1"># if you application uses python code</span>
     /...
-    /doc <span class="c"># use this folder to document the application</span>
+    /doc <span class="c1"># use this folder to document the application</span>
 </pre></div>
 </div>
 <p>Have a look at the application tutorials which implements the recommended structure:</p>
@@ -278,15 +278,15 @@ pom.xml <span class="c"># the Project Object Model file containing information a
 <h3>Cloning an existing repository<a class="headerlink" href="#cloning-an-existing-repository" title="Permalink to this headline">¶</a></h3>
 <p>You&#8217;ll need the SSH clone URL in the form: <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:Terradue/dcs-beam-flh-java.git</p>
 <p>Log on the sandbox using your key:</p>
-<div class="highlight-bash"><div class="highlight"><pre>ssh -A -i ~/.ssh/&lt;name&gt;.pem &lt;sandbox ip&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh -A -i ~/.ssh/&lt;name&gt;.pem &lt;sandbox ip&gt;
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-bash"><div class="highlight"><pre>ssh -A -i ~/.ssh/mrossi.pem 10.14.10.20
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh -A -i ~/.ssh/mrossi.pem 10.14.10.20
 </pre></div>
 </div>
 <p>Run the commands on the shell:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span>
 git clone git@github.com:Terradue/dcs-beam-flh-java.git
 </pre></div>
 </div>
@@ -302,7 +302,7 @@ git clone git@github.com:Terradue/dcs-beam-flh-java.git
 <div class="section" id="building-the-application">
 <h3>Building the application<a class="headerlink" href="#building-the-application" title="Permalink to this headline">¶</a></h3>
 <p>Once the repository contains the structure described above, use <em>maven</em> to build and install the application for you:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> ~/dcs-beam-flh-java
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/dcs-beam-flh-java
 mvn install
 </pre></div>
 </div>
@@ -326,7 +326,7 @@ mvn install
 <h3>Releasing the application<a class="headerlink" href="#releasing-the-application" title="Permalink to this headline">¶</a></h3>
 <p>The pom.xml also contains information to create releases in GitHub.</p>
 <p>To create releases of the application on GitHub use <em>mvn deploy</em>:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> ~/dcs-beam-flh-java
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/dcs-beam-flh-java
 mvn deploy
 </pre></div>
 </div>
