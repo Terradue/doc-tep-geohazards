@@ -4,7 +4,7 @@ Thematic Applications
 .. toctree::
    :maxdepth: 2
    
-   Overview <overview>
-   Discovery <discovery>
-   My worskpace <workspace>
+   Global <global>
+   Charter <charter_app>
+   Manage my data <my_app>
    

@@ -28,7 +28,30 @@ If you never received the confirmation email, you can ask the system to send it 
 	:figclass: img-border
 	:scale: 80%
 
-Click the link received in the confirmation email, and you'll be able to see your profile page on the portal.
+After clicked the link received by email, you'll be able to see your profile page of the portal:
+
+.. figure:: ../includes/email_confirmation3.png
+	:figclass: img-border
+	:scale: 80%
+
+.. figure:: ../includes/user_signin.png
+	:figclass: img-border
+	:scale: 80%
+
+By clicking on your username, you will access your profile page.
+The other icons give the following functionalities:
+
+- |user_signin_balance.png| Your current accounting balance (if greater than 0)
+- |user_signin_settings.png| Access to administration settings (for users with special privileges)
+- |user_signin_contactus.png| Link to contact the Hydrology Tep support team
+- |user_signin_documentation.png| Link to the Hydrology Tep documentation
+- |user_signin_logout.png| Log out from the portal
+
+.. |user_signin_settings.png| image:: ../includes/user_signin_settings.png
+.. |user_signin_documentation.png| image:: ../includes/user_signin_documentation.png
+.. |user_signin_balance.png| image:: ../includes/user_signin_balance.png
+.. |user_signin_contactus.png| image:: ../includes/user_signin_contactus.png
+.. |user_signin_logout.png| image:: ../includes/user_signin_logout.png
 
 Edit your profile
 -----------------
@@ -62,39 +85,17 @@ To change your EO-SSO password:
 .. figure:: ../includes/user_profile_email_change.png
 	:figclass: img-border
 
-Use your API KEY
+Get your Api key
 ----------------
 
-To find your API KEY, just go to the **API Key** tab on your profile page.
-To generate it click on the **Generate your API Key** button. By default, the key is hidden. 
-Just click on the **Show** button to display it or on the **Copy to clipboard** button to have it copied.
+You can get a private API key associated to your account.
+Currently this key can be used only to get access to your data packages without being logged in on the portal:
+e.g: https://geohazards-tep.eo.esa.int/t2api/data/package/search?key=MY_API_KEY
 
-Your API Key is a unique identifier used to authenticate you when doing unlogged requests.
-It is used so far to do a search query over data packages even not logged via EO-SSO:
-
-.. code-block:: curl
-	curl https://geohazards-tep.eo.esa.int/t2api/data/package/search?key=ac3r370f-40c7-4888-178f-163936rfa8df
-
-
-Access the Cloud Resources
---------------------------
-
-To access and use Cloud resources, you will need to have an account on Terradue Cloud Platform. To create an account:
-
-1. On your profile page, click on **Cloud Resources**
-2. Click on **Create**
-
-.. figure:: ../includes/create_account.png
+.. figure:: ../includes/user_profile_apikey.png
 	:figclass: img-border img-max-width
 	:scale: 80%
 
-3. Follow the instructions and see the Terradue Cloud Platform logo:
-
-.. figure:: ../includes/cloud_resources.png
-	:figclass: img-border img-max-width
-	:scale: 80%
-
-Just click on it to be redirected to the Cloud Dashboard, see :doc:`Cloud Dashboard <cloud/dashboard>`).
 
 Link your Github account
 ------------------------
@@ -114,15 +115,63 @@ To link your Github account:
 
 .. |user_github_edit.png| image:: ../includes/user_github_edit.png
 
-See your groups
----------------
+See your communities
+--------------------
 
-To find out which groups you belong to, just go to the **Groups** tab on your profile page.
-The groups for which you are a member are listed here.
-Typically, the groups are providing you with specific access rights. 
+To find out which communities you belong to, just go to the **Communities** tab on your profile page.
+The communities for which you are a member are listed here, along with your role in it.
 
 See your usage
 --------------
 
 To find out how you are using the platform, just go to the **Usage** tab on your profile page.
-You will see what is your level of activity for each type of usage of the platform.
+You will see what is your level for each type of usage of the platform.
+
+
+.. figure:: ../includes/user_profile_usage.png
+	:figclass: img-border
+	:scale: 80%
+
+To find out more precisely the number of data packages you loaded, the number of jobs you created, how many failed or were successful, ... Just go the **Analytics** page from the portal homepage.
+You will see:
+
+- how many data collection you loaded
+- how many data packages and items you loaded
+- how many wps jobs you created and how many failed or succeeded
+
+.. req:: HEP-TS-DES-014
+    :show:
+
+    This section shows that the platform has an analytics web widget.
+
+See your accountings
+--------------------
+
+The accounting panel on your profile gives your current credit balance, as well as the list of all transactions associated to your account:
+
+- credit transactions
+- debit transactions reported by wps providers for the wps jobs you created, associated to a deposit
+
+.. figure:: ../includes/user_profile_accounting.png
+	:figclass: img-border
+	:scale: 80%
+
+.. _deposit:
+Deposit
+~~~~~~~
+
+A deposit transaction is stored when the user execute a job process using as balance the quotation returned first by the processing service for the selected parameters (it implies that the wps provider implemented the **quotation mode**). Deposit transactions can be *active* or *closed*. An **active deposit** is accounted when calculating your account balance (covering the possible debit transactions associated to the same process). A **closed deposit** is not accounted when calculating your account balance (but does not cover anymore the possible debit transactions associated to the same process). A deposit is automatically set from *active* to *closed* when the job process is failed or when the job is succeeded with at least one transaction recorded from the wps provider.
+
+Terms
+~~~~~
+
+- **Credit:** amount credited to the account
+- **Accounted Debit (+real cost):** amount debited from the account corresponding to a transaction ; real cost shown if different from debit, but not debited (this may vary with on accounting governance)
+- **Not Accounted Debit:** amount corresponding to the records received from the provider for this transaction, but not debited from the account, as the transaction is not completed
+- **Active Deposit:** Deposit temporarily debited from the account (until the transaction is completed)
+- **Closed Deposit:** Deposit value, not debited anymore, informational only
+
+Transaction policy
+~~~~~~~~~~~~~~~~~~
+
+The current policy for a wps job process accounting is that the total amount debited to the user corresponds to the real usage of the wps process and cannot be greather than the estimated deposit.
