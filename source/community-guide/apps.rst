@@ -14,24 +14,25 @@ It is defined by a list of services offerings, such as:
 	- wps services
 
 .. req:: GEP-TS-DES-002
-:show:
-
-This section describes how a user can create its own thematic application.
+	:show:
+	
+	This section describes how a user can create its own thematic application.
 
 .. req:: GEP-TS-DES-002
-:show:
-
-This section describes the data flow of thematic apps.
+	:show:
+	
+	This section describes the data flow of thematic apps.
 
 
 Discovery
 =========
+
 A discovery page, dedicated to the search of existing/accessible Thematic apps can be accessed from the home page.
 
 .. figure:: ../includes/thematic_apps.png
-:align: center
-:scale: 75%
-:figclass: img-border
+	:align: center
+	:scale: 75%
+	:figclass: img-border
 
 Thematic apps can be searched using filters defined by the user, such as:
 

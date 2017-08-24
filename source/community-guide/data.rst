@@ -166,10 +166,7 @@ To download a data listed on the *Results Table*:
 Data Gateway
 ~~~~~~~~~~~~
 
-If the resource location points to a data gateway url (usually the name contains **via Data Gateway**), ex:
-
-.. code-block:: url
-	https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793
+If the resource location points to a data gateway url (usually the name contains **via Data Gateway**), ex: **https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793**
 
 then the download is performed via the Data Gateway that enables many function such as caching to allow the best download performance of the data requested.
 
