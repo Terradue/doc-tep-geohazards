@@ -9,10 +9,7 @@ Contents:
    Platform overview <platform/index>
    User Profile <user>
    Thematic Applications <apps>
-<<<<<<< HEAD
-=======
    Communities <community>
->>>>>>> e0351f8... update for AR
    Data <data>
    Processing <processing>
    Reproducibility <reproducibility>
