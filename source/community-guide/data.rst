@@ -151,7 +151,7 @@ Use data in a process
 3. Select one or more entries either from the **Results Table** or from the **Features Basket**. 
 4. Drag the data and drop it over the selected parameter.
 5. In case of several items, it creates one occurence of the parameter per item.
-6. Data are ready to be used in the process. Click on **Run process* to actually run the process.
+6. Data are ready to be used in the process. Click on **Run process** to actually run the process.
 
 Download data
 -------------

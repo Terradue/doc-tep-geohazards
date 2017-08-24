@@ -43,8 +43,8 @@ The other icons give the following functionalities:
 
 - |user_signin_balance.png| Your current accounting balance (if greater than 0)
 - |user_signin_settings.png| Access to administration settings (for users with special privileges)
-- |user_signin_contactus.png| Link to contact the Hydrology Tep support team
-- |user_signin_documentation.png| Link to the Hydrology Tep documentation
+- |user_signin_contactus.png| Link to contact the Geohazards Tep support team
+- |user_signin_documentation.png| Link to the Geohazards Tep documentation
 - |user_signin_logout.png| Log out from the portal
 
 .. |user_signin_settings.png| image:: ../includes/user_signin_settings.png
@@ -121,6 +121,10 @@ See your communities
 To find out which communities you belong to, just go to the **Communities** tab on your profile page.
 The communities for which you are a member are listed here, along with your role in it.
 
+.. figure:: ../includes/user_community.png
+	:figclass: img-border
+	:scale: 70%
+
 See your usage
 --------------
 
@@ -139,7 +143,7 @@ You will see:
 - how many data packages and items you loaded
 - how many wps jobs you created and how many failed or succeeded
 
-.. req:: HEP-TS-DES-014
+.. req:: GEP-TS-ICD-010
     :show:
 
     This section shows that the platform has an analytics web widget.

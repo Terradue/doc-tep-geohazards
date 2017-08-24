@@ -20,7 +20,7 @@ For each item, the user can:
 - share it with other users or groups (see :doc:`../community_guide/sharing`)
 - transfer the ownership to another user
 
-.. req:: HEP-TS-ICD-015
+.. req:: GEP-TS-ICD-015
 	:show:
 
 	This section describes how the user can share series, data package, services and jobs.
