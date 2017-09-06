@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Join the GEP Laboratory &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Join the GEP Laboratory &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -20,7 +20,8 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -30,8 +31,8 @@
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../../index.html" />
-    <link rel="up" title="Cloud Resources" href="index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="ESA CloudToolbox" href="esa_toolbox.html" />
     <link rel="prev" title="Cloud Dashboard" href="dashboard.html" />
     <link rel="stylesheet" href="../../_static/terradue.css" type="text/css" />
@@ -265,7 +266,7 @@ You shall be able to access your user dashboard here: <a class="reference extern
 <p>When the OpenVPN client is installed on a Linux/Unix OS, the OpenVPN Server is unable to alter the DNS settings on the client in question.
 A typical behaviour in such cases is that you are able to ping your Sandbox through its IPv4 address, but not through the hostname.
 To solve this kind of issue, add manually Terradue&#8217;s DNS server as a new line in your <em>/etc/resolv.conf</em> file:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>nameserver 10.16.20.14
+<div class="highlight-bash"><div class="highlight"><pre><span></span>nameserver <span class="m">10</span>.16.20.14
 </pre></div>
 </div>
 <p>If you are using the NetworkManager tool (e.g. in the GNOME desktop environment), you should instead statically add the nameserver address 10.16.20.14 through the GUI.</p>

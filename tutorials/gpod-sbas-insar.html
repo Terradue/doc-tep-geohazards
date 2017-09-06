@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>G-POD SBAS InSAR Service &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>G-POD SBAS InSAR Service &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -20,7 +20,8 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -30,8 +31,8 @@
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../index.html" />
-    <link rel="up" title="Tutorials" href="index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="G-POD NEST InSAR Service" href="gpod-nest-insar.html" />
     <link rel="prev" title="G-POD GAMMA DInSAR Service" href="gpod-gamma-dinsar.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
@@ -182,6 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
@@ -240,10 +242,10 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 <div class="section" id="select-the-files-to-process">
 <h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
 <p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>The algorithm accepts as inputs <strong>ASAR</strong> and <strong>ERS RAW (level 0) data</strong>. SLCs cannot be processed. The corresponding catalogue entry names are (in the brackets are the actual file names):</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>ENVISAT data: <strong>ENVISAT ASAR L0</strong> (ASA_IM__);</li>
 <li>ERS data in CEOS format: <strong>ERS-x SAR IM L0</strong> (ER0x_SAR_IM__0P), where “x” can be equal to 1 or 2;</li>
 <li>ERS data in ASAR format: <strong>ERS-x SAR Ex_SAR_IM__0P</strong> (SAR_IM__0P), where “x” can be equal to 1 or 2.</li>
@@ -251,12 +253,9 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 </dd>
 </dl>
 </li>
-<li><p class="first">It is very important that the user selects <strong>images related to the same track only</strong>. In case of use of ASAR data, also same sub-swaths have to be considered.</p>
-</li>
-<li><p class="first"><strong>For ERS data only</strong>, it is mandatory to <strong>avoid</strong> possible <strong>epoch replications</strong>. Indeed, it is possible that the same area is (partially) covered by two or more frames acquired at the same epoch. For a correct run this data duplication has to be avoided. ASAR data can be selected without caring of this particular constrain since the system automatically discards duplicated images and correctly joins SAR data belonging to different “portions” (frames) of the same strip.</p>
-</li>
-<li><p class="first"><strong>Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode</strong>.</p>
-</li>
+<li>It is very important that the user selects <strong>images related to the same track only</strong>. In case of use of ASAR data, also same sub-swaths have to be considered.</li>
+<li><strong>For ERS data only</strong>, it is mandatory to <strong>avoid</strong> possible <strong>epoch replications</strong>. Indeed, it is possible that the same area is (partially) covered by two or more frames acquired at the same epoch. For a correct run this data duplication has to be avoided. ASAR data can be selected without caring of this particular constrain since the system automatically discards duplicated images and correctly joins SAR data belonging to different “portions” (frames) of the same strip.</li>
+<li><strong>Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode</strong>.</li>
 </ul>
 <p>For this tutorial, a pre-defined data set has been prepared to speed up data selection step.</p>
 <ul class="simple">

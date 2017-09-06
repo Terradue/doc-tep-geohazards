@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Reporting &mdash; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Reporting &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -20,7 +20,8 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -30,8 +31,8 @@
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Geohazards Thematic Exploitation Platform 1.0 documentation" href="../index.html" />
-    <link rel="up" title="Geohazards thematic exploitation platform administrator guide" href="index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cloud Operations Administrator Guide" href="../cloud-administrator/index.html" />
     <link rel="prev" title="Web story banners management" href="feature.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
@@ -259,10 +260,10 @@
 <div class="section" id="information-present-in-the-report">
 <h2>Information present in the report<a class="headerlink" href="#information-present-in-the-report" title="Permalink to this headline">¶</a></h2>
 <p>The following information are present on the <em>Usage analytics</em> report:</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>Main parameters of the report</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Date of creation</li>
 <li>Start date | End date</li>
 <li>List of users not used for the statistics (e.g administrator users).</li>
@@ -275,15 +276,14 @@
 <p class="first admonition-title">Note</p>
 <p class="last"><em>This list is configurable by a database administrator only directly on the database for now.</em></p>
 </div>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>Usage analytics (between &lt;start date&gt; and &lt;end date&gt;)</dt>
 <dd><ul class="first last">
-<li><p class="first">Total number of users of the platform</p>
-</li>
+<li>Total number of users of the platform</li>
 <li><dl class="first docutils">
 <dt>Users who signed in for the first time, with:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Username</li>
 <li>Organization</li>
 <li>First login date</li>
@@ -294,7 +294,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Active users (logged more than once), with:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Username</li>
 <li>Number of logins</li>
 </ul>
@@ -303,7 +303,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Wps jobs created <strong>ordered by user name</strong>, with:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Username</li>
 <li>Wpsjob name</li>
 <li>Wpsjob creation date</li>
@@ -315,7 +315,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Wps jobs created <strong>ordered by date</strong>, with:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Username</li>
 <li>Wpsjob name</li>
 <li>Wpsjob creation date</li>
@@ -325,15 +325,12 @@
 </dd>
 </dl>
 </li>
-<li><p class="first">Number of wpsjob created per user</p>
-</li>
-<li><p class="first">Number of wpsjob created per group</p>
-</li>
-<li><p class="first">Number of wpsjob created per service</p>
-</li>
+<li>Number of wpsjob created per user</li>
+<li>Number of wpsjob created per group</li>
+<li>Number of wpsjob created per service</li>
 <li><dl class="first docutils">
 <dt>Data packages created, with:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Username</li>
 <li>Data package name</li>
 <li>Data package creation date</li>
@@ -342,10 +339,8 @@
 </dd>
 </dl>
 </li>
-<li><p class="first">Number of Data packages created per user</p>
-</li>
-<li><p class="first">Number of Data packages created per group</p>
-</li>
+<li>Number of Data packages created per user</li>
+<li>Number of Data packages created per group</li>
 </ul>
 </dd>
 </dl>
