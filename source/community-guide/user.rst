@@ -11,6 +11,56 @@ User Profile
 
 Find out how to sign-in using **EO-SSO**, access your **Cloud** resources or even link your profile with your **Github** account.
 
+Register on ESA EO Users’ Single Sign On
+----------------------------------------
+
+1. Please access the GEP Community Portal through the URL provided: https://geohazards-tep.eo.esa.int/#!. 
+
+.. figure:: includes/qsm1-f1.png
+	:align: center
+	:width: 80%
+	:figclass: img-container-border
+
+	Figure 1: The Geohazards TEP portal
+
+2. On the top right a register button is displayed, encircled in red. Click on this button to go to the ESA EO Users’ Single Sign On registration page. 
+
+3. Figure 2 shows the ESA EO Users’ Single Sign On registration. Fill in all required information. Click on the question mark behind the field for extra info. Afterwards click on Register to continue. A confirmation as shown in Figure 3 is displayed and an email is sent.
+
+.. figure:: includes/qsm1-f2.png
+	:align: center
+	:width: 80%
+	:figclass: img-container-border
+
+	Figure 2: The ESA EO Users' Single Sign On Registration Page
+
+.. NOTE::
+	Password must contain at least 8 characters, with at least one upper case lettre, one lower case letter, one integer and a special character (!, @, ?, ...).
+
+.. figure:: includes/qsm1-f3.png
+	:align: center
+	:width: 80%
+	:figclass: img-container-border
+
+	Figure 3: Confirmation of Registration at ESA EO Users Single Sign On
+
+4. Open your email and click on the link provided by the EO-SSO administrator team. You will be
+directed to a page confirming the activation of your account, as indicated by Figure 5.
+
+.. figure:: includes/qsm1-f4.png
+	:align: center
+	:width: 80%
+	:figclass: img-container-border
+	
+	Figure 4: Email sent by the EO-SSO administrator team
+
+.. figure:: includes/qsm1-f5.png
+	:align: center
+	:width: 80%
+	:figclass: img-container-border	
+	
+	Figure 5: Confirmation of Account Activation
+
 
 Sign-in
 -------
