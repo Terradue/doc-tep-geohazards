@@ -1,7 +1,8 @@
-.. _mydata_app:
-
 My Thematic Apps
-----------------
+================
+
+Create an app
+-------------
 
 From the thematic app page, the user (specific users only) has also the ability to create its own Thematic App, clicking on **+ Create new** on the top right of the applications list.
 
@@ -129,7 +130,11 @@ Spatial
 
 Spatial area in WKT format associated to the application.
 
-.. req:: HEP-TS-FUN-015
-	:show:
+Delete an App
+-------------
 
-	This section describes how a user can create its own thematic application.
+The service to delete an application is not yet available. For now it is possible to do it via command line:
+
+curl -u <username>:<apikey> -XDELETE "https://catalog.terradue.com/<username>/query?uid=<app_identifier>"
+
+For more details, see the `T2 API documentation <http://docs.terradue.com/t2-api/data/publication.html#delete-entries>`_.
