@@ -20,3 +20,4 @@ Contents:
    Digital Elevation Model generation with SRTM<srtm>
    Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>
    SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
+   SNAP Sentinel-1 COherence and INtensity (COIN) processing service<rss_snap_s1_coin>
