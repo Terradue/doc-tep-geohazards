@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>My Thematic Apps &#8212; Geohazards Thematic Exploitation Platform 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorials" href="../tutorials/index.html" />
+    <link rel="prev" title="Test my processor" href="testmyproc_app.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thematic Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">My Thematic Apps</a><ul>
+<li><a class="reference internal" href="#create-an-app">Create an app</a><ul>
+<li><a class="reference internal" href="#identifier">Identifier</a></li>
+<li><a class="reference internal" href="#title">Title</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#icon">Icon</a></li>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+<li><a class="reference internal" href="#categories">Categories</a></li>
+<li><a class="reference internal" href="#offerings">Offerings</a><ul>
+<li><a class="reference internal" href="#search-result-tab">search result tab</a></li>
+<li><a class="reference internal" href="#feature-basket-tab">feature basket tab</a></li>
+<li><a class="reference internal" href="#data-package-tab">data package tab</a></li>
+<li><a class="reference internal" href="#wps-services-tab">wps services tab</a></li>
+<li><a class="reference internal" href="#chronogram-time-bar">chronogram time bar</a></li>
+<li><a class="reference internal" href="#data-upload-widget">data upload widget</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#base-maps">Base Maps</a></li>
+<li><a class="reference internal" href="#layers">Layers</a></li>
+<li><a class="reference internal" href="#data-contexts">Data contexts</a></li>
+<li><a class="reference internal" href="#dates">Dates</a></li>
+<li><a class="reference internal" href="#spatial">Spatial</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#delete-an-app">Delete an App</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="testmyproc_app.html" title="Previous Chapter: Test my processor"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Test my processor</span>
+    </a>
+  </li>
+  <li>
+    <a href="../tutorials/index.html" title="Next Chapter: Tutorials"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Tutorials &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/apps/myapp.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thematic Applications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discovery.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html">Global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mydata_app.html">Manage my data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testmyproc_app.html">Test my processor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">My apps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-an-app">Create an app</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#identifier">Identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#title">Title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icon">Icon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authors">Authors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#categories">Categories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offerings">Offerings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#base-maps">Base Maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layers">Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-contexts">Data contexts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dates">Dates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial">Spatial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-an-app">Delete an App</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/apps/myapp.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="my-thematic-apps">
+<h1>My Thematic Apps<a class="headerlink" href="#my-thematic-apps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-an-app">
+<h2>Create an app<a class="headerlink" href="#create-an-app" title="Permalink to this headline">¶</a></h2>
+<p>From the thematic app page, the user (specific users only) has also the ability to create its own Thematic App, clicking on <strong>+ Create new</strong> on the top right of the applications list.</p>
+<p>The user can:</p>
+<blockquote>
+<div><ul class="simple">
+<li>load an existing thematic app, providing his url (in atom format)</li>
+<li>create a new thematic app from scratch</li>
+</ul>
+</div></blockquote>
+<p>Finally the user can save this thematic application in his private catalogue index.</p>
+<p>If there is already an entry with the same identifier in the index, the entry will be overwritten with the new one.
+Once created, the application is accessible from the Thematic app discovery page.</p>
+<div class="img-border figure">
+<a class="reference internal image-reference" href="../_images/user_new_app.png"><img alt="../_images/user_new_app.png" src="../_images/user_new_app.png" style="width: 699.2px; height: 685.6px;" /></a>
+</div>
+<p>The following information define a Thematic Application:</p>
+<div class="section" id="identifier">
+<h3>Identifier<a class="headerlink" href="#identifier" title="Permalink to this headline">¶</a></h3>
+<p>Identifier of the Thematic application.</p>
+</div>
+<div class="section" id="title">
+<h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<p>Title of the Thematic application. Shown in the Thematic application discovery page.</p>
+</div>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>Description of the Thematic application.</p>
+</div>
+<div class="section" id="icon">
+<h3>Icon<a class="headerlink" href="#icon" title="Permalink to this headline">¶</a></h3>
+<p>Url pointing to the icon of the Thematic application.</p>
+</div>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<p>List of authors of the application. For each author, it is possible to provide:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Name</li>
+<li>Email</li>
+<li>Icon url</li>
+<li>Url link</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="categories">
+<h3>Categories<a class="headerlink" href="#categories" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to define some keywords associated to the Thematic application, as well as the application type (&#8220;products&#8221;, &#8220;services&#8221;, ...) or application status (&#8220;prototype&#8221;, &#8220;under development&#8221;, ...).</p>
+</div>
+<div class="section" id="offerings">
+<h3>Offerings<a class="headerlink" href="#offerings" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="search-result-tab">
+<h4>search result tab<a class="headerlink" href="#search-result-tab" title="Permalink to this headline">¶</a></h4>
+<p>Enable the Search result tab in the application. It is where the items results are listed.</p>
+</div>
+<div class="section" id="feature-basket-tab">
+<h4>feature basket tab<a class="headerlink" href="#feature-basket-tab" title="Permalink to this headline">¶</a></h4>
+<p>Enable the Feature basket tab in the application. Used to allow user to create his own data packages.</p>
+</div>
+<div class="section" id="data-package-tab">
+<h4>data package tab<a class="headerlink" href="#data-package-tab" title="Permalink to this headline">¶</a></h4>
+<p>Enable the data package tab. Used to allow user to load existing data packages.</p>
+</div>
+<div class="section" id="wps-services-tab">
+<h4>wps services tab<a class="headerlink" href="#wps-services-tab" title="Permalink to this headline">¶</a></h4>
+<p>Enable the wps services tab. Used to list available wps services and process wps jobs.
+It is possible to define the domain or tags to which wps services should be associated to appear.</p>
+</div>
+<div class="section" id="chronogram-time-bar">
+<h4>chronogram time bar<a class="headerlink" href="#chronogram-time-bar" title="Permalink to this headline">¶</a></h4>
+<p>Enable the chronogram on the time bar, which describe where one can find most data on the searched time period.</p>
+</div>
+<div class="section" id="data-upload-widget">
+<h4>data upload widget<a class="headerlink" href="#data-upload-widget" title="Permalink to this headline">¶</a></h4>
+<p>Enable the widget allowing a user to upload data in Terradue store.</p>
+</div>
+</div>
+<div class="section" id="base-maps">
+<h3>Base Maps<a class="headerlink" href="#base-maps" title="Permalink to this headline">¶</a></h3>
+<p>List the base maps available in the application.</p>
+</div>
+<div class="section" id="layers">
+<h3>Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h3>
+<p>WMS layers available in the application. For which layer, it is possible to set:</p>
+<blockquote>
+<div><ul class="simple">
+<li>type (for now only wms available)</li>
+<li>name</li>
+<li>title</li>
+<li>url</li>
+<li>attribution</li>
+<li>default (true/false)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="data-contexts">
+<h3>Data contexts<a class="headerlink" href="#data-contexts" title="Permalink to this headline">¶</a></h3>
+<p>List of data contexts available in the application. For each context, the user must set:</p>
+<blockquote>
+<div><ul class="simple">
+<li>name (e.g Eo Data/Sentinel 1)</li>
+<li>description url (opensearch description url, e.g <a class="reference external" href="https://catalog.terradue.com/sentinel1/description">https://catalog.terradue.com/sentinel1/description</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="dates">
+<h3>Dates<a class="headerlink" href="#dates" title="Permalink to this headline">¶</a></h3>
+<p>Start / End dates associated to the application</p>
+</div>
+<div class="section" id="spatial">
+<h3>Spatial<a class="headerlink" href="#spatial" title="Permalink to this headline">¶</a></h3>
+<p>Spatial area in WKT format associated to the application.</p>
+</div>
+</div>
+<div class="section" id="delete-an-app">
+<h2>Delete an App<a class="headerlink" href="#delete-an-app" title="Permalink to this headline">¶</a></h2>
+<p>The service to delete an application is not yet available. For now it is possible to do it via command line:</p>
+<p>curl -u &lt;username&gt;:&lt;apikey&gt; -XDELETE &#8220;<a class="reference external" href="https://catalog.terradue.com">https://catalog.terradue.com</a>/&lt;username&gt;/query?uid=&lt;app_identifier&gt;&#8221;</p>
+<p>For more details, see the <a class="reference external" href="http://docs.terradue.com/t2-api/data/publication.html#delete-entries">T2 API documentation</a>.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

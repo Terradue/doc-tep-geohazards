@@ -52,8 +52,7 @@ The repository should follow the structure below:
       /...
       /doc # use this folder to document the application 
       
-.. seealso::
-  
+ 
 Have a look at the application tutorials which implements the recommended structure: 
     
     * MERIS Algal bloom detection https://github.com/Terradue/dcs-beam-algalbloom

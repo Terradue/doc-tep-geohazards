@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Processing &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Processing &#8212; Geohazards Thematic Exploitation Platform 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualisation" href="visualisation.html" />
+    <link rel="next" title="Reproducibility" href="reproducibility.html" />
     <link rel="prev" title="Data" href="data.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.0</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -93,8 +93,10 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 </ul>
@@ -112,10 +114,12 @@
 <li><a class="reference internal" href="#">Processing</a><ul>
 <li><a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a></li>
 <li><a class="reference internal" href="#create-a-new-job">Create a new job</a></li>
+<li><a class="reference internal" href="#fill-in-parameters">Fill in parameters</a></li>
 <li><a class="reference internal" href="#access-my-jobs">Access my jobs</a></li>
+<li><a class="reference internal" href="#access-job-result">Access job result</a></li>
 <li><a class="reference internal" href="#delete-my-jobs">Delete my jobs</a></li>
 <li><a class="reference internal" href="#make-my-jobs-public">Make my jobs public</a></li>
-<li><a class="reference internal" href="#access-community-jobs">Access community jobs</a></li>
+<li><a class="reference internal" href="#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
 </ul>
@@ -131,7 +135,7 @@
     </a>
   </li>
   <li>
-    <a href="visualisation.html" title="Next Chapter: Visualisation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Visualisation &raquo;</span>
+    <a href="reproducibility.html" title="Next Chapter: Reproducibility"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Reproducibility &raquo;</span>
     </a>
   </li>
               
@@ -140,7 +144,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/processing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/processing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -167,28 +171,33 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Community Portal User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="platform/index.html">Platform overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user.html">User Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps.html">Thematic Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community.html">Communities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-new-job">Create a new job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-in-parameters">Fill in parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-job-result">Access job result</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#delete-my-jobs">Delete my jobs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#make-my-jobs-public">Make my jobs public</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-community-jobs">Access community jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-public-jobs">Access public jobs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud/index.html">Cloud Resources</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/processing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/processing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -223,26 +232,54 @@
 <p>To create a new job:</p>
 <ol class="arabic simple">
 <li>Select the service you want to use (see <a class="reference internal" href="#discover-existing-wps">Discover existing WPS</a>).</li>
-<li>Fill in the different parameters needed by the service.</li>
-</ol>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Data can be direclty dragged from the Result tab or from the basket and dropped into the parameter input (see <a class="reference external" href="http://terradue.github.io/doc-tep-geohazards/community-guide/data.html#use-data-in-a-process">Use data in a process</a>)</p>
-</div>
-<ol class="arabic simple" start="3">
+<li>Fill in the different parameters needed by the service (see <a class="reference internal" href="#fill-in-parameters">Fill in parameters</a>).</li>
+<li>If the wps service has implemented the quotation mode, you must first click on <strong>Calculate cost</strong> to get an estimation of the wps job cost.</li>
+<li>If you have enough credits on your account, you will be able to see the <strong>Submit job</strong> button.</li>
 <li>Click on <strong>Run Job</strong></li>
 <li>To visualize the result of the job, see <a class="reference internal" href="visualisation.html"><span class="doc">Visualisation</span></a></li>
 </ol>
+</div>
+<div class="section" id="fill-in-parameters">
+<h2>Fill in parameters<a class="headerlink" href="#fill-in-parameters" title="Permalink to this headline">¶</a></h2>
+<p>A processing service takes as input a list of parameters, which are defined in the DescribeProcess function of the WPS service.
+Parameters can be free text or can be selected from a list of possible values. When a default value is described in the DescribeProcess, it is automatically set in the parameter field and can of course be changed by the user if he wants to.
+Besides, some specific parameters can be filled directly from the geobrowser:</p>
+<ul class="simple">
+<li>data input or files can be directly dragged from the Result tab or from the basket and dropped into the parameter input,</li>
+<li>geographic input (bounding box) value can be taken from the bbox selected on the map by clicking on the <img alt="get_param_from_map_button.png" src="../_images/get_param_from_map_button1.png" /> button,</li>
+<li>temporal input (start date, end date) can be taken from the time bar selection by clicking on the <img alt="get_param_from_map_button.png" src="../_images/get_param_from_map_button1.png" /> button,</li>
+</ul>
 </div>
 <div class="section" id="access-my-jobs">
 <h2>Access my jobs<a class="headerlink" href="#access-my-jobs" title="Permalink to this headline">¶</a></h2>
 <p>To access my jobs:</p>
 <ol class="arabic simple">
 <li>Open the Processing Services tab by clicking on <strong>Processing Services</strong> on the right of the geobrowser&#8217;s map.</li>
-<li>Click on <strong>My Jobs</strong> on top of the Processing Services tab.</li>
+<li>Click on <strong>Jobs</strong> on top of the Processing Services tab.</li>
 <li>The list of existing jobs (failed or success) is displayed.</li>
+<li>Filter jobs using the dropdown list and selecting &#8220;show only mine&#8221;.</li>
 <li>Click on the job title.</li>
 <li>You can now see details about the job.</li>
+</ol>
+</div>
+<div class="section" id="access-job-result">
+<h2>Access job result<a class="headerlink" href="#access-job-result" title="Permalink to this headline">¶</a></h2>
+<div class="img-border figure">
+<a class="reference internal image-reference" href="../_images/job_results.png"><img alt="../_images/job_results.png" src="../_images/job_results.png" style="width: 199.0px; height: 417.5px;" /></a>
+</div>
+<p>To visualize job&#8217;s result:</p>
+<ol class="arabic simple">
+<li>Select a job in the <strong>Jobs</strong> tab from the Processing services.</li>
+<li>Click on the job title, the following infos will appear:</li>
+</ol>
+<ul class="simple">
+<li><strong>Job info</strong>: main info about the job + access to the Status/Result location</li>
+<li><strong>Parameters</strong>: list of used parameters</li>
+<li><strong>Results</strong>: if specific actions on the result are available</li>
+<li><strong>XML Result</strong>: XML result returned by the WPS</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li>To visualize job&#8217;s results on the map, please see <a class="reference internal" href="data.html"><span class="doc">Discover data results from a processing job</span></a>.</li>
 </ol>
 </div>
 <div class="section" id="delete-my-jobs">
@@ -262,20 +299,21 @@
 <p>To make my jobs public:</p>
 <ol class="arabic simple">
 <li>Go to the detail view of the job (see <a class="reference internal" href="#access-my-jobs">Access my jobs</a>).</li>
-<li>See <span class="xref doc">Share a job</span> &lt;sharing&gt;`.</li>
+<li>See <a class="reference internal" href="sharing.html"><span class="doc">Share a job</span></a>.</li>
 </ol>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">On the job list, jobs with the icon <img alt="public_jobs" src="../_images/public_jobs.png" /> are the jobs you made public.</p>
 </div>
 </div>
-<div class="section" id="access-community-jobs">
-<h2>Access community jobs<a class="headerlink" href="#access-community-jobs" title="Permalink to this headline">¶</a></h2>
-<p>To access the community jobs:</p>
+<div class="section" id="access-public-jobs">
+<h2>Access public jobs<a class="headerlink" href="#access-public-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To access public jobs:</p>
 <ol class="arabic simple">
 <li>Open the Processing Services tab by clicking on <strong>Processing Services</strong> on the right of the geobrowser&#8217;s map.</li>
-<li>Click on <strong>Community Jobs</strong> on top of the Processing Services tab.</li>
+<li>Click on <strong>Jobs</strong> on top of the Processing Services tab.</li>
 <li>The list of existing jobs (failed or success) is displayed.</li>
+<li>Filter jobs using the dropdown list and selecting &#8220;show only public&#8221;.</li>
 <li>Click on the job title.</li>
 <li>You can now see details about the job.</li>
 </ol>
