@@ -22,7 +22,7 @@
   </dependencies>
   <properties>
     <github.global.server>github</github.global.server>
-    <github.site.repositoryName>doc-tep-geohazards</github.site.repositoryName>
+    <github.site.repositoryName>doc-tep-geohazards-v2</github.site.repositoryName>
     <github.site.repositoryOwner>Terradue</github.site.repositoryOwner>
   </properties>
   <scm>
