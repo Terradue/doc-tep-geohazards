@@ -7,7 +7,7 @@
     <version>14</version>
   </parent>
   <groupId>com.terradue.tag</groupId>
-  <artifactId>doc-tep-geohazards</artifactId>
+  <artifactId>doc-tep-geohazards-v2</artifactId>
   <packaging>rpm</packaging>
   <description>Geohazards Thematic Exploitation Platform guide</description>
   <version>2.0-SNAPSHOT</version>
@@ -26,9 +26,9 @@
     <github.site.repositoryOwner>Terradue</github.site.repositoryOwner>
   </properties>
   <scm>
-    <connection>scm:git:git@github.com:Terradue/doc-tep-geohazards.git</connection>
-    <developerConnection>scm:git:git@github.com:Terradue/doc-tep-geohazards.git</developerConnection>
-    <url>https://github.com/Terradue/doc-tep-geohazards</url>
+    <connection>scm:git:git@github.com:Terradue/doc-tep-geohazards-v2.git</connection>
+    <developerConnection>scm:git:git@github.com:Terradue/doc-tep-geohazards-v2.git</developerConnection>
+    <url>https://github.com/Terradue/doc-tep-geohazards-v2</url>
     <tag>HEAD</tag>
   </scm>
   <build>
