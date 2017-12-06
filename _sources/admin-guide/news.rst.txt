@@ -17,6 +17,13 @@ News management
 - Description (title of the news feed)
 - Url (rss feed url)
 
+| For a *Tumblr* news, the Administrator needs to give:
+
+- Title (title of the news feed)
+- Description (title of the news feed)
+- Author (tumblr blog we want to follow)
+- Tags (tags to use on the query, coma separated)
+
 | For a *normal* news (simple article to be inserted in DB), the Administrator needs to give:
 
 - Title (title of the news feed)

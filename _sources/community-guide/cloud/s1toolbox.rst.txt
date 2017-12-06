@@ -4,7 +4,7 @@ SENTINEL-1 Toolbox Installation
 The SENTINEL-1 Toolbox (S1TBX) consists in a collection of processing tools and data product readers & writers, as well as a display & analysis application, providing a support environment for handling the large archive of data from ESA SAR missions, including SENTINEL-1, ERS-1 & 2 and ENVISAT, as well as third party SAR data from ALOS PALSAR, TerraSAR-X, COSMO-SkyMed and RADARSAT-2. The various processing tools can be ran independently from the command-line, and are also integrated within the graphical user interface. The Toolbox includes notably tools for calibration, speckle filtering, coregistration, orthorectification, mosaicking, data conversion, polarimetry and interferometry.
 
 Installation on a GEP CloudToolbox
-----------------------------------
+-------------------------------
 
 Prerequisites
 ^^^^^^^^^^^^^

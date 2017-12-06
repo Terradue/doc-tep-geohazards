@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GeoBrowser area for data and Cloud processing services &#8212; Geohazards Thematic Exploitation Platform 2.0 documentation</title>
+    <title>GeoBrowser area for data and Cloud processing services &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>2.0</b><b class="caret"></b>
+        <b>1.0</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -114,15 +114,9 @@
 <li><a class="reference internal" href="#">GeoBrowser area for data and Cloud processing services</a><ul>
 <li><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
 <li><a class="reference internal" href="#map">Map</a><ul>
-<li><a class="reference internal" href="#search-area">Search area</a></li>
 <li><a class="reference internal" href="#data-results-layer">Data Results layer</a></li>
 <li><a class="reference internal" href="#disaster-charter-layer">Disaster charter layer</a></li>
 <li><a class="reference internal" href="#density-map-layer">Density map layer</a></li>
-<li><a class="reference internal" href="#area-of-interest">Area of interest</a><ul>
-<li><a class="reference internal" href="#area-of-interest-external-definition">Area of interest external definition</a></li>
-<li><a class="reference internal" href="#area-of-interest-according-to-processing-service">Area of Interest according to processing service</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#contexts">Contexts</a></li>
@@ -158,7 +152,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/platform/geobrowser.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/platform/geobrowser.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -199,6 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../community.html">Communities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../processing.html">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sharing.html">Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cloud/index.html">Cloud Resources</a></li>
@@ -211,7 +206,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/platform/geobrowser.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/platform/geobrowser.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../../search.html" method="get">
  <div class="form-group">
@@ -246,38 +241,25 @@
 <p>The map is just a simple map, on which you can zoom in, zoom out and navigate.</p>
 <p>Some buttons maybe used to interact with the map:</p>
 <ul class="simple">
-<li><img alt="geobrowser_button_search.png" src="../../_images/geobrowser_button_search.png" /> search text</li>
-<li><img alt="geobrowser_button_search_area.png" src="../../_images/geobrowser_button_search_area.png" /> search area</li>
+<li><img alt="geobrowser_button_search.png" src="../../_images/geobrowser_button_search.png" /> search area</li>
 <li><img alt="geobrowser_button_plus.png" src="../../_images/geobrowser_button_plus.png" /> Zoom in</li>
 <li><img alt="geobrowser_button_minus.png" src="../../_images/geobrowser_button_minus.png" /> Zoom out</li>
 <li><img alt="geobrowser_button_query.png" src="../../_images/geobrowser_button_query1.png" /> Open query search tab</li>
 <li><img alt="geobrowser_button_polygon.png" src="../../_images/geobrowser_button_polygon.png" /> Edit the search bbox by drawing a polygon on the map</li>
 <li><img alt="geobrowser_button_recbox.png" src="../../_images/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
-<li><img alt="geobrowser_button_placemark.png" src="../../_images/geobrowser_button_placemark.png" /> Edit the search bbox by selecting a point as AOI</li>
-<li><img alt="geobrowser_button_wkt.png" src="../../_images/geobrowser_button_wkt.png" /> Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box</li>
-<li><img alt="geobrowser_button_meter.png" src="../../_images/geobrowser_button_meter.png" /> Measure an area</li>
+<li><img alt="geobrowser_button_dynamicsearch.png" src="../../_images/geobrowser_button_dynamicsearch.png" /> Enable/Disable dynamic search (the search bbox is the current view on the map)</li>
 <li><img alt="geobrowser_button_fullscreen.png" src="../../_images/geobrowser_button_fullscreen.png" /> Put the map in full screen</li>
 <li><img alt="geobrowser_button_layers.png" src="../../_images/geobrowser_button_layers.png" /> Change the background of the map | Select layers to be displayed.</li>
 </ul>
-<div class="section" id="search-area">
-<h4>Search area<a class="headerlink" href="#search-area" title="Permalink to this headline">¶</a></h4>
-<p>From the geobrowser, a search area can be accessed by clicking on the <img alt="geobrowser_button_search_area.png" src="../../_images/geobrowser_button_search_area.png" /> button. This expands a view containing all search parameters associated to the current catalogue on which the search will be performed.
-Some parameters are just free text, others can be chosen from a list, and some parameters can be filled from the geobrowser. This is the case of:</p>
-<ul class="simple">
-<li>the temporal parameter which can be filled by moving the temporal bar present on the geobrowser.</li>
-</ul>
+<p>It is also possible to directly select on the map the temporal parameter of the search by moving the temporal bar.</p>
 <div class="img-border img-max-width figure">
 <img alt="../../_images/geobrowser_timebar.png" src="../../_images/geobrowser_timebar.png" />
 </div>
-<ul class="simple">
-<li>the geographical area which can be filled either from the bbox drawn on the map using <img alt="geobrowser_button_polygon.png" src="../../_images/geobrowser_button_polygon.png" />, <img alt="geobrowser_button_recbox.png" src="../../_images/geobrowser_button_recbox.png" />, <img alt="geobrowser_button_placemark.png" src="../../_images/geobrowser_button_placemark.png" /> or by uploading a shapefile, a kml or geojson file, using the import button <img alt="geobrowser_button_wkt.png" src="../../_images/geobrowser_button_wkt.png" />.</li>
-</ul>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">in the <em>Search Term</em> field supported wildcards are &#8216;*&#8217;, which matches any character sequence (including the empty one), and &#8216;?&#8217;, which matches any single character.</p>
 </div>
 <p>It is also possible to add layers on the map:</p>
-</div>
 <div class="section" id="data-results-layer">
 <h4>Data Results layer<a class="headerlink" href="#data-results-layer" title="Permalink to this headline">¶</a></h4>
 <p>Display the results (orange polygons) of the current search or context.</p>
@@ -296,26 +278,6 @@ For a better visibility, events are grouped by location, accordingly to the zoom
 <div class="section" id="density-map-layer">
 <h4>Density map layer<a class="headerlink" href="#density-map-layer" title="Permalink to this headline">¶</a></h4>
 <p>Currently disactivated.</p>
-</div>
-<div class="section" id="area-of-interest">
-<h4>Area of interest<a class="headerlink" href="#area-of-interest" title="Permalink to this headline">¶</a></h4>
-<div class="img-container-border figure align-center">
-<a class="reference internal image-reference" href="../../_images/aoi.png"><img alt="../../_images/aoi.png" src="../../_images/aoi.png" style="width: 403.2px; height: 219.2px;" /></a>
-</div>
-<p>Area of interest may be defined by the user using the tools to draw a polygon or a rectangle on the map (see <a class="reference internal" href="#map">Map</a>). Once set, the search will be automatically updated with data corresponding to this AOI.</p>
-<div class="section" id="area-of-interest-external-definition">
-<h5>Area of interest external definition<a class="headerlink" href="#area-of-interest-external-definition" title="Permalink to this headline">¶</a></h5>
-<p>Complex Area of interest can be defined by uploading or referencing a vector based file:</p>
-<ul class="simple">
-<li>shapefile (limited to 1MB)</li>
-<li>kml (limited to 1MB)</li>
-</ul>
-</div>
-<div class="section" id="area-of-interest-according-to-processing-service">
-<h5>Area of Interest according to processing service<a class="headerlink" href="#area-of-interest-according-to-processing-service" title="Permalink to this headline">¶</a></h5>
-<p>Area of Interest may be directly used to fill bounding box parameters exposed by Processing services.
-For that, you can use the <img alt="get_param_from_map_button.png" src="../../_images/get_param_from_map_button.png" /> button, displayed along the parameter input field. Clicking on it will allow directly to fill the input with the value of the current search bounding box.</p>
-</div>
 </div>
 </div>
 <div class="section" id="contexts">
@@ -351,9 +313,6 @@ Saved Data packages can then be loaded into the basket. (see <a class="reference
 <h2>Cloud Processing<a class="headerlink" href="#cloud-processing" title="Permalink to this headline">¶</a></h2>
 <p>Processing services tab can be expanded by clicking on <em>Processing Services</em> on the right of the map.
 It is composed of two sub tabs.</p>
-<div class="img-border figure">
-<img alt="../../_images/geobrowser_jobs.png" src="../../_images/geobrowser_jobs.png" />
-</div>
 <div class="section" id="processing-services-tab">
 <h3>Processing services tab<a class="headerlink" href="#processing-services-tab" title="Permalink to this headline">¶</a></h3>
 <p>This tab contains the list of available Processing Services. Usually, only 20 Processing services are displayed. If you are looking for a specific one, you can filter the results using the <strong>Filter services</strong> input.</p>
