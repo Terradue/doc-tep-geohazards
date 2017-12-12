@@ -1,7 +1,14 @@
-PSI Post Processing Tool
+PSI Post Processing Service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The service is aimed at producing derived results starting from PSI results produced with SqueeSAR TM (off-line) and S-BAS PSI processing.
+The PSI Post Processing service, developed by TRE-Altamira, is aimed at producing derived results starting from PSI results produced with SqueeSAR TM (off-line) and SBAS PSI processing.
+
+This service allows users to make some post-processing of PSI results. It includes: 
+
+* Projecting PSI displacement in the line-of-sight (LOS) direction onto a predefined direction of real ground displacement (east-west, up-down or down-slope) using one single orbit pass or both.
+* Filtering points by means of a phase quality indicator or geometrical distortion masks (foreshortening or layover).
+* Computing the acceleration field and changing the reference point.
+
 
 Application selection
 =====================
@@ -40,6 +47,7 @@ Select the point filters
 ------------------------
 
 The application allows to filter points using the coherence and the geometrical distorsions.
+
 * Coherence filter: apply a filter to remove points with a coherence value lower that the selected COHERENCE THRESHOLD.
 * Geometrical distorsion filters: is possible to select a layover and a foreshortening filter. In case the foreshortening filter is selected, a FORESHORTENING THRESHOLD value should be selected.
 
@@ -63,6 +71,7 @@ Acceleration calculation
 ------------------------
 
 Is possible to calculate the acceleration of the results, there are 2 options to select:
+
 * 2n order model
 * Velocity derivative
 
@@ -75,6 +84,7 @@ Ground projections
 ------------------
 
 Finally we should select the GROUND PROJECTION there are 3 available options:
+
 * UP-DOWN projection/decomposition.
 * EAST-WEST projection/decomposition.
 * DOWNSLOPE projection/decomposition. In this case is possible to filter points with a low sensitivity setting the DOWNSLOPE SENSITIVITY FILTER.
@@ -108,14 +118,19 @@ The generated outputs are a csv, a float and a rgb GeoTiff of the velocity and f
 The output filenames should have this name: [asc/desc/asc_desc]_[ud/ew/dsl]_[proj/decomp]
 
 Selecting an ascending file:
+
 * asc_ud_proj
 * asc_ew_proj
 * asc_dsl_proj_dsl and asc_dsl_proj_los
+
 Selecting a descending file:
+
 * desc_ud_proj
 * desc_ew_proj
 * desc_dsl_proj_dsl and desc_dsl_proj_los
+
 Selecting an ascending and a descending file:
+
 * asc_desc_ud_decomp
 * asc_desc_ew_decomp
 * asc_desc_dsl_decomp_dsl,  asc_desc_dsl_decomp_los
