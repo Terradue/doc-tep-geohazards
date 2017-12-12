@@ -1,5 +1,5 @@
 PSI Post Processing Service
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The PSI Post Processing service, developed by TRE-Altamira, is aimed at producing derived results starting from PSI results produced with SqueeSAR TM (off-line) and SBAS PSI processing.
 

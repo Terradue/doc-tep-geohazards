@@ -23,4 +23,5 @@ Contents:
    Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>
    SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
    Surface Temperature Map (STEMP)<stemp>
-   PSI Post-Processing Service<psi_postproc>
+   PSI Post-Processing Service<psi_post_proc>
+   FASTVEL for displacement velocity map generation<fastvel>

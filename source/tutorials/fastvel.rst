@@ -1,5 +1,5 @@
 FASTVEL for displacement velocity map generation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FASTVEL is a PSI based processing software developed by TRE-Altamira.
 
