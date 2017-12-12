@@ -12,8 +12,6 @@ Contents:
    StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>
-   G-POD NEST InSAR Service <gpod-nest-insar>
-   G-POD NEST Coreg Service <gpod-nest-coreg>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ASAR Service<gpod-pf-asar>
    G-POD PF-ERS Service<gpod-pf-ers>
