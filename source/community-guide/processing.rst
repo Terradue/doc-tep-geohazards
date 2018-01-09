@@ -25,10 +25,35 @@ To create a new job:
 
 1. Select the service you want to use (see `Discover existing WPS`_).
 2. Fill in the different parameters needed by the service (see `Fill in parameters`_).
-3. If the wps service has implemented the quotation mode, you must first click on **Calculate cost** to get an estimation of the wps job cost.
-4. If you have enough credits on your account, you will be able to see the **Submit job** button.
+3. Click on **Run Job**
+4. To visualize the result of the job, see :doc:`Visualisation <visualisation>`
+
+.. figure:: ../includes/runjob.png
+	:align: center
+	:figclass: img-container-border
+	:scale: 50%
+
+Create a new job with Quotation mode
+------------------------------------
+
+To create a new job:
+
+1. Select the service using the quotation mode that you want to use (see `Discover existing WPS`_).
+2. Fill in the different parameters needed by the service (see `Fill in parameters`_).
+3. Click on **Calculate cost** to get an estimation of the wps job cost.
+4. If you have enough credits on your account, you will be able to see the **Run job** button.
 5. Click on **Run Job**
 6. To visualize the result of the job, see :doc:`Visualisation <visualisation>`
+
+.. figure:: ../includes/runjobquotation1.png
+	:align: center
+	:figclass: img-container-border
+	:scale: 50%
+
+.. figure:: ../includes/runjobquotation2.png
+	:align: center
+	:figclass: img-container-border
+	:scale: 50%
 
 Fill in parameters
 ------------------
@@ -52,6 +77,12 @@ To access my jobs:
 2. Click on **Jobs** on top of the Processing Services tab.
 3. The list of existing jobs (failed or success) is displayed.
 4. Filter jobs using the dropdown list and selecting "show only mine".
+
+.. figure:: ../includes/my_job_list.png
+	:figclass: img-border
+	:scale: 50 %
+
+
 5. Click on the job title.
 6. You can now see details about the job.
 
@@ -80,11 +111,16 @@ Delete my jobs
 To delete my jobs:
 
 1. Open the Processing Services tab by clicking on **Processing Services** on the right of the geobrowser's map.
-2. Click on **My Jobs** on top of the Processing Services tab.
+2. Click on **Jobs** on top of the Processing Services tab.
 3. The list of existing jobs (failed or success) is displayed.
-4. Put your mouse over the job, a small "x" appears on the right.
-5. Click on the "x".
-6. The job is deleted
+4. Filter your jobs using the dropdown list and selecting "show only mine" (you can delete only your jobs).
+5. Put your mouse over the job, a small "x" appears on the right.
+6. Click on the "x".
+7. The job is deleted
+
+.. figure:: ../includes/job_delete.png
+	:figclass: img-border
+	:scale: 50 %
 
 Make my jobs public
 -------------------
@@ -109,3 +145,13 @@ To access public jobs:
 4. Filter jobs using the dropdown list and selecting "show only public".
 5. Click on the job title.
 6. You can now see details about the job.
+
+Get support or contact provider
+-------------------------------
+
+Once you have processed a job, you will see on the detailed view of the job a tab named **Support**.
+This tab will allow you to send an email to the support team will all details about your job, or (only in case of successful jobs) to the service provider.
+
+.. figure:: ../includes/job_support.png
+	:figclass: img-border
+	:scale: 50 %
