@@ -45,7 +45,7 @@ Click on the data package, hold shift and Drag and Drop all four results in the 
         :width: 750px
         :align: center
 
-.. caution:: Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the contained tiles. For processing you must select **only** the original multi-tile datasets. For datasets after 27 September 2016 there is no such ambiguity.
+.. caution:: Sentinel-2 datasets distributed before September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the contained tiles. For processing you must select **only** the original multi-tile datasets. For datasets after October 2016 there is no such ambiguity.
 
 Set the processing parameters 
 -----------------------------
@@ -53,9 +53,9 @@ Set the processing parameters
 There is a total of 9 processing parameters that can be adjusted and when hovering over the parameter fields you will see a short explanation for each of the parameters.
 
 * **Sentinel-2 band:** Specify the Sentinel-2 band used for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by ESA
-* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets(before 27 September 2016) where multiple tiles where distributed in one SAFE folder. For such datasets it is necessary to specify Sentinel-2 tile in the format T{UTM zone number}{MGRS code} (e.g. T31TGK). However, here we are dealing with single tile datasets so that the parameter can be set to *NONE*.
+* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets(before September 2016) where multiple tiles where distributed in one SAFE folder. For such datasets it is necessary to specify Sentinel-2 tile in the format T{UTM zone number}{MGRS code} (e.g. T31TGK). However, here we are dealing with single tile datasets so that the parameter can be set to *NONE*.
 * **Temporal matching range:** Defines how many pairs will be created considering the temporal order of the selected images. The default is *2* so that each image is matched with at most the previous 2 images within the selection.
-* **Split date:** An optional parameter of the form "yyyy-MM-ddTHH:mm:ss" which will split the time series into two subsets and pairs will only be formed among members of different subsets. We will see the utility of this parameter in the second example and will leave it at *NONE* for the moment.
+* **Split date:** An optional parameter of the form "YYYY-MM-DD" which will split the time series into two subsets and pairs will only be formed among members of different subsets. We will see the utility of this parameter in the second example and will leave it at *NONE* for the moment.
 * **Window size:** The parameter controls the size of the template used for matching among the input images. More specifically it controls the neighborhood around the central pixel so that the default value of *3* results in a 7x7 window size. The minimum value is 1 (3x3 pixel) and the recommended maximum is 7 (15x15 pixel). A smaller window will allow to better reconstruct small scale variations while at the same time can lead to more noise. Vice versa larger window sizes will lead to greater robustness against noise while smoothing small scale details. For small scale movements such as landslides we recommend a smaller window size (e.g. 2) while for large scale movements such as coseismic slip larger window sizes are often better.
 * **Decorrelation threshold:** Matches with a correlation coefficient [0,1] will be discarded. The default value is *0.2*.
 * **Spatial matching range:** Defines the search range in pixel for finding matches. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. This parameter should be adjusted according to the maximum expected displacement taking into account also the possible coregistration bias of the input images. This the considered landslide underwent a period of strong acceleration we will increase this value to *7*.
@@ -124,7 +124,7 @@ Set the processing parameters
 * **Sentinel-2 band:** Specify the Sentinel-2 band used for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by ESA.
 * **Sentinel-2 tile:** The tile code for this scene is *59GQP*.
 * **Temporal matching range:** For this use case we will use the **Split date** parameter in which case all possible pairs are formed and the **Temporal matching range** will be ignored.
-* **Split date:** We will set the parameter to the date of the earthquake which is *2016-11-13T11:02:00* (yyyy-MM-ddTHH:mm:ss, UTC time). Consequently the service will match all scenes before this date with all scenes after this date.
+* **Split date:** We will set the parameter to the date of the earthquake which is *2016-11-13* (UTC time). Consequently the service will match all scenes before this date with all scenes after this date.
 * **Window size:** The parameter controls the size of the template used for matching among the input images. Leave it at the default value of *3* which results in a 7x7 window size.
 * **Decorrelation threshold:** We will slightly increase this threshold to *0.33*.
 * **Spatial matching range:** Defines the search range in pixel for finding matches. The horizontal offsets for this event reached 10 m and more and we should provide some additional tolerance for possible co-registration offsets. So set the value to *3*.
