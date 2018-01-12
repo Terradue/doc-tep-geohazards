@@ -24,3 +24,5 @@ Contents:
    Surface Temperature Map (STEMP)<stemp>
    PSI Post-Processing Service<psi_post_proc>
    FASTVEL for displacement velocity map generation<fastvel>
+   MPIC-OPT: Multiple pairwise optical image correlation<mpic-opt>
+   DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
