@@ -501,13 +501,13 @@ where:
 * ``<UniqueCode>`` a unique code identifier;
 * ``<FileExtension>`` possible values are:
 
-	- ``tif``: the actual data in geoTiff;
-	- ``properties``: the metadata displayed in the Geobrowser;
-	- ``metadata``: the full metadata list according to the EPOS specifications;
-	- ``png``: a quick-look raster image;
-	- ``pngw``: the geocoding information for the png image;
-	- ``kmz``: the google format overlay containing the quick-look image;
-	- ``legend.png``: the color bar for the png image.
+  * ``tif``: the actual data in geoTiff;
+  * ``properties``: the metadata displayed in the Geobrowser;
+  * ``metadata``: the full metadata list according to the EPOS specifications;
+  * ``png``: a quick-look raster image;
+  * ``pngw``: the geocoding information for the png image;
+  * ``kmz``: the google format overlay containing the quick-look image;
+  * ``legend.png``: the color bar for the png image.
 
 Typical name samples are::
 
