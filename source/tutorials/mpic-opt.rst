@@ -5,6 +5,8 @@ This service targets the detection and measurement of horizontal ground deformat
 
 This tutorial will introduce you to the use of the service for the detection of landslide surface displacement for two use cases beeing the quantification of landslide surface displacement and co-seismic displacement. To this end we will process a series of Sentinel-2 images acquired over the Harmalière landslide (France 2016) in and Sentinel-2 images acquired before and after the Kaikoura earthquake (New Zealand 2016).
 
+.. The service is one of three services implemented by CNRS-EOST on the Geohazards Exploitation platform which are mainly dedicated the detection and monitoring of landslides and measurements of surface deformation. This includes the generation of surface models and orthoimages from very-high resolution (VHR) Pléiades images (DSM-OPT), the detection and measurement of surface motion (e.g. landslides and co-seismic slip) from time-series of Sentinel-2 images (MPIC-OPT), and the rapid mapping of newly triggered landslides using Sentinel-2 or VHR orthoimages from before and after major triggering events such as earthquakes or heavy rainstorms.
+
 Select the processing service
 =============================
 
@@ -31,7 +33,11 @@ Select input data
 -----------------
 
 The Geobrowser offers multiple ways to search and discover a large variety of EO-based dataset and the interested reader should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction. 
-For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Harmaliere" into the search box you should be able to find a data package named "Harmaliere landslide". Similarily you can search for "Kaikoura" to find the data package that we will use in the second part of this tutorial.
+For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Harmaliere" into the search box you should be able to find a data package named "Harmaliere landslide". Alternatively you can access the `Harmaliere landslide data package`_ directly by clicking on the provided link.
+
+.. _`Harmaliere landslide data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide
+
+Similarily you can search for "Kaikoura" to find the data package that we will use in the second part of this tutorial.
 
 .. figure:: assets/tuto_mpicopt_3.png
 	:figclass: align-center
@@ -100,7 +106,9 @@ With this second use case we will illustrate the use of MPIC-OPT for measurement
 Select input data
 -----------------
 
-As in the previous example there is already a data package available which we you can find by typing "Kaikoura" in the search box in the "Data Packages" tab on the lower right of the screen.
+As in the previous example there is already a data package available which we you can find by typing "Kaikoura" in the search box in the "Data Packages" tab on the lower right of the screen. Alternatively, you can access the `Kaikoura data package`_ directly by clicking on the link.
+
+.. _`Kaikoura data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DKaikouraEarthquakeSentinel-2
 
 .. figure:: assets/tuto_mpicopt_8.png
 	:figclass: align-center
@@ -113,6 +121,7 @@ Click on the data package, hold shift and Drag and Drop all four results in the 
 	:figclass: align-center
         :width: 750px
         :align: center
+
 
 
 Set the processing parameters 
@@ -156,6 +165,16 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
+
+The service output generally includes the following files:
+
+* **Cloud masks:** 8-bit GeoTiffs representing the mask for each time step. Areas with no data and covered by clouds in the two respective input images marked as 0. Valid pixels are marked with 255. The naming convention is: *cloud_masks_assembled_dateimage1_dateimage2.tif*
+* **Corrected displacement fields and correlation maps for each time step:** Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (east is postive) and N-S direction (South is positive): The naming conventions are *Px1_dateimage1_dateimage2.tif* and *Px2_dateimage1_dateimage2.tif* respectively.
+* **Correllation coefficient:**  8-bit GeoTiffs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized to a range of 128 to 255. The naming convention is *Correl_dateimage1_dateimage2.tif*
+* **Vector coherence:** A floating point GeoTiff representing the vector coherence of all time-steps accumulated with a value range of [0,1]. The naming convention is *vector_coherence_dateimage1_dateimage2.tif*
+* **Mean displacement:** A floating point GeoTiff representing the average displacement over all time steps in meters. The naming convention is *mean_displacement_$dateimage1_dateimage2.tif*
+* **Mean velocity:** Two floating point GeoTiffs representing the mean absolute velocities in E−W direction and N−S direction in meters/day respectively. The naming conventions are *mean_veloc_ew_dateimage1_dateimage2.tif* and *mean_veloc_ns_dateimage1_dateimage2.tif*.
+
 
 
 References
