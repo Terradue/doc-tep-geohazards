@@ -116,7 +116,7 @@ In particular:
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
+.. note:: If set, the system automatically processes the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
  
 * As *Polarization* type:
@@ -157,12 +157,7 @@ In particular:
 
 * Click on the button "Run Job" at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_psbas_ondem_7.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-* After about 48 hours of processing time, the job status should be "Success"
+* After about 48 hours of processing time, the job status should be "Success".
 
 1.5 Results: download and visualization
 ---------------------------------------
@@ -209,6 +204,7 @@ Processing results are provided according to the EPOS-IP project (http://epos-ip
 **Published Results**
 
 The main outputs of the MTA mode are the:
+
 + Displacement Time series in LOS;
 + Mean LOS velocity;
 + Temporal coherence;
@@ -375,15 +371,10 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
         :align: center
         
 * Set the *Job Title* with a meaningful name (e.g. *CNR-IREA P-SBAS S1 on-demand Amatrice T22*) and push the *sel. all* button in the Feature Basket. 
-      
-.. figure:: assets/tuto_psbas_ondem_ifg3.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-                
+                     
 * Drag all the selected data and drop them within the *Sentinel-1 input SLCs* field on the right panel.                
                 
-.. figure:: assets/tuto_psbas_ondem_ifg4.png
+.. figure:: assets/tuto_psbas_ondem_ifg3.png
 	:figclass: align-center
         :width: 750px
         :align: center                
@@ -394,7 +385,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
 
 * Fill the parameters according to the following figure:
 
-.. figure:: assets/tuto_psbas_ondem_ifg5.png
+.. figure:: assets/tuto_psbas_ondem_ifg4.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -417,7 +408,7 @@ In particular:
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
+.. note:: If set, the system automatically processes the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
  
 * As *Polarization* type:
@@ -444,7 +435,7 @@ In particular:
 
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). 
 
-* Leave the *APS Filter Window Length* unchanged:
+* Leave the *APS Filter Window Length* unchanged.
       
 .. note:: This is the temporal window width (in days) for the APS filter on the resulting time series. **This parameter is not considered in the IFG mode**.
 
@@ -454,26 +445,21 @@ In particular:
 
 * Click on the button "Run Job" at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_psbas_ondem_ifg6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-* After about 4 hours of processing time, check the status is set as "Successful Job"
+* After about 4 hours of processing time, the job status should be as "Success".
 
 2.5 Results: download and visualization
 ---------------------------------------
 
-The P-SBAS DInSAR results are available in the Geobrowser after the processing. Tutorial results are accessible here: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
+The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are accessible here: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
 
-.. figure:: assets/tuto_psbas_ondem_ifg7.png
+.. figure:: assets/tuto_psbas_ondem_ifg5.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-ip window of the identified product:
 
-.. figure:: assets/tuto_psbas_ondem_ifg8.png
+.. figure:: assets/tuto_psbas_ondem_ifg6.png
 	:figclass: align-center
         :width: 750px
         :align: center
