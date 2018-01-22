@@ -36,7 +36,7 @@ In the following two service runs related to the two different processing modes 
 1.1 Select the processing
 -------------------------
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
 * Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
@@ -119,7 +119,7 @@ In particular:
  
 .. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on **land** and included **within the selected Area of Interest** (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point.
 
-Leave the *Bounding Box* untouched (Area of Interest empty). 
+* Leave the *Bounding Box* untouched (Area of Interest empty). 
 
 .. note:: If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
@@ -256,123 +256,85 @@ Additional provided outputs are:
 Metadata are provided according to the EPOS specifications.
 
 
-========= =========================== ===============================================
-Tag       Example                     Notes
-========= =========================== ===============================================
-Data_Type LOS_DISPLACEMENT_TIMESERIES Type of data (according to the EPOS categories)
---------- --------------------------- -----------------------------------------------
+============================= ======================================================================== =================================================================================
+Tag                           Example                                                                  Notes
+============================= ======================================================================== =================================================================================
+Data_Type                     LOS_DISPLACEMENT_TIMESERIES                                              Type of data (according to the EPOS categories)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Title                         SBAS_TS_20170106_20171120_ME7G.csv                                       Title of the pop-up window (it corresponds to the file name)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Product_format                ASCII                                                                    Format of the product (geoTiff or CSV)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Product_size                  23249970                                                                 In byte
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Product_url                                                                                            The url to locate the file
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Bounding_box                                                                                           The polygon relevant to the processed area
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+License                       https://creativecommons.org/licenses/by/4.0                              Applicable license for the product
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+User_ID                       mapred                                                                   User that generated the product
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Software_version              CNR-IREA P-SBAS 25
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Applied_algorithm_description Parallel SBAS Interferometry Chain                                       Short description of the algorithm used to generate the product
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Main_reference                10.1109/TGRS.2002.803792                                                 DOIs of the main publications describing the used algorithms
+                              10.1109/JSTARS.2014.232267
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Date_of_measurement_start     2017-11-07T02:53:48.378740Z
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Date_of_measurement_end       2017-11-19T02:53:48.215234Z
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Date_of_production            2017-12-01T23:51:09Z
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Date_of_publication           2017-12-01T23:51:09Z
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Service_used_for_generation   CNR-IREA EPOSAR                                                                
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Geographic_CS_type_code       EPSG4326
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Used_DEM                      SRTM_3arcsec                                                             DEM used within the interferometri processing
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Super_master_SAR_image_ID     S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE Reference SAR geometry
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Master_SAR_image_ID           S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE Master Image (only for IFG products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Slave_SAR_image_ID            S1A_IW_SLC__1SDV_20171119T025348_20171119T025415_019328_020C14_14AF.SAFE Slave Image (only for IFG products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Perpendicular_baseline        -14.7667                                                                 In meters (only for IFG products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Parallel_baseline             -4.35838                                                                 In meters (only for IFG products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Along_track_baseline          -0.389812                                                                In meters (only for IFG products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Spatial_resolution            73                                                                       Ground resolution, in meters
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Sensor                        S1                                                                       Used sensor
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Mode                          IW                                                                       Acquisition mode
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Antenna_side                  Right                                                                    Right/Left
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Relative_orbit_number         6                                                                        Satellite Track
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Wavelength                    0.055465760                                                              In meters
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Number_of_looks_azimuth       5                                                                        Applied multilook along azimuth
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Number_of_looks_range         20                                                                       Applied multilook along range
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Number_of_dates               51                                                                       Number of used acquisitions (only for MTA products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Reference_date                2017-01-06T05:11:09Z                                                     Acquisition used as temporal reference in the time series (only for MTA products)
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Reference_point               14.323914 40.862183                                                      Lon Lat format. For MTA and InU products
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Applied_corrections           No_Corrections                                                           Description of possible correction applied to the interferograms or time series
+----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
+Applied_filter                Goldstein_0.5                                                            Possible spatial filter applied to the interferogram
+============================= ======================================================================== =================================================================================
 
-========= =========================== ===============================================
-
-
-Title SBAS_TS_20170106_20171120_ME7G.csv Title of the pop-up window (it corresponds to the file name)
------ ---------------------------------- ------------------------------------------------------------
-Product_format ASCII Format of the product (geoTiff or CSV)
--------------- ----- --------------------------------------
-Product_size 23249970 In byte
-============ ======== =======
-
-
-Product_url
-https://store.terradue.com/fcasu/InW_20171107S1A_20171119S1A_GOLD_ILSO.tif
-The url to locate the file
-Bounding_box_wkt
-POLYGON((45.449561 33.928502,45.775626 35.550243,48.554757 35.145021,48.172777 33.521486,45.449561 33.928502))
-The polygon relevant to the processed area
-License
-https://creativecommons.org/licenses/by/4.0
-Applicable license for the product
-User_ID
-mapred
-User that generated the product
-Software_version
-CNR-IREA P-SBAS 25
-
-Applied_algorithm_description
-Parallel SBAS Interferometry Chain
-Short description of the algorithm used to generate the product
-Main_reference
-10.1109/TGRS.2002.803792, 10.1109/JSTARS.2014.2322671
-DOIs of the main publications describing the used algorithms
-Date_of_measurement_start
-2017-11-07T02:53:48.378740Z
-
-Date_of_measurement_end
-2017-11-19T02:53:48.215234Z
-
-Date_of_production
-2017-12-01T23:51:09Z
-
-Date_of_publication
-2017-12-01T23:51:09Z
-
-Service_used_for_generation
-CNR-IREA EPOSAR
-
-Geographic_CS_type_code
-EPSG4326
-
-Used_DEM
-SRTM_3arcsec
-DEM used within the interferometri processing
-Super_master_SAR_image_ID
-S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE
-Reference SAR geometry
-Master_SAR_image_ID
-S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE
-Master Image (only for IFG products)
-Slave_SAR_image_ID
-S1A_IW_SLC__1SDV_20171119T025348_20171119T025415_019328_020C14_14AF.SAFE
-Slave Image (only for IFG products)
-Perpendicular_baseline
--14.7667
-In meters (only for IFG products)
-Parallel_baseline
--4.35838
-In meters (only for IFG products)
-Along_track_baseline
--0.389812
-In meters (only for IFG products)
-Spatial_resolution
-73
-Ground resolution, in meters
-Sensor
-S1
-Used sensor
-Mode
-IW
-Acquisition mode
-Antenna_side
-Right
-Right/Left
-Relative_orbit_number
-6
-Satellite Track
-Wavelength
-0.055465760
-In meters
-Number_of_looks_azimuth
-5
-Applied multilook along azimuth
-Number_of_looks_range
-20
-Applied multilook along range
-Number_of_dates
-51
-Number of used acquisitions (only for MTA products)
-Reference_date
-2017-01-06T05:11:09Z
-Acquisition used as temporal reference in the time series (only for MTA products)
-Reference_point
-14.323914 40.862183
-Lon Lat format. For MTA and InU products
-Applied_corrections
-No_Corrections
-Description of possible correction applied to the interferograms or time series
-Applied_filter
-Goldstein_0.5
-Possible spatial filter applied to the interferogram
-	
         
 2 Interferogram Generation (IFG) Mode
 =====================================
@@ -380,7 +342,7 @@ Possible spatial filter applied to the interferogram
 2.1 Select the processing
 -------------------------
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
 * Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
 
