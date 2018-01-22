@@ -113,7 +113,8 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
 
 Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
+.. note:: 
+If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
  
 * As *Polarization* type:
@@ -203,9 +204,9 @@ Processing results are provided according to the EPOS-IP project (http://epos-ip
 **Published Results**
 
 The main outputs of the MTA mode are the:
-+ Displacement Time series in LOS;
-+ Mean LOS velocity;
-+ Temporal coherence;
+	+ Displacement Time series in LOS;
+	+ Mean LOS velocity;
+	+ Temporal coherence;
 + Pixel location (coordinates);
 + LOS unit vectors.
 
@@ -227,8 +228,10 @@ Provided information consists, per each pixel considered reliable, in:
 + LOS displacement time-series in cm (TS): the length of this field depends on the number of acquisitions used in the time series generation.
 
 File name convention is as follows::
+
   SBAS_TS_<FirstAcqDate>_<LastAcqDate>_<UniqueCode>.csv
 where::
+
   <FirstAcqDate>
 is the first acquisition of the time series;::
   <LastAcqDate>
