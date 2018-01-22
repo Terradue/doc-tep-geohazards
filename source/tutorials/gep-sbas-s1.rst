@@ -113,7 +113,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
 
 Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: 
+.. note:: pippo
 If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
  
