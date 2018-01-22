@@ -494,6 +494,7 @@ File name convention is as follows::
   <DataType>_<MasterDate>_<SlaveDate>_<UniqueCode>.<FileExtension>
 
 where:
+
 * ``<DataType>`` can be: ``InW`` (Wrapped Interferogram), ``InU`` (Unwrapped Interferogram) (this feature will be available in a later release of the service), ``Coh`` (Spatial Coherence);
 * ``<MasterDate>`` date of the Master acquisition in the format ``<yyyymmdd><SensorCode>``, where ``<SensorCode>`` is a 3-char code that identifies the sensor. For the Sentinel case the possible codes are: S1A and S1B.
 * ``<SlaveDate>`` date of the Slave acquisition in the same <MasterDate> format;
