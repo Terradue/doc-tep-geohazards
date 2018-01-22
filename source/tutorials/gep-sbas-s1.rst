@@ -38,12 +38,7 @@ In the following two service runs related to the two different processing modes 
 
 * Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
-
-.. figure:: assets/tuto_psbas_ondem_0.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+* Access the "CNR IREA SBAS Ground Motion Services" Thematic App.
 
 * Open the tab "Processing services" from the right of the map, and then select the processing service “CNR-IREA P-SBAS Sentinel-1 processing on-demand”.
 
@@ -137,11 +132,6 @@ In particular:
 .. code-block:: sbas-parameter
   
 	MTA
-
-.. figure:: assets/tuto_psbas_ondem_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
         
 .. note:: Possible values: MTA (Multi-Temporal Analysis); IFG (Interferogram Generation). Default value is MTA. For IFG description see Section 2.
 
@@ -150,12 +140,7 @@ In particular:
 .. code-block:: sbas-parameter
   
 	srtm_1
-
-.. figure:: assets/tuto_psbas_ondem_7.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
+       
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). 
 
 * As *APS Filter Window Length*, insert:
@@ -172,31 +157,49 @@ In particular:
 
 * Click on the button "Run Job" at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:
 
+.. figure:: assets/tuto_psbas_ondem_7.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* After about 48 hours of processing time, the job status should be "Success"
+
+1.5 Results: download and visualization
+---------------------------------------
+
+**Download**
+
+The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are accessible here: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D7cc6d9bb-5ad6-48f8-bb7c-e798a9f871be%26key%3Dd6e534cb-7196-4074-b07c-390a7c6f5b30&id=insarquake
+
 .. figure:: assets/tuto_psbas_ondem_8.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* After about 48 hours of processing time, check the status is set as "Success"
-
-1.5 Results: download and visualization
----------------------------------------
-
-The P-SBAS DInSAR results are available in the Geobrowser after the processing. Tutorial results are accessible here: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D7cc6d9bb-5ad6-48f8-bb7c-e798a9f871be%26key%3Dd6e534cb-7196-4074-b07c-390a7c6f5b30&id=insarquake
+To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-up window of the identified product:
 
 .. figure:: assets/tuto_psbas_ondem_9.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-ip window of the identified product:
+.. note:: Single files can be downloaded separately. To download the full result archive, please select the zip file.
+
+**Visualization**
+
+Time series can be directly visualized via the Geobrowser. After setting a satisfactory zoom, put a Placemark on the pixel for which the time series shold be displayed. Then click the "plot" icon in the TS collection.
 
 .. figure:: assets/tuto_psbas_ondem_10.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-.. note:: Single files can be downloaded separately. To download the full result archive, please select the zip file.
+A pop-up window should appear showing the Time series of the selected pixel.
+
+.. figure:: assets/tuto_psbas_ondem_11.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
         
 **Conventions and assumptions**
 	
@@ -214,7 +217,7 @@ The main outputs of the MTA mode are the:
 
 Information is organized in a **CSV ASCII** table according to the following figure. 
 
-.. figure:: assets/tuto_psbas_ondem_11.png
+.. figure:: assets/tuto_psbas_ondem_12.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -501,13 +504,13 @@ where:
 * ``<UniqueCode>`` a unique code identifier;
 * ``<FileExtension>`` possible values are:
 
-  * ``tif``: the actual data in geoTiff;
-  * ``properties``: the metadata displayed in the Geobrowser;
-  * ``metadata``: the full metadata list according to the EPOS specifications;
-  * ``png``: a quick-look raster image;
-  * ``pngw``: the geocoding information for the png image;
-  * ``kmz``: the google format overlay containing the quick-look image;
-  * ``legend.png``: the color bar for the png image.
+  - ``tif``: the actual data in geoTiff;
+  - ``properties``: the metadata displayed in the Geobrowser;
+  - ``metadata``: the full metadata list according to the EPOS specifications;
+  - ``png``: a quick-look raster image;
+  - ``pngw``: the geocoding information for the png image;
+  - ``kmz``: the google format overlay containing the quick-look image;
+  - ``legend.png``: the color bar for the png image.
 
 Typical name samples are::
 
