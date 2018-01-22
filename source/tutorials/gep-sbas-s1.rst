@@ -256,13 +256,15 @@ Additional provided outputs are:
 Metadata are provided according to the EPOS specifications.
 
 
-=== ======= =====
+========= =========================== ===============================================
 Tag Example Notes
-=== ======= =====
-
-
+========= =========================== ===============================================
 Data_Type LOS_DISPLACEMENT_TIMESERIES Type of data (according to the EPOS categories)
 --------- --------------------------- -----------------------------------------------
+
+========= =========================== ===============================================
+
+
 Title SBAS_TS_20170106_20171120_ME7G.csv Title of the pop-up window (it corresponds to the file name)
 ----- ---------------------------------- ------------------------------------------------------------
 Product_format ASCII Format of the product (geoTiff or CSV)
