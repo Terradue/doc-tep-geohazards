@@ -218,7 +218,7 @@ Information is organized in a **CSV ASCII** table according to the following fig
         :align: center
 	
 Provided information consists, per each pixel considered reliable, in:
-+ Unique pixel identifier (ID);
++ Unique pixel identifier (``ID``);
 + WGS84 Latitude in degree (Lat);
 + WGS84 Longitude in degree (Lon);
 + Topography above the ellipsoid (Topo);
