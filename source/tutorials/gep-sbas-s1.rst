@@ -236,9 +236,10 @@ File name convention is as follows::
 
 where:
 
-  ``<FirstAcqDate>``: is the first acquisition of the time series;
-  ``<LastAcqDate>`` : is the last acquisition of the time series.
-  ``<UniqueCode>``  : is a unique code identifier.
++ ``<FirstAcqDate>``: is the first acquisition of the time series;
++  ``<LastAcqDate>`` : is the last acquisition of the time series.
++  ``<UniqueCode>``  : is a unique code identifier.
+
 A typical name sample is: ``SBAS_TS_20170106_20171120_ME7G.csv``
 
 Additional provided outputs are:
@@ -254,9 +255,12 @@ Additional provided outputs are:
 
 Metadata are provided according to the EPOS specifications.
 
+
 === ======= =====
 Tag Example Notes
 === ======= =====
+
+
 Data_Type LOS_DISPLACEMENT_TIMESERIES Type of data (according to the EPOS categories)
 --------- --------------------------- -----------------------------------------------
 Title SBAS_TS_20170106_20171120_ME7G.csv Title of the pop-up window (it corresponds to the file name)
