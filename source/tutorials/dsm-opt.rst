@@ -3,6 +3,8 @@ DSM-OPT: Digital surface models from optical stereo satellite images
 
 This service is dedicated to the generation of digital surface models (DSM) from stereo- and tri-stereo satellite images acquired by the VHR Pléaides satellites. It allows to process pairs and triplets of stereo-images to generate very-high resolution digital surface models and orthoimages. This includes tie-point extraction, the refinement RPF sensor models, dense matching, and resampling for orthorectification. The processing chain is based on the MicMac open source project [1]_ and specifically the bundle adjustment methods presented in [2]_.
 
+.. The service is one of three services implemented by CNRS-EOST on the Geohazards Exploitation platform which are mainly dedicated the detection and monitoring of landslides and measurements of surface deformation. This includes the generation of surface models and orthoimages from very-high resolution (VHR) Pléiades images (DSM-OPT), the detection and measurement of surface motion (e.g. landslides and co-seismic slip) from time-series of Sentinel-2 images (MPIC-OPT), and the rapid mapping of newly triggered landslides using Sentinel-2 or VHR orthoimages from before and after major triggering events such as earthquakes or heavy rainstorms.
+
 
 Select the processing service
 =============================
@@ -31,7 +33,12 @@ Select input data
 -----------------
 
 The Geobrowser offers multiple ways to search and discover a large variety of EO-based dataset and the interested reader should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction. 
-For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Pléiades" into the search box you should be able to find a data package named "Pléiades Central Italy".
+For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Pléiades" into the search box you should be able to find a data package named "Pléiades Central Italy". Alternatively you can access the  
+`Pléiades Central Italy data package`_ also directly by clicking on the provided link:
+
+.. _`Pléiades Central Italy data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DPl%C3%A9iadesCentralItaly
+
+.. caution:: Pléiades data is subject to strict licensing terms and you have to assure that you have the proper rights to access (and process) the data. In addition there are some cases in which images belonging to the same stereo acquisition do not share the same unique identifier (e.g. *IMG_PHR1A_P_datetime_SEN_uniqueIdentifier-003_R1C1.JP2*). In such cases it is necessary to rename the image files to assure that all images share the same unique identifier. 
 
 .. figure:: assets/tuto_dsmopt_3.png
 	:figclass: align-center
@@ -78,7 +85,7 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
-        
+
 Once the job has finished click on the *Show results* button to get a list and pre-visualization of the output DSM and its corresponding hillshade.
 
 .. note:: The visualization in the *Geobrowser* is just a preview and the user is encouraged to download the results for further processing and analysis.
