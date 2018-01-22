@@ -263,10 +263,10 @@ Title SBAS_TS_20170106_20171120_ME7G.csv Title of the pop-up window (it correspo
 ----- ---------------------------------- ------------------------------------------------------------
 Product_format ASCII Format of the product (geoTiff or CSV)
 -------------- ----- --------------------------------------
+Product_size 23249970 In byte
+============ ======== =======
 
-Product_size
-23249970
-In byte
+
 Product_url
 https://store.terradue.com/fcasu/InW_20171107S1A_20171119S1A_GOLD_ILSO.tif
 The url to locate the file
