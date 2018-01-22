@@ -257,7 +257,7 @@ Metadata are provided according to the EPOS specifications.
 
 
 ========= =========================== ===============================================
-Tag Example Notes
+Tag       Example                     Notes
 ========= =========================== ===============================================
 Data_Type LOS_DISPLACEMENT_TIMESERIES Type of data (according to the EPOS categories)
 --------- --------------------------- -----------------------------------------------
