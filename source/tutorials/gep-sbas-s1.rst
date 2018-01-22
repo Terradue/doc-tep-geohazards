@@ -237,8 +237,8 @@ File name convention is as follows::
 where:
 
 + ``<FirstAcqDate>``: is the first acquisition of the time series;
-+  ``<LastAcqDate>`` : is the last acquisition of the time series.
-+  ``<UniqueCode>``  : is a unique code identifier.
++ ``<LastAcqDate>`` : is the last acquisition of the time series.
++ ``<UniqueCode>``  : is a unique code identifier.
 
 A typical name sample is: ``SBAS_TS_20170106_20171120_ME7G.csv``
 
@@ -342,21 +342,7 @@ Applied_filter                Goldstein_0.5                                     
 2.1 Select the processing
 -------------------------
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/
-
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
-
-.. figure:: assets/tuto_sbas_0.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-* Open the tab "Processing services" from the right of the map, and then select the processing service “”.
-
-.. figure:: assets/tuto_sbas_1.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+* Follow the steps described in Section 1.1.
 
 
 2.2 Select the files to process
@@ -364,10 +350,7 @@ Applied_filter                Goldstein_0.5                                     
 
 Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.
 
-* The algorithm accepts as inputs **IW Sentinel-1**  **SLC (level 1) data**. RAW data cannot be processed. The corresponding catalogue entry names are:
-	+ ENVISAT data: **ENVISAT ASAR L0** (ASA_IM\__);
-	+ ERS data in CEOS format: **ERS-x SAR IM L0** (ER0x_SAR_IM__0P), where “x” can be equal to 1 or 2;
-	+ ERS data in ASAR format: **ERS-x SAR Ex_SAR_IM__0P** (SAR_IM__0P), where “x” can be equal to 1 or 2.
+* The algorithm accepts as inputs **IW Sentinel-1**  **SLC (level 1) data**. RAW data cannot be processed.
 * It is very important that the user selects **images related to the same track only** which must be aquired with the same mode (the IW one).
 * The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.
 * **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
@@ -376,28 +359,28 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
 
 * Browse the Data Packages looking for *Amatrice IFG S1 T22* package and click on the load button to upload it.
 
-.. figure:: assets/tuto_sbas_2.png
+.. figure:: assets/tuto_psbas_ondem_ifg1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Surf the map to the Central Italy Area of Interest: the browser page should appear as depicted in the next figure.
 
-.. figure:: assets/tuto_sbas_3.png
+.. figure:: assets/tuto_psbas_ondem_ifg2.png
 	:figclass: align-center
         :width: 750px
         :align: center
         
 * Set the *Job Title* with a meaningful name (e.g. *CNR-IREA P-SBAS S1 on-demand Amatrice T22*) and push the *sel. all* button in the Feature Basket. 
       
-.. figure:: assets/tuto_sbas_4.png
+.. figure:: assets/tuto_psbas_ondem_ifg3.png
 	:figclass: align-center
         :width: 750px
         :align: center
                 
 * Drag all the selected data and drop them within the *Sentinel-1 input SLCs* field on the right panel.                
                 
-.. figure:: assets/tuto_sbas_5.png
+.. figure:: assets/tuto_psbas_ondem_ifg4.png
 	:figclass: align-center
         :width: 750px
         :align: center                
@@ -405,6 +388,15 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
                 
 2.3 Fill the parameter values
 -----------------------------
+
+* Fill the parameters according to the following figure:
+
+.. figure:: assets/tuto_psbas_ondem_ifg5.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+In particular:
 
 * As *Latitude of the Reference Point*, type:
 
@@ -418,9 +410,9 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
   
   13.733
  
-*Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Same considerations as in Section 1.3 are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Same considerations as in Section 1.3 are valid.
 
-Leave the *Bounding Box* untouched (Area of Interest empty). 
+* Leave the *Bounding Box* untouched (Area of Interest empty). 
 
 .. note:: If set, the system automatically process the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
@@ -438,12 +430,7 @@ Leave the *Bounding Box* untouched (Area of Interest empty).
 .. code-block:: sbas-parameter
   
 	IFG
-
-.. figure:: assets/tuto_sbas_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
+       
 .. note:: Possible values: MTA (Multi-Temporal Analysis); IFG (Interferogram Generation). Default value is MTA. For MTA description see Section 1.
 
 * As *DEM*, select:
@@ -452,11 +439,6 @@ Leave the *Bounding Box* untouched (Area of Interest empty).
   
 	srtm_1
 
-.. figure:: assets/tuto_sbas_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). 
 
 * Leave the *APS Filter Window Length* unchanged:
@@ -469,7 +451,7 @@ Leave the *Bounding Box* untouched (Area of Interest empty).
 
 * Click on the button "Run Job" at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_sbas_7.png
+.. figure:: assets/tuto_psbas_ondem_ifg6.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -481,19 +463,17 @@ Leave the *Bounding Box* untouched (Area of Interest empty).
 
 The P-SBAS DInSAR results are available in the Geobrowser after the processing. Tutorial results are accessible here: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
 
-.. figure:: assets/tuto_sbas_8.png
+.. figure:: assets/tuto_psbas_ondem_ifg7.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-ip window of the identified product:
 
-.. figure:: assets/tuto_sbas_8.png
+.. figure:: assets/tuto_psbas_ondem_ifg8.png
 	:figclass: align-center
         :width: 750px
         :align: center
-
-.. note:: Single files can be downloaded separately. To download the full result archive, please select the zip file.
         
 **Conventions and assumptions**
 	
@@ -503,36 +483,43 @@ Processing results are provided according to the EPOS-IP project (http://epos-ip
 **Published Results**
 
 The IFG mode outputs are provided in **geoTiff** standard and consist in:
+
 * geocoded interferograms (filtered and not filtered according to the Goldstein method);
 * geocoded spatial coherence maps.
 
-The spacing of the output depends on the DEM used for the processing. Results are provided in WGS84 geographic projection.
+The spacing of the output depends on the DEM used for the processing. Results are provided in **WGS84** geographic projection.
 
 File name convention is as follows::
+
   <DataType>_<MasterDate>_<SlaveDate>_<UniqueCode>.<FileExtension>
-where::
-  <DataType>
-can be: InW (wrapped Interferogram), InU (Unwrapped Interferogram) (this feature will be available in a later release of the service), Coh (Spatial coherence);::
-  <MasterDate>
-date of the Master acquisition in the format <yyyymmdd><SensorCode>, where <SensorCode> is a 3-char code that identifies the sensor. For the Sentinel case the possible codes are: S1A and S1B.::
-  <SlaveDate>
-date of the Slave acquisition in the same <MasterDate> format;::
-  <UniqueCode>
-a unique code identifier;::
-  <FileExtension>
-possible values are:
-- tif: the actual data in geoTiff;
-- properties: the metadata displayed in the Geobrowser;
-- metadata: the full metadata list according to the EPOS specifications;
-- png: a quick-look raster image;
-- pngw: the geocoding information for the png image;
-- kmz: the google format overlay containing the quick-look image;
-- legend.png: the color bar for the png image.
+
+where:
+* ``<DataType>`` can be: ``InW`` (Wrapped Interferogram), ``InU`` (Unwrapped Interferogram) (this feature will be available in a later release of the service), ``Coh`` (Spatial Coherence);
+* ``<MasterDate>`` date of the Master acquisition in the format ``<yyyymmdd><SensorCode>``, where ``<SensorCode>`` is a 3-char code that identifies the sensor. For the Sentinel case the possible codes are: S1A and S1B.
+* ``<SlaveDate>`` date of the Slave acquisition in the same <MasterDate> format;
+* ``<UniqueCode>`` a unique code identifier;
+* ``<FileExtension>`` possible values are:
+
+- ``tif``: the actual data in geoTiff;
+- ``properties``: the metadata displayed in the Geobrowser;
+- ``metadata``: the full metadata list according to the EPOS specifications;
+- ``png``: a quick-look raster image;
+- ``pngw``: the geocoding information for the png image;
+- ``kmz``: the google format overlay containing the quick-look image;
+- ``legend.png``: the color bar for the png image.
 
 Typical name samples are::
+
   InW_20160821S1A_20160827S1B_7M1E.tif
   Coh_20160821S1A_20160827S1B_7M1E.tif
-     
+
+2.6 Metadata
+------------
+
+Metadata are provided according to the EPOS specifications.
+See Table in Section 1.6 for more details.
+
+  
 3 Feedbacks
 ===========
 
@@ -550,11 +537,11 @@ Moreover, suggestions and comments about the GEP service delivery are warmly wel
 The Intellectual Property Right (IPR) of the available software, tools and services developed are with CNR-IREA, if not differently specified.
 
 **Use**
-CNR-IREA services are available to all the GEP users according to a CC-BY license (https://creativecommons.org/licenses/by/4.0/).
+CNR-IREA services are available to all the GEP users according to a CC-BY license (https://creativecommons.org/licenses/by/4.0/ ).
 The access to CNR-IREA services is free of charge and users are not asked to pay any fee or subscription by CNR-IREA. There is the possibility that users participate to the cost of service maintenance and operation: these costs are defined case-by-case among CNR-IREA, the platform operator and ESA. No cost can be required to users for the CNR-IREA services without the approval of CNR-IREA.
 
 **Results**
-The results (including products, maps, time series, files and everything generated by the processors) of the services are available under the CC-BY license (https://creativecommons.org/licenses/by/4.0/)
+The results (including products, maps, time series, files and everything generated by the processors) of the services are available under the CC-BY license (https://creativecommons.org/licenses/by/4.0/ )
 
 **Warranty and liability**
 CNR-IREA software is a scientific software and it is provided at the best CNR-IREA knowledge according to the SAR interferometry state-of-the-art. No warranty is provided on the processors and services of CNR-IREA. CNR-IREA is not responsible for any software inaccuracies, bugs, errors and misuse.
