@@ -137,9 +137,10 @@ Expected result: `T33SVB_20170326T094031_HOT_SPOT-etna.tif
 <https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
 
 - Select the STEMP-S3 service and use the following information:
-        - startDate:  2017-12-08
-        - endDate:   2017-12-08
+        - startDate:  2017-01-26
+        - endDate:   2017-01-26
         - volcano:    Etna
 
-Expected result: `S3A_SL_1_RBT____20171208T203641_UTM_etna_1km_TEMP.tif<>`_
+Expected result: `S3A_SL_1_RBT____20170126T091215_UTM_etna_1km_TEMPclass.tif 
+<https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s3_dcs_stemp_s3_1_0_3%2Frun%2Fdbaf4616-0029-11e8-8a31-0242ac110003%2F0000028-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
 
