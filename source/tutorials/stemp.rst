@@ -124,7 +124,8 @@ Use  the following input for testing service and verify results with the output 
         - endDate:  2017-11-22
         - volcano:   Etna
 
-Expected result: `LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif<https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_l8_dcs_stemp_l8_1_0_7%2Frun%2F29ca0494-ff85-11e7-a172-0242ac110006%2F0000022-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
+Expected result: `LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif 
+<https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_l8_dcs_stemp_l8_1_0_7%2Frun%2F29ca0494-ff85-11e7-a172-0242ac110006%2F0000022-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
  
 - Select the STEMP-S2 service and use the following information:
         
@@ -132,7 +133,8 @@ Expected result: `LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif<htt
         - endDate:  2017-03-26
         - volcano:   Etna
 
-Expected result: `T33SVB_20170326T094031_HOT_SPOT-etna.tif<https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
+Expected result: `T33SVB_20170326T094031_HOT_SPOT-etna.tif 
+<https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
 
 - Select the STEMP-S3 service and use the following information:
         - startDate:  2017-12-08
