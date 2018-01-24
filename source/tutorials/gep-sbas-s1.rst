@@ -68,6 +68,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
         :align: center
 
 
+
 * Surf the map to the Napoli (Italy) Area of Interest: the browser page should appear as depicted in the next figure.
 
 .. figure:: assets/tuto_psbas_ondem_3.png
