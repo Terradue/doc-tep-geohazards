@@ -35,12 +35,12 @@ In the following, two service runs related to the two different processing modes
 1 Multi Temporal Analysis (MTA) Mode
 ====================================
 
-.. _1: 
+.. _1.: 
 
 1.1 Select the processing
 -------------------------
 
-.. _`1.1`:
+.. _1.1:
 
 * Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
@@ -99,7 +99,7 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
         :width: 750px
         :align: center                
 
-.. _`1.3`:
+.. _1.3:
                 
 1.3 Fill the parameter values
 -----------------------------
@@ -148,7 +148,7 @@ In particular:
   
 	MTA
         
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2_.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2._
 
 * As *DEM*, select:
 
@@ -364,12 +364,12 @@ Applied_filter                Goldstein_0.5                                     
 2 Interferogram Generation (IFG) Mode
 ===================================== 
 
-.. _2:
+.. _2.:
 
 2.1 Select the processing
 -------------------------
 
-* Follow the steps described in Section 1.1.
+* Follow the steps described in Section 1.1_.
 
 
 2.2 Select the files to process
@@ -437,12 +437,12 @@ In particular:
   
   13.733
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section `1.3`_ are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3_ are valid.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: Considerations as in Section `1.3`_ are valid.
+.. note:: Considerations as in Section 1.3_ are valid.
 
  
 * As *Polarization* type:
@@ -459,7 +459,7 @@ In particular:
   
 	IFG
        
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *MTA* description see Section 1_.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *MTA* description see Section 1._
 
 * As *DEM*, select:
 
