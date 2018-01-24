@@ -122,12 +122,13 @@ In particular:
   
   14.262
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on **land** and included **within the selected Area of Interest** (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point. The "Magic Wand" button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
+> Note
+> *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on **land** and included **within the selected Area of Interest** (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: If set, the system automatically processes the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. The "Magic Wand" button can be used to automatically fill this field with the bounding coordinate values of a rectangle drawn on the map. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
+.. note:: If set, the system automatically processes the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. The *Magic Wand* button can be used to automatically fill this field with the bounding coordinate values of a rectangle drawn on the map. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.
 
  
 * As *Polarization* type:
@@ -478,7 +479,7 @@ In particular:
 
 The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are `accessible`_ here.
 
-.. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
+.. _`accessible`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
 
 .. figure:: assets/tuto_psbas_ondem_ifg5.png
 	:figclass: align-center
