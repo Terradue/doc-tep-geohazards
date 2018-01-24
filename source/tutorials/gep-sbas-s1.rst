@@ -32,13 +32,15 @@ In the following, two service runs related to the two different processing modes
 
 .. _`CC-BY license`: https://creativecommons.org/licenses/by/4.0/
 
-.. _1:
-
 1 Multi Temporal Analysis (MTA) Mode
 ====================================
 
+.. _1: 
+
 1.1 Select the processing
 -------------------------
+
+.. _`1.1`:
 
 * Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
@@ -97,7 +99,7 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
         :width: 750px
         :align: center                
 
-.. _1.3:
+.. _`1.3`:
                 
 1.3 Fill the parameter values
 -----------------------------
@@ -274,6 +276,8 @@ Additional provided outputs are:
 1.6 Metadata
 ------------
 
+.. _1.6:
+
 Metadata are provided according to the EPOS specifications.
 
 
@@ -356,10 +360,11 @@ Applied_corrections           No_Corrections                                    
 Applied_filter                Goldstein_0.5                                                            Possible spatial filter applied to the interferogram
 ============================= ======================================================================== =================================================================================
 
-.. _2:
-        
+      
 2 Interferogram Generation (IFG) Mode
 ===================================== 
+
+.. _2:
 
 2.1 Select the processing
 -------------------------
@@ -432,12 +437,12 @@ In particular:
   
   13.733
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3_ are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section `1.3`_ are valid.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: Considerations as in Section 1.3_ are valid.
+.. note:: Considerations as in Section `1.3`_ are valid.
 
  
 * As *Polarization* type:
@@ -540,7 +545,7 @@ Typical name samples are::
 ------------
 
 Metadata are provided according to the EPOS specifications.
-See Table in Section 1.6 for more details.
+See Table in Section 1.6_ for more details.
 
   
 3 Feedbacks
