@@ -32,10 +32,10 @@ In the following, two service runs related to the two different processing modes
 
 .. _`CC-BY license`: https://creativecommons.org/licenses/by/4.0/
 
-1 Multi Temporal Analysis (MTA) Mode
-====================================
+.. _`Section 1`:
 
-.. _1.: 
+1 Multi Temporal Analysis (MTA) Mode
+==================================== 
 
 1.1 Select the processing
 -------------------------
@@ -99,10 +99,11 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
         :width: 750px
         :align: center                
 
-.. _1.3:
-                
+        
 1.3 Fill the parameter values
 -----------------------------
+
+.. _1.3:
 
 * Fill the parameters according to the following figure:
 
@@ -148,7 +149,7 @@ In particular:
   
 	MTA
         
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2._
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see `Section 2`_.
 
 * As *DEM*, select:
 
@@ -360,11 +361,11 @@ Applied_corrections           No_Corrections                                    
 Applied_filter                Goldstein_0.5                                                            Possible spatial filter applied to the interferogram
 ============================= ======================================================================== =================================================================================
 
-      
+
+.. _`Section 2`:
+      
 2 Interferogram Generation (IFG) Mode
 ===================================== 
-
-.. _2.:
 
 2.1 Select the processing
 -------------------------
