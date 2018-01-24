@@ -61,6 +61,7 @@ Input SAR data selection must be carried out with particular care, since a wrong
 * **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
 
 For this tutorial, a `pre-defined data set`_ has been prepared to speed up the data selection step .
+
 .. _`pre-defined data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DNapoliS1T222017&id=insarquake
 
 * Browse the Data Packages looking for *Napoli S1 T22 2017* package and click on the load button to upload it.
@@ -175,6 +176,7 @@ In particular:
 **Download**
 
 The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are accessible `here`_.
+
 .. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D7cc6d9bb-5ad6-48f8-bb7c-e798a9f871be%26key%3Dd6e534cb-7196-4074-b07c-390a7c6f5b30&id=insarquake
 
 .. figure:: assets/tuto_psbas_ondem_8.png
@@ -215,6 +217,7 @@ A pop-up window should appear showing the Time series of the selected pixel.
 	
 Results are provided in the satellite Line Of Sight (LOS). Positive values indicate that the target moves toward the satellite.
 Processing results are provided according to the `EPOS-IP project`_ specifications along with the corresponding metadata.
+
 .. _`EPOS-IP project`: http://epos-ip.org
 
 **Published Results**
@@ -371,8 +374,9 @@ Input SAR data selection must be carried out with particular care, since a wrong
 * The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.
 * **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
 
-For this tutorial, a `pre-defined data set`_ has been prepared to speed up the data selection step.
-.. _`pre-defined data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DAmatriceIFGS1T22&id=insarquake
+For this tutorial, a pre-defined `data set`_ has been prepared to speed up the data selection step.
+
+.. _`data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DAmatriceIFGS1T22&id=insarquake
 
 * Browse the Data Packages looking for *Amatrice IFG S1 T22* package and click on the load button to upload it.
 
@@ -472,7 +476,8 @@ In particular:
 2.5 Results: download and visualization
 ---------------------------------------
 
-The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are accessible `here`_.
+The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are `accessible`_ here.
+
 .. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
 
 .. figure:: assets/tuto_psbas_ondem_ifg5.png
