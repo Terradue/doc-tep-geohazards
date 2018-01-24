@@ -67,12 +67,14 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
         :width: 750px
         :align: center
 
+
 * Surf the map to the Napoli (Italy) Area of Interest: the browser page should appear as depicted in the next figure.
 
 .. figure:: assets/tuto_psbas_ondem_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
         
 * Set the *Job Title* with a meaningful name (e.g. *CNR-IREA P-SBAS S1 Napoli T22 2017 - v1.0.9*) and push the *sel. all* button in the Feature Basket. 
       
@@ -80,6 +82,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
 	:figclass: align-center
         :width: 750px
         :align: center
+
                 
 * Drag all the selected data and drop them within the *Sentinel-1 input SLCs* field on the right panel.                
                 
@@ -91,12 +94,14 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
                 
 1.3 Fill the parameter values
 -----------------------------
+
 * Fill the parameters according to the following figure:
 
 .. figure:: assets/tuto_psbas_ondem_6.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
 
 In particular:
 
@@ -113,6 +118,7 @@ In particular:
   14.262
  
 .. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on **land** and included **within the selected Area of Interest** (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point. The "Magic Wand" button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
+
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
@@ -133,7 +139,7 @@ In particular:
   
 	MTA
         
-.. note:: Possible values: MTA (Multi-Temporal Analysis); IFG (Interferogram Generation). Default value is MTA. For IFG description see Section 2.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2.
 
 * As *DEM*, select:
 
@@ -171,12 +177,14 @@ The P-SBAS DInSAR results are available in the Geobrowser after the processing. 
         :width: 750px
         :align: center
 
+
 To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-up window of the identified product:
 
 .. figure:: assets/tuto_psbas_ondem_9.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
 
 .. note:: Single files can be downloaded separately. To download the full result archive, please select the zip file.
 
@@ -189,12 +197,14 @@ Time series can be directly visualized via the Geobrowser. After setting a satis
         :width: 750px
         :align: center
 
+
 A pop-up window should appear showing the Time series of the selected pixel.
 
 .. figure:: assets/tuto_psbas_ondem_11.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
         
 **Conventions and assumptions**
 	
@@ -217,6 +227,7 @@ Information is organized in a **CSV ASCII** table according to the following fig
 	:figclass: align-center
         :width: 750px
         :align: center
+
 	
 Provided information consists, per each pixel considered reliable, in:
 
@@ -363,12 +374,14 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
         :width: 750px
         :align: center
 
+
 * Surf the map to the Central Italy Area of Interest: the browser page should appear as depicted in the next figure.
 
 .. figure:: assets/tuto_psbas_ondem_ifg2.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
         
 * Set the *Job Title* with a meaningful name (e.g. *CNR-IREA P-SBAS S1 on-demand Amatrice T22*) and push the *sel. all* button in the Feature Basket. 
                      
@@ -390,6 +403,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up the data
         :width: 750px
         :align: center
 
+
 In particular:
 
 * As *Latitude of the Reference Point*, type:
@@ -405,6 +419,7 @@ In particular:
   13.733
  
 .. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3 are valid.
+
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
@@ -425,7 +440,7 @@ In particular:
   
 	IFG
        
-.. note:: Possible values: MTA (Multi-Temporal Analysis); IFG (Interferogram Generation). Default value is MTA. For MTA description see Section 1.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *MTA* description see Section 1.
 
 * As *DEM*, select:
 
@@ -457,12 +472,14 @@ The P-SBAS DInSAR results are available in the Geobrowser after the processing. 
         :width: 750px
         :align: center
 
+
 To download the P-SBAS DInSAR processing results once the Job is completed just click on the *Download* button in the pop-ip window of the identified product:
 
 .. figure:: assets/tuto_psbas_ondem_ifg6.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
         
 **Conventions and assumptions**
 	
@@ -515,8 +532,8 @@ See Table in Section 1.6 for more details.
 
 Users are  kindly invited to report any issue and problem encountered during the use of the P-SBAS service:
 
-*	For GEP on-boarded users, by issuing a ticket from their project support space on https://support.terradue.com 
-*	For other signed-in GEP users, by sending an email to the SBAS support team **sbas-help@irea.cnr.it**
+* For GEP on-boarded users, by issuing a ticket from their project support space on https://support.terradue.com 
+* For other signed-in GEP users, by sending an email to the SBAS support team **sbas-help@irea.cnr.it**
 
 Moreover, suggestions and comments about the GEP service delivery are warmly welcomed on **geohazards-tep@esa.int** in order to keep the service delivery on GEP as much as possible appealing, effective and efficient.
 
