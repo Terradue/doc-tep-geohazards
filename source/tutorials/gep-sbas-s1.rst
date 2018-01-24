@@ -429,12 +429,12 @@ In particular:
   
   13.733
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section [1.3]_ are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3_ are valid.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: Considerations as in Section 1.3 are valid.
+.. note:: Considerations as in Section 1.3_ are valid.
 
  
 * As *Polarization* type:
