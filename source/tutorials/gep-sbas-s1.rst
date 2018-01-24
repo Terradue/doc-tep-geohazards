@@ -32,10 +32,10 @@ In the following, two service runs related to the two different processing modes
 
 .. _`CC-BY license`: https://creativecommons.org/licenses/by/4.0/
 
+.. _1:
+
 1 Multi Temporal Analysis (MTA) Mode
 ====================================
-
-.. _1:
 
 1.1 Select the processing
 -------------------------
@@ -74,7 +74,6 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
         :align: center
 
 
-
 * Surf the map to the Napoli (Italy) Area of Interest: the browser page should appear as depicted in the next figure.
 
 .. figure:: assets/tuto_psbas_ondem_3.png
@@ -97,12 +96,11 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
 	:figclass: align-center
         :width: 750px
         :align: center                
-                
+
+.. _1.3:
                 
 1.3 Fill the parameter values
 -----------------------------
-
-.. _1.3: 
 
 * Fill the parameters according to the following figure:
 
@@ -358,11 +356,10 @@ Applied_corrections           No_Corrections                                    
 Applied_filter                Goldstein_0.5                                                            Possible spatial filter applied to the interferogram
 ============================= ======================================================================== =================================================================================
 
+.. _2:
         
 2 Interferogram Generation (IFG) Mode
-=====================================
-
-.. _2: 
+===================================== 
 
 2.1 Select the processing
 -------------------------
