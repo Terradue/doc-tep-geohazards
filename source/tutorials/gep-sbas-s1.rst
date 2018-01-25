@@ -362,9 +362,9 @@ Applied_filter                Goldstein_0.5                                     
 2.1 Select the processing
 -------------------------
 
-* Follow the steps described in Section 1.1__.
+* Follow the steps described in Section 1.1_.
 
-__ `1.1 Select the processing`_
+.. _1.1: `1.1 Select the processing`_
 
 2.2 Select the files to process
 -------------------------------
@@ -431,13 +431,14 @@ In particular:
   
   13.733
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3__ are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3_ are valid.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: Considerations as in Section 1.3__ are valid.
-__ `1.3 Fill the parameter values`_
+.. note:: Considerations as in Section 1.3_ are valid.
+
+.. _1.3: `1.3 Fill the parameter values`_
  
 * As *Polarization* type:
 
@@ -453,9 +454,9 @@ __ `1.3 Fill the parameter values`_
   
 	IFG
        
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *MTA* description see Section 1__.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *MTA* description see Section 1_.
 
-__ `1 Multi Temporal Analysis (MTA) Mode`_
+.. _1: `1 Multi Temporal Analysis (MTA) Mode`_
 
 * As *DEM*, select:
 
@@ -541,9 +542,9 @@ Typical name samples are::
 ------------
 
 Metadata are provided according to the EPOS specifications.
-See Table in Section 1.6__ for more details.
+See Table in Section 1.6_ for more details.
 
-__ `1.6 Metadata`_
+.. _1.6: `1.6 Metadata`_
   
   
 3 Feedbacks
