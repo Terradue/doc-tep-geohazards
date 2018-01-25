@@ -143,9 +143,9 @@ In particular:
   
 	MTA
         
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2__.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2_.
 
-__ `2 Interferogram Generation (IFG) Mode`_
+.. _2: `2 Interferogram Generation (IFG) Mode`_
 
 * As *DEM*, select:
 
