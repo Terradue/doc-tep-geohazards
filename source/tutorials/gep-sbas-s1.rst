@@ -35,13 +35,8 @@ In the following, two service runs related to the two different processing modes
 1 Multi Temporal Analysis (MTA) Mode
 ==================================== 
 
-
-.. _`Section 1`:
-
 1.1 Select the processing
 -------------------------
-
-.. _1.1:
 
 * Sign-in on the Portal https://geohazards-tep.eo.esa.int/
 
@@ -104,8 +99,6 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
 1.3 Fill the parameter values
 -----------------------------
 
-.. _1.3:
-
 * Fill the parameters according to the following figure:
 
 .. figure:: assets/tuto_psbas_ondem_6.png
@@ -150,7 +143,9 @@ In particular:
   
 	MTA
         
-.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see `Section 2`_.
+.. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2__.
+
+__ `2 Interferogram Generation (IFG) Mode`_
 
 * As *DEM*, select:
 
@@ -278,8 +273,6 @@ Additional provided outputs are:
 1.6 Metadata
 ------------
 
-.. _1.6:
-
 Metadata are provided according to the EPOS specifications.
 
 
@@ -366,13 +359,12 @@ Applied_filter                Goldstein_0.5                                     
 2 Interferogram Generation (IFG) Mode
 ===================================== 
 
-.. _`Section 2`:
-
 2.1 Select the processing
 -------------------------
 
-* Follow the steps described in Section 1.1_.
+* Follow the steps described in Section 1.1__.
 
+__ `1.1 Select the processing`_
 
 2.2 Select the files to process
 -------------------------------
@@ -439,13 +431,13 @@ In particular:
   
   13.733
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3_ are valid.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. Considerations as in Section 1.3__ are valid.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
 
-.. note:: Considerations as in Section 1.3_ are valid.
-
+.. note:: Considerations as in Section 1.3__ are valid.
+__ `1.3 Fill the parameter values`_
  
 * As *Polarization* type:
 
@@ -549,9 +541,11 @@ Typical name samples are::
 ------------
 
 Metadata are provided according to the EPOS specifications.
-See Table in Section 1.6_ for more details.
+See Table in Section 1.6__ for more details.
 
-  
+__ `1.6 Metadata`_
+  
+  
 3 Feedbacks
 ===========
 
