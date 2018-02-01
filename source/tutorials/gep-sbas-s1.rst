@@ -152,7 +152,9 @@ In particular:
   
 	srtm_1
        
-.. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). 
+.. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
+
+.. _`EarthExplorer`: https://earthexplorer.usgs.gov
 
 * As *APS Filter Window Length*, insert:
 
@@ -463,7 +465,7 @@ In particular:
   
 	srtm_1
 
-.. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). 
+.. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
 
 * Leave the *APS Filter Window Length* unchanged.
       
