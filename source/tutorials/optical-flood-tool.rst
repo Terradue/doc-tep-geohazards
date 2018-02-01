@@ -15,22 +15,22 @@ Select the files to process
 ===========================
 
 * Click on the *Data Packages* button in the bottom right of the screen, within the Features Basket panel. 
-Then select from the list the "Optical-flood-trial-case" data package and click on *load*. 
+Then select from the list the "Optical-flood-trial-case" data package and click on *load*.
+The service works with Landsat-8 images and with tiled Sentinel-2 data (e.g. the filename starts with "S2A_MSIL1C_"). 
 The selected data package contains the reference to the following input file:
 
 .. code-block:: parameter
 
     LC82020232016054LGN00
-    S2 to be defined
 
-.. figure:: assets/Optical_flood_1.png
+.. figure:: assets/optical_flood_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 Fill the parameter values
 =========================
-Define values for the "Job title" and the "optical images" fields.
+Define values for the "Job title" and the "Optical images" fields.
 
 * As *Job title*, type:
 
@@ -40,7 +40,7 @@ Define values for the "Job title" and the "optical images" fields.
 
 * As input *optical images*, drag and drop the selected input file:
 
-.. figure:: assets/tuto_pfasar_2.png
+.. figure:: assets/optical_flood_2.png
     :figclass: align-center
     :width: 750px
     :align: center
@@ -49,23 +49,27 @@ Define values for the "Job title" and the "optical images" fields.
 Run the job
 ===========
 
-* Click on the button "Run Job" at the bottom of the optical flood extraction processor tab, and monitor the progress of the running Job:
+* Click on the button "Run Job" at the bottom of the Optical flood extraction processor tab, and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_pfasar_4.png
+.. figure:: assets/optical_flood_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Wait for the Job completion, then check the status is set as "Successful Job”.
 
-.. figure:: assets/tuto_pfasar_5.png
+.. figure:: assets/optical_flood_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Download the optical flood extraction processing results once the Job is completed:
 
-.. figure:: assets/tuto_pfasar_6.png
+.. figure:: assets/optical_flood_5.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
+The output of the service (water mask) is a GeoTiff file, represented in int format, with "100" value where the water is present, "0" otherwise.
+
+

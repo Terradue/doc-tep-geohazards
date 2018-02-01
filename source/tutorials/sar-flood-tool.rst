@@ -16,6 +16,12 @@ Select the files to process
 
 * Click on the *Data Packages* button in the bottom right of the screen, within the Features Basket panel. 
 Then select from the list the "SAR-flood-trial-case" data package and click on *load*. 
+The input data are standard interferometric Sentinel-1 SLC images, e.g. the images have the same relative orbit number. In order to select suitable images for the service you can use the following string in the search box (top left of the web page):
+
+.. code-block:: parameter
+
+    track:81 && pt:slc
+
 The selected data package contains the reference to the following input file:
 
 .. code-block:: parameter
@@ -76,3 +82,6 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
+
+
+The output of the service (flood mask) is a GeoTiff file, represented in byte format, with "1" value where the flood is present, "0" otherwise.
