@@ -27,3 +27,5 @@ Contents:
    MPIC-OPT: Multiple pairwise optical image correlation<mpic-opt>
    DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
    CNR-IREA P-SBAS Sentinel-1 processing on-demand<gep-sbas-s1>
+   Optical Flood Tool Service<optical-flood-tool>
+   SAR Flood Tool Service<sar-flood-tool>
