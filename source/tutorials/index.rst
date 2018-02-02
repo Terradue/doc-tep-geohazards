@@ -28,3 +28,5 @@ Contents:
    DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
    CNR-IREA P-SBAS Sentinel-1 processing on-demand<gep-sbas-s1>
    Full Resolution Rasterization<rss_full_resolution_rasterization>
+   Optical Flood Tool Service<optical-flood-tool>
+   SAR Flood Tool Service<sar-flood-tool>
