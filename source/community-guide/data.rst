@@ -36,6 +36,15 @@ Data discovery is made through the map. To get specific data:
 	:scale: 75%
 	:figclass: img-border
 
+	Example of Sentinel 1 popup information
+
+.. figure:: ../includes/geobrowser_map_data_result.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
+	Example of process result popup information
+
 Manage the search filters
 -------------------------
 

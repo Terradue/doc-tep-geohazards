@@ -15,7 +15,7 @@ Processor configuration
         :width: 750px
         :align: center
 
-* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC" to search for
+* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC NOT GRD" to search for
 the correct product type covering the area 
 
 .. figure:: assets/tuto_diapiw_2.png
