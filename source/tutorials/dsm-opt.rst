@@ -36,7 +36,7 @@ The Geobrowser offers multiple ways to search and discover a large variety of EO
 For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Pléiades" into the search box you should be able to find a data package named "Pléiades Central Italy". Alternatively you can access the  
 `Pléiades Central Italy data package`_ also directly by clicking on the provided link:
 
-.. _`Pléiades Central Italy data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DPl%C3%A9iadesCentralItaly
+.. _`Pléiades Central Italy data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DPl%C3%A9iadesCentralItaly&id=landslide-dm
 
 .. caution:: Pléiades data is subject to strict licensing terms and you have to assure that you have the proper rights to access (and process) the data. In addition there are some cases in which images belonging to the same stereo acquisition do not share the same unique identifier (e.g. *IMG_PHR1A_P_datetime_SEN_uniqueIdentifier-003_R1C1.JP2*). In such cases it is necessary to rename the image files to assure that all images share the same unique identifier. 
 
@@ -86,7 +86,9 @@ Run the job
         :width: 750px
         :align: center
 
-Once the job has finished click on the *Show results* button to get a list and pre-visualization of the output DSM and its corresponding hillshade.
+Once the job has finished click on the *Show results* button to get a list and pre-visualization of the output DSM and its corresponding hillshade. An example output can be accessed `here`_ .
+
+.. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Da26b6302-0fef-4309-a816-7e18ed19feb5%26key%3D9aa2df4c-b3e0-439f-9128-7a8b4c4c8c62&id=landslide-dm
 
 .. note:: The visualization in the *Geobrowser* is just a preview and the user is encouraged to download the results for further processing and analysis.
 
