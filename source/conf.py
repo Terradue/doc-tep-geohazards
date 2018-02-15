@@ -181,7 +181,7 @@ htmlhelp_basename = 'GeohazardsThematicExploitationPlatformdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'GeohazardsThematicExploitationPlatform.tex', u'Geohazards Thematic Exploitation Platform Software User Manual',
+  ('index', 'GeohazardsThematicExploitationPlatform.tex', u'GEP User Manual',
    r'Enguerran Boissier (T2)\\Emmanuel Mathot (T2)', 'manual'),
 ]
 
