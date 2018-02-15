@@ -28,7 +28,7 @@ Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" fi
 
 The images shall be from the same track.
 
-* Set the polarization to process from the "polarization" drow-down list
+* Set the polarization to process from the "polarization" drop-down list
 
 The available polarizations for the images appear on the list from the "Current search result" pane.
 The selected polarization should be available on each of the two images. 

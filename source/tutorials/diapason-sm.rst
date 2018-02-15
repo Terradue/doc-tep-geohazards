@@ -45,7 +45,7 @@ When processing ERS or ASAR data , you may filter with the "Search Terms" field 
 Select the image to be used as master and Drag and Drop the entry into the "InSAR master" filed, then select the slave image into the "InSAR slave" field.
 Make sure the images are from the same track , and from the same mission (i.e process  Sentinel-1 with Sentinel-1 , ASAR with ASAR ,ERS with ERS).
 
-* Set the polarization to process from the "polarization" drow-down list
+* Set the polarization to process from the "polarization" drop-down list
 This option has an effect only when processing Sentinel-1 data.The selected polarization should be available on each of the two images. 
 This option is ignored when processing ASAR or ERS data.
 
