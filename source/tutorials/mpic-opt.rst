@@ -35,7 +35,7 @@ Select input data
 The Geobrowser offers multiple ways to search and discover a large variety of EO-based dataset and the interested reader should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction. 
 For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Harmaliere" into the search box you should be able to find a data package named "Harmaliere landslide". Alternatively you can access the `Harmaliere landslide data package`_ directly by clicking on the provided link.
 
-.. _`Harmaliere landslide data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide
+.. _`Harmaliere landslide data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide&id=landslide-dm
 
 Similarily you can search for "Kaikoura" to find the data package that we will use in the second part of this tutorial.
 
@@ -108,7 +108,7 @@ Select input data
 
 As in the previous example there is already a data package available which we you can find by typing "Kaikoura" in the search box in the "Data Packages" tab on the lower right of the screen. Alternatively, you can access the `Kaikoura data package`_ directly by clicking on the link.
 
-.. _`Kaikoura data package`: https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DKaikouraEarthquakeSentinel-2
+.. _`Kaikoura data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DKaikoura&id=landslide-dm
 
 .. figure:: assets/tuto_mpicopt_8.png
 	:figclass: align-center
