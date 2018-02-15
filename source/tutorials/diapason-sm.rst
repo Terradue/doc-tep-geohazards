@@ -45,14 +45,14 @@ When processing ERS or ASAR data , you may filter with the "Search Terms" field 
 Select the image to be used as master and Drag and Drop the entry into the "InSAR master" filed, then select the slave image into the "InSAR slave" field.
 Make sure the images are from the same track , and from the same mission (i.e process  Sentinel-1 with Sentinel-1 , ASAR with ASAR ,ERS with ERS).
 
-* Set the polarization to process from the "polarization" drow-down list
+* Set the polarization to process from the "polarization" drop-down list
 This option has an effect only when processing Sentinel-1 data.The selected polarization should be available on each of the two images. 
 This option is ignored when processing ASAR or ERS data.
 
 
 * Optionally you may choose to process an area of interest.
 
-You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the "Area of interest" field. This will set the current area selected on the map as area of interest for the processing. 
+You may set this option in order to process an area  smaller than the coverage of the two images by using a spatial filter from the left geo panel over the area. This will set the current area selected on the map as area of interest for the processing. 
 When left blank , the area processed is the intersection between the two input images.
 
 
