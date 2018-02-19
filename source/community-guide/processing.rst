@@ -55,6 +55,13 @@ To create a new job:
 	:figclass: img-container-border
 	:scale: 50%
 
+Coordinator job
+---------------
+
+When a job is triggered by a coordinator, the icon |coordinator_icon| is added in the job view (job detailed view and in job list).
+
+.. |coordinator_icon| image:: ../includes/coordinator_icon.png
+
 Fill in parameters
 ------------------
 
