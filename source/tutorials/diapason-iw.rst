@@ -28,14 +28,14 @@ Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" fi
 
 The images shall be from the same track.
 
-* Set the polarization to process from the "polarization" drow-down list
+* Set the polarization to process from the "polarization" drop-down list
 
 The available polarizations for the images appear on the list from the "Current search result" pane.
 The selected polarization should be available on each of the two images. 
 
 * Optionally you may choose to process an area of interest.
 
-You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the "Area of interest" field. This will set the current area selected on the map as area of interest for the processing. 
+You may set this option in order to process an area  smaller than the coverage of the two images by using a spatial filter from the left geo panel over the area. This will set the current area selected on the map as area of interest for the processing. 
 When left blank , the area processed is the intersection between the two input images.
 
 
