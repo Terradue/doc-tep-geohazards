@@ -45,7 +45,7 @@ For this tutorial we will rely on readily prepared data packages which are acces
         :width: 750px
         :align: center
 
-Click on the data package, hold shift and Drag and Drop all four results in the *Sentinel-2 products* field in the service panel on the right:
+Click on the data package, hold shift and Drag and Drop all three results in the *Pleiades stereo images* field in the service panel on the right:
 
 .. figure:: assets/tuto_dsmopt_4.png
 	:figclass: align-center
