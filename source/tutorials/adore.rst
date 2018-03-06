@@ -36,8 +36,10 @@ Slave product reference
         :align: center
 
 * apply the date value **2008-03-26** in both:
+
 - time:start field
 - time:end field 
+
 then click on the button **Search**:
 
 .. figure:: assets/tuto_adore_4.png
@@ -61,6 +63,7 @@ Master product reference
 ------------------------
 
 * Perform the same procedure described previously (`Slave product reference`_), using as values **2009-03-11** . Apply this date value in both:
+
 - time:start field
 - time:end field :
 

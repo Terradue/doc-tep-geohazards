@@ -43,7 +43,7 @@ Select the processing
 
 
 Select the files to process
-===================
+===========================
 
 Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.
 
@@ -87,7 +87,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up data sel
                 
                 
 Fill the parameter values
-===================
+=========================
 
 Leave the *Bounding Box* untouched (Area of Interest empty). 
 
@@ -135,9 +135,7 @@ Acquisitions that do not cover the selected area are automatically discarded. In
         :width: 750px
         :align: center
         
-.. note::
-
-You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
+.. note:: You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
 
 For sake of completeness, in the following a brief description of each parameter is provided:
 

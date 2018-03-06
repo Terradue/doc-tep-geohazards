@@ -15,16 +15,14 @@ Processor configuration
         :width: 750px
         :align: center
 
-* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC NOT GRD" to search for
-the correct product type covering the area 
+* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC NOT GRD" to search for the correct product type covering the area 
 
 .. figure:: assets/tuto_diapiw_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Choose the image pair to be processed from the "Current search result" pane. 
-Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
+* Choose the image pair to be processed from the "Current search result" pane. Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
 
 The images shall be from the same track.
 

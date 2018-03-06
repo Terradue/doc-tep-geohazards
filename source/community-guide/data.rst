@@ -89,7 +89,7 @@ Discover data results from a processing job
 
 To visualize results on the map:
 
-1. Access the job (see `Discover existing jobs`_ or :doc:`Share a job <sharing>`).
+1. Access the job (see `Access public jobs`_ or :doc:`Share a job <sharing>`).
 2. If a layer is detected, you can display it on the map from the **Results** part of the job description.
 3. Click on **Show results on map**.
 4. The layer is displayed on the map.

@@ -1,5 +1,5 @@
 SRTM Digital Elevation Model on Hadoop Cloud Sandbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select the processing
 =====================
@@ -19,7 +19,7 @@ Fill the parameters
 ===================
 
 SAR product catalogue entry
------------------------
+---------------------------
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
 
@@ -46,7 +46,7 @@ then click on the button **Search**:
         :align: center
 
 Format of the generated DEM 
-------------------------
+---------------------------
 
 * Fill the *Format of the generated DEM (roi_pac or gamma)* filed with **gamma** or **roi_pac**
 

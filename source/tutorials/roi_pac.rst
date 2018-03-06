@@ -28,7 +28,7 @@ Fill the parameters
 ===================
 
 Master product reference
------------------------
+------------------------
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
 
@@ -55,7 +55,7 @@ then click on the button **Search**:
         :align: center
 
 Slave product reference
-------------------------
+-----------------------
 
 * Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28**. Apply this date value in both:
 - time:start field

@@ -211,6 +211,7 @@ The accounting panel on your profile gives your current credit balance, as well 
 	:scale: 80%
 
 .. _deposit:
+
 Deposit
 ~~~~~~~
 

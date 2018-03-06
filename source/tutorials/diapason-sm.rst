@@ -18,11 +18,11 @@ Processor configuration
         :align: center
 
 
-* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work
-on ERS pairs or on ASAR pairs as well.
+* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work on ERS pairs or on ASAR pairs as well.
 
 
 * Select an area on the map. 
+
 When processing Sentinel-1 data , it is important to select the correct data type for this processor.  For this , in the "Search Terms" field you may
 type "SM AND SLC AND NOT GRD" in order to filter Sentinel-1 Stripmap SLC scenes. If you know the track number of the images you want to process , you
 may add this track number as an additionnal filter.
@@ -46,6 +46,7 @@ Select the image to be used as master and Drag and Drop the entry into the "InSA
 Make sure the images are from the same track , and from the same mission (i.e process  Sentinel-1 with Sentinel-1 , ASAR with ASAR ,ERS with ERS).
 
 * Set the polarization to process from the "polarization" drop-down list
+
 This option has an effect only when processing Sentinel-1 data.The selected polarization should be available on each of the two images. 
 This option is ignored when processing ASAR or ERS data.
 
