@@ -19,6 +19,8 @@ Each starter user has a personal app in which he can access:
 - a service to publish data results as atom feeds to the catalogue,
 - a service to contextualize on-demand results files
 
+.. _dataupload:
+
 Data Upload
 ~~~~~~~~~~~
 
@@ -30,7 +32,7 @@ Allow the user to drag and drop local files and upload them to his private store
 	:figclass: img-border
 	:scale: 70%
 
-- Select a **Target Repository** and a **Target Path**
+- Select a **Target Repository** and a **Target Path** (you can use your private repository or a repository shared with your community)
 
 .. figure:: ../includes/apps_mydata_dataupload_popup1.png
 	:figclass: img-border
@@ -62,6 +64,8 @@ Allow the user to drag and drop local files and upload them to his private store
 
 .. |storeupload| image:: ../includes/button_storeupload.png
 
+.. _datapublish:
+
 Data Publication
 ~~~~~~~~~~~~~~~~
 
@@ -74,8 +78,7 @@ This process publish data on the catalogue. It performs a query for every opense
 - Open the service **Data Publication** in the WPS Service tab
 - Select the context **My Repository**
 - Drag and drop items from the search result tab into the field **Data items**
-- Set Terradue **Username** and Terradue **Apikey** using the Geobrowser clipboard button
-- Set the **Index** (if not your private one)
+- Set the **Index** (you can use your private index or an index shared with your community)
 - Click on **Run job**
 - Click on **Show results**, the published items are available in the search result
 

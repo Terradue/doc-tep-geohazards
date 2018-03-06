@@ -181,3 +181,16 @@ then the download is performed via the Data Gateway that enables many function s
 
 .. warning::
 	Please be aware that the Data Gateway Proxy Download may take some time to start depending of the configuration of the repository from which you perform the download. Indeed, the data gateway may be required to perform Implicit caching before delivering the data.
+
+Upload dataset on Terradue storage
+----------------------------------
+
+Most of thematic applications provide to the user a **Store Upload** button allowing him to upload local data to his private storage or to the storages shared with the community (e.g gep-community).
+For more details on how to use this functionality, see :ref:`dataupload`.
+
+Publish datasets on Terradue catalogue
+--------------------------------------
+
+Most of thematic applications provide to the user a **Data Publication** WPS service allowing him to publish data from his private storage or from storages shared with the community (e.g gep-community) to the Terradue catalogue, under his private index or under an index shared with the community (e.g gep-community). For more details on how to use this functionality, see :ref:`datapublish`.
+
+For more details on how to use this functionality, see :ref:`dataupload`.
