@@ -1,7 +1,46 @@
 Full Resolution Rasterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This service provides the possibility to browse Optical or SAR EO data at full resolution. 
+.. image:: assets/tuto_rss_full_resolution_rasterization_icon.png
+        
+**Full Resolution Rasterization**
+
+This service provides the possibility to browse the selected data at full resolution.
+
+**EO sources supported**:
+
+    - Sentinel-1
+    - Sentinel-2
+    - Sentinel-3
+    - Landsat-7
+    - Landsat-8
+    - ALOS
+    - ALOS-2
+    - Cosmo-SkyMed
+    - Terrasar-L
+    - Terrasar-X
+    - Envisat ASAR
+    - ERS SAR ASTER
+    - Radarsat-1
+    - Radarsat-2
+    - JERS
+    - TanDEM-X
+    - SRTM
+    - RISAT-1
+    - KOMPSAT-5
+    - Pleiades
+    - SPOT6/7
+    - KOMPSAT-2/3
+    - KANOPUS-v, RESURS-P
+    - UK-DMC II
+
+
+**Output specifications**
+
+To be defined
+
+-----
+
 The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser. 
 The processing chain of the service has been developed with the use of SNAP and GDAL. 
 The output of the service is a pre-processed EO data product in GeoTIFF which is displayed in the map at full resolution  (RGB composite for Optical data and single band product Sigma0 in dB for SAR).

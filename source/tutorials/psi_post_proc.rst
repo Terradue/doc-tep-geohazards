@@ -1,6 +1,10 @@
 PSI Post Processing Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_psipp_icon.png
+        
+**PSI post-proc**
+
 The PSI Post Processing service, developed by TRE-Altamira, is aimed at producing derived results starting from PSI results produced with SqueeSAR TM (off-line) and SBAS PSI processing.
 
 This service allows users to make some post-processing of PSI results. It includes: 
@@ -9,6 +13,15 @@ This service allows users to make some post-processing of PSI results. It includ
 * Filtering points by means of a phase quality indicator or geometrical distortion masks (foreshortening or layover).
 * Computing the acceleration field and changing the reference point.
 
+**EO sources supported**:
+
+    - Sentinel-1
+    - Envisat ASAR
+    - ERS SAR
+
+**Output specifications**
+
+To be defined
 
 Application selection
 =====================

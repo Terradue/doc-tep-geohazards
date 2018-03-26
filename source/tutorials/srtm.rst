@@ -1,6 +1,20 @@
 SRTM Digital Elevation Model on Hadoop Cloud Sandbox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_srtm_icon.png
+        
+**SRTM Digital Elevation Model**
+
+This application generates the STRM DEM in ROI_PAC or GAMMA ready format
+
+**EO sources supported**:
+
+    - SRTM
+
+**Output specifications**
+
+To be defined
+
 Select the processing
 =====================
 

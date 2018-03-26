@@ -1,6 +1,20 @@
 G-POD GAMMA DInSAR Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_gamma_dinsar_icon.png
+        
+**GAMMA DInSAR**
+
+The GAMMA SAR and Interferometry Software is a collection of programs, developed by GAMMA Remote Sensing, which allows processing of SAR, interferometric SAR (InSAR) and differential interferometric SAR (DInSAR) data. The GAMMA DInSAR service integrated on the ESA's Grid Processing On Demand (G-POD) performs the generation of differential interferograms starting from ENVISAT L1 SLC.
+
+**EO sources supported**:
+
+    - Envisat ASAR L1 SLC
+
+**Output specifications**
+
+To be defined
+
 Select the processing
 =====================
 

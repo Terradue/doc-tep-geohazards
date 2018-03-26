@@ -1,6 +1,22 @@
 SNAP Sentinel-1 COherence and INtensity (COIN) processing service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_snap_s1_coin_icon.png
+        
+**COIN: SNAP Sentinel-1 COherence and Intensity**
+
+This service provides geocoded composites of coherence and amplitude images from a pair of Sentinel-1 TOPSAR IW SLC data pairs. SNAP is a common architecture for all Sentinel Toolboxes, which is ideal for Earth Observation processing and analysis. 
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+To be defined
+
+-----
+
 This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the SNAP S1 TOPS-IW COherence and INtensity service. 
 SNAP (SeNtinel Application Platform) [#f1]_ is the common architecture for all Sentinel Toolboxes which is ideal for Earth Observation processing and analysis. It has been jointly developed by Brockmann Consult, Array Systems Computing and C-S.
 The coherence and intensity processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.

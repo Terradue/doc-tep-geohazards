@@ -1,6 +1,22 @@
 StaMPS Permanent Scatterer processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_stamps_icon.png
+        
+**StaMPS Permanent Scatterer**
+
+StaMPS (Stanford Method for Persistent Scatterers) is a software package that implements an InSAR persistent scatterer (PS) method developed to work even in terrains devoid of man-made structures and/or undergoing non-steady deformation. This processing service is the StaMPS Permanent Scatterer (PS).
+
+**EO sources supported**:
+
+    - Envisat ASAR Image Mode Level 0 (ASA_IM__1P)
+
+**Output specifications**
+
+To be defined
+
+-----
+
 This processing service is in beta phase.
 
 This processing service uses the StaMPS [#f1]_ version 3.3b1, patched:

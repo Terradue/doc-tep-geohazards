@@ -1,6 +1,29 @@
 Surface Temperature Map (STEMP)
 ===============================
 
+.. image:: assets/tuto_stemp-s2_icon.png
+
+.. image:: assets/tuto_stemp-s3_icon.png
+
+.. image:: assets/tuto_stemp-l8_icon.png
+
+
+**STEMP**
+
+In the context of the VOLcanoes Thermal Application for GEP (VOLTAGE) pilot INGV has setup an end-to-end processing chain (named STEMP) for the generation of surface temperature maps over volcanic areas. It generates surface temperature map in file format fitting the Researcher and Users needs from new EO missions data such as Landsat-8, Sentinel-2 and Sentinel-3. 
+
+**EO sources supported**:
+        - Sentinel-2 MSI L1C
+        - Sentinel-3 SLSTR L1
+        - Landsat-8 L1B
+        - ASTER L1T
+
+**Output specifications**
+
+To be defined
+
+-----
+
 The Surface Temperature Map Process (STEMP) tool aims to produce surface temperature maps using  optical satellite data having thermal bands (Landsat 8, Sentinel 3). STEMP is also able to produce an hot spot detection map only during eruption using Sentinel 2 data.
 
 STEMP produces a GeoTIFF file as output. It contains the surface temperature maps (or the hot spot pixel  for Sentinel 2). The output name of this product is the same of the input file with the "_TEMP.tif" final code. The processing, running in automatic,  can be executed also in manual mode.
