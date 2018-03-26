@@ -2,8 +2,6 @@ DSM-OPT: Digital surface models from optical stereo satellite images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_dsmopt_icon.png 
-    :width: 50px
-    :align: left
 
 **DSM OPT**
 

@@ -1,8 +1,7 @@
 Interferogram generation with ROI_PAC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/tuto_adore_icon.png
-        :align: left
+.. image:: assets/tuto_roi_pac_icon.png 
         
 **Repeat Orbit Interferometry Package (ROI_PAC)**
 
