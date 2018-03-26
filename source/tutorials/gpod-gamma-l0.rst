@@ -1,6 +1,20 @@
 G-POD GAMMA Level0 Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_gamma_icon.png
+        
+**GAMMA Level-0**
+
+The GAMMA SAR and Interferometry Software is a collection of programs, developed by GAMMA Remote Sensing, which allows processing of SAR, interferometric SAR (InSAR) and differential interferometric SAR (DInSAR) data. The GAMMA Level-0 service, integrated on the ESA's Grid Processing On Demand (G-POD), performs the image focusing of ENVISAT ASAR Level-0 products.
+
+**EO sources supported**:
+
+    - Envisat ASAR L0
+
+**Output specifications**
+
+To be defined
+
 Select the processing
 =====================
 

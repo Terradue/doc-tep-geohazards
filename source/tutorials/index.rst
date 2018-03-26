@@ -13,7 +13,6 @@ Contents:
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
-   G-POD PF-ASAR Service<gpod-pf-asar>
    G-POD PF-ERS Service<gpod-pf-ers>
    Ground displacement timeseries analysis with TIO<tio>
    Digital Elevation Model generation with SRTM<srtm>
