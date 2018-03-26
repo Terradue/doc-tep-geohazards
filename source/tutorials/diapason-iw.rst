@@ -1,9 +1,9 @@
 Sentinel-1 IW mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_diapiw_icon.png 
-    :width: 50px
-    :align: left
+.. figure:: assets/tuto_adore_icon.png
+        :width: 100px
+        :align: left
 
 **DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)**
 
