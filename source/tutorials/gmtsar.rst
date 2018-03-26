@@ -2,10 +2,11 @@ Interferogram generation with GMTSAR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon.png 
-    :width: 50px
     :align: left
         
 **GMTSAR interferometric processor**
+
+GMTSAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
 **EO sources supported**:
 
@@ -16,8 +17,7 @@ Interferogram generation with GMTSAR
 
 To be defined
 
-
-GMTSAR is an open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT).
+-----
 
 This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.
 

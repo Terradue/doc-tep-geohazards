@@ -14,7 +14,7 @@ Interferogram generation with ADORE DORIS
 
 **Output specifications**
 
-To be defined
+None
 
 Select the processing
 =====================

@@ -15,8 +15,9 @@ DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and 
 
 **Output specifications**
 
-To be defined
+None
 
+-----
 
 This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.
 
