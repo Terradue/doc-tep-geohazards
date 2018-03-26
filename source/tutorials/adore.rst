@@ -1,9 +1,7 @@
 Interferogram generation with ADORE DORIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_adore_icon.png 
-    :width: 100px
-    :align: left
+.. image:: assets/tuto_adore_icon.png
 
 **ADORE DORIS interferometric processor**
 

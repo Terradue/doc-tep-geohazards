@@ -1,8 +1,7 @@
 Interferogram generation with GMTSAR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_gmtsar_icon.png 
-    :align: left
+.. image:: assets/tuto_gmtsar_icon.png
         
 **GMTSAR interferometric processor**
 

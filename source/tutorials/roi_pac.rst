@@ -4,14 +4,13 @@ Interferogram generation with ROI_PAC
 .. figure:: assets/tuto_adore_icon.png
         :align: left
         
-**GMTSAR interferometric processor**
+**Repeat Orbit Interferometry Package (ROI_PAC)**
 
-GMTSAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
+Data processing software allowing researchers in the area of topography and surface displacements studies to apply Interferometric Synthetic Aperture Radar (InSAR) methods.
 
 **EO sources supported**:
 
-    - ERS-1/2 SAR
-    - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
+    - Envisat ASAR Image Mode Level 0 (ASA_IM__0P)
 
 **Output specifications**
 
