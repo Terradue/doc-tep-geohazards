@@ -1,12 +1,26 @@
 Stripmap mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
-maintained by ALTAMIRA INFORMATION.
+.. image:: assets/tuto_diapsm_icon.png 
+    :width: 50px
+    :align: left
+
+**DIAPASON InSAR - StripMap(SM)**
+
+DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by ALTAMIRA INFORMATION.This service performs an InSAR workflow on ENVISAT,ERS(RAW and SLC) or Sentinel-1 (SLC) stripmap data, producing interferograms, amplitude and coherence maps. To run this service , specify a master and a slave image of the same mission.
+
+**EO sources supported**:
+
+    - Envisat ASAR
+    - ERS (RAW and SLC)
+    - Sentinel-1 StripMap SLC
+
+**Output specifications**
+
+To be defined
 
 
-In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram
-from two Sentinel-1 images.
+In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram from two Sentinel-1 images.
 
 Processor configuration
 =======================

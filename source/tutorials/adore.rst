@@ -1,11 +1,10 @@
 Interferogram generation with ADORE DORIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/tuto_adore_icon.png
-    :figclass: align-left 
-        :width: 200px
-        :align: left
-        
+.. image:: assets/tuto_adore_icon.png 
+    :width: 50px
+    :align: left
+
 **ADORE DORIS interferometric processor**
 
 **EO sources supported**:

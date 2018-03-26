@@ -1,8 +1,22 @@
 Sentinel-1 IW mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
-maintained by ALTAMIRA INFORMATION.
+.. image:: assets/tuto_diapiw_icon.png 
+    :width: 50px
+    :align: left
+
+**DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)**
+
+DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by TRE Altamira. This service performs an InSAR workflow on Sentinel-1 TOPSAR (IW,EW) data, producing interferograms, amplitude and coherence maps. To run this service, specify master and slave Sentinel-1 SLC images.
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+To be defined
+
 
 This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.
 

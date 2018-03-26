@@ -1,6 +1,24 @@
 DSM-OPT: Digital surface models from optical stereo satellite images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_dsmopt_icon.png 
+    :width: 50px
+    :align: left
+
+**DSM OPT**
+
+This service allows to generate digital surface models (DSM) and orthoimages from stereo- and tri-stereo satellite images acquired by the VHR Pléaides satellites.
+
+**EO sources supported**:
+
+    - Pleiades stereo and tri-stereo
+
+**Output specifications**
+
+To be defined
+
+-----
+
 This service is dedicated to the generation of digital surface models (DSM) from stereo- and tri-stereo satellite images acquired by the VHR Pléaides satellites. It allows to process pairs and triplets of stereo-images to generate very-high resolution digital surface models and orthoimages. This includes tie-point extraction, the refinement RPF sensor models, dense matching, and resampling for orthorectification. The processing chain is based on the MicMac open source project [1]_ and specifically the bundle adjustment methods presented in [2]_.
 
 .. The service is one of three services implemented by CNRS-EOST on the Geohazards Exploitation platform which are mainly dedicated the detection and monitoring of landslides and measurements of surface deformation. This includes the generation of surface models and orthoimages from very-high resolution (VHR) Pléiades images (DSM-OPT), the detection and measurement of surface motion (e.g. landslides and co-seismic slip) from time-series of Sentinel-2 images (MPIC-OPT), and the rapid mapping of newly triggered landslides using Sentinel-2 or VHR orthoimages from before and after major triggering events such as earthquakes or heavy rainstorms.
