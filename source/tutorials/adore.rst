@@ -1,6 +1,22 @@
 Interferogram generation with ADORE DORIS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: assets/tuto_adore_icon.png
+    :figclass: align-left 
+        :width: 200px
+        :align: left
+        
+**ADORE DORIS interferometric processor**
+
+EO sources supported:
+
+    - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
+    - TerraSAR-X SAR
+
+Output specifications
+
+Blablabla
+
 Select the processing
 =====================
 
