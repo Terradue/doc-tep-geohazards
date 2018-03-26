@@ -8,14 +8,14 @@ Interferogram generation with ADORE DORIS
         
 **ADORE DORIS interferometric processor**
 
-EO sources supported:
+**EO sources supported**:
 
     - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
     - TerraSAR-X SAR
 
-Output specifications
+**Output specifications**
 
-Blablabla
+To be defined
 
 Select the processing
 =====================
