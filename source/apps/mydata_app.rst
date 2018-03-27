@@ -30,7 +30,7 @@ Allow the user to drag and drop local files and upload them to his private store
 .. figure:: ../includes/apps_mydata_dataupload_button.png
 	:figclass: img-border
 
-- Select a **Target Repository** and a **Target Path** (you can use your private repository or a repository shared with your community)
+- Select a **Target Repository** and a **Target Path** (you can use your private repository or a repository shared with your community, e.g **gep-community**)
 
 .. figure:: ../includes/apps_mydata_dataupload_popup1.png
 	:figclass: img-border
@@ -70,7 +70,7 @@ This process publish data on the catalogue. It performs a query for every opense
 - Open the service **Data Publication** in the WPS Service tab
 - Select the context **My Repository**
 - Drag and drop items from the search result tab into the field **Data items**
-- Set the **Index** (you can use your private index or an index shared with your community)
+- Set the **Index** (you can use your private index or an index shared with your community, e.g **gep-community**)
 - Click on **Run job**
 - Click on **Show results**, the published items are available in the search result
 
