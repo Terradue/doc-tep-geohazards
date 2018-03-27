@@ -13,7 +13,7 @@ This application generates the STRM DEM in ROI_PAC or GAMMA ready format
 
 **Output specifications**
 
-To be defined
+    - DEM in ROI_PAC or GAMMA ready format
 
 Select the processing
 =====================

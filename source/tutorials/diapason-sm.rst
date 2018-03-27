@@ -1,9 +1,7 @@
 Stripmap mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_diapsm_icon.png 
-    :width: 50px
-    :align: left
+.. image:: assets/tuto_diapsm_icon.png
 
 **DIAPASON InSAR - StripMap(SM)**
 
@@ -17,7 +15,9 @@ DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and 
 
 **Output specifications**
 
-To be defined
+    - Interferometric Amplitude
+    - Interferometric Coherence
+    - Interferometric Phase
 
 -----
 

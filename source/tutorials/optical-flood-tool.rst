@@ -14,7 +14,7 @@ Service using Sentinel-2 and Landsat-8 data and an automated Water Extraction to
 
 **Output specifications**
 
-To be defined
+    - water mask GeoTiff file)
 
 Select the processing
 =====================

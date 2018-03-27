@@ -37,7 +37,7 @@ This service provides the possibility to browse the selected data at full resolu
 
 **Output specifications**
 
-To be defined
+    - Full resolution images
 
 -----
 

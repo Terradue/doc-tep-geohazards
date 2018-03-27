@@ -1,9 +1,7 @@
 Sentinel-1 IW mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/tuto_diapiw_icon.png
-        :width: 100px
-        :align: left
+.. image:: assets/tuto_diapiw_icon.png
 
 **DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)**
 
@@ -18,8 +16,6 @@ DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and 
     - Interferometric Amplitude
     - Interferometric Coherence
     - Interferometric Phase
-
-None
 
 -----
 
