@@ -1,7 +1,27 @@
 FASTVEL for displacement velocity map generation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FASTVEL is a PSI based processing software developed by TRE-Altamira.
+.. image:: assets/tuto_fastvel_icon.png
+
+**FASTVEl**
+
+FASTVEL algorithm has been developed by TRE-Altamira for generating differential interferograms or PSI-based mean displacement velocity maps from a set of Sentinel-1 or ASAR images
+
+**EO sources supported**:
+
+    - Envisat ASAR Image Mode Level 0 (RAW)
+    - Envisat ASAR Image Mode Level 1 (SLC)
+    - ERS 1/2 Level 0 (RAW)
+    - ERS 1/2 Level 1 (SLC)
+    - Sentinel-1 Level 1 (SLC IW/EW modes)
+
+**Output specifications**
+
+    - Differential interferogramas (if IFG mode selected).
+    - Ground displacement velocity map.
+    - Updated topography (reference DEM + height error).
+
+-----
 
 This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
 or a mean displacement velocity map (MTA mode) on the GEP.

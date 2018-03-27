@@ -13,7 +13,8 @@ P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing c
 
 **Output specifications**
 
-To be defined
+    - (Default) LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Format: CSV.
+    - (Upon request) Wrapped Interferograms; Unwrapped Interferograms; Spatial coherence; Map of LOS vector. Format: GeoTIFF.
 
 -----
 

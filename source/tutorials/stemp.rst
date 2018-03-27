@@ -20,7 +20,8 @@ In the context of the VOLcanoes Thermal Application for GEP (VOLTAGE) pilot INGV
 
 **Output specifications**
 
-To be defined
+        - surface temperature map (STEMP-S3 and STEMP-L8)
+        - hot spot map (STEMP-S2)
 
 -----
 

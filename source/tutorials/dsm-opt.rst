@@ -13,7 +13,9 @@ This service allows to generate digital surface models (DSM) and orthoimages fro
 
 **Output specifications**
 
-To be defined
+    - Digital surface model (A metric digital surface model with the following naming convention Z_Num${iteration_number}_DeZoom${resolution}_STD-MALT_metric_georef_despeck.tif in GeoTiff format)
+    - Hillshade (A hillshade representation of the surface with the following naming convention Z_Num${iteration_number}_DeZoom${resolution}_STD-MALT_metric_georef_despeck_hilshade.tif in GeoTiff format)
+    - OrthoImages [if Generate orthoimage is set to Yes]: The orthorectified input images with the following naming convention ${name_of_the_input_image}_ortho.tif in GeoTiff format
 
 -----
 
