@@ -14,7 +14,9 @@ GMTSAR is an open source (GNU General Public License) InSAR processing system. T
 
 **Output specifications**
 
-To be defined
+    - amplitude of interferogram (display_amp.ps  )
+    - phase of interferogram (phase.ps)
+    - correlation of interferogram (corr.ps)
 
 -----
 
@@ -38,6 +40,8 @@ The "GMTSAR Interferometric Processor" panel is displayed with parameters values
 
 Fill the parameters
 ===================
+
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **BajaCaliforniaEQ**
 
 Slave product reference
 -----------------------

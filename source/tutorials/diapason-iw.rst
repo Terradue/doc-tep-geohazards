@@ -1,7 +1,7 @@
 Sentinel-1 IW mode Interferogram generation with DIAPASON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/tuto_adore_icon.png
+.. figure:: assets/tuto_diapiw_icon.png
         :width: 100px
         :align: left
 
@@ -14,6 +14,10 @@ DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and 
     - Sentinel-1 TOPSAR IW SLC
 
 **Output specifications**
+
+    - Interferometric Amplitude
+    - Interferometric Coherence
+    - Interferometric Phase
 
 None
 
@@ -40,6 +44,8 @@ Processor configuration
 * Choose the image pair to be processed from the "Current search result" pane. Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
 
 The images shall be from the same track.
+
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **ChileTrack156**
 
 * Set the polarization to process from the "polarization" drop-down list
 

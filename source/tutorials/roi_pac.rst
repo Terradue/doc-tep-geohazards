@@ -43,6 +43,8 @@ The "Repeat Orbit Interferometry Package (ROI_PAC)" panel is displayed with para
 Fill the parameters
 ===================
 
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **BajaCaliforniaEQ**
+
 Master product reference
 ------------------------
 

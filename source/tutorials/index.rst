@@ -8,7 +8,6 @@ Contents:
 
    Interferogram generation with ADORE DORIS<adore>
    Interferogram generation with GMTSAR<gmtsar>
-   Interferogram generation with ROI_PAC<roi_pac>
    StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD SBAS InSAR Service<gpod-sbas-insar>

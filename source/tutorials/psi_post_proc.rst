@@ -15,13 +15,12 @@ This service allows users to make some post-processing of PSI results. It includ
 
 **EO sources supported**:
 
-    - Sentinel-1
-    - Envisat ASAR
-    - ERS SAR
+    - PSI displacements results produced with SqueeSAR TM and CNR IREA S1-SBAS processing.
 
 **Output specifications**
 
-To be defined
+The generated outputs are a csv, a float and a rgb GeoTiff of the velocity and finaly a png of the velocity that is shown in the map.
+See `Outputs`_ for more details.
 
 Application selection
 =====================

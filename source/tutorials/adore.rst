@@ -5,14 +5,18 @@ Interferogram generation with ADORE DORIS
 
 **ADORE DORIS interferometric processor**
 
+ADORE DORIS is an Interferometric Synthetic Aperture Radar (InSAR) processor developed by the University of Miami Geodesy Group, to help researchers generate interferograms with ease.
+ADORE stands for Automated DORIS Environment. DORIS is a standalone program that can perform most common steps of the interferometric radar processing in a modular set up.
+DORIS handles SLC (Single Look Complex) data to generate interferometric products, and can be used to georeference unwrapped products.
+This service supports processing of ENVISAT ASAR Image Mode Level 1 (ASA_IMS_1P) data.
+
 **EO sources supported**:
 
     - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
-    - TerraSAR-X SAR
 
 **Output specifications**
 
-None
+    - coseismic interferogram
 
 Select the processing
 =====================
@@ -30,6 +34,8 @@ The "ADORE DORIS Interferometric Processor" panel is displayed with parameters v
 
 Fill the parameters
 ===================
+
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **ADORE_LAquila**
 
 Slave product reference
 -----------------------
