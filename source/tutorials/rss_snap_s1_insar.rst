@@ -13,7 +13,9 @@ This service provides the interferometric processor for the Sentinel-1 TOPSAR IW
 
 **Output specifications**
 
-To be defined
+    - coherence quick-look product
+    - displacement quick-look product
+    - interferometric phase quick-look product
 
 -----
 

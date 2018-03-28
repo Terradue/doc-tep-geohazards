@@ -13,7 +13,7 @@ StaMPS (Stanford Method for Persistent Scatterers) is a software package that im
 
 **Output specifications**
 
-To be defined
+	- matlab files
 
 -----
 

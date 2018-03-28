@@ -13,8 +13,8 @@ The GAMMA SAR and Interferometry Software is a collection of programs, developed
 
 **Output specifications**
 
-To be defined
-
+  - differential interferograms
+  
 Select the processing
 =====================
 
