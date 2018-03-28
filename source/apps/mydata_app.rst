@@ -1,14 +1,11 @@
 Manage my data
 --------------
 
-
 .. figure:: ../includes/apps_mydata.png
 	:figclass: img-border
-	:scale: 80%
 
 .. figure:: ../includes/apps_mydata_view.png
 	:figclass: img-border
-	:scale: 80%
 
 Each thematic application of the Geohazards TEP platform makes available for users the following functionalities:
 
