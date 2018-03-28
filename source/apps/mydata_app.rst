@@ -84,7 +84,6 @@ This process contextualize data. It performs a geospatial analysis of the files 
 
 - Open the service **Data Publication** in the WPS Service tab
 - Select the **Folder path** (custom path under the Repository key, e.g results/test-data)
-- Set Terradue **Username** and Terradue **Apikey** using the Geobrowser clipboard button
 - Set the **Repository key** (usually, the Terradue username)
 - Set other options if necessary
 - Click on **Run job**
