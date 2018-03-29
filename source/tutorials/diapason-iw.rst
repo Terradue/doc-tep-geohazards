@@ -30,6 +30,8 @@ Processor configuration
         :width: 750px
         :align: center
 
+* In the "EO data" menu select "Sentinel-1".
+
 * Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC NOT GRD" to search for the correct product type covering the area 
 
 .. figure:: assets/tuto_diapiw_2.png

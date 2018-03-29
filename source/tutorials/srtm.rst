@@ -29,13 +29,17 @@ Select the processing
 
 The "SRTM Digital Elevation Model" panel is displayed with parameters values to be filled-in.
 
+.. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
+
 Fill the parameters
 ===================
 
 SAR product catalogue entry
 ---------------------------
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
+* Select **EO Data / Envisat** as data collection.
+
+* Type **ASA_IM__0P** in the Search Terms field (1):
 
 .. figure:: assets/tuto_srtm_2.png
 	:figclass: align-center

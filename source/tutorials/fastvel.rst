@@ -26,6 +26,8 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
 or a mean displacement velocity map (MTA mode) on the GEP.
 
+..NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.
+
 Processor configuration
 =======================
 
@@ -256,7 +258,7 @@ The values of the rest of parameters are the following:
 - Goldstein phase filter exponential factor: 0.5
 - Phase Unwrapping: false
 - Coherence Threshold: 0.5 *(leave default)* 
-- APS Correlation Distance [m]:	2000 *(leave default)*
+- APS Correlation Distance [m]:	2000
 
 **MTA mode**
 

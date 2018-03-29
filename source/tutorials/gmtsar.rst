@@ -38,6 +38,8 @@ Select the processing
 
 The "GMTSAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
 
+.. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
+
 Fill the parameters
 ===================
 
@@ -46,7 +48,9 @@ Fill the parameters
 Slave product reference
 -----------------------
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
+* Select **EO Data / Envisat** as data collection.
+
+* Type **ASA_IM__0P** in the Search Terms field (1):
 
 .. figure:: assets/tuto_gmtsar_2.png
 	:figclass: align-center
@@ -114,6 +118,7 @@ Run the job
         :align: center
 
 
+More info
+=========
 
-
-	http://topex.ucsd.edu/gmtsar/
+http://topex.ucsd.edu/gmtsar/

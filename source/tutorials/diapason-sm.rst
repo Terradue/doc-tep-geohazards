@@ -33,7 +33,7 @@ Processor configuration
         :align: center
 
 
-* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work on ERS pairs or on ASAR pairs as well.
+* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentinel-1 images will be used ,but this processor may work on ERS pairs or on ASAR pairs as well.
 
 
 * Select an area on the map. 
