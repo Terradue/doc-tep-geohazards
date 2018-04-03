@@ -3,13 +3,13 @@ G-POD SBAS InSAR Service
 
 .. image:: assets/tuto_sbas_icon.png
         
-**SBAS-InSAR Sentinel-1 TOPS (GPOD)**
+**SBAS Stripmap (GPOD)**
 
-The Small BAseline Subsets (SBAS) algorithm has been developed by IREA-CNR for monitoring temporal evolution of surface deformations and to generate interferograms stacks as well. The Parallel-SBAS (P-SBAS) algorithm version has been integrated on the ESA's Grid Processing On Demand (G-POD) to exploit the avaialble High Performance Computing resources.
+The InSAR Small BAseline Subsets (SBAS) algorithm has been developed by IREA-CNR for monitoring temporal evolution of surface deformations and to generate interferograms stacks as well. The InSAR Parallel-SBAS (P-SBAS) algorithm version has been integrated on the ESA's Grid Processing On Demand (G-POD) to exploit the available High Performance Computing resources.
 
 **EO sources supported**:
 
-    - Sentinel-1
+    - ENVISAT ASAR L0/ ERS L0 (CEOS format)
 
 **Output specifications**
 
