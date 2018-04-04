@@ -13,7 +13,7 @@ The InSAR Small BAseline Subsets (SBAS) algorithm has been developed by IREA-CNR
 
 **Output specifications**
 
-See `outputSpecifications`_.
+See `output specifications`_.
 
 -----
 
@@ -186,7 +186,8 @@ Run the job
         :width: 750px
         :align: center
         
-.. _outputSpecifications:
+.. _output specifications:
+
 **InSAR results available in the Web Portal after processing**
 
 The result that the user will find on web portal are strongly depending on the selected **Processing Mode.**
