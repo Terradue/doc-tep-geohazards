@@ -1,5 +1,5 @@
-G-POD SBAS InSAR Service
-~~~~~~~~~~~~~~~~~~~~~~~~
+G-POD SBAS Stripmap Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_sbas_icon.png
         

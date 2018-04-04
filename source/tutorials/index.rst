@@ -10,7 +10,7 @@ Contents:
    Interferogram generation with GMTSAR<gmtsar>
    StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
-   G-POD SBAS InSAR Service<gpod-sbas-insar>
+   G-POD SBAS Stripmap Service<gpod-sbas-insar>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ERS Service<gpod-pf-ers>
    Digital Elevation Model generation with SRTM<srtm>
