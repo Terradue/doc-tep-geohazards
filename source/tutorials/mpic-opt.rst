@@ -14,11 +14,7 @@ It comprises three components for i) the measurement of sub-pixel displacement a
 
 **Output specifications**
 
-    - Cloud masks (8-bit GeoTiffs representing the mask for each time step)
-    - Corrected displacement fields and correlation map for each time step (Floating point GeoTiffs representing the measured displacements among the two respective
-input images in pixels)
-    - MPIC landslide detection (A floating point GeoTiff representing the vector coherence of all time-steps accumulated
-with a value range of [0,1])
+See `output specifications`_.
 
 -----
 
@@ -186,6 +182,8 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
+
+.. _output specifications:
 
 The service output generally includes the following files:
 
