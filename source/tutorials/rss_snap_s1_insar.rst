@@ -19,7 +19,7 @@ The service provides 3 output products.
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 |                               |                                                                                                               |
-+=========+============+========================================================================================================================+
++===============================+===============================================================================================================+
 | Correspondent file            | Coherence product                                                                                             |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Information types             | Interferometric Coherence computed on input SLC couple                                                        |
@@ -45,7 +45,7 @@ The service provides 3 output products.
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 |                               |                                                                                                               |
-+=========+============+========================================================================================================================+
++===============================+===============================================================================================================+
 | Correspondent file            | Phase product                                                                                                 |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Information types             | Interferometric Phase computed on input SLC couple                                                            |
@@ -71,7 +71,7 @@ The service provides 3 output products.
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 |                               |                                                                                                               |
-+=========+============+========================================================================================================================+
++===============================+===============================================================================================================+
 | Correspondent file            | Displacement product                                                                                          |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Information types             | Line of sight displacement                                                                                    |
@@ -186,7 +186,7 @@ Scroll down the SNAP-InSAR configuration menu to show all the parameters.
         :align: center
 
 Product polarisation
-~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++
 
 This is the product polarization related to the input data pair. The Sentinel-1 acquisitions can have different polarization types:
 
@@ -205,7 +205,7 @@ SNAP-InSAR processes only one polarization channel between that can be selected 
 **For this run leave the VV default value.**    
 
 Orbit type
-~~~~~~~~~~
+++++++++++
 
 The orbit state vectors provided in the metadata of a SAR product are generally not accurate and can be refined with the precise orbit files which are available days-to-weeks after the generation of the product. 
 The orbit file provides accurate satellite position and velocity information. Based on this information, the orbit state vectors in the abstract metadata of the product are updated.
@@ -219,7 +219,7 @@ For Sentinel-1 the following orbit files can be applied:
 **For this run set Sentinel Precise (Auto Download) value.**
 
 Azimuth and Range coherence window size
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++++++++++
 
 The input parameters are size of the shifting window for the coherence estimation. The window size is defined, in both azimuth and range directions.
 
@@ -227,7 +227,7 @@ The input parameters are size of the shifting window for the coherence estimatio
     •   **Range coherence window size**: leave 40 as the default value.
 
 DEM type
-~~~~~~~~
+++++++++
 
 Define the DEM source for the Back-Geocoding Coregistration and Terrain Correction processing.
 The SRTM 3 Sec (90 m of resolution) is used. 
@@ -235,7 +235,7 @@ The SRTM 3 Sec (90 m of resolution) is used.
 .. NOTE:: SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 Perform phase filtering
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 Interferometric phase can be corrupted by noise from:
 
@@ -255,10 +255,10 @@ This flag can be set to:
     •   **True** (default value): the phase filtering is performed. 
     •   **False**: the phase filtering is not performed.
 
-**For this run leave the “true” default value.    **
+**For this run leave the “true” default value.**
 
 Azimuth and Range Multilook factor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++
 
 Generally, a SAR original image appears speckled with inherent speckle noise. To reduce this inherent speckled appearance, several images are incoherently combined as if they corresponded to different looks of the same scene. This processing is generally known as multilook processing. As a result the multilooked image improves the image interpretability. 
 The implemented multilooking technique is the spatial one, produced by space-domain averaging of a single look image.
@@ -269,7 +269,7 @@ The selectable parameters are the number of azimuth and range looks.
     •   **Range Multilook factor**: leave **4** as the default value.
 
 Perform phase unwrapping
-~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++
 
 In the interferogram, the interferometric phase is ambiguous and only known within 2π. In order to be able to relate the interferometric phase to the topographic height, the phase must first be unwrapped.
 Thanks to the unwrapping the phase variation between two points on the flattened interferogram provides a measurement of the actual altitude variation.
@@ -282,7 +282,7 @@ This flag can be set to:
 **For this run set the “true” value.**
 
 Subset Bounding Box for Unwrapping
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++
 
 With this parameter is possible to set the AOI (Area Of Interest) where the phase unwrapping processing is performed. 
 The AOI format is:
@@ -297,7 +297,7 @@ The AOI format is:
 **For this run set this AOI: 13.1,42.65,13.35,42.9**
 
 Pixel spacing in meters
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 Due to topographical variations of a scene and the tilt of the satellite sensor, distances can be distorted in the SAR images. Image data not directly at the sensor Nadir location will have some distortion. Terrain corrections are intended to compensate for these distortions so that the geometric representation of the image will be as close as possible to the real world.
 Terrain Correction allows geometric overlays of data from different sensors and/or geometries.
