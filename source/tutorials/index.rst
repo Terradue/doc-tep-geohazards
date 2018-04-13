@@ -16,8 +16,8 @@ Contents:
    Digital Elevation Model generation with SRTM<srtm>
    Stripmap Interferogram generation with DIAPASON<diapason-sm>
    Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>
-   SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
-   SNAP Sentinel-1 COherence and INtensity (COIN) processing service<rss_snap_s1_coin>
+   SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
+   COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
    Surface Temperature Map (STEMP)<stemp>
    PSI Post-Processing Service<psi_post_proc>
    FASTVEL for displacement velocity map generation<fastvel>
