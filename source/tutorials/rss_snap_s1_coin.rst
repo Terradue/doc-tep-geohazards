@@ -1,11 +1,11 @@
-SNAP Sentinel-1 COherence and INtensity (COIN) processing service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COIN – Coherence and Intensity change for Sentinel-1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_snap_s1_coin_icon.png
         
-**COIN: SNAP Sentinel-1 COherence and Intensity**
+**COIN – Coherence and Intensity change for Sentinel-1**
 
-This service provides geocoded composites of coherence and amplitude images from a pair of Sentinel-1 TOPSAR IW SLC data pairs. SNAP is a common architecture for all Sentinel Toolboxes, which is ideal for Earth Observation processing and analysis. 
+This service provides geocoded composites of coherence and amplitude images from a pair of Sentinel-1 TOPSAR IW data pairs. SNAP is a common architecture for all Sentinel Toolboxes, which is ideal for Earth Observation processing and analysis.
 
 **EO sources supported**:
 
@@ -13,15 +13,191 @@ This service provides geocoded composites of coherence and amplitude images from
 
 **Output specifications**
 
-To be defined
+The service provides 7 output products.
+
+1.	Output-1 – Coherence and Intensity RGB combination
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Coherence and Intensity RGB combination																		|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| RGB Composite: RED=(Coherence) ; GREEN=(Sigma0 average in dB computed over Master and Slave) ; BLUE=(null)	|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:3857  																									|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Unsigned 8 																									|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| RGB composite 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| NO but a 8 bit GeoTIFF Product is provided																	|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES as 8 bit PNG file 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| coh_sigmaAvrg_IW_VV_04Jun2016_28Jun2016_Coh_Ampl.tif 															|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+2.	Output-2 – Coherence product 
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Coherence product																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| Interferometric Coherence computed on input SLC couple														|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:4326 - WGS84   																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Float 32 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| L2 																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| YES																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES (GeoTIFF) 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| coherence_IW_VV_04Jun2016_28Jun2016.tif 																		|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+3.	Output-3 – Backscatter average product
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Backscatter average product																					|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| Backscatter Intensity average in dB of input SLC couple														|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:4326 - WGS84   																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Float 32 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| L2 																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| YES																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES (GeoTIFF) 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| sigmaAverage_dB_IW_VV_04Jun2016_28Jun2016.tif																	|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+4.	Output-4 – Backscatter difference product
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Backscatter difference product																				|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| Backscatter Intensity difference in dB of input SLC couple													|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:4326 - WGS84   																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Float 32 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| L2 																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| YES																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES (GeoTIFF) 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| sigmaDiff_dB_IW_VV_04Jun2016_28Jun2016.tif																	|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+5.	Output-5 – Sigma Master and Slave RGB combination
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Sigma Master and Slave RGB combination																		|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| RGB Composite: RED=(Sigma0 Slave in dB) ; GREEN=(Sigma0 Master in dB) ;BLUE=(Sigma0 Master in dB)				|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:3857 		  																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Unsigned 8 																									|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| RGB composite 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| NO but a 8 bit GeoTIFF Product is provided																	|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES as 8 bit PNG file 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| sigmaSlave_dB_28Jun2016_sigmaMaster_dB_04Jun2016_IW_VV_Amp_Change.tif											|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+6.	Output-6 – Sigma Master product
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Sigma Master product																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| SAR backscatter calibrated and terrain corrected [dB] of Master image											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:4326 - WGS84   																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Float 32 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| L2 																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| YES																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES (GeoTIFF) 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| sigmaMaster_dB_IW_VV_04Jun2016.tif																			|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+6.	Output-6 – Sigma Slave product
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Correspondent file 			| Sigma Slave product																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types				| SAR backscatter calibrated and terrain corrected [dB] of Slave image											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format					| GeoTIFF 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution					| Native or User selection 																						|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types				| EPSG:4326 - WGS84   																							|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Bit depth						| Float 32 																										|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level				| L2 																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Physical product available	| YES																											|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available   	| YES (GeoTIFF) 																								|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example		| sigmaSlave_dB_IW_VV_28Jun2016.tif																				|	
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+.. NOTE::
+
+	- the "Browse GeoTIFF" product is always a GeoTIFF file with the same resolution of the physical product, with Uint8 bit depth and projection EPSG:3857.
+	- The “Browse PNG” product is always a PNG file with the same resolution of the physical product, with Uint8 bit depth.
+
 
 -----
 
-This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the SNAP S1 TOPS-IW COherence and INtensity service. 
+This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the COIN – Coherence and Intensity change for Sentinel-1 service. 
+
 SNAP (SeNtinel Application Platform) [#f1]_ is the common architecture for all Sentinel Toolboxes which is ideal for Earth Observation processing and analysis. It has been jointly developed by Brockmann Consult, Array Systems Computing and C-S.
+
 The coherence and intensity processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.
 
-This tutorial is referred to the service build V1.2.0.
+This tutorial is referred to the service build V1.4.3.
 
 The Coherence and Intensity change
 ==================================
@@ -29,13 +205,13 @@ The Coherence and Intensity change
 The coherence between an images pair can show if the images have strong similarities, represented in a scale from 0 to 1. Areas of high coherence will appear bright (values near 1). Areas with poor coherence will be dark (values near 0). For example, vegetation and water have poor coherence and buildings have very high coherence.
 
 The intensity represents the strength of the radar response from the observed scene. Such intensity can vary dependent on changes occurred in time between the acquisitions and also on the scene physical characteristics. 
+
 To better detect the intensity change this service provides, in addition to the intensity in dB of the individual images, the dB average and dB difference of the image pair.
+Also a couple of results combinations are provided: 
 
-Also a couple of results combination are provided: 
+	- An RGB image with Red = Coherence, Green = Intensity average, Blue = Null. Thanks to this representation is possible to show urban centres in yellow, which have high coherence and intensity. Green can represent vegetated fields and forests. The reds and oranges represent unchanging features such as bare soil or possibly rocks.
+	- An RGB image with Red = Slave Intensity, Green = Blue = Master Intensity. Thanks to this representation is possible to clearly show inundated areas in cyan.
 
-* An RGB image with Red = Coherence, Green = Intensity average, Blue =  Intensity difference. Thanks to this representation is possible to show changes that occurred within the time coverage related to the couple of acquisitions. The blue can represent water (i.e. lakes, rivers), but also strong changes in bodies of water or agricultural activities such as ploughing. Yellow represents urban centres, which have high coherence and intensity. Green can represent vegetated fields and forests. The reds and oranges represent unchanging features such as bare soil or possibly rocks.
-
-* An RGB image with Red = Master Intensity, Green = Blue = Slave Intensity. Thanks to this representation is possible to clearly show inundated areas in red.
 
 Sentinel-1 Interferometric Wide Swath Products
 ==============================================
@@ -44,22 +220,21 @@ The Interferometric Wide (IW) swath mode is the main acquisition mode over land 
 
 The tutorial uses a pair of Sentinel-1 TOPSAR IW data around Rome of June 2016.
 
-The processing service code is available in the GitHub repository `geohazards-tep/dcs-rss-snap-s1-coin <https://github.com/geohazards-tep/dcs-rss-snap-s1-coin>`_.
+The processing service code is available in the GitHub repository (https://github.com/geohazards-tep/dcs-rss-snap-s1-coin).
 
 Select the processing
 ---------------------
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service **SNAP Sentinel-1 COherence and INtensity (COIN)**:
+* Select the processing service **COIN – Coherence and Intensity change for Sentinel-1**:
 
 .. figure:: assets/tuto_rss_snap_s1_coin_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "SNAP Sentinel-1 COherence and INtensity (COIN)" panel is displayed with parameters values to be filled-in.
-
+The "COIN – Coherence and Intensity change for Sentinel-1" panel is displayed with parameters values to be filled-in.
 
 Select the files to process
 ---------------------------
