@@ -16,7 +16,7 @@ Contents:
    Digital Elevation Model generation with SRTM<srtm>
    Stripmap Interferogram generation with DIAPASON<diapason-sm>
    Sentinel-1 Interferogram generation with DIAPASON<diapason-iw>
-   SNAC - SNAP S1 GRD AMPLITUDE CHANGE<rss_snap_s1_snac>
+   SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
    COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
    Surface Temperature Map (STEMP)<stemp>
