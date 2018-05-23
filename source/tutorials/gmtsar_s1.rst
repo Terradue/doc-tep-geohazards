@@ -1,22 +1,23 @@
 Interferogram generation with GMTSAR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_gmtsar_icon.png
-        
+.. image:: assets/tuto_gmtsar_icon_S1.png
+	:width: 120px
+
 **GMTSAR interferometric processor**
 
 GMTSAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
 **EO sources supported**:
 
-    - ERS-1/2 SAR
-    - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
+    - Sentinel-1
+
 
 **Output specifications**
 
-    - amplitude of interferogram (display_amp.ps  )
-    - phase of interferogram (phase.ps)
-    - correlation of interferogram (corr.ps)
+    - xxxxxxxx
+    - xxxxxxxx
+    - xxxxxxxx
 
 -----
 
@@ -31,7 +32,7 @@ Select the processing
 
 * Select the processing service “GMTSAR Interferometric Processor”:
 
-.. figure:: assets/tuto_gmtsar_v2_1.png
+.. figure:: assets/s1_0.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -52,7 +53,7 @@ Slave product reference
 
 * Type **ASA_IM__0P** in the Search Terms field (1):
 
-.. figure:: assets/tuto_gmtsar_v2_2_1.png
+.. figure:: assets/s1_1_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -62,14 +63,14 @@ Slave product reference
 - time:end field
 then click on the button **Search**:
 
-.. figure:: assets/tuto_gmtsar_v2_2_1.png
+.. figure:: assets/s1_1_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/s1_1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -79,38 +80,51 @@ Master product reference
 
 * Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/s1_1_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+.. figure:: assets/s1_1_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Select the Snaphu threshold
+Polarization
+------------------------
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+* Select the Polarization
+
+.. figure:: assets/s1_1_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 		
+Snaphu threshold
+------------------------
+
+* Select the Snaphu threshold
+
+.. figure:: assets/s1_1_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
 Run the job
 ===========
 
 * Click on the button Run Job and see the Running Job
 
-.. figure:: assets/tuto_gmtsar_v2_3.png
+.. figure:: assets/s1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * After about 25 minutes, see the Successful Job:
 
-.. figure:: assets/tuto_gmtsar_v2_4.png
+.. figure:: assets/s1_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -119,7 +133,7 @@ Run the job
 
 * See the result on map:
 
-.. figure:: assets/tuto_gmtsar_v2_4.png
+.. figure:: assets/s1_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
