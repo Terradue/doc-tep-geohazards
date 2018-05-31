@@ -19,6 +19,7 @@ Contents:
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
    COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
+   Band Combination<rss_combi>
    Surface Temperature Map (STEMP)<stemp>
    PSI Post-Processing Service<psi_post_proc>
    FASTVEL for displacement velocity map generation<fastvel>
