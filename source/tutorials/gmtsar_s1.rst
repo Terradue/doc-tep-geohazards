@@ -1,12 +1,12 @@
-Interferogram generation with GMTSAR
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMT5SAR for Sentinel-1
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon_S1.png
 	:width: 120px
 
-**GMTSAR interferometric processor**
+**GMT5SAR interferometric processor**
 
-GMTSAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
+GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
 **EO sources supported**:
 
@@ -23,21 +23,21 @@ GMTSAR is an open source (GNU General Public License) InSAR processing system. T
 
 This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.
 
-The GMTSAR processing service can also process several pairs master/slave (same master).
+The GMT5SAR processing service can also process several pairs master/slave (same master).
 
 Select the processing
 =====================
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “GMTSAR Interferometric Processor”:
+* Select the processing service GMT5SAR Interferometric Processor”:
 
 .. figure:: assets/s1_0.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMTSAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+The "GMT5SAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
 
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 

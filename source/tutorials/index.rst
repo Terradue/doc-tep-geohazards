@@ -7,7 +7,8 @@ Contents:
    :maxdepth: 2
 
    Interferogram generation with ADORE DORIS<adore>
-   Interferogram generation with GMTSAR<gmtsar>
+   GMT5SAR for ERS and ENVISAT<gmtsar>
+   GMT5SAR for Sentinel-1<gmtsar_s1>
    StaMPS Permanent Scatterer<stamps-ps>
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD SBAS Stripmap Service<gpod-sbas-insar>
