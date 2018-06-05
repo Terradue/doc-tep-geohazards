@@ -9,7 +9,7 @@ This service allows to generate digital surface models (DSM) and orthoimages fro
 
 **EO sources supported**:
 
-    - Pleiades stereo and tri-stereo
+    - Pleiades stereo and tri-stereo, Primary
 
 **Output specifications**
 
