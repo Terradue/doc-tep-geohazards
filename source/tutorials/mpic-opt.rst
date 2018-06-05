@@ -133,12 +133,12 @@ Set the processing parameters
 * **Sentinel-2 band:** Specify the Sentinel-2 band used for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by ESA.
 * **Sentinel-2 tile:** The tile code for this scene is *59GQP*.
 * **Temporal matching range:** For this use case we will use the **Split date** parameter in which case all possible pairs are formed and the **Temporal matching range** will be ignored.
-* **Split date:** We will set the parameter to the date of the earthquake which is *2016-11-13T11:02:00* (yyyy-MM-ddTHH:mm:ss, UTC time). Consequently the service will match all scenes before this date with all scenes after this date.
+* **Activate backward matching:** Set this option to *True* to also inverse the pairs which provides an aditional measurement that can help to reduce the variance of the offsets measured at each time step.
+* **Split date:** We will set the parameter to the date of the earthquake which is *2016-11-13* (yyyy-MM-dd, UTC time). Consequently the service will match all scenes before this date with all scenes after this date.
 * **Window size:** The parameter controls the size of the template used for matching among the input images. Leave it at the default value of *3* which results in a 7x7 window size.
 * **Decorrelation threshold:** We will slightly increase this threshold to *0.33*.
 * **Spatial matching range:** Defines the search range in pixel for finding matches. The horizontal offsets for this event reached 10 m and more and we should provide some additional tolerance for possible co-registration offsets. So set the value to *3*.
 * **Regularization parameter:** Here again we will use the default value of *0.3*.
-* **Activate backward matching:** Set this option to *True* to also inverse the pairs which provides an aditional measurement that can help to reduce the variance of the offsets measured at each time step.
 
 The figure below summarizes the parameter settings for this test.
 
