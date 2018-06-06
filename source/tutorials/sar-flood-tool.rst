@@ -13,7 +13,7 @@ Service using the SNAP Sentinel-1 IW SLC Amplitude Coherence Composites and a Fl
 
 **Output specifications**
 
-    - water mask GeoTiff file)
+    - water mask GeoTiff file
 
 Select the processing
 =====================
