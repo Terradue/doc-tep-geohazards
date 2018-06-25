@@ -36,11 +36,11 @@ The user shall login on the GEP to the EO services provided by TRE ALTAMIRA and 
 First step consists in selecting the area of interest and the stack of images covering it to be processed. To do so:
 
 * Select the data collection to be addressed in the EO Data button (InSAR Search, Sentinel-1, ERS, ENVISAT).
-* Select the area on the map by using the polygon or square buttons. In the "Search Form" (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same "Orbit Direction" and the same track.
+* Select the area on the map by using the polygon or square buttons. In the "Search Form" (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same "Orbit Direction" and the same track. It is important to select those images who present a significant degree of frame overlapping being sure that the AOI is fully covered by all of them.
 * Choose the set of images to be processed on the "Current search result" section. A minimum number of 25 images are required. The selected list of images can be drop to the "Feature Basket" section and be saved as a "Data Package". This option is recommended in order to avoid performing the same image search again.
 
 .. figure:: assets/tuto_fastvel_1.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -52,16 +52,16 @@ Complete the following list of processing parameters:
 and drop the selected images on the search result (or in the "Feature Basket" section once the Data Package is loaded) to this field**. Note that depending on: the Maximum Temporal Baseline [days], the 
 Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced 
 causing the stop of the processing. To that matter it is recommended to put a larger number than 25. In the same way, at least to do initial tests, it is recommended
-to keep the images temporal sampling equal or higher to 12 days.
+to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).
 
 .. figure:: assets/tuto_fastvel_2.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
  
  
 .. figure:: assets/tuto_fastvel_3.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -72,12 +72,11 @@ Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase 
 
 * **MTA**: generation of the displacement velocity and updated topography maps. If this mode is selected, the parameters to be considered are: Area Of Interest, Reference Point Latitude [deg], Reference Point Longitude [deg], Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Coherence Threshold, APS Correlation Distance [m].
 
-**Area Of Interest**: definition of the results area. The polygon on the map can be imported as: the bounding box if the Rectangle option has been used or the bbox from geometry option
-if the Polygon option has been employed. 
+**Area Of Interest**: definition of the results area. The polygon on the map can be imported as AOI. 
 It can be also specified by [minlon, minlat, maxlon, maxlat]. *Example: 1.717,41.778,1.916,41.878*
 
 .. figure:: assets/tuto_fastvel_4.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -112,12 +111,12 @@ Click on "Run Job" button from the processor configuration panel. After that the
 accessed from the "Jobs" area presenting the processing percentage. When it succesfully ends it will present a green "success" status.
 
 .. figure:: assets/tuto_fastvel_5.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
 .. figure:: assets/tuto_fastvel_6.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -138,18 +137,18 @@ Once the job is completed, access to it from the "Jobs" area and click on the "S
 * A zip file for every interferogram containing all geocoded results in geotiff format. *Name: FASTVEL-IFG - Results Archive Master Date Slave Date.zip*
 
 .. figure:: assets/tuto_fastvel_7.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
-The product’s pixel size is approximately 40 m x 40 m.
+The product's pixel size is approximately 40 m x 40 m.
 
 In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the "download" button and select "GeoTiff [image/tiff]".
 Its corresponding png file can be downloaded selecting "Image (png) [image/png]".
 
 
 .. figure:: assets/tuto_fastvel_8.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -192,12 +191,12 @@ The list of fields in the csv (corresponding to the columns of the database) is 
  - Vel: LOS ground displacement mean velocity value measured for the observation period [cm/year].
  - Erh: Height error [meters].
 
-The product’s pixel size is approximately 40 m x 40 m.
+The product's pixel size is approximately 40 m x 40 m.
 A colorbar is displayed for the velocity (cm/y) and the corrected topography map (m) respectively. Minimum and maximum values are calculated considering the maps histograms.
 
 
 .. figure:: assets/tuto_fastvel_9.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -205,7 +204,7 @@ In order to download the results, firstly select them on the Results Table and a
 Its corresponding png file can be downloaded selecting "Image (png) [image/png]".
 
 .. figure:: assets/tuto_fastvel_10.png
-	:figclass: align-center
+    :figclass: align-center
         :width: 750px
         :align: center
 
@@ -258,7 +257,7 @@ The values of the rest of parameters are the following:
 - Goldstein phase filter exponential factor: 0.5
 - Phase Unwrapping: false
 - Coherence Threshold: 0.5 *(leave default)* 
-- APS Correlation Distance [m]:	2000
+- APS Correlation Distance [m]: 2000 *(leave default)*
 
 **MTA mode**
 
@@ -279,4 +278,4 @@ The values of the rest of parameters are the following:
 - Goldstein phase filter exponential factor: 0.5 *(leave default)*
 - Phase Unwrapping: false *(leave default)*
 - Coherence Threshold: 0.5
-- APS Correlation Distance [m]:	2000
+- APS Correlation Distance [m]: 2000
