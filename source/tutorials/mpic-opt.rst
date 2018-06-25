@@ -5,7 +5,7 @@ MPIC-OPT: Multiple pairwise optical image correlation
         
 **MPIC-OPT**
 
-"This service is developed by CNRS EOST. The MPIC-OPT (Mutiple Pairwise Image Correlation of OPtical image Time-series) service enables the processing of optical image time-series for the monitoring of persistent surface deformation (continuously moving landslides and glaciers). It enables the on-demand processing of time series of Sentinel-2 (Pleaides and Spot6/7 in its VHRO version) if time series (of at least 5 dates) are available over an area.
+"This service is developed by CNRS EOST. The MPIC-OPT (Mutiple Pairwise Image Correlation of OPtical image Time-series) service enables the processing of optical image time-series for the monitoring of persistent surface deformation (continuously moving landslides and glaciers). It enables the on-demand processing of time series of Sentinel-2 (Pleaides and Spot6/7 in its VHRO version) if time series (of at least 2 dates, but the more the better) are available over an area.
 It comprises three components for i) the measurement of sub-pixel displacement among one or multiple optical image pairs (sub-pixel image correlation), ii) the correction outlier and geometric residuals and iii) a component for multi-temporal fusion"
 
 **EO sources supported**:
