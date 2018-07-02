@@ -5,49 +5,23 @@ Full Resolution Rasterization
         
 **Full Resolution Rasterization**
 
-This service provides the possibility to browse the selected data at full resolution.
+This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution
+Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to
+visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the
+geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.
+The service supports optical and SAR detected products from the following missions: Pleiades 1A/1B, SPOT-
+6/-7, Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-2/-3, Kanopus-V, Resurs-P, Terrasar-X, Sentinel-1, ALOS,
+ALOS-2, Radarsat-2, Rapideye, Deimos-1, VRSS1, GF-2.
+The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the
+map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The
+output GeoTiff is displayed in geobrowser with the possibility to access product metadata and download
+original dataset to be used in further processing.
 
-**EO sources supported**:
+.. figure:: assets/tuto_rss_full_resolution_rasterization_output_table.png
+    :figclass: align-center
+        :width: 750px
+        :align: center
 
-    - Sentinel-1
-    - Sentinel-2
-    - Sentinel-3
-    - Landsat-7
-    - Landsat-8
-    - ALOS
-    - ALOS-2
-    - Cosmo-SkyMed
-    - Terrasar-L
-    - Terrasar-X
-    - Envisat ASAR
-    - ERS SAR ASTER
-    - Radarsat-1
-    - Radarsat-2
-    - JERS
-    - TanDEM-X
-    - SRTM
-    - RISAT-1
-    - KOMPSAT-5
-    - Pleiades
-    - SPOT6/7
-    - KOMPSAT-2/3
-    - KANOPUS-v, RESURS-P
-    - UK-DMC II
-
-
-**Output specifications**
-
-    - Full resolution images
-
------
-
-The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser. 
-The processing chain of the service has been developed with the use of SNAP and GDAL. 
-The output of the service is a pre-processed EO data product in GeoTIFF which is displayed in the map at full resolution  (RGB composite for Optical data and single band product Sigma0 in dB for SAR).
-From the resulting layer it is also possible to download the original product through the metadata popup window.
-Note: In case of Sentinel-1 data the resolution is 20mx20m in order to increase the number of looks and reduce image size.
-
-This tutorial is referred to the service build V1.4.0.
 
 Select the Processing Service
 -----------------------------
