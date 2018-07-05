@@ -54,7 +54,6 @@ For this tutorial we will rely on readily prepared data packages which are acces
 
 .. _`Harmaliere landslide data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide&id=landslide-dm
 
-Similarily you can search for "Kaikoura" to find the data package that we will use in the second part of this tutorial.
 
 .. figure:: assets/tuto_mpicopt_3.png
 	:figclass: align-center
@@ -76,7 +75,7 @@ Set the processing parameters
 There is a total of 9 processing parameters that can be adjusted and when hovering over the parameter fields you will see a short explanation for each of the parameters.
 
 * **Sentinel-2 band:** Specify the Sentinel-2 band used for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by ESA
-* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets (before 27 September 2016) where multiple tiles where distributed in one SAFE folder. It is necessary to specify Sentinel-2 tile in the format {UTM zone number}{MGRS code} (e.g. 31TGK).
+* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets (before 27 September 2016) where multiple tiles where distributed in one SAFE folder. It is necessary to specify Sentinel-2 tile in the format {UTM zone number}{MGRS code} (e.g. 31TGK in this case).
 * **Split date:** An optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets and pairs will only be formed among members of different subsets. We will see the utility of this parameter in the second example and will leave it at *NONE* for the moment.
 * **Temporal matching range:** Defines how many pairs will be created considering the temporal order of the selected images. The default is *2* so that each image is matched with at most the previous 2 images within the selection.
 * **Activate backward matching:** If set to True backward matching will be performed for each pair. Here we will leave it at the default being *False*.
