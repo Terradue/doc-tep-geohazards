@@ -17,9 +17,16 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 **Output specifications**
 
-    - Differential interferogramas (if IFG mode selected).
-    - Ground displacement velocity map.
-    - Updated topography (reference DEM + height error).
+In IFG mode:
+    - Differential interferograms
+        - Interferometric Amplitude (browse png/GeoTIFF, product GeoTIFF)
+        - Interferometric Coherence (browse png/GeoTIFF, product GeoTIFF)
+        - Interferometric Phase (browse png/GeoTIFF, product GeoTIFF)
+ 
+In MTA mode: 
+    - Ground displacement velocity map (browse png/GeoTIFF, product GeoTIFF)
+    - Updated topography [reference DEM + height error] (browse png/GeoTIFF, product GeoTIFF)
+    - CSV file with the main information of PSI products in the LOS (Line Of Sight)
 
 -----
 
@@ -143,8 +150,8 @@ Once the job is completed, access to it from the "Jobs" area and click on the "S
 
 The product's pixel size is approximately 40 m x 40 m.
 
-In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the "download" button and select "GeoTiff [image/tiff]".
-Its corresponding png file can be downloaded selecting "Image (png) [image/png]".
+In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the "download" button and select "Product GeoTiff".
+Its corresponding png file can be downloaded selecting "Image (png)".
 
 
 .. figure:: assets/tuto_fastvel_8.png
@@ -169,7 +176,7 @@ On the IFG mode, this metadata is composed of the following fields:
  - Time Separation (days).
  - Geometry (POLYGON)
 
-To download the corresponding text file (with the .properties extension), click on the Download button and select "File (properties [application/octet-stream])".
+To download the corresponding text file (with the .properties extension), click on the Download button and select "Metadata (properties)".
 
 
 **On MTA mode**:
@@ -200,8 +207,8 @@ A colorbar is displayed for the velocity (cm/y) and the corrected topography map
         :width: 750px
         :align: center
 
-In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the "download" button and select "GeoTiff [image/tiff]".
-Its corresponding png file can be downloaded selecting "Image (png) [image/png]".
+In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the "download" button and select "Product GeoTiff".
+Its corresponding png file can be downloaded selecting "Image (png)".
 
 .. figure:: assets/tuto_fastvel_10.png
     :figclass: align-center
@@ -221,7 +228,7 @@ On the MTA mode, this metadata is composed of the following fields:
 - Processing Date (date).
 - Geometry (POLYGON).
 
-To download the corresponding text file (with the .properties extension), click on the "Download" button and select "File (properties [application/octet-stream])".
+To download the corresponding text file (with the .properties extension), click on the "Download" button and select "Metadata (properties)".
 
 The Job can be resubmited by clicking on the "Resubmit Job" button. After that, the FASTVEL form will appear allowing the modification of the parameters.
 
@@ -241,8 +248,8 @@ Processing parameters example for reproducing a succesful job
 **IFG Mode**
 
 The Job to reproduce corresponds to an stack of 5 Sentinel-1 Descending Track 140 images over the island of Fogo (Cape Verde). The Job name is FASTVEL IFG FOGO.
-The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC  
-(https://geohazards-tep-ref.terradue.com/t2api/data/package/FASTVEL_IFG_FOGO_T140_DSC/search?key=17a8630a-c9c3-453c-bd9f-4b914ba2a1d5)
+The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC (type this string in the data package filter box) 
+(https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DFASTVEL_IFG_FOGO_T140_DSC&id=esaapp)
 
 The values of the rest of parameters are the following:
 
@@ -262,8 +269,8 @@ The values of the rest of parameters are the following:
 **MTA mode**
 
 The Job to reproduce corresponds to an stack of 29 Sentinel-1 Descending Track 110 images over the area of Suria in Catalonia (Spain). The job name is FASTVEL MTA SURIA TEST DESC.
-The SAR data set is available as a data package named S1A_DSC_110_CAT 
-(https://geohazards-tep-ref.terradue.com/t2api/data/package/S1A_DSC_110_CAT/search?key=11fad40f-2894-4c7b-b2d1-412d30acfef5)
+The SAR data set is available as a data package named S1A_DSC_110_CAT (type this string in the data package filter box)
+(https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DS1A_DSC_110_CAT&id=esaapp)
 
 The values of the rest of parameters are the following:
 
