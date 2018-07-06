@@ -17,13 +17,13 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 **Output specifications**
 
-In IFG mode:
+ In IFG mode:
     - Differential interferograms
         - Interferometric Amplitude (browse png/GeoTIFF, product GeoTIFF)
         - Interferometric Coherence (browse png/GeoTIFF, product GeoTIFF)
         - Interferometric Phase (browse png/GeoTIFF, product GeoTIFF)
  
-In MTA mode: 
+ In MTA mode: 
     - Ground displacement velocity map (browse png/GeoTIFF, product GeoTIFF)
     - Updated topography [reference DEM + height error] (browse png/GeoTIFF, product GeoTIFF)
     - CSV file with the main information of PSI products in the LOS (Line Of Sight)
