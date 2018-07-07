@@ -56,10 +56,7 @@ Complete the following list of processing parameters:
 **Job title**: Job name as it will be labelled an it will appear in the Job list.
 
 **SAR data set**: set of SLC images to be processed. A minimum number of 25 images are required. **Drag 
-and drop the selected images on the search result (or in the "Feature Basket" section once the Data Package is loaded) to this field**. Note that depending on: the Maximum Temporal Baseline [days], the 
-Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced 
-causing the stop of the processing. To that matter it is recommended to put a larger number than 25. In the same way, at least to do initial tests, it is recommended
-to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).
+and drop the selected images on the search result (or in the "Feature Basket" section once the Data Package is loaded) to this field**. Note that depending on: the Maximum Temporal Baseline [days], the Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced by the service causing the stop of the processing. To that matter it is recommended to put a number of images larger than 25. In the same way, at least to do initial tests, it is recommended to keep the images temporal sampling equal or grater than 12 days (ex: 24 days).
 
 .. figure:: assets/tuto_fastvel_2.png
     :figclass: align-center
@@ -74,8 +71,7 @@ to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).
 
 **Processing Mode**:
 
-* **IFG**: generation of a set of differential interferograms. If this mode is selected, the parameters to be considered are: Area Of Interest, Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz],   
-Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase Unwrapping.
+* **IFG**: generation of a set of differential interferograms. If this mode is selected, the parameters to be considered are: Area Of Interest, Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase Unwrapping.
 
 * **MTA**: generation of the displacement velocity and updated topography maps. If this mode is selected, the parameters to be considered are: Area Of Interest, Reference Point Latitude [deg], Reference Point Longitude [deg], Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Coherence Threshold, APS Correlation Distance [m].
 
@@ -133,7 +129,7 @@ View results on the map
 
 Once the job is completed, access to it from the "Jobs" area and click on the "Show results" button. The following elements will appear on the *Results Table*:
 
-**On IFG mode**:
+**In IFG mode**:
 
 * The interferometric amplitude in geotiff format. This is the modulus of the complex product of the master SLC image and the coregistered slave SLC image. *Name: FASTVEL-IFG - Interferometric Amplitude Master Date Slave Date*
 * The interferometric coherence in geotiff format. This is a floating point geotiff image with values within [0.0 255.0]. Pixel values of 255.0 are equivalent to a coherence value of 1. *Name: FASTVEL-IFG - Interferometric Coherence Master Date Slave Date*
@@ -179,7 +175,7 @@ On the IFG mode, this metadata is composed of the following fields:
 To download the corresponding text file (with the .properties extension), click on the Download button and select "Metadata (properties)".
 
 
-**On MTA mode**:
+**In MTA mode**:
 
 * Mean displacement velocity (cm/y) map in geotiff format. *Name: FASTVEL_MTA_<S1/ERS/ENV>_<ASC/DSC>_Vel.tif*
 * RGB Mean displacement velocity map. *Name: FASTVEL_MTA_<S1/ERS/ENV>_<ASC/DSC>_Vel.rgb.tif*
