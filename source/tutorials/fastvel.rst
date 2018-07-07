@@ -17,7 +17,7 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 **Output specifications**
 
- In IFG mode: 
+ In IFG mode:
     - Differential interferograms
         - Interferometric Amplitude (browse png/GeoTIFF, product GeoTIFF)
         - Interferometric Coherence (browse png/GeoTIFF, product GeoTIFF)
