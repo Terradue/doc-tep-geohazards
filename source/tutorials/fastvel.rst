@@ -3,11 +3,11 @@ FASTVEL for displacement velocity map generation
 
 .. image:: assets/tuto_fastvel_icon.png
 
-**FASTVEl**
+**FASTVEL**
 
 FASTVEL algorithm has been developed by TRE-Altamira for generating differential interferograms or PSI-based mean displacement velocity maps from a set of Sentinel-1 or ASAR images
 
-**EO sources supported**:
+**EO sources supported**
 
     - Envisat ASAR Image Mode Level 0 (RAW)
     - Envisat ASAR Image Mode Level 1 (SLC)
@@ -17,7 +17,7 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 **Output specifications**
 
- In IFG mode:
+ In IFG mode: 
     - Differential interferograms
         - Interferometric Amplitude (browse png/GeoTIFF, product GeoTIFF)
         - Interferometric Coherence (browse png/GeoTIFF, product GeoTIFF)
@@ -30,8 +30,7 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 -----
 
-This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
-or a mean displacement velocity map (MTA mode) on the GEP.
+This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode) or a mean displacement velocity map (MTA mode) on the GEP.
 
 .. NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.
 
