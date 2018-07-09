@@ -30,7 +30,7 @@ FASTVEL algorithm has been developed by TRE-Altamira for generating differential
 
 -----
 
-This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode) or a mean displacement velocity map (MTA mode) on the GEP.
+This tutorial will describe the processing of a set of Sentinel-1 IW (or ASAR) images to generate a set of differential interferograms (IFG mode) or a mean displacement velocity map (MTA mode) on the GEP.
 
 .. NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.
 
