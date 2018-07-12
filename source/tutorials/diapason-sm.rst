@@ -1,5 +1,6 @@
+DIAPASON InSAR - StripMap(SM)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Stripmap mode Interferogram generation with DIAPASON
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_diapsm_icon.png
 
