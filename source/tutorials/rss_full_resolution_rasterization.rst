@@ -1,5 +1,5 @@
-Full Resolution Rasterization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RASTER - Full Resolution Rasterization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_rss_full_resolution_rasterization_icon.png
         
