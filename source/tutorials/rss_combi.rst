@@ -1,5 +1,5 @@
-Band Combination
-~~~~~~~~~~~~~~~~
+COMBI - Band Combination
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_combi_icon.png
         
