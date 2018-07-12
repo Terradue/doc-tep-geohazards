@@ -43,7 +43,7 @@ First step consists in selecting the area of interest and the stack of images co
 
 * Select the data collection to be addressed in the EO Data button (InSAR Search, Sentinel-1, ERS, ENVISAT).
 * Select the area on the map by using the polygon or square buttons. In the "Search Form" (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same "Orbit Direction" and the same track. It is important to select those images who present a significant degree of frame overlapping being sure that the AOI is fully covered by all of them.
-* Choose the set of images to be processed on the "Current search result" section. A minimum number of 25 images are required. The selected list of images can be drop to the "Feature Basket" section and be saved as a "Data Package". This option is recommended in order to avoid performing the same image search again.
+* Choose the set of images to be processed on the "Current search result" section. **A minimum number of 25 images are required in MTA mode**. The selected list of images can be drop to the "Feature Basket" section and be saved as a "Data Package". This option is recommended in order to avoid performing the same image search again.
 
 .. figure:: assets/tuto_fastvel_1.png
     :figclass: align-center
