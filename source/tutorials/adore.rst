@@ -1,5 +1,6 @@
-ADORE DORIS - Interferogram generation with ADORE DORIS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ADORE DORIS
+~~~~~~~~~~~~
+Interferogram generation with ADORE DORIS
 
 .. image:: assets/tuto_adore_icon.png
 
