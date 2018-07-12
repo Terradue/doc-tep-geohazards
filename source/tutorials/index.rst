@@ -7,7 +7,7 @@ Contents:
    :maxdepth: 2
 
 ADORE DORIS<adore>
-COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
+COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin> 
 COMBI - Band Combination<rss_combi>
 DIAPASON InSAR - StripMap(SM)<diapason-sm>
 DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)<diapason-iw>
