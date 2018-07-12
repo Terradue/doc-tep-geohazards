@@ -1,5 +1,5 @@
-CNR-IREA P-SBAS Sentinel-1 processing on-demand
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P-SBAS Sentinel-1 processing on-demand by CNR-IREA 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_psbas_ondem_icon.png
         
