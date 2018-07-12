@@ -1,5 +1,5 @@
-Surface Temperature Map (STEMP)
-===============================
+STEMP - Surface Temperature Map 
+================================
 
 .. image:: assets/tuto_stemp-s2_icon.png
 
