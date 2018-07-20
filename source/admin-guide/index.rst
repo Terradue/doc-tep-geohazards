@@ -10,7 +10,7 @@ Contents:
    Data Collection management<data>
    Wps Providers management<wps_provider>
    Wps Services management<wps_service>
-   Wps Jobs management<wps_job>
+   Wps Jobs management<wpsjob>
    Data Packages management<data_package>
    Groups management<group>
    Users management<user>

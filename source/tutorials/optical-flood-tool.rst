@@ -1,5 +1,20 @@
 Optical Flood Tool Service
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/optical_flood_icon.png
+        
+**Optical based Flood processing chain**
+
+Service using Sentinel-2 and Landsat-8 data and an automated Water Extraction tool  developed and integrated in GEP by eGEOS to extract water bodies to support flood mapping.
+
+**EO sources supported**:
+
+    - Sentinel-2
+    - Landsat-8
+
+**Output specifications**
+
+    - water mask GeoTiff file)
 
 Select the processing
 =====================

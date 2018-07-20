@@ -1,6 +1,22 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CNR-IREA P-SBAS Sentinel-1 processing on-demand
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P-SBAS Sentinel-1 processing on-demand by CNR-IREA 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/tuto_psbas_ondem_icon.png
+        
+**P-SBAS InSAR Sentinel-1 TOPS (GEP)**
+
+P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps. Input: SLC (Level-1) Sentinel-1 data. Output: LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Output Format: CSV. (The service can also generate wrapped and unwrapped interferograms that are delivered in geoTiff format). 
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+    - (Default) LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Format: CSV.
+    - (Upon request) Wrapped Interferograms; Unwrapped Interferograms; Spatial coherence; Map of LOS vector. Format: GeoTIFF.
+
+-----
 
 This tutorial describes how to submit a job for the CNR-IREA P-SBAS Sentinel-1 (S1) processing on-demand service to obtain a ground displacement time series from S1 SLAC (Level-1) data. 
 P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps

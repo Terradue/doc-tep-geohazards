@@ -1,6 +1,23 @@
 MPIC-OPT: Multiple pairwise optical image correlation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_mpicopt_icon.png
+        
+**MPIC-OPT**
+
+"This service is developed by CNRS EOST. The MPIC-OPT (Mutiple Pairwise Image Correlation of OPtical image Time-series) service enables the processing of optical image time-series for the monitoring of persistent surface deformation (continuously moving landslides and glaciers). It enables the on-demand processing of time series of Sentinel-2 (Pleaides and Spot6/7 in its VHRO version) if time series (of at least 2 dates, but the more the better) are available over an area.
+It comprises three components for i) the measurement of sub-pixel displacement among one or multiple optical image pairs (sub-pixel image correlation), ii) the correction outlier and geometric residuals and iii) a component for multi-temporal fusion"
+
+**EO sources supported**:
+
+    - Sentinel-2 MSI L1C
+
+**Output specifications**
+
+See `output specifications`_.
+
+-----
+
 This service targets the detection and measurement of horizontal ground deformation (e.g. co-seismic slip, landsliding) based on sub-pixel image correlation. The service allows to jointly analyse a single pairs or time-series of Sentinel-2 images. It combines methods for sub-pixel image matching of multiple-pair combinations as presented in [1]_ and the correction of systematic co-registration residuals as presented in [2]_.
 
 This tutorial will introduce you to the use of the service for the detection of landslide surface displacement for two use cases beeing the quantification of landslide surface displacement and co-seismic displacement. To this end we will process a series of Sentinel-2 images acquired over the Harmalière landslide (France 2016) in and Sentinel-2 images acquired before and after the Kaikoura earthquake (New Zealand 2016).
@@ -37,7 +54,6 @@ For this tutorial we will rely on readily prepared data packages which are acces
 
 .. _`Harmaliere landslide data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide&id=landslide-dm
 
-Similarily you can search for "Kaikoura" to find the data package that we will use in the second part of this tutorial.
 
 .. figure:: assets/tuto_mpicopt_3.png
 	:figclass: align-center
@@ -59,7 +75,7 @@ Set the processing parameters
 There is a total of 9 processing parameters that can be adjusted and when hovering over the parameter fields you will see a short explanation for each of the parameters.
 
 * **Sentinel-2 band:** Specify the Sentinel-2 band used for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by ESA
-* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets (before 27 September 2016) where multiple tiles where distributed in one SAFE folder. For such datasets it is necessary to specify Sentinel-2 tile in the format {UTM zone number}{MGRS code} (e.g. 31TGK). When dealing with single tile datasets the parameter can be set to *NONE*.
+* **Sentinel-2 tile:** This parameter is mainly for backwards compatibility with older SAFE datasets (before 27 September 2016) where multiple tiles where distributed in one SAFE folder. It is necessary to specify Sentinel-2 tile in the format {UTM zone number}{MGRS code} (e.g. 31TGK in this case).
 * **Split date:** An optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets and pairs will only be formed among members of different subsets. We will see the utility of this parameter in the second example and will leave it at *NONE* for the moment.
 * **Temporal matching range:** Defines how many pairs will be created considering the temporal order of the selected images. The default is *2* so that each image is matched with at most the previous 2 images within the selection.
 * **Activate backward matching:** If set to True backward matching will be performed for each pair. Here we will leave it at the default being *False*.
@@ -165,6 +181,8 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
+
+.. _output specifications:
 
 The service output generally includes the following files:
 

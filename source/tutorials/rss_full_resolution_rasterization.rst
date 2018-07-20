@@ -1,14 +1,29 @@
-Full Resolution Rasterization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RASTER - Full Resolution Rasterization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This service provides the possibility to browse Optical or SAR EO data at full resolution. 
-The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser. 
-The processing chain of the service has been developed with the use of SNAP and GDAL. 
-The output of the service is a pre-processed EO data product in GeoTIFF which is displayed in the map at full resolution  (RGB composite for Optical data and single band product Sigma0 in dB for SAR).
-From the resulting layer it is also possible to download the original product through the metadata popup window.
-Note: In case of Sentinel-1 data the resolution is 20mx20m in order to increase the number of looks and reduce image size.
+.. image:: assets/tuto_rss_full_resolution_rasterization_icon.png
+        
+**Full Resolution Rasterization**
 
-This tutorial is referred to the service build V1.4.0.
+This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution
+Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to
+visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the
+geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.
+
+The service supports optical and SAR detected products from the following missions: Pleiades 1A/1B, SPOT-
+6/-7, Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-2/-3, Kanopus-V, Resurs-P, Terrasar-X, Sentinel-1, ALOS,
+ALOS-2, Radarsat-2, Rapideye, Deimos-1, VRSS1, GF-2.
+
+The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the
+map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The
+output GeoTiff is displayed in geobrowser with the possibility to access product metadata and download
+original dataset to be used in further processing.
+
+.. figure:: assets/tuto_rss_full_resolution_rasterization_output_table.png
+    :figclass: align-center
+        :width: 750px
+        :align: center
+
 
 Select the Processing Service
 -----------------------------

@@ -4,7 +4,10 @@
 Link your account to the Terradue Cloud Platform
 ------------------------------------------------
 
-To access the Cloud resources and login to the Cloud dashboard to create your first Sandbox, you need to have an account on the Terradue Cloud Platform. From your profile page in the portal, under the Application scenarios tab, you can check that you have a valid account, or create a new one.
+To access the Cloud resources and login to the Cloud dashboard to create your first Sandbox, you need to have an account on the Terradue Cloud Platform. 
+As soon as your user is updated to become an Expert, an account is automatically created for you to the Terradue Cloud platform.
+
+From your profile page in the portal, under the Application scenarios tab, you can check that you have a valid account, or create a new one.
 
 Don't have a Terradue account ?
 ```````````````````````````````

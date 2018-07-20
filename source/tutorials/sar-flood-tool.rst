@@ -1,6 +1,20 @@
 SAR Flood Tool Service
 ~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/SAR_flood_icon.png
+        
+**SAR based Flood processing chain**
+
+Service using the SNAP Sentinel-1 IW SLC Amplitude Coherence Composites and a Flood Classifier developed and integrated in GEP by eGEOS to extract flooded areas from Sentinel-1 interferometric multi-temporal stack to support flood mapping.
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+    - water mask GeoTiff file
+
 Select the processing
 =====================
 
