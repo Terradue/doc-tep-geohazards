@@ -1,5 +1,5 @@
-Optical time serie analysis with TIO
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TIO - Optical time serie analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The TIO service process a set of correlation maps between different
 acquisition dates and produce a time serie analysis based on the

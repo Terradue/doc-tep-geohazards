@@ -1,5 +1,19 @@
 SRTM Digital Elevation Model on Hadoop Cloud Sandbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/tuto_srtm_icon.png
+        
+**SRTM Digital Elevation Model**
+
+This application generates the STRM DEM in ROI_PAC or GAMMA ready format
+
+**EO sources supported**:
+
+    - SRTM
+
+**Output specifications**
+
+    - DEM in ROI_PAC or GAMMA ready format
 
 Select the processing
 =====================
@@ -15,13 +29,17 @@ Select the processing
 
 The "SRTM Digital Elevation Model" panel is displayed with parameters values to be filled-in.
 
+.. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
+
 Fill the parameters
 ===================
 
 SAR product catalogue entry
------------------------
+---------------------------
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
+* Select **EO Data / Envisat** as data collection.
+
+* Type **ASA_IM__0P** in the Search Terms field (1):
 
 .. figure:: assets/tuto_srtm_2.png
 	:figclass: align-center
@@ -46,7 +64,7 @@ then click on the button **Search**:
         :align: center
 
 Format of the generated DEM 
-------------------------
+---------------------------
 
 * Fill the *Format of the generated DEM (roi_pac or gamma)* filed with **gamma** or **roi_pac**
 
