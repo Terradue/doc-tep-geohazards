@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>SNAP Sentinel-1 IW SLC Interferogram and Displacements &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,7 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Sentinel-1 IW mode Interferogram generation with DIAPASON" href="diapason-iw.html" />
+    <link rel="next" title="SRTM Digital Elevation Model on Hadoop Cloud Sandbox" href="srtm.html" />
+    <link rel="prev" title="SNAC - SNAP S-1 GRD Amplitude Change" href="rss_snap_s1_snac.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -71,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -110,19 +111,24 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
+<li><a class="reference internal" href="#">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
 <li><a class="reference internal" href="#the-interferometric-sar-technique">The interferometric SAR technique</a></li>
 <li><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-parameters">Fill parameters</a><ul>
+<li><a class="reference internal" href="#product-polarisation">Product polarisation</a></li>
+<li><a class="reference internal" href="#orbit-type">Orbit type</a></li>
+<li><a class="reference internal" href="#azimuth-and-range-coherence-window-size">Azimuth and Range coherence window size</a></li>
+<li><a class="reference internal" href="#dem-type">DEM type</a></li>
+<li><a class="reference internal" href="#perform-phase-filtering">Perform phase filtering</a></li>
+<li><a class="reference internal" href="#azimuth-and-range-multilook-factor">Azimuth and Range Multilook factor</a></li>
+<li><a class="reference internal" href="#perform-phase-unwrapping">Perform phase unwrapping</a></li>
+<li><a class="reference internal" href="#subset-bounding-box-for-unwrapping">Subset Bounding Box for Unwrapping</a></li>
+<li><a class="reference internal" href="#pixel-spacing-in-meters">Pixel spacing in meters</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
-<li><a class="reference internal" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">Perform phase unwrapping and Subset Bounding Box for Unwrapping</a></li>
-<li><a class="reference internal" href="#other-parameters">Other parameters</a><ul>
-<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li><a class="reference internal" href="#warning-on-output-products-deletion">Warning on output products deletion</a></li>
+<li><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
 </ul>
 </li>
 </ul>
@@ -136,7 +142,11 @@
               
                 
   <li>
-    <a href="diapason-iw.html" title="Previous Chapter: Sentinel-1 IW mode Interferogram generation with DIAPASON"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Sentinel-1 IW...</span>
+    <a href="rss_snap_s1_snac.html" title="Previous Chapter: SNAC - SNAP S-1 GRD Amplitude Change"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; SNAC - SNAP S...</span>
+    </a>
+  </li>
+  <li>
+    <a href="srtm.html" title="Next Chapter: SRTM Digital Elevation Model on Hadoop Cloud Sandbox"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">SRTM Digital ... &raquo;</span>
     </a>
   </li>
               
@@ -145,7 +155,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -175,43 +185,46 @@
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-interferometric-sar-technique">The interferometric SAR technique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">Perform phase unwrapping and Subset Bounding Box for Unwrapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-parameters">Other parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#warning-on-output-products-deletion">Warning on output products deletion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fill-parameters">Fill parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
 </ul>
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/rss_snap_s1_insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -225,13 +238,165 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="snap-sentinel-1-iw-slc-interferogram-and-displacements">
-<h1>SNAP Sentinel-1 IW SLC Interferogram and Displacements<a class="headerlink" href="#snap-sentinel-1-iw-slc-interferogram-and-displacements" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="snap-insar-snap-sentinel-1-iw-slc-interferogram-and-displacements">
+<h1>SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<a class="headerlink" href="#snap-insar-snap-sentinel-1-iw-slc-interferogram-and-displacements" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_snap_s1_insar_icon.png" src="../_images/tuto_snap_s1_insar_icon.png" />
+<p><strong>SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</strong></p>
+<p>This service provides the interferometric processor for the Sentinel-1 TOPSAR IW SLC data performed through SNAP. SNAP is a common architecture for all Sentinel Toolboxes, which is ideal for Earth Observation processing and analysis.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-1 TOPSAR IW SLC</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<p>The service provides 3 output products.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-1 - Coherence product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Coherence product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Interferometric Coherence computed on input SLC couple</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (Both PNG and GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>coh_VV_21Aug2016_27Aug2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-2 – Phase product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Phase product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Interferometric Phase computed on input SLC couple</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (Both PNG and GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>phase_VV_21Aug2016_27Aug2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-3 – Displacement product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Displacement product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Line of sight displacement</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (Both PNG and GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>displacement_VV_21Aug2016_27Aug2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>the &#8220;Browse GeoTIFF&#8221; product is always a GeoTIFF file with the same resolution of the physical product, with Uint8 bit depth and projection EPSG:3857.</li>
+<li>The “Browse PNG” product is always a PNG file with the same resolution of the physical product, with Uint8 bit depth.</li>
+</ul>
+</div>
+<hr class="docutils" />
 <p>This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the SNAP S1 TOPS-IW Interferometric processor.
-SNAP (SeNtinel?s Application Platform) <a class="footnote-reference" href="#f1" id="id1">[1]</a> is the common architecture for all Sentinel Toolboxes jointly developed by Brockmann Consult, Array Systems Computing and C-S. The interferometric processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.</p>
+SNAP (SeNtinel’s Application Platform) <a class="footnote-reference" href="#f1" id="id1">[1]</a> is the common architecture for all Sentinel Toolboxes jointly developed by Brockmann Consult, Array Systems Computing and C-S. The interferometric processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.</p>
+<p>This tutorial is referred to the service build V1.5.2</p>
 <div class="section" id="the-interferometric-sar-technique">
 <h2>The interferometric SAR technique<a class="headerlink" href="#the-interferometric-sar-technique" title="Permalink to this headline">¶</a></h2>
-<p>Interferometric synthetic aperture radar (InSAR) exploits the phase difference between two complex radar SAR observations taken from slightly different sensor positions and extracts information about the earth?s surface. A SAR signal contains amplitude and phase information. The amplitude is the strength of the radar response and the phase is the fraction of one complete sine wave cycle (a single SAR wavelength). The phase of the SAR image is determined primarily by the distance between the satellite antenna and the ground targets. By combining the phase of these two images after coregistration, an interferogram can be generated whose phase is highly correlated to the terrain topography. The InSAR technique can potentially measure millimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
+<p>Interferometric synthetic aperture radar (InSAR) exploits the phase difference between two complex radar SAR observations taken from slightly different sensor positions and extracts information about the earth’s surface. A SAR signal contains amplitude and phase information. The amplitude is the strength of the radar response and the phase is the fraction of one complete sine wave cycle (a single SAR wavelength). The phase of the SAR image is determined primarily by the distance between the satellite antenna and the ground targets. By combining the phase of these two images after coregistration, an interferogram can be generated whose phase is highly correlated to the terrain topography. The InSAR technique can potentially measure millimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
 </div>
 <div class="section" id="sentinel-1-interferometric-wide-swath-products">
 <h2>Sentinel-1 Interferometric Wide Swath Products<a class="headerlink" href="#sentinel-1-interferometric-wide-swath-products" title="Permalink to this headline">¶</a></h2>
@@ -244,137 +409,223 @@ Learn more about the event in the <a class="reference external" href="https://en
 <h3>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
-<li>Select the processing service ?SNAP S1 TOPS-IW Interferometric processor?:</li>
+<li>Select the processing service <strong>SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</strong>:</li>
 </ul>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_1.png"><img alt="../_images/tuto_rss_snap_s1_insar_1.png" src="../_images/tuto_rss_snap_s1_insar_1.png" style="width: 750px;" /></a>
 </div>
-<p>The &#8220;SNAP S1 TOPS-IW Interferometric processor&#8221; panel is displayed with parameters values to be filled-in.</p>
+<p>The <strong>SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</strong> panel is displayed with parameters values to be filled-in.</p>
 </div>
-<div class="section" id="fill-the-parameters">
-<h3>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="master-product-reference">
-<h2>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-the-files-to-process">
+<h3>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h3>
+<p>This service takes as input a couple of Sentinel-1 TOPSAR-IW SLC images.</p>
+<p>One image is selected to be the <strong>Master</strong> one, i.e. the reference product on which the other one (the Slave) is re-projected and resampled to compute the interferometric phase, interferometric coherence and LOS displacement.</p>
+<p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The processing service accepts as inputs <strong>only Sentinel-1 Single Look Complex (i.e. Level 1 SLC) data</strong>.</li>
+<li>The Sentinel-1 SLC pair must pertain to the same acquisition mode <strong>TOPSAR-IW</strong>.</li>
+<li>The user must select <strong>images related to the same track only</strong>.</li>
+<li>The user must select <strong>images related to the same polarization only</strong>.</li>
+<li>Spatial overlap is strictly needed between the images pair.</li>
+</ul>
+</div></blockquote>
+<p>For this tutorial, a pre-defined data set has been prepared to speed up data selection step.</p>
 <ul class="simple">
-<li>Click on the <strong>EO data</strong> icon (1) and select <strong>Sentinel-1</strong> (2), then click on the lens icon (3):</li>
+<li>Browse the Data Packages looking for <strong>SNAP-InSAR test dataset</strong> package and click on the load button to upload it.</li>
 </ul>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_2.png"><img alt="../_images/tuto_rss_snap_s1_insar_2.png" src="../_images/tuto_rss_snap_s1_insar_2.png" style="width: 750px;" /></a>
 </div>
-<ul>
-<li><p class="first">Click on <strong>Show Other Parameters</strong> and apply the following values:</p>
-<blockquote>
-<div><ul>
-<li><p class="first">Product type <strong>SLC</strong> in <strong>eop:productType</strong> field</p>
+<ul class="simple">
+<li>Click on the product related to 2016-08-21, then drag and drop the selected data in the <strong>Master product reference</strong> field.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_3.png" src="../_images/tuto_rss_snap_s1_insar_3.png" />
+</div>
+<ul class="simple">
+<li>Click on the product related to 2016-09-02, then drag and drop the selected data in the <strong>Slave product reference</strong> field.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_4.png" src="../_images/tuto_rss_snap_s1_insar_4.png" />
+</div>
+</div>
+<div class="section" id="fill-parameters">
+<h3>Fill parameters<a class="headerlink" href="#fill-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Scroll down the SNAP-InSAR configuration menu to show all the parameters.</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_5.png" src="../_images/tuto_rss_snap_s1_insar_5.png" />
+</div>
+<div class="section" id="product-polarisation">
+<h4>Product polarisation<a class="headerlink" href="#product-polarisation" title="Permalink to this headline">¶</a></h4>
+<p>This is the product polarization related to the input data pair. The Sentinel-1 acquisitions can have different polarization types:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Platform <strong>S1A</strong> in <strong>eop:platform</strong> field</li>
-<li>Track number <strong>22</strong> in <strong>eop:track</strong> field</li>
-<li>Spatial search box <strong>13.1,42.65,13.35,42.9</strong> in <strong>geo:box</strong> field</li>
-<li>Date value <strong>2016-08-21</strong> in both <strong>time:start</strong> and <strong>time:end</strong> fields</li>
+<li><strong>Vertical dual-polarization (DV data)</strong>: Vertical in transmission phase and both Vertical and Horizontal in receiving phase (This is the most operated one).</li>
+<li><strong>Horizontal dual-polarization (DH data)</strong>: Horizontal in transmission phase and both Horizontal and Vertical in receiving phase.</li>
+<li><strong>Vertical single-polarization (SV data)</strong>: Vertical in both transmission and receiving phases.</li>
+<li><strong>Horizontal single-polarization (SH data)</strong>: Horizontal in both transmission and receiving phases.</li>
 </ul>
 </div></blockquote>
-</li>
+<p>SNAP-InSAR processes only one polarization channel between that can be selected between:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>VV</strong>: Vertical in both transmission and receiving phases, contained in DV and SV products (default value).</li>
+<li><strong>VH</strong>: Vertical in transmission phase and Horizontal in receiving phase, contained only in DV products.</li>
+<li><strong>HH</strong>: Horizontal in both transmission and receiving phases, contained in DH and SH products.</li>
+<li><strong>HV</strong>: Horizontal in transmission phase and Vertical in receiving phase, contained only in DH products.</li>
 </ul>
 </div></blockquote>
-</li>
-</ul>
-<p>then click on the button <strong>Search</strong>:</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_3.png"><img alt="../_images/tuto_rss_snap_s1_insar_3.png" src="../_images/tuto_rss_snap_s1_insar_3.png" style="width: 750px;" /></a>
+<p><strong>For this run leave the VV default value.</strong></p>
 </div>
-<ul class="simple">
-<li>Drag and Drop the result in the <em>Master product reference</em> field:</li>
+<div class="section" id="orbit-type">
+<h4>Orbit type<a class="headerlink" href="#orbit-type" title="Permalink to this headline">¶</a></h4>
+<p>The orbit state vectors provided in the metadata of a SAR product are generally not accurate and can be refined with the precise orbit files which are available days-to-weeks after the generation of the product.
+The orbit file provides accurate satellite position and velocity information. Based on this information, the orbit state vectors in the abstract metadata of the product are updated.
+A more accurate satellite position and velocity information ensure a better accuracy in the images terrain correction processing.</p>
+<p>For Sentinel-1 the following orbit files can be applied:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Sentinel Precise</strong>: Precise orbits are produced a few weeks after acquisition.</li>
+<li><strong>Sentinel Restituted (default value)</strong>: Less accurate than Precise but available sooner than the Precise.</li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_4.png"><img alt="../_images/tuto_rss_snap_s1_insar_4.png" src="../_images/tuto_rss_snap_s1_insar_4.png" style="width: 750px;" /></a>
+</div></blockquote>
+<p><strong>For this run set Sentinel Precise (Auto Download) value.</strong></p>
 </div>
-</div>
-<div class="section" id="slave-product-reference">
-<h2>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Perform the same procedure described previously (<a class="reference internal" href="#master-product-reference">Master product reference</a>), using the value <strong>2016-09-02</strong>. Apply this date value in both:</li>
+<div class="section" id="azimuth-and-range-coherence-window-size">
+<h4>Azimuth and Range coherence window size<a class="headerlink" href="#azimuth-and-range-coherence-window-size" title="Permalink to this headline">¶</a></h4>
+<p>The input parameters are size of the shifting window for the coherence estimation. The window size is defined, in both azimuth and range directions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Azimuth coherence window size</strong>: leave 10 as the default value.</li>
+<li><strong>Range coherence window size</strong>: leave 40 as the default value.</li>
 </ul>
-<ul class="simple">
-<li>time:start field</li>
-<li>time:end field</li>
-</ul>
-<p>Pick the result, then drag and drop one of the results in the <em>Slave product reference</em> field:</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_5.png"><img alt="../_images/tuto_rss_snap_s1_insar_5.png" src="../_images/tuto_rss_snap_s1_insar_5.png" style="width: 750px;" /></a>
+</div></blockquote>
 </div>
-</div>
-<div class="section" id="perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping">
-<h2>Perform phase unwrapping and Subset Bounding Box for Unwrapping<a class="headerlink" href="#perform-phase-unwrapping-and-subset-bounding-box-for-unwrapping" title="Permalink to this headline">¶</a></h2>
-<p>If also the displacement of the earthquake&#8217;s epicentre is desired:</p>
-<ul class="simple">
-<li>Click on the <strong>Perform phase unwrapping</strong> setting (1) and select <strong>true</strong></li>
-<li>Click on the <strong>Get from current search</strong> button (2) near the <strong>Subset Bounding Box for Unwrapping</strong> parameter box. It should be automatically filled with <strong>13.1,42.65,13.35,42.9</strong>, as already set during the previous <a class="reference internal" href="#master-product-reference">Master product reference</a> selection procedure.</li>
-</ul>
-<p><strong>NOTE</strong>: The <em>Subset Bounding Box for Unwrapping</em> parameter is mandatory even if the phase unwrapping is not requested (i.e. when &#8220;Perform phase unwrapping&#8221;=false). Please put &#8220;-180.0,-56.0,180.0,60.0&#8221; as bounding box value in case of wrapped interferogram generation only.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_6.png"><img alt="../_images/tuto_rss_snap_s1_insar_6.png" src="../_images/tuto_rss_snap_s1_insar_6.png" style="width: 750px;" /></a>
+<div class="section" id="dem-type">
+<h4>DEM type<a class="headerlink" href="#dem-type" title="Permalink to this headline">¶</a></h4>
+<p>Define the DEM source for the Back-Geocoding Coregistration and Terrain Correction processing.
+The SRTM 3 Sec (90 m of resolution) is used.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">SRTM valid in the [-56 deg, +60 deg] range of latitudes.</p>
 </div>
 </div>
-<div class="section" id="other-parameters">
-<h2>Other parameters<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Product polarisation</strong>: <strong>VV</strong> as the default value;</li>
-<li><strong>Orbit type</strong>: <strong>Sentinel Restituted (Auto Download)</strong> as the default value;</li>
-<li><strong>Azimuth coherence window size</strong>: <strong>6</strong> as the default value;</li>
-<li><strong>Range coherence window size</strong>: <strong>20</strong> as the default value;</li>
-<li><strong>DEM type</strong>: <strong>SRTM 3 Sec</strong> ;</li>
-<li><strong>Azimuth Multilook factor</strong>: <strong>1</strong> as the default value;</li>
-<li><strong>Range Multilook factor</strong>: <strong>4</strong> as the default value;</li>
-<li><strong>Pixel spacing in meters</strong>: <strong>15.0</strong> as the default value.</li>
+<div class="section" id="perform-phase-filtering">
+<h4>Perform phase filtering<a class="headerlink" href="#perform-phase-filtering" title="Permalink to this headline">¶</a></h4>
+<p>Interferometric phase can be corrupted by noise from:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Temporal decorrelation</li>
+<li>Geometric decorrelation</li>
+<li>Volume scattering</li>
+<li>Processing error</li>
 </ul>
-<div class="section" id="run-the-job">
-<h3>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Click on the button <strong>Run Job</strong> and see the Running Job</li>
+</div></blockquote>
+<p>Where there is loss of coherence, the interference pattern is lost.</p>
+<p>To be able to properly unwrap the phase, the signal-to-noise ratio needs to be increased by filtering the phase.</p>
+<p>The adopted algorithm is the Goldstein phase filtering.</p>
+<p>This flag can be set to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>True</strong> (default value): the phase filtering is performed.</li>
+<li><strong>False</strong>: the phase filtering is not performed.</li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_7.png"><img alt="../_images/tuto_rss_snap_s1_insar_7.png" src="../_images/tuto_rss_snap_s1_insar_7.png" style="width: 750px;" /></a>
+</div></blockquote>
+<p><strong>For this run leave the “true” default value.</strong></p>
+</div>
+<div class="section" id="azimuth-and-range-multilook-factor">
+<h4>Azimuth and Range Multilook factor<a class="headerlink" href="#azimuth-and-range-multilook-factor" title="Permalink to this headline">¶</a></h4>
+<p>Generally, a SAR original image appears speckled with inherent speckle noise. To reduce this inherent speckled appearance, several images are incoherently combined as if they corresponded to different looks of the same scene. This processing is generally known as multilook processing. As a result the multilooked image improves the image interpretability.
+The implemented multilooking technique is the spatial one, produced by space-domain averaging of a single look image.</p>
+<p>The selectable parameters are the number of azimuth and range looks.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Azimuth Multilook factor</strong>: leave <strong>1</strong> as the default value.</li>
+<li><strong>Range Multilook factor</strong>: leave <strong>4</strong> as the default value.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="perform-phase-unwrapping">
+<h4>Perform phase unwrapping<a class="headerlink" href="#perform-phase-unwrapping" title="Permalink to this headline">¶</a></h4>
+<p>In the interferogram, the interferometric phase is ambiguous and only known within 2π. In order to be able to relate the interferometric phase to the topographic height, the phase must first be unwrapped.
+Thanks to the unwrapping the phase variation between two points on the flattened interferogram provides a measurement of the actual altitude variation.</p>
+<p>This flag can be set to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>True</strong>: the phase unwrapping is performed.</li>
+<li><strong>False</strong> (default value): the phase unwrapping is not performed.</li>
+</ul>
+</div></blockquote>
+<p><strong>For this run set the “true” value.</strong></p>
+</div>
+<div class="section" id="subset-bounding-box-for-unwrapping">
+<h4>Subset Bounding Box for Unwrapping<a class="headerlink" href="#subset-bounding-box-for-unwrapping" title="Permalink to this headline">¶</a></h4>
+<p>With this parameter is possible to set the AOI (Area Of Interest) where the phase unwrapping processing is performed.
+The AOI format is:</p>
+<blockquote>
+<div>lon_min,lat_min,lon_max,lat_max</div></blockquote>
+<p><strong>For this run set this AOI: 13.1,42.65,13.35,42.9</strong></p>
+</div>
+<div class="section" id="pixel-spacing-in-meters">
+<h4>Pixel spacing in meters<a class="headerlink" href="#pixel-spacing-in-meters" title="Permalink to this headline">¶</a></h4>
+<p>Due to topographical variations of a scene and the tilt of the satellite sensor, distances can be distorted in the SAR images. Image data not directly at the sensor Nadir location will have some distortion. Terrain corrections are intended to compensate for these distortions so that the geometric representation of the image will be as close as possible to the real world.
+Terrain Correction allows geometric overlays of data from different sensors and/or geometries.</p>
+<p>The user can select the pixel spacing in meters of the terrain corrected image.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Pixel spacing in meters</strong>: leave <strong>15.0</strong> as the default value.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="run-the-job-and-results-browsing">
+<h3>Run the job and results browsing<a class="headerlink" href="#run-the-job-and-results-browsing" title="Permalink to this headline">¶</a></h3>
+<p>Click on the button Run Job and see the Running Job.</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_6.png" src="../_images/tuto_rss_snap_s1_insar_6.png" />
+</div>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_7.png" src="../_images/tuto_rss_snap_s1_insar_7.png" />
 </div>
 <ul class="simple">
 <li>After the processing end (it can take some hours), see the Successful Job:</li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_8.png"><img alt="../_images/tuto_rss_snap_s1_insar_8.png" src="../_images/tuto_rss_snap_s1_insar_8.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_8.png" src="../_images/tuto_rss_snap_s1_insar_8.png" />
 </div>
-<ul>
-<li><p class="first">Click on the button <em>Show results</em>, then on the results on the <em>Results Table</em> in the bottom left side:</p>
+<p>Scroll down the Job status screen, click on the button <strong>Show results</strong>, then check the results list on the <strong>Results Table</strong> in the bottom left side:</p>
+<p>The following outputs are listed:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>coh_VV_21Aug2016_02Sep2016.png</strong>:  coeherence quick-look product;</li>
-<li><strong>displacement_ifg_srd_VV_21Aug2016_02Sep2016.png</strong>:  displacement quick-look product;</li>
-<li><strong>phase_ifg_srd_VV_21Aug2016_02Sep2016.png</strong>: interferometric phase quick-look product.</li>
+<li><strong>coh_VV_21Aug2016_02Sep2016</strong>: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.</li>
+<li><strong>phase_VV_21Aug2016_02Sep2016</strong>: this is the product that contains the interferometric phase computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.</li>
+<li><strong>displacement_VV_21Aug2016_02Sep2016</strong>: this is the displacement product that contains the terrain height variation in the Line Of Sight direction in the selected AOI. The Browse product is shown on the map and both Physical and Browse products are available for download.</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first">See the result on map:</p>
-</li>
+<p>Click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend.</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_9.png" src="../_images/tuto_rss_snap_s1_insar_9.png" />
+</div>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_10.png" src="../_images/tuto_rss_snap_s1_insar_10.png" />
+</div>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_11.png" src="../_images/tuto_rss_snap_s1_insar_11.png" />
+</div>
+<p>Click on the product name and then on the <strong>Download</strong> button that appears in the info tab. Depending on the output the following products can be downloaded:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Product GeoTiff</strong>: this is the physical quantity.</li>
+<li><strong>Browse Product GeoTiff</strong>: this is the GeoTiff browse product as shown on the map.</li>
+<li><strong>Browse Product PNG</strong>: this is the PNG browse product.</li>
+<li><strong>Metadata (properties)</strong>: a txt file containing all the metadata info displayed in the info tab.</li>
+<li><strong>Legend (png)</strong>: this is a PNG representing the colour-table of the displayed image.</li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_9.png"><img alt="../_images/tuto_rss_snap_s1_insar_9.png" src="../_images/tuto_rss_snap_s1_insar_9.png" style="width: 750px;" /></a>
+</div></blockquote>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_snap_s1_insar_12.png" src="../_images/tuto_rss_snap_s1_insar_12.png" />
 </div>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_10.png"><img alt="../_images/tuto_rss_snap_s1_insar_10.png" src="../_images/tuto_rss_snap_s1_insar_10.png" style="width: 750px;" /></a>
-</div>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_11.png"><img alt="../_images/tuto_rss_snap_s1_insar_11.png" src="../_images/tuto_rss_snap_s1_insar_11.png" style="width: 750px;" /></a>
-</div>
-<p>It is possible to download the tif products and/or the png quick-look products by clicking on the product name and then on the &#8220;Download&#8221; button (1).</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_insar_12.png"><img alt="../_images/tuto_rss_snap_s1_insar_12.png" src="../_images/tuto_rss_snap_s1_insar_12.png" style="width: 750px;" /></a>
-</div>
-</div>
-<div class="section" id="warning-on-output-products-deletion">
-<h3>Warning on output products deletion<a class="headerlink" href="#warning-on-output-products-deletion" title="Permalink to this headline">¶</a></h3>
-<p>Please note that the generated output (in particular the .tiff products) are not stored in a persistent manner on the platform.
-The Tiff products will be automatically deleted after two weeks.</p>
 <p class="rubric">References</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>

@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MPIC-OPT: Multiple pairwise optical image correlation &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Optical Flood Tool Service" href="optical-flood-tool.html" />
+    <link rel="prev" title="G-POD SBAS Stripmap Service" href="gpod-sbas-insar.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.1</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">MPIC-OPT: Multiple pairwise optical image correlation</a><ul>
+<li><a class="reference internal" href="#select-the-processing-service">Select the processing service</a></li>
+<li><a class="reference internal" href="#use-case-1-landslide-surface-displacement">Use case 1: Landslide surface displacement</a><ul>
+<li><a class="reference internal" href="#select-input-data">Select input data</a></li>
+<li><a class="reference internal" href="#set-the-processing-parameters">Set the processing parameters</a></li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-case-2-coseismic-slip">Use case 2: Coseismic slip</a><ul>
+<li><a class="reference internal" href="#id3">Select input data</a></li>
+<li><a class="reference internal" href="#id4">Set the processing parameters</a></li>
+<li><a class="reference internal" href="#id5">Run the job</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="gpod-sbas-insar.html" title="Previous Chapter: G-POD SBAS Stripmap Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; G-POD SBAS St...</span>
+    </a>
+  </li>
+  <li>
+    <a href="optical-flood-tool.html" title="Next Chapter: Optical Flood Tool Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Optical Flood... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/mpic-opt.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MPIC-OPT: Multiple pairwise optical image correlation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing-service">Select the processing service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-case-1-landslide-surface-displacement">Use case 1: Landslide surface displacement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-input-data">Select input data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-the-processing-parameters">Set the processing parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-case-2-coseismic-slip">Use case 2: Coseismic slip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Select input data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Set the processing parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/mpic-opt.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="mpic-opt-multiple-pairwise-optical-image-correlation">
+<h1>MPIC-OPT: Multiple pairwise optical image correlation<a class="headerlink" href="#mpic-opt-multiple-pairwise-optical-image-correlation" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_mpicopt_icon.png" src="../_images/tuto_mpicopt_icon.png" />
+<p><strong>MPIC-OPT</strong></p>
+<p>&#8220;This service is developed by CNRS EOST. The MPIC-OPT (Mutiple Pairwise Image Correlation of OPtical image Time-series) service enables the processing of optical image time-series for the monitoring of persistent surface deformation (continuously moving landslides and glaciers). It enables the on-demand processing of time series of Sentinel-2 (Pleaides and Spot6/7 in its VHRO version) if time series (of at least 2 dates, but the more the better) are available over an area.
+It comprises three components for i) the measurement of sub-pixel displacement among one or multiple optical image pairs (sub-pixel image correlation), ii) the correction outlier and geometric residuals and iii) a component for multi-temporal fusion&#8221;</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-2 MSI L1C</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<p>See <a class="reference internal" href="#output-specifications">output specifications</a>.</p>
+<hr class="docutils" />
+<p>This service targets the detection and measurement of horizontal ground deformation (e.g. co-seismic slip, landsliding) based on sub-pixel image correlation. The service allows to jointly analyse a single pairs or time-series of Sentinel-2 images. It combines methods for sub-pixel image matching of multiple-pair combinations as presented in <a class="footnote-reference" href="#id6" id="id1">[1]</a> and the correction of systematic co-registration residuals as presented in <a class="footnote-reference" href="#id7" id="id2">[2]</a>.</p>
+<p>This tutorial will introduce you to the use of the service for the detection of landslide surface displacement for two use cases beeing the quantification of landslide surface displacement and co-seismic displacement. To this end we will process a series of Sentinel-2 images acquired over the Harmalière landslide (France 2016) in and Sentinel-2 images acquired before and after the Kaikoura earthquake (New Zealand 2016).</p>
+<div class="section" id="select-the-processing-service">
+<h2>Select the processing service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
+<li>Go to the Geobrowser, expand the panel “Processing services” on the right hand side and select the processing service “MPIC-OPT”:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_1.png"><img alt="../_images/tuto_mpicopt_1.png" src="../_images/tuto_mpicopt_1.png" style="width: 750px;" /></a>
+</div>
+<p>This will display the service panel including several pre-defined parameters which can be adapted .</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_2.png"><img alt="../_images/tuto_mpicopt_2.png" src="../_images/tuto_mpicopt_2.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="use-case-1-landslide-surface-displacement">
+<h2>Use case 1: Landslide surface displacement<a class="headerlink" href="#use-case-1-landslide-surface-displacement" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-input-data">
+<h3>Select input data<a class="headerlink" href="#select-input-data" title="Permalink to this headline">¶</a></h3>
+<p>The Geobrowser offers multiple ways to search and discover a large variety of EO-based dataset and the interested reader should refer to the <a class="reference internal" href="../community-guide/platform/geobrowser.html"><span class="doc">Geobrowser</span></a> section for a general introduction.
+For this tutorial we will rely on readily prepared data packages which are accessible through the &#8220;Data Packages&#8221; tab on the lower right of the screen. If you type &#8220;Harmaliere&#8221; into the search box you should be able to find a data package named &#8220;Harmaliere landslide&#8221;. Alternatively you can access the <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide&amp;id=landslide-dm">Harmaliere landslide data package</a> directly by clicking on the provided link.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_3.png"><img alt="../_images/tuto_mpicopt_3.png" src="../_images/tuto_mpicopt_3.png" style="width: 750px;" /></a>
+</div>
+<p>Click on the data package, hold shift and Drag and Drop all four results in the <em>Sentinel-2 products</em> field in the service panel on the right:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_4.png"><img alt="../_images/tuto_mpicopt_4.png" src="../_images/tuto_mpicopt_4.png" style="width: 750px;" /></a>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the <em>Geobrowser</em> currently returns several results including both the original multi-tile dataset and a preview of the footprints of the contained tiles. For processing you must select <strong>only</strong> the original multi-tile datasets. For datasets after 27 September 2016 there is no such ambiguity.</p>
+</div>
+</div>
+<div class="section" id="set-the-processing-parameters">
+<h3>Set the processing parameters<a class="headerlink" href="#set-the-processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>There is a total of 9 processing parameters that can be adjusted and when hovering over the parameter fields you will see a short explanation for each of the parameters.</p>
+<ul class="simple">
+<li><strong>Sentinel-2 band:</strong> Specify the Sentinel-2 band used for matching. The option <em>B04</em> is recommended since the red band is also used for band to band co-registration by ESA</li>
+<li><strong>Sentinel-2 tile:</strong> This parameter is mainly for backwards compatibility with older SAFE datasets (before 27 September 2016) where multiple tiles where distributed in one SAFE folder. It is necessary to specify Sentinel-2 tile in the format {UTM zone number}{MGRS code} (e.g. 31TGK in this case).</li>
+<li><strong>Split date:</strong> An optional parameter of the form &#8220;yyyy-MM-dd&#8221; which will split the time series into two subsets and pairs will only be formed among members of different subsets. We will see the utility of this parameter in the second example and will leave it at <em>NONE</em> for the moment.</li>
+<li><strong>Temporal matching range:</strong> Defines how many pairs will be created considering the temporal order of the selected images. The default is <em>2</em> so that each image is matched with at most the previous 2 images within the selection.</li>
+<li><strong>Activate backward matching:</strong> If set to True backward matching will be performed for each pair. Here we will leave it at the default being <em>False</em>.</li>
+<li><strong>Window size:</strong> The parameter controls the size of the template used for matching among the input images. More specifically it controls the neighborhood around the central pixel so that the default value of <em>3</em> results in a 7x7 window size. The minimum value is 1 (3x3 pixel) and the recommended maximum is 7 (15x15 pixel). A smaller window will allow to better reconstruct small scale variations while at the same time can lead to more noise. Vice versa larger window sizes will lead to greater robustness against noise while smoothing small scale details. For small scale movements such as landslides we recommend a smaller window size (e.g. 2) while for large scale movements such as coseismic slip larger window sizes are often better.</li>
+<li><strong>Decorrelation threshold:</strong> Matches with a correlation coefficient [0,1] will be discarded. The default value is <em>0.2</em>.</li>
+<li><strong>Spatial matching range:</strong> Defines the search range in pixel for finding matches. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. This parameter should be adjusted according to the maximum expected displacement taking into account also the possible coregistration bias of the input images. Since the considered landslide underwent a period of strong acceleration we will increase this value to <em>7</em>.</li>
+<li><strong>Regularization parameter:</strong> Similar to the window size the regularization parameter controls the smoothness of the expected motion field. Increasing the regularization parameter is putting greater emphasis on a smooth motion field where neighboring pixels will have similar displacment values. For small scale features with strong gradients in the motion fields (e.g. landlsides) we recommend values between 0.05 and 0.3. For large scale features such as coseismic displacement further increasing the value can lead to smoother and less noisy results. Here we will use the default value of <em>0.3</em>.</li>
+</ul>
+<p>The figure below summarizes the parameter settings for this test.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_5.png"><img alt="../_images/tuto_mpicopt_5.png" src="../_images/tuto_mpicopt_5.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h3>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You are good to go. Click on the button <em>Run Job</em> at the bottom of the right panel. Depending on the allocated resources the execution will require at least few hours to terminate.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_6.png"><img alt="../_images/tuto_mpicopt_6.png" src="../_images/tuto_mpicopt_6.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Once the job has finished click on the <em>Show results</em> button to get a list and pre-visualization of all displacement maps and the respective multi-temporal indicators.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pre-visualization in the <em>Geobrowser</em> is just a preview and the user is encouraged to download the results for further processing and analysis.</p>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_7.png"><img alt="../_images/tuto_mpicopt_7.png" src="../_images/tuto_mpicopt_7.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="use-case-2-coseismic-slip">
+<h2>Use case 2: Coseismic slip<a class="headerlink" href="#use-case-2-coseismic-slip" title="Permalink to this headline">¶</a></h2>
+<p>With this second use case we will illustrate the use of MPIC-OPT for measurements of co-seismic slip using the example of the <a class="reference external" href="https://en.wikipedia.org/wiki/2016_Kaikoura_earthquake">Kaikoura earthquake</a> which hit the southern island of New Zealand on 14 November 2016.</p>
+<div class="section" id="id3">
+<h3>Select input data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>As in the previous example there is already a data package available which we you can find by typing &#8220;Kaikoura&#8221; in the search box in the &#8220;Data Packages&#8221; tab on the lower right of the screen. Alternatively, you can access the <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DKaikoura&amp;id=landslide-dm">Kaikoura data package</a> directly by clicking on the link.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_8.png"><img alt="../_images/tuto_mpicopt_8.png" src="../_images/tuto_mpicopt_8.png" style="width: 750px;" /></a>
+</div>
+<p>Click on the data package, hold shift and Drag and Drop all four results in the <em>Sentinel-2 products</em> field in the service panel on the right:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_9.png"><img alt="../_images/tuto_mpicopt_9.png" src="../_images/tuto_mpicopt_9.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Set the processing parameters<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For this example we will set the <strong>Split date</strong> in which case the <strong>Temporal matching range</strong> is ignored.</p>
+</div>
+<ul class="simple">
+<li><strong>Sentinel-2 band:</strong> Specify the Sentinel-2 band used for matching. The option <em>B04</em> is recommended since the red band is also used for band to band co-registration by ESA.</li>
+<li><strong>Sentinel-2 tile:</strong> The tile code for this scene is <em>59GQP</em>.</li>
+<li><strong>Temporal matching range:</strong> For this use case we will use the <strong>Split date</strong> parameter in which case all possible pairs are formed and the <strong>Temporal matching range</strong> will be ignored.</li>
+<li><strong>Activate backward matching:</strong> Set this option to <em>True</em> to also inverse the pairs which provides an aditional measurement that can help to reduce the variance of the offsets measured at each time step.</li>
+<li><strong>Split date:</strong> We will set the parameter to the date of the earthquake which is <em>2016-11-13</em> (yyyy-MM-dd, UTC time). Consequently the service will match all scenes before this date with all scenes after this date.</li>
+<li><strong>Window size:</strong> The parameter controls the size of the template used for matching among the input images. Leave it at the default value of <em>3</em> which results in a 7x7 window size.</li>
+<li><strong>Decorrelation threshold:</strong> We will slightly increase this threshold to <em>0.33</em>.</li>
+<li><strong>Spatial matching range:</strong> Defines the search range in pixel for finding matches. The horizontal offsets for this event reached 10 m and more and we should provide some additional tolerance for possible co-registration offsets. So set the value to <em>3</em>.</li>
+<li><strong>Regularization parameter:</strong> Here again we will use the default value of <em>0.3</em>.</li>
+</ul>
+<p>The figure below summarizes the parameter settings for this test.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_10.png"><img alt="../_images/tuto_mpicopt_10.png" src="../_images/tuto_mpicopt_10.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Run the job<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You are good to go. Click on the button <em>Run Job</em> at the bottom of the right panel. Depending on the allocated resources the execution will require at least few hours to terminate.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_11.png"><img alt="../_images/tuto_mpicopt_11.png" src="../_images/tuto_mpicopt_11.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Once the job has finished click on the <em>Show results</em> button to get a list and pre-visualization of all displacement maps and the respective multi-temporal indicators.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pre-visualization in the <em>Geobrowser</em> is just a preview and the user is encouraged to download the results for further processing and analysis.</p>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicopt_12.png"><img alt="../_images/tuto_mpicopt_12.png" src="../_images/tuto_mpicopt_12.png" style="width: 750px;" /></a>
+</div>
+<p id="output-specifications">The service output generally includes the following files:</p>
+<ul class="simple">
+<li><strong>Cloud masks:</strong> 8-bit GeoTiffs representing the mask for each time step. Areas with no data and covered by clouds in the two respective input images marked as 0. Valid pixels are marked with 255. The naming convention is: <em>cloud_masks_assembled_dateimage1_dateimage2.tif</em></li>
+<li><strong>Corrected displacement fields and correlation maps for each time step:</strong> Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (east is postive) and N-S direction (South is positive): The naming conventions are <em>Px1_dateimage1_dateimage2.tif</em> and <em>Px2_dateimage1_dateimage2.tif</em> respectively.</li>
+<li><strong>Correllation coefficient:</strong>  8-bit GeoTiffs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized to a range of 128 to 255. The naming convention is <em>Correl_dateimage1_dateimage2.tif</em></li>
+<li><strong>Vector coherence:</strong> A floating point GeoTiff representing the vector coherence of all time-steps accumulated with a value range of [0,1]. The naming convention is <em>vector_coherence_dateimage1_dateimage2.tif</em></li>
+<li><strong>Mean displacement:</strong> A floating point GeoTiff representing the average displacement over all time steps in meters. The naming convention is <em>mean_displacement_$dateimage1_dateimage2.tif</em></li>
+<li><strong>Mean velocity:</strong> Two floating point GeoTiffs representing the mean absolute velocities in E−W direction and N−S direction in meters/day respectively. The naming conventions are <em>mean_veloc_ew_dateimage1_dateimage2.tif</em> and <em>mean_veloc_ns_dateimage1_dateimage2.tif</em>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Stumpf, A., Malet, J.P. and Delacourt, C., 2017. Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189, pp.40-55.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Stumpf, A., Michéa, D. Malet, J.P., in Press. Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

@@ -12,7 +12,6 @@ Contents:
    Communities <community>
    Data <data>
    Processing <processing>
-   Visualisation <visualisation>
    Reproducibility <reproducibility>
    Sharing <sharing>
    Cloud Resources <cloud/index>

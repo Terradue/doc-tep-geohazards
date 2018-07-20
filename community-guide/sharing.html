@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sharing &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Sharing &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -112,11 +112,12 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Sharing</a><ul>
-<li><a class="reference internal" href="#share-with-groups">Share with groups</a></li>
-<li><a class="reference internal" href="#share-a-job">Share a job</a></li>
-<li><a class="reference internal" href="#share-a-processing-service">Share a Processing Service</a></li>
-<li><a class="reference internal" href="#share-a-data-package">Share a Data Package</a></li>
-<li><a class="reference internal" href="#share-a-data-search">Share a Data Search</a></li>
+<li><a class="reference internal" href="#share-with-users">Share with users</a></li>
+<li><a class="reference internal" href="#sharing-a-wps-job">Sharing a wps job</a></li>
+<li><a class="reference internal" href="#sharing-a-processing-service">Sharing a Processing Service</a></li>
+<li><a class="reference internal" href="#sharing-a-data-package">Sharing a Data Package</a></li>
+<li><a class="reference internal" href="#sharing-a-data-search">Sharing a Data Search</a></li>
+<li><a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a></li>
 </ul>
 </li>
 </ul>
@@ -141,7 +142,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/sharing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/sharing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -172,14 +173,14 @@
 <li class="toctree-l2"><a class="reference internal" href="community.html">Communities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sharing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#share-with-groups">Share with groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#share-a-job">Share a job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#share-a-processing-service">Share a Processing Service</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#share-a-data-package">Share a Data Package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#share-a-data-search">Share a Data Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-with-users">Share with users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-a-wps-job">Sharing a wps job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-a-processing-service">Sharing a Processing Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-a-data-package">Sharing a Data Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-a-data-search">Sharing a Data Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cloud/index.html">Cloud Resources</a></li>
@@ -192,7 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/sharing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/sharing.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -213,38 +214,61 @@
 </div>
 <p>Share your processing jobs and results with the community and allow other users to reproduce or modify your processes.
 You can even share your favorite Processing Service or a data package you created.</p>
-<div class="section" id="share-with-groups">
-<h2>Share with groups<a class="headerlink" href="#share-with-groups" title="Permalink to this headline">¶</a></h2>
-<p>Whenever you want to share an object with groups, you will see the following panel:</p>
+<div class="section" id="share-with-users">
+<h2>Share with users<a class="headerlink" href="#share-with-users" title="Permalink to this headline">¶</a></h2>
+<p>Whenever you want to share an object with users, you will see the following panel:</p>
 <div class="img-border figure align-center">
-<a class="reference internal image-reference" href="../_images/sharing_group.png"><img alt="../_images/sharing_group.png" src="../_images/sharing_group.png" style="width: 277.0px; height: 256.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/sharing_permission_wpsjob.png"><img alt="../_images/sharing_permission_wpsjob.png" src="../_images/sharing_permission_wpsjob.png" style="width: 222.5px; height: 228.0px;" /></a>
 </div>
 <p>It will allow you to:</p>
 <ul class="simple">
-<li>make the object public</li>
-<li>make the object private</li>
-<li>make the object restricted to groups, and choose to which groups you want to share it</li>
+<li>make the object public (Share with anyone)</li>
+<li>make the object private (Do not share)</li>
+<li>make the object restricted to users and communities (Restricted sharing)</li>
 </ul>
+<p>See below how <a class="reference internal" href="#sharing-a-wps-job">Sharing a wps job</a> or how <a class="reference internal" href="#sharing-a-data-package">Sharing a data package</a> with users can be done.</p>
 </div>
-<div class="section" id="share-a-job">
-<h2>Share a job<a class="headerlink" href="#share-a-job" title="Permalink to this headline">¶</a></h2>
-<p>To share a process you just created and executed:</p>
-<ol class="arabic simple">
-<li>Access the description of the job (see <a class="reference internal" href="processing.html"><span class="doc">Access created jobs</span></a>).</li>
-<li>Click on <img alt="manage" src="../_images/groups_manage1.png" /> to edit groups (see <span class="xref doc">Share with groups</span>).</li>
-<li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" /> to get the share link.</li>
-<li>Copy the link in your clipboard and share it to members of the groups</li>
-</ol>
+<div class="section" id="sharing-a-wps-job">
+<h2>Sharing a wps job<a class="headerlink" href="#sharing-a-wps-job" title="Permalink to this headline">¶</a></h2>
+<p>On the geobrowser of your thematic application, go to the wps services panel and find the wps job you want to share.</p>
+<p>If you are the owner of the data wps job, click on the Manage permissions button <img alt="manage" src="../_images/groups_manage1.png" /> to open the permissions windows of the wps job.</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_permission_wpsjob.png"><img alt="../_images/sharing_permission_wpsjob.png" src="../_images/sharing_permission_wpsjob.png" style="width: 222.5px; height: 228.0px;" /></a>
+</div>
+<p>You can set the permissions in the following way:</p>
+<ul class="simple">
+<li>Do not share <em>&#8211; only you can access</em></li>
+<li>Share with anyone <em>&#8211; all users of the platform can access</em></li>
+<li><dl class="first docutils">
+<dt>Restricted sharing <em>&#8211; only you and a set of users can access</em></dt>
+<dd><ul class="first last">
+<li>community <em>&#8211; all users part of the community can access (only one community can be selected)</em></li>
+<li>users <em>&#8211; all selected users can access</em></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Once the permissions set, users able to view the wps job can access it by:</p>
+<ul class="simple">
+<li>searching for it on the wps services panel of their thematic application</li>
+<li>directly via the shareable link (on the top of the permissions window)</li>
+</ul>
+<p>You can also share the link directly on your favorite social network using the associated icon or on the discuss category of a community, using the button <img alt="discuss" src="../_images/community_discuss_button.png" /> (see <a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a>).</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_social.png"><img alt="../_images/sharing_social.png" src="../_images/sharing_social.png" style="width: 211.0px; height: 29.5px;" /></a>
+</div>
+<p>If you are not the owner of the wps job, you can also share the link directly on your favorite social network using the associated icon or on the discuss category of a community, using the button <img alt="discuss" src="../_images/community_discuss_button.png" /> (see <a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a>).</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_social2.png"><img alt="../_images/sharing_social2.png" src="../_images/sharing_social2.png" style="width: 76.0px; height: 26.5px;" /></a>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you share the link with someone not from one of the groups allowed to see this job, he will not be able to access it</p>
+<p class="last">If you share the link with someone who has no permission to view this job, he will not be able to access it</p>
 </div>
-<ol class="arabic simple" start="5">
-<li>Other users will now be able to access this job just by clicking on the link you will have share with them, see the result and even reprocess it (see <a class="reference internal" href="processing.html"><span class="doc">Reprocess existing job</span></a>).</li>
-</ol>
 </div>
-<div class="section" id="share-a-processing-service">
-<h2>Share a Processing Service<a class="headerlink" href="#share-a-processing-service" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sharing-a-processing-service">
+<h2>Sharing a Processing Service<a class="headerlink" href="#sharing-a-processing-service" title="Permalink to this headline">¶</a></h2>
 <p>To share your favorite Processing Service:</p>
 <ol class="arabic simple">
 <li>Access the <a class="reference internal" href="platform/geobrowser.html"><span class="doc">Processing Service</span></a>.</li>
@@ -259,35 +283,74 @@ You can even share your favorite Processing Service or a data package you create
 <li>Other users will now be able to access this Processing Service just by clicking on the link you will have share with them. The Processing Service will also appear in their list of available Processing Services.</li>
 </ol>
 </div>
-<div class="section" id="share-a-data-package">
-<h2>Share a Data Package<a class="headerlink" href="#share-a-data-package" title="Permalink to this headline">¶</a></h2>
-<p>To share a Data package you just created:</p>
-<ol class="arabic simple">
-<li>Access the <a class="reference internal" href="platform/geobrowser.html"><span class="doc">Features basket</span></a> and select the <em>Data Package</em> tab.</li>
-<li>Choose one data package from the list.</li>
-</ol>
-<p>3. Click on <img alt="manage" src="../_images/groups_manage1.png" /> to edit groups (see <span class="xref doc">Share with groups</span>).
-3. Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" /> to get the share link.
-5. Copy the link in your clipboard and share it to members of the groups</p>
+<div class="section" id="sharing-a-data-package">
+<h2>Sharing a Data Package<a class="headerlink" href="#sharing-a-data-package" title="Permalink to this headline">¶</a></h2>
+<p>On the geobrowser of your thematic application, go to the Data package panel and find the data package you want to share.</p>
+<p>Click on the Manage permissions button <img alt="manage" src="../_images/groups_manage1.png" /> to open the permissions windows of the data package.</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_permission_datapackage.png"><img alt="../_images/sharing_permission_datapackage.png" src="../_images/sharing_permission_datapackage.png" style="width: 223.5px; height: 216.5px;" /></a>
+</div>
+<p>You can set the permissions in the following way:</p>
+<ul class="simple">
+<li>Do not share <em>&#8211; only you can access</em></li>
+<li>Share with anyone <em>&#8211; all users of the platform can access</em></li>
+<li><dl class="first docutils">
+<dt>Restricted sharing <em>&#8211; only you and a set of users can access</em></dt>
+<dd><ul class="first last">
+<li>community <em>&#8211; all users part of the community can access (only one community can be selected)</em></li>
+<li>users <em>&#8211; all selected users can access</em></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Once the permissions set, users able to view the data package can access it by:</p>
+<ul class="simple">
+<li>searching for it on the data package panel of their thematic application</li>
+<li>directly via the shareable link (on the top of the permissions window)</li>
+</ul>
+<p>You can also share the link directly on your favorite social network using the associated icon or on the discuss category of a community, using the button <img alt="discuss" src="../_images/community_discuss_button.png" /> (see <a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a>).</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_social.png"><img alt="../_images/sharing_social.png" src="../_images/sharing_social.png" style="width: 211.0px; height: 29.5px;" /></a>
+</div>
+<p>If you are not the owner of the wps job, you can also share the link directly on your favorite social network using the associated icon or on the discuss category of a community, using the button <img alt="discuss" src="../_images/community_discuss_button.png" /> (see <a class="reference internal" href="#sharing-on-the-community-blog">Sharing on the community blog</a>).</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/sharing_social2.png"><img alt="../_images/sharing_social2.png" src="../_images/sharing_social2.png" style="width: 76.0px; height: 26.5px;" /></a>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you share the link with someone not from one of the groups allowed to see this data package, he will not be able to access it</p>
+<p class="last">If you share the link with someone not from one of the groups allowed to see this job, he will not be able to access it</p>
 </div>
-<ol class="arabic simple" start="6">
-<li>Other users will now be able to access this data package just by clicking on the link you will have share with them. The data package will also appear in the list of available data packages to be loaded.</li>
-</ol>
+<div class="admonition-requirement-coverage admonition" id="req-0">
+<p class="first admonition-title">Requirement coverage</p>
+<p>HEP-TS-DES-014</p>
+<p class="last">This section describes how a user can share a data package.</p>
 </div>
-<div class="section" id="share-a-data-search">
-<h2>Share a Data Search<a class="headerlink" href="#share-a-data-search" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sharing-a-data-search">
+<h2>Sharing a Data Search<a class="headerlink" href="#sharing-a-data-search" title="Permalink to this headline">¶</a></h2>
 <p>To share a Data search you just performed:</p>
 <ol class="arabic simple">
 <li>Access the <a class="reference internal" href="platform/geobrowser.html"><span class="doc">Geobrowser</span></a>.</li>
 <li>Perform a query (see :doc: <cite>Discover Data&lt;community-guide/data&gt;</cite>).</li>
 <li>Click on <strong>Share</strong> <img alt="share" src="../_images/share_button.png" />, just on the top of the list of results.</li>
-<li>Select a group to which you want to share (or make it public).</li>
-<li>Copy the link in your clipboard and share it with your friends.</li>
+<li>Copy the link in your clipboard and share it with your friends or share the link directly on your favorite social network</li>
 <li>Other users will now be able to reproduce this search just by clicking on the link you will have share with them.</li>
 </ol>
+</div>
+<div class="section" id="sharing-on-the-community-blog">
+<h2>Sharing on the community blog<a class="headerlink" href="#sharing-on-the-community-blog" title="Permalink to this headline">¶</a></h2>
+<p>You can share any object directly on your favorite social network using the associated icon or on the discuss category of a community, using the button <img alt="discuss" src="../_images/community_discuss_button.png" />.</p>
+<ol class="arabic simple">
+<li>Select <img alt="discuss" src="../_images/community_discuss_button.png" /></li>
+<li>Some default values (including the link to the shared url in the current Thematic Application) are proposed for Title and description of the new posts. You can edit them if needed.</li>
+<li>Select the community to which you want to share.</li>
+<li>Click on <strong>Share</strong>, the post is automatically created on <a class="reference external" href="https://discuss.terradue.com">https://discuss.terradue.com</a> under the category associated to the community you selected.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You will be set as author of the created post. Thus, you need to have an account on <a class="reference external" href="https://discuss.terradue.com">https://discuss.terradue.com</a>.</p>
+</div>
 </div>
 </div>
 

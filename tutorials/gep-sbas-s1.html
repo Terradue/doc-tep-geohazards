@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>P-SBAS Sentinel-1 processing on-demand by CNR-IREA &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PSI Post Processing Service" href="psi_post_proc.html" />
+    <link rel="prev" title="Optical Flood Tool Service" href="optical-flood-tool.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.1</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a><ul>
+<li><a class="reference internal" href="#multi-temporal-analysis-mta-mode">1 Multi Temporal Analysis (MTA) Mode</a><ul>
+<li><a class="reference internal" href="#select-the-processing">1.1 Select the processing</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">1.2 Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-the-parameter-values">1.3 Fill the parameter values</a></li>
+<li><a class="reference internal" href="#run-the-job">1.4 Run the job</a></li>
+<li><a class="reference internal" href="#results-download-and-visualization">1.5 Results: download and visualization</a></li>
+<li><a class="reference internal" href="#metadata">1.6 Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interferogram-generation-ifg-mode">2 Interferogram Generation (IFG) Mode</a><ul>
+<li><a class="reference internal" href="#id2">2.1 Select the processing</a></li>
+<li><a class="reference internal" href="#id4">2.2 Select the files to process</a></li>
+<li><a class="reference internal" href="#id5">2.3 Fill the parameter values</a></li>
+<li><a class="reference internal" href="#id8">2.4 Run the job</a></li>
+<li><a class="reference internal" href="#id9">2.5 Results: download and visualization</a></li>
+<li><a class="reference internal" href="#id10">2.6 Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feedbacks">3 Feedbacks</a></li>
+<li><a class="reference internal" href="#terms-and-conditions">4 Terms and Conditions</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="optical-flood-tool.html" title="Previous Chapter: Optical Flood Tool Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Optical Flood...</span>
+    </a>
+  </li>
+  <li>
+    <a href="psi_post_proc.html" title="Next Chapter: PSI Post Processing Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">PSI Post Proc... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gep-sbas-s1.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multi-temporal-analysis-mta-mode">1 Multi Temporal Analysis (MTA) Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-processing">1.1 Select the processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-files-to-process">1.2 Select the files to process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fill-the-parameter-values">1.3 Fill the parameter values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job">1.4 Run the job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#results-download-and-visualization">1.5 Results: download and visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#metadata">1.6 Metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interferogram-generation-ifg-mode">2 Interferogram Generation (IFG) Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1 Select the processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.2 Select the files to process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.3 Fill the parameter values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.4 Run the job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">2.5 Results: download and visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">2.6 Metadata</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#feedbacks">3 Feedbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#terms-and-conditions">4 Terms and Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gep-sbas-s1.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="p-sbas-sentinel-1-processing-on-demand-by-cnr-irea">
+<h1>P-SBAS Sentinel-1 processing on-demand by CNR-IREA<a class="headerlink" href="#p-sbas-sentinel-1-processing-on-demand-by-cnr-irea" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_psbas_ondem_icon.png" src="../_images/tuto_psbas_ondem_icon.png" />
+<p><strong>P-SBAS InSAR Sentinel-1 TOPS (GEP)</strong></p>
+<p>P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps. Input: SLC (Level-1) Sentinel-1 data. Output: LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Output Format: CSV. (The service can also generate wrapped and unwrapped interferograms that are delivered in geoTiff format).</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-1 TOPSAR IW SLC</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>(Default) LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Format: CSV.</li>
+<li>(Upon request) Wrapped Interferograms; Unwrapped Interferograms; Spatial coherence; Map of LOS vector. Format: GeoTIFF.</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>This tutorial describes how to submit a job for the CNR-IREA P-SBAS Sentinel-1 (S1) processing on-demand service to obtain a ground displacement time series from S1 SLAC (Level-1) data.
+P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps
+The tutorial is addressed to users already familiar with InSAR processing, analysis and products, and gives some hints and recommendation for the best service usage experience.</p>
+<p>The provided service performs the full P-SBAS DInSAR chain from SLC data (Level 1) retrieval to displacement time series generation, upon the <strong>Multi Temporal Analysis (MTA)</strong> processing mode.</p>
+<p>The main user actions are the following:</p>
+<ul class="simple">
+<li>select the Input SAR SLC data to be processed;</li>
+<li>optionally define the area of SAR data to be processed;</li>
+<li>set input parameters/threshold (e.g. reference point, polarization, …) for P-SBAS DInSAR processing;</li>
+<li>obtain P-SBAS DInSAR geocoded (Lat/Lon WGS84) results, such as: LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography).</li>
+</ul>
+<p>As additional feature, the possibility to generate single or stack of interferograms co-registered to a single master geometry is also available, within the <strong>Interferogram Generation (IFG)</strong> processing mode.</p>
+<p>Users are encouraged to use the P-SBAS DInSAR service here described for scientific purposes.
+The results (including products, maps, time series, files and everything generated by the processors) of the service are available under the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a>. See &#8220;Terms and Conditions&#8221; section below for more details.
+Accordingly, please recognize the effort made by the authors by citing:</p>
+<p><strong>Casu, F., Elefante, E., Imperatore, P., Zinno, I., Manunta, M., De Luca, C., Lanari, R. (2014) “SBAS-DInSAR Parallel Processing for Deformation Time Series Computation”, IEEE JSTARS, doi: 10.1109/JSTARS.2014.2322671</strong></p>
+<p><strong>De Luca, C., Cuccu, R., Elefante, S., Zinno, I., Manunta, M., Casola, V., Rivolta, G., Lanari, R., Casu, F. (2015) “An On-Demand Web Tool for the Unsupervised Retrieval of Earth’s Surface Deformation from SAR Data: The P-SBAS Service within the ESA G-POD Environment”, Remote Sens. 2015, 7(11), 15630-15650; doi:10.3390/rs71115630</strong></p>
+<p>in relevant talks, documents and publications prepared by using P-SBAS DInSAR results generated by this service.
+CNR-IREA and ESA do not respond in any case for the use, interpretation, and quality of the obtained measurements.</p>
+<p>In the following, two service runs related to the two different processing modes (MTA and IFG) are provided.</p>
+<div class="section" id="multi-temporal-analysis-mta-mode">
+<h2>1 Multi Temporal Analysis (MTA) Mode<a class="headerlink" href="#multi-temporal-analysis-mta-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-the-processing">
+<h3>1.1 Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a></li>
+<li>Access the &#8220;CNR IREA SBAS Ground Motion Services&#8221; Thematic App.</li>
+<li>Open the tab &#8220;Processing services&#8221; from the right of the map, and then select the processing service “CNR-IREA P-SBAS Sentinel-1 processing on-demand”.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_1.png"><img alt="../_images/tuto_psbas_ondem_1.png" src="../_images/tuto_psbas_ondem_1.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="select-the-files-to-process">
+<h3>1.2 Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h3>
+<p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.</p>
+<ul class="simple">
+<li>The algorithm accepts as inputs <strong>IW Sentinel-1</strong>  <strong>SLC (level 1) data</strong>. RAW data cannot be processed.</li>
+<li>It is very important that the user selects <strong>images related to the same track only</strong> which must be aquired with the same mode (the IW one).</li>
+<li>The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.</li>
+<li><strong>Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode</strong>.</li>
+</ul>
+<p>For this tutorial, a <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DNapoliS1T222017&amp;id=insarquake">pre-defined data set</a> has been prepared to speed up the data selection step .</p>
+<ul class="simple">
+<li>Browse the Data Packages looking for <em>Napoli S1 T22 2017</em> package and click on the load button to upload it.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_2.png"><img alt="../_images/tuto_psbas_ondem_2.png" src="../_images/tuto_psbas_ondem_2.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Surf the map to the Napoli (Italy) Area of Interest: the browser page should appear as depicted in the next figure.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_3.png"><img alt="../_images/tuto_psbas_ondem_3.png" src="../_images/tuto_psbas_ondem_3.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Set the <em>Job Title</em> with a meaningful name (e.g. <em>CNR-IREA P-SBAS S1 Napoli T22 2017 - v1.0.9</em>) and push the <em>sel. all</em> button in the Feature Basket.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_4.png"><img alt="../_images/tuto_psbas_ondem_4.png" src="../_images/tuto_psbas_ondem_4.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Drag all the selected data and drop them within the <em>Sentinel-1 input SLCs</em> field on the right panel.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_5.png"><img alt="../_images/tuto_psbas_ondem_5.png" src="../_images/tuto_psbas_ondem_5.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="fill-the-parameter-values">
+<h3>1.3 Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fill the parameters according to the following figure:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_6.png"><img alt="../_images/tuto_psbas_ondem_6.png" src="../_images/tuto_psbas_ondem_6.png" style="width: 750px;" /></a>
+</div>
+<p>In particular:</p>
+<ul class="simple">
+<li>As <em>Latitude of the Reference Point</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>40.848
+</pre></div>
+</div>
+<ul class="simple">
+<li>As <em>Longitude of the Reference Point</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>14.262
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Latitude of the Reference Point</em> and <em>Longitude of the Reference Point</em> are the Latitude and Longitude coordinates (in decimal degrees) of the <strong>reference point</strong> for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on <strong>land</strong> and included <strong>within the selected Area of Interest</strong> (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point. The <em>Magic Wand</em> button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.</p>
+</div>
+<ul class="simple">
+<li>Leave the <em>Bounding Box</em> untouched (Area of Interest empty).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If set, the system automatically processes the identified AoI. Format: LL-Lon, LL-Lat, UR-Lon, UR-Lat. The <em>Magic Wand</em> button can be used to automatically fill this field with the bounding coordinate values of a rectangle drawn on the map. Different slices covering the AoI are automatically merged. It is recommended to avoid processing very small areas to allow the system to correctly estimate the co-registration shifts needed by the TOPS mode. The suggested smallest area spans at least 4 S1 bursts, which approximately corresponds to about 80 km along azimuth.</p>
+</div>
+<ul class="simple">
+<li>As <em>Polarization</em> type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>vv
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values are: <em>vv</em>, <em>vh</em>, <em>hv</em>, <em>hh</em>. The user shall select the correct polarization according to the selected SLC input data. Default value is <em>vv</em>, being the default S1 polarization for data acquired over land.</p>
+</div>
+<ul class="simple">
+<li>As <em>Processing Mode</em>, select:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>MTA
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values: <em>MTA</em> (Multi-Temporal Analysis); <em>IFG</em> (Interferogram Generation). Default value is <em>MTA</em>. For <em>IFG</em> description see Section <a class="reference internal" href="#interferogram-generation-ifg-mode">2</a>.</p>
+</div>
+<ul class="simple">
+<li>As <em>DEM</em>, select:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>srtm_1
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values are: <em>srtm_1</em> (1 arcsec SRTM DEM), <em>srtm_3</em> (3 arcsec SRTM DEM). User is kindly advised to check the <a class="reference external" href="https://earthexplorer.usgs.gov">EarthExplorer</a> web site for actual data coverage.</p>
+</div>
+<ul class="simple">
+<li>As <em>APS Filter Window Length</em>, insert:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>200
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the temporal window width (in days) for the APS filter on the resulting time series.</p>
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h3>1.4 Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:</li>
+<li>After about 48 hours of processing time, the job status should be &#8220;Success&#8221;.</li>
+</ul>
+</div>
+<div class="section" id="results-download-and-visualization">
+<h3>1.5 Results: download and visualization<a class="headerlink" href="#results-download-and-visualization" title="Permalink to this headline">¶</a></h3>
+<p><strong>Download</strong></p>
+<p>The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the &#8220;Show results&#8221; button. Tutorial results are accessible <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D7cc6d9bb-5ad6-48f8-bb7c-e798a9f871be%26key%3Dd6e534cb-7196-4074-b07c-390a7c6f5b30&amp;id=insarquake">here</a>.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_8.png"><img alt="../_images/tuto_psbas_ondem_8.png" src="../_images/tuto_psbas_ondem_8.png" style="width: 750px;" /></a>
+</div>
+<p>To download the P-SBAS DInSAR processing results once the Job is completed just click on the <em>Download</em> button in the pop-up window of the identified product:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_9.png"><img alt="../_images/tuto_psbas_ondem_9.png" src="../_images/tuto_psbas_ondem_9.png" style="width: 750px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Single files can be downloaded separately. To download the full result archive, please select the zip file.</p>
+</div>
+<p><strong>Visualization</strong></p>
+<p>Time series can be directly visualized via the Geobrowser. After setting a satisfactory zoom, put a Placemark on the pixel for which the time series shold be displayed. Then click the &#8220;plot&#8221; icon in the TS collection.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_10.png"><img alt="../_images/tuto_psbas_ondem_10.png" src="../_images/tuto_psbas_ondem_10.png" style="width: 750px;" /></a>
+</div>
+<p>A pop-up window should appear showing the Time series of the selected pixel.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_11.png"><img alt="../_images/tuto_psbas_ondem_11.png" src="../_images/tuto_psbas_ondem_11.png" style="width: 750px;" /></a>
+</div>
+<p><strong>Conventions and assumptions</strong></p>
+<p>Results are provided in the satellite Line Of Sight (LOS). Positive values indicate that the target moves toward the satellite.
+Processing results are provided according to the <a class="reference external" href="http://epos-ip.org">EPOS-IP project</a> specifications along with the corresponding metadata.</p>
+<p><strong>Published Results</strong></p>
+<p>The main outputs of the MTA mode are the:</p>
+<ul class="simple">
+<li>Displacement Time series in LOS;</li>
+<li>Mean LOS velocity;</li>
+<li>Temporal coherence;</li>
+<li>Pixel location (coordinates);</li>
+<li>LOS unit vectors.</li>
+</ul>
+<p>Information is organized in a <strong>CSV ASCII</strong> table according to the following figure.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_12.png"><img alt="../_images/tuto_psbas_ondem_12.png" src="../_images/tuto_psbas_ondem_12.png" style="width: 750px;" /></a>
+</div>
+<p>Provided information consists, per each pixel considered reliable, in:</p>
+<ul class="simple">
+<li>Unique pixel identifier (<code class="docutils literal"><span class="pre">ID</span></code>);</li>
+<li>WGS84 Latitude in degree (<code class="docutils literal"><span class="pre">Lat</span></code>);</li>
+<li>WGS84 Longitude in degree (<code class="docutils literal"><span class="pre">Lon</span></code>);</li>
+<li>Topography above the ellipsoid (<code class="docutils literal"><span class="pre">Topo</span></code>);</li>
+<li>Mean Velocity in cm/year, as linear regression of the displacement Time series (<code class="docutils literal"><span class="pre">Vel</span></code>);</li>
+<li>Temporal coherence (<code class="docutils literal"><span class="pre">Coer</span></code>);</li>
+<li>Components of LOS unit vector along the North, East and Vertical directions (<code class="docutils literal"><span class="pre">cosN</span></code>, <code class="docutils literal"><span class="pre">cosE</span></code>, <code class="docutils literal"><span class="pre">cosU</span></code>);</li>
+<li>LOS displacement time-series in cm (<code class="docutils literal"><span class="pre">TS</span></code>): the length of this field depends on the number of acquisitions used in the time series generation.</li>
+</ul>
+<p>File name convention is as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SBAS_TS_</span><span class="o">&lt;</span><span class="n">FirstAcqDate</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">LastAcqDate</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">UniqueCode</span><span class="o">&gt;.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&lt;FirstAcqDate&gt;</span></code>: is the first acquisition of the time series;</li>
+<li><code class="docutils literal"><span class="pre">&lt;LastAcqDate&gt;</span></code> : is the last acquisition of the time series.</li>
+<li><code class="docutils literal"><span class="pre">&lt;UniqueCode&gt;</span></code>  : is a unique code identifier.</li>
+</ul>
+<p>A typical name sample is: <code class="docutils literal"><span class="pre">SBAS_TS_20170106_20171120_ME7G.csv</span></code></p>
+<p>Additional provided outputs are:</p>
+<ul class="simple">
+<li>A .kmz file containing the Quick-look of the retrieved mean LOS velocity importable in Google Earth;</li>
+<li>A .png file (together with its .pngw file) containing the raster bitmap image of the mean LOS velocity;</li>
+<li>A .properties file containing the Metadata associated to the main results and displayed in the Geobrowser pop-up window;</li>
+<li>A .png file representing the mean LOS velocity legend, i.e. the color code associated to the LOS Mean Velocity values;</li>
+<li>A .zip archive that contains all the mentioned result files.</li>
+</ul>
+</div>
+<div class="section" id="metadata">
+<h3>1.6 Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h3>
+<p>Metadata are provided according to the EPOS specifications.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="40%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Example</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Data_Type</td>
+<td>LOS_DISPLACEMENT_TIMESERIES</td>
+<td>Type of data (according to the EPOS categories)</td>
+</tr>
+<tr class="row-odd"><td>Title</td>
+<td>SBAS_TS_20170106_20171120_ME7G.csv</td>
+<td>Title of the pop-up window (it corresponds to the file name)</td>
+</tr>
+<tr class="row-even"><td>Product_format</td>
+<td>ASCII</td>
+<td>Format of the product (geoTiff or CSV)</td>
+</tr>
+<tr class="row-odd"><td>Product_size</td>
+<td>23249970</td>
+<td>In byte</td>
+</tr>
+<tr class="row-even"><td>Product_url</td>
+<td>&#160;</td>
+<td>The url to locate the file</td>
+</tr>
+<tr class="row-odd"><td>Bounding_box</td>
+<td>&#160;</td>
+<td>The polygon relevant to the processed area</td>
+</tr>
+<tr class="row-even"><td>License</td>
+<td><a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a></td>
+<td>Applicable license for the product</td>
+</tr>
+<tr class="row-odd"><td>User_ID</td>
+<td>mapred</td>
+<td>User that generated the product</td>
+</tr>
+<tr class="row-even"><td>Software_version</td>
+<td>CNR-IREA P-SBAS 25</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Applied_algorithm_description</td>
+<td>Parallel SBAS Interferometry Chain</td>
+<td>Short description of the algorithm used to generate the product</td>
+</tr>
+<tr class="row-even"><td>Main_reference</td>
+<td>10.1109/TGRS.2002.803792
+10.1109/JSTARS.2014.232267</td>
+<td>DOIs of the main publications describing the used algorithms</td>
+</tr>
+<tr class="row-odd"><td>Date_of_measurement_start</td>
+<td>2017-11-07T02:53:48.378740Z</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Date_of_measurement_end</td>
+<td>2017-11-19T02:53:48.215234Z</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Date_of_production</td>
+<td>2017-12-01T23:51:09Z</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Date_of_publication</td>
+<td>2017-12-01T23:51:09Z</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Service_used_for_generation</td>
+<td>CNR-IREA EPOSAR</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Geographic_CS_type_code</td>
+<td>EPSG4326</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Used_DEM</td>
+<td>SRTM_3arcsec</td>
+<td>DEM used within the interferometri processing</td>
+</tr>
+<tr class="row-even"><td>Super_master_SAR_image_ID</td>
+<td>S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE</td>
+<td>Reference SAR geometry</td>
+</tr>
+<tr class="row-odd"><td>Master_SAR_image_ID</td>
+<td>S1A_IW_SLC__1SDV_20171107T025348_20171107T025415_019153_02069A_D2C6.SAFE</td>
+<td>Master Image (only for IFG products)</td>
+</tr>
+<tr class="row-even"><td>Slave_SAR_image_ID</td>
+<td>S1A_IW_SLC__1SDV_20171119T025348_20171119T025415_019328_020C14_14AF.SAFE</td>
+<td>Slave Image (only for IFG products)</td>
+</tr>
+<tr class="row-odd"><td>Perpendicular_baseline</td>
+<td>-14.7667</td>
+<td>In meters (only for IFG products)</td>
+</tr>
+<tr class="row-even"><td>Parallel_baseline</td>
+<td>-4.35838</td>
+<td>In meters (only for IFG products)</td>
+</tr>
+<tr class="row-odd"><td>Along_track_baseline</td>
+<td>-0.389812</td>
+<td>In meters (only for IFG products)</td>
+</tr>
+<tr class="row-even"><td>Spatial_resolution</td>
+<td>73</td>
+<td>Ground resolution, in meters</td>
+</tr>
+<tr class="row-odd"><td>Sensor</td>
+<td>S1</td>
+<td>Used sensor</td>
+</tr>
+<tr class="row-even"><td>Mode</td>
+<td>IW</td>
+<td>Acquisition mode</td>
+</tr>
+<tr class="row-odd"><td>Antenna_side</td>
+<td>Right</td>
+<td>Right/Left</td>
+</tr>
+<tr class="row-even"><td>Relative_orbit_number</td>
+<td>6</td>
+<td>Satellite Track</td>
+</tr>
+<tr class="row-odd"><td>Wavelength</td>
+<td>0.055465760</td>
+<td>In meters</td>
+</tr>
+<tr class="row-even"><td>Number_of_looks_azimuth</td>
+<td>5</td>
+<td>Applied multilook along azimuth</td>
+</tr>
+<tr class="row-odd"><td>Number_of_looks_range</td>
+<td>20</td>
+<td>Applied multilook along range</td>
+</tr>
+<tr class="row-even"><td>Number_of_dates</td>
+<td>51</td>
+<td>Number of used acquisitions (only for MTA products)</td>
+</tr>
+<tr class="row-odd"><td>Reference_date</td>
+<td>2017-01-06T05:11:09Z</td>
+<td>Acquisition used as temporal reference in the time series (only for MTA products)</td>
+</tr>
+<tr class="row-even"><td>Reference_point</td>
+<td>14.323914 40.862183</td>
+<td>Lon Lat format. For MTA and InU products</td>
+</tr>
+<tr class="row-odd"><td>Applied_corrections</td>
+<td>No_Corrections</td>
+<td>Description of possible correction applied to the interferograms or time series</td>
+</tr>
+<tr class="row-even"><td>Applied_filter</td>
+<td>Goldstein_0.5</td>
+<td>Possible spatial filter applied to the interferogram</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="interferogram-generation-ifg-mode">
+<h2>2 Interferogram Generation (IFG) Mode<a class="headerlink" href="#interferogram-generation-ifg-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>2.1 Select the processing<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Follow the steps described in Section <a class="reference internal" href="#select-the-processing">1.1</a>.</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>2.2 Select the files to process<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.</p>
+<ul class="simple">
+<li>The algorithm accepts as inputs <strong>IW Sentinel-1</strong>  <strong>SLC (level 1) data</strong>. RAW data cannot be processed.</li>
+<li>It is very important that the user selects <strong>images related to the same track only</strong> which must be aquired with the same mode (the IW one).</li>
+<li>The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.</li>
+<li><strong>Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode</strong>.</li>
+</ul>
+<p>For this tutorial, a pre-defined <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DAmatriceIFGS1T22&amp;id=insarquake">data set</a> has been prepared to speed up the data selection step.</p>
+<ul class="simple">
+<li>Browse the Data Packages looking for <em>Amatrice IFG S1 T22</em> package and click on the load button to upload it.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg1.png"><img alt="../_images/tuto_psbas_ondem_ifg1.png" src="../_images/tuto_psbas_ondem_ifg1.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Surf the map to the Central Italy Area of Interest: the browser page should appear as depicted in the next figure.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg2.png"><img alt="../_images/tuto_psbas_ondem_ifg2.png" src="../_images/tuto_psbas_ondem_ifg2.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Set the <em>Job Title</em> with a meaningful name (e.g. <em>CNR-IREA P-SBAS S1 on-demand Amatrice T22</em>) and push the <em>sel. all</em> button in the Feature Basket.</li>
+<li>Drag all the selected data and drop them within the <em>Sentinel-1 input SLCs</em> field on the right panel.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg3.png"><img alt="../_images/tuto_psbas_ondem_ifg3.png" src="../_images/tuto_psbas_ondem_ifg3.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>2.3 Fill the parameter values<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fill the parameters according to the following figure:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg4.png"><img alt="../_images/tuto_psbas_ondem_ifg4.png" src="../_images/tuto_psbas_ondem_ifg4.png" style="width: 750px;" /></a>
+</div>
+<p>In particular:</p>
+<ul class="simple">
+<li>As <em>Latitude of the Reference Point</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>43.277
+</pre></div>
+</div>
+<ul class="simple">
+<li>As <em>Longitude of the Reference Point</em>, type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>13.733
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Latitude of the Reference Point</em> and <em>Longitude of the Reference Point</em> are the Latitude and Longitude coordinates (in decimal degrees) of the <strong>reference point</strong> for the P-SBAS DInSAR measurement. Considerations as in Section <a class="reference internal" href="#fill-the-parameter-values">1.3</a> are valid.</p>
+</div>
+<ul class="simple">
+<li>Leave the <em>Bounding Box</em> untouched (Area of Interest empty).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Considerations as in Section <a class="reference internal" href="#fill-the-parameter-values">1.3</a> are valid.</p>
+</div>
+<ul class="simple">
+<li>As <em>Polarization</em> type:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>vv
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values are: <em>vv</em>, <em>vh</em>, <em>hv</em>, <em>hh</em>. The user shall select the correct polarization according to the selected SLC input data. Default value is <em>vv</em>, being the default S1 polarization for data acquired over land.</p>
+</div>
+<ul class="simple">
+<li>As <em>Processing Mode</em>, select:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>IFG
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values: <em>MTA</em> (Multi-Temporal Analysis); <em>IFG</em> (Interferogram Generation). Default value is <em>MTA</em>. For <em>MTA</em> description see Section <a class="reference internal" href="#multi-temporal-analysis-mta-mode">1</a>.</p>
+</div>
+<ul class="simple">
+<li>As <em>DEM</em>, select:</li>
+</ul>
+<div class="highlight-sbas-parameter"><div class="highlight"><pre><span></span>srtm_1
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Possible values are: <em>srtm_1</em> (1 arcsec SRTM DEM), <em>srtm_3</em> (3 arcsec SRTM DEM). User is kindly advised to check the <a class="reference external" href="https://earthexplorer.usgs.gov">EarthExplorer</a> web site for actual data coverage.</p>
+</div>
+<ul class="simple">
+<li>Leave the <em>APS Filter Window Length</em> unchanged.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the temporal window width (in days) for the APS filter on the resulting time series. <strong>This parameter is not considered in the IFG mode</strong>.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>2.4 Run the job<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the P-SBAS DInSAR processor tab, and monitor the progress of the running Job:</li>
+<li>After about 4 hours of processing time, the job status should be as &#8220;Success&#8221;.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>2.5 Results: download and visualization<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the &#8220;Show results&#8221; button. Tutorial results are <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&amp;id=insarquake">accessible</a> here.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg5.png"><img alt="../_images/tuto_psbas_ondem_ifg5.png" src="../_images/tuto_psbas_ondem_ifg5.png" style="width: 750px;" /></a>
+</div>
+<p>To download the P-SBAS DInSAR processing results once the Job is completed just click on the <em>Download</em> button in the pop-ip window of the identified product:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_psbas_ondem_ifg6.png"><img alt="../_images/tuto_psbas_ondem_ifg6.png" src="../_images/tuto_psbas_ondem_ifg6.png" style="width: 750px;" /></a>
+</div>
+<p><strong>Conventions and assumptions</strong></p>
+<p>Results are provided in the satellite Line Of Sight (LOS). Positive values indicate that the target moves toward the satellite.
+Processing results are provided according to the <a class="reference external" href="http://epos-ip.org">EPOS-IP project</a> specifications along with the corresponding metadata.</p>
+<p><strong>Published Results</strong></p>
+<p>The IFG mode outputs are provided in <strong>geoTiff</strong> standard and consist in:</p>
+<ul class="simple">
+<li>geocoded interferograms (filtered and not filtered according to the Goldstein method);</li>
+<li>geocoded spatial coherence maps.</li>
+</ul>
+<p>The spacing of the output depends on the DEM used for the processing. Results are provided in <strong>WGS84</strong> geographic projection.</p>
+<p>File name convention is as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">DataType</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">MasterDate</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">SlaveDate</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">UniqueCode</span><span class="o">&gt;.&lt;</span><span class="n">FileExtension</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&lt;DataType&gt;</span></code> can be: <code class="docutils literal"><span class="pre">InW</span></code> (Wrapped Interferogram), <code class="docutils literal"><span class="pre">InU</span></code> (Unwrapped Interferogram) (this feature will be available in a later release of the service), <code class="docutils literal"><span class="pre">Coh</span></code> (Spatial Coherence);</li>
+<li><code class="docutils literal"><span class="pre">&lt;MasterDate&gt;</span></code> date of the Master acquisition in the format <code class="docutils literal"><span class="pre">&lt;yyyymmdd&gt;&lt;SensorCode&gt;</span></code>, where <code class="docutils literal"><span class="pre">&lt;SensorCode&gt;</span></code> is a 3-char code that identifies the sensor. For the Sentinel case the possible codes are: S1A and S1B.</li>
+<li><code class="docutils literal"><span class="pre">&lt;SlaveDate&gt;</span></code> date of the Slave acquisition in the same <code class="docutils literal"><span class="pre">&lt;MasterDate&gt;</span></code> format;</li>
+<li><code class="docutils literal"><span class="pre">&lt;UniqueCode&gt;</span></code> a unique code identifier;</li>
+<li><code class="docutils literal"><span class="pre">&lt;FileExtension&gt;</span></code> possible values are:<ul>
+<li><code class="docutils literal"><span class="pre">tif</span></code>: the actual data in geoTiff;</li>
+<li><code class="docutils literal"><span class="pre">properties</span></code>: the metadata displayed in the Geobrowser;</li>
+<li><code class="docutils literal"><span class="pre">metadata</span></code>: the full metadata list according to the EPOS specifications;</li>
+<li><code class="docutils literal"><span class="pre">png</span></code>: a quick-look raster image;</li>
+<li><code class="docutils literal"><span class="pre">pngw</span></code>: the geocoding information for the png image;</li>
+<li><code class="docutils literal"><span class="pre">kmz</span></code>: the google format overlay containing the quick-look image;</li>
+<li><code class="docutils literal"><span class="pre">legend.png</span></code>: the color bar for the png image.</li>
+</ul>
+</li>
+</ul>
+<p>Typical name samples are:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">InW_20160821S1A_20160827S1B_7M1E</span><span class="o">.</span><span class="n">tif</span>
+<span class="n">Coh_20160821S1A_20160827S1B_7M1E</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>2.6 Metadata<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Metadata are provided according to the EPOS specifications.
+See Table in Section <a class="reference internal" href="#metadata">1.6</a> for more details.</p>
+</div>
+</div>
+<div class="section" id="feedbacks">
+<h2>3 Feedbacks<a class="headerlink" href="#feedbacks" title="Permalink to this headline">¶</a></h2>
+<p>Users are  kindly invited to report any issue and problem encountered during the use of the P-SBAS service:</p>
+<ul class="simple">
+<li>For GEP on-boarded users, by issuing a ticket from their project support space on <a class="reference external" href="https://support.terradue.com">https://support.terradue.com</a></li>
+<li>For other signed-in GEP users, by sending an email to the SBAS support team <strong>sbas-help&#64;irea.cnr.it</strong></li>
+</ul>
+<p>Moreover, suggestions and comments about the GEP service delivery are warmly welcomed on <strong>geohazards-tep&#64;esa.int</strong> in order to keep the service delivery on GEP as much as possible appealing, effective and efficient.</p>
+</div>
+<div class="section" id="terms-and-conditions">
+<h2>4 Terms and Conditions<a class="headerlink" href="#terms-and-conditions" title="Permalink to this headline">¶</a></h2>
+<p><strong>IPR</strong>
+The Intellectual Property Right (IPR) of the available software, tools and services developed are with CNR-IREA, if not differently specified.</p>
+<p><strong>Use</strong>
+CNR-IREA services are available to all the GEP users according to a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a> .
+The access to CNR-IREA services is free of charge and users are not asked to pay any fee or subscription by CNR-IREA. There is the possibility that users participate to the cost of service maintenance and operation: these costs are defined case-by-case among CNR-IREA, the platform operator and ESA. No cost can be required to users for the CNR-IREA services without the approval of CNR-IREA.</p>
+<p><strong>Results</strong>
+The results (including products, maps, time series, files and everything generated by the processors) of the services are available under the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY license</a> .</p>
+<p><strong>Warranty and liability</strong>
+CNR-IREA software is a scientific software and it is provided at the best CNR-IREA knowledge according to the SAR interferometry state-of-the-art. No warranty is provided on the processors and services of CNR-IREA. CNR-IREA is not responsible for any software inaccuracies, bugs, errors and misuse.
+Generated results have a defined accuracy according to the relevant scientific publications available in literature. Result accuracy is estimated on a statistical basis. Provided results are not validated by CNR-IREA and, indeed, it is user responsibility to validate them.
+CNR-IREA is not responsible for the use, quality, accuracy and interpretation of results and products that are generated by using the processors and services provided within the platform. CNR-IREA is not responsible for the use, quality, accuracy and interpretation of third party results, products and services derived from the use of CNR-IREA’s processors and services. CNR-IREA is not responsible of possible outages of the provided services. CNR-IREA is not responsible of any kind of third party loss derived from service outage, result inaccuracies, software errors of the provided services and products.
+The maintenance, update and user support are provided by CNR-IREA free of charge and at best effort. CNR-IREA is not responsible for any consequence derived from delays on replies to user requests or support inaccuracies</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

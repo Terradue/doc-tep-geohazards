@@ -1,35 +1,58 @@
-Interferogram generation with GMTSAR
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMT5SAR for ERS and ENVISAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-GMTSAR is an open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT).
+.. image:: assets/tuto_gmtsar_icon.png
+        
+**GMT5SAR interferometric processor**
+
+GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
+
+**EO sources supported**:
+
+    - ERS-1/2 SAR
+    - Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)
+
+**Output specifications**
+
+    - amplitude of interferogram (display_amp.ps  )
+    - phase of interferogram (phase.ps)
+    - correlation of interferogram (corr.ps)
+
+-----
 
 This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.
 
-The GMTSAR processing service can also process several pairs master/slave (same master).
+The GMT5SAR processing service can also process several pairs master/slave (same master).
 
 Select the processing
 =====================
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “GMTSAR Interferometric Processor”:
+* Select the processing service GMT5SAR Interferometric Processor”:
 
-.. figure:: assets/tuto_gmtsar_1.png
+.. figure:: assets/tuto_gmtsar_v2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMTSAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+The "GMT5SAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+
+.. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 
 Fill the parameters
 ===================
 
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **BajaCaliforniaEQ**
+
 Slave product reference
 -----------------------
 
-* Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
+* Select **EO Data / Envisat** as data collection.
 
-.. figure:: assets/tuto_gmtsar_2.png
+* Type **ASA_IM__0P** in the Search Terms field (1):
+
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -39,14 +62,14 @@ Slave product reference
 - time:end field
 then click on the button **Search**:
 
-.. figure:: assets/tuto_gmtsar_3.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/tuto_gmtsar_4.png
+.. figure:: assets/tuto_gmtsar_v2_2_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -56,31 +79,38 @@ Master product reference
 
 * Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
-.. figure:: assets/tuto_gmtsar_5.png
+.. figure:: assets/tuto_gmtsar_v2_2_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/tuto_gmtsar_6.png
+.. figure:: assets/tuto_gmtsar_v2_2_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
+* Select the Snaphu threshold
+
+.. figure:: assets/tuto_gmtsar_v2_2_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+		
 Run the job
 ===========
 
 * Click on the button Run Job and see the Running Job
 
-.. figure:: assets/tuto_gmtsar_7.png
+.. figure:: assets/tuto_gmtsar_v2_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * After about 25 minutes, see the Successful Job:
 
-.. figure:: assets/tuto_gmtsar_8.png
+.. figure:: assets/tuto_gmtsar_v2_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -89,12 +119,13 @@ Run the job
 
 * See the result on map:
 
-.. figure:: assets/tuto_gmtsar_9.png
+.. figure:: assets/tuto_gmtsar_v2_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 
+More info
+=========
 
-
-	http://topex.ucsd.edu/gmtsar/
+http://topex.ucsd.edu/gmtsar/

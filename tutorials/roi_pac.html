@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Interferogram generation with ROI_PAC &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Interferogram generation with ROI_PAC &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,8 +33,6 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="StaMPS Permanent Scatterer processing" href="stamps-ps.html" />
-    <link rel="prev" title="Interferogram generation with GMTSAR" href="gmtsar.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -72,7 +70,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -90,14 +88,14 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
 </ul>
 </ul>
 </li>
@@ -129,21 +127,13 @@
             
               
                 
-  <li>
-    <a href="gmtsar.html" title="Previous Chapter: Interferogram generation with GMTSAR"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Interferogram...</span>
-    </a>
-  </li>
-  <li>
-    <a href="stamps-ps.html" title="Next Chapter: StaMPS Permanent Scatterer processing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">StaMPS Perman... &raquo;</span>
-    </a>
-  </li>
               
             
             
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -165,44 +155,17 @@
 </div>-->
 
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interferogram generation with ROI_PAC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#master-product-reference">Master product reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/roi_pac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -218,6 +181,18 @@
       
   <div class="section" id="interferogram-generation-with-roi-pac">
 <h1>Interferogram generation with ROI_PAC<a class="headerlink" href="#interferogram-generation-with-roi-pac" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_roi_pac_icon.png" src="../_images/tuto_roi_pac_icon.png" />
+<p><strong>Repeat Orbit Interferometry Package (ROI_PAC)</strong></p>
+<p>Data processing software allowing researchers in the area of topography and surface displacements studies to apply Interferometric Synthetic Aperture Radar (InSAR) methods.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Envisat ASAR Image Mode Level 0 (ASA_IM__0P)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<p>To be defined</p>
+<hr class="docutils" />
 <p>This tutorial processes a pair of Envisat ASAR data with ROI_PAC (Repeat Orbit Interferometry PACkage) <a class="footnote-reference" href="#f1" id="id1">[1]</a>, a software package jointly created by the Jet Propulsion Laboratory division of NASA and CalTech for processing SAR data to create InSAR (Interferometric synthetic aperture radar) images, or &#8216;interferograms&#8217;. This geodetic method uses two or more synthetic aperture radar (SAR) scenes to generate maps of surface deformation or digital elevation models, using differences in the phase of the waves returning to the radar sensor. The technique can potentially measure centimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.</p>
 <p>The tutorial uses a coseismic pair of Envisat ASAR Image Mode Level 0 for the 2010 Baja California earthquake.</p>
 <p>The 2010 Baja California earthquake (also known as 2010 Easter earthquake, 2010 Sierra El Mayor earthquake, or 2010 El Mayor – Cucapah earthquake) was an earthquake of 7.2 magnitude on the moment magnitude scale. It started 26 kilometers (16 mi) south of Guadalupe Victoria, Baja California, Mexico, at a depth of 10 km (6.2 mi).
@@ -236,6 +211,10 @@ Learn more about the event in the <a class="reference external" href="http://en.
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">slave and master can be picked up by using the following data package (alternatively to the search steps described): <strong>BajaCaliforniaEQ</strong></p>
+</div>
 <div class="section" id="master-product-reference">
 <h3>Master product reference<a class="headerlink" href="#master-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">

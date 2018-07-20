@@ -1,6 +1,22 @@
 Interferogram generation with ROI_PAC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_roi_pac_icon.png 
+        
+**Repeat Orbit Interferometry Package (ROI_PAC)**
+
+Data processing software allowing researchers in the area of topography and surface displacements studies to apply Interferometric Synthetic Aperture Radar (InSAR) methods.
+
+**EO sources supported**:
+
+    - Envisat ASAR Image Mode Level 0 (ASA_IM__0P)
+
+**Output specifications**
+
+To be defined
+
+-----
+
 This tutorial processes a pair of Envisat ASAR data with ROI_PAC (Repeat Orbit Interferometry PACkage) [#f1]_, a software package jointly created by the Jet Propulsion Laboratory division of NASA and CalTech for processing SAR data to create InSAR (Interferometric synthetic aperture radar) images, or 'interferograms'. This geodetic method uses two or more synthetic aperture radar (SAR) scenes to generate maps of surface deformation or digital elevation models, using differences in the phase of the waves returning to the radar sensor. The technique can potentially measure centimetre-scale changes in deformation over spans of days to years. It has applications for geophysical monitoring of natural hazards, for example earthquakes, volcanoes and landslides, and in structural engineering, in particular monitoring of subsidence and structural stability.
 
 The tutorial uses a coseismic pair of Envisat ASAR Image Mode Level 0 for the 2010 Baja California earthquake.
@@ -27,8 +43,10 @@ The "Repeat Orbit Interferometry Package (ROI_PAC)" panel is displayed with para
 Fill the parameters
 ===================
 
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **BajaCaliforniaEQ**
+
 Master product reference
------------------------
+------------------------
 
 * Type **ASA_IM__0P** in the Search Terms field (1) and then click on the lens icon (2):
 
@@ -55,7 +73,7 @@ then click on the button **Search**:
         :align: center
 
 Slave product reference
-------------------------
+-----------------------
 
 * Perform the same procedure described previously (`Master product reference`_), using the value **2010-03-28**. Apply this date value in both:
 - time:start field

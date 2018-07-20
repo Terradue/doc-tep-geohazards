@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>STEMP - Surface Temperature Map &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TIO - Optical time serie analysis" href="tio.html" />
+    <link rel="prev" title="StaMPS Permanent Scatterer processing" href="stamps-ps.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.1</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">STEMP - Surface Temperature Map</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li><a class="reference internal" href="#example-to-test">Example to test</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="stamps-ps.html" title="Previous Chapter: StaMPS Permanent Scatterer processing"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; StaMPS Perman...</span>
+    </a>
+  </li>
+  <li>
+    <a href="tio.html" title="Next Chapter: TIO - Optical time serie analysis"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">TIO - Optical... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/stemp.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">STEMP - Surface Temperature Map</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-to-test">Example to test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/stemp.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="stemp-surface-temperature-map">
+<h1>STEMP - Surface Temperature Map<a class="headerlink" href="#stemp-surface-temperature-map" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_stemp-s2_icon.png" src="../_images/tuto_stemp-s2_icon.png" />
+<img alt="../_images/tuto_stemp-s3_icon.png" src="../_images/tuto_stemp-s3_icon.png" />
+<img alt="../_images/tuto_stemp-l8_icon.png" src="../_images/tuto_stemp-l8_icon.png" />
+<p><strong>STEMP</strong></p>
+<p>In the context of the VOLcanoes Thermal Application for GEP (VOLTAGE) pilot INGV has setup an end-to-end processing chain (named STEMP) for the generation of surface temperature maps over volcanic areas. It generates surface temperature map in file format fitting the Researcher and Users needs from new EO missions data such as Landsat-8, Sentinel-2 and Sentinel-3.</p>
+<dl class="docutils">
+<dt><strong>EO sources supported</strong>:</dt>
+<dd><ul class="first last simple">
+<li>Sentinel-2 MSI L1C</li>
+<li>Sentinel-3 SLSTR L1</li>
+<li>Landsat-8 L1B</li>
+<li>ASTER L1T</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>surface temperature map (STEMP-S3 and STEMP-L8)</li>
+<li>hot spot map (STEMP-S2)</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>The Surface Temperature Map Process (STEMP) tool aims to produce surface temperature maps using  optical satellite data having thermal bands (Landsat 8, Sentinel 3). STEMP is also able to produce an hot spot detection map only during eruption using Sentinel 2 data.</p>
+<p>STEMP produces a GeoTIFF file as output. It contains the surface temperature maps (or the hot spot pixel  for Sentinel 2). The output name of this product is the same of the input file with the &#8220;_TEMP.tif&#8221; final code. The processing, running in automatic,  can be executed also in manual mode.</p>
+<p>Three different tools are installed on Geohazards TEP platform:</p>
+<blockquote>
+<div><ul class="simple">
+<li>STEMP-L8 for Landsat 8</li>
+<li>STEMP-S2 for Sentinel 2</li>
+<li>STEMP-S3 for Sentinel 3</li>
+</ul>
+</div></blockquote>
+<div class="section" id="select-the-processing">
+<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Login to the platform</li>
+<li>Select the processing service (STEMP-L8 or STEMP-S2 or STEMP-S3)</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_1.png"><img alt="../_images/tuto_stemp_1.png" src="../_images/tuto_stemp_1.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="fill-the-parameters">
+<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Select from &#8220;EO data&#8221; the file to process:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Landsat 8 for STEMP-L8</li>
+<li>Sentinel-2 for STEMP-S2</li>
+<li>Sentinel-3 for STEMP-S3</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_2.png"><img alt="../_images/tuto_stemp_2.png" src="../_images/tuto_stemp_2.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="2">
+<li>Select volcano area to verify if EO input data are available by using the draw a rectangle , polygon or custom WKT filter.</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_3.png"><img alt="../_images/tuto_stemp_3.png" src="../_images/tuto_stemp_3.png" style="width: 750px;" /></a>
+</div>
+<p>All EO input data are visualized, select “hide all” to hide all the data</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_4.png"><img alt="../_images/tuto_stemp_4.png" src="../_images/tuto_stemp_4.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="3">
+<li>Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the L8 data of 22th Novembere 2017. Remind: search data without clouds.</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_5.png"><img alt="../_images/tuto_stemp_5.png" src="../_images/tuto_stemp_5.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="4">
+<li>Fill the start date of the file</li>
+<li>Fill the end date of the file (start and end date must be the same)</li>
+<li>Select the volcano name</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_6.png"><img alt="../_images/tuto_stemp_6.png" src="../_images/tuto_stemp_6.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="7">
+<li>Follow the same procedure above mentioned for STEMP-S2 or STEMP-S3</li>
+</ol>
+</div>
+<div class="section" id="run-the-job">
+<h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Click on the button &#8220;Run job&#8221; and see the running job</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_7.png"><img alt="../_images/tuto_stemp_7.png" src="../_images/tuto_stemp_7.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="2">
+<li>See the Running job:</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_8.png"><img alt="../_images/tuto_stemp_8.png" src="../_images/tuto_stemp_8.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="3">
+<li>At the end of the process click on the button &#8220;Show results&#8221; and the see the result on map:</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_9.png"><img alt="../_images/tuto_stemp_9.png" src="../_images/tuto_stemp_9.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="4">
+<li>Result for STEMP-S2 is showed</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_10.png"><img alt="../_images/tuto_stemp_10.png" src="../_images/tuto_stemp_10.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="5">
+<li>Result for STEMP-S3 is showed</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_11.png"><img alt="../_images/tuto_stemp_11.png" src="../_images/tuto_stemp_11.png" style="width: 750px;" /></a>
+</div>
+<ol class="arabic simple" start="6">
+<li>Metadata are showed when click on the result map.</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_stemp_12.png"><img alt="../_images/tuto_stemp_12.png" src="../_images/tuto_stemp_12.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="example-to-test">
+<h2>Example to test<a class="headerlink" href="#example-to-test" title="Permalink to this headline">¶</a></h2>
+<p>Use  the following input for testing service and verify results with the output :</p>
+<ul>
+<li><p class="first">Select the STEMP-L8 service and use the following information:</p>
+<blockquote>
+<div><ul class="simple">
+<li>startDate: 2017-11-22</li>
+<li>endDate:  2017-11-22</li>
+<li>volcano:   Etna</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Expected result: <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_l8_dcs_stemp_l8_1_0_7%2Frun%2F29ca0494-ff85-11e7-a172-0242ac110006%2F0000022-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&amp;id=volcanmonitoring-app">LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif</a></p>
+<ul>
+<li><p class="first">Select the STEMP-S2 service and use the following information:</p>
+<blockquote>
+<div><ul class="simple">
+<li>startDate: 2017-03-26</li>
+<li>endDate:  2017-03-26</li>
+<li>volcano:   Etna</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Expected result: <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&amp;id=volcanmonitoring-app">T33SVB_20170326T094031_HOT_SPOT-etna.tif</a></p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Select the STEMP-S3 service and use the following information:</dt>
+<dd><ul class="first last">
+<li>startDate:  2017-01-26</li>
+<li>endDate:   2017-01-26</li>
+<li>volcano:    Etna</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Expected result: <a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s3_dcs_stemp_s3_1_0_3%2Frun%2Fdbaf4616-0029-11e8-8a31-0242ac110003%2F0000028-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&amp;id=volcanmonitoring-app">S3A_SL_1_RBT____20170126T091215_UTM_etna_1km_TEMPclass.tif</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

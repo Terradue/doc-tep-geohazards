@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Data &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -113,13 +113,21 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Data</a><ul>
 <li><a class="reference internal" href="#discover-data">Discover data</a></li>
+<li><a class="reference internal" href="#manage-the-search-filters">Manage the search filters</a></li>
 <li><a class="reference internal" href="#discover-contextualized-data">Discover contextualized data</a></li>
 <li><a class="reference internal" href="#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
+<li><a class="reference internal" href="#discover-data-results-from-a-processing-job">Discover data results from a processing job</a></li>
 <li><a class="reference internal" href="#select-data-in-your-basket">Select data in your basket</a></li>
 <li><a class="reference internal" href="#save-basket-as-data-package">Save basket as data package</a></li>
 <li><a class="reference internal" href="#load-an-existing-data-package">Load an existing data package</a></li>
 <li><a class="reference internal" href="#clear-the-basket">Clear the basket</a></li>
 <li><a class="reference internal" href="#use-data-in-a-process">Use data in a process</a></li>
+<li><a class="reference internal" href="#download-data">Download data</a><ul>
+<li><a class="reference internal" href="#data-gateway">Data Gateway</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#upload-dataset-on-terradue-storage">Upload dataset on Terradue storage</a></li>
+<li><a class="reference internal" href="#publish-datasets-on-terradue-catalogue">Publish datasets on Terradue catalogue</a></li>
 </ul>
 </li>
 </ul>
@@ -144,7 +152,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/data.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/data.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -175,17 +183,24 @@
 <li class="toctree-l2"><a class="reference internal" href="community.html">Communities</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#discover-data">Discover data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-the-search-filters">Manage the search filters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#discover-contextualized-data">Discover contextualized data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discover-data-results-from-a-processing-job">Discover data results from a processing job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-data-in-your-basket">Select data in your basket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#save-basket-as-data-package">Save basket as data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#load-an-existing-data-package">Load an existing data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clear-the-basket">Clear the basket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-data-in-a-process">Use data in a process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-data">Download data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-gateway">Data Gateway</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#upload-dataset-on-terradue-storage">Upload dataset on Terradue storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publish-datasets-on-terradue-catalogue">Publish datasets on Terradue catalogue</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud/index.html">Cloud Resources</a></li>
@@ -198,7 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/data.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/data.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -218,8 +233,9 @@
 <a class="reference internal image-reference" href="../_images/data.png"><img alt="../_images/data.png" src="../_images/data.png" style="width: 375.9px; height: 127.8px;" /></a>
 </div>
 <p>Discovery of data is made through the <a class="reference internal" href="platform/geobrowser.html"><span class="doc">geobrowser</span></a>.</p>
-<p>You can search for specific data by creating a query to a catalogue, look for specific events or simply see amongst the contextualized results what can be interesting for you.</p>
+<p>You can search for data from a specific collection of a catalogue or from a public or private data package, look for data related to specific events, simply see amongst the proposed contextualized results, or even search within results of a processed wps job.</p>
 <p>Put data in your basket and save it for later, or simply drag and drop data as a parameter of a process.</p>
+<p>When the OWS Context describing the data contains the adequate information, the data can be visualized on the geobrowser (e.g as an image, as a time series, ...) and a popup containing metadata about the data will be displayed.</p>
 <div class="section" id="discover-data">
 <h2>Discover data<a class="headerlink" href="#discover-data" title="Permalink to this headline">¶</a></h2>
 <p>Data discovery is made through the map. To get specific data:</p>
@@ -235,6 +251,22 @@
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">in the <em>Search Term</em> field supported wildcards are &#8216;*&#8217;, which matches any character sequence (including the empty one), and &#8216;?&#8217;, which matches any single character.</p>
+</div>
+<div class="img-border figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/geobrowser_map_data.png"><img alt="../_images/geobrowser_map_data.png" src="../_images/geobrowser_map_data.png" style="width: 554.25px; height: 260.25px;" /></a>
+<p class="caption"><span class="caption-text">Example of Sentinel 1 popup information</span></p>
+</div>
+<div class="img-border figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/geobrowser_map_data_result.png"><img alt="../_images/geobrowser_map_data_result.png" src="../_images/geobrowser_map_data_result.png" style="width: 502.5px; height: 351.0px;" /></a>
+<p class="caption"><span class="caption-text">Example of process result popup information</span></p>
+</div>
+</div>
+<div class="section" id="manage-the-search-filters">
+<h2>Manage the search filters<a class="headerlink" href="#manage-the-search-filters" title="Permalink to this headline">¶</a></h2>
+<p>Once you have performed a search, all filters used for this search are displayed on the window, grouped by type of filter (e.g time, spatial, earth observation, ...).
+You can then remove one filter, remove the whole filter group or check the selected value (go over with the mouse during few seconds).</p>
+<div class="img-border figure align-center">
+<a class="reference internal image-reference" href="../_images/geobrowser_filters.png"><img alt="../_images/geobrowser_filters.png" src="../_images/geobrowser_filters.png" style="width: 153.5px; height: 59.0px;" /></a>
 </div>
 </div>
 <div class="section" id="discover-contextualized-data">
@@ -260,6 +292,25 @@
 </ol>
 <div class="img-border figure">
 <img alt="../_images/geobrowser_data_event.png" src="../_images/geobrowser_data_event.png" />
+</div>
+</div>
+<div class="section" id="discover-data-results-from-a-processing-job">
+<h2>Discover data results from a processing job<a class="headerlink" href="#discover-data-results-from-a-processing-job" title="Permalink to this headline">¶</a></h2>
+<p>To visualize results on the map:</p>
+<ol class="arabic simple">
+<li>Access the job (see <a href="#id3"><span class="problematic" id="id4">`Access public jobs`_</span></a> or <a class="reference internal" href="sharing.html"><span class="doc">Share a job</span></a>).</li>
+<li>If a layer is detected, you can display it on the map from the <strong>Results</strong> part of the job description.</li>
+<li>Click on <strong>Show results on map</strong>.</li>
+<li>The layer is displayed on the map.</li>
+<li>A popup containing results metadata is displayed by clicking on the product.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<blockquote>
+<div>You may need to be connected to the GEP Virtual Private Network (see <a class="reference internal" href="cloud/laboratory.html#laboratory"><span class="std std-ref">Join the GEP Laboratory</span></a>), in order to download the results.</div></blockquote>
+<div class="img-border last figure align-center">
+<a class="reference internal image-reference" href="../_images/geobrowser_job_result_visualisation.png"><img alt="../_images/geobrowser_job_result_visualisation.png" src="../_images/geobrowser_job_result_visualisation.png" style="width: 543.0px; height: 634.5px;" /></a>
+</div>
 </div>
 </div>
 <div class="section" id="select-data-in-your-basket">
@@ -317,8 +368,37 @@
 <li>Select one or more entries either from the <strong>Results Table</strong> or from the <strong>Features Basket</strong>.</li>
 <li>Drag the data and drop it over the selected parameter.</li>
 <li>In case of several items, it creates one occurence of the parameter per item.</li>
-<li>Data are ready to be used in the process. Click on <a href="#id1"><span class="problematic" id="id2">**</span></a>Run process* to actually run the process.</li>
+<li>Data are ready to be used in the process. Click on <strong>Run process</strong> to actually run the process.</li>
 </ol>
+</div>
+<div class="section" id="download-data">
+<h2>Download data<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h2>
+<p>To download a data listed on the <em>Results Table</em>:</p>
+<ol class="arabic simple">
+<li>Click on the data on the list or directly on the geobrowser.</li>
+<li>A popup is displayed, containing a <strong>Download</strong> button.</li>
+<li>Click on the button, if it exists several links to the data, a dropdown list is displayed.</li>
+<li>Click on one of the links. The download may start directly or you may be redirected to the server hosting the data for authorization.</li>
+</ol>
+<div class="section" id="data-gateway">
+<h3>Data Gateway<a class="headerlink" href="#data-gateway" title="Permalink to this headline">¶</a></h3>
+<p>If the resource location points to a data gateway url (usually the name contains <strong>via Data Gateway</strong>), ex: <strong>https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793</strong></p>
+<p>then the download is performed via the Data Gateway that enables many function such as caching to allow the best download performance of the data requested.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Please be aware that the Data Gateway Proxy Download may take some time to start depending of the configuration of the repository from which you perform the download. Indeed, the data gateway may be required to perform Implicit caching before delivering the data.</p>
+</div>
+</div>
+</div>
+<div class="section" id="upload-dataset-on-terradue-storage">
+<h2>Upload dataset on Terradue storage<a class="headerlink" href="#upload-dataset-on-terradue-storage" title="Permalink to this headline">¶</a></h2>
+<p>Most of thematic applications provide to the user a <strong>Store Upload</strong> button allowing him to upload local data to his private storage or to the storages shared with the community (e.g gep-community).
+For more details on how to use this functionality, see <a class="reference internal" href="../apps/mydata_app.html#dataupload"><span class="std std-ref">Data Upload</span></a>.</p>
+</div>
+<div class="section" id="publish-datasets-on-terradue-catalogue">
+<h2>Publish datasets on Terradue catalogue<a class="headerlink" href="#publish-datasets-on-terradue-catalogue" title="Permalink to this headline">¶</a></h2>
+<p>Most of thematic applications provide to the user a <strong>Data Publication</strong> WPS service allowing him to publish data from his private storage or from storages shared with the community (e.g gep-community) to the Terradue catalogue, under his private index or under an index shared with the community (e.g gep-community). For more details on how to use this functionality, see <a class="reference internal" href="../apps/mydata_app.html#datapublish"><span class="std std-ref">Data Publication</span></a>.</p>
+<p>For more details on how to use this functionality, see <a class="reference internal" href="../apps/mydata_app.html#dataupload"><span class="std std-ref">Data Upload</span></a>.</p>
 </div>
 </div>
 

@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>COIN – Coherence and Intensity change for Sentinel-1 &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="COMBI - Band Combination" href="rss_combi.html" />
+    <link rel="prev" title="ADORE DORIS" href="adore.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.1</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">COIN – Coherence and Intensity change for Sentinel-1</a><ul>
+<li><a class="reference internal" href="#the-coherence-and-intensity-change">The Coherence and Intensity change</a></li>
+<li><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
+<li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-parameters">Fill parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#product-polarisation">Product polarisation</a></li>
+<li><a class="reference internal" href="#orbit-type">Orbit type</a></li>
+<li><a class="reference internal" href="#azimuth-and-range-coherence-window-size">Azimuth and Range coherence window size</a></li>
+<li><a class="reference internal" href="#dem-type">DEM type</a></li>
+<li><a class="reference internal" href="#azimuth-and-range-multilook-factor">Azimuth and Range Multilook factor</a></li>
+<li><a class="reference internal" href="#pixel-spacing-in-meters">Pixel spacing in meters</a><ul>
+<li><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="adore.html" title="Previous Chapter: ADORE DORIS"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADORE DORIS</span>
+    </a>
+  </li>
+  <li>
+    <a href="rss_combi.html" title="Next Chapter: COMBI - Band Combination"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">COMBI - Band ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/rss_snap_s1_coin.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">COIN – Coherence and Intensity change for Sentinel-1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-coherence-and-intensity-change">The Coherence and Intensity change</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sentinel-1-interferometric-wide-swath-products">Sentinel-1 Interferometric Wide Swath Products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fill-parameters">Fill parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#product-polarisation">Product polarisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#orbit-type">Orbit type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azimuth-and-range-coherence-window-size">Azimuth and Range coherence window size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dem-type">DEM type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azimuth-and-range-multilook-factor">Azimuth and Range Multilook factor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pixel-spacing-in-meters">Pixel spacing in meters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/rss_snap_s1_coin.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="coin-coherence-and-intensity-change-for-sentinel-1">
+<h1>COIN – Coherence and Intensity change for Sentinel-1<a class="headerlink" href="#coin-coherence-and-intensity-change-for-sentinel-1" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_snap_s1_coin_icon.png" src="../_images/tuto_snap_s1_coin_icon.png" />
+<p><strong>COIN – Coherence and Intensity change for Sentinel-1</strong></p>
+<p>This service provides geocoded composites of coherence and amplitude images from a pair of Sentinel-1 TOPSAR IW data pairs. SNAP is a common architecture for all Sentinel Toolboxes, which is ideal for Earth Observation processing and analysis.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-1 TOPSAR IW SLC</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<p>The service provides 7 output products.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-1 – Coherence and Intensity RGB combination</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Coherence and Intensity RGB combination</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>RGB Composite: RED=(Coherence) ; GREEN=(Sigma0 average in dB computed over Master and Slave) ; BLUE=(null)</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:3857</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Unsigned 8</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>RGB composite</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>NO but a 8 bit GeoTIFF Product is provided</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES as 8 bit PNG file</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>coh_sigmaAvrg_IW_VV_04Jun2016_28Jun2016_Coh_Ampl.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-2 – Coherence product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Coherence product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Interferometric Coherence computed on input SLC couple</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>coherence_IW_VV_04Jun2016_28Jun2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-3 – Backscatter average product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Backscatter average product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Backscatter Intensity average in dB of input SLC couple</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>sigmaAverage_dB_IW_VV_04Jun2016_28Jun2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-4 – Backscatter difference product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Backscatter difference product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Backscatter Intensity difference in dB of input SLC couple</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>sigmaDiff_dB_IW_VV_04Jun2016_28Jun2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-5 – Sigma Master and Slave RGB combination</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Sigma Master and Slave RGB combination</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>RGB Composite: RED=(Sigma0 Slave in dB) ; GREEN=(Sigma0 Master in dB) ;BLUE=(Sigma0 Master in dB)</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:3857</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Unsigned 8</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>RGB composite</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>NO but a 8 bit GeoTIFF Product is provided</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES as 8 bit PNG file</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>sigmaSlave_dB_28Jun2016_sigmaMaster_dB_04Jun2016_IW_VV_Amp_Change.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-6 – Sigma Master product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Sigma Master product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>SAR backscatter calibrated and terrain corrected [dB] of Master image</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>sigmaMaster_dB_IW_VV_04Jun2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-7 – Sigma Slave product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Sigma Slave product</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>SAR backscatter calibrated and terrain corrected [dB] of Slave image</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native or User selection</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:4326 - WGS84</td>
+</tr>
+<tr class="row-odd"><td>Bit depth</td>
+<td>Float 32</td>
+</tr>
+<tr class="row-even"><td>Processing Level</td>
+<td>L2</td>
+</tr>
+<tr class="row-odd"><td>Physical product available</td>
+<td>YES</td>
+</tr>
+<tr class="row-even"><td>Browse product available</td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-odd"><td>Output Filename example</td>
+<td>sigmaSlave_dB_IW_VV_28Jun2016.tif</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>the &#8220;Browse GeoTIFF&#8221; product is always a GeoTIFF file with the same resolution of the physical product, with Uint8 bit depth and projection EPSG:3857.</li>
+<li>The “Browse PNG” product is always a PNG file with the same resolution of the physical product, with Uint8 bit depth.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<p>This tutorial processes a pair of Sentinel-1 TOPSAR IW data with the COIN – Coherence and Intensity change for Sentinel-1 service.</p>
+<p>SNAP (SeNtinel Application Platform) <a class="footnote-reference" href="#f1" id="id1">[1]</a> is the common architecture for all Sentinel Toolboxes which is ideal for Earth Observation processing and analysis. It has been jointly developed by Brockmann Consult, Array Systems Computing and C-S.</p>
+<p>The coherence and intensity processing chain for Sentinel 1 TOPSAR IW images is implemented through the tools contained in the Sentinel-1 Toolbox.</p>
+<p>This tutorial is referred to the service build V1.4.3.</p>
+<div class="section" id="the-coherence-and-intensity-change">
+<h2>The Coherence and Intensity change<a class="headerlink" href="#the-coherence-and-intensity-change" title="Permalink to this headline">¶</a></h2>
+<p>The coherence between an images pair can show if the images have strong similarities, represented in a scale from 0 to 1. Areas of high coherence will appear bright (values near 1). Areas with poor coherence will be dark (values near 0). For example, vegetation and water have poor coherence and buildings have very high coherence.</p>
+<p>The intensity represents the strength of the radar response from the observed scene. Such intensity can vary dependent on changes occurred in time between the acquisitions and also on the scene physical characteristics.</p>
+<p>To better detect the intensity change this service provides, in addition to the intensity in dB of the individual images, the dB average and dB difference of the image pair.</p>
+<p>Also a couple of results combinations are provided:</p>
+<blockquote>
+<div><ul class="simple">
+<li>An RGB image with Red = Coherence, Green = Intensity average, Blue = Null. Thanks to this representation is possible to show urban centres in yellow, which have high coherence and intensity. Green can represent vegetated fields and forests. The reds and oranges represent unchanging features such as bare soil or possibly rocks.</li>
+<li>An RGB image with Red = Slave Intensity, Green = Blue = Master Intensity. Thanks to this representation is possible to clearly show inundated areas in cyan.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="sentinel-1-interferometric-wide-swath-products">
+<h2>Sentinel-1 Interferometric Wide Swath Products<a class="headerlink" href="#sentinel-1-interferometric-wide-swath-products" title="Permalink to this headline">¶</a></h2>
+<p>The Interferometric Wide (IW) swath mode is the main acquisition mode over land for Sentinel-1. It acquires data with a 250 km swath at 5 m by 20 m spatial resolution (single look). IW mode captures three sub-swaths using Terrain Observation with Progressive Scans SAR (TOPSAR). With the TOPSAR technique, in addition to steering the beam in range as in ScanSAR, the beam is also electronically steered from backward to forward in the azimuth direction for each burst, avoiding scalloping and resulting in homogeneous image quality throughout the swath. TOPSAR mode replaces the conventional ScanSAR mode, achieving the same coverage and resolution as ScanSAR, but with a nearly uniform SNR (Signal-to-Noise Ratio) and DTAR (Distributed Target Ambiguity Ratio). IW SLC products contain one image per sub-swath and one per polarisation channel, for a total of three (single polarisation) or six (dual polarisation) images in an IW product. Each sub-swath image consists of a series of bursts, where each burst has been processed as a separate SLC image. The individually focused complex burst images are included, in azimuth time order, into a single sub-swath image with black-fill demarcation in between, similar to ENVISAT ASAR Wide ScanSAR SLC products.</p>
+<p>The tutorial uses a pair of Sentinel-1 TOPSAR IW data around Rome of June 2016.</p>
+<p>The processing service code is available in the GitHub repository (<a class="reference external" href="https://github.com/geohazards-tep/dcs-rss-snap-s1-coin">https://github.com/geohazards-tep/dcs-rss-snap-s1-coin</a>).</p>
+<div class="section" id="select-the-processing">
+<h3>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
+<li>Select the processing service <strong>COIN – Coherence and Intensity change for Sentinel-1</strong>:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_1.png"><img alt="../_images/tuto_rss_snap_s1_coin_1.png" src="../_images/tuto_rss_snap_s1_coin_1.png" style="width: 750px;" /></a>
+</div>
+<p>The &#8220;COIN – Coherence and Intensity change for Sentinel-1&#8221; panel is displayed with parameters values to be filled-in.</p>
+</div>
+<div class="section" id="select-the-files-to-process">
+<h3>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h3>
+<p>This service takes as input a couple of Sentinel-1 TOPSAR-IW SLC images.
+One image is selected to be the <strong>Master</strong> one, i.e. the reference product on which the other one (the <strong>Slave</strong>) is reprojected and resampled to compute the interferometric coherence and the backscatter intensities.</p>
+<p><strong>The Master scene corresponds to the pre-event scene (older acquisitions) while the Slave scene corresponds to the crisis event scene (more recent acquisition).</strong></p>
+<p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.</p>
+<ul class="simple">
+<li>The processing service accepts as inputs <strong>only Sentinel-1 Single Look Complex (i.e. Level 1 SLC) data</strong>.</li>
+<li>The Sentinel-1 SLC pair must pertain to the same acquisition mode <strong>TOPSAR-IW</strong>.</li>
+<li>The user must select <strong>images related to the same track only</strong>.</li>
+<li>The user must select <strong>images related to the same polarization only</strong>.</li>
+<li>Spatial overlap is strictly needed between the images pair.</li>
+</ul>
+<p>For this tutorial, a pre-defined data set has been prepared to speed up data selection step.</p>
+<ul class="simple">
+<li>Browse the Data Packages looking for <em>COIN test data</em> package and click on the load button to upload it.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_2.png"><img alt="../_images/tuto_rss_snap_s1_coin_2.png" src="../_images/tuto_rss_snap_s1_coin_2.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Click on the product related to 2016-06-04, then drag and drop the selected data in the <strong>Master product reference</strong> field.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_3.png"><img alt="../_images/tuto_rss_snap_s1_coin_3.png" src="../_images/tuto_rss_snap_s1_coin_3.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Click on the product related to 2016-06-28, then drag and drop the selected data in the <strong>Slave product reference</strong> field.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_4.png"><img alt="../_images/tuto_rss_snap_s1_coin_4.png" src="../_images/tuto_rss_snap_s1_coin_4.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="fill-parameters">
+<h3>Fill parameters<a class="headerlink" href="#fill-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Scroll down the COIN configuration menu to show all the parameters.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_5.png"><img alt="../_images/tuto_rss_snap_s1_coin_5.png" src="../_images/tuto_rss_snap_s1_coin_5.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="product-polarisation">
+<h2>Product polarisation<a class="headerlink" href="#product-polarisation" title="Permalink to this headline">¶</a></h2>
+<p>This is the product polarization related to the input data pair. The Sentinel-1 acquisitions on can have different polarization types:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Vertical dual-polarization (DV data)</strong>: Vertical in trasmission phase and both Vertical and Horizontal in receiving phase (This is the most operated one).</li>
+<li><strong>Horizontal dual-polarization (DH data)</strong>: Horizontal in trasmission phase and both Horizontal and Vertical in receiving phase.</li>
+<li><strong>Vertical single-polarization (SV data)</strong>: Vertical in both trasmission and receiving phases.</li>
+<li><strong>Horizontal single-polarization (SH data)</strong>: Horizontal in both trasmission and receiving phases.</li>
+</ul>
+</div></blockquote>
+<p>COIN processes only one polarization channel between that can be selected between:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>VV</strong>: Vertical in both trasmission and receiving phases, contained in DV and SV products (default value).</li>
+<li><strong>VH</strong>: Vertical in trasmission phase and Horizontal in receiving phase, contained only in DV products.</li>
+<li><strong>HH</strong>: Horizontal in both trasmission and receiving phases, contained in DH and SH products.</li>
+<li><strong>HV</strong>: Horizontal in trasmission phase and Vertical in receiving phase, contained only in DH products.</li>
+</ul>
+</div></blockquote>
+<p><strong>For this run leave the VV default value</strong>.</p>
+</div>
+<div class="section" id="orbit-type">
+<h2>Orbit type<a class="headerlink" href="#orbit-type" title="Permalink to this headline">¶</a></h2>
+<p>The orbit state vectors provided in the metadata of a SAR product are generally not accurate and can be refined with the precise orbit files which are available days-to-weeks after the generation of the product.</p>
+<p>The orbit file provides accurate satellite position and velocity information. Based on this information, the orbit state vectors in the abstract metadata of the product are updated.
+A more accurate satellite position and velocity information ensure a better accuracy in the images terrain correction processing.</p>
+<p>For Sentinel-1 the following orbit files can be applied:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Sentinel Precise</strong> (default value). Precise orbits are produced a few weeks after acquisition.</li>
+<li><strong>Sentinel Restituted</strong>. Less accurate than Precise but available sooner than the Precise.</li>
+</ul>
+</div></blockquote>
+<p><strong>For this run leave the Sentinel Restituted (Auto Download) default value</strong>.</p>
+</div>
+<div class="section" id="azimuth-and-range-coherence-window-size">
+<h2>Azimuth and Range coherence window size<a class="headerlink" href="#azimuth-and-range-coherence-window-size" title="Permalink to this headline">¶</a></h2>
+<p>The input parameters are size of the shifting window for the coherence estimation. The window size is defined, in both azimuth and range directions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Azimuth coherence window size</strong>: leave <strong>5</strong> as the default value.</li>
+<li><strong>Range coherence window size</strong>: leave <strong>20</strong> as the default value.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="dem-type">
+<h2>DEM type<a class="headerlink" href="#dem-type" title="Permalink to this headline">¶</a></h2>
+<p>Define the DEM source for the Back-Geocoding Coregistration and Terrain Correction processing.</p>
+<p>The <strong>SRTM 3 Sec</strong> (90 m of resolution) is used.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">SRTM valid in the [-56 deg,+60 deg] range of latitudes.</p>
+</div>
+</div>
+<div class="section" id="azimuth-and-range-multilook-factor">
+<h2>Azimuth and Range Multilook factor<a class="headerlink" href="#azimuth-and-range-multilook-factor" title="Permalink to this headline">¶</a></h2>
+<p>Generally, a SAR original image appears speckled with inherent speckle noise. To reduce this inherent speckled appearance, several images are incoherently combined as if they corresponded to different looks of the same scene. This processing is generally known as multilook processing. As a result the multilooked image improves the image interpretability.</p>
+<p>The implemented multilooking technique is the spatial one, produced by space-domain averaging of a single look image.</p>
+<p>The selectable parameters are the number of azimuth and range looks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Azimuth Multilook factor</strong>: leave <strong>2</strong> as the default value.</li>
+<li><strong>Range Multilook factor</strong>: leave <strong>8</strong> as the default value.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="pixel-spacing-in-meters">
+<h2>Pixel spacing in meters<a class="headerlink" href="#pixel-spacing-in-meters" title="Permalink to this headline">¶</a></h2>
+<p>Due to topographical variations of a scene and the tilt of the satellite sensor, distances can be distorted in the SAR images. Image data not directly at the sensor Nadir location will have some distortion. Terrain corrections are intended to compensate for these distortions so that the geometric representation of the image will be as close as possible to the real world.
+Terrain Correction allows geometric overlays of data from different sensors and/or geometries.</p>
+<p>The user can select the pixel spacing in meters of the terrain corrected image.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Pixel spacing in meters</strong>: leave <strong>30.0</strong> as the default value.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="run-the-job-and-results-browsing">
+<h3>Run the job and results browsing<a class="headerlink" href="#run-the-job-and-results-browsing" title="Permalink to this headline">¶</a></h3>
+<p>Click on the button <strong>Run Job</strong> and see the Running Job.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_6.png"><img alt="../_images/tuto_rss_snap_s1_coin_6.png" src="../_images/tuto_rss_snap_s1_coin_6.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_7.png"><img alt="../_images/tuto_rss_snap_s1_coin_7.png" src="../_images/tuto_rss_snap_s1_coin_7.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>After the processing end (it can take 2/3 hours), see the Successful Job:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_8.png"><img alt="../_images/tuto_rss_snap_s1_coin_8.png" src="../_images/tuto_rss_snap_s1_coin_8.png" style="width: 750px;" /></a>
+</div>
+<p>Scroll down the Job status screen, click on the button <em>Show results</em>, then check the results list on the <em>Results Table</em> in the bottom left side.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_8.1.png"><img alt="../_images/tuto_rss_snap_s1_coin_8.1.png" src="../_images/tuto_rss_snap_s1_coin_8.1.png" style="width: 750px;" /></a>
+</div>
+<p>The following outputs are listed:</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><strong>coh_sigmaAvrg_IW_VV_04Jun2016_28Jun2016_Coh_Ampl</strong>: this is the combination of the processing results constituted by:</p>
+<blockquote>
+<div><p>o       1st=Red): The interferometric <strong>coherence</strong> computed between master and slave images.
+o       2nd=Green): The dB average between backscatter intensities of master and slave products <strong>(sigmaMaster_dB+sigmaSlave_dB)/2</strong> .
+o       3rd=Blue): Null.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>coherence_IW_VV_04Jun2016_28Jun2016</strong>: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.</p>
+</li>
+<li><p class="first"><strong>sigmaAverage_dB_IW_VV_04Jun2016_28Jun2016</strong>: this is the product that contains the dB average between backscatter intensities of master and slave products (<strong>sigmaMaster_dB+sigmaSlave_dB)/2</strong>. The Browse product is shown on the map and both Physical and Browse products are available for download.</p>
+</li>
+<li><p class="first"><strong>sigmaDiff_dB_IW_VV_04Jun2016_28Jun2016</strong>: this is the GeoTIFF product that contains the dB difference between backscatter intensities of master and slave products (sigmaMaster_dB-sigmaSlave_dB). The Browse product is shown on the map and both Physical and Browse products are available for download.</p>
+</li>
+<li><p class="first"><strong>sigmaSlave_dB_28Jun2016_sigmaMaster_dB_04Jun2016_IW_VV_Ampl_Change</strong>: this is the combination of the processing results constituted by:</p>
+<blockquote>
+<div><p>o       1st=Red): The backscatter intensity of Slave product in dB (sigmaSlave_dB).
+o       2nd=Green): The backscatter intensity of Master product in dB (sigmaMaster_dB).
+o       3rd=Blue): The backscatter intensity of Master product in dB (sigmaMaster_dB).</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>sigmaMaster_dB_IW_VV_04Jun2016</strong>: this is the product that contains the dB intensity of Master product. The Browse product is shown on the map and both Physical and Browse products are available for download.</p>
+</li>
+<li><p class="first"><strong>sigmaSlave_dB_IW_VV_28Jun2016</strong>: this is the product that contains the dB intensity of Slave product. The Browse product is shown on the map and both Physical and Browse products are available for download.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>Click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_9.png"><img alt="../_images/tuto_rss_snap_s1_coin_9.png" src="../_images/tuto_rss_snap_s1_coin_9.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_10.png"><img alt="../_images/tuto_rss_snap_s1_coin_10.png" src="../_images/tuto_rss_snap_s1_coin_10.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_11.png"><img alt="../_images/tuto_rss_snap_s1_coin_11.png" src="../_images/tuto_rss_snap_s1_coin_11.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_12.png"><img alt="../_images/tuto_rss_snap_s1_coin_12.png" src="../_images/tuto_rss_snap_s1_coin_12.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_13.png"><img alt="../_images/tuto_rss_snap_s1_coin_13.png" src="../_images/tuto_rss_snap_s1_coin_13.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_14.png"><img alt="../_images/tuto_rss_snap_s1_coin_14.png" src="../_images/tuto_rss_snap_s1_coin_14.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_15.png"><img alt="../_images/tuto_rss_snap_s1_coin_15.png" src="../_images/tuto_rss_snap_s1_coin_15.png" style="width: 750px;" /></a>
+</div>
+<p>Click on the product name and then on the Download button that appears in the info tab. Depending on the output the following products can be downloaded:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Product GeoTiff</strong>: this is the physical quantity.</li>
+<li><strong>Browse Product GeoTiff</strong>: this is the GeoTiff browse product as shown on the map.</li>
+<li><strong>Browse Product PNG</strong>: this is the PNG browse product.</li>
+<li><strong>Metadata (properties)</strong>: a txt file containing all the metadata info displayed in the info tab.</li>
+<li><strong>Legend (png)</strong>: this is a PNG representing the colour-table of the displayed image.</li>
+</ul>
+</div></blockquote>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_16.png"><img alt="../_images/tuto_rss_snap_s1_coin_16.png" src="../_images/tuto_rss_snap_s1_coin_16.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_coin_17.png"><img alt="../_images/tuto_rss_snap_s1_coin_17.png" src="../_images/tuto_rss_snap_s1_coin_17.png" style="width: 750px;" /></a>
+</div>
+<p class="rubric">References</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://step.esa.int/main/toolboxes/snap">SNAP Website</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

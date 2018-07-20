@@ -8,7 +8,8 @@ The Cloud Dashboard gives to the user the possibility to create and manage Virtu
 Prerequisites
 ^^^^^^^^^^^^^
 
-- You previously registered on Terradue's Portal https://www.terradue.com/portal/signup 
+- You previously registered on Terradue's Portal https://www.terradue.com/portal/signup
+- You subscribed to a Terradue plan giving you access to the Cloud Dashboard
 - You are signed-in on Terradue's Portal https://www.terradue.com/
 
 Access the Cloud Dashboard

@@ -21,6 +21,8 @@ To create your own Developer Cloud Toolbox:
 - Type the Developer Cloud Sandbox name
 - Select the **Developer Cloud Sandbox** template
 
+.. |plus.png| image:: assets/plus.png
+
 .. figure:: assets/sandbox_create.png
 	:figclass: align-center
         :width: 600px

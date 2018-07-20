@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>G-POD SBAS InSAR Service &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>G-POD SBAS Stripmap Service &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="G-POD NEST InSAR Service" href="gpod-nest-insar.html" />
-    <link rel="prev" title="G-POD GAMMA DInSAR Service" href="gpod-gamma-dinsar.html" />
+    <link rel="next" title="MPIC-OPT: Multiple pairwise optical image correlation" href="mpic-opt.html" />
+    <link rel="prev" title="G-POD PF-ERS Service" href="gpod-pf-ers.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -111,7 +111,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">G-POD SBAS InSAR Service</a><ul>
+<li><a class="reference internal" href="#">G-POD SBAS Stripmap Service</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
 <li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
@@ -127,11 +127,11 @@
               
                 
   <li>
-    <a href="gpod-gamma-dinsar.html" title="Previous Chapter: G-POD GAMMA DInSAR Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; G-POD GAMMA D...</span>
+    <a href="gpod-pf-ers.html" title="Previous Chapter: G-POD PF-ERS Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; G-POD PF-ERS Service</span>
     </a>
   </li>
   <li>
-    <a href="gpod-nest-insar.html" title="Next Chapter: G-POD NEST InSAR Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">G-POD NEST In... &raquo;</span>
+    <a href="mpic-opt.html" title="Next Chapter: MPIC-OPT: Multiple pairwise optical image correlation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">MPIC-OPT: Mul... &raquo;</span>
     </a>
   </li>
               
@@ -140,7 +140,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/gpod-sbas-insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gpod-sbas-insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -170,33 +170,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">G-POD SBAS InSAR Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">G-POD SBAS Stripmap Service</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
 </ul>
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/gpod-sbas-insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gpod-sbas-insar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -210,8 +219,20 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="g-pod-sbas-insar-service">
-<h1>G-POD SBAS InSAR Service<a class="headerlink" href="#g-pod-sbas-insar-service" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="g-pod-sbas-stripmap-service">
+<h1>G-POD SBAS Stripmap Service<a class="headerlink" href="#g-pod-sbas-stripmap-service" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_sbas_icon.png" src="../_images/tuto_sbas_icon.png" />
+<p><strong>SBAS Stripmap (GPOD)</strong></p>
+<p>The InSAR Small BAseline Subsets (SBAS) algorithm has been developed by IREA-CNR for monitoring temporal evolution of surface deformations and to generate interferograms stacks as well. The InSAR Parallel-SBAS (P-SBAS) algorithm version has been integrated on the ESA&#8217;s Grid Processing On Demand (G-POD) to exploit the available High Performance Computing resources.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ENVISAT ASAR L0/ ERS L0 (CEOS format)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<p>See <a class="reference internal" href="#output-specifications">output specifications</a>.</p>
+<hr class="docutils" />
 <p>This tutorial describes how to submit a job for the SBAS-InSAR service to obtain a ground displacement time series from ERS and/or ENVISAT ASAR data. The tutorial is addressed to users already familiar with InSAR processing, analysis and products, and gives some hints and recommendation for the best service usage experience.</p>
 <p>The provided service performs the full SBAS-InSAR chain from RAW data (Level 0) focusing to displacement time series generation.</p>
 <p>The main user actions are the following:</p>
@@ -331,7 +352,10 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_sbas_6.png"><img alt="../_images/tuto_sbas_6.png" src="../_images/tuto_sbas_6.png" style="width: 750px;" /></a>
 </div>
-<p>You can leave all the other fields unchanged. <strong>Note that the default values work fine for almost all the ERS and ENVISAT cases.</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can leave all the other fields unchanged. <strong>Note that the default values work fine for almost all the ERS and ENVISAT cases.</strong></p>
+</div>
 <p>For sake of completeness, in the following a brief description of each parameter is provided:</p>
 <ul class="simple">
 <li><strong>Max Perpendicular Baseline</strong> is the maximum allowed perpendicular baseline between Master and Slave of each exploited InSAR pair;</li>
@@ -361,7 +385,7 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_sbas_8.png"><img alt="../_images/tuto_sbas_8.png" src="../_images/tuto_sbas_8.png" style="width: 750px;" /></a>
 </div>
-<p><strong>InSAR results available in the Web Portal after processing</strong></p>
+<p id="output-specifications"><strong>InSAR results available in the Web Portal after processing</strong></p>
 <p>The result that the user will find on web portal are strongly depending on the selected <strong>Processing Mode.</strong></p>
 <p><strong>Conventions and assumptions</strong></p>
 <p>Results are provided in the satellite Line Of Sight. Positive values indicate that the target moves toward the satellite.

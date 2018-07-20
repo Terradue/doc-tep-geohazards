@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Geohazards thematic exploitation platform guide &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>Geohazards thematic exploitation platform guide &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -134,7 +134,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -165,7 +165,6 @@
 <li class="toctree-l2"><a class="reference internal" href="community.html">Communities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html">Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html">Visualisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reproducibility.html">Reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharing.html">Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud/index.html">Cloud Resources</a></li>
@@ -178,7 +177,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Processing tutorials</a></li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/community-guide/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/community-guide/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -205,6 +204,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="user.html">User Profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user.html#register-on-esa-eo-users-single-sign-on">Register on ESA EO Users’ Single Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user.html#sign-in">Sign-in</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user.html#edit-your-profile">Edit your profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user.html#change-your-password">Change your password</a></li>
@@ -229,28 +229,32 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="data.html#discover-data">Discover data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#manage-the-search-filters">Manage the search filters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#discover-contextualized-data">Discover contextualized data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#discover-data-related-to-a-specific-event">Discover data related to a specific event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#discover-data-results-from-a-processing-job">Discover data results from a processing job</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#select-data-in-your-basket">Select data in your basket</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#save-basket-as-data-package">Save basket as data package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#load-an-existing-data-package">Load an existing data package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#clear-the-basket">Clear the basket</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#use-data-in-a-process">Use data in a process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#download-data">Download data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#upload-dataset-on-terradue-storage">Upload dataset on Terradue storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#publish-datasets-on-terradue-catalogue">Publish datasets on Terradue catalogue</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="processing.html">Processing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#discover-existing-wps">Discover existing WPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#create-a-new-job">Create a new job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html#create-a-new-job-with-quotation-mode">Create a new job with Quotation mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html#coordinator-job">Coordinator job</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#fill-in-parameters">Fill in parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#access-my-jobs">Access my jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html#access-job-result">Access job result</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#delete-my-jobs">Delete my jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#make-my-jobs-public">Make my jobs public</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing.html#access-public-jobs">Access public jobs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="visualisation.html">Visualisation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html#access-job-result">Access job result</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualisation.html#visualize-result-on-the-map">Visualize result on the map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="processing.html#get-support-or-contact-provider">Get support or contact provider</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibility.html">Reproducibility</a><ul>
@@ -260,11 +264,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sharing.html">Sharing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-with-groups">Share with groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-a-job">Share a job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-a-processing-service">Share a Processing Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-a-data-package">Share a Data Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-a-data-search">Share a Data Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#share-with-users">Share with users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#sharing-a-wps-job">Sharing a wps job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#sharing-a-processing-service">Sharing a Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#sharing-a-data-package">Sharing a Data Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#sharing-a-data-search">Sharing a Data Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharing.html#sharing-on-the-community-blog">Sharing on the community blog</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cloud/index.html">Cloud Resources</a><ul>

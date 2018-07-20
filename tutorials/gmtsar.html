@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Interferogram generation with GMTSAR &#8212; Geohazards Thematic Exploitation Platform 1.0 documentation</title>
+    <title>GMT5SAR for ERS and ENVISAT &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0',
+        VERSION:     '2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interferogram generation with ROI_PAC" href="roi_pac.html" />
-    <link rel="prev" title="Interferogram generation with ADORE DORIS" href="adore.html" />
+    <link rel="next" title="GMT5SAR for Sentinel-1" href="gmtsar_s1.html" />
+    <link rel="prev" title="FASTVEL for displacement velocity map generation" href="fastvel.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>1.0</b><b class="caret"></b>
+        <b>2.1</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -111,7 +111,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Interferogram generation with GMTSAR</a><ul>
+<li><a class="reference internal" href="#">GMT5SAR for ERS and ENVISAT</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
@@ -119,6 +119,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li><a class="reference internal" href="#more-info">More info</a></li>
 </ul>
 </li>
 </ul>
@@ -130,11 +131,11 @@
               
                 
   <li>
-    <a href="adore.html" title="Previous Chapter: Interferogram generation with ADORE DORIS"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Interferogram...</span>
+    <a href="fastvel.html" title="Previous Chapter: FASTVEL for displacement velocity map generation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; FASTVEL for d...</span>
     </a>
   </li>
   <li>
-    <a href="roi_pac.html" title="Next Chapter: Interferogram generation with ROI_PAC"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Interferogram... &raquo;</span>
+    <a href="gmtsar_s1.html" title="Next Chapter: GMT5SAR for Sentinel-1"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">GMT5SAR for S... &raquo;</span>
     </a>
   </li>
               
@@ -143,7 +144,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/gmtsar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gmtsar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -173,8 +174,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Interferogram generation with GMTSAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GMT5SAR for ERS and ENVISAT</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#slave-product-reference">Slave product reference</a></li>
@@ -182,27 +189,31 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-info">More info</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
 </ul>
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/master/source/tutorials/gmtsar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gmtsar.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -216,31 +227,58 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="interferogram-generation-with-gmtsar">
-<h1>Interferogram generation with GMTSAR<a class="headerlink" href="#interferogram-generation-with-gmtsar" title="Permalink to this headline">¶</a></h1>
-<p>GMTSAR is an open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT).</p>
+  <div class="section" id="gmt5sar-for-ers-and-envisat">
+<h1>GMT5SAR for ERS and ENVISAT<a class="headerlink" href="#gmt5sar-for-ers-and-envisat" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_gmtsar_icon.png" src="../_images/tuto_gmtsar_icon.png" />
+<p><strong>GMT5SAR interferometric processor</strong></p>
+<p>GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ERS-1/2 SAR</li>
+<li>Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>amplitude of interferogram (display_amp.ps  )</li>
+<li>phase of interferogram (phase.ps)</li>
+<li>correlation of interferogram (corr.ps)</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
 <p>This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.</p>
-<p>The GMTSAR processing service can also process several pairs master/slave (same master).</p>
+<p>The GMT5SAR processing service can also process several pairs master/slave (same master).</p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
-<li>Select the processing service “GMTSAR Interferometric Processor”:</li>
+<li>Select the processing service GMT5SAR Interferometric Processor”:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_1.png"><img alt="../_images/tuto_gmtsar_1.png" src="../_images/tuto_gmtsar_1.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_1.png"><img alt="../_images/tuto_gmtsar_v2_1.png" src="../_images/tuto_gmtsar_v2_1.png" style="width: 750px;" /></a>
 </div>
-<p>The &#8220;GMTSAR Interferometric Processor&#8221; panel is displayed with parameters values to be filled-in.</p>
+<p>The &#8220;GMT5SAR Interferometric Processor&#8221; panel is displayed with parameters values to be filled-in.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.</p>
+</div>
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">slave and master can be picked up by using the following data package (alternatively to the search steps described): <strong>BajaCaliforniaEQ</strong></p>
+</div>
 <div class="section" id="slave-product-reference">
 <h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1) and then click on the lens icon (2):</li>
+<li>Select <strong>EO Data / Envisat</strong> as data collection.</li>
+<li>Type <strong>ASA_IM__0P</strong> in the Search Terms field (1):</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_2.png"><img alt="../_images/tuto_gmtsar_2.png" src="../_images/tuto_gmtsar_2.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_1.png"><img alt="../_images/tuto_gmtsar_v2_2_1.png" src="../_images/tuto_gmtsar_v2_2_1.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Click on Show Other Parametersand apply the date value <strong>2010-05-02</strong> in both:</li>
@@ -251,13 +289,13 @@
 </ul>
 <p>then click on the button <strong>Search</strong>:</p>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_3.png"><img alt="../_images/tuto_gmtsar_3.png" src="../_images/tuto_gmtsar_3.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_1.png"><img alt="../_images/tuto_gmtsar_v2_2_1.png" src="../_images/tuto_gmtsar_v2_2_1.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Drag and Drop the first result in the <em>Slave product reference</em> field:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_4.png"><img alt="../_images/tuto_gmtsar_4.png" src="../_images/tuto_gmtsar_4.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_2.png"><img alt="../_images/tuto_gmtsar_v2_2_2.png" src="../_images/tuto_gmtsar_v2_2_2.png" style="width: 750px;" /></a>
 </div>
 </div>
 <div class="section" id="master-product-reference">
@@ -266,13 +304,19 @@
 <li>Perform the same procedure described previously (<a class="reference internal" href="#slave-product-reference">Slave product reference</a>), using the value <strong>2010-03-28</strong> in both the <strong>time:start</strong> field and the <strong>time:end</strong> field:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_5.png"><img alt="../_images/tuto_gmtsar_5.png" src="../_images/tuto_gmtsar_5.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_2.png"><img alt="../_images/tuto_gmtsar_v2_2_2.png" src="../_images/tuto_gmtsar_v2_2_2.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Drag and drop the first result in the <em>Master product reference</em> field:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_6.png"><img alt="../_images/tuto_gmtsar_6.png" src="../_images/tuto_gmtsar_6.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_3.png"><img alt="../_images/tuto_gmtsar_v2_2_3.png" src="../_images/tuto_gmtsar_v2_2_3.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Select the Snaphu threshold</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_2_3.png"><img alt="../_images/tuto_gmtsar_v2_2_3.png" src="../_images/tuto_gmtsar_v2_2_3.png" style="width: 750px;" /></a>
 </div>
 </div>
 </div>
@@ -282,22 +326,25 @@
 <li>Click on the button Run Job and see the Running Job</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_7.png"><img alt="../_images/tuto_gmtsar_7.png" src="../_images/tuto_gmtsar_7.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_3.png"><img alt="../_images/tuto_gmtsar_v2_3.png" src="../_images/tuto_gmtsar_v2_3.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>After about 25 minutes, see the Successful Job:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_8.png"><img alt="../_images/tuto_gmtsar_8.png" src="../_images/tuto_gmtsar_8.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_4.png"><img alt="../_images/tuto_gmtsar_v2_4.png" src="../_images/tuto_gmtsar_v2_4.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Click on the button <em>Show results on map</em>, then on the <em>phase_mask_ll.tiff</em> result on the <em>Results Table</em> in the bottom left side</li>
 <li>See the result on map:</li>
 </ul>
-<div class="align-center figure" id="id1">
-<a class="reference internal image-reference" href="../_images/tuto_gmtsar_9.png"><img alt="../_images/tuto_gmtsar_9.png" src="../_images/tuto_gmtsar_9.png" style="width: 750px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="http://topex.ucsd.edu/gmtsar/">http://topex.ucsd.edu/gmtsar/</a></span></p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_gmtsar_v2_4.png"><img alt="../_images/tuto_gmtsar_v2_4.png" src="../_images/tuto_gmtsar_v2_4.png" style="width: 750px;" /></a>
 </div>
+</div>
+<div class="section" id="more-info">
+<h2>More info<a class="headerlink" href="#more-info" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://topex.ucsd.edu/gmtsar/">http://topex.ucsd.edu/gmtsar/</a></p>
 </div>
 </div>
 

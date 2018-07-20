@@ -1,16 +1,15 @@
 Activities area
 ===============
 
-The portal gives the user a quick view of last activities performed by himself or other users that belongs to same groups.
+The portal gives the user a quick view of his activities on the platform:
+
+- how many data collection you loaded
+- how many data packages and items you loaded
+- how many wps jobs you created and how many failed or succeeded
+
 This page is accessible from the home page, by clicking on **Activities**.
-
-The user will see activities amongst:
-
-- job creation
-- data package creation
-- ... (other type of activities will be available soon)
 
 .. figure:: ../../includes/activities.png
 	:figclass: img-border img-max-width
 
-If the user is allowed to, he will be able to access the entity related to the activity by clicking on the name of this entity. A new page will be open on this entity.
+If the user is allowed to, he can also access the activities of other users or communities.

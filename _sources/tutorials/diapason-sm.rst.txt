@@ -1,12 +1,28 @@
+DIAPASON InSAR - StripMap(SM)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Stripmap mode Interferogram generation with DIAPASON
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
-maintained by ALTAMIRA INFORMATION.
+.. image:: assets/tuto_diapsm_icon.png
 
+**DIAPASON InSAR - StripMap(SM)**
 
-In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram
-from two Sentinel-1 images.
+DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by ALTAMIRA INFORMATION.This service performs an InSAR workflow on ENVISAT,ERS(RAW and SLC) or Sentinel-1 (SLC) stripmap data, producing interferograms, amplitude and coherence maps. To run this service , specify a master and a slave image of the same mission.
+
+**EO sources supported**:
+
+    - Envisat ASAR
+    - ERS (RAW and SLC)
+    - Sentinel-1 StripMap SLC
+
+**Output specifications**
+
+    - Interferometric Amplitude
+    - Interferometric Coherence
+    - Interferometric Phase
+
+-----
+
+In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram from two Sentinel-1 images.
 
 Processor configuration
 =======================
@@ -18,11 +34,11 @@ Processor configuration
         :align: center
 
 
-* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work
-on ERS pairs or on ASAR pairs as well.
+* In the "EO data" menu select "Sentinel-1". For the purpose of this tutorial Sentinel-1 images will be used ,but this processor may work on ERS pairs or on ASAR pairs as well.
 
 
 * Select an area on the map. 
+
 When processing Sentinel-1 data , it is important to select the correct data type for this processor.  For this , in the "Search Terms" field you may
 type "SM AND SLC AND NOT GRD" in order to filter Sentinel-1 Stripmap SLC scenes. If you know the track number of the images you want to process , you
 may add this track number as an additionnal filter.
@@ -45,14 +61,15 @@ When processing ERS or ASAR data , you may filter with the "Search Terms" field 
 Select the image to be used as master and Drag and Drop the entry into the "InSAR master" filed, then select the slave image into the "InSAR slave" field.
 Make sure the images are from the same track , and from the same mission (i.e process  Sentinel-1 with Sentinel-1 , ASAR with ASAR ,ERS with ERS).
 
-* Set the polarization to process from the "polarization" drow-down list
+* Set the polarization to process from the "polarization" drop-down list
+
 This option has an effect only when processing Sentinel-1 data.The selected polarization should be available on each of the two images. 
 This option is ignored when processing ASAR or ERS data.
 
 
 * Optionally you may choose to process an area of interest.
 
-You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the "Area of interest" field. This will set the current area selected on the map as area of interest for the processing. 
+You may set this option in order to process an area  smaller than the coverage of the two images by using a spatial filter from the left geo panel over the area. This will set the current area selected on the map as area of interest for the processing. 
 When left blank , the area processed is the intersection between the two input images.
 
 
