@@ -1,10 +1,10 @@
-GMT5SAR for Sentinel-1
-~~~~~~~~~~~~~~~~~~~~~~
+GMTSAR InSAR - Sentinel-1 TOPSAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon_S1.png
 	:width: 120px
 
-**GMT5SAR interferometric processor**
+**GMTSAR InSAR - Sentinel-1 TOPSAR**
 
 GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
@@ -15,9 +15,9 @@ GMT5SAR is an open source (GNU General Public License) InSAR processing system. 
 
 **Output specifications**
 
-    - xxxxxxxx
-    - xxxxxxxx
-    - xxxxxxxx
+    - amplitude of interferogram (display_amp.ps)
+    - phase of interferogram (phase.ps)
+    - correlation of interferogram (corr.ps)
 
 -----
 
@@ -44,21 +44,21 @@ The "GMT5SAR Interferometric Processor" panel is displayed with parameters value
 Fill the parameters
 ===================
 
-.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **BajaCaliforniaEQ**
+.. NOTE:: slave and master are automatically set with default values that you can use for the purpose of this tutorial (if so you can skip the 2 following sections).
 
 Slave product reference
 -----------------------
 
-* Select **EO Data / Envisat** as data collection.
+* Select **EO Data / Sentinel-1 / SLC** as data collection.
 
-* Type **ASA_IM__0P** in the Search Terms field (1):
+* Type **S1B_IW_SLC__1SDV_20170718T041442_20170718T041509_006537_00B7E8_BD0D** in the Search Terms field (1):
 
 .. figure:: assets/s1_1_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Click on Show Other Parametersand apply the date value **2010-05-02** in both:
+* Click on Show Other Parameters and apply the date value **2017-07-18** in both:
 - time:start field
 - time:end field
 then click on the button **Search**:
@@ -70,7 +70,7 @@ then click on the button **Search**:
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/s1_1_2.png
+.. figure:: assets/s1_1_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -78,16 +78,18 @@ then click on the button **Search**:
 Master product reference
 ------------------------
 
+* Type **S1A_IW_SLC__1SDV_20170724T041510_20170724T041538_017608_01D766_AB23** in the Search Terms field (1):
+
 * Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
-.. figure:: assets/s1_1_3.png
+.. figure:: assets/s1_1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/s1_1_3.png
+.. figure:: assets/s1_1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -97,7 +99,7 @@ Polarization
 
 * Select the Polarization
 
-.. figure:: assets/s1_1_3.png
+.. figure:: assets/s1_1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -107,7 +109,7 @@ Snaphu threshold
 
 * Select the Snaphu threshold
 
-.. figure:: assets/s1_1_3.png
+.. figure:: assets/s1_1_2.png
 	:figclass: align-center
         :width: 750px
         :align: center

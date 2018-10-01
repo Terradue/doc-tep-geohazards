@@ -1,9 +1,9 @@
-GMT5SAR for ERS and ENVISAT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMTSAR InSAR - Stripmap
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon.png
         
-**GMT5SAR interferometric processor**
+**GMT5SAR InSAR - Stripmap**
 
 GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
@@ -57,7 +57,7 @@ Slave product reference
         :width: 750px
         :align: center
 
-* Click on Show Other Parametersand apply the date value **2010-05-02** in both:
+* Click on Show Other Parameters and apply the date value **2010-05-02** in both:
 - time:start field
 - time:end field
 then click on the button **Search**:
