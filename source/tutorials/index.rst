@@ -13,8 +13,8 @@ Contents:
    DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)<diapason-iw>
    DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
    FASTVEL for displacement velocity map generation<fastvel>
-   GMT5SAR for ERS and ENVISAT<gmtsar>
-   GMT5SAR for Sentinel-1<gmtsar_s1>
+   GMT5SAR InSAR - Stripmap<gmtsar>
+   GMT5SAR InSAR - Sentinel-1 TOPSAR<gmtsar_s1>
    G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
    G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ERS Service<gpod-pf-ers>

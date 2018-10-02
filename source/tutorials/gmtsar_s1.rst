@@ -1,10 +1,10 @@
-GMTSAR InSAR - Sentinel-1 TOPSAR
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMT5SAR InSAR - Sentinel-1 TOPSAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon_S1.png
 	:width: 120px
 
-**GMTSAR InSAR - Sentinel-1 TOPSAR**
+**GMT5SAR InSAR - Sentinel-1 TOPSAR**
 
 GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
@@ -33,14 +33,14 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service "GMTSAR InSAR - Sentinel-1 TOPSAR":
+* Select the processing service "GMT5SAR InSAR - Sentinel-1 TOPSAR":
 
 .. figure:: assets/s1_0.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMTSAR InSAR - Sentinel-1 TOPSAR" panel is displayed with parameters values to be filled-in.
+The "GMT5SAR InSAR - Sentinel-1 TOPSAR" panel is displayed with parameters values to be filled-in.
 
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 

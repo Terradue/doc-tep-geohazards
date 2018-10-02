@@ -29,14 +29,14 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service GMT5SAR Interferometric Processor”:
+* Select the processing service GMT5SAR InSAR - Stripmap”:
 
 .. figure:: assets/tuto_gmtsar_v2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMT5SAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+The "GMT5SAR InSAR - Stripmap" panel is displayed with parameters values to be filled-in.
 
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 
