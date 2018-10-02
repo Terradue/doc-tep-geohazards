@@ -15,9 +15,12 @@ GMT5SAR is an open source (GNU General Public License) InSAR processing system. 
 
 **Output specifications**
 
-    - amplitude of interferogram (display_amp.ps)
-    - phase of interferogram (phase.ps)
-    - correlation of interferogram (corr.ps)
+For each generated interferogram (one per sub-swath) the following output files are provided:
+
+    - Amplitude, phase, correlation, unwrapped phase, filtered phase, LOS displacement — image files in NetCDF format “.grd”
+    - Corresponding files after geocoding with suffix “_ll.grd”
+    - Postscript plots: “.ps”
+    - Preview images “.tiff” and “.png”
 
 -----
 
@@ -30,21 +33,19 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service GMT5SAR Interferometric Processor”:
+* Select the processing service GMTSAR InSAR - Sentinel-1 TOPSAR”:
 
 .. figure:: assets/s1_0.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMT5SAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+The "MTSAR InSAR - Sentinel-1 TOPSAR" panel is displayed with parameters values to be filled-in.
 
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 
 Fill the parameters
 ===================
-
-.. NOTE:: slave and master are automatically set with default values that you can use for the purpose of this tutorial (if so you can skip the 2 following sections).
 
 Slave product reference
 -----------------------
