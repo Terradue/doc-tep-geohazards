@@ -1,5 +1,5 @@
-GMTSAR InSAR - Stripmap
-~~~~~~~~~~~~~~~~~~~~~~~
+GMT5SAR InSAR - Stripmap
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon.png
         
@@ -29,7 +29,7 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service GMT5SAR InSAR - Stripmap”:
+* Select the processing service "GMT5SAR InSAR - Stripmap":
 
 .. figure:: assets/tuto_gmtsar_v2_1.png
 	:figclass: align-center
@@ -69,7 +69,7 @@ then click on the button **Search**:
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -79,21 +79,21 @@ Master product reference
 
 * Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Select the Snaphu threshold
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
