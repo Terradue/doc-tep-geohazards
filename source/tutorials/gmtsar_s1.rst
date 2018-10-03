@@ -10,8 +10,7 @@ GMT5SAR is an open source (GNU General Public License) InSAR processing system. 
 
 **EO sources supported**:
 
-    - Sentinel-1
-
+    - Sentinel-1 SLC
 
 **Output specifications**
 
@@ -52,22 +51,14 @@ Slave product reference
 
 * Select **EO Data / Sentinel-1 / SLC** as data collection.
 
-* Type **S1B_IW_SLC__1SDV_20170718T041442_20170718T041509_006537_00B7E8_BD0D** in the Search Terms field (1):
+* Type **S1B_IW_SLC__1SDV_20170718T041442_20170718T041509_006537_00B7E8_BD0D** in the Search Terms field:
 
 .. figure:: assets/s1_1_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Click on Show Other Parameters and apply the date value **2017-07-18** in both:
-- time:start field
-- time:end field
-then click on the button **Search**:
-
-.. figure:: assets/s1_1_1.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+* To access advanced filter functionalities, you can open the **Search form** on the top left of the map and use filters such as start/end time or specficis ones (associated to the current selected data collection)
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
@@ -80,13 +71,6 @@ Master product reference
 ------------------------
 
 * Type **S1A_IW_SLC__1SDV_20170724T041510_20170724T041538_017608_01D766_AB23** in the Search Terms field (1):
-
-* Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
-
-.. figure:: assets/s1_1_2.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
