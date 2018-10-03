@@ -132,7 +132,7 @@ Run the job
         :width: 750px
         :align: center
 
-* Click on the button *Show results on map*, then on the *phase_mask_ll.tiff* result on the *Results Table* in the bottom left side
+* Click on the button *Show results on map*
 
 * See the result on map:
 
