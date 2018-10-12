@@ -1,9 +1,9 @@
-GMT5SAR for ERS and ENVISAT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GMT5SAR InSAR - Stripmap
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_gmtsar_icon.png
         
-**GMT5SAR interferometric processor**
+**GMT5SAR InSAR - Stripmap**
 
 GMT5SAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.
 
@@ -29,14 +29,14 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service GMT5SAR Interferometric Processor”:
+* Select the processing service "GMT5SAR InSAR - Stripmap":
 
 .. figure:: assets/tuto_gmtsar_v2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-The "GMT5SAR Interferometric Processor" panel is displayed with parameters values to be filled-in.
+The "GMT5SAR InSAR - Stripmap" panel is displayed with parameters values to be filled-in.
 
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 
@@ -57,7 +57,7 @@ Slave product reference
         :width: 750px
         :align: center
 
-* Click on Show Other Parametersand apply the date value **2010-05-02** in both:
+* Click on Show Other Parameters and apply the date value **2010-05-02** in both:
 - time:start field
 - time:end field
 then click on the button **Search**:
@@ -69,7 +69,7 @@ then click on the button **Search**:
 
 * Drag and Drop the first result in the *Slave product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -79,21 +79,21 @@ Master product reference
 
 * Perform the same procedure described previously (`Slave product reference`_), using the value **2010-03-28** in both the **time:start** field and the **time:end** field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_2.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and drop the first result in the *Master product reference* field:
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Select the Snaphu threshold
 
-.. figure:: assets/tuto_gmtsar_v2_2_3.png
+.. figure:: assets/tuto_gmtsar_v2_2_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
