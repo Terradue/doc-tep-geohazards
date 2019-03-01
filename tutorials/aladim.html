@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>ALADIM: Automatic LAndslide Detection and Inventory Mapping from optical data &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    <title>ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -109,7 +109,17 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">ALADIM: Automatic LAndslide Detection and Inventory Mapping from optical data</a></li>
+<li><a class="reference internal" href="#">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a><ul>
+<li><a class="reference internal" href="#select-the-processing-service">Select the processing service</a></li>
+<li><a class="reference internal" href="#use-case-landslide-detection-and-mapping-from-s2-multispectral-data">Use case: Landslide detection and mapping from S2 multispectral data</a><ul>
+<li><a class="reference internal" href="#select-input-data">Select input data</a></li>
+<li><a class="reference internal" href="#set-the-processing-parameters">Set the processing parameters</a></li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -170,27 +180,155 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="aladim-automatic-landslide-detection-and-inventory-mapping-from-optical-data">
-<h1>ALADIM: Automatic LAndslide Detection and Inventory Mapping from optical data<a class="headerlink" href="#aladim-automatic-landslide-detection-and-inventory-mapping-from-optical-data" title="Permalink to this headline">¶</a></h1>
-<p># ALADIM: Automatic LAndslide Detection and Inventory Mapping</p>
-<img alt="tutorials/assets/tuto_aladim_icon.png" src="tutorials/assets/tuto_aladim_icon.png" />
+  <div class="section" id="aladim-s2-automatic-landslide-detection-and-inventory-mapping-from-multispectral-s2-data">
+<h1>ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data<a class="headerlink" href="#aladim-s2-automatic-landslide-detection-and-inventory-mapping-from-multispectral-s2-data" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_aladim_icon.png" src="../_images/tuto_aladim_icon.png" />
 <p><strong>ALADIM</strong></p>
-<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution Optical data (Sentinel-2 SAFE files) and Very-High Resolution Optical data (typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered to be able to use the service, thus ortho-images for Pléiades or Spot6/7 should be available. A training dataset of manually mapped landslides (by digitalization) and the extent of the region of interest (ROI) should be provided as inputs (ESRI shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in Stumpf et al. [2011](#Stumpf2011) and in Stumpf et al. [2014](#Stumpf2014).</p>
+<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-S2; Sentinel-2 SAFE files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in Stumpf et al. [2011](#Stumpf2011) and in Stumpf et al. [2014](#Stumpf2014).</p>
 <p><strong>EO sources supported</strong>:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Sentinel-2 MSI LIC (SAFE file format), retrieved from the GEP catalogue using OpenSearch queries</li>
-<li>Pleiades and Spot6/7 ortho-images, uploaded manually by the user (use of the Upload function)</li>
 </ul>
 </div></blockquote>
 <p><strong>Output specifications</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>xxx</li>
-<li>xxx</li>
-<li>xxx</li>
+<li>A shapefile (<a href="#id1"><span class="problematic" id="id2">*</span></a>.shp files) containing the landslides detected at an F2 optimal threshold.</li>
+<li>An image (geotiff file format) containing all landslides detected at an F2 optimal threshold.</li>
+<li>Two documents (<a href="#id3"><span class="problematic" id="id4">*</span></a>.pdf files) presenting the cross-validation quality control (precision-recall curves and acurracies of the parameters).</li>
 </ul>
 </div></blockquote>
+<hr class="docutils" />
+<p>This tutorial introduces to the use of the service for the detection and the mapping of landslides from HR multispectral images. To this end, we will process a couple of Sentinel-2 images acquired before and after the <a class="reference external" href="https://en.wikipedia.org/wiki/2016_Kaikoura_earthquake">Kaikoura earthquake</a> which hit the southern island of New Zealand on 14 November 2016.</p>
+<div class="section" id="select-the-processing-service">
+<h2>Select the processing service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
+<li>Go to the Geobrowser, expand the panel “Processing services” on the right hand side and select the processing service “ALADIM-S2”:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_1.png"><img alt="../_images/tuto_aladim_1.png" src="../_images/tuto_aladim_1.png" style="width: 750px;" /></a>
+</div>
+<p>This will display the service panel including several pre-defined parameters which can be adapted.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_2.png"><img alt="../_images/tuto_aladim_2.png" src="../_images/tuto_aladim_2.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="use-case-landslide-detection-and-mapping-from-s2-multispectral-data">
+<h2>Use case: Landslide detection and mapping from S2 multispectral data<a class="headerlink" href="#use-case-landslide-detection-and-mapping-from-s2-multispectral-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-input-data">
+<h3>Select input data<a class="headerlink" href="#select-input-data" title="Permalink to this headline">¶</a></h3>
+<p>The Geobrowser offers multiple ways to search Sentinel 2 dataset with spatial and temporal filters. The interested reader should refer to the <a class="reference internal" href="../community-guide/platform/geobrowser.html"><span class="doc">Geobrowser</span></a> section for a general introduction.
+For this tutorial we will show the example of a research of a pair of Sentinel 2 images which encompass the area of interest around Kaikoura. The first image was search before the Kaikoura earthquake and the second after the event at the same season.</p>
+<p>Select Sentinel-2 from the EO Data pulldown menu:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_3.png"><img alt="../_images/tuto_aladim_3.png" src="../_images/tuto_aladim_3.png" style="width: 750px;" /></a>
+</div>
+<p>Draw a polygon on the map around your area of interest and reduce the time extend thanks to the timeline at the bottom of the map:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_4.png"><img alt="../_images/tuto_aladim_4.png" src="../_images/tuto_aladim_4.png" style="width: 750px;" /></a>
+</div>
+<p>Drag and drop the images of your choice in the fields of the service panel associated with the pre-event and the post-event Sentinel-2 images:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_5.png"><img alt="../_images/tuto_aladim_5.png" src="../_images/tuto_aladim_5.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_6.png"><img alt="../_images/tuto_aladim_6.png" src="../_images/tuto_aladim_6.png" style="width: 750px;" /></a>
+</div>
+<p>Create an archive for the ensemble of your input shapefiles (training_areas.shp, training_samples.shp and aoi.shp). The framework requires a flat .tar.gz format (i.e. the contents of the archive file must not include folders).</p>
+<p>Upload the archive:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_7.png"><img alt="../_images/tuto_aladim_7.png" src="../_images/tuto_aladim_7.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_8.png"><img alt="../_images/tuto_aladim_8.png" src="../_images/tuto_aladim_8.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_9.png"><img alt="../_images/tuto_aladim_9.png" src="../_images/tuto_aladim_9.png" style="width: 750px;" /></a>
+</div>
+<p>Drop the archive in the field of the service panel named &#8220;shapes files uri&#8221;:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_10.png"><img alt="../_images/tuto_aladim_10.png" src="../_images/tuto_aladim_10.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="set-the-processing-parameters">
+<h3>Set the processing parameters<a class="headerlink" href="#set-the-processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>There is a total of 11 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each of the parameters.</p>
+<ul class="simple">
+<li><strong>ALADIM_N_STRATA:</strong> Number of spatial strata for cross validation. If set to a value &gt;1, then spatial-coverage sampling <a class="footnote-reference" href="#id11" id="id5">[4]</a> will be used to partition the <strong>training_area(s)</strong> in homogenous patches. Each patch will be used as test data during cross-validation runs to estimate the accuracy of the classification. The recommended default values is 10. If the value is set to 1 the service will attempt to use the originally provided <strong>training_area(s)</strong> for cross-validation.</li>
+<li><strong>ALADIM_IMAGE_NODATA:</strong> No data value in the provided images (0 by default). Areas with no data in any of the images will be excluded.</li>
+<li><strong>ALADIM_SEG_SCALE:</strong> The segmentation scale factor (See <a class="footnote-reference" href="#id10" id="id6">[3]</a> for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.</li>
+<li><strong>ALADIM_SEG_COLOR_WEIGHT:</strong> A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.</li>
+<li><strong>ALADIM_SEG_SHAPE_WEIGHT:</strong> A value between 0 and 1 to define the weight of compact shape during the segmentation. The default value is 0.1.</li>
+<li><strong>ALADIM_SEG_MIN_SIZE:</strong> Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.</li>
+<li><strong>ALADIM_SUN_AZIMUTH:</strong> A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically one would choose the sun azimuths during the acquisition of the pre- and post-event imagery (e.g. from the image metadata).</li>
+<li><strong>ALADIM_SUN_ELEVATION:</strong>     A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically the sun elevations during the acquisition of the pre- and post-event imagery (e.g. from the image metadata). <strong>Must have the same number of entries as ALADIM_SUN_AZIMUTH</strong></li>
+<li><strong>ALADIM_POSITIVE_THRESHOLD:</strong> A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.</li>
+<li><strong>ALADIM_GRID_CODE:</strong> Sentinel grid code (e.g. 59GQP) which is mandatory for older Sentinel-2 multi-tile SAFE files to decide which tile should be processed. Make sure a tile with this grid code is contained in the selected SAFE files.</li>
+<li><strong>ALADIM_USE_CLOUD_MASK:</strong> If set to <em>True</em> the FMASK algorithm <a class="footnote-reference" href="#id12" id="id7">[5]</a> will be used to detect clouds, snow, and water and mask them from the segmentation.</li>
+</ul>
+<p>The figure below summarizes the parameter settings for this test.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_11.png"><img alt="../_images/tuto_aladim_11.png" src="../_images/tuto_aladim_11.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="run-the-job">
+<h3>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You are good to go. Click on the button <em>Run Job</em> at the bottom of the right panel. Depending on the allocated resources the execution will require a few hours to terminate.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_12.png"><img alt="../_images/tuto_aladim_12.png" src="../_images/tuto_aladim_12.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Once the job has finished, click on the <em>Show results</em> button to get a list and a pre-visualization of the results.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pre-visualization in the <em>Geobrowser</em> is just a preview and the user is encouraged to download the results for further analysis and post-processing.</p>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_13.png"><img alt="../_images/tuto_aladim_13.png" src="../_images/tuto_aladim_13.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_aladim_14.png"><img alt="../_images/tuto_aladim_14.png" src="../_images/tuto_aladim_14.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>Stumppf, A., Kerle, N. 20110. Object-oriented mapping of landslides using Random Forests. Remote Sensing of Environment, 115(10): 2564-2577.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td>Stumpf, A., Lachiche, N., Malet, J.-P., Puissant, A., Kerle, N. 2014. Active learning in the spatial domain for remote sensing image classification. IEEE Transactions on Geoscience and Remote Sensing, 52(5): 2492-2507.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[3]</a></td><td>Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[4]</a></td><td>Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers &amp; Geosciences, 36(10): 1261-1267.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[5]</a></td><td>Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.</td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
