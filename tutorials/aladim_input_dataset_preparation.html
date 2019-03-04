@@ -33,6 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data" href="aladim-s2.html" />
+    <link rel="prev" title="ADORE DORIS" href="adore.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -88,14 +90,14 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
 </ul>
 </ul>
 </li>
@@ -112,7 +114,7 @@
 <li><a class="reference internal" href="#">ALADIM-S2 and ALADIM-VHR: Preparation of input datasets</a><ul>
 <li><a class="reference internal" href="#creation-of-the-landslide-initial-training-samples-training-samples-shp">Creation of the landslide initial training samples: training_samples.shp</a></li>
 <li><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
-<li><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest : aoi.shp</a></li>
+<li><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
 </ul>
 </li>
 </ul>
@@ -123,13 +125,21 @@
             
               
                 
+  <li>
+    <a href="adore.html" title="Previous Chapter: ADORE DORIS"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ADORE DORIS</span>
+    </a>
+  </li>
+  <li>
+    <a href="aladim-s2.html" title="Next Chapter: ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">ALADIM-S2: Au... &raquo;</span>
+    </a>
+  </li>
               
             
             
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/input_dataset_aladim_preparation.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim_input_dataset_preparation.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -151,17 +161,51 @@
 </div>-->
 
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ALADIM-S2 and ALADIM-VHR: Preparation of input datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-the-landslide-initial-training-samples-training-samples-shp">Creation of the landslide initial training samples: training_samples.shp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aladim-s2.html">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR InSAR - Stripmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR InSAR - Sentinel-1 TOPSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/input_dataset_aladim_preparation.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim_input_dataset_preparation.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -181,43 +225,46 @@
 Landslide inventories have traditionally been prepared combining the visual interpretation of aerial photographs and field work, which to date remains the most frequently followed approach.  Despite its time consuming and labor intensive nature, however, results still include a large degree of subjectivity and incur the risk of omissions due to limited site access or aerial survey campaigns only being mounted with some delay, when landslide traces are starting to disappear.
 Large events with thousands of individual landslides triggerred by large earthquakes or heavy rains illustrate the immense challenges posed for any non-automated mapping approach.
 The large fleet of existing multispectral high-resolution (S2) and very-high resolution  (Pléiades, Spot) allows to record inexpensive imagery within days or even hours after a given landslide event using automated techniques. The automated techniques are based on the application of change detection methods between the pre-event imagery and the post-event imagery. It includes the creation of a training sample, the calculation of relevant features derived from the multispectral images, and the use of machine learning models.</p>
-<p>The accuracy (or errors) of the Aladim service will mainly depend on the quality of the training data. .</p>
+<p>The performance (accuracy, errors) of the Aladim service will mostly depend on the quality of the training data.</p>
+<p><strong>All provided shapefiles must share the same CRS as the the post-event image!</strong></p>
 <div class="section" id="creation-of-the-landslide-initial-training-samples-training-samples-shp">
 <h2>Creation of the landslide initial training samples: training_samples.shp<a class="headerlink" href="#creation-of-the-landslide-initial-training-samples-training-samples-shp" title="Permalink to this headline">¶</a></h2>
-<p>The first madatory shape file is composed of the <strong>training samples</strong>.
+<p>The first mandatory shape file is composed of the <strong>training samples</strong>.
 The landslide training samples should be :</p>
 <blockquote>
 <div><ul class="simple">
 <li>Digitized (image interpretation) on the post-event imagery;</li>
-<li>Representative of the distribution of landslide sizes (ith a digitalization of small, medium and large landslide sizes);</li>
+<li>Representative of the distribution of landslide sizes (with the digitalization of small, medium and large landslide sizes);</li>
 <li>Digitized over the complete range of landscape properties (e.g. low, medium and high slope gradients; low, medium and high image reflectance values).</li>
 </ul>
 </div></blockquote>
-<p>The training samples should comprise a minimum number of landslide events (e.g. typically 5%) of the expected total number of landslide events over the study.</p>
-<p>The training samples should be recorderd in <a href="#id1"><span class="problematic" id="id2">*</span></a>.shp file format, and created out of the GEP Platform.</p>
-<p>The training samples should be presented as a polygon shapefile with one single layer. It is typically a good starting point to divide your study area with a grid and select about 10 grid cells in which all
-landslides will be mapped for training. Please assure that the training samples shapefile does not contain NULL geometries or
-other geometry problems. Name the shapefile with the training samples <strong>training_samples.shp</strong></p>
-<p>An example of training samples is presented in the figure below.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_prepare_dataset_aladim_1.png"><img alt="../_images/tuto_prepare_dataset_aladim_1.png" src="../_images/tuto_prepare_dataset_aladim_1.png" style="width: 750px;" /></a>
+<p>The training samples should comprise a minimum number of landslide events (e.g. typically 5%) of the expected total number of landslide events over the study areas.</p>
+<p>The training samples should be recorded in <a href="#id1"><span class="problematic" id="id2">*</span></a>.shp file format, and created out of the GEP Platform.
+The training samples should be presented as a polygon shapefile with one single layer. It is typically a good starting point to divide the study area with a grid and select about 10 grid cells in which all
+landslides are mapped to construct the training sample. Please assure that the training samples shapefile does not contain NULL geometries or other geometry problems.</p>
+<p>Name the shapefile like this:  <strong>training_samples.shp</strong></p>
+<p>An example of training samples is presented in the Figure below.</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_prepare_dataset_aladim_1.png" src="../_images/tuto_prepare_dataset_aladim_1.png" />
 </div>
 </div>
 <div class="section" id="creation-of-the-training-areas-training-areas-shp">
 <h2>Creation of the training areas: training_areas.shp<a class="headerlink" href="#creation-of-the-training-areas-training-areas-shp" title="Permalink to this headline">¶</a></h2>
-<p>A second shape file delineating the <strong>training areas</strong> is required to inform the service which areas have been revised during the mapping. This shapefile may contain only one polygon, if you mapped
+<p>The second mandatory shape file delineates the <strong>training areas</strong>; it is required to inform the service which areas have been revised during the mapping. This shapefile may contain only one polygon, if you mapped
 in one part of the image or several polygons for individual images patches that were revised. It is <strong>very important</strong> that the polygon(s) outline only areas that have been revised
 during the creation of the training samples since all areas that are covered by polygons in <strong>training areas</strong> but not by polygons in <strong>training samples</strong> will be considered as negative examples
-(i.e. non landslides). Name the shapefile with the training areas <strong>training_areas.shp</strong></p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_prepare_dataset_aladim_2.png"><img alt="../_images/tuto_prepare_dataset_aladim_2.png" src="../_images/tuto_prepare_dataset_aladim_2.png" style="width: 750px;" /></a>
+(i.e. non landslides).</p>
+<p>Name the shapefile like this: <strong>training_areas.shp</strong></p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_prepare_dataset_aladim_2.png" src="../_images/tuto_prepare_dataset_aladim_2.png" />
 </div>
 </div>
 <div class="section" id="creation-of-the-aoi-area-of-interest-aoi-shp">
-<h2>Creation of the AOI – Area of Interest : aoi.shp<a class="headerlink" href="#creation-of-the-aoi-area-of-interest-aoi-shp" title="Permalink to this headline">¶</a></h2>
-<p>A last (optional) shapefile to provide to the Aladim service is the <strong>area of interest</strong> file (polygon). It will allow you to crop your input images and to select only the region of interest for the processing of landslide detection and mapping. Name the shapefile with the area of interest <strong>aoi.shp</strong></p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_prepare_dataset_aladim_3.png"><img alt="../_images/tuto_prepare_dataset_aladim_3.png" src="../_images/tuto_prepare_dataset_aladim_3.png" style="width: 750px;" /></a>
+<h2>Creation of the AOI – Area of Interest: aoi.shp<a class="headerlink" href="#creation-of-the-aoi-area-of-interest-aoi-shp" title="Permalink to this headline">¶</a></h2>
+<p>The third (optional) shapefile is the <strong>area of interest</strong> file (polygon). It allows cropping the input images and to select only the region of interest for the processing.</p>
+<p>Name the shapefile like this: <strong>aoi.shp</strong></p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_prepare_dataset_aladim_3.png" src="../_images/tuto_prepare_dataset_aladim_3.png" />
 </div>
 </div>
 </div>

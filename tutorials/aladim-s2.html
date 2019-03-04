@@ -33,6 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="COIN – Coherence and Intensity change for Sentinel-1" href="rss_snap_s1_coin.html" />
+    <link rel="prev" title="ALADIM-S2 and ALADIM-VHR: Preparation of input datasets" href="aladim_input_dataset_preparation.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -88,14 +90,14 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
 </ul>
 </ul>
 </li>
@@ -128,13 +130,21 @@
             
               
                 
+  <li>
+    <a href="aladim_input_dataset_preparation.html" title="Previous Chapter: ALADIM-S2 and ALADIM-VHR: Preparation of input datasets"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ALADIM-S2 and...</span>
+    </a>
+  </li>
+  <li>
+    <a href="rss_snap_s1_coin.html" title="Next Chapter: COIN – Coherence and Intensity change for Sentinel-1"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">COIN – Cohere... &raquo;</span>
+    </a>
+  </li>
               
             
             
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim-s2.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -156,17 +166,56 @@
 </div>-->
 
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aladim_input_dataset_preparation.html">ALADIM-S2 and ALADIM-VHR: Preparation of input datasets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing-service">Select the processing service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-case-landslide-detection-and-mapping-from-s2-multispectral-data">Use case: Landslide detection and mapping from S2 multispectral data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-input-data">Select input data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-the-processing-parameters">Set the processing parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fastvel.html">FASTVEL for displacement velocity map generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR InSAR - Stripmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR InSAR - Sentinel-1 TOPSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
+</ul>
+</li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/aladim-s2.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -184,7 +233,7 @@
 <h1>ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data<a class="headerlink" href="#aladim-s2-automatic-landslide-detection-and-inventory-mapping-from-multispectral-s2-data" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_aladim_icon.png" src="../_images/tuto_aladim_icon.png" />
 <p><strong>ALADIM</strong></p>
-<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-S2; Sentinel-2 SAFE files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in Stumpf et al. [2011](#Stumpf2011) and in Stumpf et al. [2014](#Stumpf2014).</p>
+<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-S2; Sentinel-2 SAFE files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in <a class="footnote-reference" href="#id10" id="id1">[1]</a> and <a class="footnote-reference" href="#id11" id="id2">[2]</a> .</p>
 <p><strong>EO sources supported</strong>:</p>
 <blockquote>
 <div><ul class="simple">
@@ -194,9 +243,9 @@
 <p><strong>Output specifications</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>A shapefile (<a href="#id1"><span class="problematic" id="id2">*</span></a>.shp files) containing the landslides detected at an F2 optimal threshold.</li>
+<li>A shapefile (<a href="#id3"><span class="problematic" id="id4">*</span></a>.shp files) containing the landslides detected at an F2 optimal threshold.</li>
 <li>An image (geotiff file format) containing all landslides detected at an F2 optimal threshold.</li>
-<li>Two documents (<a href="#id3"><span class="problematic" id="id4">*</span></a>.pdf files) presenting the cross-validation quality control (precision-recall curves and acurracies of the parameters).</li>
+<li>Two documents (<a href="#id5"><span class="problematic" id="id6">*</span></a>.pdf files) presenting the cross-validation quality control (precision-recall curves and acurracies of the parameters).</li>
 </ul>
 </div></blockquote>
 <hr class="docutils" />
@@ -236,7 +285,8 @@ For this tutorial we will show the example of a research of a pair of Sentinel 2
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_aladim_6.png"><img alt="../_images/tuto_aladim_6.png" src="../_images/tuto_aladim_6.png" style="width: 750px;" /></a>
 </div>
-<p>Create an archive for the ensemble of your input shapefiles (training_areas.shp, training_samples.shp and aoi.shp). The framework requires a flat .tar.gz format (i.e. the contents of the archive file must not include folders).</p>
+<p>Create an archive for the ensemble of your input shapefiles (training_areas.shp, training_samples.shp and aoi.shp). The framework requires a flat .tar.gz format (i.e. the contents of the archive file must not include folders).
+A tutorial about the input dataset creation can be found here <a class="reference internal" href="aladim_input_dataset_preparation.html"><span class="doc">tutorial</span></a></p>
 <p>Upload the archive:</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_aladim_7.png"><img alt="../_images/tuto_aladim_7.png" src="../_images/tuto_aladim_7.png" style="width: 750px;" /></a>
@@ -256,9 +306,9 @@ For this tutorial we will show the example of a research of a pair of Sentinel 2
 <h3>Set the processing parameters<a class="headerlink" href="#set-the-processing-parameters" title="Permalink to this headline">¶</a></h3>
 <p>There is a total of 11 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each of the parameters.</p>
 <ul class="simple">
-<li><strong>ALADIM_N_STRATA:</strong> Number of spatial strata for cross validation. If set to a value &gt;1, then spatial-coverage sampling <a class="footnote-reference" href="#id11" id="id5">[4]</a> will be used to partition the <strong>training_area(s)</strong> in homogenous patches. Each patch will be used as test data during cross-validation runs to estimate the accuracy of the classification. The recommended default values is 10. If the value is set to 1 the service will attempt to use the originally provided <strong>training_area(s)</strong> for cross-validation.</li>
+<li><strong>ALADIM_N_STRATA:</strong> Number of spatial strata for cross validation. If set to a value &gt;1, then spatial-coverage sampling <a class="footnote-reference" href="#id13" id="id7">[4]</a> will be used to partition the <strong>training_area(s)</strong> in homogenous patches. Each patch will be used as test data during cross-validation runs to estimate the accuracy of the classification. The recommended default values is 10. If the value is set to 1 the service will attempt to use the originally provided <strong>training_area(s)</strong> for cross-validation.</li>
 <li><strong>ALADIM_IMAGE_NODATA:</strong> No data value in the provided images (0 by default). Areas with no data in any of the images will be excluded.</li>
-<li><strong>ALADIM_SEG_SCALE:</strong> The segmentation scale factor (See <a class="footnote-reference" href="#id10" id="id6">[3]</a> for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.</li>
+<li><strong>ALADIM_SEG_SCALE:</strong> The segmentation scale factor (See <a class="footnote-reference" href="#id12" id="id8">[3]</a> for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.</li>
 <li><strong>ALADIM_SEG_COLOR_WEIGHT:</strong> A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.</li>
 <li><strong>ALADIM_SEG_SHAPE_WEIGHT:</strong> A value between 0 and 1 to define the weight of compact shape during the segmentation. The default value is 0.1.</li>
 <li><strong>ALADIM_SEG_MIN_SIZE:</strong> Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.</li>
@@ -266,7 +316,7 @@ For this tutorial we will show the example of a research of a pair of Sentinel 2
 <li><strong>ALADIM_SUN_ELEVATION:</strong>     A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically the sun elevations during the acquisition of the pre- and post-event imagery (e.g. from the image metadata). <strong>Must have the same number of entries as ALADIM_SUN_AZIMUTH</strong></li>
 <li><strong>ALADIM_POSITIVE_THRESHOLD:</strong> A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.</li>
 <li><strong>ALADIM_GRID_CODE:</strong> Sentinel grid code (e.g. 59GQP) which is mandatory for older Sentinel-2 multi-tile SAFE files to decide which tile should be processed. Make sure a tile with this grid code is contained in the selected SAFE files.</li>
-<li><strong>ALADIM_USE_CLOUD_MASK:</strong> If set to <em>True</em> the FMASK algorithm <a class="footnote-reference" href="#id12" id="id7">[5]</a> will be used to detect clouds, snow, and water and mask them from the segmentation.</li>
+<li><strong>ALADIM_USE_CLOUD_MASK:</strong> If set to <em>True</em> the FMASK algorithm <a class="footnote-reference" href="#id14" id="id9">[5]</a> will be used to detect clouds, snow, and water and mask them from the segmentation.</li>
 </ul>
 <p>The figure below summarizes the parameter settings for this test.</p>
 <div class="align-center figure">
@@ -298,34 +348,34 @@ For this tutorial we will show the example of a research of a pair of Sentinel 2
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[1]</td><td>Stumppf, A., Kerle, N. 20110. Object-oriented mapping of landslides using Random Forests. Remote Sensing of Environment, 115(10): 2564-2577.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id9" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[2]</td><td>Stumpf, A., Lachiche, N., Malet, J.-P., Puissant, A., Kerle, N. 2014. Active learning in the spatial domain for remote sensing image classification. IEEE Transactions on Geoscience and Remote Sensing, 52(5): 2492-2507.</td></tr>
-</tbody>
-</table>
 <table class="docutils footnote" frame="void" id="id10" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id6">[3]</a></td><td>Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Stumppf, A., Kerle, N. 20110. Object-oriented mapping of landslides using Random Forests. Remote Sensing of Environment, 115(10): 2564-2577.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id11" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[4]</a></td><td>Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers &amp; Geosciences, 36(10): 1261-1267.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Stumpf, A., Lachiche, N., Malet, J.-P., Puissant, A., Kerle, N. 2014. Active learning in the spatial domain for remote sensing image classification. IEEE Transactions on Geoscience and Remote Sensing, 52(5): 2492-2507.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id12" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[5]</a></td><td>Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id8">[3]</a></td><td>Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[4]</a></td><td>Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers &amp; Geosciences, 36(10): 1261-1267.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[5]</a></td><td>Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.</td></tr>
 </tbody>
 </table>
 </div>
