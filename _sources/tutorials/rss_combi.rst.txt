@@ -161,3 +161,45 @@ The resulting product should be like the one shown below.
         :width: 750px
         :align: center 
 
+Example of multi-temporal SAR band combination output
+=====================================================
+
+In this section is shown an example of RGB composite obtained from a pair of Sentinel-1 SAR images (SAR Level-1 GRD product in IW mode) acquired from both S1A and S1B satellites. A proposed step by step procedure is reported below:
+
+1.      Zoom in into a specific area of interest (e.g. **[Act-569/Call-650] Flood in Russian Federation**). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near "Wolgograd"), and select a couple of Sentinel-1 acquisitions (e.g. **S1B GRD IW DP L1 50 product acquired on Mon, 09 Apr 2018 05:13:28 GMT** and **S1A GRD IW DP L1 50 product acquired on Sun, 15 Apr 2018 05:14:14 GMT**),
+2.      Insert job title "BC – Multi-temporal – Russian Federation",
+3.      Drag and Drop from the Results tab the S1B product (e.g. S1B GRD IW DP L1 50 09042018) in the "Product reference for RED" field,
+4.      From "RED channel band ID" field select S1B band 1,
+5.      Drag and Drop the most recent S1 product (e.g. S1A GRD IW DP L1 50 15042018) in the "Product reference for GREEN" field,
+6.      From "GREEN channel band ID" field select S1A band 1,
+7.      Drag and Drop again the same S1A product also in the “Product reference for BLUE” field,
+8.      From "BLUE channel band ID" field select S1A band 1,
+9.      Set as “Product reference for output resolution” again the most recent S1 product,
+10.     In the "Perform data cropping" field set true and define as "Subset Bounding Box for Cropping" the extent of area of interest,
+11.     Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.
+ 
+.. figure:: assets/tuto_combi_12.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+Example of multi-sensor and multi-temporal band combination output
+Hereinafter is described a procedure to obtain a RGB composite from the combination of two EO data products derived from two different sensors (e.g. **UK-DMC-2** and **Sentinel-1**). In order to derive an RGB composite from both Optical and SAR data, you can follow this procedure:
+
+1.      Zoom in into a specific area of interest (e.g. **[Act-573/Call-654] Flood in Sri Lanka**). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near "Moneragala"), and select a couple of images acquired from two different sensors (e.g **UK-DMC-2 SLIM-6-22 L1T product acquired on Sat, 14 Jan 2017 04:14:01 GMT** and **S1A IW GRDH 1SDV product acquired on Thu, 31 May 2018 14:49:00 GMT**),
+2.      Insert job title "BC – Multi-sensor - Sri Lanka",
+3.      Drag and Drop from the Results tab the S1A product in the "Product reference for RED" field,
+4.      From "RED channel band ID" field select S1A band 1,
+5.      Drag and Drop the UK-DMC-2 product in the "Product reference for GREEN" field,
+6.      From "GREEN channel band ID" field and select UK-DMC-2 band 2,
+7.      Drag and Drop again the same UK-DMC-2 product also in the “Product reference for BLUE” field,
+8.      From "BLUE channel band ID" field and select UK-DMC-2 band 3,
+9.      Set as "Product reference for output resolution” the S1A product,
+10.     In the "Perform data cropping" field set true and define as "Subset Bounding Box for Cropping" the extent of area of interest,
+11.     Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.
+
+.. figure:: assets/tuto_combi_13.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 

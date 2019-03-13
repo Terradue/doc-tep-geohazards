@@ -118,6 +118,7 @@
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
 <li><a class="reference internal" href="#running-the-job">Running the job</a></li>
 <li><a class="reference internal" href="#view-results">View results</a></li>
+<li><a class="reference internal" href="#example-of-multi-temporal-sar-band-combination-output">Example of multi-temporal SAR band combination output</a></li>
 </ul>
 </li>
 </ul>
@@ -183,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#view-results">View results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-multi-temporal-sar-band-combination-output">Example of multi-temporal SAR band combination output</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
@@ -360,6 +362,44 @@ The output is comprising all 3 selected bands in a single RGB product at the res
 <p>The resulting product should be like the one shown below.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_combi_11.png"><img alt="../_images/tuto_combi_11.png" src="../_images/tuto_combi_11.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="example-of-multi-temporal-sar-band-combination-output">
+<h2>Example of multi-temporal SAR band combination output<a class="headerlink" href="#example-of-multi-temporal-sar-band-combination-output" title="Permalink to this headline">¶</a></h2>
+<p>In this section is shown an example of RGB composite obtained from a pair of Sentinel-1 SAR images (SAR Level-1 GRD product in IW mode) acquired from both S1A and S1B satellites. A proposed step by step procedure is reported below:</p>
+<ol class="arabic simple">
+<li>Zoom in into a specific area of interest (e.g. <strong>[Act-569/Call-650] Flood in Russian Federation</strong>). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near &#8220;Wolgograd&#8221;), and select a couple of Sentinel-1 acquisitions (e.g. <strong>S1B GRD IW DP L1 50 product acquired on Mon, 09 Apr 2018 05:13:28 GMT</strong> and <strong>S1A GRD IW DP L1 50 product acquired on Sun, 15 Apr 2018 05:14:14 GMT</strong>),</li>
+<li>Insert job title &#8220;BC – Multi-temporal – Russian Federation&#8221;,</li>
+<li>Drag and Drop from the Results tab the S1B product (e.g. S1B GRD IW DP L1 50 09042018) in the &#8220;Product reference for RED&#8221; field,</li>
+<li>From &#8220;RED channel band ID&#8221; field select S1B band 1,</li>
+<li>Drag and Drop the most recent S1 product (e.g. S1A GRD IW DP L1 50 15042018) in the &#8220;Product reference for GREEN&#8221; field,</li>
+<li>From &#8220;GREEN channel band ID&#8221; field select S1A band 1,</li>
+<li>Drag and Drop again the same S1A product also in the “Product reference for BLUE” field,</li>
+<li>From &#8220;BLUE channel band ID&#8221; field select S1A band 1,</li>
+<li>Set as “Product reference for output resolution” again the most recent S1 product,</li>
+<li>In the &#8220;Perform data cropping&#8221; field set true and define as &#8220;Subset Bounding Box for Cropping&#8221; the extent of area of interest,</li>
+<li>Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_combi_12.png"><img alt="../_images/tuto_combi_12.png" src="../_images/tuto_combi_12.png" style="width: 750px;" /></a>
+</div>
+<p>Example of multi-sensor and multi-temporal band combination output
+Hereinafter is described a procedure to obtain a RGB composite from the combination of two EO data products derived from two different sensors (e.g. <strong>UK-DMC-2</strong> and <strong>Sentinel-1</strong>). In order to derive an RGB composite from both Optical and SAR data, you can follow this procedure:</p>
+<ol class="arabic simple">
+<li>Zoom in into a specific area of interest (e.g. <strong>[Act-573/Call-654] Flood in Sri Lanka</strong>). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near &#8220;Moneragala&#8221;), and select a couple of images acquired from two different sensors (e.g <strong>UK-DMC-2 SLIM-6-22 L1T product acquired on Sat, 14 Jan 2017 04:14:01 GMT</strong> and <strong>S1A IW GRDH 1SDV product acquired on Thu, 31 May 2018 14:49:00 GMT</strong>),</li>
+<li>Insert job title &#8220;BC – Multi-sensor - Sri Lanka&#8221;,</li>
+<li>Drag and Drop from the Results tab the S1A product in the &#8220;Product reference for RED&#8221; field,</li>
+<li>From &#8220;RED channel band ID&#8221; field select S1A band 1,</li>
+<li>Drag and Drop the UK-DMC-2 product in the &#8220;Product reference for GREEN&#8221; field,</li>
+<li>From &#8220;GREEN channel band ID&#8221; field and select UK-DMC-2 band 2,</li>
+<li>Drag and Drop again the same UK-DMC-2 product also in the “Product reference for BLUE” field,</li>
+<li>From &#8220;BLUE channel band ID&#8221; field and select UK-DMC-2 band 3,</li>
+<li>Set as &#8220;Product reference for output resolution” the S1A product,</li>
+<li>In the &#8220;Perform data cropping&#8221; field set true and define as &#8220;Subset Bounding Box for Cropping&#8221; the extent of area of interest,</li>
+<li>Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.</li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_combi_13.png"><img alt="../_images/tuto_combi_13.png" src="../_images/tuto_combi_13.png" style="width: 750px;" /></a>
 </div>
 </div>
 </div>
