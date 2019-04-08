@@ -119,6 +119,7 @@
 <li><a class="reference internal" href="#running-the-job">Running the job</a></li>
 <li><a class="reference internal" href="#view-results">View results</a></li>
 <li><a class="reference internal" href="#example-of-multi-temporal-sar-band-combination-output">Example of multi-temporal SAR band combination output</a></li>
+<li><a class="reference internal" href="#example-of-multi-sensor-and-multi-temporal-band-combination-output">Example of multi-sensor and multi-temporal band combination output</a></li>
 </ul>
 </li>
 </ul>
@@ -185,6 +186,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#view-results">View results</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-of-multi-temporal-sar-band-combination-output">Example of multi-temporal SAR band combination output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-multi-sensor-and-multi-temporal-band-combination-output">Example of multi-sensor and multi-temporal band combination output</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
@@ -231,8 +233,8 @@
 <h1>COMBI - Band Combination<a class="headerlink" href="#combi-band-combination" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_combi_icon.png" src="../_images/tuto_combi_icon.png" />
 <p><strong>Band Combination</strong></p>
-<p>This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-3, Sentinel-1.
-The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file.</p>
+<p>This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: ALOS, ALOS-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, GF2, Landsat 8, Pleiades 1A/1B, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, SPOT 6, SPOT 7, TerraSAR-X, VRSS1 and UK-DMC 2.</p>
+<p>The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file.</p>
 <p><strong>Output specifications</strong></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -383,8 +385,10 @@ The output is comprising all 3 selected bands in a single RGB product at the res
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_combi_12.png"><img alt="../_images/tuto_combi_12.png" src="../_images/tuto_combi_12.png" style="width: 750px;" /></a>
 </div>
-<p>Example of multi-sensor and multi-temporal band combination output
-Hereinafter is described a procedure to obtain a RGB composite from the combination of two EO data products derived from two different sensors (e.g. <strong>UK-DMC-2</strong> and <strong>Sentinel-1</strong>). In order to derive an RGB composite from both Optical and SAR data, you can follow this procedure:</p>
+</div>
+<div class="section" id="example-of-multi-sensor-and-multi-temporal-band-combination-output">
+<h2>Example of multi-sensor and multi-temporal band combination output<a class="headerlink" href="#example-of-multi-sensor-and-multi-temporal-band-combination-output" title="Permalink to this headline">¶</a></h2>
+<p>Hereinafter is described a procedure to obtain a RGB composite from the combination of two EO data products derived from two different sensors (e.g. <strong>UK-DMC-2</strong> and <strong>Sentinel-1</strong>). In order to derive an RGB composite from both Optical and SAR data, you can follow this procedure:</p>
 <ol class="arabic simple">
 <li>Zoom in into a specific area of interest (e.g. <strong>[Act-573/Call-654] Flood in Sri Lanka</strong>). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near &#8220;Moneragala&#8221;), and select a couple of images acquired from two different sensors (e.g <strong>UK-DMC-2 SLIM-6-22 L1T product acquired on Sat, 14 Jan 2017 04:14:01 GMT</strong> and <strong>S1A IW GRDH 1SDV product acquired on Thu, 31 May 2018 14:49:00 GMT</strong>),</li>
 <li>Insert job title &#8220;BC – Multi-sensor - Sri Lanka&#8221;,</li>
