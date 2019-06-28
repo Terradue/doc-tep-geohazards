@@ -390,7 +390,6 @@ Input SAR data selection must be carried out with particular care, since a wrong
 * The algorithm accepts as inputs **IW Sentinel-1**  **SLC (level 1) data**. RAW data cannot be processed.
 * It is very important that the user selects **images related to the same track only** which must be aquired with the same mode (the IW one).
 * The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.
-* **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
 
 For this tutorial, a pre-defined `data set`_ has been prepared to speed up the data selection step.
 
@@ -427,7 +426,7 @@ For this tutorial, a pre-defined `data set`_ has been prepared to speed up the d
 
 * Fill the parameters according to the following figure:
 
-.. figure:: assets/tuto_psbas_ondem_ifg4.png
+.. figure:: assets/tuto_psbas_ondem_ifg4.1.png
 	:figclass: align-center
         :width: 750px
         :align: center
