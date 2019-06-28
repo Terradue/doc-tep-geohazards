@@ -141,7 +141,7 @@ In particular:
   
   14.262
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input **Latitude and Longitude coordinates are on _land_ and _included_ within the selected Area of Interest** (if any, see next step). As a suggestion, urbanized areas are usually well suitable to locate the reference point. Moreover, it is in general a good practice to put the reference point in the deformation far field. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input **Latitude and Longitude coordinates are on land and included within the selected Area of Interest** (if any, see next step). As a suggestion, urbanized areas are usually well suitable to locate the reference point. Moreover, it is in general a good practice to put the reference point in the deformation far field. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
