@@ -54,7 +54,7 @@ In the following, two service runs related to the two different processing modes
 1.1 Select the processing
 -------------------------
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/
+* Sign-in on the Portal https://geohazards-tep.eu/
 
 * Access the "CNR IREA SBAS Ground Motion Services" Thematic App.
 
@@ -78,7 +78,7 @@ Input SAR data selection must be carried out with particular care, since a wrong
 
 For this tutorial, a `pre-defined data set`_ has been prepared to speed up the data selection step .
 
-.. _`pre-defined data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DNapoliS1T222017&id=insarquake
+.. _`pre-defined data set`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DNapoliS1T222017&id=cnrirea
 
 * Browse the Data Packages looking for *Napoli S1 T22 2017* package and click on the load button to upload it.
 
@@ -196,7 +196,7 @@ In particular:
 
 The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are accessible `here`_.
 
-.. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D7cc6d9bb-5ad6-48f8-bb7c-e798a9f871be%26key%3Dd6e534cb-7196-4074-b07c-390a7c6f5b30&id=insarquake
+.. _`here`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D34b00408-a1d8-45f4-865b-7ea6e5dc12ea%26key%3D3a26c404-d8ea-406a-b987-899692783814&id=cnrirea
 
 .. figure:: assets/tuto_psbas_ondem_8.png
 	:figclass: align-center
@@ -396,7 +396,7 @@ Input SAR data selection must be carried out with particular care, since a wrong
 
 For this tutorial, a pre-defined `data set`_ has been prepared to speed up the data selection step.
 
-.. _`data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DAmatriceIFGS1T22&id=insarquake
+.. _`data set`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DAmatriceIFGS1T22&id=cnrirea
 
 * Browse the Data Packages looking for *Amatrice IFG S1 T22* package and click on the load button to upload it.
 
@@ -501,7 +501,7 @@ In particular:
 
 The P-SBAS DInSAR results are available in the Geobrowser after the processing. Scroll down the right panel and push the "Show results" button. Tutorial results are `accessible`_ here.
 
-.. _`accessible`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dd08910f0-4b99-489b-b3be-d50bc5b165f3%26key%3D991d594a-a6a7-496e-b71f-8052f287fae6&id=insarquake
+.. _`accessible`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D92a525b5-88b5-499d-8ce7-e943a7307ac0%26key%3D8ab24e89-4e3b-4948-bf5d-7f4a4cdd397b&id=cnrirea
 
 .. figure:: assets/tuto_psbas_ondem_ifg5.png
 	:figclass: align-center
