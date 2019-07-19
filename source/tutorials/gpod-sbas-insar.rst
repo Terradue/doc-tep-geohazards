@@ -41,9 +41,9 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 Select the processing
 =====================
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eu/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eu/geobrowser/
 
 .. figure:: assets/tuto_sbas_0.png
 	:figclass: align-center
