@@ -10,7 +10,7 @@ A GEP laboratory and its services are secured by authenticated VPN access. The f
 
 Prerequisites
 -------------
-- You are registered on the Geohazards Exploitation Platform https://geohazards-tep.eo.esa.int/umsso
+- You are registered on the Geohazards Exploitation Platform https://geohazards-tep.eu/umsso
 - You are registered on Terradue's Portal https://www.terradue.com/portal/signup
 - You received an e-mail with subject "VPN Setup procedure | Join your Laboratory !".
 

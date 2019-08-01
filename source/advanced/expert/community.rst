@@ -6,7 +6,7 @@ Join your Community as an Expert User
 Expert role
 ```````````
 
-Ensure first you have an expert role in the community where you will develop and deploy your processor. Go to the community discovery page `https://geohazards-tep.eo.esa.int/#!communities <https://geohazards-tep.eo.esa.int/#!communities>`_.
+Ensure first you have an expert role in the community where you will develop and deploy your processor. Go to the community discovery page `https://geohazards-tep.eu/#!communities <https://geohazards-tep.eu/#!communities>`_.
 
 .. figure:: ../../includes/communities.png
 	:align: center
@@ -39,6 +39,6 @@ As an expert user, in the community applications tab, you should have see an the
 	:width: 70%
 
 
-If you dont see the application, you can access it directly in this `link <https://geohazards-tep.eo.esa.int/geobrowser/?id=testproc>`_.
+If you dont see the application, you can access it directly in this `link <https://geohazards-tep.eu/geobrowser/?id=testproc>`_.
 
 
