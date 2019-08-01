@@ -37,7 +37,7 @@ The previous URL in your web browser shall ask you for a username and API key
 Once properly entered with your credentials, you will see on or more workflows listed with their deployment status.
 Simply clicking on them you can deploy or undeploy the workflow on the cluster.
 
-Once a workflow is deployed, you are able to use it directly from the portal in the thematic application called `Test my processor <https://geohazards-tep.eo.esa.int/geobrowser/?id=testproc>`_.
+Once a workflow is deployed, you are able to use it directly from the portal in the thematic application called `Test my processor <https://geohazards-tep.eu/geobrowser/?id=testproc>`_.
 
 .. figure:: ../../includes/testproc.png
   :width: 70%
