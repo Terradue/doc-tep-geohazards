@@ -78,7 +78,7 @@ Drag and drop your images in the fields of the service panel:
       
 
 Create an archive for the ensemble of your input shapefiles (training_areas.shp, training_samples.shp and aoi.shp). The framework requires a flat .tar.gz format (i.e. the contents of the archive file must not include folders). 
-A tutorial about the input dataset creation is available here: doc:`tutorial <aladim_input_dataset_preparation>`
+A tutorial about the input dataset creation is available here: :doc:`tutorial <aladim_input_dataset_preparation>`
 
 Upload the archive:
 
