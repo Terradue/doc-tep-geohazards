@@ -128,7 +128,7 @@ Run the job
 
 * You are good to go. Click on the button *Run Job* at the bottom of the right panel. Depending on the allocated resources the execution will require a few hours to terminate.
 
-.. figure:: assets/tuto_aladim_10.png
+.. figure:: assets/tuto_aladim_vhr_10.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -137,12 +137,12 @@ Run the job
 
 .. note:: The pre-visualization in the *Geobrowser* is just a preview and the user is encouraged to download the results for further analysis and post-processing.
 
-.. figure:: assets/tuto_aladim_11.png
+.. figure:: assets/tuto_aladim_vhr_11.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-.. figure:: assets/tuto_aladim_12.png
+.. figure:: assets/tuto_aladim_vhr_12.png
 	:figclass: align-center
         :width: 750px
         :align: center
