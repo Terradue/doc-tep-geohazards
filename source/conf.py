@@ -91,7 +91,7 @@ pygments_style = 'sphinx'
 
 # Github path
 github_repo = "https://github.com/Terradue/doc-tep-geohazards"
-github_branch = "feature/v2"
+github_branch = "develop"
 
 # requirements trace
 req_include_reqs = True
