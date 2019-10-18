@@ -111,8 +111,6 @@ There is a total of 11 processing parameters that can be adjusted. When hovering
 * **ALADIM_SEG_COLOR_WEIGHT:** A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.
 * **ALADIM_SEG_SHAPE_WEIGHT:** A value between 0 and 1 to define the weight of compact shape during the segmentation. The default value is 0.1.
 * **ALADIM_SEG_MIN_SIZE:** Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.
-* **ALADIM_SUN_AZIMUTH:** A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically one would choose the sun azimuths during the acquisition of the pre- and post-event imagery (e.g. from the image metadata).
-* **ALADIM_SUN_ELEVATION:**	A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically the sun elevations during the acquisition of the pre- and post-event imagery (e.g. from the image metadata). **Must have the same number of entries as ALADIM_SUN_AZIMUTH**
 * **ALADIM_POSITIVE_THRESHOLD:** A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.
 
 The figure below summarizes the parameter settings for this test.

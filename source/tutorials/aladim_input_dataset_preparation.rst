@@ -37,8 +37,7 @@ An example of training samples is presented in the Figure below.
 
 Creation of the training areas: training_areas.shp
 ==================================================
-The second mandatory shape file delineates the **training areas**; it is required to inform the service which areas have been revised during the mapping. This shapefile may contain only one polygon, if you mapped 
-in one part of the image or several polygons for individual images patches that were revised. It is **very important** that the polygon(s) outline only areas that have been revised
+The second mandatory shape file delineates the **training areas**; it is required to inform the service which areas have been revised during the mapping. This shapefile must contain at least two polygons, corresponding to the individual images patches that were revised. It is **very important** that the polygons outline only areas that have been revised
 during the creation of the training samples since all areas that are covered by polygons in **training areas** but not by polygons in **training samples** will be considered as negative examples 
 (i.e. non landslides). 
 
