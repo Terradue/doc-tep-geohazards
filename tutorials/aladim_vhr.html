@@ -308,8 +308,6 @@ A tutorial about the input dataset creation is available here: <a class="referen
 <li><strong>ALADIM_SEG_COLOR_WEIGHT:</strong> A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.</li>
 <li><strong>ALADIM_SEG_SHAPE_WEIGHT:</strong> A value between 0 and 1 to define the weight of compact shape during the segmentation. The default value is 0.1.</li>
 <li><strong>ALADIM_SEG_MIN_SIZE:</strong> Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.</li>
-<li><strong>ALADIM_SUN_AZIMUTH:</strong> A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically one would choose the sun azimuths during the acquisition of the pre- and post-event imagery (e.g. from the image metadata).</li>
-<li><strong>ALADIM_SUN_ELEVATION:</strong>     A series of comma seperated angles which will be used for the computation of hillshade layers (based on SRTM 30). Typically the sun elevations during the acquisition of the pre- and post-event imagery (e.g. from the image metadata). <strong>Must have the same number of entries as ALADIM_SUN_AZIMUTH</strong></li>
 <li><strong>ALADIM_POSITIVE_THRESHOLD:</strong> A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.</li>
 </ul>
 <p>The figure below summarizes the parameter settings for this test.</p>

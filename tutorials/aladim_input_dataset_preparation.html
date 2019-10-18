@@ -251,8 +251,7 @@ landslides are mapped to construct the training sample. Please assure that the t
 </div>
 <div class="section" id="creation-of-the-training-areas-training-areas-shp">
 <h2>Creation of the training areas: training_areas.shp<a class="headerlink" href="#creation-of-the-training-areas-training-areas-shp" title="Permalink to this headline">¶</a></h2>
-<p>The second mandatory shape file delineates the <strong>training areas</strong>; it is required to inform the service which areas have been revised during the mapping. This shapefile may contain only one polygon, if you mapped
-in one part of the image or several polygons for individual images patches that were revised. It is <strong>very important</strong> that the polygon(s) outline only areas that have been revised
+<p>The second mandatory shape file delineates the <strong>training areas</strong>; it is required to inform the service which areas have been revised during the mapping. This shapefile must contain at least two polygons, corresponding to the individual images patches that were revised. It is <strong>very important</strong> that the polygons outline only areas that have been revised
 during the creation of the training samples since all areas that are covered by polygons in <strong>training areas</strong> but not by polygons in <strong>training samples</strong> will be considered as negative examples
 (i.e. non landslides).</p>
 <p>Name the shapefile like this: <strong>training_areas.shp</strong></p>
