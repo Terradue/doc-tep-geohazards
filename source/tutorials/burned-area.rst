@@ -69,7 +69,7 @@ Pre-event product reference
 Post-event product reference
 ----------------------------
 
-* Perform the same procedure described previously (`Master product reference`_), using the value **2019-08-30**.
+* Perform the same procedure described previously (`Pre-event product reference`_), using the value **2019-08-30**.
 Pick one of the results having the same track, then drag and drop one of the results in the *Input reference* field:
 
 .. figure:: assets/tuto_burned-area_4.png
