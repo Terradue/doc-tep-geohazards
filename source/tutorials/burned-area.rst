@@ -21,8 +21,6 @@ This service takes as input a pair (pre-event and post-event) of Sentinel-2 MSI 
 
 This tutorial will describe the processing of a pair of Sentinel-2 MSI images to generate a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions on the GEP.
 
-.. NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.
-
 Select the processing
 =====================
 
@@ -40,8 +38,8 @@ The "Sentinel-2 Burned Area Analysis" panel is displayed with parameters values 
 Fill the parameters
 ===================
 
-Master product reference
-------------------------
+Pre-event product reference
+---------------------------
 
 * Select the Sentinel-2 data collection in the EO Data button.
 * Select the area for which you want to do an anlysis, e.g Corumba in Brasil.
@@ -66,10 +64,10 @@ Master product reference
         :width: 750px
         :align: center
 
-.. NOTE:: master input can be picked up directly by using the following text filter: S2A_MSIL2A_20190815T140101_N0213_R067_T21KUU_20190815T214633
+.. NOTE:: pre-event input can be picked up directly by using the following text filter: S2A_MSIL2A_20190815T140101_N0213_R067_T21KUU_20190815T214633
 
-Slave product reference
------------------------
+Post-event product reference
+----------------------------
 
 * Perform the same procedure described previously (`Master product reference`_), using the value **2019-08-30**.
 Pick one of the results having the same track, then drag and drop one of the results in the *Input reference* field:
@@ -79,18 +77,19 @@ Pick one of the results having the same track, then drag and drop one of the res
         :width: 750px
         :align: center
 
-.. NOTE:: slave input can be picked up directly by using the following text filter: S2B_MSIL2A_20190830T140059_N0213_R067_T21KUU_20190830T180923
+.. NOTE:: post-event input can be picked up directly by using the following text filter: S2B_MSIL2A_20190830T140059_N0213_R067_T21KUU_20190830T180923
 
 Area Of Interest in WKT
 -----------------------
 
-* Click on the *Magic tool wizard* and select **AOI**. The input parameter is automatically filled with the WKT representing the area selected in (`Master product reference`_).
+* Click on the *Magic tool wizard* and select **AOI**. The input parameter is automatically filled with the WKT representing the area selected.
 
 .. figure:: assets/tuto_burned-area_5.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
+.. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*
 
 Run the job
 ===========
@@ -116,3 +115,8 @@ Results: download and visualization
         :width: 750px
         :align: center
 
+* The following files are produced:
+
+    - **Burned area analysis (2019-08-15T14:01:01.0240000Z/2019-08-30T14:00:59.0240000Z)**: Burned area analysis map
+    - **NIR/SVWI RGB composite (2019-08-15T14:01:01.0240000Z/2019-08-15T14:01:01.0240000Z)**: NIR/SVWI RGB composite of the pre-event input
+    - **NIR/SVWI RGB composite (2019-08-30T14:00:59.0240000Z/2019-08-30T14:00:59.0240000Z)**: NIR/SVWI RGB composite of the post-event input

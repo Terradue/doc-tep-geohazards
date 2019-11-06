@@ -48,7 +48,9 @@ Reference input
         :width: 750px
         :align: center
 
-* Click on the lens icon and Apply the date value **2019-08-25** in both **time:start** and **time:end** fields in the Search Panel:
+* Click on the lens icon to open the Search Panel
+* Select **SL_1_RBT___** as Product Type
+* Apply the date value **2019-08-25** in both **time:start** and **time:end** fields
 
 .. figure:: assets/tuto_active-fire-detect_2.png
 	:figclass: align-center
@@ -69,23 +71,33 @@ Area Of Interest in WKT
 
 * Use the default value **None**
 
+.. NOTE:: you can also specify manually an AOI in WKT format, or draw an area on the map using the search tool and get its value from the *Magic tool wizard*
+
 F1_BT threshold for daily acquisitions
 --------------------------------------
+
+F1_BT threshold in Kelvin degrees for daily acquisitions (descending passes)
 
 * Use the default value **325**
 
 BT difference threshold for daily acquisitions
 ----------------------------------------------
 
+BT difference threshold in Kelvin degrees for daily acquisitions (descending passes)
+
 * Use the default value **18**
 
 F1_BT threshold for night acquisitions
 --------------------------------------
 
+F1_BT threshold in Kelvin degrees for night acquisitions (ascending passes)
+
 * Use the default value **315**
 
 BT difference threshold for night acquisitions
 ----------------------------------------------
+
+BT difference threshold for night acquisitions
 
 * Use the default value **15**
 
@@ -118,3 +130,12 @@ Results: download and visualization
         :width: 750px
         :align: center
 
+* The following files are produced:
+
+    - **Active fire - product GeoTIFF**
+    - **Active fire detection bitmask**
+    - **Active fire geojson**
+    - **CCI Land Cover 2015** 
+    - **Cloud mask**
+    - **Reflectances composite**
+    - **Reflectances composite and bitmask**

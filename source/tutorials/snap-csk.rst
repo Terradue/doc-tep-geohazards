@@ -84,9 +84,9 @@ Area Of Interest
         :width: 750px
         :align: center
 
-.. NOTE:: you can use the following value **POLYGON((84.889 27.641,84.889 27.937,85.233 27.937,85.233 27.641,84.889 27.641))**
+.. NOTE:: you can use the following value **POLYGON((84.889 27.641,84.889 27.937,85.233 27.937,85.233 27.641,84.889 27.641)) or specify a different AOI in WKT format, provided it is fully contained in the Master product footprint area**
 
-Goldestein filtering FFT Size 
+Goldstein filtering FFT Size 
 -----------------------------
 
 * Use the default value **32**
@@ -125,3 +125,7 @@ Results: download and visualization
         :width: 750px
         :align: center
 
+* The following files are produced:
+
+    - **SNAP InSAR CSK - Interferometric coherence - 2015-07-03T00:10:55Z 2015-07-19T00:11:01Z**: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download
+    - **SNAP InSAR CSK - Interferometric phase - 2015-07-03T00:10:55Z 2015-07-19T00:11:01Z**: this is the product that contains the interferometric phase computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
