@@ -91,7 +91,7 @@ Goldstein filtering FFT Size
 
 * Use the default value **32**
 
-Goldestein filtering Window Size
+Goldstein filtering Window Size
 --------------------------------
 
 * Use the default value **3**
