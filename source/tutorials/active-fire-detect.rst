@@ -76,28 +76,28 @@ Area Of Interest in WKT
 F1_BT threshold for daily acquisitions
 --------------------------------------
 
-F1_BT threshold in Kelvin degrees for daily acquisitions (descending passes)
+F1_BT (Fire Band 1 Brightness Temperature) threshold in Kelvin degrees for daily acquisitions (descending passes)
 
 * Use the default value **325**
 
 BT difference threshold for daily acquisitions
 ----------------------------------------------
 
-BT difference threshold in Kelvin degrees for daily acquisitions (descending passes)
+BT (Brightness Temperature) difference threshold in Kelvin degrees for daily acquisitions (descending passes)
 
 * Use the default value **18**
 
 F1_BT threshold for night acquisitions
 --------------------------------------
 
-F1_BT threshold in Kelvin degrees for night acquisitions (ascending passes)
+F1_BT (Fire Band 1 Brightness Temperature) threshold in Kelvin degrees for night acquisitions (ascending passes)
 
 * Use the default value **315**
 
 BT difference threshold for night acquisitions
 ----------------------------------------------
 
-BT difference threshold for night acquisitions
+BT (Brightness Temperature) difference threshold for night acquisitions
 
 * Use the default value **15**
 
