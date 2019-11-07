@@ -12,7 +12,10 @@ This service is developed by CNRS-EOST (Strasbourg, France). It allows to detect
 
     - Mandatory: A couple of ortho-rectified multispectral (MS) images (typically Pléiades and Spot 6/7), including 4 bands (B, G, R and NIR) 
     - Optional: A couple of ortho-rectified panchromatic (P) images
+    
+**Input specifications**
 
+Beside the service parameters an archive folder containing the training set, the training areas (and aoi) in shapefile format is needed. See the tutorial (:doc:`tutorial <aladim_input_dataset_preparation>`) to create these inputs.
 
 **Output specifications**
 
@@ -53,7 +56,7 @@ Use case: Landslide detection and mapping from SPOT6-SPOT7 multispectral data
 Upload input data
 -----------------
  
-The input images must be uploaded by the user. The image file names must include the acquisition dates and the following terms: bgrn_before and bgrn_after (for the multispectral images pre- and post-event) and, optional, pan_before and pan_after (for the panchromatic pre- and post-images)   
+The input images must be uploaded by the user. The image file names must include the acquisition dates and times separed by the capital letter "T" (i.e. in the following format **YYYYMMDDTHHMMSS**) and the following terms: **bgrn_before** and **bgrn_after** (for the multispectral images pre- and post-event) and, optional, **pan_before** and **pan_after** (for the panchromatic pre- and post-images)   
 For this tutorial we present the example of a couple of multispectral images and a couple of panchromatic images acquired by SPOT6 and SPOT7 satellites. 
 The first image was acquired before Hurricane Matthew on 14-04-2016 and the second after the event on 04-04-2017. Ideally, images acquired at the same session should be used to obtain similar radiometric signatures.   
 
@@ -105,7 +108,6 @@ Set the processing parameters
 
 There is a total of 11 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each of the parameters.
 
-* **ALADIM_N_STRATA:** Number of spatial strata for cross validation. If set to a value >1, then spatial-coverage sampling [4]_ will be used to partition the **training_area(s)** in homogenous patches. Each patch will be used as test data during cross-validation runs to estimate the accuracy of the classification. The recommended default values is 10. If the value is set to 1 the service will attempt to use the originally provided **training_area(s)** for cross-validation.
 * **ALADIM_IMAGE_NODATA:** No data value in the provided images (0 by default). Areas with no data in any of the images will be excluded.
 * **ALADIM_SEG_SCALE:**	The segmentation scale factor (See [3]_ for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.
 * **ALADIM_SEG_COLOR_WEIGHT:** A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.

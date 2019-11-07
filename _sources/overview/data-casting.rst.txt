@@ -20,9 +20,9 @@ a data provider partner can interact very simply with the support team, in order
 This is the minimum capability offered at this stage. 
 In the future, it is planed to offer authorized Data Providers with a service for self-registration of their dataset series.
 
-To get more information:
+To ask us for more information:
 
-Contact us: geohazards-tep at esa.int
+contact at geohazards-tep.eu
 
 Indicate the resources you would like to promote on the platform,
 and the usage policies to be bound with the provided data resources.
