@@ -72,7 +72,7 @@ Pick one of the results having the same track, then drag and drop one of the res
         :width: 750px
         :align: center
 
-.. NOTE:: slave input can be picked up directly by using the following text filter: S2B_MSIL2A_20190830T140059_N0213_R067_T21KUU_20190830T180923
+.. NOTE:: slave input can be picked up directly by using the following text filter: CSKS2_SCS_B_HI_10_HH_RA_SF_20150719001054_20150719001101
 
 Area Of Interest
 ----------------
