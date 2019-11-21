@@ -36,4 +36,4 @@ Contents:
    SRTM Digital Elevation Model<srtm>
    StaMPS Permanent Scatterer<stamps-ps>
    STEMP - Surface Temperature Map<stemp>
-   TIO - Optical time serie analysis<tio>
+   .. TIO - Optical time serie analysis<tio>
