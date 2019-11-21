@@ -89,7 +89,7 @@ Area Of Interest in WKT
         :width: 750px
         :align: center
 
-.. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*
+.. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*. The WKT used for this tutorial is: POLYGON((84.889 27.641,84.889 27.937,85.233 27.937,85.233 27.641,84.889 27.641))
 
 Run the job
 ===========
