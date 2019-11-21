@@ -5,11 +5,11 @@ SNAP CSK DInSAR
 
 **SNAP CSK DInSAR**
 
-COSMO-SkyMed Differential SAR Interferometry using SNAP. This service performs an InSAR workflow on a pair (master, slave) of COSMO Sky-Med single look complex (L1A SCS) acquisitions producing interferograms and coherence maps.
+COSMO-SkyMed Differential SAR Interferometry using SNAP. This service performs an InSAR workflow on a pair (master, slave) of COSMO SkyMed single look complex (L1A SCS) acquisitions producing interferograms and coherence maps. [#f1]_
 
 **EO sources supported**
 
-    - COSMO Sky-Med L1A SCS
+    - COSMO SkyMed L1A SCS (Stripmap)
 
 **Output specifications**
 
@@ -17,9 +17,12 @@ COSMO-SkyMed Differential SAR Interferometry using SNAP. This service performs a
     - coherence map
     - reproducibility notebooks
 
+.. NOTE:: As a reference, the :
+
+
 -----
 
-This tutorial will describe the processing of a pair of COSMO Sky-Med single look complex (L1A SCS) acquisitions to generate an interferogram and a coherence map on the GEP.
+This tutorial will describe the processing of a pair of COSMO SkyMed single look complex (L1A SCS) acquisitions to generate an interferogram and a coherence map on the GEP.
 
 Select the processing
 =====================
@@ -129,3 +132,5 @@ Results: download and visualization
 
     - **SNAP InSAR CSK - Interferometric coherence - 2015-07-03T00:10:55Z 2015-07-19T00:11:01Z**: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download
     - **SNAP InSAR CSK - Interferometric phase - 2015-07-03T00:10:55Z 2015-07-19T00:11:01Z**: this is the product that contains the interferometric phase computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
+
+.. [#f1] `Official ASI documentation <https://www.asi.it/wp-content/uploads/2019/08/COSMO-SkyMed-Mission-and-Products-Description_rev3-1.pdf>`_
