@@ -23,7 +23,8 @@ The training samples should comprise a minimum number of landslide events (e.g. 
 
 The training samples should be recorded in *.shp file format, and created out of the GEP Platform. 
 The training samples should be presented as a polygon shapefile with one single layer. It is typically a good starting point to divide the study area with a grid and select about 10 grid cells in which all
-landslides are mapped to construct the training sample. Please assure that the training samples shapefile does not contain NULL geometries or other geometry problems. 
+landslides are mapped to construct the training sample. 
+**Please assure that the training samples shapefile does not contain NULL geometries or other geometry problems.** 
 
 Name the shapefile like this:  **training_samples.shp**
 
@@ -60,3 +61,18 @@ Name the shapefile like this: **aoi.shp**
     :figclass: align-center
         :width: 750px
         :align: center
+
+
+
+Creation of the archive containing the ALADIM shapefile inputs 
+==============================================================
+The shapefiles created as decribed above must be packaged in a **flat** archive in order to correspond to the expected format for ALADIM input. 
+The framework requires a flat .tar.gz, the contents of the file must not include folders
+To create a flat tar.gz you have to run the following commands (in a directory containing your shapefiles) : 
+
+tar -cvf shape.tar *
+
+gzip shape.tar
+
+The file **shape.tar.gz** that you obtain is now ready to be used as ALADIM input.
+
