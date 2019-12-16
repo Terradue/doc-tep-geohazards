@@ -236,13 +236,15 @@
 <h1>ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data<a class="headerlink" href="#aladim-s2-automatic-landslide-detection-and-inventory-mapping-from-multispectral-s2-data" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_aladim_icon.png" src="../_images/tuto_aladim_icon.png" />
 <p><strong>ALADIM</strong></p>
-<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-S2; Sentinel-2 SAFE files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in <a class="footnote-reference" href="#id10" id="id1">[1]</a> and <a class="footnote-reference" href="#id11" id="id2">[2]</a> .</p>
+<p>This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-S2; Sentinel-2 SAFE files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in <a class="footnote-reference" href="#id9" id="id1">[1]</a> and <a class="footnote-reference" href="#id10" id="id2">[2]</a> .</p>
 <p><strong>EO sources supported</strong>:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Sentinel-2 MSI LIC (SAFE file format), retrieved from the GEP catalogue using OpenSearch queries</li>
 </ul>
 </div></blockquote>
+<p><strong>Input specifications</strong></p>
+<p>Beside the service parameters an archive folder containing the training set, the training areas (and aoi) in shapefile format is needed. See the tutorial (<a class="reference internal" href="aladim_input_dataset_preparation.html"><span class="doc">tutorial</span></a>) to create these inputs.</p>
 <p><strong>Output specifications</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -309,15 +311,14 @@ A tutorial about the input dataset creation can be found here <a class="referenc
 <h3>Set the processing parameters<a class="headerlink" href="#set-the-processing-parameters" title="Permalink to this headline">¶</a></h3>
 <p>There is a total of 11 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each of the parameters.</p>
 <ul class="simple">
-<li><strong>ALADIM_N_STRATA:</strong> Number of spatial strata for cross validation. If set to a value &gt;1, then spatial-coverage sampling <a class="footnote-reference" href="#id13" id="id7">[4]</a> will be used to partition the <strong>training_area(s)</strong> in homogenous patches. Each patch will be used as test data during cross-validation runs to estimate the accuracy of the classification. The recommended default values is 10. If the value is set to 1 the service will attempt to use the originally provided <strong>training_area(s)</strong> for cross-validation.</li>
 <li><strong>ALADIM_IMAGE_NODATA:</strong> No data value in the provided images (0 by default). Areas with no data in any of the images will be excluded.</li>
-<li><strong>ALADIM_SEG_SCALE:</strong> The segmentation scale factor (See <a class="footnote-reference" href="#id12" id="id8">[3]</a> for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.</li>
+<li><strong>ALADIM_SEG_SCALE:</strong> The segmentation scale factor (See <a class="footnote-reference" href="#id11" id="id7">[3]</a> for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.</li>
 <li><strong>ALADIM_SEG_COLOR_WEIGHT:</strong> A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.</li>
 <li><strong>ALADIM_SEG_SHAPE_WEIGHT:</strong> A value between 0 and 1 to define the weight of compact shape during the segmentation. The default value is 0.1.</li>
 <li><strong>ALADIM_SEG_MIN_SIZE:</strong> Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.</li>
 <li><strong>ALADIM_POSITIVE_THRESHOLD:</strong> A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.</li>
 <li><strong>ALADIM_GRID_CODE:</strong> Sentinel grid code (e.g. 59GQP) which is mandatory for older Sentinel-2 multi-tile SAFE files to decide which tile should be processed. Make sure a tile with this grid code is contained in the selected SAFE files.</li>
-<li><strong>ALADIM_USE_CLOUD_MASK:</strong> If set to <em>True</em> the FMASK algorithm <a class="footnote-reference" href="#id14" id="id9">[5]</a> will be used to detect clouds, snow, and water and mask them from the segmentation.</li>
+<li><strong>ALADIM_USE_CLOUD_MASK:</strong> If set to <em>True</em> the FMASK algorithm <a class="footnote-reference" href="#id13" id="id8">[5]</a> will be used to detect clouds, snow, and water and mask them from the segmentation.</li>
 </ul>
 <p>The figure below summarizes the parameter settings for this test.</p>
 <div class="align-center figure">
@@ -349,34 +350,34 @@ A tutorial about the input dataset creation can be found here <a class="referenc
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id10" rules="none">
+<table class="docutils footnote" frame="void" id="id9" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Stumppf, A., Kerle, N. 20110. Object-oriented mapping of landslides using Random Forests. Remote Sensing of Environment, 115(10): 2564-2577.</td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id11" rules="none">
+<table class="docutils footnote" frame="void" id="id10" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Stumpf, A., Lachiche, N., Malet, J.-P., Puissant, A., Kerle, N. 2014. Active learning in the spatial domain for remote sensing image classification. IEEE Transactions on Geoscience and Remote Sensing, 52(5): 2492-2507.</td></tr>
 </tbody>
 </table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[3]</a></td><td>Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.</td></tr>
+</tbody>
+</table>
 <table class="docutils footnote" frame="void" id="id12" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id8">[3]</a></td><td>Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.</td></tr>
+<tr><td class="label">[4]</td><td>Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers &amp; Geosciences, 36(10): 1261-1267.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id13" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[4]</a></td><td>Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers &amp; Geosciences, 36(10): 1261-1267.</td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id14" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id9">[5]</a></td><td>Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id8">[5]</a></td><td>Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.</td></tr>
 </tbody>
 </table>
 </div>

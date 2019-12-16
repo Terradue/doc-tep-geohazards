@@ -115,6 +115,7 @@
 <li><a class="reference internal" href="#creation-of-the-landslide-initial-training-samples-training-samples-shp">Creation of the landslide initial training samples: training_samples.shp</a></li>
 <li><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
 <li><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
+<li><a class="reference internal" href="#creation-of-the-archive-containing-the-aladim-shapefile-inputs">Creation of the archive containing the ALADIM shapefile inputs</a></li>
 </ul>
 </li>
 </ul>
@@ -175,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-landslide-initial-training-samples-training-samples-shp">Creation of the landslide initial training samples: training_samples.shp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-the-archive-containing-the-aladim-shapefile-inputs">Creation of the archive containing the ALADIM shapefile inputs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="aladim-s2.html">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a></li>
@@ -242,9 +244,10 @@ The landslide training samples should be :</p>
 </ul>
 </div></blockquote>
 <p>The training samples should comprise a minimum number of landslide events (e.g. typically 5%) of the expected total number of landslide events over the study areas.</p>
-<p>The training samples should be recorded in <a href="#id1"><span class="problematic" id="id2">*</span></a>.shp file format, and created out of the GEP Platform.
+<p>The training samples should be recorded in <em>.shp file format, and created out of the GEP Platform.
 The training samples should be presented as a polygon shapefile with one single layer. It is typically a good starting point to divide the study area with a grid and select about 10 grid cells in which all
-landslides are mapped to construct the training sample. Please assure that the training samples shapefile does not contain NULL geometries or other geometry problems.</p>
+landslides are mapped to construct the training sample.
+**Please assure that the training samples shapefile does not contain NULL geometries or other geometry problems.*</em></p>
 <p>Name the shapefile like this:  <strong>training_samples.shp</strong></p>
 <p>An example of training samples is presented in the Figure below.</p>
 <div class="align-center width px align center figure">
@@ -268,6 +271,15 @@ during the creation of the training samples since all areas that are covered by 
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_prepare_dataset_aladim_3.png" src="../_images/tuto_prepare_dataset_aladim_3.png" />
 </div>
+</div>
+<div class="section" id="creation-of-the-archive-containing-the-aladim-shapefile-inputs">
+<h2>Creation of the archive containing the ALADIM shapefile inputs<a class="headerlink" href="#creation-of-the-archive-containing-the-aladim-shapefile-inputs" title="Permalink to this headline">¶</a></h2>
+<p>The shapefiles created as decribed above must be packaged in a <strong>flat</strong> archive in order to correspond to the expected format for ALADIM input.
+The framework requires a flat .tar.gz, the contents of the file must not include folders
+To create a flat tar.gz you have to run the following commands (in a directory containing your shapefiles) :</p>
+<p>tar -cvf shape.tar *</p>
+<p>gzip shape.tar</p>
+<p>The file <strong>shape.tar.gz</strong> that you obtain is now ready to be used as ALADIM input.</p>
 </div>
 </div>
 
