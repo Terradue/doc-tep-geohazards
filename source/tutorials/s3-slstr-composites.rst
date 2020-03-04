@@ -1,7 +1,10 @@
 Sentinel-3 SLSTR composites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: ⁨assets/s3-slstr-composite-icon.png
+.. figure:: assets/s3-slstr-composite-icon.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
 
 **Sentinel-3 SLSTR composites**
 
