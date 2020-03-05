@@ -117,7 +117,7 @@ Results: download and visualization
 
 * The following files are produced:
 
-    - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)**
+    - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47) - product GeoTIFF RGBA**
     
 ==================================    
     
