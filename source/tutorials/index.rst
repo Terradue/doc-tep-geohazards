@@ -30,6 +30,7 @@ Contents:
    PSI Post-Processing Service<psi_post_proc>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>
    SAR Flood Tool Service<sar-flood-tool>
+   Sentinel-3 SLSTR composites<s3-slstr-composites>   
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP CSK DInSAR<snap-csk>
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
