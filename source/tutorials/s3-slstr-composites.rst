@@ -2,6 +2,7 @@ Sentinel-3 SLSTR composites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/s3-slstr-composite-icon.png
+        :width: 200px
 
 **Sentinel-3 SLSTR composites**
 
