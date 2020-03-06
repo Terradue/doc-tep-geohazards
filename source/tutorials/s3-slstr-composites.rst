@@ -1,10 +1,7 @@
 Sentinel-3 SLSTR composites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/s3-slstr-composite-icon.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+.. image:: assets/s3-slstr-composite-icon.png
 
 **Sentinel-3 SLSTR composites**
 
@@ -68,7 +65,7 @@ Reference input
 
 .. figure:: assets/s3-slstr-composite-5.png
 	:figclass: align-center
-        :width: 750px
+        :width: 250px
         :align: center
         
 * Verify that the product has DESCENDING Orbit 
@@ -88,19 +85,19 @@ Run the job
 
 .. figure:: assets/s3-slstr-composite-7.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 .. figure:: assets/s3-slstr-composite-8.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 * After about 20 minutes, see the Successful Job:
 
 .. figure:: assets/s3-slstr-composite-9.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 Results: download and visualization
