@@ -10,8 +10,11 @@ This service is developed by CNRS-EOST (Strasbourg, France). It allows to detect
 
 **EO sources supported**:
 
-    - Mandatory: A couple of ortho-rectified multispectral (MS) images (typically Pléiades and Spot 6/7), including 4 bands (B, G, R and NIR) 
-    - Optional: A couple of ortho-rectified panchromatic (P) images
+    - Mandatory: An ortho-rectified multispectral (MS) image (typically Pléiades and Spot 6/7), including 4 bands (B, G, R and NIR) aqcuiert after the studied event. 
+    - Optional: 
+                - An ortho-rectified multispectral (MS) aqcuiert before the studied event image,
+		- A couple (or a single image) of ortho-rectified panchromatic (P) images.
+		(note that the number of images must be the same for the multispectral and panchromatic type) 
     
 **Input specifications**
 
