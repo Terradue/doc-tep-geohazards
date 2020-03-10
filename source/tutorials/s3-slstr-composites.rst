@@ -9,29 +9,29 @@ Sentinel-3 SLSTR composites
 This service takes as input a Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to do a False Colour Infrared RGB composite.
 The output of the service is a EO data product in GeoTIFF format. The product is a RGBA GeoTiff file obtained through the composition of S3, S2, S1 bands [1]_. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
 
-.. list-table:: **OUTPUT PRODUCT SPECIFICATION**
-   :widths: 50 50
-   :header-rows: 0
-
-   * - **Band: S1 (green band)**
-     - blue channel to do a False Colour Infrared RGBA
-   * - **Band: S2 (red band)**
-     - green channel to do a False Colour Infrared RGBA 
-   * - **Band: S3 (VNIR band)**
-     - VNIR channel to do a False Colour Infrared RGBA
-   * - **Band: Alpha**
-     - Reads the product flags to mask what has no data. 
-   * - **Resolution**
-     - 500 metres
-   * - **Raster Format**
-     - GeoTiff RGBA
-   * - **Information type**
-     - False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit
-   * - **Browse product available**
-     - YES (GeoTIFF) 
-   * - **Output Filename example**
-     - S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)
      
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| OUTPUT PRODUCT SPECIFICATION                                                                                                                  |
++===============================+===============================================================================================================+
+| **Information types**         | False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___)                               |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Raster format**             | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Resolution**                | Native (500 metres)                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **RED**                       | S3 band (VNIR band)                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **GREEN**                     | S2 band (Red band)                                                                                            |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **BLUE**                      | S1 band (Green band)                                                                                          |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **ALPHA**    		        | Reads the product flags to mask what has no data				                                |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Browse product available**  | YES (GeoTIFF)                                                                                    		|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Output Filename example**   | S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)                           |   
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+.. [1] R = XS3 (NIR band) G = XS2 (red band) B = XS1 (green band)
 
 **EO sources supported**
 
@@ -142,7 +142,7 @@ Results: download and visualization
 
     - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47) - product GeoTIFF RGBA**
  
-References 
+Reference
 ==================================    
 
 .. [1] https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm    
