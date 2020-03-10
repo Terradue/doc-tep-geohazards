@@ -27,6 +27,10 @@ The output of the service is a EO data product in GeoTIFF format. The product is
      - GeoTiff RGBA
    * - **Information type**
      - False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit
+   * - **Browse product available**
+     - YES (GeoTIFF) 
+   * - **Output Filename example**
+     - S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)
      
 
 **EO sources supported**
@@ -137,8 +141,13 @@ Results: download and visualization
 * The following files are produced:
 
     - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47) - product GeoTIFF RGBA**
-    
+ 
+References 
 ==================================    
 
 .. [1] https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm    
+
+Note
+===========================
+
 .. [2] SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less
