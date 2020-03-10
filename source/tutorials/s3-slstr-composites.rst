@@ -1,18 +1,37 @@
 Sentinel-3 SLSTR composites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: assets/s3-slstr-composite-icon.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+.. image:: assets/s3-slstr-composite-icon.png
+        :width: 200px
 
 **Sentinel-3 SLSTR composites**
 
 This service takes as input a Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to do a False Colour Infrared RGB composite.
+The output of the service is a EO data product in GeoTIFF format. The product is a RGBA GeoTiff file obtained through the composition of S3, S2, S1 bands [1]_. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
+
+.. list-table:: **OUTPUT PRODUCT SPECIFICATION**
+   :widths: 50 50
+   :header-rows: 0
+
+   * - **Band: S1 (green band)**
+     - blue channel to do a False Colour Infrared RGBA
+   * - **Band: S2 (red band)**
+     - green channel to do a False Colour Infrared RGBA 
+   * - **Band: S3 (VNIR band)**
+     - VNIR channel to do a False Colour Infrared RGBA
+   * - **Band: Alpha**
+     - Reads the product flags to mask what has no data. 
+   * - **Resolution**
+     - 500 metres
+   * - **Raster Format**
+     - GeoTiff RGBA
+   * - **Information type**
+     - False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit
+     
 
 **EO sources supported**
 
-    - Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only [1]_
+    - Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only [2]_
     
        
 **Output specifications**
@@ -68,7 +87,7 @@ Reference input
 
 .. figure:: assets/s3-slstr-composite-5.png
 	:figclass: align-center
-        :width: 750px
+        :width: 250px
         :align: center
         
 * Verify that the product has DESCENDING Orbit 
@@ -88,19 +107,19 @@ Run the job
 
 .. figure:: assets/s3-slstr-composite-7.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 .. figure:: assets/s3-slstr-composite-8.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 * After about 20 minutes, see the Successful Job:
 
 .. figure:: assets/s3-slstr-composite-9.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 Results: download and visualization
@@ -120,6 +139,6 @@ Results: download and visualization
     - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47) - product GeoTIFF RGBA**
     
 ==================================    
-    
-.. [1] SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less
-    
+
+.. [1] https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm    
+.. [2] SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less
