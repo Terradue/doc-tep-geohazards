@@ -31,7 +31,7 @@ The output of the service is a EO data product in GeoTIFF format. The product is
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | **Output Filename example**   | S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)                           |   
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-.. [1] R = XS3 (NIR band) G = XS2 (red band) B = XS1 (green band)
+
 
 **EO sources supported**
 
