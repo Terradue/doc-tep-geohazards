@@ -1,6 +1,23 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CNR-IREA P-SBAS Sentinel-1 processing on-demand
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+P-SBAS Sentinel-1 processing on-demand by CNR-IREA 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/tuto_psbas_ondem_icon.png
+        
+**P-SBAS InSAR Sentinel-1 TOPS (GEP)**
+
+P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps. Input: SLC (Level-1) Sentinel-1 data. Output: LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Output Format: CSV. (The service can also generate wrapped and unwrapped interferograms that are delivered in geoTiff format). 
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+    - (Default) LOS Displacement time series; Mean LOS Velocity; Temporal Coherence; Average scatterer elevation (Topography). Format: CSV.
+    - (Upon request) Wrapped Interferograms; Unwrapped Interferograms; Spatial coherence; Map of LOS vector. Format: GeoTIFF.
+
+-----
 
 This tutorial describes how to submit a job for the CNR-IREA P-SBAS Sentinel-1 (S1) processing on-demand service to obtain a ground displacement time series from S1 SLAC (Level-1) data. 
 P-SBAS stands for Parallel Small BAseline Subset and it is a DInSAR processing chain for the generation of Earth deformation time series and mean velocity maps
@@ -60,13 +77,17 @@ Input SAR data selection must be carried out with particular care, since a wrong
 * The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.
 * **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
 
+.. note:: Jobs submitted with less than 15 images in *MTA* mode will be automatically transformed into the *IFG* mode.
+
+.. note:: The user should avoid temporal gaps larger than one year in the data set selection.
+
 For this tutorial, a `pre-defined data set`_ has been prepared to speed up the data selection step .
 
 .. _`pre-defined data set`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DNapoliS1T222017&id=insarquake
 
 * Browse the Data Packages looking for *Napoli S1 T22 2017* package and click on the load button to upload it.
 
-.. figure:: assets/tuto_psbas_ondem_2.png
+.. figure:: assets/tuto_psbas_ondem_2.1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -101,7 +122,7 @@ For this tutorial, a `pre-defined data set`_ has been prepared to speed up the d
 
 * Fill the parameters according to the following figure:
 
-.. figure:: assets/tuto_psbas_ondem_6.png
+.. figure:: assets/tuto_psbas_ondem_6.1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -121,7 +142,7 @@ In particular:
   
   14.262
  
-.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input Latitude and Longitude coordinates are on **land** and included **within the selected Area of Interest** (if any). As a suggestion, urbanized areas are usually well suitable to locate the reference point. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
+.. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input **Latitude and Longitude coordinates are on land and included within the selected Area of Interest** (if any, see next step). As a suggestion, urbanized areas are usually well suitable to locate the reference point. Moreover, it is in general a good practice to put the reference point in the deformation far field. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
@@ -145,6 +166,7 @@ In particular:
         
 .. note:: Possible values: *MTA* (Multi-Temporal Analysis); *IFG* (Interferogram Generation). Default value is *MTA*. For *IFG* description see Section 2_.
 
+
 .. _2: `2 Interferogram Generation (IFG) Mode`_
 
 * As *DEM*, select:
@@ -156,14 +178,6 @@ In particular:
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
 
 .. _`EarthExplorer`: https://earthexplorer.usgs.gov
-
-* As *APS Filter Window Length*, insert:
-
-.. code-block:: sbas-parameter
-  
-	200
-       
-.. note:: This is the temporal window width (in days) for the APS filter on the resulting time series.
 
 
 1.4 Run the job
@@ -254,15 +268,16 @@ Provided information consists, per each pixel considered reliable, in:
 
 File name convention is as follows::
 
-  SBAS_TS_<FirstAcqDate>_<LastAcqDate>_<UniqueCode>.csv
+  DTSLOS_<UserID>_<FirstAcqDate>_<LastAcqDate>_<UniqueCode>.csv
 
 where:
 
++ ``<UserID>``      : is the name of the user or service that generated the product
 + ``<FirstAcqDate>``: is the first acquisition of the time series;
 + ``<LastAcqDate>`` : is the last acquisition of the time series.
 + ``<UniqueCode>``  : is a unique code identifier.
 
-A typical name sample is: ``SBAS_TS_20170106_20171120_ME7G.csv``
+A typical name sample is: ``DTSLOS_CNRIREA_20170106_20171120_ME7G.csv``
 
 Additional provided outputs are:
 		
@@ -283,7 +298,7 @@ Tag                           Example                                           
 ============================= ======================================================================== =================================================================================
 Data_Type                     LOS_DISPLACEMENT_TIMESERIES                                              Type of data (according to the EPOS categories)
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
-Title                         SBAS_TS_20170106_20171120_ME7G.csv                                       Title of the pop-up window (it corresponds to the file name)
+Title                         DTSLOS_CNRIREA_20170106_20171120_ME7G.csv                                       Title of the pop-up window (it corresponds to the file name)
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
 Product_format                ASCII                                                                    Format of the product (geoTiff or CSV)
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
@@ -295,7 +310,7 @@ Bounding_box                                                                    
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
 License                       https://creativecommons.org/licenses/by/4.0                              Applicable license for the product
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
-User_ID                       mapred                                                                   User that generated the product
+User_ID                       CNRIREA                                                                  User that generated the product
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
 Software_version              CNR-IREA P-SBAS 25
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
@@ -312,7 +327,7 @@ Date_of_production            2017-12-01T23:51:09Z
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
 Date_of_publication           2017-12-01T23:51:09Z
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
-Service_used_for_generation   CNR-IREA EPOSAR                                                                
+Service_used_for_generation   EPOSAR                                                                
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
 Geographic_CS_type_code       EPSG4326
 ----------------------------- ------------------------------------------------------------------------ ---------------------------------------------------------------------------------
@@ -376,7 +391,6 @@ Input SAR data selection must be carried out with particular care, since a wrong
 * The algorithm accepts as inputs **IW Sentinel-1**  **SLC (level 1) data**. RAW data cannot be processed.
 * It is very important that the user selects **images related to the same track only** which must be aquired with the same mode (the IW one).
 * The system automatically discards duplicated (reprocessed) images and correctly mosaicks SAR data belonging to different “portions” (slices) of the same strip. In case of reprocessed (duplicated) images the newest one is selected.
-* **Note that to obtain reliable displacement measurements and to avoid processing failures, it is strongly suggested to select a number of epochs greater then 20 in the case of time series generation mode**.
 
 For this tutorial, a pre-defined `data set`_ has been prepared to speed up the data selection step.
 
@@ -413,7 +427,7 @@ For this tutorial, a pre-defined `data set`_ has been prepared to speed up the d
 
 * Fill the parameters according to the following figure:
 
-.. figure:: assets/tuto_psbas_ondem_ifg4.png
+.. figure:: assets/tuto_psbas_ondem_ifg4.1.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -468,10 +482,6 @@ In particular:
 
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
 
-* Leave the *APS Filter Window Length* unchanged.
-      
-.. note:: This is the temporal window width (in days) for the APS filter on the resulting time series. **This parameter is not considered in the IFG mode**.
-
 
 2.4 Run the job
 ---------------
@@ -517,11 +527,12 @@ The spacing of the output depends on the DEM used for the processing. Results ar
 
 File name convention is as follows::
 
-  <DataType>_<MasterDate>_<SlaveDate>_<UniqueCode>.<FileExtension>
+  <DataType>_<UserID>_<MasterDate>_<SlaveDate>_<UniqueCode>.<FileExtension>
 
 where:
 
 * ``<DataType>`` can be: ``InW`` (Wrapped Interferogram), ``InU`` (Unwrapped Interferogram) (this feature will be available in a later release of the service), ``Coh`` (Spatial Coherence);
+* ``<UserID`` is the name of the user or service that generated the product;
 * ``<MasterDate>`` date of the Master acquisition in the format ``<yyyymmdd><SensorCode>``, where ``<SensorCode>`` is a 3-char code that identifies the sensor. For the Sentinel case the possible codes are: S1A and S1B.
 * ``<SlaveDate>`` date of the Slave acquisition in the same ``<MasterDate>`` format;
 * ``<UniqueCode>`` a unique code identifier;
@@ -529,7 +540,8 @@ where:
 
   - ``tif``: the actual data in geoTiff;
   - ``properties``: the metadata displayed in the Geobrowser;
-  - ``metadata``: the full metadata list according to the EPOS specifications;
+  - ``metadata``: the full metadata list in ASCII format according to the EPOS specifications;
+  - ``xml``: the full metadata list in XML format according to the EPOS specifications;
   - ``png``: a quick-look raster image;
   - ``pngw``: the geocoding information for the png image;
   - ``kmz``: the google format overlay containing the quick-look image;
@@ -537,8 +549,8 @@ where:
 
 Typical name samples are::
 
-  InW_20160821S1A_20160827S1B_7M1E.tif
-  Coh_20160821S1A_20160827S1B_7M1E.tif
+  InW_CNRIREA_20160821S1A_20160827S1B_7M1E.tif
+  Coh_CNRIREA_20160821S1A_20160827S1B_7M1E.tif
 
 2.6 Metadata
 ------------
@@ -577,5 +589,3 @@ CNR-IREA software is a scientific software and it is provided at the best CNR-IR
 Generated results have a defined accuracy according to the relevant scientific publications available in literature. Result accuracy is estimated on a statistical basis. Provided results are not validated by CNR-IREA and, indeed, it is user responsibility to validate them.
 CNR-IREA is not responsible for the use, quality, accuracy and interpretation of results and products that are generated by using the processors and services provided within the platform. CNR-IREA is not responsible for the use, quality, accuracy and interpretation of third party results, products and services derived from the use of CNR-IREA’s processors and services. CNR-IREA is not responsible of possible outages of the provided services. CNR-IREA is not responsible of any kind of third party loss derived from service outage, result inaccuracies, software errors of the provided services and products.
 The maintenance, update and user support are provided by CNR-IREA free of charge and at best effort. CNR-IREA is not responsible for any consequence derived from delays on replies to user requests or support inaccuracies 
-
-
