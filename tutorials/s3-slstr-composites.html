@@ -119,6 +119,8 @@
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
 <li><a class="reference internal" href="#results-download-and-visualization">Results: download and visualization</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+<li><a class="reference internal" href="#note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -205,6 +207,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#results-download-and-visualization">Results: download and visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note">Note</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
@@ -235,19 +239,53 @@
 <h1>Sentinel-3 SLSTR composites<a class="headerlink" href="#sentinel-3-slstr-composites" title="Permalink to this headline">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/s3-slstr-composite-icon.png"><img alt="../_images/s3-slstr-composite-icon.png" src="../_images/s3-slstr-composite-icon.png" style="width: 200px;" /></a>
 <p><strong>Sentinel-3 SLSTR composites</strong></p>
-<p>This service takes as input a Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to do a False Colour Infrared RGB composite.</p>
+<p>This service takes as input a Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to do a False Colour Infrared RGB composite.
+The output of the service is a EO data product in GeoTIFF format. The product is a RGBA GeoTiff file obtained through the composition of S3, S2, S1 bands <a class="footnote-reference" href="#id3" id="id1">[1]</a>. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.</p>
 <p><strong>EO sources supported</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only <a class="footnote-reference" href="#id2" id="id1">[1]</a></li>
+<li>Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only <a class="footnote-reference" href="#id4" id="id2">[2]</a></li>
 </ul>
 </div></blockquote>
-<p><strong>Output specifications</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li>False Colour Infrared RGB composite (DESCENDING orbits only)</li>
-</ul>
-</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">OUTPUT PRODUCT SPECIFICATION</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Information type</strong></td>
+<td>False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___)</td>
+</tr>
+<tr class="row-odd"><td><strong>Raster format</strong></td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-even"><td><strong>Resolution</strong></td>
+<td>Native (500 metres)</td>
+</tr>
+<tr class="row-odd"><td><strong>RED</strong></td>
+<td>S3 band (VNIR band)</td>
+</tr>
+<tr class="row-even"><td><strong>GREEN</strong></td>
+<td>S2 band (Red band)</td>
+</tr>
+<tr class="row-odd"><td><strong>BLUE</strong></td>
+<td>S1 band (Green band)</td>
+</tr>
+<tr class="row-even"><td><strong>ALPHA</strong></td>
+<td>set transparency for nodata pixels</td>
+</tr>
+<tr class="row-odd"><td><strong>Browse product available</strong></td>
+<td>YES (GeoTIFF)</td>
+</tr>
+<tr class="row-even"><td><strong>Output Filename example</strong></td>
+<td>S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)</td>
+</tr>
+</tbody>
+</table>
 <hr class="docutils" />
 <p>This tutorial will describe the processing of Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to generate a False Colour Infrared RGB composite for the one input Sentinel-3 acquisitions on the GEP.</p>
 <div class="section" id="select-the-processing">
@@ -337,11 +375,22 @@
 </div></blockquote>
 </li>
 </ul>
-<hr class="docutils" />
-<table class="docutils footnote" frame="void" id="id2" rules="none">
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm">https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="note">
+<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less</td></tr>
 </tbody>
 </table>
 </div>

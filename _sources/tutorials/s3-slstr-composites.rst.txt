@@ -7,15 +7,33 @@ Sentinel-3 SLSTR composites
 **Sentinel-3 SLSTR composites**
 
 This service takes as input a Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product on DESCENDING orbit and uses the bands S3, S2, S1 to do a False Colour Infrared RGB composite.
+The output of the service is a EO data product in GeoTIFF format. The product is a RGBA GeoTiff file obtained through the composition of S3, S2, S1 bands [1]_. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
 
 **EO sources supported**
 
-    - Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only [1]_
-    
-       
-**Output specifications**
-
-    - False Colour Infrared RGB composite (DESCENDING orbits only)
+    - Sentinel-3 SLSTR Level 1 (SL_1_RBT___) product until 15-Jan-2020 with DESCENDING orbit only [2]_
+     
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| OUTPUT PRODUCT SPECIFICATION                                                                                                                  |
++===============================+===============================================================================================================+
+| **Information type**          | False Colour Infrared RGBA composite for Sentinel-3 SLSTR Level 1 (SL_1_RBT___)                               |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Raster format**             | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Resolution**                | Native (500 metres)                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **RED**                       | S3 band (VNIR band)                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **GREEN**                     | S2 band (Red band)                                                                                            |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **BLUE**                      | S1 band (Green band)                                                                                          |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **ALPHA**    		        | set transparency for nodata pixels				        			                |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Browse product available**  | YES (GeoTIFF)                                                                                    		|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Output Filename example**   | S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47)                           |   
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 -----
 
@@ -116,8 +134,13 @@ Results: download and visualization
 * The following files are produced:
 
     - **S3 SLSTR False color Infrared - Quicklook (2020-01-11T23:01:47/2020-01-11T23:01:47) - product GeoTIFF RGBA**
-    
+ 
+Reference
 ==================================    
-    
-.. [1] SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less
-    
+
+.. [1] https://crisp.nus.edu.sg/~research/tutorial/opt_int.htm    
+
+Note
+===========================
+
+.. [2] SNAP6 is used in this service and supports only products with Baseline collection equal to 003 or less
