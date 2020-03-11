@@ -147,7 +147,7 @@ In particular:
  
 .. note:: *Latitude of the Reference Point* and *Longitude of the Reference Point* are the Latitude and Longitude coordinates (in decimal degrees) of the **reference point** for the P-SBAS DInSAR measurement. It should be located in a stable area or its deformation behaviour shall be known. In any case, the user shall verify that input **Latitude and Longitude coordinates are on land and included within the selected Area of Interest** (if any, see next step). As a suggestion, urbanized areas are usually well suitable to locate the reference point. Moreover, it is in general a good practice to put the reference point in the deformation far field. The *Magic Wand* button can be used to automatically fill these fields with the coordinate values of a Marker placed on the map.
 
-.. note:: To help the PhU, the algorithm automatically refines the reference point and selects the one with best coherence conditions close to the one selected by the user. This makes also the algorithm more robust to possible input mistakes. Therefore, at the end of the processing, the reference point will be likely different from the one provided in input. Moreover, at the end of the processing, the algorithm implements an average reference on the whole scene to avoid the dependance to one single point. This mitigates the effect of the reference point atmospheric noise, thus generating a sort of "absolute" reference to every zero-mean point. Anyway, the user can pick the time series of a point of interest and subtract it from the entire data set, so that the results are referred to a specific point.
+.. note:: To help the PhU, the algorithm automatically refines the reference point and selects the one with best coherence conditions close to the one selected by the user. This makes also the algorithm more robust to possible input mistakes. Moreover, at the end of the processing, the algorithm implements an average reference on the whole scene to avoid the dependance to one single point. This mitigates the effect of the reference point atmospheric noise, thus generating a sort of "absolute" reference to every zero-mean point. Anyway, the user can pick the time series of a point of interest and subtract it from the entire data set, so that the results are referred to a specific point.
 
 
 * Leave the *Bounding Box* untouched (Area of Interest empty). 
@@ -185,7 +185,7 @@ In particular:
 .. _`EarthExplorer`: https://earthexplorer.usgs.gov
 
 
-* Leave the *Temporal Coherence Threshold* _unchanged_.
+* Leave the *Temporal Coherence Threshold* **unchanged**.
 
 .. note:: The threshold on the minimium allowed Temporal Coherence of each point can be set in the 0.7-0.9 range. By keeping in mind that every result should be properly validated, we recommend that only expert users modify the default value of this field.
 
