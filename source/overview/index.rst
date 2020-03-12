@@ -5,7 +5,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   
+  
+   Changelog <changelog> 
    Purpose of the Geohazards Thematic Exploitation Platform<purpose>
    A Community Portal<community-portal>
    A data processing facility<data-processing>

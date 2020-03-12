@@ -67,6 +67,21 @@ qthelp:
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	sed -i.bak 's/{\\hyperref\[\(.*\:req-[0-9]*\)\]{.*}}/{\\autoref{\1}}/g' $(BUILDDIR)/latex/*.tex
+	sed -i.bak 's/\\begin{longtable}{|l|l|l|}/\\begin{longtable}{|l|l|p{10cm}|}/g' $(BUILDDIR)/latex/*.tex
+	cp source/_templates/*.sty $(BUILDDIR)/latex
+	cp source/_static/* $(BUILDDIR)/latex
+	@echo
+	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
+	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
+	      "run these through (pdf)latex."
+
+latex-mac:
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	sed -i .bak 's/{\\hyperref\[\(.*\:req-[0-9]*\)\]{.*}}/{\\autoref{\1}}/g' $(BUILDDIR)/latex/*.tex
+	sed -i .bak 's/$\\begin{longtable}{|l|l|l|}/\begin{longtable}{|l|l|p{10cm}|}/g' $(BUILDDIR)/latex/*.tex
+	cp source/_templates/*.sty $(BUILDDIR)/latex
+	cp source/_static/* $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
@@ -88,7 +103,16 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
+man:
+	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man
+	@echo
+	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
+
 test:
 	mkdir $(REPORTDIR)
 	`which py.test` --tb=line -v --junitxml=$(REPORTDIR)/junit.xml check_sphinx.py
 
+pdf:
+	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
+	@echo
+	@echo "Build finished. The PDF files are in $(BUILDDIR)/pdf."

@@ -4,9 +4,9 @@ G-POD PF-ASAR Service
 Select the processing
 =====================
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eu/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eu/geobrowser/
 
 * Open the tab "Processing services" from the right of the map, then select the processing service “G-POD PF-ASAR”.
 
@@ -15,6 +15,7 @@ Select the files to process
 ===========================
 
 * Click on the *Data Packages* button in the bottom right of the screen, within the Features Basket panel. 
+
 Then select from the list the "PF-ASAR Tutorial" data package and click on *load*. 
 The selected data package contains the reference to the following input file:
 

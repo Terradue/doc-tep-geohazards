@@ -1,0 +1,113 @@
+\usepackage{graphicx}
+\usepackage[includeheadfoot,left=2cm,right=2cm,top=1cm,bottom=5cm]{geometry}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{float}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\renewcommand{\dateseparator}{--}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% Change the title page to look a bit better, and fit in with the fncychap
+% ``Bjarne'' style a bit better.
+%
+\renewcommand{\maketitle}{%
+
+  \begin{titlepage}%
+    \pagestyle{title} 
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \rule{\textwidth}{1pt}%
+    \ifsphinxpdfoutput
+      \begingroup
+      % These \defs are required to deal with multi-line authors; it
+      % changes \\ to ', ' (comma-space), making it pass muster for
+      % generating document info in the PDF file.
+      \def\\{, }
+      \def\and{and }
+      \pdfinfo{
+        /Author (\@author)
+        /Title (\@title)
+      }
+      \endgroup
+    \fi
+    \begin{flushright}%
+      \vfill
+      \center\sphinxlogo%
+      \vfill
+      {\rm\Huge\py@HeaderFamily \@title \par}%
+      \vfill
+      \includegraphics{logoconsortium.png}
+      \vfill
+      {\Large\py@HeaderFamily \py@release\releaseinfo \par}
+      \vfill
+      \large
+      {\py@HeaderFamily
+        \begin{tabular}[t]{p{4cm}p{8cm}l}
+          Prepared by & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \\
+          & \begin{tabular}{l}\@author\end{tabular}  & \today \\
+           & & \\
+          Reviewed by & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \\
+          & \begin{tabular}{l}Bernat Martinez (IsardSAT)\\Emmanuel Mathot (T2)\end{tabular}  & \today \\
+           & & \\
+          Approved by & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \\
+          & \begin{tabular}{l}Bernat Martinez (IsardSAT)\end{tabular}  & \_\_\_\_\_\_ \\
+        \end{tabular}
+        \par
+      }%
+      \vfill
+    \vfill
+    \end{flushright}%\par
+    
+    \small © Restriction of Disclosure: All rights reserved. No part of this document may be reproduced, in any form or by any means, without permission in written form by TEP Hydrology Project Manager.
+  \end{titlepage}%
+  \cleardoublepage%
+  \setcounter{footnote}{0}%
+  \let\thanks\relax\let\maketitle\relax
+  %\gdef\@thanks{}\gdef\@author{}\gdef\@title{}
+}
+
+\setlength{\headheight}{0pt} 
+\setlength{\footskip}{60pt} 
+
+% Redefine the 'normal' header/footer style when using "fancyhdr" package:
+\@ifundefined{fancyhf}{}{
+  % Use \pagestyle{normal} as the primary pagestyle for text.
+  \fancypagestyle{normal}{
+    \fancyhf{}
+    \fancyfoot[C]{{\includegraphics{logoconsortium.png}}}
+    \fancyhead[L]{{\includegraphics[width=200pt]{logo-hydro.png} }}
+    \fancyhead[R]{{\rule[-2ex]{0pt}{2ex}\py@HeaderFamily
+    \begin{tabular}[b]{p{2cm}r}
+          ID & HTEP-TR2-DD-15/0016 \\
+          Issue & \py@release \\
+          Date & \today \\
+          Page & \thepage\ of \pageref{LastPage} 
+        \end{tabular}
+    }}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+  % Update the plain style so we get the page number & footer line,
+  % but not a chapter or section title.  This is to keep the first
+  % page of a chapter and the blank page between chapters `clean.'
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{{\includegraphics{logoconsortium.png}}}
+    \fancyhead[L]{{\includegraphics[width=200pt]{logo-hydro.png} }}
+    \fancyhead[R]{{\rule[-2ex]{0pt}{2ex}\py@HeaderFamily
+    \begin{tabular}[b]{p{2cm}r}
+          ID & HTEP-TR2-DD-15/0016 \\
+          Issue & \py@release \\
+          Date & \today \\
+          Page & \thepage\ of \pageref{LastPage} 
+        \end{tabular}
+    }}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+  }
+}

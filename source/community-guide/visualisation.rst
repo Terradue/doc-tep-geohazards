@@ -40,7 +40,7 @@ Jobs results
 
 To visualize results on the map:
 
-1. Access the job once it is finished (see `Discover existing jobs`_).
+1. Access the job once it is finished (see `Access my jobs`_).
 2. If a layer is detected, you can display it on the map from the **Results** part of the job description.
 3. Click on **Show results on map**.
 4. The layer is displayed on the map, according to the offerings presented in the OWS Context of the result.

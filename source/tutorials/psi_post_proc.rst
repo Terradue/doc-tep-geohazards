@@ -1,5 +1,9 @@
 PSI Post Processing Service
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/tuto_psipp_icon.png
+        
+**PSI post-proc**
 
 The PSI Post Processing service, developed by TRE-Altamira, is aimed at producing derived results starting from PSI results produced with SqueeSAR TM (off-line) and SBAS PSI processing.
 
@@ -9,6 +13,14 @@ This service allows users to make some post-processing of PSI results. It includ
 * Filtering points by means of a phase quality indicator or geometrical distortion masks (foreshortening or layover).
 * Computing the acceleration field and changing the reference point.
 
+**EO sources supported**:
+
+    - PSI displacements results produced with SqueeSAR TM and CNR IREA S1-SBAS processing.
+
+**Output specifications**
+
+The generated outputs are a csv, a float and a rgb GeoTiff of the velocity and finaly a png of the velocity that is shown in the map.
+See `Outputs`_ for more details.
 
 Application selection
 =====================

@@ -6,7 +6,7 @@ Communities
 Joining a community
 -------------------
 
-To join a HEP community, go to the `community discovery page <https://hydrology-tep.eo.esa.int/#!communities>`_.
+To join a GEP community, go to the `community discovery page <https://geohazards-tep.eu/#!communities>`_.
 
 .. figure:: ../includes/communities.png
 	:align: center

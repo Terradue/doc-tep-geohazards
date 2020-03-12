@@ -1,5 +1,21 @@
-G-POD SBAS InSAR Service
-~~~~~~~~~~~~~~~~~~~~~~~~
+G-POD SBAS Stripmap Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: assets/tuto_sbas_icon.png
+        
+**SBAS Stripmap (GPOD)**
+
+The InSAR Small BAseline Subsets (SBAS) algorithm has been developed by IREA-CNR for monitoring temporal evolution of surface deformations and to generate interferograms stacks as well. The InSAR Parallel-SBAS (P-SBAS) algorithm version has been integrated on the ESA's Grid Processing On Demand (G-POD) to exploit the available High Performance Computing resources.
+
+**EO sources supported**:
+
+    - ENVISAT ASAR L0/ ERS L0 (CEOS format)
+
+**Output specifications**
+
+See `output specifications`_.
+
+-----
 
 This tutorial describes how to submit a job for the SBAS-InSAR service to obtain a ground displacement time series from ERS and/or ENVISAT ASAR data. The tutorial is addressed to users already familiar with InSAR processing, analysis and products, and gives some hints and recommendation for the best service usage experience.
 
@@ -25,9 +41,9 @@ CNR-IREA and ESA do not respond in any case for the use, interpretation, and qua
 Select the processing
 =====================
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eu/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eu/geobrowser/
 
 .. figure:: assets/tuto_sbas_0.png
 	:figclass: align-center
@@ -43,7 +59,7 @@ Select the processing
 
 
 Select the files to process
-===================
+===========================
 
 Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing.
 
@@ -87,7 +103,7 @@ For this tutorial, a pre-defined data set has been prepared to speed up data sel
                 
                 
 Fill the parameter values
-===================
+=========================
 
 Leave the *Bounding Box* untouched (Area of Interest empty). 
 
@@ -135,9 +151,7 @@ Acquisitions that do not cover the selected area are automatically discarded. In
         :width: 750px
         :align: center
         
-.. note::
-
-You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
+.. note:: You can leave all the other fields unchanged. **Note that the default values work fine for almost all the ERS and ENVISAT cases.**
 
 For sake of completeness, in the following a brief description of each parameter is provided:
 
@@ -172,6 +186,8 @@ Run the job
         :width: 750px
         :align: center
         
+.. _output specifications:
+
 **InSAR results available in the Web Portal after processing**
 
 The result that the user will find on web portal are strongly depending on the selected **Processing Mode.**

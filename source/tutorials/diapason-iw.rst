@@ -1,8 +1,24 @@
+DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Sentinel-1 IW mode Interferogram generation with DIAPASON
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DIAPASON is an InSAR processing software developed by the French space agency (CNES) and 
-maintained by ALTAMIRA INFORMATION.
+.. image:: assets/tuto_diapiw_icon.png
+
+**DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)**
+
+DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by TRE Altamira. This service performs an InSAR workflow on Sentinel-1 TOPSAR (IW,EW) data, producing interferograms, amplitude and coherence maps. To run this service, specify master and slave Sentinel-1 SLC images.
+
+**EO sources supported**:
+
+    - Sentinel-1 TOPSAR IW SLC
+
+**Output specifications**
+
+    - Interferometric Amplitude
+    - Interferometric Coherence
+    - Interferometric Phase
+
+-----
 
 This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.
 
@@ -15,27 +31,29 @@ Processor configuration
         :width: 750px
         :align: center
 
-* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC" to search for
-the correct product type covering the area 
+* In the "EO data" menu select "Sentinel-1".
+
+* Select an area on the map . In the "Search Terms" field , you may type "IW AND SLC NOT GRD" to search for the correct product type covering the area 
 
 .. figure:: assets/tuto_diapiw_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Choose the image pair to be processed from the "Current search result" pane. 
-Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
+* Choose the image pair to be processed from the "Current search result" pane. Drag and Drop the image to be used as master  into the "Sentinel-1 IW master" field, then select the slave image into the "Sentinel-1 IW slave" field.
 
 The images shall be from the same track.
 
-* Set the polarization to process from the "polarization" drow-down list
+.. NOTE:: slave and master can be picked up by using the following data package (alternatively to the search steps described): **ChileTrack156**
+
+* Set the polarization to process from the "polarization" drop-down list
 
 The available polarizations for the images appear on the list from the "Current search result" pane.
 The selected polarization should be available on each of the two images. 
 
 * Optionally you may choose to process an area of interest.
 
-You may set this option in order to process an area  smaller than the coverage of the two images by clicking on the button on the right of the "Area of interest" field. This will set the current area selected on the map as area of interest for the processing. 
+You may set this option in order to process an area  smaller than the coverage of the two images by using a spatial filter from the left geo panel over the area. This will set the current area selected on the map as area of interest for the processing. 
 When left blank , the area processed is the intersection between the two input images.
 
 

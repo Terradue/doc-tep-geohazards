@@ -8,9 +8,11 @@ Data
 
 Discovery of data is made through the :doc:`geobrowser <platform/geobrowser>`. 
 
-You can search for specific data by creating a query to a catalogue, look for specific events or simply see amongst the contextualized results what can be interesting for you.
+You can search for data from a specific collection of a catalogue or from a public or private data package, look for data related to specific events, simply see amongst the proposed contextualized results, or even search within results of a processed wps job.
 
 Put data in your basket and save it for later, or simply drag and drop data as a parameter of a process.
+
+When the OWS Context describing the data contains the adequate information, the data can be visualized on the geobrowser (e.g as an image, as a time series, ...) and a popup containing metadata about the data will be displayed.
 
 Discover data
 -------------
@@ -29,10 +31,31 @@ Data discovery is made through the map. To get specific data:
 
 .. |search| image:: ../includes/geobrowser_button_query.png
 
-.. image:: ../includes/geobrowser_map_data.png
+.. figure:: ../includes/geobrowser_map_data.png
 	:align: center
 	:scale: 75%
 	:figclass: img-border
+
+	Example of Sentinel 1 popup information
+
+.. figure:: ../includes/geobrowser_map_data_result.png
+	:align: center
+	:scale: 75%
+	:figclass: img-border
+
+	Example of process result popup information
+
+Manage the search filters
+-------------------------
+
+Once you have performed a search, all filters used for this search are displayed on the window, grouped by type of filter (e.g time, spatial, earth observation, ...).
+You can then remove one filter, remove the whole filter group or check the selected value (go over with the mouse during few seconds).
+
+.. figure:: ../includes/geobrowser_filters.png
+	:align: center
+	:scale: 50%
+	:figclass: img-border
+
 
 Discover contextualized data
 ----------------------------
@@ -59,6 +82,25 @@ To access data related to a specific event:
 4. Data related to this event is automatically added to the result tab and displayed on the map.
 
 .. figure:: ../includes/geobrowser_data_event.png
+	:figclass: img-border
+
+Discover data results from a processing job
+-------------------------------------------
+
+To visualize results on the map:
+
+1. Access the job (see `Access public jobs`_ or :doc:`Share a job <sharing>`).
+2. If a layer is detected, you can display it on the map from the **Results** part of the job description.
+3. Click on **Show results on map**.
+4. The layer is displayed on the map.
+5. A popup containing results metadata is displayed by clicking on the product.
+
+.. warning::
+  You may need to be connected to the GEP Virtual Private Network (see :ref:`laboratory`), in order to download the results. 
+
+ .. figure:: ../includes/geobrowser_job_result_visualisation.png
+	:align: center
+	:scale: 75%
 	:figclass: img-border
 
 Select data in your basket
@@ -118,4 +160,37 @@ Use data in a process
 3. Select one or more entries either from the **Results Table** or from the **Features Basket**. 
 4. Drag the data and drop it over the selected parameter.
 5. In case of several items, it creates one occurence of the parameter per item.
-6. Data are ready to be used in the process. Click on **Run process* to actually run the process.
+6. Data are ready to be used in the process. Click on **Run process** to actually run the process.
+
+Download data
+-------------
+
+To download a data listed on the *Results Table*:
+
+1. Click on the data on the list or directly on the geobrowser.
+2. A popup is displayed, containing a **Download** button.
+3. Click on the button, if it exists several links to the data, a dropdown list is displayed.
+4. Click on one of the links. The download may start directly or you may be redirected to the server hosting the data for authorization.
+
+Data Gateway
+~~~~~~~~~~~~
+
+If the resource location points to a data gateway url (usually the name contains **via Data Gateway**), ex: **https://store.terradue.com/download/sentinel1/files/v1/S1A_IW_SLC__1SDH_20160915T090555_20160915T090624_013061_014B4B_4793**
+
+then the download is performed via the Data Gateway that enables many function such as caching to allow the best download performance of the data requested.
+
+.. warning::
+	Please be aware that the Data Gateway Proxy Download may take some time to start depending of the configuration of the repository from which you perform the download. Indeed, the data gateway may be required to perform Implicit caching before delivering the data.
+
+Upload dataset on Terradue storage
+----------------------------------
+
+Most of thematic applications provide to the user a **Store Upload** button allowing him to upload local data to his private storage or to the storages shared with the community (e.g gep-community).
+For more details on how to use this functionality, see :ref:`dataupload`.
+
+Publish datasets on Terradue catalogue
+--------------------------------------
+
+Most of thematic applications provide to the user a **Data Publication** WPS service allowing him to publish data from his private storage or from storages shared with the community (e.g gep-community) to the Terradue catalogue, under his private index or under an index shared with the community (e.g gep-community). For more details on how to use this functionality, see :ref:`datapublish`.
+
+For more details on how to use this functionality, see :ref:`dataupload`.

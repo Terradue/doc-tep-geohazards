@@ -1,12 +1,26 @@
 G-POD PF-ERS Service
 ~~~~~~~~~~~~~~~~~~~~
 
+.. image:: assets/tuto_pf_ers_icon.png
+        
+**PF-ERS**
+
+The ERS PF is the ESA operational Level-1 SAR processor developed by MDA. This processor, integrated on the ESA's Grid Processing On Demand (G-POD), perform on-demand production of L1 products.
+
+**EO sources supported**:
+
+    - SAR Level-1
+
+**Output specifications**
+
+To be defined
+
 Select the processing
 =====================
 
-* Sign-in on the Portal https://geohazards-tep.eo.esa.int/ (see guidance :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eu/ (see guidance :doc:`user <../community-guide/user>` section)
 
-* Access the Geobrowser: https://geohazards-tep.eo.esa.int/geobrowser/
+* Access the Geobrowser: https://geohazards-tep.eu/geobrowser/
 
 * Open the tab "Processing services" from the right of the map, and then select the processing service “PF-ERS”.
 
