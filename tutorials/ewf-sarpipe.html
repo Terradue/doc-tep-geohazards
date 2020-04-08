@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>SNAC - SNAP S-1 GRD Amplitude Change &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    <title>S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SNAP CSK DInSAR" href="snap-csk.html" />
-    <link rel="prev" title="Sentinel-3 SLSTR composites" href="s3-slstr-composites.html" />
+    <link rel="next" title="SAR Flood Tool Service" href="sar-flood-tool.html" />
+    <link rel="prev" title="RASTER - Full Resolution Rasterization" href="rss_full_resolution_rasterization.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -111,13 +111,18 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">SNAC - SNAP S-1 GRD Amplitude Change</a><ul>
+<li><a class="reference internal" href="#">S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine</a><ul>
+<li><a class="reference internal" href="#tutorial">Tutorial</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li><a class="reference internal" href="#select-input-data">Select Input Data</a></li>
-<li><a class="reference internal" href="#processing-service-parameters">Processing Service Parameters</a></li>
-<li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
-<li><a class="reference internal" href="#running-the-job">Running the job</a></li>
-<li><a class="reference internal" href="#view-results">View results</a></li>
+<li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li><a class="reference internal" href="#fill-parameters">Fill parameters</a><ul>
+<li><a class="reference internal" href="#product-polarisation">Product polarisation</a></li>
+<li><a class="reference internal" href="#bounding-box">Bounding Box</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -129,11 +134,11 @@
               
                 
   <li>
-    <a href="s3-slstr-composites.html" title="Previous Chapter: Sentinel-3 SLSTR composites"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Sentinel-3 SL...</span>
+    <a href="rss_full_resolution_rasterization.html" title="Previous Chapter: RASTER - Full Resolution Rasterization"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; RASTER - Full...</span>
     </a>
   </li>
   <li>
-    <a href="snap-csk.html" title="Next Chapter: SNAP CSK DInSAR"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">SNAP CSK DInSAR &raquo;</span>
+    <a href="sar-flood-tool.html" title="Next Chapter: SAR Flood Tool Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">SAR Flood Too... &raquo;</span>
     </a>
   </li>
               
@@ -142,7 +147,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/rss_snap_s1_snac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/ewf-sarpipe.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -195,18 +200,19 @@
 <li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ewf-sarpipe.html">S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s3-slstr-composites.html">Sentinel-3 SLSTR composites</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SNAC - SNAP S-1 GRD Amplitude Change</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#select-input-data">Select Input Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#processing-service-parameters">Processing Service Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#view-results">View results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fill-parameters">Fill parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-job-and-results-browsing">Run the job and results browsing</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="s3-slstr-composites.html">Sentinel-3 SLSTR composites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
 <li class="toctree-l2"><a class="reference internal" href="snap-csk.html">SNAP CSK DInSAR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
@@ -216,7 +222,7 @@
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/rss_snap_s1_snac.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/ewf-sarpipe.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -230,58 +236,62 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="snac-snap-s-1-grd-amplitude-change">
-<h1>SNAC - SNAP S-1 GRD Amplitude Change<a class="headerlink" href="#snac-snap-s-1-grd-amplitude-change" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/tuto_snap_s1_snac_icon.png" src="../_images/tuto_snap_s1_snac_icon.png" />
-<p><strong>SNAC - SNAP S-1 GRD Amplitude Change</strong></p>
-<p>The S-1 Amplitude change on-demand processing service provides RGB composite of backscattering from a pair Sentinel-1 GRD IW and EW products (e.g. pre- and post-event) processed in SNAP.</p>
+  <div class="section" id="s-1-sar-pipe-sentinel-1-interferometric-processing-engine">
+<h1>S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<a class="headerlink" href="#s-1-sar-pipe-sentinel-1-interferometric-processing-engine" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/ewf_sarpipe_icon.png" src="../_images/ewf_sarpipe_icon.png" />
+<p><strong>S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine</strong></p>
+<p>S-1 SAR PIPE is a Sentinel-1 SAR data processing chain developed by ARESYS.</p>
+<p>This service allows to produce interferograms and coherence maps starting from Sentinel-1 RAW data, supporting both STRIPMAP and TOPSAR (IW and EW) acquisition modes.</p>
+<p>Its main advantages are:</p>
+<ul class="simple">
+<li>the data stack consistency, ensured starting the processing directly from RAW data, and</li>
+<li>the processing efficiency, ensured limiting the analysis only to the desired area of interest.</li>
+</ul>
 <p><strong>EO sources supported</strong>:</p>
-<blockquote>
-<div><ul class="simple">
-<li>Sentinel-1 IW and EW GRD products</li>
+<ul class="simple">
+<li>Sentinel-1 STRIPMAP and TOPSAR (IW and EW) RAW data</li>
 </ul>
-</div></blockquote>
 <p><strong>Output specifications</strong></p>
-<p>The service provides 3 output products.</p>
+<p>The service provides 2 output products:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="22%" />
 <col width="78%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Output-1 – Amplitude Change RGB Composite</th>
+<tr class="row-odd"><th class="head" colspan="2">Interferogram</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Correspondent file</td>
-<td>Amplitude Change RGB Composite</td>
+<td>Interferogram</td>
 </tr>
 <tr class="row-odd"><td>Information types</td>
-<td>RGB Composite   : RED=(Slave Sigma0), GREEN=(Master Sigma0), BLUE=(Master Sigma0)</td>
+<td>Interferogram (abs and phase) computed from input RAW couple, focused and coregistered</td>
 </tr>
 <tr class="row-even"><td>Raster format</td>
 <td>GeoTIFF</td>
 </tr>
-<tr class="row-odd"><td>resolution</td>
-<td>Native or User selection</td>
+<tr class="row-odd"><td>Resolution</td>
+<td>Native (same as <a class="reference external" href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/resolutions/level-1-single-look-complex">Level-1 SLC products</a>)</td>
 </tr>
 <tr class="row-even"><td>Projection types</td>
-<td>EPSG:3857 - WGS84 – Pseudo Mercator</td>
+<td>SAR coordinates (slant range vs azimuth)</td>
 </tr>
 <tr class="row-odd"><td>Bit depth</td>
-<td>Unsigned Integer 8 bit</td>
+<td>Float 32 complex</td>
 </tr>
 <tr class="row-even"><td>Processing Level</td>
-<td>RGB composite</td>
+<td>L2</td>
 </tr>
 <tr class="row-odd"><td>Physical product available</td>
-<td>NO but a 8 bit GeoTIFF Product is provided</td>
+<td>YES</td>
 </tr>
 <tr class="row-even"><td>Browse product available</td>
-<td>YES as 8 bit PNG file</td>
+<td>YES (both GeoTIFF and PNG)</td>
 </tr>
 <tr class="row-odd"><td>Output Filename example</td>
-<td>S1_GRD_VV_20171216_20171204_RGB_Amplitude_Change.tif</td>
+<td>&lt;product name&gt;_interferogram.tif</td>
 </tr>
 </tbody>
 </table>
@@ -294,24 +304,24 @@
 <col width="78%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Output-2 - Master Product Backscatter</th>
+<tr class="row-odd"><th class="head" colspan="2">Coherence map</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Correspondent file</td>
-<td>Master Product Backscatter</td>
+<td>Coherence map</td>
 </tr>
 <tr class="row-odd"><td>Information types</td>
-<td>SAR backscatter calibrated and terrain corrected [db]</td>
+<td>Coherence map computed from input RAW couple, focused and coregistered</td>
 </tr>
 <tr class="row-even"><td>Raster format</td>
 <td>GeoTIFF</td>
 </tr>
-<tr class="row-odd"><td>resolution</td>
-<td>Native or User selection</td>
+<tr class="row-odd"><td>Resolution</td>
+<td>Native (same as <a class="reference external" href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/resolutions/level-1-single-look-complex">Level-1 SLC products</a>)</td>
 </tr>
 <tr class="row-even"><td>Projection types</td>
-<td>EPSG:4326 - WGS84</td>
+<td>SAR coordinates (slant range vs azimuth)</td>
 </tr>
 <tr class="row-odd"><td>Bit depth</td>
 <td>Float 32</td>
@@ -323,147 +333,138 @@
 <td>YES</td>
 </tr>
 <tr class="row-even"><td>Browse product available</td>
-<td>YES (GeoTIFF)</td>
+<td>YES (both GeoTIFF and PNG)</td>
 </tr>
 <tr class="row-odd"><td>Output Filename example</td>
-<td>S1B_IW_GRDH_1SDV_20171204T105228_20171204T105253_008568_00F359_76F2_Orb_Cal_ML_TC_DB.tif</td>
+<td>&lt;product name&gt;_coherence.tif</td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<table border="1" class="docutils">
-<colgroup>
-<col width="22%" />
-<col width="78%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Output-3 – Slave Product Backscatter</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Correspondent file</td>
-<td>Slave Product Backscatter</td>
-</tr>
-<tr class="row-odd"><td>Information types</td>
-<td>SAR backscatter calibrated and terrain corrected [db]</td>
-</tr>
-<tr class="row-even"><td>Raster format</td>
-<td>GeoTIFF</td>
-</tr>
-<tr class="row-odd"><td>resolution</td>
-<td>Native or User selection</td>
-</tr>
-<tr class="row-even"><td>Projection types</td>
-<td>EPSG:4326 - WGS84</td>
-</tr>
-<tr class="row-odd"><td>Bit depth</td>
-<td>Float 32</td>
-</tr>
-<tr class="row-even"><td>Processing Level</td>
-<td>L2</td>
-</tr>
-<tr class="row-odd"><td>Physical product available</td>
-<td>YES</td>
-</tr>
-<tr class="row-even"><td>Browse product available</td>
-<td>YES (GeoTIFF)</td>
-</tr>
-<tr class="row-odd"><td>Output Filename example</td>
-<td>S1B_IW_GRDH_1SDV_20171216T105228_20171216T105253_008743_00F8E8_8E00_Orb_Cal_ML_TC_DB.tif</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>the &#8220;Browse GeoTIFF&#8221; product is always a GeoTIFF file with the same resolution of the physical product, with Uint8 bit depth and projection EPSG:3857.</li>
-<li>The “Browse PNG” product is always a PNG file with the same resolution of the physical product, with Uint8 bit depth.</li>
-</ul>
-</div>
 <hr class="docutils" />
-<p>The S-1 Amplitude change on-demand processing service provides RGB composite of backscattering from a pair Sentinel-1 GRD IW and EW products (e.g. pre- and post-event) processed in SNAP. For the purpose of change detection, the user can create RGB band combination out of two amplitude bands of S-1 for instance pre-disaster and post-disaster. The user can manually (e.g. drag and drop, choosing from the list) specify EO data products. Additionally, the user can cut the output product to the specified bounding box. The output product can be used in further processing (outside of the platform) to extract for instance extent of flood.</p>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="select-the-processing">
-<h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
+<h3>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
-<li>Select the processing service <strong>SNAC – SNAP S-1 GRD Amplitude Change</strong>:</li>
+<li>Select the processing service <strong>S-1 SAR PIPE</strong>:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_1.png"><img alt="../_images/tuto_rss_snap_s1_snac_1.png" src="../_images/tuto_rss_snap_s1_snac_1.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/ewf_sarpipe_tutorial_01.png"><img alt="../_images/ewf_sarpipe_tutorial_01.png" src="../_images/ewf_sarpipe_tutorial_01.png" style="width: 750px;" /></a>
 </div>
 </div>
-<div class="section" id="select-input-data">
-<h2>Select Input Data<a class="headerlink" href="#select-input-data" title="Permalink to this headline">¶</a></h2>
-<p>The service accept in input:  <strong>Sentinel-1 IW and EW GRD</strong> products</p>
-<p>In order to perform a catalogue search for the selection of the input product to be processed the user shall:</p>
+<div class="section" id="select-the-files-to-process">
+<h3>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h3>
+<p>This service takes as input a list of Sentinel-1 RAW products.</p>
+<p>The oldest image is selected to be the <strong>Master</strong> one, i.e. the reference product on which the others (the Slaves) are re-projected and resampled to compute the interferometric phase and interferometric coherence.</p>
+<p>Input SAR data selection must be carried out with particular care, since a wrong data selection can result to an unfeasible processing:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Click on the “EO data” button on the top right menu</li>
-<li>Select the mission:  Sentinel-1</li>
-<li>Click on the lens icon on the left side menu to set additional query parameters</li>
-<li>Select GRD as product type</li>
-<li>Draw a rectangular bounding box over the map which correspond to the area of interest</li>
-<li>Set the start and stop time on the bottom sliding bar in order to select the time interval</li>
-<li>Perform the catalogue search and select the products of interest</li>
+<li>The processing service accepts as inputs <strong>only Sentinel-1 RAW (i.e. Level-0) data</strong>.</li>
+<li>The Sentinel-1 RAW data must pertain to the <strong>same acquisition mode</strong>.</li>
+<li>The user must select <strong>images related to the same track only</strong>.</li>
+<li>The user must select <strong>images related to the same polarization only</strong>.</li>
+<li><strong>Spatial overlap</strong> is strictly needed between the images pair.</li>
 </ul>
 </div></blockquote>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_11.png" src="../_images/ewf_sarpipe_tutorial_11.png" />
+</div>
+<p>For this tutorial, a pre-defined data set has been prepared to speed up data selection step:</p>
+<ul class="simple">
+<li>Browse the Data Packages looking for <strong>S-1 SAR PIPE &#8211; August 2016 Central Italy earthquake</strong> package and click on the <strong>load</strong> button to upload it.</li>
+</ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_2.png"><img alt="../_images/tuto_rss_snap_s1_snac_2.png" src="../_images/tuto_rss_snap_s1_snac_2.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/ewf_sarpipe_tutorial_02.png"><img alt="../_images/ewf_sarpipe_tutorial_02.png" src="../_images/ewf_sarpipe_tutorial_02.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Select all the products, then drag and drop the selected data in the <strong>L0 level data input</strong> field.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_03.png" src="../_images/ewf_sarpipe_tutorial_03.png" />
 </div>
 </div>
-<div class="section" id="processing-service-parameters">
-<h2>Processing Service Parameters<a class="headerlink" href="#processing-service-parameters" title="Permalink to this headline">¶</a></h2>
-<p>The “S-1 SNAP Amplitude Change” service panel is displayed with six parameter values to be filled-in:</p>
+<div class="section" id="fill-parameters">
+<h3>Fill parameters<a class="headerlink" href="#fill-parameters" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Scroll down the S-1 SAR PIPE configuration menu to show all the parameters.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_04.png" src="../_images/ewf_sarpipe_tutorial_04.png" />
+</div>
+<div class="section" id="product-polarisation">
+<h4>Product polarisation<a class="headerlink" href="#product-polarisation" title="Permalink to this headline">¶</a></h4>
+<p>S-1 SAR PIPE processes only one polarisation channel that can be selected between:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>Job title</strong>: a job caption to be assigned in order to recognize the job within the job list</li>
-<li><strong>Master product reference</strong>:  selected master product from the catalogue search results basket</li>
-<li><strong>Slave product reference</strong>:  selected slave product from the catalogue search results basket</li>
-<li><strong>Product Polarization</strong>  product polarization to be considered in the processing</li>
-<li><strong>Subset Bounding Box (optional)</strong>: Bounding Box to be used to crop the output product around the area of interest ; if left empty the full scene is considered and no crop is applied</li>
-<li><strong>Pixel Spacing in meter</strong>: output product pixel spacing in meter unit</li>
+<li><strong>VV</strong>: Vertical in both transmission and receiving phases, contained in DV and SV products (default value).</li>
+<li><strong>VH</strong>: Vertical in transmission phase and Horizontal in receiving phase, contained only in DV products.</li>
+<li><strong>HH</strong>: Horizontal in both transmission and receiving phases, contained in DH and SH products.</li>
+<li><strong>HV</strong>: Horizontal in transmission phase and Vertical in receiving phase, contained only in DH products.</li>
 </ul>
 </div></blockquote>
+<p><strong>For this run leave the VV default value.</strong></p>
 </div>
-<div class="section" id="fill-the-parameters">
-<h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
-<p>After the selection of input data, the user can start filling the parameters:</p>
+<div class="section" id="bounding-box">
+<h4>Bounding Box<a class="headerlink" href="#bounding-box" title="Permalink to this headline">¶</a></h4>
+<p>With this parameter is possible to set the AOI (Area Of Interest) where the interferometric processing is performed.
+The AOI format is:</p>
+<blockquote>
+<div>lon_min,lat_min,lon_max,lat_max</div></blockquote>
+<p><strong>For this run set this AOI: 13.0,42.5,13.4,42.9</strong></p>
+</div>
+</div>
+<div class="section" id="run-the-job-and-results-browsing">
+<h3>Run the job and results browsing<a class="headerlink" href="#run-the-job-and-results-browsing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Click on the button <strong>Run Job</strong> and see the <strong>Running Job</strong>.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_05.png" src="../_images/ewf_sarpipe_tutorial_05.png" />
+</div>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_06.png" src="../_images/ewf_sarpipe_tutorial_06.png" />
+</div>
+<ul class="simple">
+<li>After the processing end (it can take some time, depending on the AOI dimensions), see the <strong>Successful Job</strong>:</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_07.png" src="../_images/ewf_sarpipe_tutorial_07.png" />
+</div>
+<ul class="simple">
+<li>Scroll down the <strong>Job status</strong> screen, click on the button <strong>Show results</strong>, then check the results list on the <strong>Results Table</strong> in the bottom left side:</li>
+</ul>
+<p>The following outputs are listed:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Insert a job title (e.g. “Amplitude Change 2017-12-20”).</li>
-<li>From the Feature basket table drag and drop the EO data product that you want to use as master.</li>
+<li><strong>&lt;product name&gt;_interferogram.tif</strong>: this is the product that contains the interferogram computed between Master and Slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.</li>
+<li><strong>&lt;product name&gt;_coherence.tif</strong>: this is the product that contains the coherence map computed between Master and Slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.</li>
 </ul>
 </div></blockquote>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_3.png"><img alt="../_images/tuto_rss_snap_s1_snac_3.png" src="../_images/tuto_rss_snap_s1_snac_3.png" style="width: 750px;" /></a>
+<ul class="simple">
+<li>Click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend.</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_08.png" src="../_images/ewf_sarpipe_tutorial_08.png" />
 </div>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_4.png"><img alt="../_images/tuto_rss_snap_s1_snac_4.png" src="../_images/tuto_rss_snap_s1_snac_4.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_09.png" src="../_images/ewf_sarpipe_tutorial_09.png" />
 </div>
-</div>
-<div class="section" id="running-the-job">
-<h2>Running the job<a class="headerlink" href="#running-the-job" title="Permalink to this headline">¶</a></h2>
-<p>Click on “Run Job” button from the processor configuration panel and wait for the job to complete.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_5.png"><img alt="../_images/tuto_rss_snap_s1_snac_5.png" src="../_images/tuto_rss_snap_s1_snac_5.png" style="width: 750px;" /></a>
-</div>
-<p>You can monitor the job status under “My jobs” tag which contains the list of other jobs associated to your user. If a failure occur you can re-submit the job. Details on the submitted job can be accessed by clicking on the title of the job.</p>
-</div>
-<div class="section" id="view-results">
-<h2>View results<a class="headerlink" href="#view-results" title="Permalink to this headline">¶</a></h2>
-<p>Once the job is completed successfully, click on the Show results on map button.</p>
-<p>The service provides as output the following products in GeoTIFF format:</p>
+<ul>
+<li><p class="first">Click on the product name and then on the <strong>Download</strong> button that appears in the info tab. Depending on the output the following products can be downloaded:</p>
 <blockquote>
 <div><ul class="simple">
-<li>RGB combination : Red=( Sigma0 slave ), Green=( Sigma0 master ) , Blue=( Sigma0 master )</li>
-<li>Sigma0 of master product [db]</li>
-<li>Sigma0 of slave product [db]</li>
+<li><strong>Product File (tif)</strong>: this is the physical quantity.</li>
+<li><strong>Browse GeoTiff</strong>: this is the GeoTiff browse product as shown on the map.</li>
+<li><strong>Browse Legend (png)</strong>: this is the PNG browse product.</li>
+<li><strong>Metadata (properties)</strong>: a txt file containing all the metadata info displayed in the info tab.</li>
 </ul>
 </div></blockquote>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_rss_snap_s1_snac_6.png"><img alt="../_images/tuto_rss_snap_s1_snac_6.png" src="../_images/tuto_rss_snap_s1_snac_6.png" style="width: 750px;" /></a>
+</li>
+</ul>
+<div class="align-center width px align center figure">
+<img alt="../_images/ewf_sarpipe_tutorial_10.png" src="../_images/ewf_sarpipe_tutorial_10.png" />
+</div>
 </div>
 </div>
 </div>
