@@ -29,6 +29,7 @@ Contents:
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
    PSI Post-Processing Service<psi_post_proc>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>
+   S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
    SAR Flood Tool Service<sar-flood-tool>
    Sentinel-3 SLSTR composites<s3-slstr-composites>   
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
