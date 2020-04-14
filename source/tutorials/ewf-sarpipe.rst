@@ -80,11 +80,8 @@ The service provides 2 output products:
 -----
 
 
-Tutorial
---------
-
-Select the processing
-=====================
+Select the processing Service
+=============================
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
