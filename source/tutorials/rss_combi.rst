@@ -225,7 +225,7 @@ in which “MM” stands for mission acronym (e.g. S2 for Sentinel-2), “X” f
 
 .. figure:: assets/tuto_combi_14.png
         :figclass: align-center
-        :width: 750px
+        :width: 650px
         :align: center 
 
 These three different outputs allow the user to choose the more effective RGB composite for the visualization of the image stack. This choice may be different according to cloud coverage percentage and or the surface heterogeneity of the scene.
@@ -289,7 +289,10 @@ For a proper use of the COMBI service is worth to highlight the correspondences 
  
  
 [1] ESA. SENTINEL-2 Radiometric Resolutions. https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/resolutions/radiometric (Accessed 25th February 2020).
+
 [2] USGS. Landsat 8 band designations for the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS). https://www.usgs.gov/media/images/landsat-8-band-designations (Accessed 24th February 2020).
+
 [3] Lachérade, S., Fourest, S., Gamet, P., & Lebègue, L. (2012). PLEIADES absolute calibration: inflight calibration sites and methodology. PAN, 1(B2), B3.
+
 [4]. ESA. GF-2 (Gaofen-2) High-resolution Imaging Satellite / CHEOS series of China https://directory.eoportal.org/web/eoportal/satellite-missions/g/gaofen-2 (Accessed 1sth March 2020).
 
