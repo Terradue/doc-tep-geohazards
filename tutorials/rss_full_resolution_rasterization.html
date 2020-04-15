@@ -234,23 +234,15 @@
 <h1>RASTER - Full Resolution Rasterization<a class="headerlink" href="#raster-full-resolution-rasterization" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_rss_full_resolution_rasterization_icon.png" src="../_images/tuto_rss_full_resolution_rasterization_icon.png" />
 <p><strong>Full Resolution Rasterization</strong></p>
-<p>This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution
-Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to
-visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the
-geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.</p>
-<p>The service supports optical and SAR detected products from the following missions: Pleiades 1A/1B, SPOT-
-6/-7, Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-2/-3, Kanopus-V, Resurs-P, Terrasar-X, Sentinel-1, ALOS,
-ALOS-2, Radarsat-2, Rapideye, Deimos-1, VRSS1, GF-2.</p>
-<p>The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the
-map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The
-output GeoTiff is displayed in geobrowser with the possibility to access product metadata and download
-original dataset to be used in further processing.</p>
+<p>This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.</p>
+<p>The service supports optical and SAR detected products from the following missions:      ALOS-2, GF-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, Landsat 8 (OLI), Pleiades-1, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, Sentinel-3 (OLCI and SLSTR), SPOT 6/7, TerraSAR-X, UK-DMC 2 and VRSS1.</p>
+<p>The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The output GeoTIFF is displayed in geobrowser with the possibility to access product metadata and download original dataset to be used in further processing.</p>
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_rss_full_resolution_rasterization_output_table.png" src="../_images/tuto_rss_full_resolution_rasterization_output_table.png" />
 </div>
 <div class="section" id="select-the-processing-service">
 <h2>Select the Processing Service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
-<p>Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Full Resolution Rasterization” service.</p>
+<p>Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Full Resolution Rasterization - RASTER” service.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_full_resolution_rasterization_1.png"><img alt="../_images/tuto_rss_full_resolution_rasterization_1.png" src="../_images/tuto_rss_full_resolution_rasterization_1.png" style="width: 750px;" /></a>
 </div>
@@ -281,20 +273,20 @@ original dataset to be used in further processing.</p>
 </div>
 <div class="section" id="full-resolution-rasterization-of-open-eo-product-catalogue-entry">
 <h2>Full Resolution Rasterization of Open EO product catalogue entry<a class="headerlink" href="#full-resolution-rasterization-of-open-eo-product-catalogue-entry" title="Permalink to this headline">¶</a></h2>
-<p>In this tutorial you are going to process a sample of free EO data product, derived from Sentinel-2 data collection, with the Full Resolution Rasterization service.
-From the top bar click on the “EO data” context link to access the list of selected free EO data collections (e.g. Sentinel-2).</p>
+<p>In this tutorial you are going to process a sample of free EO data product, derived from Sentinel-2 data collection (reference: <a class="reference external" href="http://www.esa.int/ESA_Multimedia/Images/2019/09/Australian_bushfires">http://www.esa.int/ESA_Multimedia/Images/2019/09/Australian_bushfires</a>), with the Full Resolution Rasterization service.</p>
+<p>From the top bar click on the “EO data” context link to access the list of selected free EO data collections (e.g. Sentinel-2).</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_full_resolution_rasterization_4.png"><img alt="../_images/tuto_rss_full_resolution_rasterization_4.png" src="../_images/tuto_rss_full_resolution_rasterization_4.png" style="width: 750px;" /></a>
 </div>
-<p>Zoom in into a specific area of interest (e.g. Italy). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. Rome):</p>
+<p>Zoom in into a specific area of interest (e.g. Australia). Apply spatial filter by drawing a rectangle on the map around your area of interest (e.g. the Clarence river mouth around Yamba in the northern New South Wales):</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_full_resolution_rasterization_5.png"><img alt="../_images/tuto_rss_full_resolution_rasterization_5.png" src="../_images/tuto_rss_full_resolution_rasterization_5.png" style="width: 750px;" /></a>
 </div>
-<p>Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 01 – 20 Aug 17). Then click on the button <em>Search</em>:</p>
+<p>Click on the “Search Form” icon and select as product type the L2A product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. from 20 Aug to 10 Sep 2019). Then click on the button Search:</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_full_resolution_rasterization_6.png"><img alt="../_images/tuto_rss_full_resolution_rasterization_6.png" src="../_images/tuto_rss_full_resolution_rasterization_6.png" style="width: 750px;" /></a>
 </div>
-<p>All acquisitions related to specified queries are listed in the Results tab:</p>
+<p>All acquisitions related to specified queries are listed in the Results tab. A dedicated quicklook window, on the right side of the geobrowser, is also given to facilitate the choice of the desired product.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_rss_full_resolution_rasterization_7.png"><img alt="../_images/tuto_rss_full_resolution_rasterization_7.png" src="../_images/tuto_rss_full_resolution_rasterization_7.png" style="width: 750px;" /></a>
 </div>

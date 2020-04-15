@@ -5,10 +5,9 @@ COMBI - Band Combination
         
 **Band Combination**
 
-This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: ALOS, ALOS-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, GF2, Landsat 8, Pleiades 1A/1B, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, SPOT 6, SPOT 7, TerraSAR-X, VRSS1 and UK-DMC 2.
+This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: ALOS-2, GF-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, Landsat 8 (OLI), Pleiades-1, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, Sentinel-3 (OLCI and SLSTR), SPOT 6/7, TerraSAR-X, UK-DMC 2 and VRSS1. 
 
-The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file.
-
+The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file. For selected sensors visualization enhancements are available.
 
 **Output specifications**
 
@@ -207,3 +206,93 @@ Hereinafter is described a procedure to obtain a RGB composite from the combinat
         :width: 750px
         :align: center 
  
+Enhanced RGB composite visualization
+====================================
+
+In order to improve the visualization of raster data, contrast enhancement of multispectral color composite is applied by stretching reflectance values across a portion or entire range of the raster histogram distribution. Histogram contrast stretching is a widely employed technique to visually enhance the appearance of the image. In this processor three different stretch types are applied:
+
+1.      Percent clip from 2 to 96 percent of histogram,
+2.      Minimum to Maximum,
+3.      Image stretching between 0 and 0.3 reflectance.
+
+As a result, the user will get as output the correspondent 3 RGB composite in GeoTIFF format:
+
+1.      RGB_MM_X_MM_Y_MM_Z.tif (default product),
+2.      RGB_MM_X_MM_Y_MM_Z_minmax.tif,
+3.      RGB_MM_X_MM_Y_MM_Z_browse.tif.
+
+in which “MM” stands for mission acronym (e.g. S2 for Sentinel-2), “X” for product band number for Red, “Y” for product band number for Green and “Z” product band number for Blue.
+
+.. figure:: assets/tuto_combi_14.png
+        :figclass: align-center
+        :width: 650px
+        :align: center 
+
+These three different outputs allow the user to choose the more effective RGB composite for the visualization of the image stack. This choice may be different according to cloud coverage percentage and or the surface heterogeneity of the scene.
+
+The enhanced RGB composite visualization is currently available only for the following sensors:
+
+•       Sentinel-2 (L1C, L2A),
+•       Sentinel-3 (EFR, ERR),
+•       Pleiades 1A/B,
+•       Kompsat-2,
+•       Kompsat-3,
+•       Landsat-8.
+ 
+Hereinafter is shown a sample result over the coast of Naples using the below combination of S2 products:
+
+1.      Red band product: S2B_MSIL1C_20190811T095039_N0208_R079_T33TVF_20190811T122017
+        Red band index: band_4
+2.      Green band product: S2B_MSIL1C_20190702T095039_N0207_R079_T33TVF_20190702T115813
+        Green band index: band_3
+3.      Blue band product: S2B_MSIL1C_20190612T095039_N0207_R079_T33TVF_20190612T115445
+        Blue band index: band_2
+
+Location map:
+
+.. figure:: assets/tuto_combi_15.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+RGB_S2_4_S2_3_S2_2.tif – RGB combination 2-96 percent of histogram (RGB_S2_4_S2_3_S2_2.tif):
+
+.. figure:: assets/tuto_combi_16.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+
+RGB combination – Min to Max (RGB_S2_4_S2_3_S2_2_MinMax.tif)
+ 
+.. figure:: assets/tuto_combi_17.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+RGB_S2_4_S2_3_S2_2_QuickLook.tif – RGB composite - Stretched between 0 and 0.3
+ 
+.. figure:: assets/tuto_combi_18.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+
+Service bands versus Platform bands
+===================================
+
+For a proper use of the COMBI service is worth to highlight the correspondences between the service band selection with the bands of some of the sensors supported by the service, such as Sentinel-2, Landsat 8 among others (see Table below for more complete information).
+
+.. figure:: assets/tuto_combi_19.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+ 
+[1] ESA. SENTINEL-2 Radiometric Resolutions. https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/resolutions/radiometric (Accessed 25th February 2020).
+
+[2] USGS. Landsat 8 band designations for the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS). https://www.usgs.gov/media/images/landsat-8-band-designations (Accessed 24th February 2020).
+
+[3] Lachérade, S., Fourest, S., Gamet, P., & Lebègue, L. (2012). PLEIADES absolute calibration: inflight calibration sites and methodology. PAN, 1(B2), B3.
+
+[4]. ESA. GF-2 (Gaofen-2) High-resolution Imaging Satellite / CHEOS series of China https://directory.eoportal.org/web/eoportal/satellite-missions/g/gaofen-2 (Accessed 1sth March 2020).
+
