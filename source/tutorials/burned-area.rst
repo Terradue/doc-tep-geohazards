@@ -46,7 +46,7 @@ Select the processing
 
 .. figure:: assets/tuto_burned-area_1.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 The "Sentinel-2 Burned Area Analysis" panel is displayed with parameters values to be filled-in.
@@ -62,7 +62,7 @@ Pre-event product reference
 
 .. figure:: assets/tuto_burned_area_1.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 * Click on the lens icon and select **S2MSI2A** as Product Type in the Search Panel
@@ -70,14 +70,14 @@ Pre-event product reference
 
 .. figure:: assets/tuto_burned_area_2.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 * Drag and Drop the selected item in the first *Input reference* field:
 
 .. figure:: assets/tuto_burned_area_3.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 .. NOTE:: pre-event input can be picked up directly by using the following text filter: S2A_MSIL2A_20190815T140101_N0213_R067_T21KUU_20190815T214633
@@ -90,7 +90,7 @@ Pick one of the results having the same track, then drag and drop one of the res
 
 .. figure:: assets/tuto_burned_area_4.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 .. NOTE:: post-event input can be picked up directly by using the following text filter: S2B_MSIL2A_20190830T140059_N0213_R067_T21KUU_20190830T180923
@@ -105,8 +105,7 @@ Area Of Interest in WKT
         :width: 750px
         :align: center
 
-.. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*. The WKT used for this tutorial is: POLYGON((84.889 27.641,84.889 27.937,85.233 27.937,85.233 27.641,84.889 27.641))
-
+.. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*.
 Run the job
 ===========
 
