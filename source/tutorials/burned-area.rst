@@ -10,7 +10,8 @@ Sentinel-2 Burned Area Analysis
    <br />
 
 This service takes as input a pair (pre-event and post-event) of Sentinel-2 MSI L2A products and generates a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions. |br|
-This service work better when post fire image is very close to the fire data and masks are applied for the water pixels.
+This service work better when post fire image is very close to the fire date. |br|
+The masks for the water pixels has been applied.
 
 **EO sources supported**
 
@@ -35,7 +36,8 @@ The formula used to estimate burn severity is the Normalized Band Ratio (NBR):
 |	
 
 A high NBR value indicates healthy vegetation while a low value indicates bare ground and recently burnt areas. Non-burnt areas are normally attributed to values close to zero.
-The difference between the pre-fire and post-fire NBR obtained from the images is used to calculate the delta NBR (dNBR or ∆NBR). [1]_ [2]_
+The Burned Area Analysis product output of the service provides the delta Normalized Burn Ratio (dNBR) and the Relativized Burn Ratio (RBR).
+The dNBR (the difference between pre-fire and post-fire) is useful to identify recently burned areas and differentiate them from bare soil and other non-vegetated areas. The RBR is advantageous when the absolute change between pre-fire and post-fire NBR is small.
 
 Select the processing
 =====================
@@ -60,7 +62,7 @@ Pre-event product reference
 * Select the Sentinel-2 data collection in the EO Data button.
 * Select the area for which you want to do an anlysis, e.g Corumba in Brasil.
 
-.. figure:: assets/tuto_burned_area_1.png
+.. figure:: assets/burned_area-2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -68,14 +70,14 @@ Pre-event product reference
 * Click on the lens icon and select **S2MSI2A** as Product Type in the Search Panel
 * Apply the date value **2019-08-15** in both **time:start** and **time:end** fields
 
-.. figure:: assets/tuto_burned_area_2.png
+.. figure:: assets/burned_area-3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 * Drag and Drop the selected item in the first *Input reference* field:
 
-.. figure:: assets/tuto_burned_area_3.png
+.. figure:: assets/burned_area-4.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -88,7 +90,7 @@ Post-event product reference
 * Perform the same procedure described previously (`Pre-event product reference`_), using the value **2019-08-30**.
 Pick one of the results having the same track, then drag and drop one of the results in the *Input reference* field:
 
-.. figure:: assets/tuto_burned_area_4.png
+.. figure:: assets/burned_area-5.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -100,7 +102,7 @@ Area Of Interest in WKT
 
 * Click on the *Magic tool wizard* and select **AOI**. The input parameter is automatically filled with the WKT representing the area selected.
 
-.. figure:: assets/tuto_burned_area_5.png
+.. figure:: assets/burned_area-6.png
 	:figclass: align-center
         :width: 350px
         :align: center
@@ -111,7 +113,7 @@ Run the job
 
 * Click on the button Run Job and see the Running Job
 
-.. figure:: assets/tuto_burned_area_6.png
+.. figure:: assets/burned_area-7.png
 	:figclass: align-center
         :width: 350px
         :align: center
@@ -125,7 +127,7 @@ Results: download and visualization
 
 * See the result on map:
 
-.. figure:: assets/tuto_burned_area_7.png
+.. figure:: assets/burned_area-8.png
     :figclass: align-center
         :width: 750px
         :align: center
@@ -146,5 +148,5 @@ Reference
 
 Further reading
 ==================================
-.. [1] Normalized Burn Ratio by Humbold State University - `link <http://gsp.humboldt.edu/OLM/Courses/GSP_216_Online/lesson5-1/NBR.html>`_.
-.. [2] UN-SPYDER Knowledge Portal – Normalized Burn Ratio - `link <http://un-spider.org/node/10959>`_.
+- Normalized Burn Ratio by Humbold State University - `link <http://gsp.humboldt.edu/OLM/Courses/GSP_216_Online/lesson5-1/NBR.html>`_.
+- UN-SPYDER Knowledge Portal – Normalized Burn Ratio - `link <http://un-spider.org/node/10959>`_.
