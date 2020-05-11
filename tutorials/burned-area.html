@@ -244,7 +244,9 @@
 <h1>Sentinel-2 Burned Area Analysis<a class="headerlink" href="#sentinel-2-burned-area-analysis" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_burned-area_icon.png" src="../_images/tuto_burned-area_icon.png" />
 <p><strong>Sentinel-2 Burned Area Analysis</strong></p>
-<p>This service takes as input a pair (pre-event and post-event) of Sentinel-2 MSI L2A products and generates a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions.</p>
+<p>This service takes as input a pair (pre-event and post-event) of Sentinel-2 MSI L2A products and generates a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions. <br />
+This service work better when the post fire image is very close to the fire date. <br />
+The masks for the water pixels are applied by the service.</p>
 <p><strong>EO sources supported</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -260,7 +262,18 @@
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-<p>This tutorial will describe the processing of a pair of Sentinel-2 MSI images to generate a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions on the GEP.</p>
+<p>This tutorial will describe the processing of a pair of Sentinel-2 MSI images to generate a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions on the GEP. <br />
+The Burned Area map is obtained through the interesection between AOI and the pre-fire, post-fire Sentinel-2 choosen as input products. <br />
+The formula used to estimate burn severity is the Normalized Band Ratio (NBR):</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_burned-area_0.png"><img alt="../_images/tuto_burned-area_0.png" src="../_images/tuto_burned-area_0.png" style="width: 250px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>A high NBR value indicates healthy vegetation while a low value indicates bare ground and recently burnt areas. Non-burnt areas are normally attributed to values close to zero.
+The Burned Area Analysis product output of the service provides the delta Normalized Burn Ratio (dNBR) and the Relativized Burn Ratio (RBR).
+The dNBR (the difference between pre-fire and post-fire) is useful to identify recently burned areas and differentiate them from bare soil and other non-vegetated areas. The RBR is advantageous when the absolute change between pre-fire and post-fire NBR is small.</p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -281,20 +294,20 @@
 <li>Select the area for which you want to do an anlysis, e.g Corumba in Brasil.</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_1.1.png"><img alt="../_images/tuto_burned-area_1.1.png" src="../_images/tuto_burned-area_1.1.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-2.png"><img alt="../_images/burned_area-2.png" src="../_images/burned_area-2.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Click on the lens icon and select <strong>S2MSI2A</strong> as Product Type in the Search Panel</li>
 <li>Apply the date value <strong>2019-08-15</strong> in both <strong>time:start</strong> and <strong>time:end</strong> fields</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_2.png"><img alt="../_images/tuto_burned-area_2.png" src="../_images/tuto_burned-area_2.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-3.png"><img alt="../_images/burned_area-3.png" src="../_images/burned_area-3.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Drag and Drop the selected item in the first <em>Input reference</em> field:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_3.png"><img alt="../_images/tuto_burned-area_3.png" src="../_images/tuto_burned-area_3.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-4.png"><img alt="../_images/burned_area-4.png" src="../_images/burned_area-4.png" style="width: 750px;" /></a>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -308,7 +321,7 @@
 </ul>
 <p>Pick one of the results having the same track, then drag and drop one of the results in the <em>Input reference</em> field:</p>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_4.png"><img alt="../_images/tuto_burned-area_4.png" src="../_images/tuto_burned-area_4.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-5.png"><img alt="../_images/burned_area-5.png" src="../_images/burned_area-5.png" style="width: 750px;" /></a>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -321,11 +334,11 @@
 <li>Click on the <em>Magic tool wizard</em> and select <strong>AOI</strong>. The input parameter is automatically filled with the WKT representing the area selected.</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_5.png"><img alt="../_images/tuto_burned-area_5.png" src="../_images/tuto_burned-area_5.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-6.png"><img alt="../_images/burned_area-6.png" src="../_images/burned_area-6.png" style="width: 350px;" /></a>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the <em>Magic tool wizard</em>. The WKT used for this tutorial is: POLYGON((84.889 27.641,84.889 27.937,85.233 27.937,85.233 27.641,84.889 27.641))</p>
+<p class="last">you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the <em>Magic tool wizard</em>.</p>
 </div>
 </div>
 </div>
@@ -335,7 +348,7 @@
 <li>Click on the button Run Job and see the Running Job</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_burned-area_6.png"><img alt="../_images/tuto_burned-area_6.png" src="../_images/tuto_burned-area_6.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/burned_area-7.png"><img alt="../_images/burned_area-7.png" src="../_images/burned_area-7.png" style="width: 350px;" /></a>
 </div>
 <ul class="simple">
 <li>After about 20 minutes, see the Successful Job</li>
@@ -348,7 +361,7 @@
 <li>See the result on map:</li>
 </ul>
 <div class="align-center width px align center figure">
-<img alt="../_images/tuto_burned-area_7.png" src="../_images/tuto_burned-area_7.png" />
+<img alt="../_images/burned_area-8.png" src="../_images/burned_area-8.png" />
 </div>
 <ul>
 <li><p class="first">The following files are produced:</p>
