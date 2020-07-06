@@ -1,6 +1,9 @@
 GeoBrowser
 ======================================================
 
+.. figure:: ../../includes/geobrowser-geobrowser.png
+	:figclass: img-border img-max-width
+
 Intro
 ----------
 
@@ -29,6 +32,9 @@ Let's see in the details each component of the geobrowser.
 Geobrowser Layout
 -----------------
 
+.. figure:: ../../includes/geobrowser-geobrowser-layout.png
+	:figclass: img-border img-max-width
+
 The Geobrowser is composed of:
 
 - **Navigation map**, the map area;
@@ -47,14 +53,19 @@ TODO: talk about the layout
 Navigation map
 --------------
 
+.. figure:: ../../includes/geobrowser-navigation-map.png
+
 The navigation map is a simple geographic map, on which you can zoom in, zoom out, pan and see all the geographic features of the current results. The Navigation Map can show on the map features as:
-- Geometries (or footprints), like polygons or rectangles or points
-- Spatial image, like a jpg or png inside a defined bounding box
-- WMS layers
+- Geometries (or footprints), like polygons or rectangles or points;
+- Spatial image, like a jpg or png inside a defined bounding box;
+- WMS layers.
 
 Contexts menu
 -------------
 The Contexts menu is a menu placed on the top, representing a result of a query on a specific catalog with pre-defined search parameters. By choosing a context the Current search will switch with the relative Opensearch Description and optionally with the relative search parameters.
+
+.. figure:: ../../includes/geobrowser-contexts-menu.png
+
 
 The existing pre-defined contexts are:
 
