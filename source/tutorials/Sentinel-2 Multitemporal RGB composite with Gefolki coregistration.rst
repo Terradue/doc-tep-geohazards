@@ -104,7 +104,7 @@ Run the job
         :width: 350px
         :align: center
 
-* After about 20 minutes, see the Successful Job:
+* After about 45 minutes, see the Successful Job:
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-10.png
 	:figclass: align-center
@@ -126,3 +126,4 @@ Results: download and visualization
 * The following files are produced:
 
     - **Sentinel-2 Multitemporal RGB composite - product GeoTIFF RGB**
+    - **Input Product + selected bands - product GeoTIFF**
