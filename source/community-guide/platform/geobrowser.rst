@@ -194,9 +194,6 @@ Search Terms
 ^^^^^^^^^^^^
 The Search Terms is a default standard Opensearch Parameter. The geobrowser represent this with a simple input text widget, always visible on the top left of the map. It's a "keypress" triggered input, users don't need to press a confirmation after typing, the search is automatically launched as users stop to type the text to search.
 
-Geobrowser Clipboard
-^^^^^^^^^^^^^^^^^^^^
-
 Full Screen
 ^^^^^^^^^^^
 A simple button to switch to full screen.
