@@ -39,15 +39,13 @@ The Geobrowser is composed of:
 
 - **Navigation map**, the map area;
 - **Contexts menu**, a menu used to switch among predefinite search;
-- **Catalog panel**, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability: (TODO)
+- **Catalog panel**, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability:
    - **Search Panel**
    - **Results Panel**
    - **Features Basket panel (or saved results)**
    - **Data packages panel**
    - **Details panel**
 - **Processing panel**
-
-TODO: talk about the layout
 
 
 Navigation map
@@ -151,5 +149,60 @@ Job Details
 The job details view contains all job information, like some service info, job time, job author, job status (running, succeded, failed) and job results. A job result can be represented as a Opensearch Description element, so users can see the results of a job on the Navigation Map and on the Catalogue control by changing the Geobrowser Current Search with the job result. It's also possible to resubmit the job with the same parameters.
 
 
+Geobrowser Tools and Utils
+--------------------------
+
+Intelligent Map tools
+^^^^^^^^^^^^^^^^^^^^^
+To simplify the user view on the map, all the map tools buttons are hidden. To show them it's simply necessary go move on the left side of the map.
+
+
+Spatial Filters
+^^^^^^^^^^^^^^^
+Some Opensearch Descriptions have special standard parameters, for some of them the Geobrowser has a set of widget to allow users to easely and visually change the parameter values. For example, the geo:box parameter (filter by rectangle) and the geo:geometry parameter (filter by a custom shape in wkt) have some spatial buttons inside the map tools. From these controls, users can directly draw on the map the shape to perform the spatial query.
+
+-  |geobrowser_button_polygon.png| Edit the search bbox by drawing a polygon on the map
+-  |geobrowser_button_recbox.png| Edit the search bbox by drawing a rectangle on the map
+-  |geobrowser_button_placemark.png| Edit the search bbox by selecting a point as AOI
+-  |geobrowser_button_wkt.png| Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box
+
+
+Geocoding
+^^^^^^^^^
+
+The Geocoding control allow users to:
+- find some places on the map (giving a place text);
+- perform a spatial query on the data by a place found.
+A place text could be a country, a city name, a street, a mountain, a river, and so on.
+
+WMS Layers
+^^^^^^^^^^^^^^^^^^^
+The geobrowser can show multiple WMS (Web Map Service) layers if there are features exposing WMS layer information on the current search result.
+In order to improve the performance and the User experience, when an EO Collection exposes WMS layers, some of them can be active whereas others can be hidden. This behaviour happens after a certain level of zoom, moreover the actual number of the active layers is dynamic and depends on the number of WMS requests necessary to show the layers on the current view on the map.
+A User can interactively choose to see a hidden layer, by clicking on it on the Results Panel or directly on its footprint on the map. Footprints are indeed always visible on the map. Furthermore, a User can decide to "lock" one or more layers to study, for instance, correlations between them.
+Here below, a legend shows the possible statuses for a product in the result table:
+
+WMS Comparing
+^^^^^^^^^^^^^
+If 2 ore more features exposing WMS are selected, a new menu item is added on the features selecting dropdown menu: the "Compare Layers" button. By pressing this button an interactive visual comparing tool is opened, showing only the selected layers with a vertical slidebar. This tool is useful for juxtaposed wms layers to allow easy comparision and detection of changes.
+
+Time Slider
+^^^^^^^^^^^
+If the Current Opensearch Description exposes the standard temporal query parameters (time:start, time:end), and if the thematic app allows it, a Time Slider is added on the bottom of the map. This widget is useful to visual selecting a time range for a time restriction on the current search. Moreover, the Time Slider contains visual representation of the data distribution over the time.
+
+Search Terms
+^^^^^^^^^^^^
+The Search Terms is a default standard Opensearch Parameter. The geobrowser represent this with a simple input text widget, always visible on the top left of the map. It's a "keypress" triggered input, users don't need to press a confirmation after typing, the search is automatically launched as users stop to type the text to search.
+
+Geobrowser Clipboard
+^^^^^^^^^^^^^^^^^^^^
+
+Full Screen
+^^^^^^^^^^^
+A simple button to switch to full screen.
+
+Point Info
+^^^^^^^^^^
+By right-click on a empty point on the map a context menu will open to show some actions like "Center map here" (pan in the selected zone on the map), zoom in, zoom out, and a useful utils "Show coordinates". This utils will show a popup with information about the coordinates of the point selected on the map, in different formats.
 
 
