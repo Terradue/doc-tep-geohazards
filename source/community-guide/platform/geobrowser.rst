@@ -211,21 +211,34 @@ WMS Comparing
 ^^^^^^^^^^^^^
 If 2 ore more features exposing WMS are selected, a new menu item is added on the features selecting dropdown menu: the "Compare Layers" button. By pressing this button an interactive visual comparing tool is opened, showing only the selected layers with a vertical slidebar. This tool is useful for juxtaposed wms layers to allow easy comparision and detection of changes.
 
+.. figure:: ../../includes/geobrowser-compare-1.png
+
+.. figure:: ../../includes/geobrowser-compare-2.gif
+
 Time Slider
 ^^^^^^^^^^^
 If the Current Opensearch Description exposes the standard temporal query parameters (time:start, time:end), and if the thematic app allows it, a Time Slider is added on the bottom of the map. This widget is useful to visual selecting a time range for a time restriction on the current search. Moreover, the Time Slider contains visual representation of the data distribution over the time.
+
+.. figure:: ../../includes/geobrowser-timeline-1.png
+.. figure:: ../../includes/geobrowser-timeline-2.png
 
 Search Terms
 ^^^^^^^^^^^^
 The Search Terms is a default standard Opensearch Parameter. The geobrowser represent this with a simple input text widget, always visible on the top left of the map. It's a "keypress" triggered input, users don't need to press a confirmation after typing, the search is automatically launched as users stop to type the text to search.
 
+.. figure:: ../../includes/geobrowser-search-terms.png
+
 Full Screen
 ^^^^^^^^^^^
 A simple button to switch to full screen.
 
+.. figure:: ../../includes/geobrowser-fullscreen.png
+
 Point Info
 ^^^^^^^^^^
 By right-click on a empty point on the map a context menu will open to show some actions like "Center map here" (pan in the selected zone on the map), zoom in, zoom out, and a useful utils "Show coordinates". This utils will show a popup with information about the coordinates of the point selected on the map, in different formats.
+
+.. figure:: ../../includes/geobrowser-point-info.gif
 
 layers control
 ^^^^^^^^^^^^^^
@@ -237,7 +250,20 @@ On the geobrowser there are some predefinite overlay layers:
 - Features Basket: the layers group bound with the Features Basket
 - Related Search: the layers group associated to a correlated search (if available)
 
-Moreover, users can also set the opacity by clicking on the opacity button and set the opacity slider.
+.. figure:: ../../includes/geobrowser-layers-control.png
+
+Moreover, users can also set the opacity b§y clicking on the opacity button and set the opacity slider.
+
+Geobrowser Clipboard
+^^^^^^^^^^^^^^^^^^^^
+The geobrowser clipboard is a facility used to pass data between the geobrowser components, in particular from the current search status and results to the wps services fields. The Geobrowser Clipboard consists in a set of adaptable and dynamic information stored in a temporary buffer during the user interaction. For example, if user selects one or more features, some selected feature information (such as start time or identifier) are stored in the clipboard for a reuse of the values.
+Another clipboard type can be a search value, like search start date or end date.
+
+Each clipboard element has a identifier, a value, a clipboard type (feature or search) and a data type. A value colud be an array, for example, if user selects 10 fields, the search:startDate geobrowser clipboard item stores 10 start dates.
+
+.. figure:: ../../includes/geobrowser-clipboard.png
+
+The wps service fields has a geobrowser clipboard menu, used to retrieve the clipboard values previosely stored.
 
 Drag'n drop Features
 ^^^^^^^^^^^^^^^^^^^^
