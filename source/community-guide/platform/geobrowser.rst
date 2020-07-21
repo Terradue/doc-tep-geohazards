@@ -77,16 +77,22 @@ Catalog Panel
 The Catalog Panel is a panel showing all infrmation about the current search and the saved results. This panel implements three of the "Information Seeking Mantra" interactions (search, list results, details on demand). These three interation are represented in three different views and panels: the search panel, the results panel and the details panel, plus two extra panels: the Saved Results panel and the Data Packages panel. To improve focus and usability, one subpanel is visible at a time, by a tab switcher.
 Users can open or close the Catalog Panel by the Tools button.
 
+.. figure:: ../../includes/geobrowser-catalog-panel-tabs.png
 
 Search panel
 ^^^^^^^^^^^^
 The search panel is a view containing all search parameters associated to the current catalogue on which the search will be performed. The search panel is showed as a form, and, depending by the opensearch descriptor document, some parameters are just free text, some of them have type restrictions, others can be chosen from a list.
 Some predefinite parameters, if present on the opensearch descriptor, are also visible as an external widget on the map, like the Time slider, the Search terms and the Geo Filters. The startIndex standard parameters is also shown as a pagination widget inside the results panel.
 
+.. figure:: ../../includes/geobrowser-catalog-panel-search-panel.png
+
 Results panel
 ^^^^^^^^^^^^^
 This panel shows the result of the current search as a list of features. Some search results information are also visible on the panel header.
 When a search is done this panel automatically is activated showing the results.
+
+.. figure:: ../../includes/geobrowser-catalog-panel-results-panel.png
+
 From the results panel users can do different interactions and operations:
 - see all results in a scrollable list
 - check the type of feature
@@ -94,15 +100,15 @@ From the results panel users can do different interactions and operations:
 - open the details panel for a feature (double click)
 - highlight a feature on the map (if the feature has geospatial information)
 
-TODO talk about the icons
-TODO talk about features buttons
-
 
 Features Basket panel (or saved results)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users can save the features from the results panel into a personal user space called Features Basket (or saved results). This panel is similar to the results panel, since has a list of the features saved by user and those features are visible in the map and on the details panel, but it could contain features from different catalogs.
 To put features into the features basket users can simply drag one or more features on the features basket icon.
+
+.. figure:: ../../includes/geobrowser-catalog-panel-features-basket-panel.png
+
 Users can navigate among the features (like on the results panel), remove one or more feature or clean all the features basket.
 Moreover users can save and export the features basket in a Data Package, allowing users to share results.
 
@@ -111,12 +117,15 @@ Data packages panel
 
 A data package is a saved collection of features. The Data Packages panel shows all data packages visible to users. A data package can be opened by replacing it to the Current Search.
 
+.. figure:: ../../includes/geobrowser-catalog-panel-data-packages-panel.png
+
 
 Details panel
 ^^^^^^^^^^^^^
 
 The details panel is a "floating panel", that is, is a panel not visible as a tab. Users can also see this panel from a specific feature, by double click on it, or by opening the details from the popup. This action shows in a vertical scrollable layout page all description information of the feature, including summary, images, key-value information, Also, from the details panel user can perform some actions, like filter the current search by the feature spatial information, or check out some feature correlated results.
 
+.. figure:: ../../includes/geobrowser-catalog-panel-details-panel.png
 
 Processing Panel
 ----------------
@@ -135,18 +144,26 @@ Services Tab
 ^^^^^^^^^^^^
 This tab contains the list of available Processing Services. Users can apply some filters to looking for a specific service. Choosing a service the relative details are shown.
 
+.. figure:: ../../geobrowser-processing-panel-services.png
+
 Service Details
 ^^^^^^^^^^^^^^^
 This view includes a description of the selected service (title, version, description, and so on), followed by a form of all service inputs. Users can fill the form manually, by features dragging (if available for the input) or by the geobrowser clipboard. Is also possible to import and export parameters set in a json format.
+
+.. figure:: ../../geobrowser-processing-panel-service-details.png
 
 Jobs tab
 ^^^^^^^^
 This tab contains the list of available jobs associated to the user or thematic app. Users can filter the job for job title or job type (mine, thematic, all). Details on jobs can be accessed by clicking on the title of the job.
 For running jobs it's possible to view the running percentage status.
 
+.. figure:: ../../geobrowser-processing-panel-jobs.png
+
 Job Details
 ^^^^^^^^^^^
 The job details view contains all job information, like some service info, job time, job author, job status (running, succeded, failed) and job results. A job result can be represented as a Opensearch Description element, so users can see the results of a job on the Navigation Map and on the Catalogue control by changing the Geobrowser Current Search with the job result. It's also possible to resubmit the job with the same parameters.
+
+.. figure:: ../../geobrowser-processing-panel-job-details.png
 
 
 Geobrowser Tools and Utils
@@ -156,6 +173,7 @@ Intelligent Map tools
 ^^^^^^^^^^^^^^^^^^^^^
 To simplify the user view on the map, all the map tools buttons are hidden. To show them it's simply necessary go move on the left side of the map.
 
+.. figure:: ../../geobrowser-tools-1.gif
 
 Spatial Filters
 ^^^^^^^^^^^^^^^
@@ -169,11 +187,12 @@ Some Opensearch Descriptions have special standard parameters, for some of them 
 
 Geocoding
 ^^^^^^^^^
-
 The Geocoding control allow users to:
 - find some places on the map (giving a place text);
 - perform a spatial query on the data by a place found.
 A place text could be a country, a city name, a street, a mountain, a river, and so on.
+
+.. figure:: ../../geobrowser-grocoding.png
 
 WMS Layers
 ^^^^^^^^^^^^^^^^^^^
@@ -181,6 +200,12 @@ The geobrowser can show multiple WMS (Web Map Service) layers if there are featu
 In order to improve the performance and the User experience, when an EO Collection exposes WMS layers, some of them can be active whereas others can be hidden. This behaviour happens after a certain level of zoom, moreover the actual number of the active layers is dynamic and depends on the number of WMS requests necessary to show the layers on the current view on the map.
 A User can interactively choose to see a hidden layer, by clicking on it on the Results Panel or directly on its footprint on the map. Footprints are indeed always visible on the map. Furthermore, a User can decide to "lock" one or more layers to study, for instance, correlations between them.
 Here below, a legend shows the possible statuses for a product in the result table:
+
+.. figure:: ../../geobrowser-tools-2.gif
+
+On the map, products containing active/hidden WMS layers differ as shown:
+
+.. figure:: ../../geobrowser-tools-3.gif
 
 WMS Comparing
 ^^^^^^^^^^^^^
@@ -202,4 +227,21 @@ Point Info
 ^^^^^^^^^^
 By right-click on a empty point on the map a context menu will open to show some actions like "Center map here" (pan in the selected zone on the map), zoom in, zoom out, and a useful utils "Show coordinates". This utils will show a popup with information about the coordinates of the point selected on the map, in different formats.
 
+layers control
+^^^^^^^^^^^^^^
+On the top-right of the map there's the layers control: collapsed in a button, by going over it a panel will expand, showing the list of all layers and layers groups in a scrollable panel.,-
+There are two types of layers: base layers, that are mutually exclusive (only one can be visible on your map at a time), and overlays, which are all the layer put over the base layers. Usually a base layer is a global map like streetview.
+From the layers control users can switch between the base layers (defined on the thematic app configuration), and can show/hide the overlay layers.
+On the geobrowser there are some predefinite overlay layers:
+- Data Results: the layers group bound with the Current Search
+- Features Basket: the layers group bound with the Features Basket
+- Related Search: the layers group associated to a correlated search (if available)
+
+Moreover, users can also set the opacity by clicking on the opacity button and set the opacity slider.
+
+Drag'n drop Features
+^^^^^^^^^^^^^^^^^^^^
+A feature (or a set of features) selected from the Results Panel can be dragged to use it as a wps service parameter value, or to add it it to the features basket. The
+For the first operation it's necessary to have the wps service opened with the allowed target wps field parameter visible, simply by dropping the feature(s) on the wps field, this field will be set with the feature identifier. This operation is available for the features basket result too: it's possible to add a feature from the features basket on a wps field parameter.
+For the second operation (add to features basket), users can add selected features from the results panel to the features basket panel simply by dragging the features and dropping them into the features basket tab icon.
 
