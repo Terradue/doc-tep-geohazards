@@ -144,26 +144,26 @@ Services Tab
 ^^^^^^^^^^^^
 This tab contains the list of available Processing Services. Users can apply some filters to looking for a specific service. Choosing a service the relative details are shown.
 
-.. figure:: ../../geobrowser-processing-panel-services.png
+.. figure:: ../../includes/geobrowser-processing-panel-services.png
 
 Service Details
 ^^^^^^^^^^^^^^^
 This view includes a description of the selected service (title, version, description, and so on), followed by a form of all service inputs. Users can fill the form manually, by features dragging (if available for the input) or by the geobrowser clipboard. Is also possible to import and export parameters set in a json format.
 
-.. figure:: ../../geobrowser-processing-panel-service-details.png
+.. figure:: ../../includes/geobrowser-processing-panel-service-details.png
 
 Jobs tab
 ^^^^^^^^
 This tab contains the list of available jobs associated to the user or thematic app. Users can filter the job for job title or job type (mine, thematic, all). Details on jobs can be accessed by clicking on the title of the job.
 For running jobs it's possible to view the running percentage status.
 
-.. figure:: ../../geobrowser-processing-panel-jobs.png
+.. figure:: ../../includes/geobrowser-processing-panel-jobs.png
 
 Job Details
 ^^^^^^^^^^^
 The job details view contains all job information, like some service info, job time, job author, job status (running, succeded, failed) and job results. A job result can be represented as a Opensearch Description element, so users can see the results of a job on the Navigation Map and on the Catalogue control by changing the Geobrowser Current Search with the job result. It's also possible to resubmit the job with the same parameters.
 
-.. figure:: ../../geobrowser-processing-panel-job-details.png
+.. figure:: ../../includes/geobrowser-processing-panel-job-details.png
 
 
 Geobrowser Tools and Utils
@@ -173,7 +173,7 @@ Intelligent Map tools
 ^^^^^^^^^^^^^^^^^^^^^
 To simplify the user view on the map, all the map tools buttons are hidden. To show them it's simply necessary go move on the left side of the map.
 
-.. figure:: ../../geobrowser-tools-1.gif
+.. figure:: ../../includes/geobrowser-tools-1.gif
 
 Spatial Filters
 ^^^^^^^^^^^^^^^
@@ -192,7 +192,7 @@ The Geocoding control allow users to:
 - perform a spatial query on the data by a place found.
 A place text could be a country, a city name, a street, a mountain, a river, and so on.
 
-.. figure:: ../../geobrowser-grocoding.png
+.. figure:: ../../includes/geobrowser-geocoding.png
 
 WMS Layers
 ^^^^^^^^^^^^^^^^^^^
@@ -201,11 +201,11 @@ In order to improve the performance and the User experience, when an EO Collecti
 A User can interactively choose to see a hidden layer, by clicking on it on the Results Panel or directly on its footprint on the map. Footprints are indeed always visible on the map. Furthermore, a User can decide to "lock" one or more layers to study, for instance, correlations between them.
 Here below, a legend shows the possible statuses for a product in the result table:
 
-.. figure:: ../../geobrowser-tools-2.gif
+.. figure:: ../../includes/geobrowser-tools-2.png
 
 On the map, products containing active/hidden WMS layers differ as shown:
 
-.. figure:: ../../geobrowser-tools-3.gif
+.. figure:: ../../includes/geobrowser-tools-3.png
 
 WMS Comparing
 ^^^^^^^^^^^^^
