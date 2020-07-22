@@ -41,11 +41,13 @@ The Geobrowser is composed of:
 - **Navigation map**, the map area;
 - **Contexts menu**, a menu used to switch among predefinite search;
 - **Catalog panel**, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability:
+
    - **Search Panel**
    - **Results Panel**
    - **Features Basket panel (or saved results)**
    - **Data packages panel**
    - **Details panel**
+
 - **Processing panel**
 
 
@@ -201,7 +203,7 @@ A place text could be a country, a city name, a street, a mountain, a river, and
 .. figure:: ../../includes/geobrowser-geocoding.png
 
 WMS Layers
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 The geobrowser can show multiple WMS (Web Map Service) layers if there are features exposing WMS layer information on the current search result.
 In order to improve the performance and the User experience, when an EO Collection exposes WMS layers, some of them can be active whereas others can be hidden. This behaviour happens after a certain level of zoom, moreover the actual number of the active layers is dynamic and depends on the number of WMS requests necessary to show the layers on the current view on the map.
 A User can interactively choose to see a hidden layer, by clicking on it on the Results Panel or directly on its footprint on the map. Footprints are indeed always visible on the map. Furthermore, a User can decide to "lock" one or more layers to study, for instance, correlations between them.
@@ -284,7 +286,7 @@ For the first operation it's necessary to have the wps service opened with the a
 For the second operation (add to features basket), users can add selected features from the results panel to the features basket panel simply by dragging the features and dropping them into the features basket tab icon.
 
 
-.. |geobrowser_button_polygon| image:: ../includes/geobrowser_button_polygon.png
-.. |geobrowser_button_recbox| image:: ../includes/geobrowser_button_recbox.png
-.. |geobrowser_button_placemark| image:: ../includes/geobrowser_button_placemark.png
-.. |geobrowser_button_wkt| image:: ../includes/geobrowser_button_wkt.png
+.. |geobrowser_button_polygon| image:: ../../includes/geobrowser_button_polygon.png
+.. |geobrowser_button_recbox| image:: ../../includes/geobrowser_button_recbox.png
+.. |geobrowser_button_placemark| image:: ../../includes/geobrowser_button_placemark.png
+.. |geobrowser_button_wkt| image:: ../../includes/geobrowser_button_wkt.png
