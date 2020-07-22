@@ -1,5 +1,5 @@
-Activities area
-===============
+Analytics area
+==============
 
 The portal gives the user a quick view of his activities on the platform:
 

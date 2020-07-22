@@ -10,16 +10,17 @@ Intro
 The geobrowser is a map-based web application, allowing users to perform data exploration, data visualization, data analysis and data processing.
 
 The application spreads on the common OGC standards:
+
 - Opensearch, to have a standard and dynamic way to search data;
 - OWS context, to manage a search results;
 - WPS, to perform data processing.
 
 The geobrowser is based on a "current search" concept. The "current search" is an entity representing the data of the catalog we are currently navigating. It is defined on the couple **{current opensearch description, current search parameters}**:
 
-- The opensearch description is a document (retrieved by and opensearch description url) describing the data we are exploring in a given moment including how we can search the data, what are the search parameters and how each parameter works. From the opensearch description the geobrowser creates a search engine and populates a dynamic search form.
+- The opensearch description is a document (retrieved by an opensearch description url) describing the data we are exploring in a given moment including how we can search the data, what are the search parameters and how each parameter works. From the opensearch description the geobrowser creates a search engine and populates a dynamic search form.
 - The current search parameters is a set of parameters values and filters, from which we can have a search results to show on the geobrowser.
 
-On the geobrowser users can change and manipulate the current search in 2 ways:
+On the geobrowser, users can change and manipulate the current search in 2 ways:
 
 - **By changing the current opensearch description**: a thematic app offers a list of defined Opensearch Descriptor in a tree menu called Contexts Menu. Morehover, you can also change the current search by showing a result of a processing job, or by switching on a correlated search.
 
@@ -54,6 +55,7 @@ Navigation map
 .. figure:: ../../includes/geobrowser-navigation-map.png
 
 The navigation map is a simple geographic map, on which you can zoom in, zoom out, pan and see all the geographic features of the current results. The Navigation Map can show on the map features as:
+
 - Geometries (or footprints), like polygons or rectangles or points;
 - Spatial image, like a jpg or png inside a defined bounding box;
 - WMS layers.
@@ -65,12 +67,14 @@ The Contexts menu is a menu placed on the top, representing a result of a query 
 .. figure:: ../../includes/geobrowser-contexts-menu.png
 
 
-The existing pre-defined contexts are:
+The default pre-defined contexts are:
 
-- EO data
-- EO processing
-- Publications
+- EO Data
+- EO-based products
 - Community
+- Private
+
+This can be changed, depending on the Thematic application.
 
 Catalog Panel
 -------------
@@ -81,7 +85,7 @@ Users can open or close the Catalog Panel by the Tools button.
 
 Search panel
 ^^^^^^^^^^^^
-The search panel is a view containing all search parameters associated to the current catalogue on which the search will be performed. The search panel is showed as a form, and, depending by the opensearch descriptor document, some parameters are just free text, some of them have type restrictions, others can be chosen from a list.
+The search panel is a view containing all search parameters associated to the current catalogue on which the search will be performed. The search panel is showed as a form, and, depending on the opensearch descriptor document, some parameters are just free text, some of them have type restrictions, others can be chosen from a list.
 Some predefinite parameters, if present on the opensearch descriptor, are also visible as an external widget on the map, like the Time slider, the Search terms and the Geo Filters. The startIndex standard parameters is also shown as a pagination widget inside the results panel.
 
 .. figure:: ../../includes/geobrowser-catalog-panel-search-panel.png
@@ -94,6 +98,7 @@ When a search is done this panel automatically is activated showing the results.
 .. figure:: ../../includes/geobrowser-catalog-panel-results-panel.png
 
 From the results panel users can do different interactions and operations:
+
 - see all results in a scrollable list
 - check the type of feature
 - select one or more features
@@ -104,7 +109,7 @@ From the results panel users can do different interactions and operations:
 Features Basket panel (or saved results)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Users can save the features from the results panel into a personal user space called Features Basket (or saved results). This panel is similar to the results panel, since has a list of the features saved by user and those features are visible in the map and on the details panel, but it could contain features from different catalogs.
+Users can save the features from the results panel into a personal user space called Features Basket (or saved results). This panel is similar to the results panel, since it has a list of the features saved by user and those features are visible in the map and on the details panel, but it could contain features from different catalogs.
 To put features into the features basket users can simply drag one or more features on the features basket icon.
 
 .. figure:: ../../includes/geobrowser-catalog-panel-features-basket-panel.png
@@ -131,6 +136,7 @@ Processing Panel
 ----------------
 
 While the Catalog Panel allow users to navigate and retrieve information on the data, the Processing Panel allow users to perform operation on the data. The Geobrowser uses WPS standard to provide rules for standardizing inputs and outputs for invoking processing services. From the processing panel users can:
+
 - navigate among available processing services;
 - see a processing service in the details;
 - execute a processing service (job);
@@ -179,10 +185,10 @@ Spatial Filters
 ^^^^^^^^^^^^^^^
 Some Opensearch Descriptions have special standard parameters, for some of them the Geobrowser has a set of widget to allow users to easely and visually change the parameter values. For example, the geo:box parameter (filter by rectangle) and the geo:geometry parameter (filter by a custom shape in wkt) have some spatial buttons inside the map tools. From these controls, users can directly draw on the map the shape to perform the spatial query.
 
--  |geobrowser_button_polygon.png| Edit the search bbox by drawing a polygon on the map
--  |geobrowser_button_recbox.png| Edit the search bbox by drawing a rectangle on the map
--  |geobrowser_button_placemark.png| Edit the search bbox by selecting a point as AOI
--  |geobrowser_button_wkt.png| Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box
+- |geobrowser_button_polygon| Edit the search bbox by drawing a polygon on the map
+- |geobrowser_button_recbox| Edit the search bbox by drawing a rectangle on the map
+- |geobrowser_button_placemark| Edit the search bbox by selecting a point as AOI
+- |geobrowser_button_wkt| Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box
 
 
 Geocoding
@@ -209,7 +215,7 @@ On the map, products containing active/hidden WMS layers differ as shown:
 
 WMS Comparing
 ^^^^^^^^^^^^^
-If 2 ore more features exposing WMS are selected, a new menu item is added on the features selecting dropdown menu: the "Compare Layers" button. By pressing this button an interactive visual comparing tool is opened, showing only the selected layers with a vertical slidebar. This tool is useful for juxtaposed wms layers to allow easy comparision and detection of changes.
+If two or more features exposing WMS are selected, a new menu item is added on the features selecting dropdown menu: the "Compare Layers" button. By pressing this button an interactive visual comparing tool is opened, showing only the selected layers with a vertical slidebar. This tool is useful for juxtaposed wms layers to allow easy comparision and detection of changes.
 
 .. figure:: ../../includes/geobrowser-compare-1.png
 
@@ -242,10 +248,16 @@ By right-click on a empty point on the map a context menu will open to show some
 
 layers control
 ^^^^^^^^^^^^^^
-On the top-right of the map there's the layers control: collapsed in a button, by going over it a panel will expand, showing the list of all layers and layers groups in a scrollable panel.,-
-There are two types of layers: base layers, that are mutually exclusive (only one can be visible on your map at a time), and overlays, which are all the layer put over the base layers. Usually a base layer is a global map like streetview.
+On the top-right of the map there's the layers control: collapsed in a button, by going over it a panel will expand, showing the list of all layers and layers groups in a scrollable panel.
+
+There are two types of layers: 
+
+- base layers, that are mutually exclusive (only one can be visible on your map at a time), 
+- overlays, which are all the layer put over the base layers. Usually a base layer is a global map like streetview.
+
 From the layers control users can switch between the base layers (defined on the thematic app configuration), and can show/hide the overlay layers.
 On the geobrowser there are some predefinite overlay layers:
+
 - Data Results: the layers group bound with the Current Search
 - Features Basket: the layers group bound with the Features Basket
 - Related Search: the layers group associated to a correlated search (if available)
@@ -271,3 +283,8 @@ A feature (or a set of features) selected from the Results Panel can be dragged 
 For the first operation it's necessary to have the wps service opened with the allowed target wps field parameter visible, simply by dropping the feature(s) on the wps field, this field will be set with the feature identifier. This operation is available for the features basket result too: it's possible to add a feature from the features basket on a wps field parameter.
 For the second operation (add to features basket), users can add selected features from the results panel to the features basket panel simply by dragging the features and dropping them into the features basket tab icon.
 
+
+.. |geobrowser_button_polygon| image:: ../includes/geobrowser_button_polygon.png
+.. |geobrowser_button_recbox| image:: ../includes/geobrowser_button_recbox.png
+.. |geobrowser_button_placemark| image:: ../includes/geobrowser_button_placemark.png
+.. |geobrowser_button_wkt| image:: ../includes/geobrowser_button_wkt.png
