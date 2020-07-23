@@ -58,7 +58,7 @@ Reference input
 
 * Click on the lens icon to open the Search Panel
 * Select **S2MSI1C** or **S2MSI2A** as Product Type
-* Apply the date value, for example **2020-07-09**, in both **time:start** and **time:end** fields
+* Apply the date value, for example **2020-07-09**, in both **time:start** and **time:end** fields.
 
 .. figure:: assets/Sentinel-2-Water-Mask-4.png
 	:figclass: align-center
