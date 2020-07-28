@@ -8,10 +8,14 @@ Sentinel-2 Watermask
 
 This service takes as input a Sentinel-2 product to generate a water mask using then NDWI the SWM.
 The output of the service is a EO data product in GeoTIFF format. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
-Relevance to the Charter:
+
+**Relevance to the Charter**:
   - Wildfire: mask out the water as water may impact the burned area delineation product 
-  - Flood: mask out the water “normally” found in the flooded areas The NDWI index is most appropriate for water body mapping. The water body has strong absorbability and low radiation in the range from visible to infrared wavelengths. 
+  - Flood: mask out the water “normally” found in the flooded areas.
+The NDWI index is most appropriate for water body mapping. The water body has strong absorbability and low radiation in the range from visible to infrared wavelengths. 
 The index uses the green and Near Infra-red bands of remote sensing images based on this phenomenon. The NDWI can enhance the water information effectively in most cases. It is sensitive to built-up land and often results in over-estimated water bodies.
+
+**Values description**: Values of water bodies are larger than 0.5. Vegetation has much smaller values, which results in distinguishing vegetation from water bodies easier. Built-up features have positive values between zero and 0.2.
 
 -----
 
