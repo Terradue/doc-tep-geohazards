@@ -126,3 +126,8 @@ Results: download and visualization
 
     - **Water mask and Json file for S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643 - GeoTIFF**
     - **S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643.tif - GeoTIFF**
+    
+Further reading
+==================================
+- NDWI Normalized Difference Water Index - `link <https://custom-scripts.sentinel-hub.com/sentinel-2/ndwi/>`_.
+
