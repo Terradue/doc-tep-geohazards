@@ -9,12 +9,9 @@ Directly on the homepage, the user can find:
 	:figclass: img-border
 	:width: 600px
 
-- a list of the most recent feeds from selected twitter accounts (with associated keywords to really focus the results on the geohazards)
-
-.. figure:: ../../includes/news_tweets.png
-	:figclass: img-border
+- a list of the most recent twitter feeds from the @esa_gep account
 
 - a list of the most recent posts from the tep geohazards `Discuss blog <http://discuss.terradue.com/c/gep-blog>`_.
 
-.. figure:: ../../includes/news_tumblr.png
+.. figure:: ../../includes/news.png
 	:figclass: img-border

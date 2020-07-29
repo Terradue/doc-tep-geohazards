@@ -4,9 +4,10 @@ Menu bar
 The menu bar is always visible, apart from the geobrowser page. It contains the following links:
 
 - `Home`_,
+- `Workspace`_,
+_ `Services Catalogue`_,
+_ `Background`_,
 - `Observations & Measurements`_,
-- `Information Processing`_,
-- `Community`_,
 - `EO sector Collaboration`_
 
 .. figure:: ../../includes/home_menubar.png
@@ -17,6 +18,21 @@ Home
 
 A simple way to go back to the home page of the portal.
 
+Workspace
+---------
+
+A direct access to the Thematic applications and Users Communities.
+
+Services Catalogue
+------------------
+
+Description of the Processing services and Service Packs available on the platform.
+
+Background
+----------
+
+What is Geohazards TEP, from what initiative was it created and what is it's purpose.
+
 Observations & Measurements
 ---------------------------
 
@@ -26,16 +42,6 @@ A quick access to
 	- Other Data (definition of Other Data),
 	- Featured Products (definition of Featured Products),
 	- Publications (definition of Publications)
-
-Information Processing
-----------------------
-
-Information about the processing on the platform.
-
-Community
----------
-
-Definition of the role of the satellite EO and geohazards user community.
 
 EO sector Collaboration
 -----------------------
