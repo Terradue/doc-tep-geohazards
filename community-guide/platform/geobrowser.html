@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GeoBrowser area for data and Cloud processing services &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    <title>Geobrowser &#8212; Geohazards Thematic Exploitation Platform 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Activities area" href="activities.html" />
+    <link rel="next" title="Analytics area" href="globalanalytics.html" />
     <link rel="prev" title="Information areas (Blog, News, ...)" href="information-areas.html" />
     <link rel="stylesheet" href="../../_static/terradue.css" type="text/css" />
     <script src="../../_static/affixTrick.js"></script>
@@ -72,7 +72,7 @@
             <li class="divider-vertical"></li>
 <!--             <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>2.1</b><b class="caret"></b>
+        <b>3.0</b><b class="caret"></b>
     </a>
     <ul class="dropdown-menu globaltoc">
         <li><a href="/devel">1.2 (Devel)</a></li>
@@ -111,27 +111,39 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">GeoBrowser area for data and Cloud processing services</a><ul>
-<li><a class="reference internal" href="#geobrowser">GeoBrowser</a><ul>
-<li><a class="reference internal" href="#map">Map</a><ul>
-<li><a class="reference internal" href="#search-area">Search area</a></li>
-<li><a class="reference internal" href="#data-results-layer">Data Results layer</a></li>
-<li><a class="reference internal" href="#disaster-charter-layer">Disaster charter layer</a></li>
-<li><a class="reference internal" href="#density-map-layer">Density map layer</a></li>
-<li><a class="reference internal" href="#area-of-interest">Area of interest</a><ul>
-<li><a class="reference internal" href="#area-of-interest-external-definition">Area of interest external definition</a></li>
-<li><a class="reference internal" href="#area-of-interest-according-to-processing-service">Area of Interest according to processing service</a></li>
+<li><a class="reference internal" href="#">Geobrowser</a><ul>
+<li><a class="reference internal" href="#intro">Intro</a></li>
+<li><a class="reference internal" href="#geobrowser-layout">Geobrowser Layout</a></li>
+<li><a class="reference internal" href="#map-services">Map services</a></li>
+<li><a class="reference internal" href="#contexts-menu">Contexts menu</a></li>
+<li><a class="reference internal" href="#data-services-panel">Data services panel</a><ul>
+<li><a class="reference internal" href="#search-panel">Search panel</a></li>
+<li><a class="reference internal" href="#results-panel">Results panel</a></li>
+<li><a class="reference internal" href="#features-basket-panel-or-saved-results">Features Basket panel (or saved results)</a></li>
+<li><a class="reference internal" href="#data-packages-panel">Data packages panel</a></li>
+<li><a class="reference internal" href="#details-panel">Details panel</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#contexts">Contexts</a></li>
-<li><a class="reference internal" href="#results">Results</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#cloud-processing">Cloud Processing</a><ul>
-<li><a class="reference internal" href="#processing-services-tab">Processing services tab</a></li>
+<li><a class="reference internal" href="#processing-panel">Processing Panel</a><ul>
+<li><a class="reference internal" href="#services-tab">Services Tab</a></li>
+<li><a class="reference internal" href="#service-details">Service Details</a></li>
 <li><a class="reference internal" href="#jobs-tab">Jobs tab</a></li>
+<li><a class="reference internal" href="#job-details">Job Details</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#geobrowser-tools-and-utils">Geobrowser Tools and Utils</a><ul>
+<li><a class="reference internal" href="#intelligent-map-tools">Intelligent Map tools</a></li>
+<li><a class="reference internal" href="#spatial-filters">Spatial Filters</a></li>
+<li><a class="reference internal" href="#geocoding">Geocoding</a></li>
+<li><a class="reference internal" href="#wms-layers">WMS Layers</a></li>
+<li><a class="reference internal" href="#wms-comparing">WMS Comparing</a></li>
+<li><a class="reference internal" href="#time-slider">Time Slider</a></li>
+<li><a class="reference internal" href="#search-terms">Search Terms</a></li>
+<li><a class="reference internal" href="#full-screen">Full Screen</a></li>
+<li><a class="reference internal" href="#point-info">Point Info</a></li>
+<li><a class="reference internal" href="#layers-control">layers control</a></li>
+<li><a class="reference internal" href="#geobrowser-clipboard">Geobrowser Clipboard</a></li>
+<li><a class="reference internal" href="#drag-n-drop-features">Drag&#8217;n drop Features</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +161,7 @@
     </a>
   </li>
   <li>
-    <a href="activities.html" title="Next Chapter: Activities area"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Activities area &raquo;</span>
+    <a href="globalanalytics.html" title="Next Chapter: Analytics area"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Analytics area &raquo;</span>
     </a>
   </li>
               
@@ -186,12 +198,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Platform overview</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="menu-bar.html">Menu bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="information-areas.html">Information areas (Blog, News, ...)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">GeoBrowser area for data and Cloud processing services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#geobrowser">GeoBrowser</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cloud-processing">Cloud Processing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Geobrowser area for data and Cloud processing services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intro">Intro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geobrowser-layout">Geobrowser Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map-services">Map services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contexts-menu">Contexts menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-services-panel">Data services panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing-panel">Processing Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geobrowser-tools-and-utils">Geobrowser Tools and Utils</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="activities.html">Activities area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globalanalytics.html">Analytics area</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../user.html">User Profile</a></li>
@@ -225,146 +242,305 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="geobrowser-area-for-data-and-cloud-processing-services">
-<h1>GeoBrowser area for data and Cloud processing services<a class="headerlink" href="#geobrowser-area-for-data-and-cloud-processing-services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="geobrowser">
-<h2>GeoBrowser<a class="headerlink" href="#geobrowser" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="geobrowser">
+<h1>Geobrowser<a class="headerlink" href="#geobrowser" title="Permalink to this headline">¶</a></h1>
 <div class="img-border img-max-width figure">
-<img alt="../../_images/geobrowser.png" src="../../_images/geobrowser.png" />
+<img alt="../../_images/geobrowser-geobrowser.png" src="../../_images/geobrowser-geobrowser.png" />
 </div>
-<p>The GeoBrowser is composed of:</p>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>The geobrowser is a map-based web application, allowing users to perform data exploration, data visualization, data analysis and data processing.</p>
+<p>The application spreads on the common OGC standards:</p>
+<ul class="simple">
+<li>Opensearch, to have a standard and dynamic way to search data;</li>
+<li>OWS context, to manage a search result;</li>
+<li>WPS, to perform data processing.</li>
+</ul>
+<p>The geobrowser is based on a &#8220;current search&#8221; concept. The &#8220;current search&#8221; is an entity representing the data of the catalog we are currently navigating. It is defined on the couple <strong>{current opensearch description, current search parameters}</strong>:</p>
+<ul class="simple">
+<li>The opensearch description is a document (retrieved by an opensearch description url) describing the data we are exploring in a given moment including how we can search the data, what are the search parameters and how each parameter works. From the opensearch description the geobrowser creates a search engine and populates a dynamic search form.</li>
+<li>The current search parameters is a set of parameters values and filters, from which we can have a search result to show on the geobrowser.</li>
+</ul>
+<p>On the geobrowser, users can change and manipulate the current search in 2 ways:</p>
+<ul class="simple">
+<li><strong>By changing the current opensearch description</strong>: a thematic app offers a list of defined OpenSearch configurations in a tree menu called Contexts Menu. Morehover, you can also change the current search by showing a result of a processing job, or by switching on a correlated search.</li>
+<li><strong>By applying some filters changing parameters values</strong>: all parameters are included in the Search Panel form, but for some predefined parameters there is also a utility widget on the map, to make more intuitive the interaction to change the values. For example the search terms, the spatial query buttons and the date are represented as widgets inside the map.</li>
+</ul>
+<p>A current search always involves a current search result, which is the search result on the catalog with a specific opensearch description and a specific parameters values set. That result is on OWS context standard, encoded in geoJSON format, and contains a list of results entries called Features. Each feature is shown on the Results Panel, and a details view for a selected feature is offered to show all the features info. Morehover, the features containing geographic information (like bounding box, map image, WMS service) are also visible and represented on the Map Services panel.</p>
+<p>Let&#8217;s see in the details each component of the geobrowser.</p>
+</div>
+<div class="section" id="geobrowser-layout">
+<h2>Geobrowser Layout<a class="headerlink" href="#geobrowser-layout" title="Permalink to this headline">¶</a></h2>
+<div class="img-border img-max-width figure">
+<img alt="../../_images/geobrowser-geobrowser-layout.png" src="../../_images/geobrowser-geobrowser-layout.png" />
+</div>
+<p>The Geobrowser is composed of:</p>
+<ul>
+<li><p class="first"><strong>Map services</strong>, the map area;</p>
+</li>
+<li><p class="first"><strong>Contexts menu</strong>, a menu used to switch among predefined search;</p>
+</li>
+<li><p class="first"><strong>Data services panel</strong>, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability:</p>
 <blockquote>
 <div><ul class="simple">
-<li>a <a class="reference internal" href="#map">Map</a>, where the user can make search query and see results</li>
-<li><a class="reference internal" href="#contexts">Contexts</a> links</li>
-<li><a class="reference internal" href="#results">Results</a> tab (initialy hidden)</li>
-<li><a class="reference internal" href="#processing-services-tab">Processing services tab</a> (initialy hidden)</li>
+<li><strong>Search Panel</strong></li>
+<li><strong>Results Panel</strong></li>
+<li><strong>Features Basket panel (or saved results)</strong></li>
+<li><strong>Data packages panel</strong></li>
+<li><strong>Details panel</strong></li>
 </ul>
 </div></blockquote>
-<div class="section" id="map">
-<h3>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
-<p>The map is just a simple map, on which you can zoom in, zoom out and navigate.</p>
-<p>Some buttons maybe used to interact with the map:</p>
-<ul class="simple">
-<li><img alt="geobrowser_button_search.png" src="../../_images/geobrowser_button_search.png" /> search text</li>
-<li><img alt="geobrowser_button_search_area.png" src="../../_images/geobrowser_button_search_area.png" /> search area</li>
-<li><img alt="geobrowser_button_plus.png" src="../../_images/geobrowser_button_plus.png" /> Zoom in</li>
-<li><img alt="geobrowser_button_minus.png" src="../../_images/geobrowser_button_minus.png" /> Zoom out</li>
-<li><img alt="geobrowser_button_query.png" src="../../_images/geobrowser_button_query1.png" /> Open query search tab</li>
-<li><img alt="geobrowser_button_polygon.png" src="../../_images/geobrowser_button_polygon.png" /> Edit the search bbox by drawing a polygon on the map</li>
-<li><img alt="geobrowser_button_recbox.png" src="../../_images/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
-<li><img alt="geobrowser_button_placemark.png" src="../../_images/geobrowser_button_placemark.png" /> Edit the search bbox by selecting a point as AOI</li>
-<li><img alt="geobrowser_button_wkt.png" src="../../_images/geobrowser_button_wkt.png" /> Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box</li>
-<li><img alt="geobrowser_button_meter.png" src="../../_images/geobrowser_button_meter.png" /> Measure an area</li>
-<li><img alt="geobrowser_button_fullscreen.png" src="../../_images/geobrowser_button_fullscreen.png" /> Put the map in full screen</li>
-<li><img alt="geobrowser_button_layers.png" src="../../_images/geobrowser_button_layers.png" /> Change the background of the map | Select layers to be displayed.</li>
-</ul>
-<div class="section" id="search-area">
-<h4>Search area<a class="headerlink" href="#search-area" title="Permalink to this headline">¶</a></h4>
-<p>From the geobrowser, a search area can be accessed by clicking on the <img alt="geobrowser_button_search_area.png" src="../../_images/geobrowser_button_search_area.png" /> button. This expands a view containing all search parameters associated to the current catalogue on which the search will be performed.
-Some parameters are just free text, others can be chosen from a list, and some parameters can be filled from the geobrowser. This is the case of:</p>
-<ul class="simple">
-<li>the temporal parameter which can be filled by moving the temporal bar present on the geobrowser.</li>
-</ul>
-<div class="img-border img-max-width figure">
-<img alt="../../_images/geobrowser_timebar.png" src="../../_images/geobrowser_timebar.png" />
-</div>
-<ul class="simple">
-<li>the geographical area which can be filled either from the bbox drawn on the map using <img alt="geobrowser_button_polygon.png" src="../../_images/geobrowser_button_polygon.png" />, <img alt="geobrowser_button_recbox.png" src="../../_images/geobrowser_button_recbox.png" />, <img alt="geobrowser_button_placemark.png" src="../../_images/geobrowser_button_placemark.png" /> or by uploading a shapefile, a kml or geojson file, using the import button <img alt="geobrowser_button_wkt.png" src="../../_images/geobrowser_button_wkt.png" />.</li>
-</ul>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">in the <em>Search Term</em> field supported wildcards are &#8216;*&#8217;, which matches any character sequence (including the empty one), and &#8216;?&#8217;, which matches any single character.</p>
-</div>
-<p>It is also possible to add layers on the map:</p>
-</div>
-<div class="section" id="data-results-layer">
-<h4>Data Results layer<a class="headerlink" href="#data-results-layer" title="Permalink to this headline">¶</a></h4>
-<p>Display the results (orange polygons) of the current search or context.</p>
-</div>
-<div class="section" id="disaster-charter-layer">
-<h4>Disaster charter layer<a class="headerlink" href="#disaster-charter-layer" title="Permalink to this headline">¶</a></h4>
-<p>Add disaster events on the map (list of events comes from <a class="reference external" href="https://www.disasterscharter.org">https://www.disasterscharter.org</a>).
-For a better visibility, events are grouped by location, accordingly to the zoom level. If you zoom in, grouped events will split into smaller groups or unique events:</p>
-<ul class="simple">
-<li><img alt="geobrowser_disaster_big_group.png" src="../../_images/geobrowser_disaster_big_group.png" /> group of more than 10 events</li>
-<li><img alt="geobrowser_disaster_small_group.png" src="../../_images/geobrowser_disaster_small_group.png" /> group of less than 10 events</li>
-<li><img alt="geobrowser_disaster_event.png" src="../../_images/geobrowser_disaster_event.png" /> unique event</li>
-</ul>
-<p>You can click on a unique event and get related data or access the webpage related to this event.</p>
-</div>
-<div class="section" id="density-map-layer">
-<h4>Density map layer<a class="headerlink" href="#density-map-layer" title="Permalink to this headline">¶</a></h4>
-<p>Currently disactivated.</p>
-</div>
-<div class="section" id="area-of-interest">
-<h4>Area of interest<a class="headerlink" href="#area-of-interest" title="Permalink to this headline">¶</a></h4>
-<div class="img-container-border figure align-center">
-<a class="reference internal image-reference" href="../../_images/aoi.png"><img alt="../../_images/aoi.png" src="../../_images/aoi.png" style="width: 403.2px; height: 219.2px;" /></a>
-</div>
-<p>Area of interest may be defined by the user using the tools to draw a polygon or a rectangle on the map (see <a class="reference internal" href="#map">Map</a>). Once set, the search will be automatically updated with data corresponding to this AOI.</p>
-<div class="section" id="area-of-interest-external-definition">
-<h5>Area of interest external definition<a class="headerlink" href="#area-of-interest-external-definition" title="Permalink to this headline">¶</a></h5>
-<p>Complex Area of interest can be defined by uploading or referencing a vector based file:</p>
-<ul class="simple">
-<li>shapefile (limited to 1MB)</li>
-<li>kml (limited to 1MB)</li>
+</li>
+<li><p class="first"><strong>Processing services panel</strong></p>
+</li>
 </ul>
 </div>
-<div class="section" id="area-of-interest-according-to-processing-service">
-<h5>Area of Interest according to processing service<a class="headerlink" href="#area-of-interest-according-to-processing-service" title="Permalink to this headline">¶</a></h5>
-<p>Area of Interest may be directly used to fill bounding box parameters exposed by Processing services.
-For that, you can use the <img alt="get_param_from_map_button.png" src="../../_images/get_param_from_map_button.png" /> button, displayed along the parameter input field. Clicking on it will allow directly to fill the input with the value of the current search bounding box.</p>
+<div class="section" id="map-services">
+<h2>Map services<a class="headerlink" href="#map-services" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="../../_images/geobrowser-navigation-map.png" src="../../_images/geobrowser-navigation-map.png" />
 </div>
-</div>
-</div>
-<div class="section" id="contexts">
-<h3>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h3>
-<div class="img-border figure">
-<img alt="../../_images/geobrowser_contexts.png" src="../../_images/geobrowser_contexts.png" />
-</div>
-<p>Some pre-defined context are accessible on the top of the map.
-One context is the result of a query on a specific catalog with pre-defined search parameters.
-The existing pre-defined contexts are:</p>
+<p>The Map Services panel is a simple geographic map, on which you can zoom in, zoom out, pan and see all the geographic features of the current results. The Map Services panel can show on the map features as:</p>
 <ul class="simple">
-<li>EO data</li>
-<li>EO processing</li>
-<li>Publications</li>
+<li>Geometries (or footprints), like polygons or rectangles or points;</li>
+<li>Spatial image, like a jpg or png inside a defined bounding box;</li>
+<li>WMS layers.</li>
+</ul>
+</div>
+<div class="section" id="contexts-menu">
+<h2>Contexts menu<a class="headerlink" href="#contexts-menu" title="Permalink to this headline">¶</a></h2>
+<p>The Contexts menu is a menu placed on the top, representing a result of a query on a specific catalog with pre-defined search parameters. By choosing a context the Current search will switch with the relative Opensearch Description and optionally with the relative search parameters.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-contexts-menu.png" src="../../_images/geobrowser-contexts-menu.png" />
+</div>
+<p>The default pre-defined contexts are:</p>
+<ul class="simple">
+<li>EO Data</li>
+<li>EO-based products</li>
 <li>Community</li>
+<li>Private</li>
 </ul>
+<p>This can be changed, depending on the Thematic application.</p>
 </div>
-<div class="section" id="results">
-<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
-<div class="img-border img-max-width figure">
-<img alt="../../_images/geobrowser_resulttab.png" src="../../_images/geobrowser_resulttab.png" />
+<div class="section" id="data-services-panel">
+<h2>Data services panel<a class="headerlink" href="#data-services-panel" title="Permalink to this headline">¶</a></h2>
+<p>The Data Services panel shows all information about the current search and the saved results. This panel implements three of the “Information Seeking Mantra” interactions (search, list results, details on demand).</p>
+<p>These three interactions are represented in three different views and panels: the search tab, the results tab and the details tab.</p>
+<p>Two extra tabs are handling the user saved results and the user defined Data Packages.</p>
+<p>To improve focus and usability, one subpanel is visible at a time, via a tab switcher. Users can open or close the Data Services panel via the Tools button.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-tabs.png" src="../../_images/geobrowser-catalog-panel-tabs.png" />
 </div>
-<p>The result tab is divided in two parts:</p>
+<div class="section" id="search-panel">
+<h3>Search panel<a class="headerlink" href="#search-panel" title="Permalink to this headline">¶</a></h3>
+<p>The search panel is a view containing all search parameters associated to the current catalogue on which the search will be performed. The search panel is shown as a form, and, depending on the opensearch descriptor document, some parameters are just free text, some of them have type restrictions, others can be chosen from a list.
+Some predefined parameters, if present on the opensearch descriptor, are also visible as an external widget on the map, like the Time slider, the Search terms and the Geo Filters. The startIndex standard parameters is also shown as a pagination widget inside the results panel.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-search-panel.png" src="../../_images/geobrowser-catalog-panel-search-panel.png" />
+</div>
+</div>
+<div class="section" id="results-panel">
+<h3>Results panel<a class="headerlink" href="#results-panel" title="Permalink to this headline">¶</a></h3>
+<p>This panel shows the result of the current search as a list of features. Some search results are also visible on the panel header.
+When a search is done this panel automatically is activated showing the results.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-results-panel.png" src="../../_images/geobrowser-catalog-panel-results-panel.png" />
+</div>
+<p>From the results panel users can do different interactions and operations:</p>
 <ul class="simple">
-<li>On the left, the <strong>Results Table</strong> showing the list of current results displayed on the map. Results are paginatd, only 20 items are displayed, select another page to discover more products.</li>
-<li>On the right, the <strong>Features Basket</strong> showing all data in the current basket.</li>
+<li>see all results in a scrollable list</li>
+<li>check the type of feature</li>
+<li>select one or more features</li>
+<li>open the details panel for a feature (double click)</li>
+<li>highlight a feature on the map (if the feature has geospatial information)</li>
 </ul>
-<p>Results can be dragged fron the left table to the basket. Then the basket can be saved as a new data package and shared with other users.
-Saved Data packages can then be loaded into the basket. (see <a class="reference internal" href="../data.html"><span class="doc">data</span></a> for more details)</p>
+</div>
+<div class="section" id="features-basket-panel-or-saved-results">
+<h3>Features Basket panel (or saved results)<a class="headerlink" href="#features-basket-panel-or-saved-results" title="Permalink to this headline">¶</a></h3>
+<p>Users can save the features from the results panel into a personal user space called Features Basket (or saved results). This panel is similar to the results panel, since it has a list of the features saved by the user and those features are visible in the map and on the details panel, but it could contain features from different catalogs.
+To put features into the features basket users can simply drag one or more features on the features basket icon.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-features-basket-panel.png" src="../../_images/geobrowser-catalog-panel-features-basket-panel.png" />
+</div>
+<p>Users can navigate among the features (like on the results panel), remove one or more features or clean all the features in the basket.
+Moreover users can save and export the features basket in a Data Package, allowing users to share results.</p>
+</div>
+<div class="section" id="data-packages-panel">
+<h3>Data packages panel<a class="headerlink" href="#data-packages-panel" title="Permalink to this headline">¶</a></h3>
+<p>A data package is a saved collection of features. The Data Packages panel shows all data packages visible to users. A data package can be opened by replacing it to the Current Search.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-data-packages-panel.png" src="../../_images/geobrowser-catalog-panel-data-packages-panel.png" />
 </div>
 </div>
-<div class="section" id="cloud-processing">
-<h2>Cloud Processing<a class="headerlink" href="#cloud-processing" title="Permalink to this headline">¶</a></h2>
-<p>Processing services tab can be expanded by clicking on <em>Processing Services</em> on the right of the map.
-It is composed of two sub tabs.</p>
-<div class="img-border figure">
-<img alt="../../_images/geobrowser_jobs.png" src="../../_images/geobrowser_jobs.png" />
+<div class="section" id="details-panel">
+<h3>Details panel<a class="headerlink" href="#details-panel" title="Permalink to this headline">¶</a></h3>
+<p>The details panel is a &#8220;floating panel&#8221;, that is, is a panel not visible as a tab. Users can also see this panel from a specific feature, by double click on it, or by opening the details from the popup. This action shows in a vertical scrollable layout page all description information of the feature, including summary, images, key-value information, Also, from the details panel user can perform some actions, like filter the current search by the feature spatial information, or check out some feature correlated results.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-catalog-panel-details-panel.png" src="../../_images/geobrowser-catalog-panel-details-panel.png" />
 </div>
-<div class="section" id="processing-services-tab">
-<h3>Processing services tab<a class="headerlink" href="#processing-services-tab" title="Permalink to this headline">¶</a></h3>
-<p>This tab contains the list of available Processing Services. Usually, only 20 Processing services are displayed. If you are looking for a specific one, you can filter the results using the <strong>Filter services</strong> input.</p>
+</div>
+</div>
+<div class="section" id="processing-panel">
+<h2>Processing Panel<a class="headerlink" href="#processing-panel" title="Permalink to this headline">¶</a></h2>
+<p>While the Data Services panel allows users to navigate and retrieve information on the data, the Processing Panel allows users to perform operations on the data. The Geobrowser uses WPS standard to provide rules for standardizing inputs and outputs for invoking processing services. From the processing panel users can:</p>
+<ul class="simple">
+<li>navigate among available processing services;</li>
+<li>see a processing service in the details;</li>
+<li>execute a processing service (job);</li>
+<li>search for executed jobs;</li>
+<li>show details for a selected job;</li>
+<li>show results on the Map Services panel and Data Services panel.</li>
+</ul>
+<p>To do this there are 4 views: Services tab, Service Details, Jobs tab, Job Details. For no logged users is only possible to view the jobs information and results.</p>
+<div class="section" id="services-tab">
+<h3>Services Tab<a class="headerlink" href="#services-tab" title="Permalink to this headline">¶</a></h3>
+<p>This tab contains the list of available Processing Services. Users can apply some filters to looking for a specific service. Choosing a service the relative details are shown.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-processing-panel-services.png" src="../../_images/geobrowser-processing-panel-services.png" />
+</div>
+</div>
+<div class="section" id="service-details">
+<h3>Service Details<a class="headerlink" href="#service-details" title="Permalink to this headline">¶</a></h3>
+<p>This view includes a description of the selected service (title, version, description, and so on), followed by a form of all service inputs. Users can fill the form manually, by features dragging (if available for the input) or by the geobrowser clipboard. Is also possible to import and export parameters set in a json format.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-processing-panel-service-details.png" src="../../_images/geobrowser-processing-panel-service-details.png" />
+</div>
 </div>
 <div class="section" id="jobs-tab">
 <h3>Jobs tab<a class="headerlink" href="#jobs-tab" title="Permalink to this headline">¶</a></h3>
-<p>This tab contains the list of available jobs associated to your user.
-Details on jobs can be accessed by clicking on the title of the job.</p>
-<div class="img-border figure">
-<img alt="../../_images/geobrowser_jobs.png" src="../../_images/geobrowser_jobs.png" />
+<p>This tab contains the list of available jobs associated to the user or thematic app. Users can filter the job for job title or job type (mine, thematic, all). Details on jobs can be accessed by clicking on the title of the job.
+For running jobs it&#8217;s possible to view the running percentage status.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-processing-panel-jobs.png" src="../../_images/geobrowser-processing-panel-jobs.png" />
 </div>
+</div>
+<div class="section" id="job-details">
+<h3>Job Details<a class="headerlink" href="#job-details" title="Permalink to this headline">¶</a></h3>
+<p>The job details view contains all job information, like some service info, job time, job author, job status (running, succeeded, failed) and job results. A job result can be represented as a Opensearch Description element, so users can see the results of a job on the Map Services panel and on the Catalogue control by changing the Geobrowser Current Search with the job result. It&#8217;s also possible to resubmit the job with the same parameters.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-processing-panel-job-details.png" src="../../_images/geobrowser-processing-panel-job-details.png" />
+</div>
+</div>
+</div>
+<div class="section" id="geobrowser-tools-and-utils">
+<h2>Geobrowser Tools and Utils<a class="headerlink" href="#geobrowser-tools-and-utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intelligent-map-tools">
+<h3>Intelligent Map tools<a class="headerlink" href="#intelligent-map-tools" title="Permalink to this headline">¶</a></h3>
+<p>To simplify the user view on the map, all the map tools buttons are hidden. To show them, simply move the mouse cursor to the left side of the map.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-tools-1.gif" src="../../_images/geobrowser-tools-1.gif" />
+</div>
+</div>
+<div class="section" id="spatial-filters">
+<h3>Spatial Filters<a class="headerlink" href="#spatial-filters" title="Permalink to this headline">¶</a></h3>
+<p>Some Opensearch Descriptions have special standard parameters, for some of them the Geobrowser has a set of widget to allows users to easily and visually change the parameter values. For example, the geo:box parameter (filter by rectangle) and the geo:geometry parameter (filter by a custom shape in wkt) have some spatial buttons inside the map tools. From these controls, users can directly draw on the map the shape to perform the spatial query.</p>
+<ul class="simple">
+<li><img alt="geobrowser_button_polygon" src="../../_images/geobrowser_button_polygon.png" /> Edit the search bbox by drawing a polygon on the map</li>
+<li><img alt="geobrowser_button_recbox" src="../../_images/geobrowser_button_recbox.png" /> Edit the search bbox by drawing a rectangle on the map</li>
+<li><img alt="geobrowser_button_placemark" src="../../_images/geobrowser_button_placemark.png" /> Edit the search bbox by selecting a point as AOI</li>
+<li><img alt="geobrowser_button_wkt" src="../../_images/geobrowser_button_wkt.png" /> Allow to enter a WKT or upload a shapefile, a kml or a geojson to be displayed on the map as bounding box</li>
+</ul>
+</div>
+<div class="section" id="geocoding">
+<h3>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this headline">¶</a></h3>
+<p>The Geocoding control allows users to:
+- find some places on the map (giving a place text);
+- perform a spatial query on the data by a place found.
+A place text could be a country, a city name, a street, a mountain, a river, and so on.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-geocoding.png" src="../../_images/geobrowser-geocoding.png" />
+</div>
+</div>
+<div class="section" id="wms-layers">
+<h3>WMS Layers<a class="headerlink" href="#wms-layers" title="Permalink to this headline">¶</a></h3>
+<p>The geobrowser can show multiple WMS (Web Map Service) layers if there are features exposing WMS layer information on the current search result.
+In order to improve the performance and the User experience, when an EO Collection exposes WMS layers, some of them can be active whereas others can be hidden. This behaviour happens after a certain level of zoom, moreover the actual number of the active layers is dynamic and depends on the number of WMS requests necessary to show the layers on the current view on the map.
+A User can interactively choose to see a hidden layer, by clicking on it on the Results Panel or directly on its footprint on the map. Footprints are indeed always visible on the map. Furthermore, a User can decide to &#8220;lock&#8221; one or more layers to study, for instance, correlations between them.
+Here below, a legend shows the possible statuses for a product in the result table:</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-tools-2.png" src="../../_images/geobrowser-tools-2.png" />
+</div>
+<p>On the map, products containing active/hidden WMS layers differ as shown:</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-tools-3.png" src="../../_images/geobrowser-tools-3.png" />
+</div>
+</div>
+<div class="section" id="wms-comparing">
+<h3>WMS Comparing<a class="headerlink" href="#wms-comparing" title="Permalink to this headline">¶</a></h3>
+<p>If two or more features exposing WMS are selected, a new menu item is added on the features selecting dropdown menu: the &#8220;Compare Layers&#8221; button. By pressing this button an interactive visual comparing tool is opened, showing only the selected layers with a vertical slidebar. This tool is useful for juxtaposed wms layers to allow easy comparison and detection of changes.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-compare-1.png" src="../../_images/geobrowser-compare-1.png" />
+</div>
+<div class="figure">
+<img alt="../../_images/geobrowser-compare-2.gif" src="../../_images/geobrowser-compare-2.gif" />
+</div>
+</div>
+<div class="section" id="time-slider">
+<h3>Time Slider<a class="headerlink" href="#time-slider" title="Permalink to this headline">¶</a></h3>
+<p>If the Current Opensearch Description exposes the standard temporal query parameters (time:start, time:end), and if the thematic app allows it, a Time Slider is added on the bottom of the map. This widget is useful to visually select a time range for a time restriction on the current search. Moreover, the Time Slider contains visual representation of the data distribution over the time.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-timeline-1.png" src="../../_images/geobrowser-timeline-1.png" />
+</div>
+<div class="figure">
+<img alt="../../_images/geobrowser-timeline-2.png" src="../../_images/geobrowser-timeline-2.png" />
+</div>
+</div>
+<div class="section" id="search-terms">
+<h3>Search Terms<a class="headerlink" href="#search-terms" title="Permalink to this headline">¶</a></h3>
+<p>The Search Terms is a default standard Opensearch Parameter. The geobrowser represents this with a simple input text widget, always visible on the top left of the map. It&#8217;s a &#8220;keypress&#8221; triggered input, users don&#8217;t need to press a confirmation after typing, the search is automatically launched as users stop to type the text to search.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-search-terms.png" src="../../_images/geobrowser-search-terms.png" />
+</div>
+</div>
+<div class="section" id="full-screen">
+<h3>Full Screen<a class="headerlink" href="#full-screen" title="Permalink to this headline">¶</a></h3>
+<p>A simple button to switch to full screen.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-fullscreen.png" src="../../_images/geobrowser-fullscreen.png" />
+</div>
+</div>
+<div class="section" id="point-info">
+<h3>Point Info<a class="headerlink" href="#point-info" title="Permalink to this headline">¶</a></h3>
+<p>With a right-click on an empty point on the map a context menu will open to show some actions like &#8220;Center map here&#8221; (pan in the selected zone on the map), zoom in, zoom out, and a useful utils &#8220;Show coordinates&#8221;. This utils will show a popup with information about the coordinates of the point selected on the map, in different formats.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-point-info.gif" src="../../_images/geobrowser-point-info.gif" />
+</div>
+</div>
+<div class="section" id="layers-control">
+<h3>layers control<a class="headerlink" href="#layers-control" title="Permalink to this headline">¶</a></h3>
+<p>On the top-right of the map there&#8217;s the layers control: collapsed in a button, by going over it a panel will expand, showing the list of all layers and layers groups in a scrollable panel.</p>
+<p>There are two types of layers:</p>
+<ul class="simple">
+<li>base layers, that are mutually exclusive (only one can be visible on your map at a time),</li>
+<li>overlays, which are all the layer put over the base layers. Usually a base layer is a global map like streetview.</li>
+</ul>
+<p>From the layers control users can switch between the base layers (defined on the thematic app configuration), and can show/hide the overlay layers.
+On the geobrowser there are some predefined overlay layers:</p>
+<ul class="simple">
+<li>Data Results: the layers group bound with the Current Search</li>
+<li>Features Basket: the layers group bound with the Features Basket</li>
+<li>Related Search: the layers group associated to a correlated search (if available)</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/geobrowser-layers-control.png" src="../../_images/geobrowser-layers-control.png" />
+</div>
+<p>Moreover, users can also set the opacity by clicking on the opacity button and set the opacity slider.</p>
+</div>
+<div class="section" id="geobrowser-clipboard">
+<h3>Geobrowser Clipboard<a class="headerlink" href="#geobrowser-clipboard" title="Permalink to this headline">¶</a></h3>
+<p>The geobrowser clipboard is a facility used to pass data between the geobrowser components, in particular from the current search status and results to the WPS services fields. The Geobrowser Clipboard consists in a set of adaptable and dynamic information stored in a temporary buffer during the user interaction. For example, if the user selects one or more features, some selected feature information (such as start time or identifier) are stored in the clipboard for a reuse of the values.
+Another clipboard type can be a search value, like search start date or end date.</p>
+<p>Each clipboard element has a identifier, a value, a clipboard type (feature or search) and a data type. A value could be an array, for example, if the user selects 10 fields, the search:startDate geobrowser clipboard item stores 10 start dates.</p>
+<div class="figure">
+<img alt="../../_images/geobrowser-clipboard.png" src="../../_images/geobrowser-clipboard.png" />
+</div>
+<p>The WPS service field has a clipboard menu, used to retrieve the clipboard values previously stored.</p>
+</div>
+<div class="section" id="drag-n-drop-features">
+<h3>Drag&#8217;n drop Features<a class="headerlink" href="#drag-n-drop-features" title="Permalink to this headline">¶</a></h3>
+<p>A feature (or a set of features) selected from the Results Panel can be dragged to use it as a WPS service parameter value, or to add it to the features basket.
+For the first operation it&#8217;s necessary to have the WPS service opened with the allowed target WPS field parameter visible, simply by dropping the feature(s) on the WPS field, this field will be set with the feature identifier. This operation is available for the features basket result too: it&#8217;s possible to add a feature from the features basket on a WPS field parameter.
+For the second operation (add to features basket), users can add selected features from the results panel to the features basket panel simply by dragging the features and dropping them into the features basket tab icon.</p>
 </div>
 </div>
 </div>
@@ -376,7 +552,7 @@ Details on jobs can be accessed by clicking on the title of the job.</p>
 </div>
 <footer class="footer">
 	<div class="container">
-		&nbsp;&nbsp;&nbsp;Copyright 2006-2019 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2020 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
 	</div>
 </footer>
 
