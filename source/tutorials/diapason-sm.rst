@@ -118,7 +118,7 @@ View results on the map
 After successful completion of the job , the following elements shall appear on the *Results Table*:
             * The interferometric amplitude. 
             * The interferometric coherence.
-            * The interferometric phase. This the output interferogram as an RGB image ready to be displayed on the GeoBrowser map.
+            * The interferometric phase. This the output interferogram as an RGB image ready to be displayed on the Geobrowser map.
             * A zip file products.zip containing the DIAPASON geocoded results in geotiff format ,without additionnal processing.
             * An RGB image showing the unwrapped phase (in case the phase unwrapping processing was activated).
 

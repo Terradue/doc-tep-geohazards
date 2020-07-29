@@ -1,13 +1,14 @@
 A data processing facility
 ==========================
 
-The portal is a data processing facility, where it is possible to **create** a new processing service or add and **re-use** existing processing services, **process** data, access and **reproduce** processing jobs.
+The portal is powered by a data processing facility, and by a number of Geobrowser apps addressing thematic activities.
 
-Creating a new processing service can be done from the Cloud Dashboard by the Cloud Administrator.
+The data processing facility is where authorised partners can **deploy** processing services, for the Portal users to **process** data, or access and **reproduce** past processing jobs.
 
-The list of existing **processing services** is available from the :doc:`Processing services tab <../community-guide/platform/geobrowser>`.
+The **data sources** available inside a Geobrowser App are accessed from the :doc:`Data Contexts menu <../community-guide/platform/geobrowser>`.
 
-The list of existing and accessible **jobs** is available from the :doc:`Processing services tab <../community-guide/platform/geobrowser>`.
+The **data services** available inside a Geobrowser App are accessed from the :doc:`Data services tab <../community-guide/platform/geobrowser>`.
 
-**Processing** of data selected on the geobrowser can be done from the :doc:`Processing services tab <../community-guide/platform/geobrowser>`.
+The **processing services** available inside a Geobrowser App are accessed from the :doc:`Processing services tab <../community-guide/platform/geobrowser>`.
 
+The **processing jobs** created by or shared with a user are also accessed from the :doc:`Processing services tab <../community-guide/platform/geobrowser>`.
