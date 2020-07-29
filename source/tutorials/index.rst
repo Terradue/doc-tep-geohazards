@@ -31,6 +31,8 @@ Contents:
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
    SAR Flood Tool Service<sar-flood-tool>
+   Sentinel-2 Multitemporal RGB composite with Gefolki coregistration<Sentinel-2 Multitemporal RGB composite with Gefolki coregistration>
+   Sentinel-2 Watermask<Sentinel-2 Watermask>
    Sentinel-3 SLSTR composites<s3-slstr-composites>   
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP CSK DInSAR<snap-csk>
