@@ -40,7 +40,7 @@ The Geobrowser is composed of:
 
 - **Map services**, the map area;
 - **Contexts menu**, a menu used to switch among predefined search;
-- **Data Services panel**, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability:
+- **Data services panel**, a panel showing all info about the current search and the saved results. This panel is splitted in more sub panels, shown only one at a time to improve focus and usability:
 
    - **Search Panel**
    - **Results Panel**
@@ -48,7 +48,7 @@ The Geobrowser is composed of:
    - **Data packages panel**
    - **Details panel**
 
-- **Processing panel**
+- **Processing services panel**
 
 
 Map services
@@ -78,7 +78,7 @@ The default pre-defined contexts are:
 
 This can be changed, depending on the Thematic application.
 
-Data Services panel
+Data services panel
 -------------------
 The Data Services panel shows all information about the current search and the saved results. This panel implements three of the “Information Seeking Mantra” interactions (search, list results, details on demand). 
 
