@@ -22,7 +22,7 @@ The output of the service is a multiple band raster file in GeoTIFF format origi
 
 
 
-Select the Processing Service
+**Select the Processing Service**
 
 Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Multi-mission co-location” service.
  
