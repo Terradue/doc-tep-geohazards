@@ -125,8 +125,8 @@ Results: download and visualization
 
 * The following output files are produced:
 
-    - **Sentinel-2 Multitemporal RGB composite - product GeoTIFF RGB**
-    - **Input Product selected bands - product GeoTIFF** for each input product
+    - **Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z) - product GeoTIFF RGB**
+    - **Input Product selected bands - product GeoTIFF** - for each input product
     
 Reference
 ==================================
