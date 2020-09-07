@@ -6,13 +6,13 @@ Sentinel-2 Multitemporal RGB composite with Gefolki coregistration
 
 **Sentinel-2 Multitemporal RGB composite with Gefolki coregistration**
 
-This service takes three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.
-The output of the service is a EO data product in GeoTIFF format. The product is a a multitemporal RGB composite GeoTiff file obtained through the composition of B04, B03, B02 or B08, B04, B03
+This service takes three Sentinel-2 MSI Level 1C or Level 2A acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI. The three input products must have the same Level. 
+The output of the service is a EO data product in GeoTIFF format. The product is a multitemporal RGB composite GeoTiff file obtained through the composition of bands B04, B03, B02 (Natural colours) or bands B08, B04, B03 (false colour Infrared).
 bands. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
 
 -----
 
-This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.
+This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI.
 
 Select the processing
 =====================
@@ -127,3 +127,12 @@ Results: download and visualization
 
     - **Sentinel-2 Multitemporal RGB composite - product GeoTIFF RGB**
     - **Input Product + selected bands - product GeoTIFF**
+    
+Reference
+==================================
+- Plyer, A., et al. (2015). A New Coregistration Algorithm for Recent Applications on Urban SAR Images. Geoscience and Remote Sensing Letters, IEEE, 12(11), 2198-2202.
+- Brigot, G., et al. (2016)  Adaptation and Evaluation of an optical flow method applied to co-registration of forest remote sensing images, accepted with modifications in  IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing,  Volume: 9, Issue7, July 2016
+
+Further reading
+==================================
+- The Coregistration Swiss Army Knife: GeFolki - `link <https://w3.onera.fr/medusa/gefolki>`_.
