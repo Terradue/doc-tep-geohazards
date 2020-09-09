@@ -55,7 +55,7 @@ Reference input
 
 * Click on the lens icon to open the Search Panel
 * Select **S2MSI1C** or **S2MSI2A** as Product Type. The three products must have the same Product Type and Level.
-* Apply the date value, for example **2019-08-01** in **time:start** field and **2019-08-11** in **time:end** field
+* Apply the date value, for example **2019-08-01** in **time:start** field and **2019-09-05** in **time:end** field
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-4.png
 	:figclass: align-center
