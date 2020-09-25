@@ -1,7 +1,7 @@
 MPIC-ETQ: Multiple pairwise optical image correlation for Earthquake
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_mpicopt_icon.png
+.. image:: assets/tuto_mpicetq_logo.png
         
 **MPIC-ETQ**
 
@@ -32,7 +32,7 @@ MPIC-OPT is proposed on the GEP in two versions: MPIC-ETQ and MPIC-MM."
 * **Correllation coefficient:**  8-bit GeoTiffs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized to a range of 128 to 255. The naming convention is *MM_Corr_tile_date1_date2.tif*.
 * **Decorrellation masks:**  8-bit GeoTiffs representing the decorellation mask. Pixel . The naming convention is *tile_date1_date2_decorrel_mask.tif*
 
-.. Convention:: The displacement and the mean velocity products are displayed with this convention: positive values are toward the **South** and toward the **East** in the *Forward* time direction. If *Forward+Backward* option is activated the products in the *Backward* direction will have opposite signs as compared to the ones in the *Forward* direction of the time.
+.. note:: The displacement and the mean velocity products are displayed with this convention: positive values are toward the **South** and toward the **East** in the *Forward* time direction. If *Forward+Backward* option is activated the products in the *Backward* direction will have opposite signs as compared to the ones in the *Forward* direction of the time.
 
 
 -----
@@ -84,7 +84,7 @@ Click on the data package, hold shift and Drag and Drop all four results in the 
         :width: 750px
         :align: center
 
-.. caution:: Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the contained tiles. For processing you must select **only** the original multi-tile datasets. For datasets after 27 September 2016 there is no such ambiguity.
+.. warnings:: Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the contained tiles. For processing you must select **only** the original multi-tile datasets. For datasets after 27 September 2016 there is no such ambiguity.
 
 Set the processing parameters 
 -----------------------------
@@ -97,7 +97,9 @@ There is a total of 16 processing parameters that can be adjusted and when hover
 * **Minimum matching range:** Define the minimum matching range for creating the image pairs. The matching range is express in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). By default, this parameter is set to 1.
 * **Maximum matching range:** Define the maximum matching range for creating the image pairs. The matching range is express in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). By default, this parameter is set to 5.
 * **Matching direction:** If set to *Forward* the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs wil be created in both directions (i.e. time and reverse time direction). By default, *Forward* is set. 
-.. caution:: Choosing the *Forward+Backward* option should be carefully considered by user as it increases the number of pairs created and hence, the computing time and ressources.
+
+.. warnings:: Choosing the *Forward+Backward* option should be carefully considered by user as it increases the number of pairs created and hence, the computing time and ressources.
+
 * **Window size:** Control the size of the template used for matching among the input images. More specifically it controls the neighborhood around the central pixel so that the default value of *3* results in a 7x7 window size. The minimum value is 1 (3x3 pixel) and the recommended maximum is 7 (15x15 pixel). A smaller window will allow to better reconstruct small scale variations while at the same time can lead to more noise. Vice versa larger window sizes will lead to greater robustness against noise while smoothing small scale details. For small scale movements such as landslides we recommend a smaller window size (e.g. 2) while for large scale movements such as coseismic slip larger window sizes are often better.
 * **Decorrelation threshold:** Matches with a correlation coefficient [0,1] will be discarded. The default value is *0.2*.
 * **Spatial matching range:** Define the search range in pixel for finding matches. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. This parameter should be adjusted according to the maximum expected displacement taking into account also the possible coregistration bias of the input images. Since the considered landslide underwent a period of strong acceleration we will increase this value to *7*.
