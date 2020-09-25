@@ -72,14 +72,14 @@ For this tutorial we will rely on readily prepared data package which is accessi
 .. _`Ridgecrest data package`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DRidgecrest_2019_S2_2im
 
 
-.. figure:: assets/tuto_mpicopt_3.png
+.. figure:: assets/tuto_mpicetq_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
 Click on the data package, hold shift and Drag and Drop all four results in the *Sentinel-2 products* field in the service panel on the right:
 
-.. figure:: assets/tuto_mpicopt_4.png
+.. figure:: assets/tuto_mpicetq_4.png
 	:figclass: align-center
         :width: 750px
         :align: center
