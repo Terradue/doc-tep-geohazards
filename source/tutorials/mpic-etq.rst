@@ -1,11 +1,11 @@
 MPIC-ETQ: Multiple Pairwise optical Image Correlation for Earthquake analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_mpicopt_icon.png
+.. image:: assets/tuto_mpicetq_logo.png
 
 **MPIC-ETQ**
 
-**MPIC-EarThQuake** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_,[2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
+**MPIC-EarThQuake** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
 CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
 
 
@@ -30,7 +30,7 @@ It comprises two components with (a) an analysis module for measuring sub-pixel 
 * **Correlation coefficient:**  8-bit GeoTIFFs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized in the range of [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
 * **Decorrelation mask:**  8-bit GeoTIFFs representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*
 
-* **Cloud mask:** 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear; 1 = null; 2 = cloud; 3 = shadow; 4 = snow; 5 = water. The naming convention is: *Tile_date_spectral_mask.tif*
+* **Cloud mask:** 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear land pixel; 1 = null; 2 = cloud; 3 = cloud shadow; 4 = snow; 5 = water. The naming convention is: *Tile_date_spectral_mask.tif*
 * **DEM products:**
 
 
@@ -39,7 +39,7 @@ It comprises two components with (a) an analysis module for measuring sub-pixel 
 
 -----
 
-This tutorial introduce the use of the **MPIC-ETQ** service for the quantification of co-seismic displacement. To this end we will process Sentinel-2 images acquired before and after the Ridgecrest earthquake (California, USA, 2019).
+This tutorial introduces the use of the **MPIC-ETQ** service for the quantification of co-seismic displacement. To this end we will process Sentinel-2 images acquired before and after the Ridgecrest earthquake (California, USA, 2019).
 
 Select the processing service
 =============================
@@ -91,7 +91,7 @@ Set the processing parameters
 
 There are 16 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each parameter.
 
-* **DEM:** Define the Digital Elevation Model used for filtering the displacement fields. The *Merit* [5]_ and the *COP-DEM_GLO-30* [6]_ are available to GEP users. By default, the Merit DEM is used.
+* **DEM:** Define the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. By default, the Merit DEM is used.
 * **Sentinel-2 band:** Define the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the Sentinel-2 production centrer at ESA.
 * **Split date:** An optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets and pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying coseismic displacement. By default, this field is left empty.
 * **Minimum matching range:** Define the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). By default, this parameter is set to 1.
