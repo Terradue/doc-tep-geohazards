@@ -76,3 +76,10 @@ gzip shape.tar
 
 The file **shape.tar.gz** that you obtain is now ready to be used as ALADIM input.
 
+
+Creation of a mask (optional) 
+=============================
+The user has the possibility to provide masks in order to avoid the landslide detection within some areas.
+The format of these masks could be either shapefile or raster and their name must contain the pattern **"mask"**.
+All these files must be packaged in a flat archive in order to correspond to the expected format for ALADIM input.
+The obtain archive must be upload and darg and drop in the ALADIM EXOGENEOUS MASK field of the service panel.
