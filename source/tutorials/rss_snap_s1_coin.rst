@@ -460,11 +460,10 @@ Double click on each result name. The result will be shown on the map together w
 
 Double click on the product name and then on the Download button that appears in the info tab. Depending on the output the following products can be downloaded:
 	
-	•	**Product GeoTiff**: this is the physical quantity.
-	•	**Browse Product GeoTiff**: this is the GeoTiff browse product as shown on the map.
-	•	**Browse Product PNG**: this is the PNG browse product.
+	•	**Product Browse GeoTiff**: this is the GeoTiff browse product as shown on the map.
+	•	**Browse File (png)**: this is the PNG browse product.
 	•	**Metadata (properties)**: a txt file containing all the metadata info displayed in the info tab.
-	•	**Legend (png)**: this is a PNG representing the colour-table of the displayed image.
+	•	**Browse Legend (png)**: this is a PNG representing the colour-table of the displayed image.
 
 
 .. figure:: assets/tuto_rss_snap_s1_coin_16.png
