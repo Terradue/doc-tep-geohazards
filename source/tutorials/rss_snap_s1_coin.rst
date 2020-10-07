@@ -274,14 +274,14 @@ For this tutorial, a pre-defined data set has been prepared to speed up data sel
         :width: 750px
         :align: center
 		
-* Click on the product related to 2016-06-04, then drag and drop the selected data in the **Master product reference** field.
+* Click on the product related to 2020-09-23, then drag and drop the selected data in the **Master product reference** field.
 		
 .. figure:: assets/tuto_rss_snap_s1_coin_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Click on the product related to 2016-06-28, then drag and drop the selected data in the **Slave product reference** field.
+* Click on the product related to 2020-10-05, then drag and drop the selected data in the **Slave product reference** field.
 		
 .. figure:: assets/tuto_rss_snap_s1_coin_4.png
 	:figclass: align-center
@@ -421,7 +421,7 @@ The following outputs are listed:
 	- **sigmaMaster_dB_IW_VV_04Jun2016**: this is the product that contains the dB intensity of Master product. The Browse product is shown on the map and both Physical and Browse products are available for download.
 	- **sigmaSlave_dB_IW_VV_28Jun2016**: this is the product that contains the dB intensity of Slave product. The Browse product is shown on the map and both Physical and Browse products are available for download. 
 
-Click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend. 
+Double click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend. 
 
 .. figure:: assets/tuto_rss_snap_s1_coin_9.png
 	:figclass: align-center
@@ -458,7 +458,7 @@ Click on each result name. The result will be shown on the map together with met
         :width: 750px
         :align: center		
 
-Click on the product name and then on the Download button that appears in the info tab. Depending on the output the following products can be downloaded:
+Double click on the product name and then on the Download button that appears in the info tab. Depending on the output the following products can be downloaded:
 	
 	•	**Product GeoTiff**: this is the physical quantity.
 	•	**Browse Product GeoTiff**: this is the GeoTiff browse product as shown on the map.
