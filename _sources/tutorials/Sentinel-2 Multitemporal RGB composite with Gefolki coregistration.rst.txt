@@ -6,13 +6,13 @@ Sentinel-2 Multitemporal RGB composite with Gefolki coregistration
 
 **Sentinel-2 Multitemporal RGB composite with Gefolki coregistration**
 
-This service takes three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.
-The output of the service is a EO data product in GeoTIFF format. The product is a a multitemporal RGB composite GeoTiff file obtained through the composition of B04, B03, B02 or B08, B04, B03
-bands. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.
+This service takes three Sentinel-2 MSI Level 1C or Level 2A acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI. The three input products must have the same Level. 
+The output of the service is a EO data product in GeoTIFF format. The product is a multitemporal RGB composite obtained through the composition of bands B04, B03, B02 (Natural colours) or bands B08, B04, B03 (false colour Infrared).
+The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata and downaload it.
 
 -----
 
-This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.
+This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI.
 
 Select the processing
 =====================
@@ -54,8 +54,8 @@ Reference input
         :align: center
 
 * Click on the lens icon to open the Search Panel
-* Select **S2MSI1C** or **S2MSI2A** as Product Type. The three products must have the same Product Type.
-* Apply the date value, for example **2020-06-12** in **time:start** field and **2020-08-11** in **time:end** field
+* Select **S2MSI1C** or **S2MSI2A** as Product Type. The three products must have the same Product Type and Level.
+* Apply the date value, for example **2019-08-01** in **time:start** field and **2019-09-05** in **time:end** field
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-4.png
 	:figclass: align-center
@@ -123,7 +123,16 @@ Results: download and visualization
         :width: 750px
         :align: center
 
-* The following files are produced:
+* The following output files are produced:
 
-    - **Sentinel-2 Multitemporal RGB composite - product GeoTIFF RGB**
-    - **Input Product + selected bands - product GeoTIFF**
+    - **Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z) - product GeoTIFF RGB**
+    - **Input Product selected bands - product GeoTIFF** - for each input product
+    
+Reference
+==================================
+- Plyer, A., et al. (2015). A New Coregistration Algorithm for Recent Applications on Urban SAR Images. Geoscience and Remote Sensing Letters, IEEE, 12(11), 2198-2202.
+- Brigot, G., et al. (2016)  Adaptation and Evaluation of an optical flow method applied to co-registration of forest remote sensing images, accepted with modifications in  IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing,  Volume: 9, Issue7, July 2016
+
+Further reading
+==================================
+- The Coregistration Swiss Army Knife: GeFolki - `link <https://w3.onera.fr/medusa/gefolki>`_.

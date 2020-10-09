@@ -118,6 +118,8 @@
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
 <li><a class="reference internal" href="#results-download-and-visualization">Results: download and visualization</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+<li><a class="reference internal" href="#further-reading">Further reading</a></li>
 </ul>
 </li>
 </ul>
@@ -184,11 +186,11 @@
 <h1>Sentinel-2 Multitemporal RGB composite with Gefolki coregistration<a class="headerlink" href="#sentinel-2-multitemporal-rgb-composite-with-gefolki-coregistration" title="Permalink to this headline">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-icon.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-icon.png" src="../_images/s2-multitemporal-RGB-Gefolki-icon.png" style="width: 200px;" /></a>
 <p><strong>Sentinel-2 Multitemporal RGB composite with Gefolki coregistration</strong></p>
-<p>This service takes three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.
-The output of the service is a EO data product in GeoTIFF format. The product is a a multitemporal RGB composite GeoTiff file obtained through the composition of B04, B03, B02 or B08, B04, B03
-bands. The output GeoTiff is displayed in geobrowser with the possibility to access product metadata.</p>
+<p>This service takes three Sentinel-2 MSI Level 1C or Level 2A acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI. The three input products must have the same Level.
+The output of the service is a EO data product in GeoTIFF format. The product is a multitemporal RGB composite obtained through the composition of bands B04, B03, B02 (Natural colours) or bands B08, B04, B03 (false colour Infrared).
+The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata and downaload it.</p>
 <hr class="docutils" />
-<p>This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite with Gefolki coregistration including a coregistration step with GEFOLKI.</p>
+<p>This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI.</p>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -221,8 +223,8 @@ bands. The output GeoTiff is displayed in geobrowser with the possibility to acc
 </div>
 <ul class="simple">
 <li>Click on the lens icon to open the Search Panel</li>
-<li>Select <strong>S2MSI1C</strong> or <strong>S2MSI2A</strong> as Product Type. The three products must have the same Product Type.</li>
-<li>Apply the date value, for example <strong>2020-06-12</strong> in <strong>time:start</strong> field and <strong>2020-08-11</strong> in <strong>time:end</strong> field</li>
+<li>Select <strong>S2MSI1C</strong> or <strong>S2MSI2A</strong> as Product Type. The three products must have the same Product Type and Level.</li>
+<li>Apply the date value, for example <strong>2019-08-01</strong> in <strong>time:start</strong> field and <strong>2019-09-05</strong> in <strong>time:end</strong> field</li>
 </ul>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-4.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-4.png" src="../_images/s2-multitemporal-RGB-Gefolki-4.png" style="width: 250px;" /></a>
@@ -282,14 +284,27 @@ bands. The output GeoTiff is displayed in geobrowser with the possibility to acc
 <a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-11.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-11.png" src="../_images/s2-multitemporal-RGB-Gefolki-11.png" style="width: 750px;" /></a>
 </div>
 <ul>
-<li><p class="first">The following files are produced:</p>
+<li><p class="first">The following output files are produced:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>Sentinel-2 Multitemporal RGB composite - product GeoTIFF RGB</strong></li>
-<li><strong>Input Product + selected bands - product GeoTIFF</strong></li>
+<li><strong>Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z) - product GeoTIFF RGB</strong></li>
+<li><strong>Input Product selected bands - product GeoTIFF</strong> - for each input product</li>
 </ul>
 </div></blockquote>
 </li>
+</ul>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Plyer, A., et al. (2015). A New Coregistration Algorithm for Recent Applications on Urban SAR Images. Geoscience and Remote Sensing Letters, IEEE, 12(11), 2198-2202.</li>
+<li>Brigot, G., et al. (2016)  Adaptation and Evaluation of an optical flow method applied to co-registration of forest remote sensing images, accepted with modifications in  IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing,  Volume: 9, Issue7, July 2016</li>
+</ul>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The Coregistration Swiss Army Knife: GeFolki - <a class="reference external" href="https://w3.onera.fr/medusa/gefolki">link</a>.</li>
 </ul>
 </div>
 </div>

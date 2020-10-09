@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MPIC-ETQ: Multiple Pairwise optical Image Correlation for Earthquake analysis &#8212; Geohazards Thematic Exploitation Platform 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eu" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>3.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">MPIC-ETQ: Multiple Pairwise optical Image Correlation for Earthquake analysis</a><ul>
+<li><a class="reference internal" href="#select-the-processing-service">Select the processing service</a></li>
+<li><a class="reference internal" href="#use-case-analysis-of-the-july-2019-ridgecrest-earthquakes">Use case: Analysis of the July 2019 Ridgecrest Earthquakes</a><ul>
+<li><a class="reference internal" href="#select-input-data">Select input data</a></li>
+<li><a class="reference internal" href="#set-the-processing-parameters">Set the processing parameters</a></li>
+<li><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/mpic-etq.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/mpic-etq.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="mpic-etq-multiple-pairwise-optical-image-correlation-for-earthquake-analysis">
+<h1>MPIC-ETQ: Multiple Pairwise optical Image Correlation for Earthquake analysis<a class="headerlink" href="#mpic-etq-multiple-pairwise-optical-image-correlation-for-earthquake-analysis" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_mpicetq_logo.png" src="../_images/tuto_mpicetq_logo.png" />
+<p><strong>MPIC-ETQ</strong></p>
+<p><strong>MPIC-EarThQuake</strong> is a service based on the <strong>CO-REGIS/MPIC</strong> library developed by CNRS EOST (Strasbourg, France) <a class="footnote-reference" href="#id9" id="id1">[1]</a>, <a class="footnote-reference" href="#id10" id="id2">[2]</a> and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) <a class="footnote-reference" href="#id11" id="id3">[3]</a>.
+CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.</p>
+<p><strong>MPIC-ETQ</strong> is an on-demand service tailored for quantifying co-seismic deformation from a limited number of input images and a few number of parameters which makes it easy to use by non-experts.
+It comprises two components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs and (b) a correction module for the systematic geometric correction and filtering of residuals.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-2 MSI L1C</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<ul class="simple">
+<li><strong>Mean displacement:</strong> A floating point GeoTIFF representing the average displacement over all time steps in <em>m</em>. The naming convention is <em>MM_Mean_displ_magnitude_tile_date1_to_dateN.tif</em></li>
+<li><strong>Mean velocity:</strong> Two floating point GeoTIFFs representing the mean absolute velocity in E−W and N−S direction in <em>m/day</em> respectively. The naming convention is <em>MM_Mean_velocity_EW_tile_date1_to_dateN.tif</em> and <em>MM_Mean_velocity_NS_tile_date1_to_dateN.tif</em>.</li>
+<li><strong>Quality:</strong> A floating point GeoTIFF representing the percentage, per pixel, of the pairs with <em>NCC &gt; minimum correlation threshold</em>.</li>
+<li><strong>Coherence Vector:</strong> A floating point GeoTIFF, in the range [0,1], representing, per pixel, the coherence of the displacement. A coherence vector value of 0 indicates a highly variable direction of displacement while a coherence vector value close to 1 indicates a consistent and persistent displacement in the same direction.</li>
+<li><strong>Corrected displacement fields for each time step:</strong> Floating point GeoTiffs representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after the corrections selected by the user: The naming conventions are <em>MM_EW_displ_tile_date1_vs_date2_corrected.tif</em> and <em>MM_NS_displ_tile_date1_vs_date2_corrected.tif</em> respectively.</li>
+<li><strong>Filtered displacement fields for each time step:</strong> Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering: The naming conventions are <em>MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif</em> and <em>MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif</em> respectively.</li>
+<li><strong>Correlation coefficient:</strong>  8-bit GeoTIFFs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized in the range of [128,255]. The naming convention is <em>MM_Corr_tile_date1_date2.tif</em>.</li>
+<li><strong>Decorrelation mask:</strong>  8-bit GeoTIFFs representing the decorrelation mask for each time step. The naming convention is <em>tile_date1_date2_decorrel_mask.tif</em></li>
+<li><strong>Cloud mask:</strong> 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear land pixel; 1 = null; 2 = cloud; 3 = cloud shadow; 4 = snow; 5 = water. The naming convention is: <em>Tile_date_spectral_mask.tif</em></li>
+<li><strong>DEM products:</strong></li>
+</ul>
+<hr class="docutils" />
+<p>This tutorial introduces the use of the <strong>MPIC-ETQ</strong> service for the quantification of co-seismic displacement. To this end we will process Sentinel-2 images acquired before and after the Ridgecrest earthquake (California, USA, 2019).</p>
+<div class="section" id="select-the-processing-service">
+<h2>Select the processing service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Login to the platform (see <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
+<li>Go to the Geobrowser, expand the panel “Processing services” on the right hand side and select the processing service “MPIC-ETQ”:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_1.png"><img alt="../_images/tuto_mpicetq_1.png" src="../_images/tuto_mpicetq_1.png" style="width: 750px;" /></a>
+</div>
+<p>This will display the service panel including several pre-defined parameters which can be adapted.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_2.png"><img alt="../_images/tuto_mpicetq_2.png" src="../_images/tuto_mpicetq_2.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="use-case-analysis-of-the-july-2019-ridgecrest-earthquakes">
+<h2>Use case: Analysis of the July 2019 Ridgecrest Earthquakes<a class="headerlink" href="#use-case-analysis-of-the-july-2019-ridgecrest-earthquakes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="select-input-data">
+<h3>Select input data<a class="headerlink" href="#select-input-data" title="Permalink to this headline">¶</a></h3>
+<p>The Geobrowser offers multiple ways to search a large variety of EO-based dataset and the user should refer to the <a class="reference internal" href="../community-guide/platform/geobrowser.html"><span class="doc">Geobrowser</span></a> section for a general introduction.
+For this tutorial we will rely on a ready prepared datapackage which is accessible through the &#8220;Data Packages&#8221; tab on the upper left of the screen. If you type &#8220;Ridgecrest&#8221; into the search box you should be able to find a data package named &#8220;Ridgecrest_2019_S2_2im&#8221;. Alternatively you can access the <a href="#id15"><span class="problematic" id="id16">`Ridgecrest data package`_</span></a> directly by clicking on the provided link.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_3.png"><img alt="../_images/tuto_mpicetq_3.png" src="../_images/tuto_mpicetq_3.png" style="width: 750px;" /></a>
+</div>
+<p>Click on the datapackage, hold shift and Drag and Drop all four products in the <em>Sentinel-2 products</em> field in the service panel on the right:</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_4.png"><img alt="../_images/tuto_mpicetq_4.png" src="../_images/tuto_mpicetq_4.png" style="width: 750px;" /></a>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the <em>Geobrowser</em> currently returns several results including both the original multi-tile dataset and a preview of the footprints of the tiles. For processing, you must select <strong>only</strong> the original multi-tile datasets. For datasets after 27 September 2016, there is no such ambiguity.</p>
+</div>
+</div>
+<div class="section" id="set-the-processing-parameters">
+<h3>Set the processing parameters<a class="headerlink" href="#set-the-processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>There are 16 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each parameter.</p>
+<ul class="simple">
+<li><strong>DEM:</strong> Define the Digital Elevation Model used for filtering the displacement fields. The <em>Merit</em> <a class="footnote-reference" href="#id12" id="id4">[4]</a> and the <em>COP-DEM_GLO-30</em> <a class="footnote-reference" href="#id13" id="id5">[5]</a> are available to GEP users. By default, the Merit DEM is used.</li>
+<li><strong>Sentinel-2 band:</strong> Define the Sentinel-2 band for matching. The option <em>B04</em> is recommended since the red band is also used for band to band co-registration by the Sentinel-2 production centrer at ESA.</li>
+<li><strong>Split date:</strong> An optional parameter of the form &#8220;yyyy-MM-dd&#8221; which will split the time series into two subsets and pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying coseismic displacement. By default, this field is left empty.</li>
+<li><strong>Minimum matching range:</strong> Define the minimum matching range for creating the image pairs. The matching range is expressed in <em>acquisitions</em> so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). By default, this parameter is set to 1.</li>
+<li><strong>Maximum matching range:</strong> Define the maximum matching range for creating the image pairs. The matching range is expressed in <em>acquisitions</em> so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). By default, this parameter is set to 5.</li>
+<li><strong>Matching direction:</strong> If <em>Forward</em> is selected, the pairs are only created in the time direction. If <em>Forward+Backward</em> is selected, the pairs will be created in both directions (i.e. time and reverse time direction). By default, the parameter is set to <em>Forward</em>.</li>
+</ul>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Choosing the <em>Forward+Backward</em> option should be carefully considered by the user as it increases the number of pairs created and hence, the computing time and ressources.</p>
+</div>
+<ul class="simple">
+<li><strong>Window size:</strong> Control the size of the template used for matching. It controls the neighborhood around the central pixel so that the default value of <em>3</em> results in a 7x7 window size. The minimum value is 1 (3x3 pixel) and the maximum value is 7 (15x15 pixel). A smaller window will allow to better reconstruct small scale variations but can lead to more noise. Vice versa, larger window sizes will lead to greater robustness against noise but will smooth small scale details. For large scale motion such as coseismic slip, we recommend to use large window sizes.</li>
+<li><strong>Decorrelation threshold:</strong> The matches with a correlation coefficient expressed in the range [0,1] will be discarded. The default value is <em>0.2</em>.</li>
+<li><strong>Spatial matching range:</strong> Define the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account also the possible coregistration bias of the input images.</li>
+<li><strong>Regularization parameter:</strong> Similar to the window size, the regularization parameter controls the smoothness of the expected motion field. Increasing the regularization parameter is putting greater emphasis on a smooth motion field where neighboring pixels will have similar displacment values. For large scale features such as coseismic displacement, large value lead to smoother and less noisy results. The default value is set to <em>0.3</em>.</li>
+<li><strong>Snow mask:</strong> If set to <em>True</em>, the areas of the images covered by snow are masked. By default, this parameter is set to <em>True</em>.</li>
+<li><strong>Cloud mask:</strong> If set to <em>True</em>, the areas of the images covered by clouds are masked. By default, this parameter is set to <em>True</em>.</li>
+<li><strong>Slope mask range minimum:</strong> The pixels located on terrain slopes with an angle larger than the value set with the parameter are filtered out in the products. By default, the pixels located on slopes with angle larger than 80 degrees are filtered.</li>
+<li><strong>Slope mask range maximum:</strong> The pixels located on terrain slopes with an angle smaller than the value set with the parameter are filtered out in the products. By default, the pixels located on slopes with angle between <em>Slope mask range minimum</em> and 90 degrees are filtered.</li>
+<li><strong>Apply correction and filtering:</strong> If set to <em>True</em>, the geometric corrections as described in <a class="footnote-reference" href="#id10" id="id6">[2]</a> and filtering as described in <a class="footnote-reference" href="#id9" id="id7">[1]</a> are applied. They are highly recommended for any study case and  are applied by default.</li>
+<li><strong>Apply correction and filtering:</strong> If set to <em>True</em>, the jitter undulation observed in certain pairs of Sentinel-2 images are filtered out <a class="footnote-reference" href="#id14" id="id8">[6]</a>. This correction is recommended for displacement fields with large spatial wavelength like co-seismic displacemnet fields. By default, the correction is applied.</li>
+</ul>
+</div>
+<div class="section" id="run-the-job">
+<h3>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>You are good to go. Click on the button <em>Run Job</em> at the bottom of the right panel.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_5.png"><img alt="../_images/tuto_mpicetq_5.png" src="../_images/tuto_mpicetq_5.png" style="width: 750px;" /></a>
+</div>
+<ul class="simple">
+<li>Once the job has finished, click on the <em>Show results</em> button to obtain a list of products for visualization.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pre-visualization in the <em>Geobrowser</em> is a preview. The user needs to download the results for further analysis and interpretation.</p>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_mpicetq_6.png"><img alt="../_images/tuto_mpicetq_6.png" src="../_images/tuto_mpicetq_6.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id7">2</a>)</em> Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> Stumpf, A., Michéa, D. Malet, J.-P. (2018). Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing, 10, 160. DOI:10.3390/rs10020160</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Rosu, A.-M., Pierrot-Deseilligny, M., Delorme, A., Binet, R. and Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100: 48–59. DOI:10.1016/j.isprsjprs.2014.03.002</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O&#8217;Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). <a class="reference external" href="https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198">https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[6]</a></td><td>Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Pacini F., Boissier, E., Pointal, E. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2020 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>

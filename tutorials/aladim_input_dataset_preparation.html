@@ -116,6 +116,7 @@
 <li><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
 <li><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
 <li><a class="reference internal" href="#creation-of-the-archive-containing-the-aladim-shapefile-inputs">Creation of the archive containing the ALADIM shapefile inputs</a></li>
+<li><a class="reference internal" href="#creation-of-a-mask-optional">Creation of a mask (optional)</a></li>
 </ul>
 </li>
 </ul>
@@ -177,6 +178,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-training-areas-training-areas-shp">Creation of the training areas: training_areas.shp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-aoi-area-of-interest-aoi-shp">Creation of the AOI – Area of Interest: aoi.shp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-archive-containing-the-aladim-shapefile-inputs">Creation of the archive containing the ALADIM shapefile inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-a-mask-optional">Creation of a mask (optional)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="aladim-s2.html">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a></li>
@@ -282,6 +284,13 @@ To create a flat tar.gz you have to run the following commands (in a directory c
 <p>tar -cvf shape.tar *</p>
 <p>gzip shape.tar</p>
 <p>The file <strong>shape.tar.gz</strong> that you obtain is now ready to be used as ALADIM input.</p>
+</div>
+<div class="section" id="creation-of-a-mask-optional">
+<h2>Creation of a mask (optional)<a class="headerlink" href="#creation-of-a-mask-optional" title="Permalink to this headline">¶</a></h2>
+<p>The user has the possibility to provide masks in order to avoid the landslide detection within some areas.
+The format of these masks could be either shapefile or raster and their name must contain the pattern <strong>&#8220;mask&#8221;</strong>.
+All these files must be packaged in a flat archive in order to correspond to the expected format for ALADIM input.
+The obtain archive must be upload and darg and drop in the ALADIM EXOGENEOUS MASK field of the service panel.</p>
 </div>
 </div>
 
