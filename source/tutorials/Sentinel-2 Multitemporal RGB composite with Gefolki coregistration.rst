@@ -132,7 +132,7 @@ Area Of Interest in WKT
 Choose the results
 -----------------------
 
-* The user can decide to get as output only the RGB, if choose **No** in the **provided band results** parameters, or all the bands used as input, if choose **Yes**. 
+* The user can decide to get as output only the RGB, if choose **No** in the **provided results band** parameters, or all the bands used as input, if choose **Yes**. 
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-8.png
 	:figclass: align-center
