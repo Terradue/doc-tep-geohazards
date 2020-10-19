@@ -9,7 +9,7 @@ Sentinel-2 Watermask
 This service takes as input a Sentinel-2 MSI Level 1C or Level 2A product to generate a water mask using the NDWI the SWM.
 The output of the service is a EO data product in GeoTIFF format. The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata.
 
-**Relevance to the Charter Processing Environmen**:
+**Relevance to the Charter Processing Environment**:
   - Wildfire: to mask out the water content of vegetation as it may impact the burned area delineation product 
   - Flood: to mask out the water “normally” found in the flooded areas.
   
@@ -21,6 +21,41 @@ The index uses the green and Near Infra-red bands of remote sensing images based
 **Values description**: NDWI values of water bodies are larger than 0.5. Vegetation has much smaller values, which result in distinguishing vegetation from water bodies easier. Built-up features have positive values between zero and 0.2.
 
 -----
+
+**Output specifications**
+
+The service provides 2 output products.
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output-1 – Water mask                                                                              			                        |
++===============================+===============================================================================================================+
+| Correspondent file            | Water mask using the NDWI the SWM                                                                             |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types             | Water mask : BLACK=Earth, WHITE=Water                        						        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format                 | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution                    | Native                                                                    		                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types              | EPSG:3857 - WGS84 – Pseudo Mercator                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Browse product available      | YES as 8 bit PNG file                                                                                         |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example       | Water mask for S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643	                                |    
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+|
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output-2 – WATER_MASK_VECTOR                                                                              			                |
++===============================+===============================================================================================================+
+| Correspondent file            | Water mask vector                                                                      		        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format                 | geojson                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example       | S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643_WATER_MASK_VECTOR.geojson	                |    
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
 
 Select the processing
 =====================
