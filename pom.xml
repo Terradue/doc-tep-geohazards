@@ -10,7 +10,7 @@
   <artifactId>doc-tep-geohazards</artifactId>
   <packaging>rpm</packaging>
   <description>Geohazards Thematic Exploitation Platform guide</description>
-  <version>3.3</version>
+  <version>3.4-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>com.terradue.infra</groupId>
