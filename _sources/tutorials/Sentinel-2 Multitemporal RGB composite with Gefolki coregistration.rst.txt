@@ -14,6 +14,46 @@ The output GeoTiff is displayed in the geobrowser with the possibility to access
 
 This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI.
 
+**Output specifications**
+
+The service provides the following output products.
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output-1 – Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z)                                                                               |
++===============================+===============================================================================================================+
+| Correspondent file            | Sentinel-2 Multitemporal RGB composite                                                                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Information types             | RGB Composite   : RED=(Red band product B0X), GREEN=(green band product B0Y), BLUE=(Blu band product B0Z)	|
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format                 | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution                    | Native		                                                                                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types              | EPSG:3857 - WGS84 – Pseudo Mercator                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Processing Level              | RGB composite                                                                                                 |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example       | Sentinel-2 Multitemporal RGB composite obtained through the composition of bands B0X, B0Y, B0Z                |    
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+|
+
+If the parameter service **provided band results** has been set to **Yes**, then:
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output-2 – Input Product selected bands			                                                                                |
++===============================+===============================================================================================================+
+| Correspondent file            | Input Product selected bands		                                                                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format                 | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution                    | Native		                                                                                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types              | EPSG:3857 - WGS84 – Pseudo Mercator                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example       | Input Product selected bands.tif								                |    
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+
 Select the processing
 =====================
 
@@ -89,24 +129,34 @@ Area Of Interest in WKT
 
 .. NOTE:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*.
 
-Run the job
-===========
+Choose the results
+-----------------------
 
-* Click on the button Run Job and see the Running Job
+* The user can decide to get as output only the RGB, if choose **No** in the **provided results band** parameters, or all the bands used as input, if choose **Yes**. 
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-8.png
 	:figclass: align-center
         :width: 350px
         :align: center
 
+Run the job
+===========
+
+* Click on the button Run Job and see the Running Job
+
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-9.png
+	:figclass: align-center
+        :width: 350px
+        :align: center
+
+.. figure:: assets/s2-multitemporal-RGB-Gefolki-10.png
       	:figclass: align-center
         :width: 350px
         :align: center
 
 * After about 45 minutes, see the Successful Job:
 
-.. figure:: assets/s2-multitemporal-RGB-Gefolki-10.png
+.. figure:: assets/s2-multitemporal-RGB-Gefolki-11.png
 	:figclass: align-center
         :width: 350px
         :align: center
@@ -118,14 +168,14 @@ Results: download and visualization
 
 * See the result on map:
 
-.. figure:: assets/s2-multitemporal-RGB-Gefolki-11.png
+.. figure:: assets/s2-multitemporal-RGB-Gefolki-12.png
       	:figclass: align-center
         :width: 750px
         :align: center
 
 * The following output files are produced:
 
-    - **Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z) - product GeoTIFF RGB**
+    - **Sentinel-2 Multitemporal RGB composite obtained through the composition of bands B0X, B0Y, B0Z - product GeoTIFF RGB**
     - **Input Product selected bands - product GeoTIFF** - for each input product
     
 Reference

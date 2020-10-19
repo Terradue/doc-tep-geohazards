@@ -114,6 +114,7 @@
 <li><a class="reference internal" href="#fill-the-parameters">Fill the parameters</a><ul>
 <li><a class="reference internal" href="#reference-input">Reference input</a></li>
 <li><a class="reference internal" href="#area-of-interest-in-wkt">Area Of Interest in WKT</a></li>
+<li><a class="reference internal" href="#choose-the-results">Choose the results</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
@@ -191,6 +192,72 @@ The output of the service is a EO data product in GeoTIFF format. The product is
 The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata and downaload it.</p>
 <hr class="docutils" />
 <p>This tutorial will describe the processing of three Sentinel-2 acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI.</p>
+<p><strong>Output specifications</strong></p>
+<p>The service provides the following output products.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-1 – Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Sentinel-2 Multitemporal RGB composite</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>RGB Composite   : RED=(Red band product B0X), GREEN=(green band product B0Y), BLUE=(Blu band product B0Z)</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:3857 - WGS84 – Pseudo Mercator</td>
+</tr>
+<tr class="row-odd"><td>Processing Level</td>
+<td>RGB composite</td>
+</tr>
+<tr class="row-even"><td>Output Filename example</td>
+<td>Sentinel-2 Multitemporal RGB composite obtained through the composition of bands B0X, B0Y, B0Z</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If the parameter service <strong>provided band results</strong> has been set to <strong>Yes</strong>, then:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-2 – Input Product selected bands</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Input Product selected bands</td>
+</tr>
+<tr class="row-odd"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-even"><td>resolution</td>
+<td>Native</td>
+</tr>
+<tr class="row-odd"><td>Projection types</td>
+<td>EPSG:3857 - WGS84 – Pseudo Mercator</td>
+</tr>
+<tr class="row-even"><td>Output Filename example</td>
+<td>Input Product selected bands.tif</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -255,6 +322,15 @@ The output GeoTiff is displayed in the geobrowser with the possibility to access
 <p class="last">you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the <em>Magic tool wizard</em>.</p>
 </div>
 </div>
+<div class="section" id="choose-the-results">
+<h3>Choose the results<a class="headerlink" href="#choose-the-results" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The user can decide to get as output only the RGB, if choose <strong>No</strong> in the <strong>provided results band</strong> parameters, or all the bands used as input, if choose <strong>Yes</strong>.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-8.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-8.png" src="../_images/s2-multitemporal-RGB-Gefolki-8.png" style="width: 350px;" /></a>
+</div>
+</div>
 </div>
 <div class="section" id="run-the-job">
 <h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
@@ -262,16 +338,16 @@ The output GeoTiff is displayed in the geobrowser with the possibility to access
 <li>Click on the button Run Job and see the Running Job</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-8.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-8.png" src="../_images/s2-multitemporal-RGB-Gefolki-8.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-9.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-9.png" src="../_images/s2-multitemporal-RGB-Gefolki-9.png" style="width: 350px;" /></a>
 </div>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-9.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-9.png" src="../_images/s2-multitemporal-RGB-Gefolki-9.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-10.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-10.png" src="../_images/s2-multitemporal-RGB-Gefolki-10.png" style="width: 350px;" /></a>
 </div>
 <ul class="simple">
 <li>After about 45 minutes, see the Successful Job:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-10.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-10.png" src="../_images/s2-multitemporal-RGB-Gefolki-10.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-11.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-11.png" src="../_images/s2-multitemporal-RGB-Gefolki-11.png" style="width: 350px;" /></a>
 </div>
 </div>
 <div class="section" id="results-download-and-visualization">
@@ -281,13 +357,13 @@ The output GeoTiff is displayed in the geobrowser with the possibility to access
 <li>See the result on map:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-11.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-11.png" src="../_images/s2-multitemporal-RGB-Gefolki-11.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/s2-multitemporal-RGB-Gefolki-12.png"><img alt="../_images/s2-multitemporal-RGB-Gefolki-12.png" src="../_images/s2-multitemporal-RGB-Gefolki-12.png" style="width: 750px;" /></a>
 </div>
 <ul>
 <li><p class="first">The following output files are produced:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>Sentinel-2 Multitemporal RGB composite (B0X|B0Y|B0Z) - product GeoTIFF RGB</strong></li>
+<li><strong>Sentinel-2 Multitemporal RGB composite obtained through the composition of bands B0X, B0Y, B0Z - product GeoTIFF RGB</strong></li>
 <li><strong>Input Product selected bands - product GeoTIFF</strong> - for each input product</li>
 </ul>
 </div></blockquote>

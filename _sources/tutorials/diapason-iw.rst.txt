@@ -103,12 +103,6 @@ After successful completion of the job , the following elements shall appear on 
             * An RGB image showing the unwrapped phase (in case the phase unwrapping processing was activated).
 
 
-The products.zip file contains :
-           * The interferometric amplitude in geotiff format. This is the modulus of the complex product of the master SLC image and the coregistered slave SLC image.
-           * The interferometric coherence. This is a floating point geotiff image with values within [0.0  255.0]. Pixel values of 255.0 are equivalent to a coherence value of 1 
-           * The interferometric phase. This is a grayscale geotiff image with phase values within [0 255].  
-           * The unwrapped phase. This is the raw unwrapped phase in radians.
-
 .. figure:: assets/tuto_diapiw_5.png
 	:figclass: align-center
         :width: 750px

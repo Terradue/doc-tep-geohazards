@@ -40,7 +40,7 @@ Processor configuration
 * Select an area on the map. 
 
 When processing Sentinel-1 data , it is important to select the correct data type for this processor.  For this , in the "Search Terms" field you may
-type "SM AND SLC AND NOT GRD" in order to filter Sentinel-1 Stripmap SLC scenes. If you know the track number of the images you want to process , you
+type "SLC AND NOT GRD" in order to filter Sentinel-1 Stripmap SLC scenes. If you know the track number of the images you want to process , you
 may add this track number as an additionnal filter.
 When processing ERS or ASAR data , you may filter with the "Search Terms" field according to the track number.
 
@@ -134,7 +134,7 @@ The products.zip file contains :
         :width: 750px
         :align: center
 
-It is possible to download the result files , first by selecting them on the *Results Table*  , a descriptive window about the file shall appear on the map . Clicking on the "download" button retrieves the file.
+It is possible to download the result files , first by selecting them on the *Results*  , a descriptive window about the file shall appear. Clicking on the "download" button retrieves the file.
 
 .. figure:: assets/tuto_diapsm_6.png
 	:figclass: align-center

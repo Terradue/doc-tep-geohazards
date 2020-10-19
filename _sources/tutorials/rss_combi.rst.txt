@@ -97,7 +97,7 @@ Zoom in into a specific area of interest (e.g. Italy). Apply spatial filter by d
         :width: 750px
         :align: center 
  
-Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 1 April – 1 May 2017). Then click on the button Search:
+Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 4 August – 4 September 2020). Then click on the button Search:
  
 .. figure:: assets/tuto_combi_6.png
 	:figclass: align-center
@@ -150,14 +150,14 @@ View results
 
 Click on the Show results on map button after the job is completed. The Band combination result will appear in the map. You can download the RGB product as GeoTIFF file by clicking on the download link in the metadata popup window.
 
-.. figure:: assets/tuto_combi_10.png
+.. figure:: assets/tuto_combi_10a.png
 	:figclass: align-center
         :width: 750px
         :align: center 
  
 The resulting product should be like the one shown below.
 
-.. figure:: assets/tuto_combi_11.png
+.. figure:: assets/tuto_combi_11a.png
 	:figclass: align-center
         :width: 750px
         :align: center 

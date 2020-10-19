@@ -188,7 +188,7 @@
 <p>This service takes as input a Sentinel-2 MSI Level 1C or Level 2A product to generate a water mask using the NDWI the SWM.
 The output of the service is a EO data product in GeoTIFF format. The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata.</p>
 <dl class="docutils">
-<dt><strong>Relevance to the Charter Processing Environmen</strong>:</dt>
+<dt><strong>Relevance to the Charter Processing Environment</strong>:</dt>
 <dd><ul class="first last simple">
 <li>Wildfire: to mask out the water content of vegetation as it may impact the burned area delineation product</li>
 <li>Flood: to mask out the water “normally” found in the flooded areas.</li>
@@ -200,6 +200,65 @@ The output of the service is a EO data product in GeoTIFF format. The output Geo
 The index uses the green and Near Infra-red bands of remote sensing images based on this phenomenon. The NDWI can enhance the water information effectively in most cases. It is sensitive to built-up land and often results in over-estimated water bodies.</p>
 <p><strong>Values description</strong>: NDWI values of water bodies are larger than 0.5. Vegetation has much smaller values, which result in distinguishing vegetation from water bodies easier. Built-up features have positive values between zero and 0.2.</p>
 <hr class="docutils" />
+<p><strong>Output specifications</strong></p>
+<p>The service provides 2 output products.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-1 – Water mask</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Water mask using the NDWI the SWM</td>
+</tr>
+<tr class="row-odd"><td>Information types</td>
+<td>Water mask : BLACK=Earth, WHITE=Water</td>
+</tr>
+<tr class="row-even"><td>Raster format</td>
+<td>GeoTIFF</td>
+</tr>
+<tr class="row-odd"><td>resolution</td>
+<td>Native</td>
+</tr>
+<tr class="row-even"><td>Projection types</td>
+<td>EPSG:3857 - WGS84 – Pseudo Mercator</td>
+</tr>
+<tr class="row-odd"><td>Browse product available</td>
+<td>YES as 8 bit PNG file</td>
+</tr>
+<tr class="row-even"><td>Output Filename example</td>
+<td>Water mask for S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Output-2 – WATER_MASK_VECTOR</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Correspondent file</td>
+<td>Water mask vector</td>
+</tr>
+<tr class="row-odd"><td>Raster format</td>
+<td>geojson</td>
+</tr>
+<tr class="row-even"><td>Output Filename example</td>
+<td>S2B_MSIL2A_20200709T100029_N0214_R122_T33TUF_20200709T133643_WATER_MASK_VECTOR.geojson</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
