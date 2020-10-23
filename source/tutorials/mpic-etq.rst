@@ -31,7 +31,7 @@ It comprises two components with (a) an analysis module for measuring sub-pixel 
 * **Decorrelation mask:**  8-bit GeoTIFFs representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*
 
 * **Cloud mask:** 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear land pixel; 1 = null; 2 = cloud; 3 = cloud shadow; 4 = snow; 5 = water. The naming convention is: *Tile_date_spectral_mask.tif*
-* **DEM products:**
+* **DEM products**
 
 
 .. **Convention:** The displacement and the mean velocity products are displayed with this convention: With the **Forward** time direction, **Positive values** are towards the **South** and the **East**. With the **Forward+Backward** option, the products in the **Backward** direction will have opposite signs as compared to the ones in the **Forward** direction.
@@ -67,7 +67,7 @@ Select input data
 -----------------
 
 The Geobrowser offers multiple ways to search a large variety of EO-based dataset and the user should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction.
-For this tutorial we will rely on a ready prepared datapackage which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Ridgecrest" into the search box you should be able to find a data package named "Ridgecrest_2019_S2_2im". Alternatively you can access the `Ridgecrest data package`_ directly by clicking on the provided link.
+For this tutorial we will rely on a prepared datapackage which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Ridgecrest" into the search box you should be able to find a data package named "Ridgecrest_2019_S2_2im". Alternatively you can access the `Ridgecrest data package`_ directly by clicking on the provided link.
 
 .. _`Ridgecrest datapackage`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DRidgecrest_2019_S2_2im
 
@@ -92,12 +92,12 @@ Set the processing parameters
 There are 16 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each parameter.
 
 * **DEM:** Define the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. By default, the Merit DEM is used.
-* **Sentinel-2 band:** Define the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the Sentinel-2 production centrer at ESA.
+* **Sentinel-2 band:** Define the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the Sentinel-2 production center at ESA.
 * **Split date:** An optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets and pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying coseismic displacement. By default, this field is left empty.
 * **Minimum matching range:** Define the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). By default, this parameter is set to 1.
 * **Maximum matching range:** Define the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). By default, this parameter is set to 5.
 * **Matching direction:** If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). By default, the parameter is set to *Forward*.
-.. caution:: Choosing the *Forward+Backward* option should be carefully considered by the user as it increases the number of pairs created and hence, the computing time and ressources.
+.. caution:: Choosing the *Forward+Backward* option should be carefully considered by the user as it increases the number of pairs created and hence, the computing time and resources.
 * **Window size:** Control the size of the template used for matching. It controls the neighborhood around the central pixel so that the default value of *3* results in a 7x7 window size. The minimum value is 1 (3x3 pixel) and the maximum value is 7 (15x15 pixel). A smaller window will allow to better reconstruct small scale variations but can lead to more noise. Vice versa, larger window sizes will lead to greater robustness against noise but will smooth small scale details. For large scale motion such as coseismic slip, we recommend to use large window sizes.
 * **Decorrelation threshold:** The matches with a correlation coefficient expressed in the range [0,1] will be discarded. The default value is *0.2*.
 * **Spatial matching range:** Define the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account also the possible coregistration bias of the input images.
@@ -106,7 +106,7 @@ There are 16 processing parameters that can be adjusted. When hovering over the 
 * **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. By default, this parameter is set to *True*.
 * **Slope mask range minimum:** The pixels located on terrain slopes with an angle larger than the value set with the parameter are filtered out in the products. By default, the pixels located on slopes with angle larger than 80 degrees are filtered.
 * **Slope mask range maximum:** The pixels located on terrain slopes with an angle smaller than the value set with the parameter are filtered out in the products. By default, the pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
-* **Apply correction and filtering:** If set to *True*, the geometric corrections as described in [2]_ and filtering as described in [1]_ are applied. They are highly recommended for any study case and  are applied by default.
+* **Apply correction and filtering:** If set to *True*, the geometric corrections as described in [2]_ and filtering as described in [1]_ are applied. They are highly recommended for any study case and are applied by default.
 * **Apply correction and filtering:** If set to *True*, the jitter undulation observed in certain pairs of Sentinel-2 images are filtered out [6]_. This correction is recommended for displacement fields with large spatial wavelength like co-seismic displacemnet fields. By default, the correction is applied.
 
 
