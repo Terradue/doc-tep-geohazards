@@ -20,19 +20,24 @@ It comprises two components with (a) an analysis module for measuring sub-pixel 
 
 **Output specifications**
 
-* **Mean displacement:** A floating point GeoTIFF representing the average displacement over all time steps in *m*. The naming convention is *MM_Mean_displ_magnitude_tile_date1_to_dateN.tif*
-* **Mean velocity:** Two floating point GeoTIFFs representing the mean absolute velocity in E−W and N−S direction in *m/day* respectively. The naming convention is *MM_Mean_velocity_EW_tile_date1_to_dateN.tif* and *MM_Mean_velocity_NS_tile_date1_to_dateN.tif*.
-* **Quality:** A floating point GeoTIFF representing the percentage, per pixel, of the pairs with *NCC > minimum correlation threshold*.
-* **Coherence Vector:** A floating point GeoTIFF, in the range [0,1], representing, per pixel, the coherence of the displacement. A coherence vector value of 0 indicates a highly variable direction of displacement while a coherence vector value close to 1 indicates a consistent and persistent displacement in the same direction.
+Four outputs are available for visualization on GEP:
 
-* **Corrected displacement fields for each time step:** Floating point GeoTiffs representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after the corrections selected by the user: The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.
-* **Filtered displacement fields for each time step:** Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering: The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
-* **Correlation coefficient:**  8-bit GeoTIFFs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized in the range of [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
-* **Decorrelation mask:**  8-bit GeoTIFFs representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*
+* **Mean displacement magnitude:** A browse GeoTIFF representing the mean displacement magnitude over all time steps in *m*. The naming convention is *MM_Mean_displ_magnitude_tile_date1_to_dateN.tif*
+* **Mean displacement:** Two browse GeoTIFFs representing the mean displacement in E−W and N−S direction respectively and in *m*. The naming convention is *MM_Mean_displacement_EW_tile_date1_to_dateN.tif* and *MM_Mean_displacement_NS_tile_date1_to_dateN.tif*.
+* **Quality:** A browse GeoTIFF representing the percentage, per pixel, of the pairs with *NCC > minimum correlation threshold*.
 
-* **Cloud mask:** 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear land pixel; 1 = null; 2 = cloud; 3 = cloud shadow; 4 = snow; 5 = water. The naming convention is: *Tile_date_spectral_mask.tif*
-* **DEM products**
+Four folders are also provided to the user:
 
+* **Analysis:** Containing the four products described precedently in floating point GeoTIFFs.
+* **Displacements:** Containing the correlation grids and the corrected and filtered displacement fields.
+	- **Corrected displacement fields for each time step:** Floating point GeoTiffs representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after the corrections selected by the user: The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.
+	- **Filtered displacement fields for each time step:** Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering: The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
+	- **Correlation coefficient:**  8-bit GeoTIFFs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized in the range of [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
+* **Masks:** Containing the different masks used in the processing.
+	- **Decorrelation mask:**  8-bit GeoTIFFs representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*.
+	- **Cloud mask:** 8-bit GeoTIFFs representing the cloud mask for each time step. Six flags are indicated : 0 = clear land pixel; 1 = null; 2 = cloud; 3 = cloud shadow; 4 = snow; 5 = water. The naming convention is: *Tile_date_spectral_mask.tif*.
+	- **Slope mask:** 8-bit GeoTIFFs representing the slope mask. The naming convention is: *Tile_slope_mask_mask.tif*
+* **Preview:** Containing the four browse products of the analysis folder.
 
 .. **Convention:** The displacement and the mean velocity products are displayed with this convention: With the **Forward** time direction, **Positive values** are towards the **South** and the **East**. With the **Forward+Backward** option, the products in the **Backward** direction will have opposite signs as compared to the ones in the **Forward** direction.
 
