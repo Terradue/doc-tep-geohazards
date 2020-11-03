@@ -25,6 +25,7 @@ Contents:
    G-POD PF-ERS Service<gpod-pf-ers>
    G-POD SBAS Stripmap Service<gpod-sbas-insar>
    MPIC-OPT: Multiple pairwise optical image correlation<mpic-opt>
+   MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis<mpic-etq>
    Optical Flood Tool Service<optical-flood-tool>
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
    PSI Post-Processing Service<psi_post_proc>
