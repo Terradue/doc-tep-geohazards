@@ -107,7 +107,7 @@ Results: download and visualization
 
 * See the result on map:
 
-.. figure:: assets/Sentinel-2-Water-Mask-10.png
+.. figure:: assets/Sentinel-1-GRD-RGB-composite-10.png
 	:figclass: align-center
         :width: 750px
         :align: center
