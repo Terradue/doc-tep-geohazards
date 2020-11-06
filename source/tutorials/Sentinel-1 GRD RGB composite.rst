@@ -47,7 +47,7 @@ Reference input
 
 .. figure:: assets/Sentinel-1-GRD-RGB-composite-3.png
 	:figclass: align-center
-        :width: 10000px
+        :width: 750px
         :align: center
 
 * Click on the lens icon to open the Search Panel
