@@ -1,15 +1,32 @@
-Sentinel-1 GRD RGB composite
+Sentinel-1 Level-1 GRD RGB composite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-1-GRD-RGB-composite-icon.png
         :width: 200px
 
-**Sentinel-1 GRD RGB composite**
+**Sentinel-1 Level-1 GRD RGB composite**
 
-This service takes as input one or up to two consecutive Sentinel-1 GRD acquisitions (in the same day) to create an RGB composite. It provides a single date polarization RGB composite taking as input one or up to two consecutive Sentinel-1 GRD data products along an acquisition segment (same track).
+This service takes as input one or up to two consecutive Sentinel-1 Level-1 GRD acquisitions (in the same day) to create an RGB composite. It provides a single date polarization RGB composite taking as input one or up to two consecutive Sentinel-1 GRD data products along an acquisition segment (same track).
 
 -----
 
+**Output specifications**
+
+The service provides the following output product.
+
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output – Sentinel-1 Level-1 GRD RGB composite		                             	                                                        |
++===============================+===============================================================================================================+
+| Correspondent file            | Sentinel-1 Level-1 GRD RGB composite		                                                                |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Raster format                 | GeoTIFF                                                                                                       |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| resolution                    | Native		                                                                                        |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Projection types              | EPSG:3857 - WGS84 – Pseudo Mercator                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Output Filename example       | S1A_IW_GRDH_1SDV_20200903T181136_20200903T181141_03F910_6B20							|    
++-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Select the processing
 =====================
