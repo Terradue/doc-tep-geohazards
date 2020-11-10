@@ -20,18 +20,12 @@ Contents:
    FASTVEL for displacement velocity map generation<fastvel>
    GMT5SAR InSAR - Stripmap<gmtsar>
    GMT5SAR InSAR - Sentinel-1 TOPSAR<gmtsar_s1>
-   G-POD GAMMA DInSAR Service<gpod-gamma-dinsar>
-   G-POD GAMMA-L0 Service<gpod-gamma-l0>
    G-POD PF-ERS Service<gpod-pf-ers>
    G-POD SBAS Stripmap Service<gpod-sbas-insar>
-   MPIC-OPT: Multiple pairwise optical image correlation<mpic-opt>
    MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis<mpic-etq>
-   Optical Flood Tool Service<optical-flood-tool>
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
-   PSI Post-Processing Service<psi_post_proc>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
-   SAR Flood Tool Service<sar-flood-tool>
    Sentinel-3 SLSTR composites<s3-slstr-composites>   
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP CSK DInSAR<snap-csk>
