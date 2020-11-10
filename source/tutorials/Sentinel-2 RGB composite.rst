@@ -12,7 +12,7 @@ This service performs RGB band combination from user defined bands of the Sentin
 
 **EO sources supported**
 
-This service support as input the **Sentinel-2 L1A** and **Sentinel-2 L2A** products.
+This service supports as input the **Sentinel-2 L1A** and **Sentinel-2 L2A** products.
 
 **Output specifications**
 
