@@ -1,21 +1,25 @@
-Sentinel-2 RGB composite
+Sentinel-2 L1C and L2A RGB composite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-2-RGB-composite-icon.png
         :width: 200px
 
-**Sentinel-2 RGB composite**
+**Sentinel-2 L1C and L2A RGB composite**
 
 This service performs RGB band combination from user defined bands of the Sentinel-2 MSI L1C or L2A products (up to 4 - full tiles) provided as input.
 
 -----
+
+**EO sources supported**
+
+This service support as input the **Sentinel-2 L1A** and **Sentinel-2 L2A** products.
 
 **Output specifications**
 
 The service provides the following output product.
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output – Sentinel-2 RGB composite                                                                                                             |
+| Output – Sentinel-2 L1C and L2A RGB composite 												|
 +===============================+===============================================================================================================+
 | **Correspondent file**        | Sentinel-2 RGB composite                                                                                      |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
