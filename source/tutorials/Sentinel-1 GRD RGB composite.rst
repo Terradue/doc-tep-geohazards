@@ -12,7 +12,7 @@ This service takes as input one or up to two consecutive Sentinel-1 Level-1 GRD 
 
 **EO sources supported**
 
-This service support as input the **Sentinel-1 Level-1 GRD** products.
+This service supports as input the **Sentinel-1 Level-1 GRD** products.
 
 **Output specifications**
 
