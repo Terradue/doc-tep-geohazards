@@ -1,5 +1,5 @@
 Sentinel-1 Level-1 GRD RGB composite
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-1-GRD-RGB-composite-icon.png
         :width: 200px

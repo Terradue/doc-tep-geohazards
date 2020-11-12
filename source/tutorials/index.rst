@@ -25,6 +25,7 @@ Contents:
    MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis<mpic-etq>
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>
+   Sentinel-1 Level-1 GRD RGB composite<Sentinel-1 Level-1 GRD RGB composite>
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
    Sentinel-3 SLSTR composites<s3-slstr-composites>   
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
