@@ -1,5 +1,5 @@
 Sentinel-2 Multitemporal RGB composite with Gefolki coregistration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/s2-multitemporal-RGB-Gefolki-icon.png
         :width: 200px
