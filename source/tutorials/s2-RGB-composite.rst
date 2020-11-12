@@ -1,5 +1,5 @@
 Sentinel-2 L1C and L2A RGB composite
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-2-RGB-composite-icon.png
         :width: 200px

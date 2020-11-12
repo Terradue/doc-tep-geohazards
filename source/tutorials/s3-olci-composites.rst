@@ -1,5 +1,5 @@
 Sentinel-3 OLCI composites
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-3-OLCI-composites-icon.png
         :width: 200px

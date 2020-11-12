@@ -1,5 +1,5 @@
 Sentinel-2 Watermask
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/Sentinel-2-Water-Mask-icon.png
         :width: 200px
