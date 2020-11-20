@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.terradue</groupId>
     <artifactId>t2-parent</artifactId>
-    <version>16</version>
+    <version>14</version>
   </parent>
   <groupId>com.terradue.doc</groupId>
   <artifactId>doc-tep-geohazards</artifactId>
