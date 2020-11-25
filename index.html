@@ -30,10 +30,7 @@
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="overview/index.html" />
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>    
     <link rel="stylesheet" href="_static/terradue.css" type="text/css" />
     <script src="_static/affixTrick.js"></script>
   
@@ -42,16 +39,43 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-
+<style type="text/css">
+      body {
+          font-family: Tahoma;
+          color: #656565;
+          -webkit-font-smoothing: antialiased;
+      }
+      .wrapper {
+          min-height: calc(100vh - 80px);
+      }
+      footer {
+          height: 50px;
+      }
+      #mainContainer {
+          overflow: auto;
+          padding-bottom: 50px;
+          padding-top: 50px;
+      }     
+      .pageError {
+          text-align: center;
+          margin-top: 100px;
+      }     
+      .pageError hr.bar {
+          height: 10px;
+          background-color: lightgray;
+          border: none;
+      }
+      a, .btn.btn-link {
+          color: #1a5398;
+          font-size: 18px;
+          font-weight: 200;
+          line-height: 30px;
+          text-decoration: none;
+      }
+    </style>
   </head>
   <body role="document">
-
-<!-- <header>
-	<div class="container">
-		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="_static/t2Logo.png"></a>
-		<div id="t2-random-slogan">digital earth scalers</div>
-	</div>
-</header> -->
+<div class="wrapper">
 <div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
     <div class="container">
       <div class="navbar-header pull-right">
@@ -62,221 +86,28 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="_static/t2Logo.png"></a>
-        <!--<a class="navbar-brand" href="#"><img class="navbar-brand-logo" src="_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-	    <a class="navbar-brand" href="https://geohazards-tep.eu" target="_blank"><img id="logo" src="_static/logo-geohazard.png"></a>
-            <li class="divider-vertical"></li>
-<!--             <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <b>3.0</b><b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu globaltoc">
-        <li><a href="/devel">1.2 (Devel)</a></li>
-        <li><a href="/stable">1.1 (Stable)</a></li>
-    </ul>
-</li> -->
-
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="overview/index.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="community-guide/index.html">Community Portal User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Community Advanced User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">Community Portal Administrator Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Processing tutorials</a></li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Geohazards thematic exploitation platform guide</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="overview/index.html" title="Next Chapter: Overview"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Overview &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
-</div></li>
-            
+	         <a class="navbar-brand" href="https://geohazards-tep.eu" target="_blank"><img id="logo" src="_static/logo-geohazard.png"></a>
+           <li class="divider-vertical"></li>              
           </ul>
         </div>
     </div>
 </div>
 <div id="navbarSpacer"></div>
 
-<div class="container">
-  <div class="row">
-<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
-	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <p class="first admonition-title">
-        Warning
-    </p>
-    <p class="last">
-        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
-    </p>
-</div>-->
-
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul>
-<li class="toctree-l1"><a class="reference internal" href="overview/index.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="community-guide/index.html">Community Portal User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Community Advanced User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">Community Portal Administrator Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Thematic Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Processing tutorials</a></li>
-</ul>
-<div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/index.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
-</div>
-<form action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-
-    <div class="col-md-9">
-      
-  <div class="section" id="geohazards-thematic-exploitation-platform-guide">
-<h1>Geohazards thematic exploitation platform guide<a class="headerlink" href="#geohazards-thematic-exploitation-platform-guide" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview/index.html">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview/changelog.html">Changelog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview/purpose.html">Purpose of the Geohazards Thematic Exploitation Platform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview/community-portal.html">A Community Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview/data-processing.html">A data processing facility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview/data-casting.html">A data casting facility</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="community-guide/index.html">Community Portal User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/platform/index.html">Platform overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/user.html">User Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/apps.html">Thematic Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/community.html">Communities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/data.html">Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/processing.html">Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/reproducibility.html">Reproducibility</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/sharing.html">Sharing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="community-guide/cloud/index.html">Cloud Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Community Advanced User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="advanced/expert/index.html">Processor Integration Expert Guide</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">Community Portal Administrator Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/control_panel.html">Control Panel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/data.html">Data Collection management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/wps_provider.html">Wps Providers management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/wps_service.html">Wps Services management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/wpsjob.html">Wps Jobs management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/data_package.html">Data Packages management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/group.html">Groups management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/user.html">Users management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/news.html">News management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/feature.html">Web stories banners management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/report.html">Reporting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/authorization.html">Authorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/accounting.html">Accounting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cloud-administrator/index.html">Cloud Operations Administrator Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cloud-administrator/cloud-dashboard.html">Cloud Platform dashboard</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Thematic Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="apps/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/discovery.html">Discovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/global.html">Global</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/mydata_app.html">Manage my data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/testmyproc_app.html">Test my processor</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Processing tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/active-fire-detect.html">Active fire detection with Sentinel-3 SLSTR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/adore.html">ADORE DORIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/aladim_input_dataset_preparation.html">ALADIM-S2 and ALADIM-VHR: Preparation of input datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/aladim-s2.html">ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/aladim_vhr.html">ALADIM-VHR: Automatic LAndslide Detection and Inventory Mapping from multispectral Very-High Resolution data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/burned-area.html">Burned Area Analysis with Sentinel-2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/rss_combi.html">COMBI - Band Combination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/fastvel.html">FASTVEL for displacement velocity map generation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gmtsar.html">GMT5SAR InSAR - Stripmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gmtsar_s1.html">GMT5SAR InSAR - Sentinel-1 TOPSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/mpic-etq.html">MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/optical-flood-tool.html">Optical Flood Tool Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/psi_post_proc.html">PSI Post-Processing Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/ewf-sarpipe.html">S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/sar-flood-tool.html">SAR Flood Tool Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/s3-slstr-composites.html">Sentinel-3 SLSTR composites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/snap-csk.html">SNAP CSK DInSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/srtm.html">SRTM Digital Elevation Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/stamps-ps.html">StaMPS Permanent Scatterer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/stemp.html">STEMP - Surface Temperature Map</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
+<div id="mainContainer" style="display: block;">
+    <div class="pageError">
+      <img style="height:150px" src="warning.png">
+      <h1 style=""><strong>Page moved!</strong></h1>
+      <p>The page you are looking for has been moved to<br/><a href="https://docs.terradue.com/geohazards-tep">https://docs.terradue.com/geohazards-tep</a>.</p>      
     </div>
-      
   </div>
+      
 </div>
+
 <footer class="footer">
 	<div class="container">
 		&nbsp;&nbsp;&nbsp;Copyright 2006-2020 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
