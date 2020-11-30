@@ -1,9 +1,9 @@
-DLR Sentinel-1 InSAR Browse Service
+DLR Sentinel-1 InSAR Browse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/DLR_Sentinel-1_icon.png
 
-**DLR Sentinel-1 InSAR Browse Service**
+**DLR Sentinel-1 InSAR Browse**
 
 This service generates 10 InSAR browse products from a pair of Sentinel-1 SLC images over seismically active areas and active volcanoes using DLR’s Integrated Wide Area Processor (IWAP). It has a max resolution of 50 and a spacing of 25 metres.
 
