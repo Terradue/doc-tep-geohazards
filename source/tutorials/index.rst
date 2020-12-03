@@ -16,6 +16,7 @@ Contents:
    COMBI - Band Combination<rss_combi>
    DIAPASON InSAR - StripMap(SM)<diapason-sm>
    DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)<diapason-iw>
+   DLR Sentinel-1 InSAR Browse<DLR_Sentinel-1_InSAR_Browse>
    DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
    FASTVEL for displacement velocity map generation<fastvel>
    GMT5SAR InSAR - Stripmap<gmtsar>
