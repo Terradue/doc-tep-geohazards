@@ -135,7 +135,8 @@ A data package is a saved collection of features. The Data Packages panel shows 
 Details panel
 ^^^^^^^^^^^^^
 
-The details panel is a "floating panel", that is, is a panel not visible as a tab. Users can also see this panel from a specific feature, by double click on it, or by opening the details from the popup. This action shows in a vertical scrollable layout page all description information of the feature, including summary, images, key-value information, Also, from the details panel user can perform some actions, like filter the current search by the feature spatial information, or check out some feature correlated results.
+The details panel is a "floating panel", that is, is a panel not visible as a tab. Users can also see this panel from a specific feature, by double click on it, or by opening the details from the popup. This action shows in a vertical scrollable layout page all description information of the feature, including summary, images, key-value information.
+Also, from the details panel user can perform some actions, like filter the current search by the feature spatial information, check out some feature correlated results or set some styles options to the relative map feature (if available)
 
 .. figure:: ../../includes/geobrowser-catalog-panel-details-panel.png
 
@@ -295,3 +296,34 @@ For the second operation (add to features basket), users can add selected featur
 .. |geobrowser_button_recbox| image:: ../../includes/geobrowser_button_recbox.png
 .. |geobrowser_button_placemark| image:: ../../includes/geobrowser_button_placemark.png
 .. |geobrowser_button_wkt| image:: ../../includes/geobrowser_button_wkt.png
+
+Enhanced raster visualitazion functions
+^^^^^^^^^^^^^^^^^^^^
+All features containing geographic information are always represented on the map as geometric shape (like a rectangle, a point, a polygon and so on). Moreover, some of these "spatial features" also contain raster data, like images or WMS tiles. For these features there are some visualization function, located on the Details Panel of the selected feature (by doing double click on a raster feature from the results panel). These function are visible as an expandible section called "Raster visualitazion functions".
+
+.. figure:: ../../includes/geobrowser-raster_visualization1.gif
+
+For all raster features (all features containing raster data) there is always a subsection called "Filters", including some customizable graphical settings, like brightness, contrast, opacity, saturation, and so on. The changing of these filters is immediately visible, and the settings are saved for current session. Users can reset the filters to the default value and can also choose to apply the settings for a feature to all visible raster features.
+
+.. figure:: ../../includes/geobrowser-raster_visualization2.gif
+
+An additional subsection called "WMS Styles" can be visible for raster features represented by a WMS service (this is the case for most of the processing results on the GEP). 
+Users can switch among a set of available WMS styles pre-loaded by the operator in the user workspace. By clicking on a WMS style icon, the style is applied to the selected WMS feature and for all similar features.
+
+.. figure:: ../../includes/geobrowser-raster_visualization3.gif
+
+Notice: This subsection is only visible if there is at least one WMS style associated to user's workspace. WMS styles are loaded by the operator upon user request and have to be provided in the standard OGC Styled Layer Descriptor format. Examples can be found here: https://docs.geoserver.org/stable/en/user/styling/sld/reference/rastersymbolizer.html and https://docs.geoserver.org/stable/en/user/styling/sld/cookbook/rasters.html .
+See https://docs.geoserver.org/stable/en/user/styling/index.html for further information about WMS Styles. 
+
+
+WPS import/export parameters utility
+^^^^^^^^^^^^^^^^^^^^
+When users select a WPS process to execute, they can set all parameters by filling the relative form. However, in some cases can be useful to set (or to get) all parameters in a single block structure. In this way users can prepare the wps parameters in an external application (like a text editor), or they can take the wps parameter of an existent wps Job, to create a new WPS job with the same or a portion of the same paramaters.
+To perform this there are 2 utilities: import and export parameters.
+On the WPS process description (and form) there is a "Import Parameters" button. Once clicked, a popup form with a JSON structure (auto filled with sample values to help users) in the textarea of the form. The JSON is a simple key-value pairs object, with single string value for single parameters, and array of strings values for multiple parameters. After filling the textarea, by pressing the "import button" the popup is closed and all WMS form parameters are filled by matching the parameters set in the specified JSON.
+
+.. figure:: ../../includes/geobrowser-wps_import.png
+
+On the WPS job description under the parameter values list there is a "Export Parameters" button. Once clicked a popup is opened, showing in a text area the JSON representing all WPS parameters set for the selected job. Users can copy this JSON in the clipboard, for example to change some parameter values and re-import these parameters in a new WPS job.
+
+.. figure:: ../../includes/geobrowser-wps_export.png
