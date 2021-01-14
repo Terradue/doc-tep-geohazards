@@ -36,7 +36,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES (Both PNG and GeoTIFF)                                                                                    |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | coh_VV_21Aug2016_27Aug2016.tif                                                                                |   
+| Output Filename example       | coh_VV_18Oct2020_30Oct2020 											|   
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 |
@@ -62,7 +62,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES (Both PNG and GeoTIFF)                                                                                    |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | phase_VV_21Aug2016_27Aug2016.tif                                                                              |
+| Output Filename example       | phase_VV_18Oct2020_30Oct2020 											|
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 |
@@ -88,7 +88,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES (Both PNG and GeoTIFF)                                                                                    |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | displacement_VV_21Aug2016_27Aug2016.tif                                                                       |
+| Output Filename example       | displacement_VV_18Oct2020_30Oct2020 										|
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 .. NOTE::
@@ -114,12 +114,8 @@ Sentinel-1 Interferometric Wide Swath Products
 
 The Interferometric Wide (IW) swath mode is the main acquisition mode over land for Sentinel-1. It acquires data with a 250 km swath at 5 m by 20 m spatial resolution (single look). IW mode captures three sub-swaths using Terrain Observation with Progressive Scans SAR (TOPSAR). With the TOPSAR technique, in addition to steering the beam in range as in ScanSAR, the beam is also electronically steered from backward to forward in the azimuth direction for each burst, avoiding scalloping and resulting in homogeneous image quality throughout the swath. TOPSAR mode replaces the conventional ScanSAR mode, achieving the same coverage and resolution as ScanSAR, but with a nearly uniform SNR (Signal-to-Noise Ratio) and DTAR (Distributed Target Ambiguity Ratio). IW SLC products contain one image per sub-swath and one per polarisation channel, for a total of three (single polarisation) or six (dual polarisation) images in an IW product. Each sub-swath image consists of a series of bursts, where each burst has been processed as a separate SLC image. The individually focused complex burst images are included, in azimuth time order, into a single sub-swath image with black-fill demarcation in between, similar to ENVISAT ASAR Wide ScanSAR SLC products.
 
-The tutorial uses a coseismic pair of Sentinel-1 TOPSAR IW data related to the August 2016 center Italy's earthquake.
 
-The 2016 center Italy's earthquake (also known as 2016 Amatrice earthquake) was an earthquake, measuring 6.2 on the moment magnitude scale, hit Central Italy on 24 August 2016 at 03:36:32 CEST (01:36 UTC). Its epicentre was close to Accumoli, with its hypocentre at a depth of 4 km, approximately 75 km (47 mi) southeast of Perugia and 45 km (28 mi) north of L'Aquila, in an area near the borders of the Umbria, Lazio, Abruzzo and Marche regions.
-Learn more about the event in the `2016 center Italy's earthquake Wikipedia <https://en.wikipedia.org/wiki/2016_Central_Italy_earthquake>`_ entry.
-
-The processing service code is available in the GitHub repository `geohazards-tep/rss-snap-s1-insar <https://github.com/geohazards-tep/dcs-rss-snap-s1-insar>`_.
+The processing service code is available in the GitLab repository `geohazards-tep/rss-snap-s1-insar <https://gitlab.com/geohazards-tep/rss/applications/dcs-rss-snap-s1-insar>`_.
 
 Select the processing
 =====================
@@ -159,14 +155,14 @@ For this tutorial, a pre-defined data set has been prepared to speed up data sel
         :width: 750px
         :align: center
 
-* Click on the product related to 2016-08-21, then drag and drop the selected data in the **Master product reference** field.
+* Click on the product related to 2020-10-18, then drag and drop the selected data in the **Master product reference** field.
 
 .. figure:: assets/tuto_rss_snap_s1_insar_3.png
     :figclass: align-center
         :width: 750px
         :align: center
 
-*   Click on the product related to 2016-09-02, then drag and drop the selected data in the **Slave product reference** field.
+*   Click on the product related to 2020-10-30, then drag and drop the selected data in the **Slave product reference** field.
 
 .. figure:: assets/tuto_rss_snap_s1_insar_4.png
     :figclass: align-center
@@ -228,7 +224,7 @@ DEM type
 ++++++++
 
 Define the DEM source for the Back-Geocoding Coregistration and Terrain Correction processing.
-The SRTM 3 Sec (90 m of resolution) is used. 
+The SRTM 1 Sec HGT (30 meters of resolution) is used. 
 
 .. NOTE:: SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
@@ -331,9 +327,9 @@ Scroll down the Job status screen, click on the button **Show results**, then ch
 
 The following outputs are listed:
     
-    •   **coh_VV_21Aug2016_02Sep2016**: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
-    •   **phase_VV_21Aug2016_02Sep2016**: this is the product that contains the interferometric phase computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
-    •   **displacement_VV_21Aug2016_02Sep2016**: this is the displacement product that contains the terrain height variation in the Line Of Sight direction in the selected AOI. The Browse product is shown on the map and both Physical and Browse products are available for download.
+    •   **coh_VV_18Oct2020_30Oct2020**: this is the product that contains the interferometric coherence computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
+    •   **phase_VV_18Oct2020_30Oct2020**: this is the product that contains the interferometric phase computed between master and slave images. The Browse product is shown on the map and both Physical and Browse products are available for download.
+    •   **displacement_VV_18Oct2020_30Oct2020**: this is the displacement product that contains the terrain height variation in the Line Of Sight direction in the selected AOI. The Browse product is shown on the map and both Physical and Browse products are available for download.
 
 
 Click on each result name. The result will be shown on the map together with metadata information tab and colour-table legend. 
