@@ -297,7 +297,7 @@ For the second operation (add to features basket), users can add selected featur
 .. |geobrowser_button_placemark| image:: ../../includes/geobrowser_button_placemark.png
 .. |geobrowser_button_wkt| image:: ../../includes/geobrowser_button_wkt.png
 
-Enhanced raster visualitazion functions
+Enhanced raster visualization functions
 ^^^^^^^^^^^^^^^^^^^^
 All features containing geographic information are always represented on the map as geometric shape (like a rectangle, a point, a polygon and so on). Moreover, some of these "spatial features" also contain raster data, like images or WMS tiles. For these features there are some visualization function, located on the Details Panel of the selected feature (by doing double click on a raster feature from the results panel). These function are visible as an expandible section called "Raster visualitazion functions".
 
