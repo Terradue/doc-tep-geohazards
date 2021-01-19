@@ -29,7 +29,7 @@ Contents:
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
    Sentinel-1 Level-1 GRD RGB composite<s1-grd-rgb-composite>      
    Sentinel-2 Multitemporal RGB composite with Gefolki coregistration<s2-multiRGB-composite-gefolkicoreg>
-   Sentinel-2 RGB composite<s2-RGB-composite>
+   Sentinel-2 L1C and L2A RGB composite<Sentinel-2_L1C-and-L2A-RGB-composite>
    Sentinel-2 Watermask<s2-watermask>
    Sentinel-3 OLCI composites<s3-olci-composites>   
    Sentinel-3 SLSTR composites<s3-slstr-composites>      

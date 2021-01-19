@@ -7,6 +7,7 @@ Sentinel-2 L1C and L2A RGB composite
 **Sentinel-2 L1C and L2A RGB composite**
 
 This service performs RGB band combination from user defined bands of the Sentinel-2 MSI L1C or L2A products (up to 4 - full tiles) provided as input.
+The goal is to give a composite RGB using the Sentinel-2 L1C or L2A product.
 
 -----
 
@@ -16,7 +17,7 @@ This service supports as input the **Sentinel-2 L1A** and **Sentinel-2 L2A** pro
 
 **Output specifications**
 
-The service provides the following output product.
+The service provides the following output product. To see the example and description of the other outputs scroll down at the end of the tutorial. [1]_
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – Sentinel-2 L1C and L2A RGB composite 												|
@@ -126,5 +127,125 @@ Results: download and visualization
 
 * The following output files are produced:
 
+.. [1]
     - **Natural Colors - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+
+    - **False color Urban - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B11, B04.
     
+    .. figure:: assets/S2-RGB-false_color_urban.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+
+    - **Natural Colors with Atmospheric Removal - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B8, B03.
+    
+    .. figure:: assets/S2-RGB-natural_colors-atmospheric-removal.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+    
+    - **Oil seep - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B11, B12, B8A.
+    
+    .. figure:: assets/S2-RGB-oil_seep.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Agriculture - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B11, B08, B02.
+    
+    .. figure:: assets/S2-RGB-agricolture.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center	
+	
+    - **Custom 1 B8A B11 B2 - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B8A, B11, B02.
+    
+    .. figure:: assets/S2-RGB-custom-1.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center	
+	
+    - **Custom 2 B12 B4 B3 - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B04, B03.
+    
+    .. figure:: assets/S2-RGB-custom-2.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center	
+	
+    - **Active fire - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B8A, B04.
+    
+    .. figure:: assets/S2-RGB-active_fire.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Atmospheric penetration - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B11, B8A.
+    
+    .. figure:: assets/S2-RGB-atmospheric_penetration.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Shortwave Infrared - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B12, B08, B04.
+    
+    .. figure:: assets/S2-RGB-shortwave_infrared.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Vegetation Analysis - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B11, B08, B04.
+    
+    .. figure:: assets/S2-RGB-vegetation_analysis.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Vegetation Analysis A - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B11, B8A, B04.
+    
+    .. figure:: assets/S2-RGB-vegetation_analysis_A.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+
+    - **False color Infrared - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B08, B04, B03.
+    
+    .. figure:: assets/S2-RGB-false_color_infrared.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+
+    - **False color Infrared A - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B8A, B04, B03.
+    
+    .. figure:: assets/S2-RGB-false_color_infrared_A.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+
+    - **Healthy vegetation - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B08, B11, B02.
+    
+    .. figure:: assets/S2-RGB-healthy_vegetation.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+    - **Land Water - Quicklook (2020-08-13T10:08:31/2020-08-13T10:08:31) - product GeoTIFF RGB**
+      - Obtained through the combination of bands: B08, B11, B04.
+    
+    .. figure:: assets/S2-RGB-land_water.png
+      	:figclass: align-center
+        :width: 750px
+        :align: center

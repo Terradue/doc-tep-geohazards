@@ -6,7 +6,14 @@ Sentinel-1 Level-1 GRD RGB composite
 
 **Sentinel-1 Level-1 GRD RGB composite**
 
-This service takes as input one or up to two consecutive Sentinel-1 Level-1 GRD acquisitions (in the same day) to create an RGB composite. It provides a single date polarization RGB composite taking as input one or up to two consecutive Sentinel-1 GRD data products along an acquisition segment (same track).
+This service takes one or up to two consecutive GRD Sentinel-1 Level-1 acquisitions (on the same day) as input to create an RGB composite.
+The RGB is based on Sentinel-1 polarization. More specifically:
+
+- Red: VV
+- Green: HH
+- Blue: VV / VH in dB (equivalent of VV-VH for linear)
+
+Furthermore, the service offers the possibility to put two input products to make the slice-assembly. For the slice-assembly the two Sentinel-1 GRD data products must be same track, same day and consecutive.
 
 -----
 
