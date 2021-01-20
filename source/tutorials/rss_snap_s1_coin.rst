@@ -13,7 +13,7 @@ This service provides geocoded composites of coherence and amplitude images from
     
 **DEM Type**
 
-The SRTM 1 Sec HGT (30 meters of resolution) or GETASSE30 (Global Earth Topography And Sea Surface Elevation at 1000 m of resolution, composite of four other DEM datasets. It is using the SRTM30 dataset, ACE dataset, Mean Sea Surface (MSS) data and the EGM96 ellipsoid as sources) are used.
+The SRTM 1 Sec HGT (30 meters of resolution) or GETASSE30 (Global Earth Topography And Sea Surface Elevation at 1000 m of resolution, composite of four other DEMs. It uses the SRTM30 dataset, ACE, Mean Sea Surface (MSS) and the EGM96 ellipsoid data as sources) are used.
 
 .. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 	  - GETASSE30 valid in the [-90 deg, +90 deg] range of latitudes.
