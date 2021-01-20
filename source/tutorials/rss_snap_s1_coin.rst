@@ -10,6 +10,12 @@ This service provides geocoded composites of coherence and amplitude images from
 **EO sources supported**:
 
     - Sentinel-1 TOPSAR IW SLC
+    
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: SRTM valid in the [-60 deg, +60 deg] range of latitudes.
 
 **Output specifications**
 
