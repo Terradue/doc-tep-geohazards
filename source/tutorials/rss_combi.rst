@@ -13,7 +13,7 @@ The output is comprising all 3 selected bands in a single RGB product at the res
 
 The SRTM 1 Sec HGT (30 meters of resolution) is used.
 
-.. NOTE:: SRTM valid in the [-56 deg, +60 deg] range of latitudes.
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 **Output specifications**
 
