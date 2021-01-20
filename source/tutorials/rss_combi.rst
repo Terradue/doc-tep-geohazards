@@ -9,6 +9,12 @@ This service provides the possibility to perform RGB band combination from user 
 
 The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file. For selected sensors visualization enhancements are available.
 
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: SRTM valid in the [-60 deg, +60 deg] range of latitudes.
+
 **Output specifications**
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
