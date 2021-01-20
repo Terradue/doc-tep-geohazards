@@ -21,6 +21,11 @@ Furthermore, the service offers the possibility to put two input products to mak
 
 This service supports as input the **Sentinel-1 Level-1 GRD** products.
 
+
+**DEM Type**
+
+The Copernicus DEM (CDEM) is used.
+
 **Output specifications**
 
 The service provides the following output product.
