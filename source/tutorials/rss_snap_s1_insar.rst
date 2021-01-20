@@ -226,7 +226,7 @@ DEM type
 Define the DEM source for the Back-Geocoding Coregistration and Terrain Correction processing.
 The SRTM 1 Sec HGT (30 meters of resolution) is used. 
 
-.. NOTE:: SRTM valid in the [-56 deg, +60 deg] range of latitudes.
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 Perform phase filtering
 +++++++++++++++++++++++
