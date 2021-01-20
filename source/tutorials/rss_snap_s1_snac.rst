@@ -10,6 +10,12 @@ The S-1 Amplitude change on-demand processing service provides RGB composite of 
 **EO sources supported**:
 
     - Sentinel-1 IW and EW GRD products
+    
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 **Output specifications**
 
