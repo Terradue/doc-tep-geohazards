@@ -21,7 +21,7 @@ The output of the service is a pre-processed EO data product in GeoTIFF format w
 
 The SRTM 1 Sec HGT (30 meters of resolution) is used.
 
-.. NOTE:: SRTM valid in the [-56 deg, +60 deg] range of latitudes.
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 
 Select the Processing Service
