@@ -31,8 +31,8 @@ Contents:
    Sentinel-2 Multitemporal RGB composite with Gefolki coregistration<s2-multiRGB-composite-gefolkicoreg>
    Sentinel-2 L1C and L2A RGB composite<Sentinel-2_L1C-and-L2A-RGB-composite>
    Sentinel-2 Watermask<s2-watermask>
-   Sentinel-3 OLCI composites<s3-olci-composites>   
-   Sentinel-3 SLSTR composites<s3-slstr-composites>      
+   Sentinel-3 OLCI composite<s3-olci-composites>   
+   Sentinel-3 SLSTR composite<s3-slstr-composites>      
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP CSK DInSAR<snap-csk>
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
