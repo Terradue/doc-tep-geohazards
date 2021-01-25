@@ -10,8 +10,8 @@ Sentinel-2 Burned Area Analysis
    <br />
 
 This service takes as input a pair (pre-event and post-event) of Sentinel-2 MSI L2A products and generates a Burned Area Analysis map and NIR/SVWI RGB composites for the two input Sentinel-2 acquisitions. |br|
-This service work better when the post fire image is very close to the fire date. |br|
-The masks for the water pixels are applied by the service.
+This service gives the best results when the post fire image is very close to the fire date. |br|
+The masks for the water masks are applied by the service.
 
 **EO sources supported**
 
