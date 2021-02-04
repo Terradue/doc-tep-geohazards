@@ -6,7 +6,7 @@ Sentinel-2 Watermask
 
 **Sentinel-2 Watermask**
 
-This service takes as input a Sentinel-2 MSI Level 1C or Level 2A product to generate a water mask using the NDWI the SWM.
+This service takes as input a Sentinel-2 MSI Level 1C or Level 2A product to generate a water mask using the NDWI and the SWM.
 The output of the service is a EO data product in GeoTIFF format. The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata.
 
 **Relevance to the Charter Processing Environment**:

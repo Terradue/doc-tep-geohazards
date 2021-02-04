@@ -8,6 +8,7 @@ Sentinel-2 Multitemporal RGB composite with Gefolki coregistration
 
 This service takes three Sentinel-2 MSI Level 1C or Level 2A acquisitions to generate a multitemporal RGB composite including a coregistration step with GEFOLKI. The three input products must have the same Level. 
 The output of the service is a EO data product in GeoTIFF format. The product is a multitemporal RGB composite obtained through the composition of bands B04, B03, B02 (Natural colours) or bands B08, B04, B03 (false colour Infrared).
+The service takes the red band of one of the products as a basis (reference input product for the red channel of the service). Then it does coregistration with GeFolki of the other products for the green and blue bands of the RGB composite.
 The output GeoTiff is displayed in the geobrowser with the possibility to access product metadata and downaload it.
 
 -----
@@ -132,7 +133,7 @@ Area Of Interest in WKT
 Choose the results
 -----------------------
 
-* The user can decide to get as output only the RGB, if choose **No** in the **provided results band** parameters, or all the bands used as input, if choose **Yes**. 
+* The user can decide to get as output only the RGB, if choose **No** in the **provided results band** parameters, or all the bands used as input, if choose **Yes**. If **Yes** is selected, on the *Results Panel* the user will find the bands choose to obtain the Natural colours (B04, B03, B02) or the False Colour Infrared (B08, B04, B03) as product GeoTIF (.tif) for each of the input products chosen.
 
 .. figure:: assets/s2-multitemporal-RGB-Gefolki-8.png
 	:figclass: align-center

@@ -18,14 +18,16 @@ It comprises two components with (a) an analysis module for measuring sub-pixel 
 
     - Sentinel-2 MSI L1C
 
-**Outputss**
+**Outputs**
 
 Four **service outputs** are provided for visualization on GEP:
+
 * **Mean displacement magnitude:** It consists of a GeoTIFF image representing the mean displacement magnitude over all time steps. The unit is in  *m*. The naming convention is *MM_Mean_displ_magnitude_tile_date1_to_dateN.tif*
 * **Mean displacement:** TIt consists of two GeoTIFF images representing the mean displacement in the E−W and N−S direction. The unit is in *m*. The naming convention is *MM_Mean_displacement_EW_tile_date1_to_dateN.tif* and *MM_Mean_displacement_NS_tile_date1_to_dateN.tif*.
 * **Quality:** It consists of a GeoTIFF image representing the percentage, per pixel, of the pairs with a correlation score *NCC > minimum correlation threshold*.
 
 Four **service output folders** are provided for download by the user:
+
 * **Analysis:** Folder containing the four products described above in float GeoTIFF file formats.
 * **Displacements:** Folder containing the correlation grids and the corrected and filtered displacement field grids.
 	- **Corrected displacement fields for each time step:** Float GeoTIFF files representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after application of the corrections selected by the user. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.

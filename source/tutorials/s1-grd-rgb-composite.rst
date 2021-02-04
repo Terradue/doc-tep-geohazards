@@ -9,9 +9,9 @@ Sentinel-1 Level-1 GRD RGB composite
 This service takes one or up to two consecutive GRD Sentinel-1 Level-1 acquisitions (on the same day) as input to create an RGB composite.
 The RGB is based on Sentinel-1 polarization. More specifically:
 
-- Red: VV
-- Green: HH
-- Blue: VV / VH in dB (equivalent of VV-VH for linear)
+- Red: VV (linear)
+- Green: HH (linear)
+- Blue: VV / VH in linear (equivalent of VV-VH for dB)
 
 Furthermore, the service offers the possibility to put two input products to make the slice-assembly. For the slice-assembly the two Sentinel-1 GRD data products must be same track, same day and consecutive.
 
@@ -20,6 +20,11 @@ Furthermore, the service offers the possibility to put two input products to mak
 **EO sources supported**
 
 This service supports as input the **Sentinel-1 Level-1 GRD** products.
+
+
+**DEM Type**
+
+The Copernicus DEM (CDEM) is used.
 
 **Output specifications**
 
