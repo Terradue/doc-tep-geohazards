@@ -1,4 +1,4 @@
-MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis
+MPIC-OPT-ETQ: Multiple Pairwise Image Correlation of OPTical images for EarThQuake analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_mpicetq_logo_small.png
