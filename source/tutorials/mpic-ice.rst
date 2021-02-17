@@ -9,7 +9,7 @@ MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTic images for IC
 CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
 
 
-**MPIC-OPT-ICE** is an on-demand service tailored for quantifying ice velocity and ice surface displacement time series from a large number of input images. Numerous parameters are accessible to the user for fine tunning of the processing which requires a certain knowlegde in the theory of Image Matching and time serie inversion. It comprises three components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs, (b) a correction module for the systematic geometric correction and filtering of residuals and (c) an inversion of the displacement time serie. 
+**MPIC-OPT-ICE** is an on-demand service tailored for quantifying ice velocity and ice surface displacement time series from a large number of input images. Numerous parameters are accessible to the user for fine tunning of the processing which requires a certain knowlegde in the theory of image matching and time serie inversion. It comprises three components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs, (b) a correction module for the systematic geometric correction and filtering of residuals and (c) an inversion of the displacement time serie. 
 
 
 **EO sources**:
@@ -18,11 +18,13 @@ CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple 
 
 **Outputs**
 
-Four **service outputs** are provided for visualization on GEP:
+Five **service outputs** are provided for visualization on GEP:
 
-* **Mean displacement magnitude:** It consists of a GeoTIFF image representing the mean displacement magnitude over all time steps. The unit is in  *m*. The naming convention is *MM_Mean_displ_magnitude_tile_date1_to_dateN.tif*
-* **Mean displacement:** TIt consists of two GeoTIFF images representing the mean displacement in the E−W and N−S direction. The unit is in *m*. The naming convention is *MM_Mean_displacement_EW_tile_date1_to_dateN.tif* and *MM_Mean_displacement_NS_tile_date1_to_dateN.tif*.
-* **Quality:** It consists of a GeoTIFF image representing the percentage, per pixel, of the pairs with a correlation score *NCC > minimum correlation threshold*.
+* **Mean velocity magnitude:** It consists of a GeoTIFF image representing the mean velocity magnitude over all time steps. The unit is in  *m/day*. The naming convention is *MM_Mean_velocity_magnitude_tile_date1_to_dateN.tif*
+* **Mean velocity:** It consists of two GeoTIFF images representing the mean velocity in the E−W and N−S direction. The unit is in *m/day*. The naming convention is *MM_Mean_velocity_EW_tile_date1_to_dateN.tif* and *MM_Mean_velocity_NS_tile_date1_to_dateN.tif*.
+* **Quality Index:** It consists of a GeoTIFF image representing the percentage, per pixel, of the pairs with a correlation score *NCC > minimum correlation threshold*.
+* **Vector Coherence:** It consists of a GeoTIFF image representing the persistence of the displacement in both magnitude and direction. It has no unit and ranges from 0 (i.e. no motion or random motion) to 1 (i.e. strong motion in the a consistent direction).
+* **Chord Diagram:** The Chord diagram representing the link between the images as tunned by the user with the Matching parameters.
 
 Four **service output folders** are provided for download by the user:
 
@@ -39,29 +41,18 @@ Four **service output folders** are provided for download by the user:
 
 .. **Convention:** The displacement and the mean velocity products are displayed with the following convention: in the **Forward** mode, **Positive values** are towards the **South** and the **East**; in the **Forward+Backward** mode, the products of the **Backward** time direction have opposite signs as compared to the ones in the **Forward** time direction.
 
+If the option to invert the time series is selected by the use, three additional outputs are displayed:
+
+* **TIO Mean velocity magnitude:** It consists in a GeoTiff representing the mean velocity computed after inversion of the displacement time serie. The velocity is computed by a linear regression for each pixel. The unit is *m/day*.
+.. **Caution:** if the displacement is not linear over time, this estimation may be inacurrate.
+* **TIO EW/NS Mean velocity:** It consists in a GeoTiff representing the mean velocity computed after inversion of the displacement time serie for each field East-West and North-South. The velocity is computed by a linear regression for each pixel. The unit is *m/day*.
+* **Displacement time serie:** It consists in a .csv file containing the cumulative displacement for the EW, NS component and the norm of the displacement for each date of acquisition.
+* **TIO folder:** An archive that contains for both displacement component the results of the TIO algorithm. It contains for example, the RMS error for each date of acquisition (*RMSpixel_date* files), the inverted cumulative displacement (*depl_cumul*), etc.
+
 
 -----
 
-The tutorial introduces the use of the **MPIC-OPT-ETQ** service for the quantification of co-seismic motion. To this end we will process Sentinel-2 images acquired before and after the Ridgecrest earthquake sequence (California, USA, 2019).
-
-Select the processing service
-=============================
-
-* Login to the platform (see :doc:`user <../community-guide/user>` section)
-
-* Go to the Geobrowser, expand the panel “Processing services” on the right hand side and select the processing service “MPIC-OPT-ETQ”:
-
-.. figure:: assets/tuto_mpicetq_1.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-This will display the service panel including several tunable parameters.
-
-.. figure:: assets/tuto_mpicetq_2.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+The tutorial introduces the use of the **MPIC-OPT-ICE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the glaciers of the European Alps.
 
 Use case: Analysis of the July 2019 Ridgecrest Earthquake sequence
 ==================================================================
@@ -70,20 +61,10 @@ Select input data
 -----------------
 
 The Geobrowser offers multiple ways to search a large variety of EO-based dataset and the user should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction.
-For this tutorial we will use a data package which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Ridgecrest" into the search box you should be able to find a data package named "Ridgecrest_2019_S2_2im". Alternatively you can access the `Ridgecrest data package`_ directly by clicking on the link:
-.. _`Ridgecrest datapackage`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DRidgecrest_2019_S2_2im
+For this tutorial we will use a data package which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Ridgecrest" into the search box you should be able to find a data package named "European_Alps_S2_im". Alternatively you can access the  `alps_data package`_ directly by clicking on the link:
+.. _`Alps_datapackage`: 
 
-.. figure:: assets/tuto_mpicetq_3.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-
-Click on the data package, hold Shift and Drag and Drop all four products in the *Sentinel-2 products* field in the service panel on the right:
-
-.. figure:: assets/tuto_mpicetq_4.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+Please refer to the tutorial of the MPIC-OPT-ETQ to learn more on how to manipulate the data on GEP.
 
 .. Warning:: Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the tiles. For processing, you must select **only** the original multi-tile datasets. For datasets after 27 September 2016, there is no such ambiguity.
 
