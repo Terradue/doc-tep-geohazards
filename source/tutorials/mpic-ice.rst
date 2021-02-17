@@ -52,10 +52,10 @@ If the option to invert the time series is selected by the use, three additional
 
 -----
 
-The tutorial introduces the use of the **MPIC-OPT-ICE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the glaciers of the European Alps.
-
 Use case: Analysis of the July 2019 Ridgecrest Earthquake sequence
 ==================================================================
+
+The tutorial introduces the use of the **MPIC-OPT-ICE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the glaciers of the European Alps.
 
 Select input data
 -----------------
@@ -76,15 +76,21 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 * **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
 * **Matching parameters:** 
+
 .. Warning:: These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.
+
 	- **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
 	- **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
 	- **Maximum matching range:** Defines the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). The default value is set to 5.
 	- **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
 	- **Matching direction:** Define the time direction for the matching. If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). The default value is set to *Forward*.
+	
 .. Warning:: Choosing the *Forward+Backward* option has to be carefully considered by the user as it increases the number of pairs created and hence, the computing time and resources.
+
 * **Image Matching parameters:**
+
 .. Warning:: Two different algorithm are proposed for this step: **MicMac** developped by IGN/ENS and **GeFolki** developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
+
 	- **MicMac Parameters:**
 		- **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
 		- **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
