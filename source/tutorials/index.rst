@@ -13,7 +13,7 @@ Contents:
    ALADIM-VHR: Automatic LAndslide Detection and Inventory Mapping from multispectral Very-High Resolution data<aladim_vhr>
    Burned Area Analysis with Sentinel-2<burned-area>
    COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
-   COLOC - Multi-mission data co-location<rss_multimission_coloc.rst>
+   COLOC - Multi-mission data co-location<rss_multimission_coloc>
    COMBI - Band Combination<rss_combi>
    DIAPASON InSAR - StripMap(SM)<diapason-sm>
    DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)<diapason-iw>
