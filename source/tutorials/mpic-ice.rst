@@ -30,6 +30,7 @@ Four **service output folders** are provided for download by the user:
 
 * **Analysis:** Folder containing the four products described above in float GeoTIFF file formats.
 * **Displacements:** Folder containing the correlation grids and the corrected and filtered displacement field grids.
+
 	- **Corrected displacement fields for each time step:** Float GeoTIFF files representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after application of the corrections selected by the user. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.
 	- **Filtered displacement fields for each time step:** Float GeoTIFF files representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
 	- **Correlation scores:**  Folder containing 8-bit GeoTIFF images representing the correlation score for each time step with the correlation coefficient [0,1] quantized in the range [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
@@ -105,34 +106,44 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 		- **Iteration:** Defines the number of iterations to reach a minimum.
 		- **Rank:** Define the spatial window of the rank filter. The parameter controls the smoothness of calculated displacement field by averaging the displacement values within the window size. Default value is *r=4* (9x9 pixel).
 		
-		
-		
-* **Snow mask:** If set to *True*, the areas of the images covered by snow are masked. The default value is set to *True*.
-* **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
-* **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
-* **Slope mask range maximum:** The pixels located on terrain slopes with a slope angle smaller than the value set with the parameter are filtered out in the products. By default, the parameter is set to *90* degrees, so pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
-* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ )and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default.
-* **Apply correction and filtering:** If set to *True*, the jitter undulation observed in Sentinel-2 images are filtered out [6]_. This correction is recommended for displacement fields with large spatial wavelength like co-seismic displacemnet fields. By default, the paratemeter is *True* and the correction is applied.
+* **Masks:** 
+	- **Buffer outside the glacier extent:** Defines a buffer area around the glacier mask of the GLIMS database _[7]. The unit is *meter*. By default, a distance of 1000m is taken around the glacier outline.
+	- **Glacier mask:** If set to *True*, the correlation is computed only on the pixels located inside the glacier outlines. The glicier oultines are taken from the GLIMS database _[7]. 
+	- **Snow mask:** If set to *True*, the areas of the images covered by snow are masked. The default value is set to *True*.
+	- **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
+	- **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
+	- **Slope mask range maximum:** The pixels located on terrain slopes with a slope angle smaller than the value set with the parameter are filtered out in the products. By default, the parameter is set to *90* degrees, so pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
+	- **Topographic shadow:** If set to *True*, the sun illumination is simulated using the position of the sun and the selected DEM. The area in the shadow are then mask out of the acquisitions before computing the correlation.
 
+* **Correction and filtering of the displacement fields**
+	
+* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ ) and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default.
 
+.. Warning:: The user can activate or deactivate each correction.
 
-Run the job
------------
+	- **Correction: deramping** If set to *True*, the first geometric correction (as described in [2]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
+	- **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [2]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
+	- **Correction: along-track destriping value** The shift within each stripe can be estimated using the *mean* or the *median* of the displacement distribution. By default, the shift is estimated using the *mean* value.
+	- **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [6]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
+	- **Filtering displacement amplitude threshold:** Displacement with a magnitude larger than this value will be filtered out in each correlation pair. The unist in in *pixel*. By default, the threshold is 10 px (i.e. 100 m for Sentinel-2).
+	- **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
+	- **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
 
-* You are good to go. Click on the button *Run Job* at the bottom of the right panel.
+* **Motion analysis:** If set to *True*, the MPIC-OPT-ICE service provides different outputs computed from the stack of correlation pairs.
 
-.. figure:: assets/tuto_mpicetq_5.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+.. Warning:: The user can activate or deactivate each output.
 
-* Once the job has finished, click on the *Show results* button to obtain a list of products for visualization.
-.. note:: The products in the *Geobrowser* are previews. The user needs to download the results for further analysis and interpretation.
+* **Compute mean displacement magnitude map:**
+* **Compute mean velocity magnitude map:**
+* **Compute vector coherene map:**
 
-.. figure:: assets/tuto_mpicetq_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
+* **Time series Inversion for Optical images parameters**
+* **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
+* **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [6]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
+* **Discard pairs:** If set to *True*, pairs can be discarded based on the percentage of masked area in the AOI. This allow to remove the pairs with very few correlated pixels.
+* **Discarding threshold:** The ratio between masked and non-masked pixel is computed over the AOI. If this ratio is larger than the *discarding threshold*, the pairs is discarded from the inversion procedure. This parameter is ranging in [0,1] and set to 0.8 by default.
+* **Correlation weighting:** If set to *True*, the inversion will take into account the correlation grids to weight the contribution of each pixel for each pair in the inversion.
+
 
 References
 ==========
@@ -143,3 +154,4 @@ References
 .. [4] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
 .. [5] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
 .. [6] Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Boissier, E., Pointal, E., Pacini F., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).
+.. [7] GLIMS and NSIDC (2005, updated 2020): Global Land Ice Measurements from Space glacier database. Compiled and made available by the international GLIMS community and the National Snow and Ice Data Center, Boulder CO, USA. https://doi.org/10.7265/N5V98602.
