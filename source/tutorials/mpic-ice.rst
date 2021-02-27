@@ -130,12 +130,6 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 
 * **Motion analysis:** If set to *True*, the MPIC-OPT-ICE service provides different outputs computed from the stack of correlation pairs.
 
-.. Warning:: The user can activate or deactivate each output.
-
-* **Compute mean displacement magnitude map:**
-* **Compute mean velocity magnitude map:**
-* **Compute vector coherene map:**
-
 * **Time series Inversion for Optical images parameters**
 	- **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
 	- **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [6]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
