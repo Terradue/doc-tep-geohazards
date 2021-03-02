@@ -1,11 +1,11 @@
 MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTic images for ICE/glacier analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_mpicice_logo_small.png
 
 **MPIC-OPT-ICE**
 
-**MPIC-ICE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
+**MPIC-OPT-ICE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
 CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
 
 
@@ -35,6 +35,8 @@ Four **service output folders** are provided for download by the user:
 	- **Filtered displacement fields for each time step:** Float GeoTIFF files representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
 	- **Correlation scores:**  Folder containing 8-bit GeoTIFF images representing the correlation score for each time step with the correlation coefficient [0,1] quantized in the range [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
 
+.. Note:: The displacement and the mean velocity products are displayed with the following convention: in the **Forward** mode, **Positive values** are towards the **South** and the **East**; in the **Forward+Backward** mode, the products of the **Backward** time direction have opposite signs as compared to the ones in the **Forward** time direction.
+
 * **Masks:** Folder containing the masks used in the processing.
 
 	- **Decorrelation mask:**  8-bit GeoTIFF image representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*.
@@ -43,12 +45,12 @@ Four **service output folders** are provided for download by the user:
 
 * **Preview:** Folder containing the four browse products of the analysis folder.
 
-.. **Convention:** The displacement and the mean velocity products are displayed with the following convention: in the **Forward** mode, **Positive values** are towards the **South** and the **East**; in the **Forward+Backward** mode, the products of the **Backward** time direction have opposite signs as compared to the ones in the **Forward** time direction.
-
 If the option to invert the time series is selected by the use, three additional outputs are displayed:
 
 * **TIO Mean velocity magnitude:** It consists in a GeoTiff representing the mean velocity computed after inversion of the displacement time serie. The velocity is computed by a linear regression for each pixel. The unit is *m/day*.
-.. **Caution:** if the displacement is not linear over time, this estimation may be inacurrate.
+
+.. Warning:: if the displacement is not linear over time, this estimation may be inacurrate.
+
 * **TIO EW/NS Mean velocity:** It consists in a GeoTiff representing the mean velocity computed after inversion of the displacement time serie for each field East-West and North-South. The velocity is computed by a linear regression for each pixel. The unit is *m/day*.
 * **Displacement time serie:** It consists in a .csv file containing the cumulative displacement for the EW, NS component and the norm of the displacement for each date of acquisition.
 * **TIO folder:** An archive that contains for both displacement component the results of the TIO algorithm. It contains for example, the RMS error for each date of acquisition (*RMSpixel_date* files), the inverted cumulative displacement (*depl_cumul*), etc.
@@ -56,8 +58,8 @@ If the option to invert the time series is selected by the use, three additional
 
 -----
 
-Use case: Analysis of the July 2019 Ridgecrest Earthquake sequence
-==================================================================
+Use case: Ice velocity of the glaciers of the European Alps (Mont-Blanc massif)
+===============================================================================
 
 The tutorial introduces the use of the **MPIC-OPT-ICE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the glaciers of the European Alps.
 
@@ -79,36 +81,34 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 
 * **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
-
 * **Matching parameters:** 
 
-.. Warning:: These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.
+*These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.*
 
-	- **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
-	- **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
-	- **Maximum matching range:** Defines the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). The default value is set to 5.
-	- **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
-	- **Matching direction:** Define the time direction for the matching. If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). The default value is set to *Forward*.
-	
+        - **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
+        - **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
+        - **Maximum matching range:** Defines the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). The default value is set to 5.
+        - **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
+        - **Matching direction:** Define the time direction for the matching. If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). The default value is set to *Forward*.
+
 .. Warning:: Choosing the *Forward+Backward* option has to be carefully considered by the user as it increases the number of pairs created and hence, the computing time and resources.
 
 * **Image Matching parameters:**
 
-.. Warning:: Two different algorithms are proposed for this step: **MicMac** developped by IGN/ENS and **GeFolki** developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
-
+*Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.*
+	
 	- **MicMac Parameters:**
 		- **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
 		- **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
 		- **Spatial matching range:** Defines the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account possible coregistration biases of the input images.
 		- **Regularization parameter:** Similar to the window size, controls the smoothness of the expected motion field. Increasing the regularization parameter puts greater emphasis on a smooth motion field where neighboring pixels will have similar displacement values. For large scale features such as co-seismic displacement, large value lead to smoother and less noisy results. The default value is *0.3*.
-		- **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution.
-		
+		- **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution.	
 	- **GeFolki parameters:**
 		- **Radius:** Define the the size of the window *(2R + 1) x (2R + 1)* on which the matching between the two images is maximized. The choice of the radius value is a compromise between robustness and the expected level of detail. A large radius makes the algorithm more robust. If the flow is rapidly changing on the image, the radius must be chosen small eNOugh to estimate these variations. The algorithm can be used for several radius sizes in an iterative manner. The radius sequence is computed as power of 2.
 		- **Levels:** Define the number of levels (L) in the scale pyramid. The parameter value is conditioned by the maximum size of the displacement *Wmax*. By default, L=1 so the displacement is assumed to be lower than 2 pixels.
 		- **Iteration:** Defines the number of iterations to reach a minimum.
 		- **Rank:** Define the spatial window of the rank filter. The parameter controls the smoothness of calculated displacement field by averaging the displacement values within the window size. Default value is *r=4* (9x9 pixel).
-		
+
 * **Masks:** 
 	- **Buffer outside the glacier extent:** Defines a buffer area around the glacier mask of the GLIMS database _[7]. The unit is *meter*. By default, a distance of 1000m is taken around the glacier outline.
 	- **Glacier mask:** If set to *True*, the correlation is computed only on the pixels located inside the glacier outlines. The glicier oultines are taken from the GLIMS database _[7]. 
@@ -128,7 +128,9 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 	- **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
 	- **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
 
+
 * **Motion analysis:** If set to *True*, the MPIC-OPT-ICE service provides different outputs computed from the stack of correlation pairs.
+
 
 * **Time series Inversion for Optical images parameters**
 	- **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
