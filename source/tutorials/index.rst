@@ -25,6 +25,8 @@ Contents:
    G-POD PF-ERS Service<gpod-pf-ers>
    G-POD SBAS Stripmap Service<gpod-sbas-insar>
    MPIC-OPT-ETQ: Multiple Pairwise Image Correlation fof Optical Data or Earthquake analysis<mpic-etq>
+   MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTic images for ICE/glacier analysis<mpic-ice>
+   MPIC-OPT-SLIDE: Multiple Pairwise optical Image Correlation of OPTic images for landSLIDE analysis<mpic-slide>
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>   
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe>
