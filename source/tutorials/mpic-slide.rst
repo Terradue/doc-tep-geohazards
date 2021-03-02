@@ -1,15 +1,15 @@
-MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTic images for ICE/glacier analysis
+MPIC-OPT-SLIDE: Multiple Pairwise optical Image Correlation of OPTic images for landSLIDE analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_mpicice_logo_small.png
+.. image:: assets/tuto_mpicslide_logo_small.png
 
-**MPIC-OPT-ICE**
+**MPIC-OPT-SLIDE**
 
-**MPIC-OPT-ICE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
+**MPIC-OPT-SLIDE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
 CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
 
 
-**MPIC-OPT-ICE** is an on-demand service tailored for quantifying ice velocity and ice surface displacement time series from a large number of input images. Numerous parameters are accessible to the user for fine tunning of the processing which requires a certain knowlegde in the theory of image matching and time serie inversion. It comprises three components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs, (b) a correction module for the systematic geometric correction and filtering of residuals and (c) an inversion of the displacement time serie. 
+**MPIC-OPT-SLIDE** is an on-demand service tailored for quantifying ice velocity and ice surface displacement time series from a large number of input images. Numerous parameters are accessible to the user for fine tunning of the processing which requires a certain knowlegde in the theory of image matching and time serie inversion. It comprises three components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs, (b) a correction module for the systematic geometric correction and filtering of residuals and (c) an inversion of the displacement time serie. 
 
 
 **EO sources**:
@@ -58,26 +58,27 @@ If the option to invert the time series is selected by the use, three additional
 
 -----
 
-Use case: Ice velocity of the European Alps glaciers (Mont-Blanc massif)
-========================================================================
+Use case: Surface velocity of the Slumgullion landslide (Colorado, USA)
+=======================================================================
 
-The tutorial introduces the use of the **MPIC-OPT-ICE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the glaciers of the European Alps.
+The tutorial introduces the use of the **MPIC-OPT-SLIDE** service for the quantification of ice surface motion. To this end we will process the couldless Sentinel-2 images available in  the 2015-2020 period over the Slumgullion landslide.
 
 Select input data
 -----------------
 
 The Geobrowser offers multiple ways to search a large variety of EO-based dataset and the user should refer to the :doc:`Geobrowser <../community-guide/platform/geobrowser>` section for a general introduction.
-For this tutorial we will use a data package which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Ridgecrest" into the search box you should be able to find a data package named "European_Alps_S2_im". Alternatively you can access the  `alps_data package`_ directly by clicking on the link:
-.. _`Alps_datapackage`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DEuropean_Alps_S2_im
-
 Please refer to the tutorial of the MPIC-OPT-ETQ to learn more on how to manipulate the data on GEP.
+
+For this tutorial we will use a data package which is accessible through the "Data Packages" tab on the upper left of the screen. If you type "Slumgullion" into the search box you should be able to find a data package named "Slumgullion_S2_im_tutorial". Alternatively you can access the  `Slumgullion_data package`_ directly by clicking on the link:
+.. _`Slumgullion_datapackage`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DSlumgullion_S2_im_tutorial
+
 
 .. Warning:: Sentinel-2 datasets distributed before 27 September 2016 contain multiple tiles. For such datasets the *Geobrowser* currently returns several results including both the original multi-tile dataset and a preview of the footprints of the tiles. For processing, you must select **only** the original multi-tile datasets. For datasets after 27 September 2016, there is no such ambiguity.
 
 Set the processing parameters
 -----------------------------
 
-There are 37 processing parameters that can be adjusted. A short explanation of the parameter is provided when hovering over the parameter fields.
+There are 31 processing parameters that can be adjusted. A short explanation of the parameter is provided when hovering over the parameter fields.
 
 * **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
@@ -95,6 +96,7 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 
 * **Sentinel-2 relative orbit:** Defines the relative orbit to filter the acquisitions. Biases exist between acquisitions of different relative orbits, this option allow to ensure only one relative orbit is considered. 
 * **Region Of Interest bounding box:** Defines the area the Sentinel-2 acquisitions are cropped to compute the correlation. It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost.
+
 * **Image Matching parameters:**
 
 *Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.*
@@ -112,8 +114,6 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 		- **Rank:** Define the spatial window of the rank filter. The parameter controls the smoothness of calculated displacement field by averaging the displacement values within the window size. Default value is *r=4* (9x9 pixel).
 
 * **Masks:** 
-	- **Buffer outside the glacier extent:** Defines a buffer area around the glacier mask of the GLIMS database _[7]. The unit is *meter*. By default, a distance of 1000m is taken around the glacier outline.
-	- **Glacier mask:** If set to *True*, the correlation is computed only on the pixels located inside the glacier outlines. The glicier oultines are taken from the GLIMS database _[7]. 
 	- **Snow mask:** If set to *True*, the areas of the images covered by snow are masked. The default value is set to *True*.
 	- **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
 	- **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
@@ -142,10 +142,9 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 	- **Correlation weighting:** If set to *True*, the inversion will take into account the correlation grids to weight the contribution of each pixel for each pair in the inversion.
 
 Results
---------
+-------
 
 The results are also accessible on this link: 
-.. image:: assets/tuto_results_mpicice.png
 
 
 References
