@@ -90,7 +90,7 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 
 * **Sentinel-2 relative orbit:** Defines the relative orbit to filter the acquisitions. Biases exist between acquisitions of different relative orbits, this option allow to ensure only one relative orbit is considered. 
 * **Region Of Interest bounding box:** Defines the area the Sentinel-2 acquisitions are cropped to compute the correlation. It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost.
-* **Image Matching parameters:** Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
+* **Image Matching parameters:** Two different algorithms are proposed for this step: **MicMac** developped by IGN/ENS and **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
 	* **MicMac Parameters:**
 		* **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
 		* **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
@@ -137,6 +137,7 @@ Results
 --------
 
 The results are also accessible on this link: 
+
 .. image:: assets/tuto_results_mpicice.png
 
 
