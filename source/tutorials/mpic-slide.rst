@@ -3,8 +3,6 @@ MPIC-OPT-SLIDE: Multiple Pairwise optical Image Correlation of OPTic images for 
 
 .. image:: assets/tuto_mpicslide_logo_small.png
 
-**MPIC-OPT-SLIDE**
-
 **MPIC-OPT-SLIDE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
 CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
 
@@ -17,6 +15,7 @@ CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple 
     - Sentinel-2 MSI L1C
 
 **Outputs**
+===========
 
 Five **service outputs** are provided for visualization on GEP:
 
@@ -30,18 +29,16 @@ Four **service output folders** are provided for download by the user:
 
 * **Analysis:** Folder containing the four products described above in float GeoTIFF file formats.
 * **Displacements:** Folder containing the correlation grids and the corrected and filtered displacement field grids.
-
-	- **Corrected displacement fields for each time step:** Float GeoTIFF files representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after application of the corrections selected by the user. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.
-	- **Filtered displacement fields for each time step:** Float GeoTIFF files representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
-	- **Correlation scores:**  Folder containing 8-bit GeoTIFF images representing the correlation score for each time step with the correlation coefficient [0,1] quantized in the range [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
+	* **Corrected displacement fields for each time step:** Float GeoTIFF files representing the measured displacement among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after application of the corrections selected by the user. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_corrected.tif* and *MM_NS_displ_tile_date1_vs_date2_corrected.tif* respectively.
+	* **Filtered displacement fields for each time step:** Float GeoTIFF files representing the measured displacements among the two respective input images in pixels in E-W direction (East is positive) and N-S direction (South is positive) after filtering. The naming conventions are *MM_EW_displ_tile_date1_vs_date2_FILTER_Displmax.tif* and *MM_NS_displ_tile_date1_vs_date2_FILTER_Displmax.tif* respectively.
+	* **Correlation scores:**  Folder containing 8-bit GeoTIFF images representing the correlation score for each time step with the correlation coefficient [0,1] quantized in the range [128,255]. The naming convention is *MM_Corr_tile_date1_date2.tif*.
 
 .. Note:: The displacement and the mean velocity products are displayed with the following convention: in the **Forward** mode, **Positive values** are towards the **South** and the **East**; in the **Forward+Backward** mode, the products of the **Backward** time direction have opposite signs as compared to the ones in the **Forward** time direction.
 
 * **Masks:** Folder containing the masks used in the processing.
-
-	- **Decorrelation mask:**  8-bit GeoTIFF image representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*.
-	- **Cloud mask:** 8-bit GeoTIFF images representing the cloud mask for each time step. Six flags are indicated: 0 = clear sky pixel; 1 = null; 2 = cloud pixel; 3 = cloud shadow pixel; 4 = snow pixel; 5 = water pixel. The naming convention is: *Tile_date_spectral_mask.tif*.
-	- **Slope mask:** 8-bit GeoTIFF images representing the slope mask. The naming convention is: *Tile_slope_mask_mask.tif*
+	* **Decorrelation mask:**  8-bit GeoTIFF image representing the decorrelation mask for each time step. The naming convention is *tile_date1_date2_decorrel_mask.tif*.
+	* **Cloud mask:** 8-bit GeoTIFF images representing the cloud mask for each time step. Six flags are indicated: 0 = clear sky pixel; 1 = null; 2 = cloud pixel; 3 = cloud shadow pixel; 4 = snow pixel; 5 = water pixel. The naming convention is: *Tile_date_spectral_mask.tif*.
+	* **Slope mask:** 8-bit GeoTIFF images representing the slope mask. The naming convention is: *Tile_slope_mask_mask.tif*
 
 * **Preview:** Folder containing the four browse products of the analysis folder.
 
@@ -82,64 +79,58 @@ There are 31 processing parameters that can be adjusted. A short explanation of 
 
 * **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
-* **Matching parameters:** 
-
-*These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.*
-
-        - **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
-        - **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
-        - **Maximum matching range:** Defines the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). The default value is set to 5.
-        - **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
-        - **Matching direction:** Define the time direction for the matching. If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). The default value is set to *Forward*.
+* **Matching parameters:** These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.
+        * **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
+        * **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
+        * **Maximum matching range:** Defines the maximum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a maximum range is set to 2, all the images (N) will be paired with at most the next second image in time (N+2). The default value is set to 5.
+        * **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
+        * **Matching direction:** Define the time direction for the matching. If *Forward* is selected, the pairs are only created in the time direction. If *Forward+Backward* is selected, the pairs will be created in both directions (i.e. time and reverse time direction). The default value is set to *Forward*.
 
 .. Warning:: Choosing the *Forward+Backward* option has to be carefully considered by the user as it increases the number of pairs created and hence, the computing time and resources.
 
 * **Sentinel-2 relative orbit:** Defines the relative orbit to filter the acquisitions. Biases exist between acquisitions of different relative orbits, this option allow to ensure only one relative orbit is considered. 
 * **Region Of Interest bounding box:** Defines the area the Sentinel-2 acquisitions are cropped to compute the correlation. It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost.
 
-* **Image Matching parameters:**
-
-*Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.*
-	
-	- **MicMac Parameters:**
-		- **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
-		- **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
-		- **Spatial matching range:** Defines the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account possible coregistration biases of the input images.
-		- **Regularization parameter:** Similar to the window size, controls the smoothness of the expected motion field. Increasing the regularization parameter puts greater emphasis on a smooth motion field where neighboring pixels will have similar displacement values. For large scale features such as co-seismic displacement, large value lead to smoother and less noisy results. The default value is *0.3*.
-		- **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution.	
-	- **GeFolki parameters:**
-		- **Radius:** Define the the size of the window *(2R + 1) x (2R + 1)* on which the matching between the two images is maximized. The choice of the radius value is a compromise between robustness and the expected level of detail. A large radius makes the algorithm more robust. If the flow is rapidly changing on the image, the radius must be chosen small eNOugh to estimate these variations. The algorithm can be used for several radius sizes in an iterative manner. The radius sequence is computed as power of 2.
-		- **Levels:** Define the number of levels (L) in the scale pyramid. The parameter value is conditioned by the maximum size of the displacement *Wmax*. By default, L=1 so the displacement is assumed to be lower than 2 pixels.
-		- **Iteration:** Defines the number of iterations to reach a minimum.
-		- **Rank:** Define the spatial window of the rank filter. The parameter controls the smoothness of calculated displacement field by averaging the displacement values within the window size. Default value is *r=4* (9x9 pixel).
+* **Image Matching parameters:** Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
+	* **MicMac Parameters:**
+		* **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
+		* **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
+		* **Spatial matching range:** Defines the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account possible coregistration biases of the input images.
+		* **Regularization parameter:** Similar to the window size, controls the smoothness of the expected motion field. Increasing the regularization parameter puts greater emphasis on a smooth motion field where neighboring pixels will have similar displacement values. For large scale features such as co-seismic displacement, large value lead to smoother and less noisy results. The default value is *0.3*.
+		* **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution.	
+	* **GeFolki parameters:**
+		* **Radius:** Define the the size of the window *(2R + 1) x (2R + 1)* on which the matching between the two images is maximized. The choice of the radius value is a compromise between robustness and the expected level of detail. A large radius makes the algorithm more robust. If the flow is rapidly changing on the image, the radius must be chosen small eNOugh to estimate these variations. The algorithm can be used for several radius sizes in an iterative manner. The radius sequence is computed as power of 2.
+		* **Levels:** Define the number of levels (L) in the scale pyramid. The parameter value is conditioned by the maximum size of the displacement *Wmax*. By default, L=1 so the displacement is assumed to be lower than 2 pixels.
+		* **Iteration:** Defines the number of iterations to reach a minimum.
+		* **Rank:** Define the spatial window of the rank filter. The parameter controls the smoothness of calculated displacement field by averaging the displacement values within the window size. Default value is *r=4* (9x9 pixel).
 
 * **Masks:** 
-	- **Snow mask:** If set to *True*, the areas of the images covered by snow are masked. The default value is set to *True*.
-	- **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
-	- **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
-	- **Slope mask range maximum:** The pixels located on terrain slopes with a slope angle smaller than the value set with the parameter are filtered out in the products. By default, the parameter is set to *90* degrees, so pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
-	- **Topographic shadow:** If set to *True*, the sun illumination is simulated using the position of the sun and the selected DEM. The area in the shadow are then mask out of the acquisitions before computing the correlation.
+	* **Snow mask:** If set to *True*, the areas of the images covered by snow are masked. The default value is set to *True*.
+	* **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
+	* **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
+	* **Slope mask range maximum:** The pixels located on terrain slopes with a slope angle smaller than the value set with the parameter are filtered out in the products. By default, the parameter is set to *90* degrees, so pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
+	* **Topographic shadow:** If set to *True*, the sun illumination is simulated using the position of the sun and the selected DEM. The area in the shadow are then mask out of the acquisitions before computing the correlation.
 
 * **Correction and filtering of the displacement fields**
-	- **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ ) and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default. **The user can activate or deactivate each correction**.
-	- **Correction: deramping** If set to *True*, the first geometric correction (as described in [2]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
-	- **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [2]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
-	- **Correction: along-track destriping value** The shift within each stripe can be estimated using the *mean* or the *median* of the displacement distribution. By default, the shift is estimated using the *mean* value.
-	- **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [6]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
-	- **Filtering displacement amplitude threshold:** Displacement with a magnitude larger than this value will be filtered out in each correlation pair. The unist in in *pixel*. By default, the threshold is 10 px (i.e. 100 m for Sentinel-2).
-	- **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
-	- **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
+	* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ ) and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default. **The user can activate or deactivate each correction**.
+	* **Correction: deramping** If set to *True*, the first geometric correction (as described in [2]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
+	* **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [2]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
+	* **Correction: along-track destriping value** The shift within each stripe can be estimated using the *mean* or the *median* of the displacement distribution. By default, the shift is estimated using the *mean* value.
+	* **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [6]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
+	* **Filtering displacement amplitude threshold:** Displacement with a magnitude larger than this value will be filtered out in each correlation pair. The unist in in *pixel*. By default, the threshold is 10 px (i.e. 100 m for Sentinel-2).
+	* **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
+	* **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
 
 
 * **Motion analysis:** If set to *True*, the MPIC-OPT-ICE service provides different outputs computed from the stack of correlation pairs.
 
 
 * **Time series Inversion for Optical images parameters**
-	- **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
-	- **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [6]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
-	- **Discard pairs:** If set to *True*, pairs can be discarded based on the percentage of masked area in the AOI. This allow to remove the pairs with very few correlated pixels.
-	- **Discarding threshold:** The ratio between masked and non-masked pixel is computed over the AOI. If this ratio is larger than the *discarding threshold*, the pairs is discarded from the inversion procedure. This parameter is ranging in [0,1] and set to 0.8 by default.
-	- **Correlation weighting:** If set to *True*, the inversion will take into account the correlation grids to weight the contribution of each pixel for each pair in the inversion.
+	* **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
+	* **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [6]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
+	* **Discard pairs:** If set to *True*, pairs can be discarded based on the percentage of masked area in the AOI. This allow to remove the pairs with very few correlated pixels.
+	* **Discarding threshold:** The ratio between masked and non-masked pixel is computed over the AOI. If this ratio is larger than the *discarding threshold*, the pairs is discarded from the inversion procedure. This parameter is ranging in [0,1] and set to 0.8 by default.
+	* **Correlation weighting:** If set to *True*, the inversion will take into account the correlation grids to weight the contribution of each pixel for each pair in the inversion.
 
 Results
 -------
