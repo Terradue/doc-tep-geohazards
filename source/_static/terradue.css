@@ -546,3 +546,12 @@ li.toctree-l4 > a {
 img.align-center, .figure.align-center, object.align-center {
 	max-width: 100%;
 }
+
+/* footnote */
+table.footnote td.label {
+    color: #555;
+}
+table.footnote td > em {
+    font-weight: bold;
+    font-style: normal;
+}
