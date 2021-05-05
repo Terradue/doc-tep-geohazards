@@ -1,13 +1,11 @@
-MPIC-OPT-SLIDE: Multiple Pairwise optical Image Correlation of OPTic images for landSLIDE analysis
+MPIC-OPT-SLIDE: Multiple Pairwise Image Correlation of OPTical images for landSLIDE analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_mpicslide_logo_small.png
 
-**MPIC-OPT-SLIDE** is a service based on the **CO-REGIS/MPIC** library developed by CNRS EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
-CO-REGIS (CO-REGIStration of Sentinel 2 and Landsat 8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of image time series for the quantification of Earth surface motion.
+**MPIC-OPT** stands for Multiple Pairwise Image Correlation of OPtical image Time-series. The service is developed and maintained by CNRS/ITES (Strasbourg) with contribution of IGN/Matis (Marne-la-Vallée), ONERA (Palaiseau) and CNRS/ISTerre (Grenoble). The service allows the processing of optical image pairs for the monitoring of Earth surface deformation. 
 
-
-**MPIC-OPT-SLIDE** is an on-demand service tailored for quantifying ice velocity and ice surface displacement time series from a large number of input images. Numerous parameters are accessible to the user for fine tunning of the processing which requires a certain knowlegde in the theory of image matching and time serie inversion. It comprises three components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs, (b) a correction module for the systematic geometric correction and filtering of residuals and (c) an inversion of the displacement time serie. 
+The service version **MPIC-OPT-SLIDE** is designed for **monitoring landslide persistent motion**. It enables the on-demand processing of Sentinel-2 image time series. It provides 1) a module for image matching of multiple image pairs susing pixel and sub-pixel image correlation or optical flow, 2) a module for image pairs geometrical correction and filtering, and 3) a module for the spatio-temporal analysis of surface motion. It builds on the MicMac (IGN/Matis; Rosu et al., 2015 [1]_), GeFolki (ONERA; Brigot et al., 2016 [2]_), CO-REGIS (CNRS/EOST; Stumpf et al., 2017 [3]_), MPIC (Stumpf et al., 2018 [4]_), TIO (CNRS/ISTerre; Bontemps et al., 2018 [5]_) and FMask (Texas Tech University; Qiu et al., 2019 [6]_) algorithms. The service is designed for the processing of a maximum of 100 images. 
 
 
 **EO sources**:
@@ -77,7 +75,7 @@ Set the processing parameters
 
 There are 31 processing parameters that can be adjusted. A short explanation of the parameter is provided when hovering over the parameter fields.
 
-* **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
+* **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [8]_ and the *COP-DEM_GLO-30* [9]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
 * **Matching parameters:** These parameters control the network of pairs that will be created. This is of main importance to obtain a measure of the ground deformation. The user should keep in mind that the method is sensitive to 1/10 of pixel. In the case of Sentinel-2, the method is sensitive to displacement of ~1 meter, if there is less than 1 meter of displacement between two dates, the ground motion will not be measured.
         * **Matching mode:** Defines the unit of the next parameters, it can be "acquisition" or "days".
@@ -90,6 +88,8 @@ There are 31 processing parameters that can be adjusted. A short explanation of 
 
 * **Sentinel-2 relative orbit:** Defines the relative orbit to filter the acquisitions. Biases exist between acquisitions of different relative orbits, this option allow to ensure only one relative orbit is considered. 
 * **Region Of Interest bounding box:** Defines the area the Sentinel-2 acquisitions are cropped to compute the correlation. It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost.
+
+.. Warning:: It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost. For instance, the each Sentinel-2 contain 10980x10980 pixels (100 kmx 100 km). If the pairing network is set to compute 1000 pairs, it means that the correlation and the inversion have to be computed over 100 billion points that will take several days to weeks to process. It is recommended to set ROI of around 5000 x 5000 pixel (50 x 50 km).
 
 * **Image Matching parameters:** Two different algorithms are proposed for this step:* **MicMac** *developped by IGN/ENS and* **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
 	* **MicMac Parameters:**
@@ -112,11 +112,11 @@ There are 31 processing parameters that can be adjusted. A short explanation of 
 	* **Topographic shadow:** If set to *True*, the sun illumination is simulated using the position of the sun and the selected DEM. The area in the shadow are then mask out of the acquisitions before computing the correlation.
 
 * **Correction and filtering of the displacement fields**
-	* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ ) and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default. **The user can activate or deactivate each correction**.
-	* **Correction: deramping** If set to *True*, the first geometric correction (as described in [2]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
-	* **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [2]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
+	* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [4]_ ) and the filtering (as described in [3]_) are applied. They are highly recommended for any use case and are applied by default. **The user can activate or deactivate each correction**.
+	* **Correction: deramping** If set to *True*, the first geometric correction (as described in [4]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
+	* **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [4]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
 	* **Correction: along-track destriping value** The shift within each stripe can be estimated using the *mean* or the *median* of the displacement distribution. By default, the shift is estimated using the *mean* value.
-	* **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [6]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
+	* **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [10]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
 	* **Filtering displacement amplitude threshold:** Displacement with a magnitude larger than this value will be filtered out in each correlation pair. The unist in in *pixel*. By default, the threshold is 10 px (i.e. 100 m for Sentinel-2).
 	* **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
 	* **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
@@ -127,7 +127,7 @@ There are 31 processing parameters that can be adjusted. A short explanation of 
 
 * **Time series Inversion for Optical images parameters**
 	* **Run TIO:** If set to *True* the TIO algorithm computes the displacement time series. By default, it is set to *True*.
-	* **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [6]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
+	* **Inversion weight:** Defines the weight of each displacement pairs. The weight is based on the temporal baseline between the two acquisitions as defined in [5]_. The user can choose to give more wait to short baseline pairs (*Short-baseline*) or long baseline (*Long-baseline*) or to set no weight (*None*) in the inversion. By default, it is set to *None*.
 	* **Discard pairs:** If set to *True*, pairs can be discarded based on the percentage of masked area in the AOI. This allow to remove the pairs with very few correlated pixels.
 	* **Discarding threshold:** The ratio between masked and non-masked pixel is computed over the AOI. If this ratio is larger than the *discarding threshold*, the pairs is discarded from the inversion procedure. This parameter is ranging in [0,1] and set to 0.8 by default.
 	* **Correlation weighting:** If set to *True*, the inversion will take into account the correlation grids to weight the contribution of each pixel for each pair in the inversion.
@@ -135,16 +135,40 @@ There are 31 processing parameters that can be adjusted. A short explanation of 
 Results
 -------
 
-The results are also accessible on this link: 
+The results are also accessible on this link: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D2acd1bb4-57df-43a8-8dfc-33bead30de70%26key%3D25c78969-ace3-4620-9585-5c736e80536c
+
+* The first set of results provides the mean velocity (m/day) computed from the stack of displacement grids. Here, one can see the activity of the European Alpine glaciers with a mean velocity of up to 0.008 m/day.
+
+.. image:: assets/tuto_results_mpicslide.png
+
+* The second set of results provides the mean velocity (m/day) estimated from the linear regression of the TIO displacement time series. 
+
+.. image:: assets/tuto_results_mpicslide_TIO.png
+
+.. Note:: One can see that the estimation of the velocity from both approaches may slighlty differ. The choice of various parameters such as the matching range, the correlation threshold, the activated masks or the inversion weights may change significantly the results.
+
+
+Disclaimer
+----------
+
+The MPIC-OPT services are scientific softwares provided at the best CNRS/ForM@Ter (EOST/A2S) knowledge according to state-of-the-art image matching algorithms. No warranty is provided on the processors and results of the services. CNRS/ForM@Ter (EOST/A2S) is not responsible for any software inaccuracies, bugs, errors and misuse. Generated results have a defined accuracy according to the relevant scientific publications available in the literature. Result accuracy is estimated on a statistical basis. Provided results are not validated by CNRS/ForM@Ter  and, indeed, it is user responsibility to validate them. CNRS/ForM@Ter  is not responsible for the use, quality, accuracy and interpretation of results and products that are generated by using the processors and services provided within the platform. CNRS/ForM@Ter  is not responsible for the use, quality, accuracy and interpretation of third party results, products and services derived from the use of the  processors and services. CNRS/ForM@Ter  is not responsible of possible outages of the provided services. CNRS/ForM@Ter   is not responsible of any kind of third party loss derived from service outage, result inaccuracies, software errors of the provided services and products. The maintenance, update and user support are provided by EOST/A2S free of charge and at best effort. EOST/A2S is not responsible for any consequence derived from delays on replies to user requests or support inaccuracies.
+ 
+* **CNRS**: Centre National de la Recherche Scientifique / French National Research Council
+* **ForM@Ter**: Pôle Terre Solide / Solid Earth Centre
+* **EOST**: Ecole et Observatoire des Sciences de la Terre / School and Observatory of Earth Sciences
+* **A2S**: Application de Surveillance par Satellite / Application Satellite Survey
 
 
 References
 ==========
 
-.. [1] Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007
-.. [2] Stumpf, A., Michéa, D. Malet, J.-P. (2018). Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing, 10, 160. DOI:10.3390/rs10020160
-.. [3] Rosu, A.-M., Pierrot-Deseilligny, M., Delorme, A., Binet, R. and Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100: 48–59. DOI:10.1016/j.isprsjprs.2014.03.002
-.. [4] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
-.. [5] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
-.. [6] Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Boissier, E., Pointal, E., Pacini F., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).
+.. [1] Rosu, A. M., Pierrot-Deseilligny, M., Delorme, A., Binet, R., & Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100, 48-59.
+.. [2] Brigot, G., Colin-Koeniguer, E., Plyer, A., & Janez, F. (2016). Adaptation and evaluation of an optical flow method applied to coregistration of forest remote sensing images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 9(7), 2923-2939.
+.. [3] Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007
+.. [4] Stumpf, A., Michéa, D. Malet, J.-P. (2018). Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing, 10, 160. DOI:10.3390/rs10020160
+.. [5] Bontemps, N., Lacroix, P., & Doin, M. P. (2018). Inversion of deformation fields time-series from optical images, and application to the long term kinematics of slow-moving landslides in Peru. Remote Sensing of Environment, 210, 144-158.
+.. [6] Qiu, S., Zhu, Z., & He, B. (2019). Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote sensing of environment, 231, 111205.
 .. [7] GLIMS and NSIDC (2005, updated 2020): Global Land Ice Measurements from Space glacier database. Compiled and made available by the international GLIMS community and the National Snow and Ice Data Center, Boulder CO, USA. https://doi.org/10.7265/N5V98602.
+.. [8] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
+.. [9] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
+.. [10] Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Boissier, E., Pointal, E., Pacini F., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).
