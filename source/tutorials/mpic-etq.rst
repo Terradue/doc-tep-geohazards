@@ -5,13 +5,9 @@ MPIC-OPT-ETQ: Multiple Pairwise Image Correlation of OPTical images for EarThQua
 
 **MPIC-OPT-ETQ**
 
-**MPIC-OPT-EarThQuake** is a service based on the **CO-REGIS/MPIC** library developed by CNRS/EOST (Strasbourg, France) [1]_, [2]_ and the MicMac image matching library developed by IGN (Marne-la-Vallée, France) [3]_.
-CO-REGIS (CO-REGIStration of Sentinel-2 and Landsat-8 images) and MPIC (Mutiple Pairwise Image Correlation of image time series) enable the processing of optical image time series for the quantification of Earth surface motion.
+**MPIC-OPT** stands for Multiple Pairwise Image Correlation of OPtical image Time-series. The service is developed and maintained by CNRS/EOST (Strasbourg) with contribution of IGN/Matis (Marne-la-Vallée) and CNRS/IPGP (Paris). The service allows the processing of optical image pairs for the monitoring of Earth surface deformation. 
 
-
-
-**MPIC-OPT-ETQ** is an on-demand service tailored for quantifying co-seismic deformation from a limited number of images and a few number of parameters which makes it easy to use by non-experts.
-It comprises two components with (a) an analysis module for measuring sub-pixel displacement from optical image pairs and (b) a correction module for the geometric correction and filtering of residuals. 
+**MPIC-OPT-ETQ** stands for Earthquake-triggered crustal deformation. It is designed for **quantifiying co-seismic deformation along faults triggered by large magnitude earthquakes**. It enables the on-demand processing of Sentinel-2 image time series. It provides 1) a module for image matching of multiple image pairs susing pixel and sub-pixel image correlation or optical flow, 2) a module for image pairs geometrical correction and filtering, and 3) a module for the spatio-temporal analysis of surface motion. It builds on the MicMac (IGN/Matis; Rosu et al., 2015 [1]), GeFolki (ONERA; Brigot et al., 2016 [2]), CO-REGIS (CNRS/EOST; Stumpf et al., 2017 [3]), MPIC (Stumpf et al., 2018 [4]) and FMask (Texas Tech University; Qiu et al., 2019 [5]) algorithms. The service is designed for the processing of a maximum of 4 Sentinel-2 images with 2 images before the earthquake (pre-event) and 2 images after the event (post-event). It is an on-demand service tailored for quantifying co-seismic deformation from a limited number of images and a few number of parameters which makes it easy to use by non-experts.
 
 
 **EO sources**:
@@ -94,7 +90,7 @@ Set the processing parameters
 
 There are 16 processing parameters that can be adjusted. A short explanation of the parameter is provided when hovering over the parameter fields.
 
-* **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [4]_ and the *COP-DEM_GLO-30* [5]_ are available to GEP users. The default DEM is the Merit DEM.
+* **DEM:** Defines the Digital Elevation Model used for filtering the displacement fields. The *Merit* [6]_ and the *COP-DEM_GLO-30* [7]_ are available to GEP users. The default DEM is the Merit DEM.
 * **Sentinel-2 band:** Defines the Sentinel-2 band for matching. The option *B04* is recommended since the red band is also used for band to band co-registration by the ESA Sentinel-2 production center.
 * **Split date:** Is an optional parameter of the form "yyyy-MM-dd" which will split the time series into two subsets. Pairs will only be formed among members of different subsets. This is particularly interesting in the case of quantifying co-seismic displacement. The default value is left empty.
 * **Minimum matching range:** Defines the minimum matching range for creating the image pairs. The matching range is expressed in *acquisitions* so if a minimum range is set to 1, all the images (N) will be paired with at least the next image in time (N+1). The default value is set to 1.
@@ -111,8 +107,8 @@ There are 16 processing parameters that can be adjusted. A short explanation of 
 * **Cloud mask:** If set to *True*, the areas of the images covered by clouds are masked. The default value is set to *True*.
 * **Slope mask range minimum:** The pixels located on terrain slopes with a slope angle larger than the value set with the parameter are filtered out in the products. By default, the parameter is set to *80*, so pixels located on slopes with angle larger than 80 degrees are filtered.
 * **Slope mask range maximum:** The pixels located on terrain slopes with a slope angle smaller than the value set with the parameter are filtered out in the products. By default, the parameter is set to *90* degrees, so pixels located on slopes with angle between *Slope mask range minimum* and 90 degrees are filtered.
-* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [2]_ )and the filtering (as described in [1]_) are applied. They are highly recommended for any use case and are applied by default.
-* **Apply correction and filtering:** If set to *True*, the jitter undulation observed in Sentinel-2 images are filtered out [6]_. This correction is recommended for displacement fields with large spatial wavelength like co-seismic displacemnet fields. By default, the paratemeter is *True* and the correction is applied.
+* **Apply correction and filtering:** If set to *True*, the geometric corrections (as described in [3]_ )and the filtering (as described in [4]_) are applied. They are highly recommended for any use case and are applied by default.
+* **Apply correction and filtering:** If set to *True*, the jitter undulation observed in Sentinel-2 images are filtered out [8]_. This correction is recommended for displacement fields with large spatial wavelength like co-seismic displacemnet fields. By default, the paratemeter is *True* and the correction is applied.
 
 
 
@@ -133,13 +129,27 @@ Run the job
 	:figclass: align-center
         :width: 750px
         :align: center
+	
+
+Disclaimer
+----------
+
+The MPIC-OPT services are scientific softwares provided at the best CNRS/ForM@Ter (EOST/A2S) knowledge according to state-of-the-art image matching algorithms. No warranty is provided on the processors and results of the services. CNRS/ForM@Ter (EOST/A2S) is not responsible for any software inaccuracies, bugs, errors and misuse. Generated results have a defined accuracy according to the relevant scientific publications available in the literature. Result accuracy is estimated on a statistical basis. Provided results are not validated by CNRS/ForM@Ter  and, indeed, it is user responsibility to validate them. CNRS/ForM@Ter  is not responsible for the use, quality, accuracy and interpretation of results and products that are generated by using the processors and services provided within the platform. CNRS/ForM@Ter  is not responsible for the use, quality, accuracy and interpretation of third party results, products and services derived from the use of the  processors and services. CNRS/ForM@Ter  is not responsible of possible outages of the provided services. CNRS/ForM@Ter   is not responsible of any kind of third party loss derived from service outage, result inaccuracies, software errors of the provided services and products. The maintenance, update and user support are provided by EOST/A2S free of charge and at best effort. EOST/A2S is not responsible for any consequence derived from delays on replies to user requests or support inaccuracies.
+ 
+* **CNRS**: Centre National de la Recherche Scientifique / French National Research Council
+* **ForM@Ter**: Pôle Terre Solide / Solid Earth Centre
+* **EOST**: Ecole et Observatoire des Sciences de la Terre / School and Observatory of Earth Sciences
+* **A2S**: Application de Surveillance par Satellite / Application Satellite Survey
+
 
 References
 ==========
 
-.. [1] Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007
-.. [2] Stumpf, A., Michéa, D. Malet, J.-P. (2018). Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing, 10, 160. DOI:10.3390/rs10020160
-.. [3] Rosu, A.-M., Pierrot-Deseilligny, M., Delorme, A., Binet, R. and Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100: 48–59. DOI:10.1016/j.isprsjprs.2014.03.002
-.. [4] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
-.. [5] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
-.. [6] Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Boissier, E., Pointal, E., Pacini F., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).
+.. [1] Rosu, A. M., Pierrot-Deseilligny, M., Delorme, A., Binet, R., & Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100, 48-59.
+.. [2] Brigot, G., Colin-Koeniguer, E., Plyer, A., & Janez, F. (2016). Adaptation and evaluation of an optical flow method applied to coregistration of forest remote sensing images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 9(7), 2923-2939.
+.. [3] Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007
+.. [4] Stumpf, A., Michéa, D. Malet, J.-P. (2018). Improved co-registration of Sentinel-2 and Landsat-8 imagery for Earth surface motion measurements. Remote Sensing, 10, 160. DOI:10.3390/rs10020160
+.. [5] Qiu, S., Zhu, Z., & He, B. (2019). Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote sensing of environment, 231, 111205.
+.. [6] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
+.. [7] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
+.. [8] Provost, F., Michéa, D., Malet J.-P., Boissier, E., Pointal, E., Stumpf, A., Pacini F., Doin M.-P., Lacroix, P., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (submitted).
