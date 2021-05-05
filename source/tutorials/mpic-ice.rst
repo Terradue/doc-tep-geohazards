@@ -1,4 +1,4 @@
-MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTical images for ICE/glacier analysis
+MPIC-OPT-ICE: Multiple Pairwise Image Correlation of OPTical images for ICE/glacier analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_mpicice_logo_small.png
