@@ -142,7 +142,7 @@ The results are also accessible on this link: https://geohazards-tep.eu/t2api/sh
 
 .. image:: assets/tuto_results_mpicice.png
 
-* The second set of results provides the mean velocity (m/day) estimated from the linear regression of the TIO displacement times series. 
+* The second set of results provides the mean velocity (m/day) estimated from the linear regression of the TIO displacement time series. 
 
 .. image:: assets/tuto_results_mpicice_TIO.png
 
