@@ -25,7 +25,7 @@ Figure: Definition of the Optical Flow variables (from [3]_).
 3) What kind of movement can be measured?
 =========================================
 
-These approaches can measured the pixel motion in the two dimensions of the images. In the case of optical images acquired by space-borne sensor such as the Copernicus Sentinel-2 satellites, the images (Level L1C) are coregistered and collocated in the geographical reference. The MPIC-OPT service can hence measure the displacement of the pixels in the North-South and East-West directions. No vertical motion is provided by the MPIC-OPT services.
+These approaches can measured the pixel motion in the two dimensions of the images. In the case of optical images acquired by space-borne sensor such as the Copernicus Sentinel-2 satellites, the images (Level L1C) are coregistered and collocated in the geographical reference. The MPIC-OPT service can hence measure the **displacement of the pixels in the North-South and East-West directions**. **No vertical motion** is provided by the MPIC-OPT services. Moreover, Image Matching precision is usually of 1/10th to 1/5th of pixel meaning it can detect motion of this magnitude (or larger). In the case of Sentinel-2, the pixel size is 10 meters so the precision is around 1 to 2 meters. Hence, **only movement equal or larger than 1 or 2 meters between two dates of Sentinel-2 acquisition can be measure by the MPIC-OPT services**. However, the current archive of Sentinel-2 is 4 years long so **a motion of 0.25 m/year (1 meter over 4 years) to 0.5 m/year (2 meter over 4 years) can be currently monitored by the MPIC-OPT**. See question 5 for more detailed on the precision.
 
 4) How to select the input images?
 ==================================
