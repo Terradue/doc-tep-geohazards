@@ -99,7 +99,8 @@ The second masking strategy is based on the correlation threshold that discards 
 
 The across-track correction (also called jitter correction) can remove the high frequency undulation caused by the platform vibrations during the acquisition and visible in certain pairs of Sentinel-2 images. The filter efficiently remove this this undulation allowing to better estimate the ground displacement as can be seen on the Ridgecrest example: 
 
-.. image:: assets/tuto_faq_mpic_Figure8.gif
+.. image:: assets/tuto_faq_mpic_Figure9.gif
+   :width: 400
 
 The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity.
 
