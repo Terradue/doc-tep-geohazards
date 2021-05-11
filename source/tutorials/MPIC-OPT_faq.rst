@@ -48,7 +48,7 @@ The definition of these parameters especially the minimum matching range is crit
 
 The minimum matching (i.e. the minimum temporal duration to compare two images) is particularly important in the case of slow movement. Indeed, pairs with short temporal baseline are likely to provide no estimation of slow movement and hence will add up noise into the estimation of the ground displacement. Conversely, in the case of fast motion creating pairs with long temporal baselines may introduce noise because of the rapid change of the ground texture preventing a good correlation or constant intensity. 
 
-Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters (Provost et al, 2021). The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
+Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters [4]_. The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
 
 .. image:: assets/tuto_faq_mpic_Figure5.png
 
@@ -65,28 +65,30 @@ Finally, if the user has no a priori idea of the ground velocity, it is advised 
 
 There are three bands accessible for Sentinel-2 inputs: B02 (Blue), B03 (Green), B04 (Red) and B08 (infra-red). The displacement is computed for one of these four bands. As these bands are sensitive to different ground color, the MPIC-OPT outputs may differ using one band or another. It is of the user’s interests to check which motion pattern is visible (or not) using the different bands. By default, band 04 is user as it is the band the Sentinel-2 geometry is calibrated on. For different application other band may be preferable (for instance, glacier studies often use the infra-red band).
 
+.. image:: assets/tuto_faq_mpic_Figure6.png
+
 7) What algorithm to chose between MicMac and GeFolki?
 ======================================================
 
 As mentioned in question 2, the two algorithms use different assumptions and computational strategies to measure the ground displacement within images. 
 
-.. image:: assets/tuto_faq_mpic_Figure5.png
+.. image:: assets/tuto_faq_mpic_Figure7.png
 
-The figure shows the outputs of the two algorithms for the Slumgullion landslide. As one can see the results are slightly noisier for the GeFolki algorithm in comparison with the MicMac algorithm. In general, [4]_ found that the GeFolki performs less good than the MicMac algorithm in term of sub-pixel precision. However, the GéFolki algorithm offer a very efficient and quick solution that can be interesting in the case the user needs a fast results or wants to process many tests at a low cost (i.e. using few computing time and resources).
+The figure shows the outputs of the two algorithms for the Slumgullion landslide. As one can see the results are slightly noisier for the GeFolki algorithm in comparison with the MicMac algorithm. In general, [4]_ found that the GeFolki performs less good than the MicMac algorithm in term of sub-pixel precision. However, the GeFolki algorithm offer a very efficient and quick solution that can be interesting in the case the user needs a fast results or wants to process many tests at a low cost (i.e. using few computing time and resources).
 
 8) How to set the threshold for the correlation in the MicMac algorithm?
 ========================================================================
 
-.. image:: assets/tuto_faq_mpic_Figure6.png
+.. image:: assets/tuto_faq_mpic_Figure8.png
 
-Another important parameter in the case the user uses the MicMac algorithm is the choice of the correlation threshold. This parameter controls the quality of the correlation and pixel whose Normalize Cross-Correlation values are lower than the threshold will be discarded in the next steps of the processing. The figure shows the influence of this parameter on the mean velocity estimation over the European glaciers. One can observed that setting a high threshold improves the quality of the results by reducing the noise on stable areas (outside glaciers). Moreover, this parameter can be used as an efficient strategy to remove the noise due to the presence of clouds in certain images (see Question 9). However, it should be noted that if the time series inversion (TIO) is computed, setting a high correlation threshold may lead to underestimated displacement time series [4].
+Another important parameter in the case the user uses the MicMac algorithm is the choice of the correlation threshold. This parameter controls the quality of the correlation and pixel whose Normalize Cross-Correlation values are lower than the threshold will be discarded in the next steps of the processing. The figure shows the influence of this parameter on the mean velocity estimation over the European glaciers. One can observed that setting a high threshold improves the quality of the results by reducing the noise on stable areas (outside glaciers). Moreover, this parameter can be used as an efficient strategy to remove the noise due to the presence of clouds in certain images (see Question 9). However, it should be noted that if the time series inversion (TIO) is computed, setting a high correlation threshold may lead to underestimated displacement time series [4]_.
 
 9) What masking option are available and how to chose them?
 ===========================================================
 
 Different masks are performed during the MPIC-OPT processing: some are done by default while some other can be activated or not by the user. 
 
-The first masking strategy is done using the *Fmask* algorithm (XX) that classifies all pixel of the image into five categories: clear land pixel, clear water pixel, cloud, cloud shadow, snow. By default, the clear water surfaces are masked out. The user can chose to mask (or not) cloud (and cloud shadow) and snow. 
+The first masking strategy is done using the *Fmask* algorithm [6]_ that classifies all pixel of the image into five categories: clear land pixel, clear water pixel, cloud, cloud shadow, snow. By default, the clear water surfaces are masked out. The user can chose to mask (or not) cloud (and cloud shadow) and snow. 
 The automatic detection of cloud areas may be inaccurate leading to mask areas of interest.  For instance, new and fresh outcrop on certain landslide may be classified as cloud. Another strategy to remove cloudy areas in the processing is to increase the correlation threshold as cloudy areas are likely to be uncorrelated (see Question 8 for details on the correlation threshold).
 
 The second masking strategy is based on the correlation threshold that discards pixel with low correlation values. Then, once the displacement fields are computed, filters can be set up to remove unrealistic large magnitude displacements or to filter out displacement in unrealistic direction (e.g. up slope).
@@ -95,11 +97,11 @@ The second masking strategy is based on the correlation threshold that discards 
 10) When setting the across-track (or jitter) correction?
 =========================================================
 
-The across-track correction (also called jitter correction) can remove the high frequency undulation caused by the platform vibrations during the acquisition and visible in certain pairs of Sentinel-2 images. The filter efficiently remove this this undulation allowing to better estimate the ground displacement as can be seen on the Ridgecrest example (Animation XX). 
+The across-track correction (also called jitter correction) can remove the high frequency undulation caused by the platform vibrations during the acquisition and visible in certain pairs of Sentinel-2 images. The filter efficiently remove this this undulation allowing to better estimate the ground displacement as can be seen on the Ridgecrest example: 
 
-.. image:: assets/tuto_faq_mpic_Figure7.gif
+.. image:: assets/tuto_faq_mpic_Figure8.gif
 
-The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity.
+The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity.
 
 11) How to set up the inversion parameters?
 ===========================================
@@ -126,3 +128,4 @@ References
 .. [3] Brigot, G., Colin-Koeniguer, E., Plyer, A., & Janez, F. (2016). Adaptation and evaluation of an optical flow method applied to coregistration of forest remote sensing images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 9(7), 2923-2939.
 .. [4] Provost, F., Michéa, D., Malet J.-P., Boissier, E., Pointal, E., Stumpf, A., Pacini F., Doin M.-P., Lacroix, P., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (submitted).
 .. [5] Bontemps, N., Lacroix, P., & Doin, M. P. (2018). Inversion of deformation fields time-series from optical images, and application to the long term kinematics of slow-moving landslides in Peru. Remote Sensing of Environment, 210, 144-158.
+.. [6] Qiu, S., Zhu, Z., & He, B. (2019). Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote sensing of environment, 231, 111205.
