@@ -18,8 +18,9 @@ The MPIC-OPT services offer the possibility to use two different algorithms to m
   * the **GeFolki** algorithm [3]_ allows the registration of images in a non-parametric and dense way using an Optical Flow approach. The main assumption of Optical Flow is that pixel intensity remains constant from one image to another one: I1(x)=I2(x+u(x)). The algorithm consists in solving this equation. The main limitations of optical flow remain on its sensitivity to strong changes in the images that prevents the technique to retrieve the motion associated to large displacement or to images with strong illumination differences (e.g. winter vs. summer acquisitions).
 
 .. image:: assets/tuto_faq_mpic_Figure1.png
+   :scale: 10 %
 
-Figure 1: Definition of the Optical Flow variables (from [3]_).
+Figure: Definition of the Optical Flow variables (from [3]_).
 
 3) What kind of movement can be measured?
 =========================================
