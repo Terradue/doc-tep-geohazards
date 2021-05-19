@@ -1,11 +1,11 @@
-MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTical images for ICE/glacier analysis
+MPIC-OPT-ICE: Multiple Pairwise Image Correlation of OPTical images for ICE/glacier analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/tuto_mpicice_logo_small.png
 
 **MPIC-OPT** stands for Multiple Pairwise Image Correlation of OPtical image Time-series. The service is developed and maintained by CNRS/ITES (Strasbourg) with contribution of IGN/Matis (Marne-la-Vallée), ONERA (Palaiseau) and CNRS/ISTerre (Grenoble). The service allows the processing of optical image pairs for the monitoring of Earth surface deformation. 
 
-The service version **MPIC-OPT-ICE** is designed for monitoring glacier and ice sheet persistent motion. It enables the on-demand processing of Sentinel-2 image time series. It provides 1) a module for image matching of multiple image pairs susing pixel and sub-pixel image correlation or optical flow, 2) a module for image pairs geometrical correction and filtering, and 3) a module for the spatio-temporal analysis of surface motion. It builds on the MicMac (IGN/Matis; Rosu et al., 2015 [1]_), GeFolki (ONERA; Brigot et al., 2016 [2]_), CO-REGIS (CNRS/EOST; Stumpf et al., 2017 [3]_), MPIC (Stumpf et al., 2018 [4]_), TIO (CNRS/ISTerre; Bontemps et al., 2018 [5]_) and FMask (Texas Tech University; Qiu et al., 2019 [6]_) algorithms. The service is designed for the processing of a maximum of 100 images. Specific tools for ice monitoring are avalaible such as the possibility to focus the analysis on the extent of the glaciers based on the GLIMS database [7]_.
+The service version **MPIC-OPT-ICE** is designed for **monitoring glacier and ice sheet persistent motion**. It enables the on-demand processing of Sentinel-2 image time series. It provides 1) a module for image matching of multiple image pairs susing pixel and sub-pixel image correlation or optical flow, 2) a module for image pairs geometrical correction and filtering, and 3) a module for the spatio-temporal analysis of surface motion. It builds on the MicMac (IGN/Matis; Rosu et al., 2015 [1]_), GeFolki (ONERA; Brigot et al., 2016 [2]_), CO-REGIS (CNRS/EOST; Stumpf et al., 2017 [3]_), MPIC (Stumpf et al., 2018 [4]_), TIO (CNRS/ISTerre; Bontemps et al., 2018 [5]_) and FMask (Texas Tech University; Qiu et al., 2019 [6]_) algorithms. The service is designed for the processing of a maximum of 100 images. Specific tools for ice monitoring are avalaible such as the possibility to focus the analysis on the extent of the glaciers based on the GLIMS database [7]_.
 
 
 **EO sources**:
@@ -90,7 +90,7 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 
 .. Warning:: It is highly recommended to define small region of interrest for numerous input images in order to reduce the computational cost. For instance, the each Sentinel-2 contain 10980x10980 pixels (100 kmx 100 km). If the pairing network is set to compute 1000 pairs, it means that the correlation and the inversion have to be computed over 100 billion points that will take several days to weeks to process. It is recommended to set ROI of around 5000 x 5000 pixel (50 x 50 km).
 
-* **Image Matching parameters:** Two different algorithms are proposed for this step: **MicMac** developped by IGN/ENS and **GeFolki** *developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
+* **Image Matching parameters:** Two different algorithms are proposed for this step: **MicMac** developped by IGN/ENS and **GeFolki** developped by ONERA. Micmac is based on the correlation of two images in the spatial domain while GeFolki is optical flow algorithm.
 	* **MicMac Parameters:**
 		* **Window size:** Controls the size of the template used for matching. It controls the neighborhood around the central pixel. The minimum value is 1 (3x3 pixels) and the maximum value is 7 (15x15 pixels). The default value is *3* (7x7 pixels). A smaller window size allow better reconstructing small scale variations but can lead to more noise. Vice versa, larger window sizes lead to greater robustness against noise but smooth small scale details. For large scale motion such as co-seismic slip, we recommend to use large window sizes.
 		* **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
@@ -117,7 +117,7 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 	* **Correction: deramping** If set to *True*, the first geometric correction (as described in [4]_ ) is applied . It consists in estimating a planar function to correct the ramp commonly present in the displacement fields. It is highly recommended for any use case and is applied by default.
 	* **Correction: along-track destriping** If set to *True*, the second geometric correction (as described in [4]_ ) is applied . It consists in estimating a linear shift within each Sentinel-2 sensor stripe to correct the shift present in each stripes of the displacement fields. It is highly recommended for any use case and is applied by default.
 	* **Correction: along-track destriping value** The shift within each stripe can be estimated using the *mean* or the *median* of the displacement distribution. By default, the shift is estimated using the *mean* value.
-	* **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [6]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
+	* **Correction: across-track destriping value** This corrects the jitter undulation by filtering out the short wavelength undulation by a wavelet filter [10]_. This filter is directional and can affect the results by filtering out part of the signal. In the case of small object like glaciers, it is not recommended use it. By default, it is set to *False*.
 	* **Filtering displacement amplitude threshold:** Displacement with a magnitude larger than this value will be filtered out in each correlation pair. The unist in in *pixel*. By default, the threshold is 10 px (i.e. 100 m for Sentinel-2).
 	* **Filtering: Displacement direction:** If set to *True*, the displacement field is filter by analysing the direction of the displacement with respect to the direction of the slope. By default, it is set to *False*.
 	* **Maximum angle deviation for direction filtering:** Defines the maximum angle between the displacement direction and the slope direction. If the this angle is larger than this value, the displacement will be removed in the East-West and North-South displacement fields. The unit is in *degree* and is set to 45° by default.
@@ -142,7 +142,7 @@ The results are also accessible on this link: https://geohazards-tep.eu/t2api/sh
 
 .. image:: assets/tuto_results_mpicice.png
 
-* The second set of results provides the mean velocity (m/day) estimated from the linear regression of the TIO displacement times series. 
+* The second set of results provides the mean velocity (m/day) estimated from the linear regression of the TIO displacement time series. 
 
 .. image:: assets/tuto_results_mpicice_TIO.png
 
@@ -171,5 +171,5 @@ References
 .. [7] GLIMS and NSIDC (2005, updated 2020): Global Land Ice Measurements from Space glacier database. Compiled and made available by the international GLIMS community and the National Snow and Ice Data Center, Boulder CO, USA. https://doi.org/10.7265/N5V98602.
 .. [8] Yamazaki D., Ikeshima, D., Tawatari, R., Yamaguchi, T., O'Loughlin, F., Neal, J.-C., Sampson, C.C., Kanae, S., and Bates, P.D. (2017). A high accuracy map of global terrain elevations. Geophysical Research Letters, 44: 5844-5853, DOI:10.1002/2017GL072874
 .. [9] Copernicus Services Coordinated Interface / CSCI (2020). Copernicus DEM - Global and European Digital Elevation Model (COP-DEM). https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198
-.. [10] Provost, F., Michéa, D., Malet J.-P., Stumpf, A., Doin M.-P., Lacroix, P., Boissier, E., Pointal, E., Pacini F., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (subm. in Oct. 2020).
+.. [10] Provost, F., Michéa, D., Malet J.-P., Boissier, E., Pointal, E., Stumpf, A., Pacini F., Doin M.-P., Lacroix, P., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (submitted).
 
