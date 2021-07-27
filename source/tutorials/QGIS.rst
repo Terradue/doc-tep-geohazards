@@ -13,7 +13,7 @@ This service allows to export images/results generated on the GEP as a high reso
 
 **EO sources supported**
 
-This service supports as input the main result of the other service, such as for example: Sentinel-3 SLSTR composite (https://recast.terradue.com/t2api/search/ldonnini/_results/workflows/geohazards_tep_ewf_s3_slstr_composites_ewf_s3_slstr_composites_0_11/run/32540556-62c0-11ea-a849-0242ac110024/0027647-190318164522056-oozie-oozi-W?uid=5D21A2EC2403A52B0F680F9FA81B7AC3FA896767), where the main map is the pixels that represent the fire. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
+This service supports as input the main result of the other service, such as for example: Sentinel-3 SLSTR composite (https://recast.terradue.com/t2api/search/ldonnini/_results/workflows/geohazards_tep_ewf_s3_slstr_composites_ewf_s3_slstr_composites_0_11/run/32540556-62c0-11ea-a849-0242ac110024/0027647-190318164522056-oozie-oozi-W?uid=5D21A2EC2403A52B0F680F9FA81B7AC3FA896767), where the main map is the pixels that represent a False Colour Infrared RGB composite. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
 
 **Output specifications**
 
