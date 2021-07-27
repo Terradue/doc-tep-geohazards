@@ -90,7 +90,7 @@ The input parameters to provide are:
   
 .. figure:: assets/QGIS_2.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
         
 Once downloaded and extracted, the QGIS project can be opened with QGIS.
@@ -102,14 +102,14 @@ Run the job
 
 .. figure:: assets/QGIS_2.1.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 * After about 20 minutes, see the Successful Job:
 
 .. figure:: assets/QGIS_2.2.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 
