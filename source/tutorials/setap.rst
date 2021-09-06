@@ -22,19 +22,18 @@ different ancillary data sources such as IGS and ECMWF.
 .. _data-sources-label:
 **EO sources supported**:
 
-:Sentinel-1 SLC:
-    standard Sentinel-1 L1A products
-:Sentinel-1 Annotations:
-    Sentinel-1 L1A products containing only the XML annotations.
-    The information contained in XML annotation is the only one used by
-    the S1-ETAD processor.
-    The advantage of using S1-Annotation products is that they have a size
-    (in MB) by far smaller than standard ones so they can be downloaded in
-    a faster.
+* **Sentinel-1 SLC**: standard Sentinel-1 L1A products
+* **Sentinel-1 Annotations**: Sentinel-1 L1A products containing only the
+  XML annotations.
+  The information contained in XML annotation is the only one used by
+  the S1-ETAD processor.
+  The advantage of using S1-Annotation products is that they have a size
+  (in MB) by far smaller than standard ones so they can be downloaded in
+  a faster.
 
-    .. TODO: check the note below with @hervé
-    .. .. note:: if the requested product is not online you could get an error.
-    .. .. seealso:: FAQ below
+  .. TODO: check the note below with @hervé
+  .. .. note:: if the requested product is not online you could get an error.
+  .. .. seealso:: FAQ below
 
 **Output specifications**
 
