@@ -1,5 +1,5 @@
-G-POD SBAS Stripmap Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SETAP Service
+~~~~~~~~~~~~~
 
 .. image:: assets/tuto_setap_icon.png
 
@@ -223,6 +223,7 @@ Run the job
     acquisition date, maximum number of jobs per user?
 :A1:
     Main service limitations are listed below:
+
     * Geographic limitation: none
     * Temporal limitation:
       - it is not possible to generate S1-ETAD products for dates prior to
