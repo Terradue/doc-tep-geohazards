@@ -226,10 +226,12 @@ Run the job
 
     * Geographic limitation: none
     * Temporal limitation:
+
       - it is not possible to generate S1-ETAD products for dates prior to
         27th of June 2016
       - the generation of S1-ETAD products can happen only 3 weeks after
         the acquisition date of the corresponding SLC product (POE orbits)
+
     * Product type: the S1-ETAD Service only supports S1-SLC products
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
       EW is not officially supported at the moment, if you need it please
