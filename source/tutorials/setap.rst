@@ -159,7 +159,7 @@ Please note that all the remaining parameters have a default value that
 should be perfectly fine for practically all cases.
 Nevertheless it is possible to tweak them for very specific purposes.
 
-:Global TRO data:
+* **Global TRO data**:
     If set to *true* this parameter specifies that the global ECMWF dataset
     have to be used for troposphere computation.
     By default the value of this parameter is set to *false* to indicate
@@ -168,11 +168,11 @@ Nevertheless it is possible to tweak them for very specific purposes.
     In this case the data download is typically by far faster.
     The computation of the data region covering the requested input products
     is performed automatically by the application.
-:DEM Margin:
+* **DEM Margin**:
     Tis parameter can be used to tweak the amount of margin to be applied to
     the S1 data footprint when the Copernicus DEM is ingested for the
     processing.
-:Orbit Type:
+* **Orbit Type**:
     By default the *Orbit type* parameter is set to *AUX_POEORB* meaning that
     orbit with the maximum available accuracy are used for the computation.
     *Precise Orbits* are typically available 20 days after the S1 data
