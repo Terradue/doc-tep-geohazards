@@ -132,7 +132,7 @@ In this case only one S1-ETAD product is generated.
 
 .. rubric:: Example 2
 
-The job is started with 35 S1-SLC inout products belonging to an
+The job is started with 35 S1-SLC input products belonging to an
 interferometric stack (single slice).
 
 In this case each input product belongs to a different data-take and the
@@ -141,7 +141,7 @@ service generates 35 S1-ETAD products.
 
 .. rubric:: Example 3
 
-The job is started with 30 S1-SLC inout products belonging to an
+The job is started with 30 S1-SLC input products belonging to an
 interferometric stack covering a wide area.
 3 SLC slices are necessary to cover the requested area.
 
@@ -153,7 +153,7 @@ Fill the parameter values
 =========================
 
 Once the *Product (url) list* field is filled with the selected data, it is
-possible to set remaining parameters.
+possible to set the remaining parameters.
 
 .. figure:: assets/tuto_setap_4.png
    :figclass: align-center
@@ -183,7 +183,7 @@ Nevertheless it is possible to tweak them for very specific purposes.
     *Precise Orbits* are typically available 20 days after the S1 data
     acquisition.
 
-    It is strongly recommended to not change this setting.
+    It is strongly recommended not to change this setting.
 
     *Orbit type* parameter can also be set to *AUX_RESORB* that have a
     lower nominal accuracy w.r.t. to *AUX_POEORB*, but are typically available
@@ -233,8 +233,8 @@ Run the job
 
       - it is not possible to generate S1-ETAD products for dates prior to
         27th of June 2016
-      - the generation of S1-ETAD products can happen only 3 weeks after
-        the acquisition date of the corresponding SLC product (POE orbits)
+      - the generation of S1-ETAD products can only happen 3 weeks after
+        the acquisition date of the corresponding SLC product (POE orbits are necessary)
 
     * Product type: the S1-ETAD Service only supports S1-SLC products
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
