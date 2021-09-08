@@ -157,7 +157,7 @@ possible to set remaining parameters.
 
 .. figure:: assets/tuto_setap_4.png
    :figclass: align-center
-   :width: 750px
+   :width: 350px
    :align: center
 
 Please note that all the remaining parameters have a default value that
