@@ -155,6 +155,11 @@ Fill the parameter values
 Once the *Product (url) list* field is filled with the selected data, it is
 possible to set remaining parameters.
 
+.. figure:: assets/tuto_setap_4.png
+   :figclass: align-center
+   :width: 750px
+   :align: center
+
 Please note that all the remaining parameters have a default value that
 should be perfectly fine for practically all cases.
 Nevertheless it is possible to tweak them for very specific purposes.
@@ -196,7 +201,7 @@ Run the job
 * Click on the button "Run Job" at the bottom of the SETAP processor tab,
   and monitor the progress of the running Job:
 
-.. figure:: assets/tuto_setap_4.png
+.. figure:: assets/tuto_setap_5.png
    :figclass: align-center
    :width: 750px
    :align: center
@@ -209,7 +214,7 @@ Run the job
   Please note that the browsing layer of the S1-ETAD product, consisting in
   a KMZ file, is also published separately, to allow a quicker download.
 
-.. figure:: assets/tuto_setap_5.png
+.. figure:: assets/tuto_setap_6.png
    :figclass: align-center
    :width: 750px
    :align: center
@@ -260,7 +265,3 @@ Run the job
     processing on GEP.
     The product generation have to be triggered by the user for any date
     compatible tithe the limitations described in **A1**.
-
-
-.. .. TODO:
-    * logo
