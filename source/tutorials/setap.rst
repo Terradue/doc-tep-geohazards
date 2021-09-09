@@ -236,7 +236,7 @@ operations is also available.
 In general all main information and news about the S1-ETAD product are
 collected in the `Product Page`_ on the ESA web site.
 
-.. _ `Product Definition Document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-Product-Definition-Document.pdf
+.. _`Product Definition Document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-Product-Definition-Document.pdf
 .. _`Algorithm Theoretical Baseline Document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Algorithm-Technical-Baseline-Document.pdf
 .. _`Python API`: https://gitlab.com/s1-etad/s1-etad
 .. _`Product Page`: https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1/data-products/etad-dataset
@@ -292,7 +292,7 @@ collected in the `Product Page`_ on the ESA web site.
     The product generation have to be triggered by the user for any date
     compatible with the the limitations described in **A1**.
 :Q4:
-    How to apply ETAD corrections to a Se SLC product?
+    How to apply ETAD corrections to an S1 SLC product?
 :A4:
     Basic information about how to apply ETAD corrections are provided in
     the `Product Definition Document`_ (see also the
