@@ -39,7 +39,7 @@ different ancillary data sources such as IGS and ECMWF.
 * `Format specification document`_ of the output auxiliary product containing the
   corrections layers.
 
-.. _Format specification document: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Product-Format-Specification.pdf
+.. _`Format specification document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Product-Format-Specification.pdf
 
 -----
 
@@ -55,7 +55,7 @@ The main user actions are the following:
 * select the desired data source ("Sentinel-1 SLC" or "Sentinel-1 Annotations")
 * select the input SAR SLC data to be processed
 * optionally set input parameters for processing (default values shall be
-  fine for all use cases)
+  fine for all use cases). See also the `Fill the parameter values`_ section)
 * obtain S1-ETAD products.
 
 
@@ -84,7 +84,8 @@ Select the processing
 Select the files to process
 ===========================
 
-* Select the data source (see :ref:`data-sources-label`).
+* Select the data source (see also the
+  :ref:`EO sources supported<data-sources-label>` section).
 
 .. figure:: assets/tuto_setap_2.png
    :figclass: align-center
@@ -218,6 +219,28 @@ Run the job
    :width: 750px
    :align: center
 
+-----
+
+.. _how-to-use-label:
+**How to use the S1-ETAD products**
+
+Basic information on the S1-ETAD product and how to use it are provided in
+the `Product Definition Document`_.
+Details on the file format and on the algorithms used to generaate it can
+be found in the `Format specification document`_ and the
+`Algorithm Theoretical Baseline Document`_ respectively.
+
+A `Python API`_ that allows to easily access the product and perform basic
+operations is also available.
+
+In general all main information and news about the S1-ETAD product are
+collected in the `Product Page`_ on the ESA web site.
+
+.. _ `Product Definition Document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-Product-Definition-Document.pdf
+.. _`Algorithm Theoretical Baseline Document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Algorithm-Technical-Baseline-Document.pdf
+.. _`Python API`: https://gitlab.com/s1-etad/s1-etad
+.. _`Product Page`: https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1/data-products/etad-dataset
+
 
 **FAQ**
 
@@ -233,7 +256,14 @@ Run the job
       - it is not possible to generate S1-ETAD products for dates prior to
         27th of June 2016
       - the generation of S1-ETAD products can only happen 3 weeks after
-        the acquisition date of the corresponding SLC product (POE orbits are necessary)
+        the acquisition date of the corresponding SLC product.
+        
+        This limitation is due to the availability of POE orbits.
+        
+        In principle it is also possible to use "Restituted Orbits" (`AUX_RESORB`),
+        as descrbed in the `Fill the parameter values`_ section.
+        Restituted orbits are available in a couple of days after the acquisition but
+        support for them in the GEP SETAP service is considerd "experimental".
 
     * Product type: the S1-ETAD Service only supports S1-SLC products
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
@@ -261,3 +291,9 @@ Run the job
     processing on GEP.
     The product generation have to be triggered by the user for any date
     compatible with the the limitations described in **A1**.
+:Q4:
+    How to apply ETAD corrections to a Se SLC product?
+:A4:
+    Basic information about how to apply ETAD corrections are provided in
+    the `Product Definition Document`_ (see also the
+    :ref:`How to use the S1-ETAD products<how-to-use-label>` section).
