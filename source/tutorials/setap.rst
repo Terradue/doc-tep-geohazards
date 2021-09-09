@@ -28,8 +28,7 @@ different ancillary data sources such as IGS and ECMWF.
   The information contained in XML annotation is the only one used by
   the S1-ETAD processor.
   The advantage of using S1-Annotation products is that they have a size
-  (in MB) by far smaller than standard ones so they can be downloaded in
-  a faster.
+  (in MB) by far smaller than standard ones so they can be downloaded faster.
 
   .. TODO: check the note below with @hervé
   .. .. note:: if the requested product is not online you could get an error.
@@ -37,14 +36,14 @@ different ancillary data sources such as IGS and ECMWF.
 
 **Output specifications**
 
-* `Format specification document`_ of the output auxiliary product containing
+* `Format specification document`_ of the output auxiliary product containing the
   corrections layers.
 
 .. _Format specification document: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Product-Format-Specification.pdf
 
 -----
 
-This tutorial describes how to submit a job for the SATAP service to obtain
+This tutorial describes how to submit a job for the SETAP service to obtain
 one or more S1-ETAD products.
 
 The tutorial is addressed to users already familiar with Geo-hazards thematic
@@ -113,7 +112,7 @@ into account that the processing itself is data-take based.
 Input products (S1 slices) are grouped by the SETAP service according to their
 data-take ID.
 Each group corresponds to a complete or partial acquisition data-take.
-Groups are precessed independently (and concurrently) to generate a single
+Groups are processed independently (and concurrently) to generate a single
 S1-ETAD product per group.
 
 Please also consider that, currently, the maximum number of products per
@@ -206,7 +205,7 @@ Run the job
    :width: 750px
    :align: center
 
-* The Job can take long time to execute depending on the request ad on the
+* The Job can take long time to execute depending on the request and on the
   platform load (typically form 2 to 20 hours).
   When the processing is complete the status is set as "Successful Job"
 
@@ -261,4 +260,4 @@ Run the job
     NRT product generation is not supported, also, there is no systematic
     processing on GEP.
     The product generation have to be triggered by the user for any date
-    compatible tithe the limitations described in **A1**.
+    compatible with the the limitations described in **A1**.
