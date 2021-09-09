@@ -240,9 +240,6 @@ Run the job
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
       EW is not officially supported at the moment, if you need it please
       contact s1-etad@esa.int
-    * (For users of the S1-ETAD Pilot Study) Maximum number of input SLC
-      slices per user: 100
-      (users needing a larger quota can send their request to s1-etad@esa.int)
 
       .. TODO: limitations of the DSR end-point (see also above)?
 
