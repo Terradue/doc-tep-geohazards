@@ -173,7 +173,7 @@ Nevertheless it is possible to tweak them for very specific purposes.
     The computation of the data region covering the requested input products
     is performed automatically by the application.
 * **DEM Margin**:
-    Tis parameter can be used to tweak the amount of margin to be applied to
+    This parameter can be used to tweak the amount of margin to be applied to
     the S1 data footprint when the Copernicus DEM is ingested for the
     processing.
 * **Orbit Type**:
