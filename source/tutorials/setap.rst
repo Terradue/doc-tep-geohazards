@@ -109,18 +109,22 @@ Select the files to process
 
 
 During the selection of the input data for your processing, take
-into account that the processing itself is based on the geometry of a full Sentinel-1 data-take.
-Input products (S1 slices) are grouped by the SETAP service according to their
-data-take ID.
-Each group corresponds to a complete or partial acquisition data-take.
-Groups are processed independently (and concurrently) to generate a single
-S1-ETAD product per group.
+into account that, internally, the processing itself is organized as follows:
+
+* input products (S1 slices) are grouped by the SETAP service according to
+  their `data-take`_ ID
+* each group corresponds to a complete or partial acquisition data-take
+* groups are processed independently (and concurrently) to generate a single
+  S1-ETAD product per group (i.e. one per data-take).
 
 Please also consider that, currently, the maximum number of products per
 job is 35.
 To process a larger number of input products, it is possible to run multiple
 jobs but it is strongly recommended to feed all the products belonging to a
 same data-take to the same job.
+
+.. _`data-take`: https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-1-sar/appendices/glossary
+
 
 .. rubric:: Example 1
 
