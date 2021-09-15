@@ -36,15 +36,15 @@ different ancillary data sources such as IGS and ECMWF.
 
 **Output specifications**
 
-* `Format specification document`_ of the output auxiliary product containing the
-  corrections layers.
+* `Format specification document`_ of the output auxiliary product containing
+  the corrections layers.
 
 .. _`Format specification document`: https://sentinels.copernicus.eu/documents/247904/4629150/Sentinel-1-ETAD-Product-Format-Specification.pdf
 
 -----
 
-This tutorial describes how to submit a processing job for the SETAP service to obtain
-one or more S1-ETAD products.
+This tutorial describes how to submit a processing job for the SETAP service
+to obtain one or more S1-ETAD products.
 
 The tutorial is addressed to users already familiar with Geohazards thematic
 Exploitation Platform (GEP), and gives some hints and recommendation
@@ -260,10 +260,12 @@ collected in the `Product Page`_ on the ESA web site.
         
         This limitation is due to the availability of POE orbits.
         
-        In principle it is also possible to use "Restituted Orbits" (`AUX_RESORB`),
-        as described in the `Fill the parameter values`_ section.
-        Restituted orbits are available in a couple of days after the acquisition but
-        support for them in the GEP SETAP service is considerd "experimental".
+        In principle it is also possible to use "Restituted Orbits"
+        (`AUX_RESORB`), as described in the `Fill the parameter values`_
+        section.
+        Restituted orbits are available in a couple of days after the
+        acquisition but support for them in the GEP SETAP service is
+        considerd "experimental".
 
     * Product type: the S1-ETAD Service only supports S1-SLC products
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
