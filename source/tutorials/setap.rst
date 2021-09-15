@@ -15,7 +15,7 @@ delays, the solid Earth tidal deformation, and the Sentinel-1 system specific
 effects related to the IPF SAR processor (Doppler shift, accurate bi-static
 correction and height dependent FM-rate mismatch).
 
-To generate such corrections, the service uses precise information from
+To generate such corrections, the SETAP service uses precise information from
 different ancillary data sources such as IGS and ECMWF.
 
 
@@ -43,11 +43,11 @@ different ancillary data sources such as IGS and ECMWF.
 
 -----
 
-This tutorial describes how to submit a job for the SETAP service to obtain
+This tutorial describes how to submit a processing job for the SETAP service to obtain
 one or more S1-ETAD products.
 
-The tutorial is addressed to users already familiar with Geo-hazards thematic
-Exploitation Platform (GEP) processing, and gives some hints and recommendation
+The tutorial is addressed to users already familiar with Geohazards thematic
+Exploitation Platform (GEP), and gives some hints and recommendation
 for the best service usage experience.
 
 The main user actions are the following:
@@ -108,8 +108,8 @@ Select the files to process
    :align: center
 
 
-During the selection the input data for your processing, it have to be taken
-into account that the processing itself is data-take based.
+During the selection of the input data for your processing, take
+into account that the processing itself is based on the geometry of a full Sentinel-1 data-take.
 Input products (S1 slices) are grouped by the SETAP service according to their
 data-take ID.
 Each group corresponds to a complete or partial acquisition data-take.
@@ -118,8 +118,8 @@ S1-ETAD product per group.
 
 Please also consider that, currently, the maximum number of products per
 job is 35.
-To process a larger number of input product it is possible to run multiple
-jobs but it is strongly recommended to feed al products belonging to the
+To process a larger number of input products, it is possible to run multiple
+jobs but it is strongly recommended to feed all the products belonging to a
 same data-take to the same job.
 
 .. rubric:: Example 1
@@ -261,7 +261,7 @@ collected in the `Product Page`_ on the ESA web site.
         This limitation is due to the availability of POE orbits.
         
         In principle it is also possible to use "Restituted Orbits" (`AUX_RESORB`),
-        as descrbed in the `Fill the parameter values`_ section.
+        as described in the `Fill the parameter values`_ section.
         Restituted orbits are available in a couple of days after the acquisition but
         support for them in the GEP SETAP service is considerd "experimental".
 
@@ -280,7 +280,7 @@ collected in the `Product Page`_ on the ESA web site.
     The service is global. The area of interest for data selection can be
     specified by the user by means of the Web UI (see
     :doc:`Discover data<../community-guide/data>`).
-    If the user already have a KML file for its Area Of Interest (AOI),
+    If the user already has a KML file for its Area Of Interest (AOI),
     it can be uploaded in the Web UI to select the AOI (see the
     "Spatial Filters" section in :doc:`../community-guide/platform/geobrowser`).
 :Q3:
