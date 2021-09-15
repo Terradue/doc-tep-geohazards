@@ -61,7 +61,7 @@ directed to a page confirming the activation of your account, as indicated by Fi
 	
 	Figure 5: Confirmation of Account Activation
 
-
+.. _community-guide-user-sign-in-label:
 Sign-in
 -------
 

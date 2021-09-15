@@ -62,8 +62,8 @@ The main user actions are the following:
 Select the processing
 =====================
 
-* Sign-in on the Portal https://geohazards-tep.eu/ (see guidance
-  :doc:`user <../community-guide/user>` section)
+* Sign-in on the Portal https://geohazards-tep.eu/ (see the
+  :ref:`community-guide-user-sign-in-label` section for guidance)
 
 * Access the Geobrowser: https://geohazards-tep.eu/geobrowser/?id=esa-setap
 
@@ -85,7 +85,7 @@ Select the files to process
 ===========================
 
 * Select the data source (see also the
-  :ref:`EO sources supported<data-sources-label>` section).
+  :ref:`community-guide-platform-geobrowser-context-menu-label` section).
 
 .. figure:: assets/tuto_setap_2.png
    :figclass: align-center
@@ -94,8 +94,10 @@ Select the files to process
 
 
 * Filter and select data for your job as described in the
-  :doc:`../community-guide/platform/geobrowser` documentation and in the
-  :doc:`Data discovery<../community-guide/data>` section.
+  :ref:`community-guide-platform-geobrowser-search-panel-label` documentation
+  and in the
+  :ref:`community-guide-platform-geobrowser-intelligent-map-tools-label`
+  section.
 
 * Insert the selected data into the *Product (url) list* field in the
   application panel on the right of the Web UI.
