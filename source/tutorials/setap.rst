@@ -306,7 +306,7 @@ period of interest, sending requests as follows:
 * the study area(s) you would work on
 * the time periods interest (Sentinel-1 acquisitions dates span)
 
-Then, send it to contact@geohazards-tep.eu with subject:
+Then, send it to s1-etad@esa.int with subject:
 
   Study requirements for optimised data access from the SETAP processing service
 
