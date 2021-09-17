@@ -493,7 +493,7 @@ SNAPPING ESRI shapefiles, containing only mean velocities, can be directly read 
         :width: 750px
         :align: center
         
-5 Service Advantages and Processing Restrictions
+5. Service Advantages and Processing Restrictions
 =====================
 
 Below mentioned service advantages and restrictions refer to the implementation on the GEP platform and not to the PSI technique itself. In principle, SNAPPING service, being a PSI chain, is not adequate for the investigation of large magnitude abrupt motion (e.g. earthquakes) or regions of high motion gradients (e.g. fast-moving landslides). 
@@ -514,7 +514,7 @@ Current restriction of SNAPPING service
 - SNAPPING is a medium resolution service. PS point locations, especially over densely urbanized areas, might not correspond to the actual location of the human structures. Each point measurement is representing the average motion of the surrounding 100x100 meters area. 
 - The user-defined AOI should be larger than a single Sentinel-1 TOPS burst along the satellite flight direction (roughly 20 km in N-S) for the processing to proceed. 
 
-6 Feedbacks
+6. Feedbacks
 =====================
 
 Users are kindly invited to report any issue and problem encountered during the use of the SNAPPING service:
@@ -523,7 +523,7 @@ Users are kindly invited to report any issue and problem encountered during the 
 
 Suggestions and comments about the GEP service delivery are warmly welcomed on **contact@geohazards-tep.eu** to keep the service delivery on GEP as much as possible appealing, effective and efficient.
 
-7 Terms and Conditions
+7. Terms and Conditions
 =====================
 
 **IPR** | The Intellectual Property Right (IPR) of the SNAPPING service is with the SNAPPING development team, if not differently specified.
