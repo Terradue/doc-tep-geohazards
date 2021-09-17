@@ -105,10 +105,10 @@ Input SAR data selection must be carried out with particular care since a wrong 
 - The user must select **only images acquired along the same track**.
 - The system automatically discards duplicated (reprocessed) images and correctly assembles image slices acquired on the same date belonging to a common relative orbit. In the case of reprocessed images, the newest one is selected by the processor.
 
+
 | :memo: **NOTE**                 
 | To avoid processing failures users are prompted to select at least 20-25 dates for time series analysis. For reliable surface motion measurements, especially for regions exhibiting low motion rates, it is strongly recommended to expand the observation period to a minimum of three (3) years. 
 Although the service is not affected by temporal gaps in the data set selection, it is suggested to avoid large temporal gaps as they may introduce uncertainties, especially over low coherence areas and for regions of high surface motion rates (e.g. landslides). The period corresponding to the temporal gap motion is assumed as linear. 
-
 
 
 For selecting a data set to process please follow the steps below:
@@ -131,6 +131,7 @@ For selecting a data set to process please follow the steps below:
 | An accepted WKT should have the following format, 
 POLYGON((LonMIN LatMIN, LonMIN LatMAX, LonMAX LatMAX, LonMAX LatMIN, LonMIN LatMIN))
 
+
 - Insert values in the various fields of the Search panel to constrain the search based on the required period of observation, platform etc. Press the Search button at the lower part of the panel. Search results are automatically shown in the Results panel. 
 
 .. figure:: assets/snapping_ifg_5.png
@@ -143,6 +144,7 @@ POLYGON((LonMIN LatMIN, LonMIN LatMAX, LonMAX LatMAX, LonMAX LatMIN, LonMIN LatM
         :width: 750px
         :align: center
         
+	
 - Users can store their search results for later use by adding them to the Features Basket, then saving them as a Data Package. 
 
 | :memo: **NOTE**
@@ -156,15 +158,15 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 
 - Set the **Job Title** with a meaningful name (e.g. indicative of the service, the data set and the area of interest).
 
-SNAPPING IFG Thessaloniki S1 A102 201504-202012
+	SNAPPING IFG Thessaloniki S1 A102 201504-202012
 
 - Push the select all button in the Results panel or Features Basket panel. Drag and drop the selected data within the **Input References** field on the right panel. Links to the images will be automatically inserted and numbered. Repeat for all products on the different pages of the Results panel (each page contains 50 products). 
 
-https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20160123T162334_20160123T162401_009624_00E049_893F
+	https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20160123T162334_20160123T162401_009624_00E049_893F
  
-https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20151230T162359_20151230T162427_009274_00D62E_E310
+	https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20151230T162359_20151230T162427_009274_00D62E_E310
  
-https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20151230T162335_20151230T162401_009274_00D62E_7B7E
+	https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_20151230T162335_20151230T162401_009274_00D62E_7B7E
 
 .. figure:: assets/snapping_ifg_7.png
 	:figclass: align-center
@@ -175,29 +177,35 @@ https://catalog.terradue.com/sentinel1/search?format=json&uid=S1A_IW_SLC__1SDV_2
 	:figclass: align-center
         :width: 750px
         :align: center
-        
+     
+     
 - Set the **Interferometric Stack** with a meaningful name (e.g. indicative of the service, the data set and the area of interest).
 
-thessaloniki_snapping_s1_a102_201504_202012
+	thessaloniki_snapping_s1_a102_201504_202012
+	
 
 | :memo: **NOTE**
 | Avoid inserting special characters in the Interferometric Stack name (e.g. instead of spaces “ ” please insert backslashes “_” as a separator between words).
 
+
 - Click on the select button in the **Area of Interest** field and select the AOI option to automatically insert based on the region defined in the geobrowser
+
+	POLYGON((22.456 40.208,22.456 40.938,23.28 40.938,23.28 40.208,22.456 40.208))
 
 .. figure:: assets/snapping_ifg_9.png
 	:figclass: align-center
-        :width: 750px
+        :width: 150px
         :align: center
-
-POLYGON((22.456 40.208,22.456 40.938,23.28 40.938,23.28 40.208,22.456 40.208))
+	
 
 | :memo: **NOTE**
 | You may directly insert the AOI in WKT format
 
+
 - Fill the Input DEM parameter according to the heights to be used during interferometric processing:
 
-SRTM 3Sec
+	SRTM 3Sec
+
 
 | :memo: **NOTE**
 | Currently, only SRTM 3 arc-second is available for processing
@@ -208,8 +216,10 @@ SRTM 3Sec
 
 Following the selection of images and definition of processing parameters, the launch of the service is done by clicking on the button Run Job at the bottom of the SNAPPING IFG processor tab and monitor the progress of the running Job.
 
+
 | :memo: **NOTE**
 | The duration of the job depends mainly on the extent of the area of interest, the percentage of water bodies within the AOI, the number of the acquisition dates processed and the platform allocated resources. 
+
 
 | :memo: **NOTE**
 | The progress bar of the SNAPPING IFG service indicates the preparation of the trigger for processing of Sentinel-1 image pairs and not the actual completion of the submitted job. Please check Section 2.5 for more details on the monitoring of interferogram stacks progress.
@@ -271,9 +281,7 @@ The information provided under **Interferogram stacks monitoring** tab refers to
 	:figclass: align-center
         :width: 750px
         :align: center
-        
-... *continued*
-        
+               
 .. figure:: assets/snapping_psi_3.png
 	:figclass: align-center
         :width: 750px
@@ -297,48 +305,54 @@ Please note that parameters controlling the extent of the processing **Area of I
 
 - Set the **Job Title** with a meaningful name (e.g. indicative of the service, the data set and the area of interest). 
 
-SNAPPING PSI Thessaloniki S1 A102 201504-202012
+	SNAPPING PSI Thessaloniki S1 A102 201504-202012
 
 - Set manually the **Interferometric Stack** following the same name provided in the SNAPPING IFG part. 
 
-thessaloniki_snapping_s1_a102_201504_202012
+	thessaloniki_snapping_s1_a102_201504_202012
+	
 
 | :memo: **NOTE**
 | It is critical to keep the same name for the Interferometric Stack in both SNAPPING IFG and SNAPPING PSI services. 
 
 - Set the **Amplitude Dispersion** value used for the detection of Point Scatterers (default 0.35)
 
-0.35
+	0.35
+	
 
 | :memo: **NOTE**
 | By increasing the value of the amplitude dispersion more point candidates will be accepted as Persistent Scatterers (PS) targets. However, care should be taken to avoid the inclusion of poor quality points since this might affect the PSI solution. A significant decrease of amplitude dispersion value shall reduce the number of points in the PSI results. 
 
 - Set the **Range Patch Number** value to define the number of patches in the range direction (default 4).
 
-4
+	4
 
 - Set the **Azimuth Patch Number** value to define the number of patches in the azimuth direction (default 4).
 
-4
+	4
+	
 
 | :memo: **NOTE**
 | By increasing the number of range and azimuth patches higher parallelization is achieved, beneficial in reducing the processing time of a wide area. By setting both patch numbers to 1, the entire AOI is processed as a single patch.  
 
 - Set the **Reference Radius** value to define radius (in meters) around the reference point coordinates (default Inf). 
 
-Inf
+	Inf
+	
 
 | :memo: **NOTE**
 | By using the default value (set to infinite), the entire area is considered when referencing the PSI measurements. In that case, the average motion over the whole AOI is set to zero. This avoids dependencies to a single point and mitigates the effect of the reference point atmospheric noise. Please note that if the **Reference Radius** is kept to default, the selection of reference point coordinates (Reference Lon and Reference Lat parameters) is not affecting the PSI results. 
 If a radius value is inserted (in meters), processing shall succeed only when at least one PS point is identified within the defined extent. 
 
+
 - Set the **Reference Lon** value to define the longitude centre coordinates of a specific reference point to be considered in the interferometric processing (optional; in decimal degrees).
 
-0
+	0
 
 - Set the **Reference Lat** value to define the latitude centre coordinates of a specific reference point to be considered in the interferometric processing (optional; in decimal degrees). 
 
-0
+	0
+	
 
 | :memo: **NOTE**
 | **Reference Lon** and **Reference Lat** are the longitude and latitude coordinates (in decimal degrees) of the reference point for the SNAPPING PSI measurements. It should be located in a relatively stable area or its deformation behaviour shall be known. In any case, the user should verify that input **longitude and latitude coordinates are on land and included within defined AOI**. As a suggestion, urbanized areas are usually well suited to locate the reference point. It is in general good practice to put the reference point in the deformation far field. 
@@ -346,10 +360,12 @@ By using the default value of zero for both coordinates, no reference point is c
 
 - Set the **Compensation for SCLA Error** option to estimate and subtract the reference atmospheric, orbital and DEM related errors (optional; Y or N). 
 
-Y
+	Y
 
 - Set the **Atmospheric filtering** option to apply atmospheric spatio-temporal filtering of the time series (optional; Y or N). 
-Y
+
+	Y
+	
 
 | :memo: **NOTE**
 | It is highly recommended to apply both SCLA Error removal and atmospheric filtering for optimal PSI time series results. Please note that atmospheric filtering is fixed to a temporal window of one year. 
@@ -396,11 +412,11 @@ To download the SNAPPING processing results once the Job is completed just doubl
         
 **Conventions and assumptions**
 
-  Results are provided in the satellite Line of Sight (LoS). Positive values indicate that the target is uplifting or moves toward the satellite, while negative values subsidence or motion away from the satellite. 
+Results are provided in the satellite Line of Sight (LoS). Positive values indicate that the target is uplifting or moves toward the satellite, while negative values subsidence or motion away from the satellite. 
 
 **Published Results**
 
-  The main outputs of the SNAPPING service are the following:
+The main outputs of the SNAPPING service are the following:
 
 - **Metadata (Properties)**
 
@@ -441,11 +457,11 @@ Provided attributes within the CSV file consist of:
         :width: 750px
         :align: center
 
-File name convention is as follows:
+- File name convention is as follows:
 
-snapping_psi_<Job_ID>.csv
+	snapping_psi_<Job_ID>.csv
 
-where: <Job_ID> : is the job name as provided by the user
+	where: <Job_ID> : is the job name as provided by the user
 
 
 A typical name should contain an identifier for the AOI, the satellite track and the period of observation (e.g. snapping_psi_thessaloniki_a102_201504_202012.csv).
