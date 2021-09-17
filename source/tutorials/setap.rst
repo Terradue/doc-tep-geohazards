@@ -298,7 +298,7 @@ In terms of performances of a processing job, SETAP will be the fastest when
 accessing pre-cached input products, a little bit slower if products not yet
 in cache can be accessed from the Copernicus SciHub, and quite slow for older
 products only available from other remote data repositories
-(e.g. the Alaska Science Facility) connected to GEP.
+(e.g. the Alaska Satellite Facility) connected to GEP.
 
 Users can provide clear information about their area of interest and time
 period of interest, sending requests as follows:
