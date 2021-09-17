@@ -28,22 +28,18 @@ I already have an account at Terradue
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Geohazards TEP portal
-
-2. Click on **Sign-in**, you are automatically redirected to the Terradue signin page.
+1. Click on **Sign-in**, you are automatically redirected to the Terradue signin page.
 
 .. figure:: ../includes/user-signin-2.png
 	:align: center
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Terradue signin page
+1. Log in using your Terradue credentials or, use your credentials from a trusted Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
 
-3. Log in using your Terradue credentials or, use your credentials from a trusted Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
+2. You are logged on GEP
 
-4. You are logged on GEP
-
-5. If not done, you can configure your account.
+3. If not done, you can configure your account.
 
 I don't have yet an account at Terradue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,16 +54,12 @@ Create a new account from scratch
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Geohazards TEP portal
-
-2. Click on **Register**, you are automatically redirected to the Terradue platform registration page. 
+1. Click on **Register**, you are automatically redirected to the Terradue platform registration page. 
 
 .. figure:: ../includes/user-signin-3.png
 	:align: center
 	:width: 80%
 	:figclass: img-container-border
-
-	Figure 1: The Geohazards TEP portal
 
 3. Fill-in all required information and click on **Create my account**. An email is sent, asking to confirm your email address.
 
@@ -85,13 +77,11 @@ Create a new account from scratch
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Terradue platform signin page
+1. Log in using your Terradue credentials.
 
-7. Log in using your Terradue credentials.
+2. You are logged in on GEP
 
-8. You are logged in on GEP
-
-9. If not done, you can configure your account.
+3. If not done, you can configure your account.
 
 Create your account from a trusted Identity Provider
 `````````````````````````````````````````````````````
@@ -102,21 +92,17 @@ Create your account from a trusted Identity Provider
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Geohazards TEP portal
-
-2. Click on **Sign-in**, you are automatically redirected to the Terradue platform signin page.
+1. Click on **Sign-in**, you are automatically redirected to the Terradue platform signin page.
 
 .. figure:: ../includes/user-signin-2.png
 	:align: center
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Terradue platform signin page
-
-3. Click on the button corresponding to your external Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
-4. Your account is automatically created on Terradue Cloud Platform.
-5. You are logged in on GEP
-6. If not done, you can configure your account.
+1. Click on the button corresponding to your external Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
+2. Your account is automatically created on Terradue Cloud Platform.
+3. You are logged in on GEP
+4. If not done, you can configure your account.
 
 Profile pages
 -------------
