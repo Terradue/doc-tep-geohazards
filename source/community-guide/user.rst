@@ -3,21 +3,21 @@
 User Profile
 ============
 
-This sections provides a detailed description on how to sign-in on the Geohazards TEP platform and access your user profile.
+This sections provides a detailed description on how to sign-in on GEP and access your user profile.
 
 Sign-in
 -------
 
-To sign-in on GEP, you need to have an account created on the Terradue platform.
+To sign-in on GEP, you need to have an account created on Terradue Cloud Platform.
 
-	- `Have already an account on Terradue platform?`_
-	- `Don't have yet an account on Terradue platform?`_
+	- `I have already an account at Terradue`_
+	- `I don't have yet an account at Terradue`_
     
 	    - `Create a new account from scratch`_
-	    - `Create a new account from a trusted Identity Provider`_
+	    - `Create your account from a trusted Identity Provider`_
 
-Have already an account on Terradue platform?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I already have an account at Terradue
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Access the GEP Community Portal through the following URL: https://geohazards-tep.eu/#!. 
 
@@ -28,23 +28,23 @@ Have already an account on Terradue platform?
 
 	Figure 1: The Geohazards TEP portal
 
-2. Click on **Sign-in**, you are automatically redirected to the Terradue platform signin page.
+2. Click on **Sign-in**, you are automatically redirected to the Terradue signin page.
 
 .. figure:: ../includes/user-signin-2.png
 	:align: center
 	:width: 80%
 	:figclass: img-container-border
 
-	Figure 1: The Terradue platform signin page
+	Figure 1: The Terradue signin page
 
 3. Log in using your Terradue credentials or, use your credentials from a trusted Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
 
-4. You are logged in on GEP
+4. You are logged on GEP
 
 5. If not done, you can configure your account.
 
-Don't have yet an account on Terradue platform?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I don't have yet an account at Terradue
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a new account from scratch
 `````````````````````````````````
@@ -67,7 +67,7 @@ Create a new account from scratch
 
 	Figure 1: The Geohazards TEP portal
 
-3. Fill in all required information and click on **Create my account**. An email is sent, asking to confirm your email address.
+3. Fill-in all required information and click on **Create my account**. An email is sent, asking to confirm your email address.
 
 .. NOTE::
 	Password must contain at least 8 characters, with at least one upper case lettre, one lower case letter, one integer and a special character (!, @, ?, ...).
@@ -76,7 +76,7 @@ Create a new account from scratch
 
 5. In a new tab, access again https://geohazards-tep.eu/#!
 
-6. Click on **Sign-in**, you are automatically redirected to the Terradue platform signin page.
+6. Click on **Sign-in**, you are automatically redirected to the Terradue sign-in page.
 
 .. figure:: ../includes/user-signin-2.png
 	:align: center
@@ -91,7 +91,7 @@ Create a new account from scratch
 
 9. If not done, you can configure your account.
 
-Create a new account from a trusted Identity Provider
+Create your account from a trusted Identity Provider
 `````````````````````````````````````````````````````
 1. Access the GEP Community Portal through the following URL: https://geohazards-tep.eu/#!. 
 
@@ -112,7 +112,7 @@ Create a new account from a trusted Identity Provider
 	Figure 1: The Terradue platform signin page
 
 3. Click on the button corresponding to your external Identity Provider (EO-IAM, EPOS, EOSC, google, linkedin, yahoo).
-4. Your account is automatically created on the Terradue platform.
+4. Your account is automatically created on Terradue Cloud Platform.
 5. You are logged in on GEP
 6. If not done, you can configure your account.
 
@@ -150,7 +150,7 @@ Fill in your profile:
 1. Edit information such as firstname and lastname, organization (username and email can not be modified).
 2. Once you are done, just click on **Submit** to save your changes.
 
-Data package Api key
+Data package API key
 ~~~~~~~~~~~~~~~~~~~~
 
 You can get a private API key associated to your account.
@@ -164,9 +164,9 @@ e.g: https://geohazards-tep.eu/t2api/data/package/search?key=MY_API_KEY
 Application Scenario
 ~~~~~~~~~~~~~~~~~~~~
 
-You can submit from here a new candidate application and follow it's progress and status.
+You can submit from here a new candidate application and follow it's status progress (saved draft, submitted for review, ...).
 A dedicated Application Scenario form will guide you in the process of defining your application.
-Once submitted, the Platform Operations team will follow-up directly on the Portal about your request, in particular, to provide you with a quotation and a guidance for sponsorships.
+Once submitted, the Platform Operations team will follow-up directly on the Portal about your request, in particular, to provide you with a quotation and a guidance for sponsorship when applicable (scientific research purposes).
 
 .. figure:: ../includes/user_profile_appscenario.png
 	:figclass: img-border img-max-width
@@ -179,14 +179,14 @@ Github account
 	:figclass: img-border
 	:scale: 70%
 
-Linking your Github account to your profile will allow you to use Github as your Software repository for your developments on a Cloud  resource of the Platform, such as a Developer Cloud Sandbox virtual machine. You can also release and share your code on GitHub.
+Linking your Github account to your profile will support you with use of GitHub as your Git repository for software development activities on Terradue Cloud Platform, such as integrating new Processing Services for GEP.
 
-..note:: Link your github account is not mandatory but highly recommanded.
+..note:: Link your GitHub account is not mandatory but highly recommended for application developers.
 
-To link your Github account:
+To link your GitHub account:
 
-1. Fill in your Github name and validate by clicking on |user_github_edit.png|.
-2. You should add a SSH public key to your Github account, click on **Add your public key** and finally accept the request on your Github account.
+1. Fill in your GitHub name and validate by clicking on |user_github_edit.png|.
+2. You should add a SSH public key to your GitHub account, click on **Add your public key** and finally accept the request on your GitHub account.
 
 .. |user_github_edit.png| image:: ../includes/user_github_edit.png
 
