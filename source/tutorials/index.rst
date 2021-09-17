@@ -36,6 +36,7 @@ Contents:
    Sentinel-2 Watermask<s2-watermask>
    Sentinel-3 OLCI composite<s3-olci-composites>   
    Sentinel-3 SLSTR composite<s3-slstr-composites>      
+   Sentinel-1 Extended Timing Annotation Dataset<setap>
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAP CSK DInSAR<snap-csk>
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>

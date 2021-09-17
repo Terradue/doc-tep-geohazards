@@ -62,6 +62,7 @@ The Map Services panel is a simple geographic map, on which you can zoom in, zoo
 - Spatial image, like a jpg or png inside a defined bounding box;
 - WMS layers.
 
+.. _community-guide-platform-geobrowser-context-menu-label:
 Contexts menu
 -------------
 The Contexts menu is a menu placed on the top, representing a result of a query on a specific catalog with pre-defined search parameters. By choosing a context the Current search will switch with the relative Opensearch Description and optionally with the relative search parameters.
@@ -90,6 +91,7 @@ To improve focus and usability, one subpanel is visible at a time, via a tab swi
 
 .. figure:: ../../includes/geobrowser-catalog-panel-tabs.png
 
+.. _community-guide-platform-geobrowser-search-panel-label:
 Search panel
 ^^^^^^^^^^^^
 The search panel is a view containing all search parameters associated to the current catalogue on which the search will be performed. The search panel is shown as a form, and, depending on the opensearch descriptor document, some parameters are just free text, some of them have type restrictions, others can be chosen from a list.
@@ -183,6 +185,7 @@ The job details view contains all job information, like some service info, job t
 Geobrowser Tools and Utils
 --------------------------
 
+.. _community-guide-platform-geobrowser-intelligent-map-tools-label:
 Intelligent Map tools
 ^^^^^^^^^^^^^^^^^^^^^
 To simplify the user view on the map, all the map tools buttons are hidden. To show them, simply move the mouse cursor to the left side of the map.
