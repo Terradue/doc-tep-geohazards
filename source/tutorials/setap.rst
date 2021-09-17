@@ -30,9 +30,11 @@ different ancillary data sources such as IGS and ECMWF.
   The advantage of using S1-Annotation products is that they have a size
   (in MB) by far smaller than standard ones so they can be downloaded faster.
 
-  .. TODO: check the note below with @hervé
-  .. .. note:: if the requested product is not online you could get an error.
-  .. .. seealso:: FAQ below
+  Please refer to the
+  :ref:`Sentinel-1 Annotations caching policy <sentinel-1-annotations-caching-policy-label>`
+  section below for more details on characteristics and limitations of this
+  EO source.
+
 
 **Output specifications**
 
@@ -247,9 +249,73 @@ collected in the `Product Page`_ on the ESA web site.
 .. _`Python API`: https://gitlab.com/s1-etad/s1-etad
 .. _`Product Page`: https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1/data-products/etad-dataset
 
+.. _`sentinel-1-annotations-caching-policy-label`:
+**Sentinel-1 Annotations caching policy**
+
+The "Sentinel-1 Annotations” products (cf. "EO Data" menu) benefit from a
+data caching mechanism on GEP.
+The cache (Manifest and Annotation files) is managed for a pre-defined set
+of geographic areas and time span.
+These areas are specified according to the seismic areas defined by the
+`CEOS Seismic Hazards`_ work group, as follows:
+
+* mask_eu (Europe seismic areas)
+* mask1 (20% of he world's seismic areas)
+* ask2 (35%)
+* mask3 (50%)
+* mask70 (70%)
+* mask100 (100%)
+
+For the launch of the GEP SETAP service (September 2021), the cache is
+initialised as follows:
+
+* mask_eu (Europe)
+* January-September 2021
+* adding up new 2021 acquisitions from September 2021 onwards
+
+Moreover, when a processing Job is started over a spatial and temporal
+data search outside of the current data caching automation, an opportunistic
+approach will keep in cache the retrieved input products.
+
+This is resulting in an additional cache capacity, mutualised, that is
+growing based on user activities (so, without a planification on the GEP
+side, but with a monitoring of the user interests):
+
+* user selected job inputs falling outside current cached products,
+  for spatial and temporal domains with some limitations (see further
+  below the FAQ section, :ref:`Q1<faq-q1-label>_)
+
+For the future of SETAP operations on GEP, a plan with progressive caching
+based on these CEOS tectonic areas can be achieved according to user needs
+gathered through user engagement activities. For example:
+
+* the European seismic area,
+* then extended to cover 20% of the world seismic zones,
+* then 50%
+* and potentially up to 100% of the CEOS-defined seismic areas worldwide
+
+In terms of performances of a processing job, SETAP will be the fastest when
+accessing pre-cached input products, a little bit slower if products not yet
+in cache can be accessed from the Copernicus SciHub, and quite slow for older
+products only available from other remote data repositories
+(e.g. the Alaska Science Facility) connected to GEP.
+
+Users can provide clear information about their area of interest and time
+period of interest, sending requests as follows:
+
+* the study area(s) you would work on
+* the time periods interest (Sentinel-1 acquisitions dates span)
+
+Then, send it to contact@geohazards-tep.eu with subject:
+
+  Study requirements for optimised data access from the SETAP processing service
+
+.. _`CEOS Seismic Hazards`: https://ceos.org/ourwork/workinggroups/disasters/earthquakes
+
 
 **FAQ**
 
+.. _`faq-q1-label`:
 :Q1:
     Are there limitations in terms of geographic areas, product type,
     acquisition date, maximum number of jobs per user?
