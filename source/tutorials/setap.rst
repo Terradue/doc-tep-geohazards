@@ -279,11 +279,11 @@ approach will keep in cache the retrieved input products.
 
 This is resulting in an additional cache capacity, mutualised, that is
 growing based on user activities (so, without a planification on the GEP
-side, but with a monitoring of the user interests):
+side, but with a monitoring of the user interests).
 
-* user selected job inputs falling outside current cached products,
-  for spatial and temporal domains with some limitations (see further
-  below the FAQ section, :ref:`Q1<faq-q1-label>_)
+User selected job inputs falling outside current cached products,
+for spatial and temporal domains with some limitations (see further
+below the FAQ section, :ref:`Q1<faq-q1-label>_).
 
 For the future of SETAP operations on GEP, a plan with progressive caching
 based on these CEOS tectonic areas can be achieved according to user needs
