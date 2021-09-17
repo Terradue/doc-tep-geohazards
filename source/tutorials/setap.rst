@@ -343,10 +343,6 @@ Then, send it to s1-etad@esa.int with subject:
       acquired in Stripmap (SM) or Interferometric Wide swath (IW) mode;
       EW is not officially supported at the moment, if you need it please
       contact s1-etad@esa.int
-
-      .. TODO: limitations of the DSR end-point (see also above)?
-
-
 :Q2:
     Do you need KML files for the study regions we are using or is the
     service global?
