@@ -5,6 +5,8 @@ User Profile
 
 This sections provides a detailed description on how to sign-in on GEP and access your user profile.
 
+.. _community-guide-user-sign-in-label:
+
 Sign-in
 -------
 
