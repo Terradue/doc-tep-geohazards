@@ -106,8 +106,7 @@ Input SAR data selection must be carried out with particular care since a wrong 
 - The system automatically discards duplicated (reprocessed) images and correctly assembles image slices acquired on the same date belonging to a common relative orbit. In the case of reprocessed images, the newest one is selected by the processor.
 
 
-| :memo: **NOTE**                 
-| To avoid processing failures users are prompted to select at least 20-25 dates for time series analysis. For reliable surface motion measurements, especially for regions exhibiting low motion rates, it is strongly recommended to expand the observation period to a minimum of three (3) years. 
+.. NOTE:: To avoid processing failures users are prompted to select at least 20-25 dates for time series analysis. For reliable surface motion measurements, especially for regions exhibiting low motion rates, it is strongly recommended to expand the observation period to a minimum of three (3) years. 
 Although the service is not affected by temporal gaps in the data set selection, it is suggested to avoid large temporal gaps as they may introduce uncertainties, especially over low coherence areas and for regions of high surface motion rates (e.g. landslides). The period corresponding to the temporal gap motion is assumed as linear. 
 
 
@@ -127,8 +126,7 @@ For selecting a data set to process please follow the steps below:
         :align: center
 
 
-| :memo: **NOTE**                 
-| An accepted WKT should have the following format, 
+.. NOTE:: An accepted WKT should have the following format, 
 POLYGON((LonMIN LatMIN, LonMIN LatMAX, LonMAX LatMAX, LonMAX LatMIN, LonMIN LatMIN))
 
 
@@ -147,8 +145,7 @@ POLYGON((LonMIN LatMIN, LonMIN LatMAX, LonMAX LatMAX, LonMAX LatMIN, LonMIN LatM
 	
 - Users can store their search results for later use by adding them to the Features Basket, then saving them as a Data Package. 
 
-| :memo: **NOTE**
-| Users can also use pre-defined data sets within the Data Packages catalogue. This involves browsing for previously stored data packages by name and uploading them by clicking on the load button. 
+.. NOTE:: Users can also use pre-defined data sets within the Data Packages catalogue. This involves browsing for previously stored data packages by name and uploading them by clicking on the load button. 
 
 
 2.3 Define IFG processing parameters
@@ -184,8 +181,7 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 	thessaloniki_snapping_s1_a102_201504_202012
 	
 
-| :memo: **NOTE**
-| Avoid inserting special characters in the Interferometric Stack name (e.g. instead of spaces “ ” please insert backslashes “_” as a separator between words).
+.. NOTE:: Avoid inserting special characters in the Interferometric Stack name (e.g. instead of spaces “ ” please insert backslashes “_” as a separator between words).
 
 
 - Click on the select button in the **Area of Interest** field and select the AOI option to automatically insert based on the region defined in the geobrowser
@@ -198,8 +194,7 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
         :align: center
 	
 
-| :memo: **NOTE**
-| You may directly insert the AOI in WKT format
+.. NOTE:: You may directly insert the AOI in WKT format
 
 
 - Fill the Input DEM parameter according to the heights to be used during interferometric processing:
@@ -207,8 +202,7 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 	SRTM 3Sec
 
 
-| :memo: **NOTE**
-| Currently, only SRTM 3 arc-second is available for processing
+.. NOTE:: Currently, only SRTM 3 arc-second is available for processing
 
 
 2.4 Run the job
@@ -217,12 +211,10 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 Following the selection of images and definition of processing parameters, the launch of the service is done by clicking on the button Run Job at the bottom of the SNAPPING IFG processor tab and monitor the progress of the running Job.
 
 
-| :memo: **NOTE**
-| The duration of the job depends mainly on the extent of the area of interest, the percentage of water bodies within the AOI, the number of the acquisition dates processed and the platform allocated resources. 
+.. NOTE:: The duration of the job depends mainly on the extent of the area of interest, the percentage of water bodies within the AOI, the number of the acquisition dates processed and the platform allocated resources. 
 
 
-| :memo: **NOTE**
-| The progress bar of the SNAPPING IFG service indicates the preparation of the trigger for processing of Sentinel-1 image pairs and not the actual completion of the submitted job. Please check Section 2.5 for more details on the monitoring of interferogram stacks progress.
+.. NOTE:: The progress bar of the SNAPPING IFG service indicates the preparation of the trigger for processing of Sentinel-1 image pairs and not the actual completion of the submitted job. Please check Section 2.5 for more details on the monitoring of interferogram stacks progress.
 
 2.5 Interferogram stacks monitoring
 =====================
@@ -295,8 +287,7 @@ The input for the Interferometric Stack name must be based on the same name give
 
 - Users should insert manually the name of the Interferometric Stack to be processed. 
 
-| :memo: **NOTE**
-| For SNAPPING PSI inputs are previously generated Interferometric Stacks using SNAPPING IFG and not Sentinel-1 SLC data. 
+.. NOTE:: For SNAPPING PSI inputs are previously generated Interferometric Stacks using SNAPPING IFG and not Sentinel-1 SLC data. 
 
 3.3 Define PSI processing parameters
 =====================
@@ -312,16 +303,14 @@ Please note that parameters controlling the extent of the processing **Area of I
 	thessaloniki_snapping_s1_a102_201504_202012
 	
 
-| :memo: **NOTE**
-| It is critical to keep the same name for the Interferometric Stack in both SNAPPING IFG and SNAPPING PSI services. 
+.. NOTE:: It is critical to keep the same name for the Interferometric Stack in both SNAPPING IFG and SNAPPING PSI services. 
 
 - Set the **Amplitude Dispersion** value used for the detection of Point Scatterers (default 0.35)
 
 	0.35
 	
 
-| :memo: **NOTE**
-| By increasing the value of the amplitude dispersion more point candidates will be accepted as Persistent Scatterers (PS) targets. However, care should be taken to avoid the inclusion of poor quality points since this might affect the PSI solution. A significant decrease of amplitude dispersion value shall reduce the number of points in the PSI results. 
+.. NOTE:: By increasing the value of the amplitude dispersion more point candidates will be accepted as Persistent Scatterers (PS) targets. However, care should be taken to avoid the inclusion of poor quality points since this might affect the PSI solution. A significant decrease of amplitude dispersion value shall reduce the number of points in the PSI results. 
 
 - Set the **Range Patch Number** value to define the number of patches in the range direction (default 4).
 
@@ -332,16 +321,14 @@ Please note that parameters controlling the extent of the processing **Area of I
 	4
 	
 
-| :memo: **NOTE**
-| By increasing the number of range and azimuth patches higher parallelization is achieved, beneficial in reducing the processing time of a wide area. By setting both patch numbers to 1, the entire AOI is processed as a single patch.  
+.. NOTE:: By increasing the number of range and azimuth patches higher parallelization is achieved, beneficial in reducing the processing time of a wide area. By setting both patch numbers to 1, the entire AOI is processed as a single patch.  
 
 - Set the **Reference Radius** value to define radius (in meters) around the reference point coordinates (default Inf). 
 
 	Inf
 	
 
-| :memo: **NOTE**
-| By using the default value (set to infinite), the entire area is considered when referencing the PSI measurements. In that case, the average motion over the whole AOI is set to zero. This avoids dependencies to a single point and mitigates the effect of the reference point atmospheric noise. Please note that if the **Reference Radius** is kept to default, the selection of reference point coordinates (Reference Lon and Reference Lat parameters) is not affecting the PSI results. 
+.. NOTE:: By using the default value (set to infinite), the entire area is considered when referencing the PSI measurements. In that case, the average motion over the whole AOI is set to zero. This avoids dependencies to a single point and mitigates the effect of the reference point atmospheric noise. Please note that if the **Reference Radius** is kept to default, the selection of reference point coordinates (Reference Lon and Reference Lat parameters) is not affecting the PSI results. 
 If a radius value is inserted (in meters), processing shall succeed only when at least one PS point is identified within the defined extent. 
 
 
@@ -354,8 +341,7 @@ If a radius value is inserted (in meters), processing shall succeed only when at
 	0
 	
 
-| :memo: **NOTE**
-| **Reference Lon** and **Reference Lat** are the longitude and latitude coordinates (in decimal degrees) of the reference point for the SNAPPING PSI measurements. It should be located in a relatively stable area or its deformation behaviour shall be known. In any case, the user should verify that input **longitude and latitude coordinates are on land and included within defined AOI**. As a suggestion, urbanized areas are usually well suited to locate the reference point. It is in general good practice to put the reference point in the deformation far field. 
+.. NOTE:: **Reference Lon** and **Reference Lat** are the longitude and latitude coordinates (in decimal degrees) of the reference point for the SNAPPING PSI measurements. It should be located in a relatively stable area or its deformation behaviour shall be known. In any case, the user should verify that input **longitude and latitude coordinates are on land and included within defined AOI**. As a suggestion, urbanized areas are usually well suited to locate the reference point. It is in general good practice to put the reference point in the deformation far field. 
 By using the default value of zero for both coordinates, no reference point is considered and the algorithm implements an average reference for the whole AOI. 
 
 - Set the **Compensation for SCLA Error** option to estimate and subtract the reference atmospheric, orbital and DEM related errors (optional; Y or N). 
@@ -367,8 +353,7 @@ By using the default value of zero for both coordinates, no reference point is c
 	Y
 	
 
-| :memo: **NOTE**
-| It is highly recommended to apply both SCLA Error removal and atmospheric filtering for optimal PSI time series results. Please note that atmospheric filtering is fixed to a temporal window of one year. 
+.. NOTE:: It is highly recommended to apply both SCLA Error removal and atmospheric filtering for optimal PSI time series results. Please note that atmospheric filtering is fixed to a temporal window of one year. 
 
 .. figure:: assets/snapping_psi_4.png
 	:figclass: align-center
