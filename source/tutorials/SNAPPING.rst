@@ -428,7 +428,7 @@ The main outputs of the SNAPPING service are the following:
 
 - **Product File (GZ)**
 
-  Standard ESRI vector file to be accessed with proprietary (ESRI) or other open source software (e.g. QGIS) (in compressed GZ format). *<Filename>_shp.tar.gz*
+  Standard ESRI vector file (ESRI shapefile) to be accessed with proprietary or other open source software (e.g. QGIS) (in compressed GZ format). *<Filename>_shp.tar.gz*
 
 - **Browse GeoTIFF**
 
@@ -456,6 +456,9 @@ Provided attributes within the CSV file consist of:
 	:figclass: align-center
         :width: 750px
         :align: center
+
+Provided attributes within the ESRI shapefile consist of the unique pixel identifier (id), latitude (latitude) and longitude (longitude) coordinates,  mean velocity (vel) and corresponding uncertainty (vs). LoS displacement time-series are omitted from ESRI shapefile output. 
+
 
 - File name convention is as follows:
 
