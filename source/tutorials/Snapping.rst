@@ -4,7 +4,6 @@ SNAPPING – Surface motioN mAPPING Sentinel-1 on-demand processing service
 by AUTh, MJaen & Terradue 
 
 .. figure:: assets/snapping_icon.png
-	:figclass: align-center
         :width: 250px
 
 1. Introduction
@@ -71,8 +70,7 @@ Accordingly, please recognize the effort made by the authors by citing the follo
 =====================
 
 .. figure:: assets/snapping_ifg_icon.png
-	:figclass: align-center
-        :width: 250px
+        :width: 150px
 	
 **Service inputs**
 
@@ -192,7 +190,7 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 
 .. figure:: assets/snapping_ifg_9.png
 	:figclass: align-center
-        :width: 150px
+        :width: 100px
         :align: center
 	
 
@@ -250,8 +248,7 @@ The information provided under **Interferogram stacks monitoring** tab refers to
 =====================
 
 .. figure:: assets/snapping_psi_icon.png
-	:figclass: align-center
-        :width: 250px
+        :width: 150px
 	
 **Service inputs**
 
