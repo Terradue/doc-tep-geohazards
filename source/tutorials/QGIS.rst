@@ -134,7 +134,7 @@ Once downloaded and extracted, the QGIS project can be opened with QGIS.
 Run the job
 ===========
 
-* Click on the button Run Job and see the Running Job
+* Click on the button *Run Job* and see the Running Job
 
 .. figure:: assets/QGIS_6.png
 	:figclass: align-center
