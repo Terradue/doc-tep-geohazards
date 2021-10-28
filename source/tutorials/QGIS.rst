@@ -62,7 +62,7 @@ Select the processing
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 	
 * Then, on the left side of the panel the results of the chosen service will appear.
@@ -126,7 +126,7 @@ The input parameters to provide are:
   
 .. figure:: assets/QGIS_5.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center
         
 Once downloaded and extracted, the QGIS project can be opened with QGIS.
@@ -138,19 +138,19 @@ Run the job
 
 .. figure:: assets/QGIS_6.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center
 	
 .. figure:: assets/QGIS_7.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center	
 
 * After some time, see the Successful Job:
 
 .. figure:: assets/QGIS_8.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center
 
 
@@ -178,7 +178,7 @@ In this project we integrated the QGIS software among our services.
 
 .. figure:: assets/QGIS_10.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
   
         
@@ -203,7 +203,7 @@ To access the layouts, you need to download the QGIS project and open it with QG
 
 .. figure:: assets/QGIS_12.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
         
 * Therefore, to visualize the layouts click on *Project*, *Layout* and choose one of the two layouts available.
