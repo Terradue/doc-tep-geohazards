@@ -107,7 +107,10 @@ Input SAR data selection must be carried out with particular care since a wrong 
 - The system automatically discards duplicated (reprocessed) images and correctly assembles image slices acquired on the same date belonging to a common relative orbit. In the case of reprocessed images, the newest one is selected by the processor.
 
 
-.. NOTE:: To avoid processing failures users are prompted to select at least 20-25 dates for time series analysis. For reliable surface motion measurements, especially for regions exhibiting low motion rates, it is strongly recommended to expand the observation period to a minimum of three (3) years.  Although the service is not affected by temporal gaps in the data set selection, it is suggested to avoid large temporal gaps as they may introduce uncertainties, especially over low coherence areas and for regions of high surface motion rates (e.g. landslides). The period corresponding to the temporal gap motion is assumed as linear. Sentinel-1 SLC products acquired before April 2015 should not be considered in SNAPPING as this will lead to interferometric phase variation in range. For scenes acquired after April 2015 a compensation for the Elevation Antenna Pattern (EAP) phase was applied to predict with great accuracy the gain and phase patterns.
+.. NOTE:: To avoid processing failures users are prompted to select at least 20-25 dates for time series analysis. For reliable surface motion measurements, especially for regions exhibiting low motion rates, it is strongly recommended to expand the observation period to a minimum of three (3) years.  Although the service is not affected by temporal gaps in the data set selection, it is suggested to avoid large temporal gaps as they may introduce uncertainties, especially over low coherence areas and for regions of high surface motion rates (e.g. landslides). The period corresponding to the temporal gap motion is assumed as linear. 
+
+
+.. NOTE:: Sentinel-1 SLC products acquired before April 2015 should not be considered in SNAPPING as this will lead to interferometric phase variation in range. For scenes acquired after April 2015 a compensation for the Elevation Antenna Pattern (EAP) phase was applied to predict with great accuracy the gain and phase patterns.
 
 
 For selecting a data set to process please follow the steps below:
