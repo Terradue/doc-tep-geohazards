@@ -8,8 +8,8 @@ Contents:
 
    Active fire detection with Sentinel-3 SLSTR<active-fire-detect>
    ADORE DORIS<adore>
-   ALADIM-S2 and ALADIM-VHR: Preparation of input datasets<aladim_input_dataset_preparation>
-   ALADIM-S2: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 data<aladim-s2>
+   ALADIM-HR and ALADIM-VHR: Preparation of input datasets<aladim_input_dataset_preparation>
+   ALADIM-HR: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 & L8 data<aladim-hr>
    ALADIM-VHR: Automatic LAndslide Detection and Inventory Mapping from multispectral Very-High Resolution data<aladim_vhr>
    Burned Area Analysis with Sentinel-2<burned-area>
    COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
