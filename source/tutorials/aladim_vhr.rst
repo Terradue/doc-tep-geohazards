@@ -11,9 +11,11 @@ ALADIM-VHR is developed by CNRS-EOST (Strasbourg, France). It allows to detect a
 
 **EO sources supported**:
 
+
     - Mandatory: A couple of ortho-rectified multispectral (MS) images (typically Pléiades, Spot6/7, Geo-Eye and Planets), including 4 bands (B, G, R and NIR)
     - Optional: A couple of ortho-rectified panchromatic (P) images
 
+Beside the service parameters an archive folder containing the training set, the training areas (and aoi) in shapefile format is needed. See the tutorial (:doc:`tutorial <aladim_input_dataset_preparation>`) to create these inputs.
 
 **Output specifications**
 
@@ -78,7 +80,6 @@ Drag and drop your images in the fields of the service panel:
         :width: 750px
         :align: center
 
-
 Create an archive for the ensemble of your input shapefiles (training_areas.shp, training_samples.shp and aoi.shp). The framework requires a flat .tar.gz format (i.e. the contents of the archive file must not include folders).
 A tutorial about the input dataset creation is available here: doc:`tutorial <aladim_input_dataset_preparation>`
 
@@ -105,6 +106,7 @@ Drop the archive in the field of the service panel "shape files uri":
 Set the processing parameters
 -----------------------------
 
+
 There is a total of 6 processing parameters. When hovering over the parameter fields, you will see a short explanation for each of the parameters.
 
 The figure below summarizes the parameter settings for this test.
@@ -127,6 +129,7 @@ The figure below summarizes the parameter settings for this test.
     - A very high value corresponds to 5000 pixels, e.g. 1250 m2 for a 0.5m pixel resolution (Pleiades P+MS)
 
 See examples of segment sizes and shapes for several parameter settings applied to Pleiades (P+MS) images.
+
 
 .. figure:: assets/Aladim-SegmentationParameters_natural.png
 	:figclass: align-center

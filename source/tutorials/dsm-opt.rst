@@ -56,7 +56,7 @@ The Geobrowser offers multiple ways to search and discover a large variety of EO
 For this tutorial we will rely on readily prepared data packages which are accessible through the "Data Packages" tab on the lower right of the screen. If you type "Pléiades" into the search box, you should be able to find a data package named "Pléiades Central Italy". Alternatively you can access the  
 `Pléiades Central Italy data package`_ also directly by clicking on the provided link:
 
-.. _`Pléiades Central Italy data package`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DPl%C3%A9iadesCentralItaly&id=landslide-dm
+.. _`Pléiades Central Italy data package`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DPleiadesCentralItaly&id=landslide-dm
 
 .. caution:: Pléiades data is subject to strict licensing terms and you have to isssure that you have the proper rights to access (and process) the data. In addition there are some cases in which images belonging to the same stereo acquisition do not share the same unique identifier (e.g. *IMG_PHR1A_P_datetime_SEN_uniqueIdentifier-003_R1C1.JP2*). In such cases it is necessary to rename the image files to insure that all images share the same unique identifier. The Pléiades data used for the tutorial were made available to the science community by the CEOS WG Disaster as part of the Seismic Pilot activity. 
 
@@ -108,7 +108,7 @@ Run the job
 
 Once the job has finished, click on the *Show results* button to get a list and pre-visualization of the output DSM and its corresponding hillshade. An example output can be accessed `here`_ .
 
-.. _`here`: https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Da26b6302-0fef-4309-a816-7e18ed19feb5%26key%3D9aa2df4c-b3e0-439f-9128-7a8b4c4c8c62&id=landslide-dm
+.. _`here`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D6896b336-0ad5-49a4-95b9-b049259a2e1e%26key%3Dc2d5cf72-0781-41e8-99af-012729b0dab1&id=cnrs-eost
 
 .. Note:: The visualization in the *Geobrowser* is just a preview and the user is encouraged to download the results for further processing and analysis.
 

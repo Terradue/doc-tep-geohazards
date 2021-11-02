@@ -10,6 +10,12 @@ The S-1 Amplitude change on-demand processing service provides RGB composite of 
 **EO sources supported**:
 
     - Sentinel-1 IW and EW GRD products
+    
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 **Output specifications**
 
@@ -36,7 +42,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES as 8 bit PNG file                                                                                         |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | S1_GRD_VV_20171216_20171204_RGB_Amplitude_Change.tif                                                          |    
+| Output Filename example       | S1_GRD_VV_20200925_20201007_RGB_Amplitude_Change.tif                                                          |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 |
@@ -62,7 +68,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES (GeoTIFF)                                                                                                 |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | S1B_IW_GRDH_1SDV_20171204T105228_20171204T105253_008568_00F359_76F2_Orb_Cal_ML_TC_DB.tif                      |    
+| Output Filename example       | S1A_IW_GRDH_1SDV_20200925T191558_20200925T191623_034519_040465_DFBA_Orb_Cal_ML_TC_DB.tif                      |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 |
@@ -88,7 +94,7 @@ The service provides 3 output products.
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Browse product available      | YES (GeoTIFF)                                                                                                 |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| Output Filename example       | S1B_IW_GRDH_1SDV_20171216T105228_20171216T105253_008743_00F8E8_8E00_Orb_Cal_ML_TC_DB.tif                      |    
+| Output Filename example       | S1A_IW_GRDH_1SDV_20201007T191558_20201007T191623_034694_040A8A_43BF_Orb_Cal_ML_TC_DB.tif                      |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 .. NOTE::
@@ -150,7 +156,7 @@ Fill the parameters
 
 After the selection of input data, the user can start filling the parameters:
 	
-	•	Insert a job title (e.g. “Amplitude Change 2017-12-20”).
+	•	Insert a job title (e.g. “Amplitude Change 2020-10-05”).
 	•	From the Feature basket table drag and drop the EO data product that you want to use as master.
 
 .. figure:: assets/tuto_rss_snap_s1_snac_3.png

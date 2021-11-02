@@ -14,7 +14,7 @@ Portal Data Import within ESA CloudToolbox
 
 .. code-block:: url
   
-  https://geohazards-tep.eo.esa.int/t2api/data/package/IranEarthquake/search?key=4971cf4d-fa0e-497f-8422-207e6210320b
+  https://geohazards-tep.eu/t2api/data/package/IranEarthquake/search?key=4971cf4d-fa0e-497f-8422-207e6210320b
 
 .. figure:: assets/import_2.png
 	:figclass: align-center

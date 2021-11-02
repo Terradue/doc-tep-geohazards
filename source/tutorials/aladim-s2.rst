@@ -13,7 +13,6 @@ ALADIM-VHR is developed by CNRS-EOST (Strasbourg, France). It allows to detect a
     - Sentinel-2 MSI LIC (SAFE file format),
     - Landsat-8
     
-    
 **Output specifications**
 
     - A shapefile (*.shp files) containing the landslides detected at an F2 optimal threshold.

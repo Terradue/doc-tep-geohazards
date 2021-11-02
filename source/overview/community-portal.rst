@@ -2,12 +2,12 @@ A Community Portal
 ==================
 
 The Geohazards Exploitation Platform is a community portal helping you to access and exploit geohazard related data.
-It is meant to be used by the following kind of users:
+It is meant to be used by the following types of user:
 
-- end user
-- processor provider
-- data provider
-- administrator
+- **Visitors:** default user accounts for access to open data shared on the platform
+- **Members:** upgraded user accounts for Geohazards analysts (staff or collaborators)
+- **Stakeholders:** partner user accounts for processor providers, data providers, community managers
+- **Administrators**
 
 The portal homepage is a social place that gather in the same place most of the recent community inputs:
 

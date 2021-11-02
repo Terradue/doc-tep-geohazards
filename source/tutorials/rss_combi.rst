@@ -5,8 +5,15 @@ COMBI - Band Combination
         
 **Band Combination**
 
-This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-3, Sentinel-1.
-The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file.
+This service provides the possibility to perform RGB band combination from user defined bands of single or multiple EO data products. The “Band Combination” processing service of the Charter Processing Platform Prototype is meant to give the possibility to derive user-defined band combinations from multi-mission Optical and SAR data. The processing chain of the service has been developed with the use of GDAL and SNAP software. The service supports optical and SAR detected products from the following missions: ALOS-2, GF-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, Landsat 8 (OLI), Pleiades-1, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, Sentinel-3 (OLCI and SLSTR), SPOT 6/7, TerraSAR-X, UK-DMC 2 and VRSS1. 
+
+The output is comprising all 3 selected bands in a single RGB product at the resolution of the finest source band. All bands are in their native format (no radiometric correction applied) thus can serve only for fast screening of the data, not for further processing. The output RGB composite is displayed in geobrowser with the possibility to access product metadata and download it as a GeoTIFF file. For selected sensors visualization enhancements are available.
+
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 **Output specifications**
 
@@ -96,7 +103,7 @@ Zoom in into a specific area of interest (e.g. Italy). Apply spatial filter by d
         :width: 750px
         :align: center 
  
-Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 1 April – 1 May 2017). Then click on the button Search:
+Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 4 August – 4 September 2020). Then click on the button Search:
  
 .. figure:: assets/tuto_combi_6.png
 	:figclass: align-center
@@ -149,15 +156,149 @@ View results
 
 Click on the Show results on map button after the job is completed. The Band combination result will appear in the map. You can download the RGB product as GeoTIFF file by clicking on the download link in the metadata popup window.
 
-.. figure:: assets/tuto_combi_10.png
+.. figure:: assets/tuto_combi_10a.png
 	:figclass: align-center
         :width: 750px
         :align: center 
  
 The resulting product should be like the one shown below.
 
-.. figure:: assets/tuto_combi_11.png
+.. figure:: assets/tuto_combi_11a.png
 	:figclass: align-center
         :width: 750px
         :align: center 
+
+Example of multi-temporal SAR band combination output
+=====================================================
+
+In this section is shown an example of RGB composite obtained from a pair of Sentinel-1 SAR images (SAR Level-1 GRD product in IW mode) acquired from both S1A and S1B satellites. A proposed step by step procedure is reported below:
+
+1.      Zoom in into a specific area of interest (e.g. **[Act-569/Call-650] Flood in Russian Federation**). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near "Wolgograd"), and select a couple of Sentinel-1 acquisitions (e.g. **S1B GRD IW DP L1 50 product acquired on Mon, 09 Apr 2018 05:13:28 GMT** and **S1A GRD IW DP L1 50 product acquired on Sun, 15 Apr 2018 05:14:14 GMT**),
+2.      Insert job title "BC – Multi-temporal – Russian Federation",
+3.      Drag and Drop from the Results tab the S1B product (e.g. S1B GRD IW DP L1 50 09042018) in the "Product reference for RED" field,
+4.      From "RED channel band ID" field select S1B band 1,
+5.      Drag and Drop the most recent S1 product (e.g. S1A GRD IW DP L1 50 15042018) in the "Product reference for GREEN" field,
+6.      From "GREEN channel band ID" field select S1A band 1,
+7.      Drag and Drop again the same S1A product also in the “Product reference for BLUE” field,
+8.      From "BLUE channel band ID" field select S1A band 1,
+9.      Set as “Product reference for output resolution” again the most recent S1 product,
+10.     In the "Perform data cropping" field set true and define as "Subset Bounding Box for Cropping" the extent of area of interest,
+11.     Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.
+ 
+.. figure:: assets/tuto_combi_12.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+Example of multi-sensor and multi-temporal band combination output
+==================================================================
+
+Hereinafter is described a procedure to obtain a RGB composite from the combination of two EO data products derived from two different sensors (e.g. **UK-DMC-2** and **Sentinel-1**). In order to derive an RGB composite from both Optical and SAR data, you can follow this procedure:
+
+1.      Zoom in into a specific area of interest (e.g. **[Act-573/Call-654] Flood in Sri Lanka**). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. near "Moneragala"), and select a couple of images acquired from two different sensors (e.g **UK-DMC-2 SLIM-6-22 L1T product acquired on Sat, 14 Jan 2017 04:14:01 GMT** and **S1A IW GRDH 1SDV product acquired on Thu, 31 May 2018 14:49:00 GMT**),
+2.      Insert job title "BC – Multi-sensor - Sri Lanka",
+3.      Drag and Drop from the Results tab the S1A product in the "Product reference for RED" field,
+4.      From "RED channel band ID" field select S1A band 1,
+5.      Drag and Drop the UK-DMC-2 product in the "Product reference for GREEN" field,
+6.      From "GREEN channel band ID" field and select UK-DMC-2 band 2,
+7.      Drag and Drop again the same UK-DMC-2 product also in the “Product reference for BLUE” field,
+8.      From "BLUE channel band ID" field and select UK-DMC-2 band 3,
+9.      Set as "Product reference for output resolution” the S1A product,
+10.     In the "Perform data cropping" field set true and define as "Subset Bounding Box for Cropping" the extent of area of interest,
+11.     Once the job is completed, click on the Show results on map button and the resulting band combination product will appear in the map.
+
+.. figure:: assets/tuto_combi_13.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+Enhanced RGB composite visualization
+====================================
+
+In order to improve the visualization of raster data, contrast enhancement of multispectral color composite is applied by stretching reflectance values across a portion or entire range of the raster histogram distribution. Histogram contrast stretching is a widely employed technique to visually enhance the appearance of the image. In this processor three different stretch types are applied:
+
+1.      Percent clip from 2 to 96 percent of histogram,
+2.      Minimum to Maximum,
+3.      Image stretching between 0 and 0.3 reflectance.
+
+As a result, the user will get as output the correspondent 3 RGB composite in GeoTIFF format:
+
+1.      RGB_MM_X_MM_Y_MM_Z.tif (default product),
+2.      RGB_MM_X_MM_Y_MM_Z_minmax.tif,
+3.      RGB_MM_X_MM_Y_MM_Z_browse.tif.
+
+in which “MM” stands for mission acronym (e.g. S2 for Sentinel-2), “X” for product band number for Red, “Y” for product band number for Green and “Z” product band number for Blue.
+
+.. figure:: assets/tuto_combi_14.png
+        :figclass: align-center
+        :width: 650px
+        :align: center 
+
+These three different outputs allow the user to choose the more effective RGB composite for the visualization of the image stack. This choice may be different according to cloud coverage percentage and or the surface heterogeneity of the scene.
+
+The enhanced RGB composite visualization is currently available only for the following sensors:
+
+•       Sentinel-2 (L1C, L2A),
+•       Sentinel-3 (EFR, ERR),
+•       Pleiades 1A/B,
+•       Kompsat-2,
+•       Kompsat-3,
+•       Landsat-8.
+ 
+Hereinafter is shown a sample result over the coast of Naples using the below combination of S2 products:
+
+1.      Red band product: S2B_MSIL1C_20190811T095039_N0208_R079_T33TVF_20190811T122017
+        Red band index: band_4
+2.      Green band product: S2B_MSIL1C_20190702T095039_N0207_R079_T33TVF_20190702T115813
+        Green band index: band_3
+3.      Blue band product: S2B_MSIL1C_20190612T095039_N0207_R079_T33TVF_20190612T115445
+        Blue band index: band_2
+
+Location map:
+
+.. figure:: assets/tuto_combi_15.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+RGB_S2_4_S2_3_S2_2.tif – RGB combination 2-96 percent of histogram (RGB_S2_4_S2_3_S2_2.tif):
+
+.. figure:: assets/tuto_combi_16.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+
+RGB combination – Min to Max (RGB_S2_4_S2_3_S2_2_MinMax.tif)
+ 
+.. figure:: assets/tuto_combi_17.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+RGB_S2_4_S2_3_S2_2_QuickLook.tif – RGB composite - Stretched between 0 and 0.3
+ 
+.. figure:: assets/tuto_combi_18.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+
+Service bands versus Platform bands
+===================================
+
+For a proper use of the COMBI service is worth to highlight the correspondences between the service band selection with the bands of some of the sensors supported by the service, such as Sentinel-2, Landsat 8 among others (see Table below for more complete information).
+
+.. figure:: assets/tuto_combi_19.png
+        :figclass: align-center
+        :width: 750px
+        :align: center 
+ 
+ 
+[1] ESA. SENTINEL-2 Radiometric Resolutions. https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/resolutions/radiometric (Accessed 25th February 2020).
+
+[2] USGS. Landsat 8 band designations for the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS). https://www.usgs.gov/media/images/landsat-8-band-designations (Accessed 24th February 2020).
+
+[3] Lachérade, S., Fourest, S., Gamet, P., & Lebègue, L. (2012). PLEIADES absolute calibration: inflight calibration sites and methodology. PAN, 1(B2), B3.
+
+[4]. ESA. GF-2 (Gaofen-2) High-resolution Imaging Satellite / CHEOS series of China https://directory.eoportal.org/web/eoportal/satellite-missions/g/gaofen-2 (Accessed 1sth March 2020).
 

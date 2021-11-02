@@ -5,30 +5,29 @@ RASTER - Full Resolution Rasterization
         
 **Full Resolution Rasterization**
 
-This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution
-Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to
-visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the
-geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.
+This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.
 
-The service supports optical and SAR detected products from the following missions: Pleiades 1A/1B, SPOT-
-6/-7, Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-2/-3, Kanopus-V, Resurs-P, Terrasar-X, Sentinel-1, ALOS,
-ALOS-2, Radarsat-2, Rapideye, Deimos-1, VRSS1, GF-2.
+The service supports optical and SAR detected products from the following missions:      ALOS-2, GF-2, Kanopus-V, KOMPSAT-2, KOMPSAT-3, KOMPSAT-5, Landsat 8 (OLI), Pleiades-1, RADARSAT-2, RapidEye, Resurs-P, Sentinel-1, Sentinel-2, Sentinel-3 (OLCI and SLSTR), SPOT 6/7, TerraSAR-X, UK-DMC 2 and VRSS1.
 
-The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the
-map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The
-output GeoTiff is displayed in geobrowser with the possibility to access product metadata and download
-original dataset to be used in further processing.
+The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The output GeoTIFF is displayed in geobrowser with the possibility to access product metadata and download original dataset to be used in further processing.
+
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_output_table.png
     :figclass: align-center
         :width: 750px
         :align: center
 
+**DEM Type**
+
+The SRTM 1 Sec HGT (30 meters of resolution) is used.
+
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
+
 
 Select the Processing Service
 -----------------------------
 
-Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Full Resolution Rasterization” service.
+Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Full Resolution Rasterization - RASTER” service.
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_1.png
 	:figclass: align-center
@@ -71,7 +70,8 @@ Before selecting the input SAR and Optical data the user shall refer to the tabl
 Full Resolution Rasterization of Open EO product catalogue entry
 ----------------------------------------------------------------
 
-In this tutorial you are going to process a sample of free EO data product, derived from Sentinel-2 data collection, with the Full Resolution Rasterization service.
+In this tutorial you are going to process a sample of free EO data product, derived from Sentinel-2 data collection (reference: http://www.esa.int/ESA_Multimedia/Images/2019/09/Australian_bushfires), with the Full Resolution Rasterization service.
+
 From the top bar click on the “EO data” context link to access the list of selected free EO data collections (e.g. Sentinel-2).
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_4.png
@@ -79,21 +79,21 @@ From the top bar click on the “EO data” context link to access the list of s
         :width: 750px
         :align: center	
 		
-Zoom in into a specific area of interest (e.g. Italy). Apply spatial filter by drawing a rectangle on the map around an area of interest (e.g. Rome):
+Zoom in into a specific area of interest (e.g. Australia). Apply spatial filter by drawing a rectangle on the map around your area of interest (e.g. the Clarence river mouth around Yamba in the northern New South Wales):
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_5.png
 	:figclass: align-center
         :width: 750px
         :align: center
 		
-Click on the “Search Form” icon and select as product type the L1C product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. 01 – 20 Aug 17). Then click on the button *Search*:
+Click on the “Search Form” icon and select as product type the L2A product. Apply temporal filter by selecting start and end date of the temporal interval (e.g. from 20 Aug to 10 Sep 2019). Then click on the button Search:
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_6.png
 	:figclass: align-center
         :width: 750px
         :align: center
 		
-All acquisitions related to specified queries are listed in the Results tab:
+All acquisitions related to specified queries are listed in the Results tab. A dedicated quicklook window, on the right side of the geobrowser, is also given to facilitate the choice of the desired product.
 
 .. figure:: assets/tuto_rss_full_resolution_rasterization_7.png
 	:figclass: align-center
