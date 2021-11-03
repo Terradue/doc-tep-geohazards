@@ -6,17 +6,13 @@ ALADIM-HR: Automatic LAndslide Detection and Inventory Mapping from multispectra
 
 **ALADIM**
 
-This service is developped by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- and post-event imagery, and is based on change detection methods. It allows the processing of High Resolution multispectral data (ALADIM-HR; Sentinel-2 or Landsat-8) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades and Spot 6/7). The set of pre- and post-image should be accurately co-registered in order to use the service. A training dataset of manually mapped landslides (by digitalization), the extent of the training areas, and the extent of the region of interest (ROI) should be provided as inputs (shape file-format) by the user. The outputs consist in a database of landslide polygons than can be assimilated to an Earth-Observation derived landslide inventory. ALADIM builds on the change detection methodology partially described in [1]_ and [2]_ . 
+ALADIM-HR is developed by CNRS-EOST (Strasbourg, France). It allows to detect and map new landslides triggered by large forcing events (earthquake, heavy rains) from the analysis of pre- (Date 1) and post-event (Date 2) imagery. The service is based on change detection methods and machine learning. It allows the processing of High Resolution multispectral data (ALADIM-HR; Sentinel-2 SAFE files or Landsat-8 files) and Very-High Resolution multispectral data (ALADIM-VHR; typically Pléiades, Spot 6/7, Geo-Eye, Planet). A training dataset of manually mapped landslides (digitalization), the extent of the training areas and the extent of the area of interest (aoi) are provided as inputs (shape file-format). The outputs consist in a database of landslide polygons than can be assimilated to an Earth Observation derived landslide inventory. ALADIM builds on the change detection methodology described in [1]_ and [2]_.
 
 **EO sources supported**:
 
     - Sentinel-2 MSI LIC (SAFE file format),
     - Landsat-8
     
-**Input specifications**
-
-Beside the service parameters an archive folder containing the training set, the training areas (and aoi) in shapefile format is needed. See the tutorial (:doc:`tutorial <aladim_input_dataset_preparation>`) to create these inputs.
-
 **Output specifications**
 
     - A shapefile (*.shp files) containing the landslides detected at an F2 optimal threshold.
@@ -115,11 +111,11 @@ Set the processing parameters
 
 There is a total of 5 processing parameters that can be adjusted. When hovering over the parameter fields, you will see a short explanation for each of the parameters.
 
-* **ALADIM_SEG_SCALE:**	The segmentation scale factor (See [3]_ for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.
-* **ALADIM_SEG_COLOR_WEIGHT:** A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.
-* **ALADIM_SEG_MIN_SIZE:** Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.
-* **ALADIM_POSITIVE_FRACTION:** A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.
-* **ALADIM_USE_CLOUD_MASK:** If set to *True* the FMASK algorithm [5]_ will be used to detect clouds, snow, and water and mask them from the segmentation.
+* **Image : segmentation scale:**	The segmentation scale factor (See [3]_ for details about segmentation). Larger values will result in fewer larger segments and faster processing. Smaller values will result in more more small segments which will increase the processing time but also typically the accuracy of the classification. The default value is 70 but the value depends a lot on the value range of the input imagery and the landscape characteristics.
+* **Image : spectral feature weight for the segmentation:** A value between 0 and 1 to define the weight of color during the segmentation. The default value is 0.9.
+* **Image : minimum segment size:** Minimum allowed segment size. Segments smaller that this value (in pixels) will be merged to their most similar neighbor after the segmentation or deleted if isolated.
+* **Segment : positive area fraction:** A value between 0 and 1. If the fraction of positive area (i.e. landslide as mapped in the training samples) within a segment exceeds this value it is considered as a positive example. Vice versa it will be considered as a negative example. The default value is 0.5.
+* **Use cloud mask:** If set to *True* the FMASK algorithm [4]_ will be used to detect clouds, snow, and water and mask them from the segmentation.
 
 The figure below summarizes the parameter settings for this test.
 
@@ -154,5 +150,4 @@ References
 .. [1] Stumppf, A., Kerle, N. 20110. Object-oriented mapping of landslides using Random Forests. Remote Sensing of Environment, 115(10): 2564-2577.
 .. [2] Stumpf, A., Lachiche, N., Malet, J.-P., Puissant, A., Kerle, N. 2014. Active learning in the spatial domain for remote sensing image classification. IEEE Transactions on Geoscience and Remote Sensing, 52(5): 2492-2507.
 .. [3] Lassalle, P., Inglada, J. Michel, J., Grizonnet, M., Malik, P. 2015. A scalable tile-based framework for region-merging segmentation. IEEE Transactions on Geoscience and Remote Sensing, 53(10): 5473-5485.
-.. [4] Walvoort, D.J.J., Brus, D.J., De Gruijter, J.J. 2010. A R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers & Geosciences, 36(10): 1261-1267.
-.. [5] Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.
+.. [4] Zhu, Z., Wang, S., Woodcock, C.E. 2015. Improvement and expansion of the Fmask algorithm: cloud, cloud shadow, and snow detection for Landsats 4-7, 8, and Sentinel 2 images. Remote Sensing of Environment, 159: 269-277.
