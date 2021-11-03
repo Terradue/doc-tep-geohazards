@@ -1,4 +1,4 @@
-ALADIM-S2 and ALADIM-VHR: Preparation of input datasets
+ALADIM-HR and ALADIM-VHR: Preparation of input datasets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Landslide inventory maps are important documents to describe mass movement spatial distribution in a region and to prepare susceptibility, hazard and risk maps. They are also useful to investigate the distribution, types and patterns of landslides in relation to geomorphology, lithology, land cover, tectonic settings and hydrogeological conditions.
