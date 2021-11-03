@@ -174,7 +174,7 @@ In this project we integrated the QGIS software among our services.
   - **PNG file for each layout**
   - **QGIS file that must be opened directly with QGIS**
   
-* To dowloand the results, double click on the result that you want to download and then, click on *Download* button. Finally, choose the file format
+* To download the results, double click on the item of your interest and then, click on *Download* button. Finally, choose the preferred file format
 
 .. figure:: assets/QGIS_10.png
 	:figclass: align-center
@@ -185,7 +185,7 @@ In this project we integrated the QGIS software among our services.
 Adding a background layer
 ===================
 
-The Background image(s) input parameter allows adding a background layer. If this parameter is empty, google maps will be used as the background layer.
+The Background image(s) input parameter allows adding a background layer to the map. If this parameter is left empty, google maps will be used as the background layer.
 
 Working with the generated QGIS project locally
 ===================
