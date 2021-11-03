@@ -58,7 +58,7 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* To choose the **Input image** parameter, click on the **show results** button of the service job from which you want to create a QGIS map.
+* To choose the **Input image** parameter for the Map Export service, click on the **show results** button of the service job from which you want to create a QGIS map (e.g. COIN in this case).
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
