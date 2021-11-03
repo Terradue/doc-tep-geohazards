@@ -1,4 +1,4 @@
-QGIS USER MANUAL
+Map exoport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/QGIS_icon.png
@@ -11,20 +11,22 @@ This service allows to export images/results generated on the GEP as a high reso
 
 -----
 
-**EO sources supported**
+**Inputs supported**
 
-This service supports as input the main result of the other service, such as for example: Sentinel-3 SLSTR composite (https://recast.terradue.com/t2api/search/ldonnini/_results/workflows/geohazards_tep_ewf_s3_slstr_composites_ewf_s3_slstr_composites_0_11/run/32540556-62c0-11ea-a849-0242ac110024/0027647-190318164522056-oozie-oozi-W?uid=5D21A2EC2403A52B0F680F9FA81B7AC3FA896767), where the main map is the pixels that represent a False Colour Infrared RGB composite. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
+This service supports as input the outputs of other GEP services (i.e. the entries listed when using the “show results”button), provided these are generated in geoTIFF format.
+The image that is the subject of the map must be passed a Main Map.
+
 
 **Output specifications**
 
-The service provides the following output product. To see the example and description of the other outputs scroll down at the end of the tutorial.
+The service provides the following output products.
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – Map - portrait layout 														|
 +===============================+===============================================================================================================+
-| **Correspondent file**        | Map - portrait layout                                                                                         |
+| **Information type**        	| Map in portrait layout                                                                                        |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| **Raster format**             | PNG or PDF                                                                                                    |
+| **Format**             	| PNG and PDF                                                                                                   |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | **Output Filename example**   | Map - portrait layout 					                                                |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
@@ -32,9 +34,9 @@ The service provides the following output product. To see the example and descri
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – Map - landscape layout 														|
 +===============================+===============================================================================================================+
-| **Correspondent file**        | Map - landscape layout                                                                                        |
+| **Information type**        	| Map in landscape layout                                                                                       |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| **Raster format**             | PNG or PDF                                                                                                    |
+| **Format**             	| PNG and PDF                                                                                                   |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | **Output Filename example**   | Map - landscape layout 					                                                |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
@@ -42,15 +44,12 @@ The service provides the following output product. To see the example and descri
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – QGIS-project																|
 +===============================+===============================================================================================================+
-| **Correspondent file**        | QGIS-project	                	                                                                        |
+| **Information type**        	| QGIS zip file	                	                                                                        |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-| **Raster format**             | GNU Zip (gzip) compression on a TAR archive                                                                   |
+| **Format**             	| GNU Zip (gzip) compression on a TAR archive                                                                   |
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | **Output Filename example**   | QGIS-project		 					                                                |    
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
-
-
-
 
 
 
@@ -59,19 +58,42 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* Select the processing service “MAP Export”:
+* To choose the **Input image** parameter, click on the **show results** button of the service you want to create a QGIS map.
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
-
-The "MAP Export" panel is displayed with parameters values to be filled-in.
+	
+* Then, on the left side of the panel the results of the chosen service will appear.
 
 .. figure:: assets/QGIS_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
+
+* Select the processing service “MAP Export”:
+
+.. figure:: assets/QGIS_2.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+
+* The "MAP Export" panel is displayed with parameters values to be filled-in.
+
+.. figure:: assets/QGIS_3.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+* Drag and drop the result on the **Input image** parameter.
+
+.. figure:: assets/QGIS_4.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+
 
 Fill the parameters
 ===================
@@ -82,15 +104,29 @@ The input parameters to provide are:
   - Background image(s) (not mandatory): secondary results of the service that are used as input
   - Area of interest (not mandatory): specify the AOI of the service.
   - World zone name (not mandatory): name of the AOI that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
-  - Map Title ( mandatory): field where the title of the final result is specified. The length of the string must be  less than or equal to 45 characters.
-  - Map Information (mandatory): description of the service that is used as input for the QGIS service. The length of the string must be  less than or equal to 550 characters.
-  - Disclaimer (mandatory): 
-  - Data source description (mandatory): description of the products used as input (Sentinel-1, Sentinel-2, etc.). Example: https://emergency.copernicus.eu/mapping/system/files/components/EMSN074_01ZAGREB_P09RCMON_00OVERVIEW_v2.pdf
+  - Map Title ( mandatory): field where the title of the final result is specified. 
   
   
-.. figure:: assets/QGIS_2.png
+  .. NOTE:: The length of the string must be  less than or equal to 45 characters.
+  
+  - Map Information (not mandatory): description of the service that is used as input for the QGIS service. 
+  
+  
+  .. NOTE:: The length of the string must be  less than or equal to 550 characters.
+  
+  - Disclaimer (not mandatory): a formal statement saying that you are not legally responsible for something
+  
+  
+  .. NOTE:: The length of the string must be  less than or equal to 30 characters.
+  
+  - Data source description (not mandatory): description of the products used as input (Sentinel-1, Sentinel-2, etc.)
+  
+  
+  .. NOTE:: The length of the string must be  less than or equal to 40 characters.
+  
+.. figure:: assets/QGIS_5.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center
         
 Once downloaded and extracted, the QGIS project can be opened with QGIS.
@@ -98,18 +134,23 @@ Once downloaded and extracted, the QGIS project can be opened with QGIS.
 Run the job
 ===========
 
-* Click on the button Run Job and see the Running Job
+* Click on the button *Run Job* and see the Running Job
 
-.. figure:: assets/QGIS_2.1.png
+.. figure:: assets/QGIS_6.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
         :align: center
-
-* After about 20 minutes, see the Successful Job:
-
-.. figure:: assets/QGIS_2.2.png
+	
+.. figure:: assets/QGIS_7.png
 	:figclass: align-center
-        :width: 250px
+        :width: 350px
+        :align: center	
+
+* After some time, see the Successful Job:
+
+.. figure:: assets/QGIS_8.png
+	:figclass: align-center
+        :width: 350px
         :align: center
 
 
@@ -122,7 +163,7 @@ In this project we integrated the QGIS software among our services.
 
 * See the result on map:
 
-.. figure:: assets/QGIS_3.png
+.. figure:: assets/QGIS_9.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -132,6 +173,13 @@ In this project we integrated the QGIS software among our services.
   - **PDF file for each layout**
   - **PNG file for each layout**
   - **QGIS file that must be opened directly with QGIS**
+  
+* To dowloand the results, double click on the result that you want to download and then, click on *Download* button. Finally, choose the file format
+
+.. figure:: assets/QGIS_10.png
+	:figclass: align-center
+        :width: 350px
+        :align: center
   
         
 Adding a background layer
@@ -143,38 +191,39 @@ Working with the generated QGIS project locally
 ===================
 
 To access the layouts, you need to download the QGIS project and open it with QGIS. 
-Once opened QGIS, click on Project, open.
 
-.. figure:: assets/QGIS_4.png
+* Once opened QGIS, click on *Project*, *open*.
+
+.. figure:: assets/QGIS_11.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-Select the .qgs file located in the previously downloaded folder.
+* Select the .qgs file located in the previously downloaded folder.
 
-.. figure:: assets/QGIS_5.png
+.. figure:: assets/QGIS_12.png
+	:figclass: align-center
+        :width: 450px
+        :align: center
+        
+* Therefore, to visualize the layouts click on *Project*, *Layout* and choose one of the two layouts available.
+
+.. figure:: assets/QGIS_13.png
 	:figclass: align-center
         :width: 750px
         :align: center
         
-Therefore, to visualize the layouts click on Project, Layout and choose one of the two layouts available.
 
-.. figure:: assets/QGIS_6.png
-	:figclass: align-center
-        :width: 750px
-        :align: center
-        
+* To change the layout, open, for example, the GEP landscape layout window.
 
-To change the layout, open, for example, the GEP landscape layout window.
-
-.. figure:: assets/QGIS_7.png
+.. figure:: assets/QGIS_14.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-Then, to modify the layout click on one of the contents of the layout and at the bottom right a window will open with all the features.
+* Then, to modify the layout click on one of the contents of the layout and at the bottom right a window will open with all the features.
 
-.. figure:: assets/QGIS_8.png
+.. figure:: assets/QGIS_15.png
 	:figclass: align-center
         :width: 750px
         :align: center
