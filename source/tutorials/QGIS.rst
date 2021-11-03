@@ -1,9 +1,9 @@
-Map exoport
+Map Export
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/QGIS_icon.png
 
-This service allows to export images/results generated on the GEP as a high resolution map for a publication, promotion activities or work on a GIS desktop software. The input image must be in geoTIFF format. The output map is generated on a templated document with the dataset juxtaposed on the background map in the order of inputs for the defined extent and shows the specified title, description, credits, logo  and copyright. The service generates as output:
+This service allows to export images/results generated on the GEP as a high resolution map for a publication, promotion activities or work on a GIS desktop software. The input image must be in geoTIFF format. The output map is generated on a templated document with the dataset juxtaposed on the background map in the order of inputs provided, for the defined extent and shows the specified title, description, credits, logo  and copyright. The service generates as output:
 
 	- a map in PNG format (including a PNG world file)
 	- a map in PDF format 
@@ -13,13 +13,13 @@ This service allows to export images/results generated on the GEP as a high reso
 
 **Inputs supported**
 
-This service supports as input the outputs of other GEP services (i.e. the entries listed when using the “show results”button), provided these are generated in geoTIFF format.
-The image that is the subject of the map must be passed a Main Map.
+This service supports as input the outputs of other GEP services (e.g. the entries listed when using the “show results” button in the job info panel), provided these are generated in geoTIFF format.
+The image that is the subject of the map must be passed as the Input image parameter.
 
 
 **Output specifications**
 
-The service provides the following output products.
+The service provides the following output products:
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – Map - portrait layout 														|
@@ -58,28 +58,28 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* To choose the **Input image** parameter, click on the **show results** button of the service you want to create a QGIS map.
+* To choose the **Input image** parameter, click on the **show results** button of the service job from which you want to create a QGIS map.
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
         :width: 350px
         :align: center
 	
-* Then, on the left side of the panel the results of the chosen service will appear.
+* Then, on the left side of the panel the results of the chosen job will appear.
 
 .. figure:: assets/QGIS_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Select the processing service “MAP Export”:
+* Select the processing service “Map Export”:
 
 .. figure:: assets/QGIS_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* The "MAP Export" panel is displayed with parameters values to be filled-in.
+* The "Map Export" panel is displayed with parameters values to be filled-in.
 
 .. figure:: assets/QGIS_3.png
 	:figclass: align-center
