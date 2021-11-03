@@ -58,21 +58,21 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* To choose the **Input image** parameter for the Map Export service, click on the **show results** button of the service job from which you want to create a QGIS map (e.g. COIN in this case).
+* To choose the **Input image** parameter for the Map Export service, click on the **show results** button of the service job from which you want to create a QGIS map (e.g. a COIN job in this example).
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
         :width: 350px
         :align: center
 	
-* Then, on the left side of the panel the results of the chosen job will appear.
+* Then, on the left side of the geobrowser the ouputs of the chosen job will appear in the results panel.
 
 .. figure:: assets/QGIS_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Select the processing service “Map Export”:
+* Go in the Processing Services panel on the right of the geobrowser and select the processing service “Map Export”:
 
 .. figure:: assets/QGIS_2.png
 	:figclass: align-center
@@ -86,7 +86,7 @@ Select the processing
         :width: 750px
         :align: center
 	
-* Drag and drop the result on the **Input image** parameter.
+* Drag and drop the chosen job output to the **Input image** parameter.
 
 .. figure:: assets/QGIS_4.png
 	:figclass: align-center
@@ -100,11 +100,11 @@ Fill the parameters
 
 The input parameters to provide are:
 
-  - Input image (mandatory): represents the main result of the service that is used as input, such as for example: Sentinel-3 SLSTR composite, where the main map is the pixels that represent a False Colour Infrared RGB composite. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
-  - Background image(s) (not mandatory): secondary results of the service that are used as input
-  - Area of interest (not mandatory): specify the AOI of the service.
-  - World zone name (not mandatory): name of the AOI that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
-  - Map Title ( mandatory): field where the title of the final result is specified. 
+  - Input image (mandatory): represents the output of the job that is the main subject of the map to be generated, such as for example: Sentinel-3 SLSTR composite, where the main map is the pixels that represent a False Colour Infrared RGB composite. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
+  - Background image(s) (not mandatory): secondary results of the job that are used as input.
+  - Area of interest (not mandatory): specify the AOI of the input image considered for the genration of the map.
+  - World zone name (not mandatory): name of the geographical area of the map that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
+  - Map Title (mandatory): the title of the generated map. 
   
   
   .. NOTE:: The length of the string must be  less than or equal to 45 characters.
@@ -185,7 +185,7 @@ In this project we integrated the QGIS software among our services.
 Adding a background layer
 ===================
 
-There is an input parameters: Other map, whose purpose is to add a background layer. If this parameter is empty, google maps will be the background layer.
+The Background image(s) input parameter allows adding a background layer. If this parameter is empty, google maps will be used as the background layer.
 
 Working with the generated QGIS project locally
 ===================
