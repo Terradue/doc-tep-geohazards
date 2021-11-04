@@ -1,9 +1,9 @@
-Map exoport
+Map Export
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: assets/QGIS_icon.png
 
-This service allows to export images/results generated on the GEP as a high resolution map for a publication, promotion activities or work on a GIS desktop software. The input image must be in geoTIFF format. The output map is generated on a templated document with the dataset juxtaposed on the background map in the order of inputs for the defined extent and shows the specified title, description, credits, logo  and copyright. The service generates as output:
+This service allows to export images/results generated on the GEP as a high resolution map for a publication, promotion activities or work on a GIS desktop software. The input image must be in geoTIFF format. The output map is generated on a templated document with the dataset juxtaposed on the background map in the order of inputs provided, for the defined extent and shows the specified title, description, credits, logo  and copyright. The service generates as output:
 
 	- a map in PNG format (including a PNG world file)
 	- a map in PDF format 
@@ -13,13 +13,13 @@ This service allows to export images/results generated on the GEP as a high reso
 
 **Inputs supported**
 
-This service supports as input the outputs of other GEP services (i.e. the entries listed when using the “show results”button), provided these are generated in geoTIFF format.
-The image that is the subject of the map must be passed a Main Map.
+This service supports as input the outputs of other GEP services (e.g. the entries listed when using the “show results” button in the job info panel), provided these are generated in geoTIFF format.
+The image that is the subject of the map must be passed as the Input image parameter.
 
 
 **Output specifications**
 
-The service provides the following output products.
+The service provides the following output products:
 
 +-------------------------------+---------------------------------------------------------------------------------------------------------------+
 | Output – Map - portrait layout 														|
@@ -58,35 +58,35 @@ Select the processing
 
 * Login to the platform (see :doc:`user <../community-guide/user>` section)
 
-* To choose the **Input image** parameter, click on the **show results** button of the service you want to create a QGIS map.
+* To choose the **Input image** parameter for the Map Export service, click on the **show results** button of the service job from which you want to create a QGIS map (e.g. a COIN job in this example).
 
 .. figure:: assets/QGIS.png
 	:figclass: align-center
         :width: 350px
         :align: center
 	
-* Then, on the left side of the panel the results of the chosen service will appear.
+* Then, on the left side of the geobrowser the ouputs of the chosen job will appear in the results panel.
 
 .. figure:: assets/QGIS_1.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* Select the processing service “MAP Export”:
+* Go in the Processing Services panel on the right of the geobrowser and select the processing service “Map Export”:
 
 .. figure:: assets/QGIS_2.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
-* The "MAP Export" panel is displayed with parameters values to be filled-in.
+* The "Map Export" panel is displayed with parameters values to be filled-in.
 
 .. figure:: assets/QGIS_3.png
 	:figclass: align-center
         :width: 750px
         :align: center
 	
-* Drag and drop the result on the **Input image** parameter.
+* Drag and drop the chosen job output to the **Input image** parameter.
 
 .. figure:: assets/QGIS_4.png
 	:figclass: align-center
@@ -100,11 +100,11 @@ Fill the parameters
 
 The input parameters to provide are:
 
-  - Input image (mandatory): represents the main result of the service that is used as input, such as for example: Sentinel-3 SLSTR composite, where the main map is the pixels that represent a False Colour Infrared RGB composite. It must be put as Main map otherwise the result would be overlaid with the others and would no longer be seen in the final .pdf file.
-  - Background image(s) (not mandatory): secondary results of the service that are used as input
-  - Area of interest (not mandatory): specify the AOI of the service.
-  - World zone name (not mandatory): name of the AOI that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
-  - Map Title ( mandatory): field where the title of the final result is specified. 
+  - Input image (mandatory): represents the output of the job that is the main subject of the map to be generated. E.g. in the tutorial exmaple with the COIN service, it is the Coherence and Intensity RGB composite.
+  - Background image(s) (not mandatory): secondary results of the job to be used as background or to overlay multiple images.
+  - Area of interest (not mandatory): specify the AOI of the input image considered for the genration of the map.
+  - World zone name (not mandatory): name of the geographical area of the map that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
+  - Map Title (mandatory): the title of the generated map. 
   
   
   .. NOTE:: The length of the string must be  less than or equal to 45 characters.
@@ -174,7 +174,7 @@ In this project we integrated the QGIS software among our services.
   - **PNG file for each layout**
   - **QGIS file that must be opened directly with QGIS**
   
-* To dowloand the results, double click on the result that you want to download and then, click on *Download* button. Finally, choose the file format
+* To download the results, double click on the item of your interest and then, click on *Download* button. Finally, choose the preferred file format
 
 .. figure:: assets/QGIS_10.png
 	:figclass: align-center
@@ -185,7 +185,7 @@ In this project we integrated the QGIS software among our services.
 Adding a background layer
 ===================
 
-There is an input parameters: Other map, whose purpose is to add a background layer. If this parameter is empty, google maps will be the background layer.
+The Background image(s) input parameter allows adding a background layer to the map. If this parameter is left empty, google maps will be used as the background layer.
 
 Working with the generated QGIS project locally
 ===================
