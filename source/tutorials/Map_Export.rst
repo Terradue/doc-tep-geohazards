@@ -102,6 +102,10 @@ The input parameters to provide are:
 
   - Input image (mandatory): represents the output of the job that is the main subject of the map to be generated. E.g. in the tutorial exmaple with the COIN service, it is the Coherence and Intensity RGB composite.
   - Background image(s) (not mandatory): secondary results of the job to be used as background or to overlay multiple images.
+  
+  
+  .. NOTE:: The Background image(s) input parameter allows adding a background layer to the map. If this parameter is left empty, google maps will be used as the background layer.
+  
   - Area of interest (not mandatory): specify the AOI of the input image considered for the genration of the map.
   - World zone name (not mandatory): name of the geographical area of the map that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
   - Map Title (mandatory): the title of the generated map. 
@@ -129,8 +133,7 @@ The input parameters to provide are:
         :width: 350px
         :align: center
         
-Once downloaded and extracted, the QGIS project can be opened with QGIS.
-
+	
 Run the job
 ===========
 
@@ -181,14 +184,12 @@ In this project we integrated the QGIS software among our services.
         :width: 350px
         :align: center
   
-        
-Adding a background layer
-===================
-
-The Background image(s) input parameter allows adding a background layer to the map. If this parameter is left empty, google maps will be used as the background layer.
 
 Working with the generated QGIS project locally
 ===================
+
+Once downloaded and extracted, the QGIS project can be opened with QGIS.
+
 
 To access the layouts, you need to download the QGIS project and open it with QGIS. 
 
