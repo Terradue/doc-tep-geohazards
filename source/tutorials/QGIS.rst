@@ -100,8 +100,8 @@ Fill the parameters
 
 The input parameters to provide are:
 
-  - Input image (mandatory): represents the output of the job that is the main subject of the map to be generated. In the tutorial exmaple with the COIN service, it is the Coherence and Intensity RGB composite.
-  - Background image(s) (not mandatory): secondary results of the job that are used as input.
+  - Input image (mandatory): represents the output of the job that is the main subject of the map to be generated. E.g. in the tutorial exmaple with the COIN service, it is the Coherence and Intensity RGB composite.
+  - Background image(s) (not mandatory): secondary results of the job to be used as background or to overlay multiple images.
   - Area of interest (not mandatory): specify the AOI of the input image considered for the genration of the map.
   - World zone name (not mandatory): name of the geographical area of the map that, if specified, appears in the legend of the final results. If not specified, the field will be filled in by the string: “Area of interest”.
   - Map Title (mandatory): the title of the generated map. 
