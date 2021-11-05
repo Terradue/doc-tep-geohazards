@@ -1,6 +1,7 @@
 Flow-R: Flow Path Assessment of Gravitational Hazards at a Regional Scale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 by Terranum Ltd (Switzerland)
+
 .. figure:: assets/flowr_logo.jpg
         :width: 200px
  
@@ -91,13 +92,13 @@ This section describes the different parameters of the **Flow-R** service.
 
 .. figure:: assets/flowr_parameters2.png
 	:figclass: align-center
-		:width: 550px
+		:width: 350px
 		:align: center
  
 
 .. figure:: assets/flowr_jobinfo1.png
 	:figclass: align-center
-		:width: 550px
+		:width: 350px
 		:align: center
  
 
@@ -128,7 +129,7 @@ Following hazard presets are currently implemented:
 
 .. figure:: assets/flowr_jobinfo2.png
 	:figclass: align-center
-		:width: 550px
+		:width: 350px
 		:align: center
  
 
