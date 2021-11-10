@@ -23,14 +23,13 @@ Beside the service parameters an archive folder containing the training set, the
     - A shapefile (*.shp file format) containing all the segments with the associated probability to be a landslide.
     - An image (geotiff file format) containing all landslides detected at an F1 and at an F2 optimal thresholds (binary classification).
     - One report (*.pdf file) presenting in a first part the cross-validation quality of the detection and in a second part the probability density and the frequency density of landslide areas.
-    
+ 
 -----
 
-This tutorial introduces to the use of the ALADIM-VHR service from VHR multispectral images. To this end, we will process a couple of Spot6/Spot7 images acquired before and after `Hurricane Matthew`_ which hit Haiti in October 2016. The images are available through the CEOS Recovery Observatory Haïti.
+This tutorial introduces to the use of the ALADIM-VHR service from VHR multispectral images. To this end, we will process a couple of Spot6/Spot7 images acquired before and after  `Hurricane Matthew`_ which hit Haiti in October 2016. The images are available through the `CEOS`_ Recovery Observatory Haïti.
 
-.. _`Matthew Hurricane`: https://en.wikipedia.org/wiki/Hurricane_Matthew
-.. _`CEOS Recovery Observatory`: http://ceos.org/ourwork/workinggroups/disasters/recovery-observatory/
-
+.. _`Hurricane Matthew`: https://en.wikipedia.org/wiki/Hurricane_Matthew
+.. _`CEOS`: http://ceos.org/ourwork/workinggroups/disasters/recovery-observatory
 
 Select the processing service
 ==============================
@@ -161,6 +160,9 @@ Run the job
         :width: 750px
         :align: center
 
+* The image with the names *landslide_inventory_map* (i.e.the landslide inventory map which appears in the results) is binary classifications of shapefile with the name *landslide_inventory_map_full* (i.e. the whole map with probability) using the `F-scores`_ as a measure of model’s accuracy on the dataset. F-scores are used to evaluate binary classification systems, which classify examples into ‘positive, e.g. presence’ or ‘negative, e.g. absence’. The F-score is defined as the harmonic mean of the model’s precision and recall. Two scores are used: F-1 considers both precision and recall to be equally important in the model and F-2 considers recall to be twice as important as precision in the model.
+
+.. _`F-scores`: https://en.wikipedia.org/wiki/F-score
 
 References
 ==========
