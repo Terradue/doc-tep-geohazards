@@ -3,7 +3,7 @@ Flow-R: Flow Path Assessment of Gravitational Hazards at a Regional Scale
 by Terranum Sàrl (Switzerland)
 
 .. figure:: assets/flowr_logo.jpg
-        :width: 200px
+	:width: 200px
 
 1. Introduction
 ===============
@@ -54,8 +54,8 @@ The **Flow-R** service on GEP (hereafter called **Flow-R on GEP**) contains para
 
 .. figure:: assets/flowr_processing_service.png
 	:figclass: align-center
-		:width: 850px
-		:align: center
+	:width: 850px
+	:align: center
  
 2.2 Preparation of input data
 -----------------------------
@@ -69,8 +69,8 @@ This section describes the preparation of input data required for the **Flow-R**
 
 .. figure:: assets/flowr_parameters1.png
 	:figclass: align-center
-		:width: 850px
-		:align: center
+	:width: 850px
+	:align: center
  
 * Upload the user-defined source areas and optionally a custom DEM to your private storage on the GEP using the **Upload Data** button in the menu bar on the top. From the drop-down list under *Target Repository*, select your GEP username and keep the default *Target path* (i.e., “/results”)
 
@@ -91,7 +91,7 @@ This section describes the different parameters of the **Flow-R** service on GEP
 
 * **DEM Source**: choose the data source of the DEM from the drop-down list, i.e., *Copernicus Europe (10 m)* (10 m cell size) [2]_, *Copernicus World (30 m)* (30 m cell size) [2]_ or *Upload local DEM*.
 
-.. NOTE:: if the *Copernicus Europe (10 m)* DEM is selected as *DEM Source* but not available over the chosen AOI, the **Flow-R** service automatically switches to the *Copernicus World (30 m)* DEM.
+.. NOTE:: If *Copernicus Europe (10 m)* is selected as *DEM Source* but not available over the chosen AOI, the **Flow-R** service automatically switches to the *Copernicus World (30 m)* DEM.
 
 * **Input third-party DEM**: specify the user-provided DEM previously uploaded to the private storage on GEP (see above). This parameter is only required if the *Upload local DEM* is selected under **DEM Source**.
 * **Source areas**: specify the source areas of the mass movement previously uploaded to the private storage on GEP (see above) or from outputs of other GEP services.
@@ -109,13 +109,13 @@ This section describes the different parameters of the **Flow-R** service on GEP
 
 .. figure:: assets/flowr_parameters2.png
 	:figclass: align-center
-		:width: 550px
-		:align: center
+	:width: 550px
+	:align: center
  
 .. figure:: assets/flowr_jobinfo1.png
 	:figclass: align-center
-		:width: 550px
-		:align: center
+	:width: 550px
+	:align: center
  
 
 2.4 Flow-R hazard types
@@ -148,29 +148,29 @@ This section describes the different parameters of the **Flow-R** service on GEP
 * Check the modelling progress in the *Jobs* tab under “Processing Services” or in the detailed job information window (if necessary, refresh the job status by clicking on the status button)
 * Once the **Flow-R** model run is successfully completed, click on the *Show results* button at the bottom of the job information window.
 
-..NOTE:: Clicking on the *Contact Service Provider* button under “Commercial Support” opens the contact form for **Flow-R advanced** modelling as detailed in section `4. Flow-R advanced processing`_.
+.. NOTE:: Clicking on the *Contact Service Provider* button under “Commercial Support” opens the contact form for **Flow-R advanced** modelling as detailed in section `4. Flow-R advanced processing`_.
 
 .. figure:: assets/flowr_jobinfo2.png
 	:figclass: align-center
-		:width: 550px
-		:align: center
+	:width: 550px
+	:align: center
  
 * The **Flow-R** modelling results are displayed on the map of the geobrowser and listed in the *Results* tab in the window on the left side. The results comprise a hillshade of the DEM, the source areas, and the runout areas. Moreover, the results contain two archive files (TGZ format that can be downloaded and directly opened on your computer): one with the raw outputs (…output.tgz) and one with the rendered preview files (…preview.tgz)
 
-..NOTE:: The runout areas are binary maps with the value of 1 for areas reached by the mass movement and the value of 0 for areas not reached. These runout areas discard pixels with a maximum reach susceptibility smaller than 0.005 (see Horton et al. (2013) [1]_ for details).
+.. NOTE:: The runout areas are binary maps with the value of 1 for areas reached by the mass movement and the value of 0 for areas not reached. These runout areas discard pixels with a maximum reach susceptibility smaller than 0.005 (see Horton et al. (2013) [1]_ for details).
 
 .. figure:: assets/flowr_results.png
 	:figclass: align-center
-		:width: 850px
-		:align: center
+	:width: 850px
+	:align: center
  
 * To download the results, select the output.tgz file in the “Results” tab and click on the folder icon “Show details” in the lower right corner. Then, click on the “Download” button in the lower left corner.
 * Unpack the TGZ file and add the Flow-R modelling results to your GIS software.
 
 .. figure:: assets/flowr_results_download.png
 	:figclass: align-center
-		:width: 650px
-		:align: center
+	:width: 650px
+	:align: center
  
 4. Flow-R advanced processing
 =============================
@@ -188,8 +188,8 @@ Moreover, Terranum has broad expertise in the assessment of source areas for all
 
 .. figure:: assets/flowr_advanced_comparison.png
 	:figclass: align-center
-		:width: 850px
-		:align: center
+	:width: 850px
+	:align: center
 		
 Interested by **Flow-R advanced** processing?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -198,10 +198,10 @@ If you want to complement results of a processed **Flow-R on GEP** job with Terr
 	
 .. figure:: assets/flowr_advanced_contact.png
 	:figclass: align-center
-		:width: 550px
-		:align: center
+	:width: 550px
+	:align: center
 
-This opens the contact form for **Flow-R advanced** modelling, which automatically includes the parameterization of the selected **Flow-R** job. Please provide additional information about your request, particularly the study area, required scale/resolution, relevant hazard types and a brief description of available input data (DEM, source areas, datasets for calibration and validation etc.). Ideally, copy the text below and paste it into the *User's notes* section of the contact form. ::
+This opens the contact form for **Flow-R advanced** modelling, which automatically includes the parameterization of the selected **Flow-R** job. Please provide additional information about your request, particularly the study area, required scale/resolution, relevant hazard types and a brief description of available input data (DEM, source areas, datasets for calibration and validation etc.). Ideally, copy the text below and paste it into the *User's notes* section of the contact form.
 
 	I am requesting a quote for Flow-R advanced processing based on this Flow-R job:
 	- Area of interest: [please specify]
@@ -213,10 +213,10 @@ This opens the contact form for **Flow-R advanced** modelling, which automatical
 	
 .. figure:: assets/flowr_contact_service_provider.png
 	:figclass: align-center
-		:width: 700px
-		:align: center
+	:width: 700px
+	:align: center
 
-..NOTE:: For any questions about **Flow-R advanced** processing, you may contact Terranum via https://www.terranum.ch/en/about/
+.. NOTE:: For any questions about **Flow-R advanced** processing, you may contact Terranum via https://www.terranum.ch/en/about/
 
 5. Feedback
 ===========
@@ -227,7 +227,7 @@ Suggestions and comments about the GEP service delivery are warmly welcomed on c
 6. Terms and Conditions
 =======================
 
-**Intellectual Property Right** | The Intellectual Property Right of the Flow-R service (called “Service” hereafter) lies with Terranum Sàrl (Rue de l’Industrie 35b, CH-1030 Bussigny, Switzerland, called “Terranum”), if not differently specified. By using the Service, you agree to be bound by these **Terms and Conditions** and that they are enforceable like any written negotiated agreement signed by you. In case of any concern with these **Terms and Conditions**, please contact Terranum (mailto:info@terranum.ch) for additional information before using the Service.
+**Intellectual Property Right** | The Intellectual Property Right of the Flow-R service (called “Service” hereafter) lies with Terranum Sàrl (Rue de l’Industrie 35b, CH-1030 Bussigny, Switzerland, called “Terranum”), if not differently specified. By using the Service, you agree to be bound by these *Terms and Conditions* and that they are enforceable like any written negotiated agreement signed by you. In case of any concern with these *Terms and Conditions*, please contact Terranum via https://www.terranum.ch/en/about/ for additional information before using the Service.
 
 **Use** | The Service is available to all GEP users according to a CC-BY license [7]_. There is the possibility that users participate in the cost of service maintenance and operation: these costs are defined case-by-case among the Service provider, Terranum, the Ressource provider, Conectus/EOST, and the Platform operator, Terradue Srl. 
 
