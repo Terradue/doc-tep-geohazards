@@ -43,7 +43,7 @@ Select the processing
 
 .. figure:: assets/iris.png
 	:figclass: align-center
-        :width: 350px
+        :width: 750px
         :align: center
 
 The “Change Detection Analysis” panel is displayed with parameters values to be filled-in.
@@ -79,7 +79,7 @@ Reference image
 
 .. figure:: assets/iris_4.png
 	:figclass: align-center
-        :width: 250px
+        :width: 750px
         :align: center
         
 
@@ -118,7 +118,7 @@ The band to use for the analysis, it can be a number between 1 and 12 or a strin
 
 .. figure:: assets/iris_7.png
 	:figclass: align-center
-        :width: 750px
+        :width: 550px
         :align: center
         
         
@@ -134,7 +134,7 @@ Area Of Interest in WKT (optional)
 
 .. figure:: assets/iris_8.png
 	:figclass: align-center
-        :width: 750px
+        :width: 550px
         :align: center
         
 .. Note:: you can also specify manually a different AOI in WKT format, or draw a new area on the map using the search tool and get its value from the *Magic tool wizard*.
@@ -147,7 +147,7 @@ Run the job
 
 .. figure:: assets/iris_9.png
 	:figclass: align-center
-        :width: 350px
+        :width: 750px
         :align: center
 
 .. figure:: assets/iris_10.png
@@ -159,7 +159,7 @@ Run the job
 
 .. figure:: assets/iris_11.png
 	:figclass: align-center
-        :width: 350px
+        :width: 750px
         :align: center
         
         
