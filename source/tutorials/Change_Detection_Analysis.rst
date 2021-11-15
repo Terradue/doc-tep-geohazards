@@ -71,7 +71,7 @@ Reference image
 
 .. figure:: assets/iris_3.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
 
 * Click on the lens icon to open the Search Panel and select **S2MSI1C** or **S2MSI2A** as Product Type in the Search Panel.
