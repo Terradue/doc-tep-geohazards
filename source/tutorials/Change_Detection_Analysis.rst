@@ -79,7 +79,7 @@ Reference image
 
 .. figure:: assets/iris_4.png
 	:figclass: align-center
-        :width: 750px
+        :width: 450px
         :align: center
         
 
@@ -147,7 +147,7 @@ Run the job
 
 .. figure:: assets/iris_9.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
 
 .. figure:: assets/iris_10.png
@@ -159,7 +159,7 @@ Run the job
 
 .. figure:: assets/iris_11.png
 	:figclass: align-center
-        :width: 750px
+        :width: 350px
         :align: center
         
         
