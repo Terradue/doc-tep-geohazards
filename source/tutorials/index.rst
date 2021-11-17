@@ -12,6 +12,7 @@ Contents:
    ALADIM-HR: Automatic LAndslide Detection and Inventory Mapping from multispectral S2 & L8 data<aladim-hr>
    ALADIM-VHR: Automatic LAndslide Detection and Inventory Mapping from multispectral Very-High Resolution data<aladim_vhr>
    Burned Area Analysis with Sentinel-2<burned-area>
+   Change Detection Analysis<Change_Detection_Analysis>
    COIN – Coherence and Intensity change for Sentinel-1<rss_snap_s1_coin>
    COLOC - Multi-mission data co-location<rss_multimission_coloc>
    COMBI - Band Combination<rss_combi>

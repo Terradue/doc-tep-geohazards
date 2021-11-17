@@ -3,7 +3,7 @@ Flow-R: Flow Path Assessment of Gravitational Hazards at a Regional Scale
 by Terranum Sàrl (Switzerland)
 
 .. figure:: assets/flowr_logo.jpg
-	:width: 200px
+	:width: 100px
 
 1. Introduction
 ===============
@@ -109,12 +109,12 @@ This section describes the different parameters of the **Flow-R** service on GEP
 
 .. figure:: assets/flowr_parameters2.png
 	:figclass: align-center
-	:width: 550px
+	:width: 350px
 	:align: center
  
 .. figure:: assets/flowr_jobinfo1.png
 	:figclass: align-center
-	:width: 550px
+	:width: 350px
 	:align: center
  
 
@@ -152,7 +152,7 @@ This section describes the different parameters of the **Flow-R** service on GEP
 
 .. figure:: assets/flowr_jobinfo2.png
 	:figclass: align-center
-	:width: 550px
+	:width: 350px
 	:align: center
  
 * The **Flow-R** modelling results are displayed on the map of the geobrowser and listed in the *Results* tab in the window on the left side. The results comprise a hillshade of the DEM, the source areas, and the runout areas. Moreover, the results contain two archive files (TGZ format that can be downloaded and directly opened on your computer): one with the raw outputs (…output.tgz) and one with the rendered preview files (…preview.tgz)
@@ -190,26 +190,28 @@ Moreover, Terranum has broad expertise in the assessment of source areas for all
 	:figclass: align-center
 	:width: 850px
 	:align: center
+
 		
 Interested by **Flow-R advanced** processing?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 If you want to complement results of a processed **Flow-R on GEP** job with Terranum's advanced processing, send a request to Terranum by clicking on the *Contact Service Provider* button under “Commercial Support” in the detailed job information window.
 	
 .. figure:: assets/flowr_advanced_contact.png
 	:figclass: align-center
-	:width: 550px
+	:width: 350px
 	:align: center
 
-This opens the contact form for **Flow-R advanced** modelling, which automatically includes the parameterization of the selected **Flow-R** job. Please provide additional information about your request, particularly the study area, required scale/resolution, relevant hazard types and a brief description of available input data (DEM, source areas, datasets for calibration and validation etc.). Ideally, copy the text below and paste it into the *User's notes* section of the contact form.
+This opens the contact form for **Flow-R advanced** modelling, which automatically includes the parameterization of the selected **Flow-R** job. Please provide additional information about your request, particularly the study area, required scale/resolution, relevant hazard types and a brief description of available input data (DEM, source areas, datasets for calibration and validation etc.). Ideally, copy the text below and paste it into the *User's notes* section of the contact form:
 
-	I am requesting a quote for Flow-R advanced processing based on this Flow-R job:
-	- Area of interest: [please specify]
-	- Study scale/resolution: [ ] Medium (25m, 1:500'000) / [ ] High (10m, 1:25'000) / [ ] Very high (5m, 1:10'000)
-	- Hazard type: [ ] Shallow landslide / [ ] Mudflow / [ ] Debris flow / [ ] Rockfall / [ ] Rock avalanche / [ ] Snow avalanche
-	- Available geodatasets: [ ] Landslide inventory / [ ] Local DEM / [ ] Geological map / [ ] Land-use map
-	- Additional information: [please add]
-	- Contact information: [please specify your name, institution and e-mail address]
+I am requesting a quote for Flow-R advanced processing based on this Flow-R job:
+
+* Area of interest: [please specify]
+* Study scale/resolution: [ ] Medium (25m, 1:500'000) / [ ] High (10m, 1:25'000) / [ ] Very high (5m, 1:10'000)
+* Hazard type: [ ] Shallow landslide / [ ] Mudflow / [ ] Debris flow / [ ] Rockfall / [ ] Rock avalanche / [ ] Snow avalanche
+* Available geodatasets: [ ] Landslide inventory / [ ] Local DEM / [ ] Geological map / [ ] Land-use map
+* Additional information: [please add]
+* Contact information: [please specify your name, institution and e-mail address]
 	
 .. figure:: assets/flowr_contact_service_provider.png
 	:figclass: align-center
