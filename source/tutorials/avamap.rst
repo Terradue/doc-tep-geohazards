@@ -2,6 +2,9 @@ AVAMAP - Snow Avalanche mapping from Sentinel-1 data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 by NORCE AS
 
+.. figure:: assets/norce_logo.png
+	:width: 100px
+
 .. figure:: assets/avamap_logo.png
 	:width: 100px
 
