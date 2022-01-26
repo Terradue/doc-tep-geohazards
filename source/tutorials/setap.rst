@@ -227,6 +227,22 @@ Run the job
    :width: 750px
    :align: center
 
+
+Share results
+=============
+
+Once the job execution has been completed, it is strongly recommended to
+share results with other GEP users.
+
+Please refer to the :ref:`community-guide-sharing-label` section for
+detailed instructions about how to share jobs and the produced ETAD products.
+
+.. figure:: assets/tuto_setap_7.png
+   :figclass: align-center
+   :width: 350px
+   :align: center
+
+
 -----
 
 .. _how-to-use-label:
