@@ -22,7 +22,7 @@ different ancillary data sources such as IGS and ECMWF.
 .. _data-sources-label:
 **EO sources supported**:
 
-* **Sentinel-1 SLC**: standard Sentinel-1 L1A products
+.. * **Sentinel-1 SLC**: standard Sentinel-1 L1A products
 * **Sentinel-1 Annotations**: Sentinel-1 L1A products containing only the
   XML annotations.
   The information contained in XML annotation is the only one used by
@@ -54,7 +54,7 @@ for the best service usage experience.
 
 The main user actions are the following:
 
-* select the desired data source ("Sentinel-1 SLC" or "Sentinel-1 Annotations")
+.. * select the desired data source ("Sentinel-1 SLC" or "Sentinel-1 Annotations")
 * select the input SAR SLC data to be processed
 * optionally set input parameters for processing (default values shall be
   fine for all use cases). See also the `Fill the parameter values`_ section)
@@ -86,13 +86,13 @@ Select the processing
 Select the files to process
 ===========================
 
-* Select the data source (see also the
-  :ref:`community-guide-platform-geobrowser-context-menu-label` section).
+.. * Select the data source (see also the
+     :ref:`community-guide-platform-geobrowser-context-menu-label` section).
 
-.. figure:: assets/tuto_setap_2.png
-   :figclass: align-center
-   :width: 750px
-   :align: center
+   .. figure:: assets/tuto_setap_2.png
+      :figclass: align-center
+      :width: 750px
+      :align: center
 
 
 * Filter and select data for your job as described in the
@@ -226,6 +226,22 @@ Run the job
    :figclass: align-center
    :width: 750px
    :align: center
+
+
+Share results
+=============
+
+Once the job execution has been completed, it is strongly recommended to
+share results with other GEP users.
+
+Please refer to the :ref:`community-guide-sharing-label` section for
+detailed instructions about how to share jobs and the produced ETAD products.
+
+.. figure:: assets/tuto_setap_7.png
+   :figclass: align-center
+   :width: 350px
+   :align: center
+
 
 -----
 
