@@ -106,7 +106,7 @@ Set the processing parameters
 -----------------------------
 
 
-There is a total of 6 processing parameters. When hovering over the parameter fields, you will see a short explanation for each of the parameters.
+There is a total of 11 processing parameters. When hovering over the parameter fields, you will see a short explanation for each of the parameters.
 
 The figure below summarizes the parameter settings for this test.
 
@@ -116,9 +116,15 @@ The figure below summarizes the parameter settings for this test.
         :align: center
 
 
-* **Image: VHR sensor:** The types of VHR sensors currently supported are Pléiades, SPOT6/7, Planets (Dove) and Geo-Eye). If none of this sensor type is recognized, the 4 bands of the image have to be ordered with Band1=Blue, Band2=Green, Band3=Red, Band4=NIR.
+* **Image: VHR sensor:** The types of VHR sensors currently supported are Pléiades, SPOT6/7, Planets (Dove) and Geo-Eye).
 * **Image: Fusion of multispectral and panchromatic images:** If set True, a fusion between the multispectral and the panchromatic images is performed (using a meanshift pansharpening approach).
 * **Use OSM classes:** Open Street Maps (OSM) classes used to exclude areas from the classification. The choice is defined by the user with the “OSM Tags” (see www.geofabrik.de/data/geofabrik-osm-gis-standard-0.7.pdf, pages 25-26).
+* **Use HOG (Histogram Of Gradient) attributes:** If set to True the HOG attributes will be computed and integrated in the classification
+* **Spectral indice set used:** If set to basic, the main spectral indices (17) will be computed and integrated in the classification. If set to advanced a large number (30) of spectral indices will be computed and integrated in the classification. The indices integrate with the advanced choice and not the basic one are dedicated to vegetation puropses. The advanced choice will increase the computation time.
+* **Use DEM derivated attributes:** If set to True the DEM derivated attributes will be computed and integrated in the classification
+* **Use textural attributes:** If set to True the textural attributes will be computed and integrated in the classification
+* **Use morphometric attributes:** If set to True the morphometric attributes will be computed and integrated in the classification
+* **Image: Multispectral band order:** Order of the bands for the multispectral image(s).
 * **Image: Homogeneity:** Defines the homogeneity (low) or diversity (high) of the segment radiometry (see examples below).
 * **Image: Minimum segment size (pixel):** Defines the minimal size of the segments (to be merged with their most similar neighbors or to be deleted if isolated).
 
