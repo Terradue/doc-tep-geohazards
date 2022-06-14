@@ -356,6 +356,7 @@ By using the default value of zero for both coordinates, no reference point is c
 	Y
 	
 
+.. NOTE:: In some cases like volcanic eruption, it is recommended to set the Atmospheric spatio-temporal filtering "off".
 .. NOTE:: It is highly recommended to apply both SCLA Error removal and atmospheric filtering for optimal PSI time series results. Please note that atmospheric filtering is fixed to a temporal window of one year. 
 
 .. figure:: assets/snapping_psi_4.png
