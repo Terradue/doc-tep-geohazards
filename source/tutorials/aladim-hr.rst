@@ -21,9 +21,9 @@ ALADIM-HR is developed by CNRS-EOST (Strasbourg, France). It allows to detect an
 
 -----
 
-This tutorial introduces to the use of the service for the detection and the mapping of landslides from HR multispectral images. To this end, we will process a couple of Sentinel-2 images acquired before and after the `Idai Cyclone`_ which hit Mozambique on 14 March 2019.
+This tutorial introduces to the use of the service for the detection and the mapping of landslides from HR multispectral images (`Job example`_). To this end, we will process a couple of Sentinel-2 images acquired before and after the `Idai Cyclone`_ which hit Mozambique on 14 March 2019.
 
-.. _`Cyclone Idai`: https://en.wikipedia.org/wiki/Cyclone_Idai
+.. _`Idai Cyclone`: https://en.wikipedia.org/wiki/Cyclone_Idai
 
 Select the processing service
 =============================
@@ -157,15 +157,22 @@ Run the job
         :width: 750px
         :align: center
 	
-* Once the job has finished, click on the *Show results* button to get a list and a pre-visualization of the results.
+* Once the job has finished, click on the *Show results* button to get a list and a pre-visualization of the results (`Job example`_).
 
 .. note:: The pre-visualization in the *Geobrowser* is just a preview and the user is encouraged to download the results for further analysis and post-processing.
 
-.. figure:: assets/aladim_tuto_img13.png
+.. figure:: assets/aladimHR_tuto_img15.png
+	:figclass: align-center
+        :width: 750px
+        :align: center
+	
+	
+.. figure:: assets/aladimHR_tuto_img16.png
 	:figclass: align-center
         :width: 750px
         :align: center
 
+.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D6cae5280-99a9-4ab9-bd84-433682e31951%26key%3D7bc499ce-f65f-4ee0-b682-a022511674c3
 References
 ==========
 

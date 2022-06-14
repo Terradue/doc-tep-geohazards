@@ -26,7 +26,7 @@ Beside the service parameters an archive folder containing the training set, the
  
 -----
 
-This tutorial introduces to the use of the ALADIM-VHR service from VHR multispectral images. To this end, we will process a couple of Spot6/Spot7 images acquired before and after  `Hurricane Matthew`_ which hit Haiti in October 2016. The images are available through the `CEOS`_ Recovery Observatory Haïti.
+This tutorial introduces to the use of the ALADIM-VHR service from VHR multispectral images. To this end, we will process a couple of Spot6/Spot7 images acquired before and after  `Hurricane Matthew`_ which hit Haiti in October 2016 (`Job example`_). The images are available through the `CEOS`_ Recovery Observatory Haïti.
 
 .. _`Hurricane Matthew`: https://en.wikipedia.org/wiki/Hurricane_Matthew
 .. _`CEOS`: http://ceos.org/ourwork/workinggroups/disasters/recovery-observatory
@@ -157,7 +157,7 @@ Run the job
         :width: 750px
         :align: center
 
-* Once the job has finished, click on the *Show results* button to get a list and a preview of the results.
+* Once the job has finished, click on the *Show results* button to get a list and a preview of the results (`Job example`_).
 
 .. note:: The preview in the *Geobrowser* is a degraded image and the user is encouraged to download the results for further analysis and post-processing.
 
@@ -169,6 +169,8 @@ Run the job
 * The image with the names *landslide_inventory_map* (i.e.the landslide inventory map which appears in the results) is binary classifications of shapefile with the name *landslide_inventory_map_full* (i.e. the whole map with probability) using the `F-scores`_ as a measure of model’s accuracy on the dataset. F-scores are used to evaluate binary classification systems, which classify examples into ‘positive, e.g. presence’ or ‘negative, e.g. absence’. The F-score is defined as the harmonic mean of the model’s precision and recall. Two scores are used: F-1 considers both precision and recall to be equally important in the model and F-2 considers recall to be twice as important as precision in the model.
 
 .. _`F-scores`: https://en.wikipedia.org/wiki/F-score
+
+.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dcbb26b44-a6fa-43d9-b6e0-bed97ba50d6e%26key%3Dd5167026-6693-43e1-8309-10bf22345d14
 
 References
 ==========
