@@ -40,12 +40,12 @@ Figure: Definition of the Optical Flow variables (from [3]_).
 3) What kind of movement can be measured?
 =========================================
 
-These approaches can measured the pixel motion in the two dimensions of the images. In the case of optical images acquired by space-borne sensor such as the Copernicus Sentinel-2 satellites, the images (Level L1C) are coregistered and collocated in the geographical reference. The MPIC-OPT service can hence measure the **displacement of the pixels in the North-South and East-West directions**. **No vertical motion** is provided by the MPIC-OPT services. Moreover, Image Matching precision is usually of 1/10th to 1/5th of pixel meaning it can detect motion of this magnitude (or larger). In the case of Sentinel-2, the pixel size is 10 meters so the precision is around 1 to 2 meters. Hence, **only movement equal or larger than 1 or 2 meters between two dates of Sentinel-2 acquisition can be measure by the MPIC-OPT services**. However, the current archive of Sentinel-2 is 4 years long so **a motion of 0.25 m/year (1 meter over 4 years) to 0.5 m/year (2 meter over 4 years) can be currently monitored by the MPIC-OPT**. See question 5 for more detailed on the precision.
+These approaches can measured the pixel motion in the two dimensions of the images. In the case of optical images acquired by space-borne sensor such as the Copernicus Sentinel-2 satellites, the images (Level L1C) are coregistered and collocated in the geographical reference. The MPIC-OPT service can hence measure the **displacement of the pixels in the North-South and East-West directions**. **No vertical motion** is provided by the MPIC-OPT services. Moreover, Image Matching precision is usually of 1/10th to 1/5th of pixel meaning it can detect motion of this magnitude (or larger). In the case of Sentinel-2, the pixel size is 10 meters so the precision is around 1 to 2 meters. Hence, **only movement equal or larger than 1 or 2 meters between two dates of Sentinel-2 acquisition can be measure by the MPIC-OPT services**. 
 
 4) How to select the input images?
 ==================================
 
-The user can visualize which tile of the Sentinel-2 acquisitions encompasses the better his Area of Interest (AOI). MPIC-OPT is ingesting only Sentinel-2 L1C images so the user should set the proper filter to retrieve the full archive of L1C acquisitions. 
+The user can visualize which tile of the Sentinel-2 acquisitions encompasses the better his Area of Interest (AOI). Only **Sentinel-2 L1C images** are ingested by MPIC-OPT so the user should set the proper filter to retrieve the full archive of L1C acquisitions. 
 
 .. image:: assets/tuto_faq_mpic_Figure2.png
 
@@ -53,12 +53,12 @@ In order to reduce the computing time and resources used, it is strongly advised
 
 .. image:: assets/tuto_faq_mpic_Figure3.png
 
-Moreover, it is advised to select images of the same relative orbit by filtering the « track » of interest. Indeed, several studies have shown the existence of systemic shift between Sentinel-2 acquisitions of different relative orbits, increasing the noise in the displacement estimation.
+Moreover, it is advised to select images of the same relative orbit by filtering the « track » of interest to reduce systemic shift between Sentinel-2 acquisitions of different relative orbits and increase the noise in the displacement estimation.
 
 5) How to set the minimum and maximum matching range parameters?
 ================================================================
 
-The definition of these parameters especially the minimum matching range is critical to retrieve the correct magnitude of the ground velocity. One can see the influence of these parameters over the European Alps (Figure X) where short temporal baselines (0-100 days) provide a measure of fast motion (> 200 m/year) on the upper part of several glaciers while long temporal baselines (500-1500 days) provide a measure of slow motion (< 50 m/year) on the lower part of some glaciers.
+The definition of these parameters, especially the minimum matching range, is critical to retrieve the correct magnitude of the ground velocity. One can see the influence of these parameters over the European Alps (Figure below) where short temporal baselines (0-100 days) provide a measure of fast motion (> 200 m/year) on the upper part of several glaciers while long temporal baselines (500-1500 days) provide a measure of slow motion (< 50 m/year) on the lower part of some glaciers.
 
 .. image:: assets/tuto_faq_mpic_Figure4.png
 
@@ -73,15 +73,13 @@ Of course, « slow » and « fast » are relative terms. If the user knows a
 
 It is difficult to guess in advance the precision of the results so it is strongly advised to consider scenarii with worse precision. Moreover, [4]_ observed seasonal variations of the precision with a decrease of the precision for pairs of different season that should be taken into account in the computation. 
 
-Finally, if the user has no a priori idea of the ground velocity, it is advised to run a first processing with the option « acquisition » for the parameter « matching mode ». So the pairing will consider successive acquisitions of different cycle lengths to estimate the ground motion. Eventually, a second run will be necessary to improve the SNR of the outputs.
+Finally, if the user has no a priori idea of the ground velocity, it is advised to run a first processing with the option « acquisitions » for the parameter « matching mode ». So the pairing will consider successive acquisitions of different cycle lengths to estimate the ground motion. Eventually, a second run will be necessary to improve the SNR of the outputs.
 
 
 6) How to chose the band?
 =========================
 
 There are three bands accessible for Sentinel-2 inputs: B02 (Blue), B03 (Green), B04 (Red) and B08 (infra-red). The displacement is computed for one of these four bands. As these bands are sensitive to different ground color, the MPIC-OPT outputs may differ using one band or another. It is of the user’s interests to check which motion pattern is visible (or not) using the different bands. By default, band 04 is user as it is the band the Sentinel-2 geometry is calibrated on. For different application other band may be preferable (for instance, glacier studies often use the infra-red band).
-
-.. image:: assets/tuto_faq_mpic_Figure6.png
 
 7) What algorithm to chose between MicMac and GeFolki?
 ======================================================
