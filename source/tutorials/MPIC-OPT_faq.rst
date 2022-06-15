@@ -3,6 +3,21 @@ Frequently Asked Question about MPIC-OPT
 
 This page is answering the frequently Asked Questions about the MPIC-OPT services. It explains briefly the principle of Image Matching techniques and the influence of the main parameters. For more detailed information on each of the MPIC-OPT services (i.e. -ETQ, -ICE and -SLIDE) the user can read their respective tutorial. For more information, the user is referred to the litterature. This guide provides some help and advises about certain parameters. However, the user is responsible for his/her choice and No warranty is provided on the processors and results of the services.
 
+The questions addressed in this FAQ are:
+
+1) What is the principle behind the MPIC-OPT? 
+2) How is the measure performed?
+3) What kind of movement can be measured?
+4) How to select the input images?
+5) How to set the minimum and maximum matching range parameters?
+6) How to chose the band?
+7) What algorithm to chose between MicMac and GeFolki?
+8) How to set the threshold for the correlation in the MicMac algorithm?
+9) What masking option are available and how to chose them?
+10) When setting the across-track (or jitter) correction?
+11) How to set up the inversion parameters?
+
+
 
 1) What is the principle behind the MPIC-OPT?
 =============================================
