@@ -14,8 +14,8 @@ The displacement of the pixel is computed for numerous pairs of images allowing 
 ================================
 
 The MPIC-OPT services offer the possibility to use two different algorithms to measure the pixel motion for each pair of image:
-  * the **MicMac** algorithm [1_ that follows a hierarchical matching scheme using normalized cross-correlation (NCC) with a non-linear cost function and spatial regularization to eliminate outliers. Sub-pixel resolution is achieved through step-wise interpolation of the input images which is computationally expensive but also more precise [2]_.
-  * the **GeFolki** algorithm [3]_ allows the registration of images in a non-parametric and dense way using an Optical Flow approach. The main assumption of Optical Flow is that pixel intensity remains constant from one image to another one: I1(x)=I2(x+u(x)). The algorithm consists in solving this equation. The main limitations of optical flow remain on its sensitivity to strong changes in the images that prevents the technique to retrieve the motion associated to large displacement or to images with strong illumination differences (e.g. winter vs. summer acquisitions).
+  * the **MicMac** algorithm [1]_ that follows a hierarchical matching scheme using normalized cross-correlation (NCC) with a non-linear cost function and spatial regularization to eliminate outliers. Sub-pixel resolution is achieved through step-wise interpolation of the input images which is computationally expensive but also more precise [2]_.
+  * the **GeFolki** algorithm [3]_ allows the registration of images in a non-parametric and dense way using an Optical Flow approach. The main assumption of Optical Flow is that pixel intensity remains constant from one image to another one: I1(x) = I2(x+u(x)). The algorithm consists in solving this equation. The main limitations of optical flow remain on its sensitivity to strong changes in the images that prevents the technique to retrieve the motion associated to large displacement or to images with strong illumination differences (e.g. winter vs. summer acquisitions).
 
 .. image:: assets/tuto_faq_mpic_Figure1.png
    :scale: 10 %
@@ -43,13 +43,13 @@ Moreover, it is advised to select images of the same relative orbit by filtering
 5) How to set the minimum and maximum matching range parameters?
 ================================================================
 
-The definition of these parameters especially the minimum matching range is critical to retrieve the correct magnitude of the ground velocity. One can see the influence of these parameters over the European Alps (Figure X) where short temporal baselines (0-100 days) provide a measure of fast motion (>200m/year) on the upper part of several glaciers while long temporal baselines (500-1500 days) provide a measure of slow motion (<50m/year) on the lower part of some glaciers.
+The definition of these parameters especially the minimum matching range is critical to retrieve the correct magnitude of the ground velocity. One can see the influence of these parameters over the European Alps (Figure X) where short temporal baselines (0-100 days) provide a measure of fast motion (> 200 m/year) on the upper part of several glaciers while long temporal baselines (500-1500 days) provide a measure of slow motion (< 50 m/year) on the lower part of some glaciers.
 
 .. image:: assets/tuto_faq_mpic_Figure4.png
 
 The minimum matching (i.e. the minimum temporal duration to compare two images) is particularly important in the case of slow movement. Indeed, pairs with short temporal baseline are likely to provide no estimation of slow movement and hence will add up noise into the estimation of the ground displacement. Conversely, in the case of fast motion creating pairs with long temporal baselines may introduce noise because of the rapid change of the ground texture preventing a good correlation or constant intensity. 
 
-Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters [4]_. The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
+Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10 m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters [4]_. The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
 
 .. image:: assets/tuto_faq_mpic_Figure5.png
 
@@ -100,10 +100,10 @@ The second masking strategy is based on the correlation threshold that discards 
 
 The across-track correction (also called jitter correction) can remove the high frequency undulation caused by the platform vibrations during the acquisition and visible in certain pairs of Sentinel-2 images. The filter efficiently remove this this undulation allowing to better estimate the ground displacement as can be seen on the Ridgecrest example: 
 
-.. image:: assets/tuto_faq_mpic_Figure92.gif
-   :width: 400
+.. image:: ./assets/tuto_faq_mpic_Figure92.gif
 
 The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity.
+
 
 11) How to set up the inversion parameters?
 ===========================================
