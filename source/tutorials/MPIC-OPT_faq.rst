@@ -111,11 +111,11 @@ The second masking strategy is based on the correlation threshold that discards 
 10) When setting the across-track (or jitter) correction?
 =========================================================
 
-The across-track correction (also called jitter correction) can remove the high frequency undulation caused by the platform vibrations during the acquisition and visible in certain pairs of Sentinel-2 images. The filter efficiently remove this this undulation allowing to better estimate the ground displacement as can be seen on the Ridgecrest example: 
+The across-track correction (also called jitter correction) removes the high frequency undulation caused by the platform vibrations during the acquisition. These undulations are visible in certain pairs of Sentinel-2 images and decrease the accuracy of the measure. The filter integrated in MPIC-OPT is based on a wavelet filter that efficiently removes the undulation allowing a better estimate of the ground displacement as can be seen on the Ridgecrest example: 
 
 .. image:: assets/tuto_faq_mpic_Figure9.png
 
-The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity.
+The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity. More information on the filter can be found in [4]_.
 
 
 11) How to set up the inversion parameters?
@@ -141,6 +141,6 @@ References
 .. [1] Rosu, A. M., Pierrot-Deseilligny, M., Delorme, A., Binet, R., & Klinger, Y. (2015). Measurement of ground displacement from optical satellite image correlation using the free open-source software MicMac. ISPRS Journal of Photogrammetry and Remote Sensing, 100, 48-59.
 .. [2] Stumpf, A., Malet, J.-P. and Delacourt, C. (2017). Correlation of satellite image time-series for the detection and monitoring of slow-moving landslides. Remote Sensing of Environment, 189: 40-55. DOI:10.1016/j.rse.2016.11.007
 .. [3] Brigot, G., Colin-Koeniguer, E., Plyer, A., & Janez, F. (2016). Adaptation and evaluation of an optical flow method applied to coregistration of forest remote sensing images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 9(7), 2923-2939.
-.. [4] Provost, F., Michéa, D., Malet J.-P., Boissier, E., Pointal, E., Stumpf, A., Pacini F., Doin M.-P., Lacroix, P., Bally, P. (submitted). Terrain deformation measurements from optical satellite imagery: the MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment (submitted).
+.. [4] Provost, F., Michéa, D., Malet, J. P., Boissier, E., Pointal, E., Stumpf, A., Pacini, F., Doin, M.-P., Lacroix, P., Proy, C., Bally, P. (2022). Terrain deformation measurements from optical satellite imagery: The MPIC-OPT processing services for geohazards monitoring. Remote Sensing of Environment, 274, 112949.
 .. [5] Bontemps, N., Lacroix, P., & Doin, M. P. (2018). Inversion of deformation fields time-series from optical images, and application to the long term kinematics of slow-moving landslides in Peru. Remote Sensing of Environment, 210, 144-158.
 .. [6] Qiu, S., Zhu, Z., & He, B. (2019). Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote sensing of environment, 231, 111205.
