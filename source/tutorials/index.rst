@@ -48,3 +48,4 @@ Contents:
    SRTM Digital Elevation Model<srtm>
    StaMPS Permanent Scatterer<stamps-ps>
    STEMP - Surface Temperature Map<stemp>
+   VolToo - VOLume TOOl for empirical assessment of landslide volumes<VolToo>
