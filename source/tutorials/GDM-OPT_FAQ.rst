@@ -1,7 +1,7 @@
 Frequently Asked Questions about GDM-OPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This page is answering the frequently Asked Questions about the GDM-OPT services. It explains briefly the principle of Image Matching techniques and the influence of the main parameters. For more detailed information on each of the MPIC-OPT services (i.e. -ETQ, -ICE and -SLIDE) the user can read their respective tutorial. For more information, the user is referred to the litterature. This guide provides some help and advises about certain parameters. However, the user is responsible for his/her choice and No warranty is provided on the processors and results of the services.
+This page is answering the frequently Asked Questions about the GDM-OPT services. It explains briefly the principle of Image Matching techniques and the influence of the main parameters. For more detailed information on each of the GDM-OPT services (i.e. -ETQ, -ICE and -SLIDE) the user can read their respective tutorial. For more information, the user is referred to the litterature. This guide provides some help and advises about certain parameters. However, the user is responsible for his/her choice and No warranty is provided on the processors and results of the services.
 
 The questions addressed in this FAQ are:
 
