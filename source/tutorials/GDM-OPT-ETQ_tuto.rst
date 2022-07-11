@@ -1,9 +1,7 @@
 GDM-OPT-ETQ: Multiple Pairwise Image Correlation of OPTical images for EarThQuake analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_mpicetq_logo_small.png
-
-**GDM-OPT-ETQ**
+.. image:: assets/GDM-OPT-ETQ.png
 
 **GDM-OPT** stands for Ground Deformation Monitoring with OPtical image Time-series. The service is developed and maintained by CNRS/EOST (Strasbourg) with contribution of IGN/Matis (Marne-la-Vallée) and CNRS/IPGP (Paris). The service allows the processing of optical image pairs for the monitoring of Earth surface deformation. 
 
