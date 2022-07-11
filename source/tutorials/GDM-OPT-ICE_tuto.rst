@@ -1,7 +1,7 @@
 GDM-OPT-ICE: Ground Deformation Monitoring with OPtical image Time series for ICE/glacier analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_mpicice_logo_small.png
+.. image:: assets/GDM-OPT-ICE.png
 
 **GDM-OPT** stands for Ground Deformation Monitoring with OPtical image Time-series. The service is developed and maintained by CNRS/ITES (Strasbourg) with contribution of IGN/Matis (Marne-la-Vallée), ONERA (Palaiseau) and CNRS/ISTerre (Grenoble). The service allows the processing of optical image pairs for the monitoring of Earth surface deformation. 
 
