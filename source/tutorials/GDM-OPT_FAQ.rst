@@ -35,7 +35,7 @@ The GDM-OPT services offer the possibility to use two different algorithms to me
 .. image:: assets/tuto_faq_mpic_Figure1.png
    :scale: 10 %
 
-Figure: Definition of the Optical Flow variables (from [3]_).
+Figure: Definition of the Optical Flow variables (from [3]).
 
 3) What kind of movement can be measured?
 =========================================
@@ -64,14 +64,14 @@ The definition of these parameters, especially the minimum matching range, is cr
 
 The minimum matching (i.e. the minimum temporal duration to compare two images) is particularly important in the case of slow movement. Indeed, pairs with short temporal baseline are likely to provide no estimation of slow movement and hence will add up noise into the estimation of the ground displacement. Conversely, in the case of fast motion creating pairs with long temporal baselines may introduce noise because of the rapid change of the ground texture preventing a good correlation or constant intensity. 
 
-Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10 m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters [4]_. The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
+Of course, « slow » and « fast » are relative terms. If the user knows approximately the range of velocity he/she is trying to measure the temporal baseline can be computed as: T = s*p/v where T stands for the temporal baseline, s for the image matching precision, p for the pixel size and v for the velocity of the ground. For Sentinel-2, the pixel size is 10 m and the precision of most algorithms range from 1/5th to 1/10th of pixel and highly depends on the chosen parameters/filters [4]. The temporal baseline can hence be retrieved from the a priori knowledge of the ground velocity.
 
 .. image:: assets/tuto_faq_mpic_Figure5.png
 
 .. Note:: *Practical example: The ground velocity is expected to range from 1cm/day to 1m/day. If the parameters are set so that the precision is 1/10th of a pixel, the temporal baseline should range from 1 to 100 days to capture the ground motion (red lines). If the precision is 1/5th of pixel, the temporal baselines should range from 2 to 200 days (green lines).*
 
 
-It is difficult to guess in advance the precision of the results so it is strongly advised to consider scenarii with worse precision. Moreover, [4]_ observed seasonal variations of the precision with a decrease of the precision for pairs of different season that should be taken into account in the computation. 
+It is difficult to guess in advance the precision of the results so it is strongly advised to consider scenarii with worse precision. Moreover, [4] observed seasonal variations of the precision with a decrease of the precision for pairs of different season that should be taken into account in the computation. 
 
 Finally, if the user has no a priori idea of the ground velocity, it is advised to run a first processing with the option « acquisitions » for the parameter « matching mode ». So the pairing will consider successive acquisitions of different cycle lengths to estimate the ground motion. Eventually, a second run will be necessary to improve the SNR of the outputs.
 
@@ -88,21 +88,21 @@ As mentioned in question 2, the two algorithms use different assumptions and com
 
 .. image:: assets/tuto_faq_mpic_Figure7.png
 
-The figure shows the outputs of the two algorithms for the Slumgullion landslide. As one can see the results are slightly noisier for the GeFolki algorithm in comparison with the MicMac algorithm. In general, [4]_ found that the GeFolki performs less good than the MicMac algorithm in term of sub-pixel precision. However, the GeFolki algorithm offer a very efficient and quick solution that can be interesting in the case the user needs a fast results or wants to process many tests at a low cost (i.e. using few computing time and resources).
+The figure shows the outputs of the two algorithms for the Slumgullion landslide. As one can see the results are slightly noisier for the GeFolki algorithm in comparison with the MicMac algorithm. In general, [4] found that the GeFolki performs less good than the MicMac algorithm in term of sub-pixel precision. However, the GeFolki algorithm offer a very efficient and quick solution that can be interesting in the case the user needs a fast results or wants to process many tests at a low cost (i.e. using few computing time and resources).
 
 8) How to set the threshold for the correlation in the MicMac algorithm?
 ========================================================================
 
 .. image:: assets/tuto_faq_mpic_Figure8.png
 
-Another important parameter in the case the user uses the MicMac algorithm is the choice of the correlation threshold. This parameter controls the quality of the correlation and pixel whose Normalize Cross-Correlation values are lower than the threshold will be discarded in the next steps of the processing. The figure shows the influence of this parameter on the mean velocity estimation over the European glaciers. One can observed that setting a high threshold improves the quality of the results by reducing the noise on stable areas (outside glaciers). Moreover, this parameter can be used as an efficient strategy to remove the noise due to the presence of clouds in certain images (see Question 9). However, it should be noted that if the time series inversion (TIO) is computed, setting a high correlation threshold may lead to underestimated displacement time series [4]_.
+Another important parameter in the case the user uses the MicMac algorithm is the choice of the correlation threshold. This parameter controls the quality of the correlation and pixel whose Normalize Cross-Correlation values are lower than the threshold will be discarded in the next steps of the processing. The figure shows the influence of this parameter on the mean velocity estimation over the European glaciers. One can observed that setting a high threshold improves the quality of the results by reducing the noise on stable areas (outside glaciers). Moreover, this parameter can be used as an efficient strategy to remove the noise due to the presence of clouds in certain images (see Question 9). However, it should be noted that if the time series inversion (TIO) is computed, setting a high correlation threshold may lead to underestimated displacement time series [4].
 
 9) What masking option are available and how to chose them?
 ===========================================================
 
 Different masks are performed during the GDM-OPT processing: some are done by default while some other can be activated or not by the user. 
 
-The first masking strategy is done using the *Fmask* algorithm [6]_ that classifies all pixel of the image into five categories: clear land pixel, clear water pixel, cloud, cloud shadow, snow. By default, the clear water surfaces are masked out. The user can chose to mask (or not) cloud (and cloud shadow) and snow. 
+The first masking strategy is done using the *Fmask* algorithm [6] that classifies all pixel of the image into five categories: clear land pixel, clear water pixel, cloud, cloud shadow, snow. By default, the clear water surfaces are masked out. The user can chose to mask (or not) cloud (and cloud shadow) and snow. 
 The automatic detection of cloud areas may be inaccurate leading to mask areas of interest.  For instance, new and fresh outcrop on certain landslide may be classified as cloud. Another strategy to remove cloudy areas in the processing is to increase the correlation threshold as cloudy areas are likely to be uncorrelated (see Question 8 for details on the correlation threshold).
 
 The second masking strategy is based on the correlation threshold that discards pixel with low correlation values. Then, once the displacement fields are computed, filters can be set up to remove unrealistic large magnitude displacements or to filter out displacement in unrealistic direction (e.g. up slope).
@@ -115,7 +115,7 @@ The across-track correction (also called jitter correction) removes the high fre
 
 .. image:: assets/tuto_faq_mpic_Figure9.png
 
-The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity. More information on the filter can be found in [4]_.
+The filter is a directional filter meaning that it removes all ground deformation pattern of a certain frequency (~2 km) in the East-West direction. Consequently, it is not recommended to activate this filter for landslide or glaciers studies located in mountainous areas as the filter may strongly affect the estimation of the ground velocity. More information on the filter can be found in [4].
 
 
 11) How to set up the inversion parameters?
