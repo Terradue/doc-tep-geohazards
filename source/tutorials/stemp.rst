@@ -48,14 +48,14 @@ Fill the parameters
  
 2. Select volcano area to verify if EO input data are available by using the draw a rectangle, polygon or custom WKT filter.
 
-.. figure:: assets/tuto_stemp_3.png
+.. figure:: assets/tuto_stemp_3_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
 All EO input data are visualized, select “hide all” to hide all the data 
 
-.. figure:: assets/tuto_stemp_4.png
+.. figure:: assets/tuto_stemp_4_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center  
