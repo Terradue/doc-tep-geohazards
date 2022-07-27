@@ -1,5 +1,6 @@
 G-POD SBAS Stripmap Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This service ([G-POD SBAS Stripmap GitHub](https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/gpod-sbas-insar.rst)) was made available in the GEP processing services list as part of the GEP Early Adopters Programme (2016-2020).
 
 .. image:: assets/tuto_sbas_icon.png
         

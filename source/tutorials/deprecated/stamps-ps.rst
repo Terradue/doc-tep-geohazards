@@ -1,5 +1,6 @@
 StaMPS Permanent Scatterer processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This service ([StaMPS Permanent Scatterer GitHub](https://github.com/Terradue/doc-tep-geohazards/blob/develop/source/tutorials/stamps-ps.rst)) was made available in the GEP processing services list as part of the GEP Early Adopters Programme (2016-2020).
 
 .. image:: assets/tuto_stamps_icon.png
         
