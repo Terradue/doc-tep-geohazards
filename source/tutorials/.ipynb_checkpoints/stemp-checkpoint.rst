@@ -29,7 +29,7 @@ Select the processing
 1. Login to the platform
 2. Select the processing service (STEMP-S2)
 
-.. figure:: assets/tuto_stemp_1_s2.png
+.. figure:: assets/tuto_stemp_1_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -41,28 +41,28 @@ Fill the parameters
 
 	- Sentinel-2 for STEMP-S2
 
-.. figure:: assets/tuto_stemp_2_s2.png
+.. figure:: assets/tuto_stemp_2_s2-min.png
 	:figclass: align-center
         :width: 300px
         :align: center 
  
 2. Select volcano area to verify if EO input data are available by using the draw a rectangle, polygon or custom WKT filter.
 
-.. figure:: assets/tuto_stemp_3_s2.png
+.. figure:: assets/tuto_stemp_3_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
 All EO input data are visualized, select “hide all” to hide all the data 
 
-.. figure:: assets/tuto_stemp_4_s2.png
+.. figure:: assets/tuto_stemp_4_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center  
 
 3. Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the S-2 data of 11th February 2022. Remind: search data with low/no clouds in the "Advanced search form" on the left panel. 
 
-.. figure:: assets/tuto_stemp_5_s2.png
+.. figure:: assets/tuto_stemp_5_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
@@ -71,7 +71,7 @@ All EO input data are visualized, select “hide all” to hide all the data
 5. Drag and drop the selected S-2 data input into the "Sentinel-2 Input" field. The link to the catalog (e.g. https://catalog.terradue.com/sentinel2/search?format=json&uid=S2A_MSIL1C_20220211T095131_N0400_R079_T33SVB_20220211T120935) will appear. 
 6. Note: the "Job title" and "Sentinel-2 input" can also be imported from a json file ("Import params"), and exported to a json file ("Export params") 
 
-.. figure:: assets/tuto_stemp_6_s2.png
+.. figure:: assets/tuto_stemp_6_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
@@ -81,35 +81,35 @@ Run the job
 
 1. Click on the button "Run job" and see the running job
 
-.. figure:: assets/tuto_stemp_7_s2.png
+.. figure:: assets/tuto_stemp_7_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
 2. See the Running job:
 
-.. figure:: assets/tuto_stemp_8_s2.png
+.. figure:: assets/tuto_stemp_8_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
 3. At the end of the process click on the button "Show results" in the bottom-right corner to see the result on map: 
 
-.. figure:: assets/tuto_stemp_9_s2.png
+.. figure:: assets/tuto_stemp_9_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
  
 4. Result for STEMP-S2 is showed
 
-.. figure:: assets/tuto_stemp_10.png
+.. figure:: assets/tuto_stemp_10_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
-5. Metadata are showed when click on the result map.
+5. Metadata are showed when click on the result map, and results can be downloaded with the "Download" button on the lower-right corner.
  
-.. figure:: assets/tuto_stemp_12.png
+.. figure:: assets/tuto_stemp_11_s2-min.png
 	:figclass: align-center
         :width: 750px
         :align: center 
@@ -121,11 +121,10 @@ Use  the following input for testing service and verify results with the output 
         
 - Select the STEMP-S2 service and use the following information:
         
-        - startDate: 2017-03-26
-        - endDate:  2017-03-26
-        - volcano:   Etna
+        - Job title: *your_job_title*
+        - Sentinel-2 input: *"https://catalog.terradue.com/sentinel2/search?format=json&uid=S2A_MSIL1C_20220211T095131_N0400_R079_T33SVB_20220211T120935"*
 
-Expected result: `T33SVB_20170326T094031_HOT_SPOT-etna.tif 
-<https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
+Expected result: `T33SVB_20220211T095131_HOT_SPOT.tif 
+<https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D703c1c0f-26c5-4816-9b86-f582769881a2%26key%3D23628ee2-b50c-4f64-a17f-df6d973fc766>`.
 
 
