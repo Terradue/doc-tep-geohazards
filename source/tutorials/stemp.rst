@@ -29,7 +29,7 @@ Select the processing
 1. Login to the platform
 2. Select the processing service (STEMP-S2)
 
-.. figure:: assets/tuto_stemp_1.png
+.. figure:: assets/tuto_stemp_1_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center
@@ -60,23 +60,21 @@ All EO input data are visualized, select “hide all” to hide all the data
         :width: 750px
         :align: center  
 
-3. Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the L8 data of 22th Novembere 2017. Remind: search data without clouds. 
+3. Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the S-2 data of 21st Juny 2022. Remind: search data without clouds. 
 
-.. figure:: assets/tuto_stemp_5.png
+.. figure:: assets/tuto_stemp_5_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
-4. Fill the start date of the file
-5. Fill the end date of the file (start and end date must be the same)
-6. Select the volcano name
+4. Define the "Job title"
+5. Drag and drop the selected S-2 data input into the "Sentinel-2 Input" field
+6. Note: the "Job title" and "Sentinel-2 input" can also be imported from a json file ("Import params"), and exported to a json file ("Export params") 
 
-.. figure:: assets/tuto_stemp_6.png
+.. figure:: assets/tuto_stemp_6_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
-
-7. Follow the same procedure above mentioned for STEMP-S2 or STEMP-S3
 
 Run the job
 -----------
