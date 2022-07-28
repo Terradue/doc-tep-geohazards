@@ -43,7 +43,7 @@ Fill the parameters
 
 .. figure:: assets/tuto_stemp_2_s2.png
 	:figclass: align-center
-        :width: 750px
+        :width: 300px
         :align: center 
  
 2. Select volcano area to verify if EO input data are available by using the draw a rectangle, polygon or custom WKT filter.
@@ -60,7 +60,7 @@ All EO input data are visualized, select “hide all” to hide all the data
         :width: 750px
         :align: center  
 
-3. Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the S-2 data of 21st Juny 2022. Remind: search data without clouds. 
+3. Visualize single EO data by clicking on “show/hide layer”. The selected input data is displayed. An example is the S-2 data of 11th February 2022. Remind: search data with low/no clouds in the "Advanced search form" on the left panel. 
 
 .. figure:: assets/tuto_stemp_5_s2.png
 	:figclass: align-center
@@ -68,7 +68,7 @@ All EO input data are visualized, select “hide all” to hide all the data
         :align: center 
 
 4. Define the "Job title"
-5. Drag and drop the selected S-2 data input into the "Sentinel-2 Input" field
+5. Drag and drop the selected S-2 data input into the "Sentinel-2 Input" field. The link to the catalog (e.g. https://catalog.terradue.com/sentinel2/search?format=json&uid=S2A_MSIL1C_20220211T095131_N0400_R079_T33SVB_20220211T120935) will appear. 
 6. Note: the "Job title" and "Sentinel-2 input" can also be imported from a json file ("Import params"), and exported to a json file ("Export params") 
 
 .. figure:: assets/tuto_stemp_6_s2.png
@@ -81,21 +81,21 @@ Run the job
 
 1. Click on the button "Run job" and see the running job
 
-.. figure:: assets/tuto_stemp_7.png
+.. figure:: assets/tuto_stemp_7_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
 2. See the Running job:
 
-.. figure:: assets/tuto_stemp_8.png
+.. figure:: assets/tuto_stemp_8_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
 
-3. At the end of the process click on the button "Show results" and the see the result on map: 
+3. At the end of the process click on the button "Show results" in the bottom-right corner to see the result on map: 
 
-.. figure:: assets/tuto_stemp_9.png
+.. figure:: assets/tuto_stemp_9_s2.png
 	:figclass: align-center
         :width: 750px
         :align: center 
@@ -107,14 +107,7 @@ Run the job
         :width: 750px
         :align: center 
 
-5. Result for STEMP-S3 is showed
-
-.. figure:: assets/tuto_stemp_11.png
-	:figclass: align-center
-        :width: 750px
-        :align: center 
-
-6. Metadata are showed when click on the result map.
+5. Metadata are showed when click on the result map.
  
 .. figure:: assets/tuto_stemp_12.png
 	:figclass: align-center
@@ -126,15 +119,6 @@ Example to test
 
 Use  the following input for testing service and verify results with the output :  
         
-- Select the STEMP-L8 service and use the following information:
-
-        - startDate: 2017-11-22
-        - endDate:  2017-11-22
-        - volcano:   Etna
-
-Expected result: `LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif 
-§<https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_l8_dcs_stemp_l8_1_0_7%2Frun%2F29ca0494-ff85-11e7-a172-0242ac110006%2F0000022-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
- 
 - Select the STEMP-S2 service and use the following information:
         
         - startDate: 2017-03-26
@@ -144,11 +128,4 @@ Expected result: `LC08_L1TP_188034_20171122_20171122_01_RT_B10_TEMP-etna.tif
 Expected result: `T33SVB_20170326T094031_HOT_SPOT-etna.tif 
 <https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s2_dcs_stemp_s2_1_0_2%2Frun%2Fc6d60c68-ff87-11e7-b373-0242ac110003%2F0000023-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
 
-- Select the STEMP-S3 service and use the following information:
-        - startDate:  2017-01-26
-        - endDate:   2017-01-26
-        - volcano:    Etna
-
-Expected result: `S3A_SL_1_RBT____20170126T091215_UTM_etna_1km_TEMPclass.tif 
-<https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Frecast.terradue.com%2Ft2api%2Fsearch%2Feboissier%2F_results%2Fworkflows%2Fgeohazards_tep_dcs_stemp_s3_dcs_stemp_s3_1_0_3%2Frun%2Fdbaf4616-0029-11e8-8a31-0242ac110003%2F0000028-180111082140820-oozie-oozi-W%3Fcount%3D20%26startPage%3D%26startIndex%3D%26q%3D%26lang%3D%26id%3D%26bbox%3D%26geom%3D%26start%3D%26stop%3D&id=volcanmonitoring-app>`_
 
