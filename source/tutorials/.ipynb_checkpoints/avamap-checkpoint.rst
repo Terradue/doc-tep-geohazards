@@ -1,4 +1,4 @@
-AVAMAP - Snow Avalanche mapping from Sentinel-1 data [(norce)[https://eo4society.esa.int/2022/04/01/free-avalanche-mapping-tool-on-gep/]]
+AVAMAP - Snow Avalanche mapping from Sentinel-1 data [`norce<https://eo4society.esa.int/2022/04/01/free-avalanche-mapping-tool-on-gep/>`_]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 by NORCE AS
 
