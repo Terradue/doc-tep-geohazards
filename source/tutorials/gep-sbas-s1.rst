@@ -176,7 +176,9 @@ In particular:
 .. code-block:: sbas-parameter
   
 	srtm_1
-       
+
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
+
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
 
 .. _`EarthExplorer`: https://earthexplorer.usgs.gov
@@ -486,6 +488,8 @@ In particular:
 .. code-block:: sbas-parameter
   
 	srtm_1
+    
+.. NOTE:: - SRTM valid in the [-56 deg, +60 deg] range of latitudes.
 
 .. note:: Possible values are: *srtm_1* (1 arcsec SRTM DEM), *srtm_3* (3 arcsec SRTM DEM). User is kindly advised to check the `EarthExplorer`_ web site for actual data coverage.
 
