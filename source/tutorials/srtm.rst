@@ -29,6 +29,8 @@ Select the processing
 
 The "SRTM Digital Elevation Model" panel is displayed with parameters values to be filled-in.
 
+.. NOTE:: SRTM valid in the [-56 deg,+60 deg] range of latitudes.
+
 .. NOTE:: Parameters comes with default pre-filled values which are the same as the ones used in this tutorial, so you may skip the following section and directly use the pre-filled parameters.
 
 Fill the parameters
