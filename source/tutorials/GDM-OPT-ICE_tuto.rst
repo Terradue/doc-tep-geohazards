@@ -50,7 +50,7 @@ If the option to invert the time series is selected by the use, three additional
 
 * **TIO EW/NS Mean velocity:** It consists in a GeoTiff representing the mean velocity computed after inversion of the displacement time serie for each field East-West and North-South. The velocity is computed by a linear regression for each pixel. The unit is *m/day*.
 * **Displacement time serie:** It consists in a .csv file containing the cumulative displacement for the EW, NS component and the norm of the displacement for each date of acquisition.
-* **TIO folder:** An archive that contains for both displacement component the results of the TIO algorithm. It contains for example, the RMS error for each date of acquisition (*RMSpixel_date* files), the inverted cumulative displacement (*depl_cumul*), etc.
+* **Inversion.tgz:** An archive that contains for both displacement component the results of the TIO algorithm. It contains the cumulative displacement and RMS error in csv and hf5 format.
 
 
 -----
@@ -72,6 +72,8 @@ Please refer to the tutorial of the GDM-OPT-ETQ to learn more on how to manipula
 
 Set the processing parameters
 -----------------------------
+
+.. Warning:: Before setting the parameters, make sure you are processing Sentinel-2 **L1C** images over the **same tile** and the **same relative orbit**.
 
 There are 37 processing parameters that can be adjusted. A short explanation of the parameter is provided when hovering over the parameter fields.
 
@@ -97,7 +99,7 @@ There are 37 processing parameters that can be adjusted. A short explanation of 
 		* **Decorrelation threshold:** Discards the matches with a correlation coefficient below a value expressed in the range [0,1]. The default value is *0.2*.
 		* **Spatial matching range:** Defines the search range in pixel for finding matches based on the template. The actual search range is computed from this parameter as round(Spatial matching range/0.8)+2. The parameter has to be adjusted according to the maximum expected displacement taking into account possible coregistration biases of the input images.
 		* **Regularization parameter:** Similar to the window size, controls the smoothness of the expected motion field. Increasing the regularization parameter puts greater emphasis on a smooth motion field where neighboring pixels will have similar displacement values. For large scale features such as co-seismic displacement, large value lead to smoother and less noisy results. The default value is *0.3*.
-		* **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution.	
+		* **Sub-pixel matching:** If true, the sub-pixel matching will be computed at different resolution up to sub-pixel level. This multi-resolution approach consists in starting the computation at a coarse resolution and improving the resolution at each matching level. If false, the matching is computed only at the image resolution and no refinement is performed at sub-pixel level.	
 	* **GeFolki parameters:**
 		* **Radius:** Define the the size of the window *(2R + 1) x (2R + 1)* on which the matching between the two images is maximized. The choice of the radius value is a compromise between robustness and the expected level of detail. A large radius makes the algorithm more robust. If the flow is rapidly changing on the image, the radius must be chosen small enough to estimate these variations. The algorithm can be used for several radius sizes in an iterative manner. The radius sequence can be chosen among one or several of the following values: 4, 8, 16, 32, 64, 128.
 		* **Levels:** Define the number of levels (L) in the scale pyramid. The parameter value is conditioned by the maximum size of the displacement *Wmax*. By default, L=1 so the displacement is assumed to be lower than 2 pixels.
