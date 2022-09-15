@@ -22,13 +22,13 @@ Contents:
    DSM-OPT: Digital surface models from optical stereo satellite images<dsm-opt>
    FASTVEL for displacement velocity map generation<fastvel>
    Flow-R: Flow Path Assessment of Gravitational Hazards at a Regional Scale<Flow-R> [eo4alps]
+   GDM-OPT-ETQ: Multiple Pairwise Image Correlation of OPTical images for EarThQuake analysis<GDM-OPT-ETQ>
+   GDM-OPT-ICE: Ground Deformation Monitoring with OPtical image Time series for ICE/glacier analysis<GDM-OPT-ICE>
+   GDM-OPT-SLIDE: Ground Deformation Monitoring with OPtical image Time series for landSLIDE analysis<GDM-OPT-SLIDE>
    GMT5SAR InSAR - Stripmap<gmtsar>
    GMT5SAR InSAR - Sentinel-1 TOPSAR<gmtsar_s1>
    G-POD PF-ERS Service<gpod-pf-ers>
-   Map Export<Map_Export> [GEN]
-   MPIC-OPT-ETQ: Multiple Pairwise Image Correlation of Optical Data or Earthquake analysis<mpic-etq>
-   MPIC-OPT-ICE: Multiple Pairwise optical Image Correlation of OPTic images for ICE/glacier analysis<mpic-ice>
-   MPIC-OPT-SLIDE: Multiple Pairwise optical Image Correlation of OPTic images for landSLIDE analysis<mpic-slide>
+   Map Export<Map_Export> [GEN]   
    P-SBAS Sentinel-1 processing on-demand by CNR-IREA<gep-sbas-s1>
    RASTER - Full Resolution Rasterization<rss_full_resolution_rasterization>   
    S-1 SAR PIPE - Sentinel-1 Interferometric Processing Engine<ewf-sarpipe> [EXP]
