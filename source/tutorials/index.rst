@@ -45,4 +45,4 @@ Contents:
    SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements<rss_snap_s1_insar>
    SRTM Digital Elevation Model<srtm> [GEN]
    STEMP - Surface Temperature Map<stemp>
-   VolToo - VOLume TOOl for empirical assessment of landslide volumes<VolToo> [eo4alps]
+   VolToo - VOLume TOOl for empirical assessment of landslide volumes [eo4alps]<VolToo>
