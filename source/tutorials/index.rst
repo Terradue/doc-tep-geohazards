@@ -37,7 +37,7 @@ Contents:
    Sentinel-2 L1C and L2A RGB composite [eo4sd]<Sentinel-2_L1C-and-L2A-RGB-composite>
    Sentinel-2 Watermask [cppp, wb, esa]<s2-watermask>
    Sentinel-3 OLCI composite<s3-olci-composites>   
-   Sentinel-3 SLSTR composite [adb-i, wb, idct]<s3-slstr-composites>
+   #Sentinel-3 SLSTR composite [adb-i, wb, idct]<s3-slstr-composites>
    Sentinel-1 Extended Timing Annotation Dataset [setap]<setap>
    SNAC - SNAP S-1 GRD Amplitude Change<rss_snap_s1_snac>
    SNAPPING<Snapping> 
