@@ -244,7 +244,7 @@ Processing parameters example for reproducing a succesful job
 
 The Job to reproduce corresponds to an stack of 5 Sentinel-1 Descending Track 140 images over the island of Fogo (Cape Verde). The Job name is FASTVEL IFG FOGO.
 The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC (type this string in the data package filter box) 
-(https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DFASTVEL_IFG_FOGO_T140_DSC&id=esaapp)
+(https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DFASTVEL_IFG_FOGO_T140_DSC)
 
 The values of the rest of parameters are the following:
 
@@ -265,7 +265,7 @@ The values of the rest of parameters are the following:
 
 The Job to reproduce corresponds to an stack of 29 Sentinel-1 Descending Track 110 images over the area of Suria in Catalonia (Spain). The job name is FASTVEL MTA SURIA TEST DESC.
 The SAR data set is available as a data package named S1A_DSC_110_CAT (type this string in the data package filter box)
-(https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DS1A_DSC_110_CAT&id=esaapp)
+(https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DS1A_DSC_110_CAT)
 
 The values of the rest of parameters are the following:
 
