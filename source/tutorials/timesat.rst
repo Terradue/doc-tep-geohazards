@@ -163,7 +163,7 @@ Run the job
         :align: center
 	
   
-.. figure:: assets/timesat_tuto_img10.pngg
+.. figure:: assets/timesat_tuto_img10.png
 	:figclass: align-center
         :width: 750px
         :align: center
