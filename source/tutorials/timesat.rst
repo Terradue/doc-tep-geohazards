@@ -1,8 +1,8 @@
 TimeSAT - Ground motion pattern detection and classification in satellite image time series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: assets/tuto_timesat_icon.png 
-
+.. figure:: assets/tuto_timesat_icon.png
+	:width: 100px
 
 **TimeSAT**
 
@@ -24,7 +24,7 @@ TimeSAT Pre-processing is used some python librairies based on [1]_ and [2]_,
 
 TimeSAT Mode 1 follows the classification methodology described in [3]_ based on number of statistical tests [4]_, [5]_, [6]_, 
 
-TimeSAT Mode 2 follows similar approach than in [4]_ and [5]_.
+TimeSAT Mode 2 follows similar approach than in [7]_, [8]_ and [9]_.
 
 **EO sources supported**:
 
@@ -46,11 +46,13 @@ TimeSAT Mode 2 follows similar approach than in [4]_ and [5]_.
         :width: 750px
         :align: center
 
+
+
+
+
 .. figure:: assets/timesat_tuto_img2.png
-  :figclass: align-center
-        :width: 750px
-        :align: center
-        
+        :width: 350px
+        :align: center     
 
 This tutorial introduces to the use of the classification service, TimeSAT.
 
