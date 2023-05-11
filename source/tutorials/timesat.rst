@@ -157,13 +157,13 @@ Run the job
 
 * Example of the classification obtained with the mode 1 over the Jegihorn Landslide, Switzerland with PSInSAR time series from a SqueeSAR processing.
 
-.. figure:: assets/aladimHR_tuto_img9.png
+.. figure:: assets/timesat_tuto_img9.png
 	:figclass: align-center
         :width: 750px
         :align: center
 	
   
-.. figure:: assets/aladimHR_tuto_img10.png
+.. figure:: assets/timesat_tuto_img10.pngg
 	:figclass: align-center
         :width: 750px
         :align: center
