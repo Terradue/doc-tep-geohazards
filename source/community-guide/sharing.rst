@@ -1,3 +1,5 @@
+.. _community-guide-sharing-label:
+
 Sharing
 =======
 

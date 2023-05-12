@@ -13,7 +13,7 @@ Sign-in
 To sign-in on GEP, you need to have an account created on Terradue Cloud Platform.
 
 	- `I have already an account at Terradue`_
-	- `I don't have yet an account at Terradue`_
+	- `I do not have yet an account at Terradue`_
     
 	    - `Create a new account from scratch`_
 	    - `Create your account from a trusted Identity Provider`_
@@ -41,8 +41,8 @@ I already have an account at Terradue
 
 3. If not done, you can configure your account.
 
-I don't have yet an account at Terradue
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I do not have yet an account at Terradue
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a new account from scratch
 `````````````````````````````````
