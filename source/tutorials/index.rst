@@ -44,3 +44,4 @@ Contents:
    SRTM Digital Elevation Model<srtm>
    StaMPS Permanent Scatterer<stamps-ps>
    STEMP - Surface Temperature Map<stemp>
+   TimeSAT - Ground motion pattern detection and classification in satellite image time series<timesat>
