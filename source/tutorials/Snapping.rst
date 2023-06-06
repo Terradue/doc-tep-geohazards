@@ -602,6 +602,7 @@ Current restriction of SNAPPING service
 
 
 **Version 1.0** (released Feb 2021)
+
 - Processing of Sentinel-1 VV polarization band 
 - Seamless processing of Sentinel-1 IW sub-swaths
 - Concatenation of consecutive acquisitions of the same date
