@@ -193,6 +193,8 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
         :align: center
 	
 
+.. NOTE:: The AOI shall be larger than 20x20 sqkm (above the size of a single S-1 burst size along track).
+
 .. NOTE:: You may directly insert the AOI in WKT format. SNAPPING processing area is limited to 60x60 sq. km. For larger AOIs, please contact the Operations Support team at Terradue (support at terradue.com).
 
 
