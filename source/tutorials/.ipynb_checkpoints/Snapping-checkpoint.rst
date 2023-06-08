@@ -193,6 +193,8 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
         :align: center
 	
 
+.. NOTE:: The AOI shall be larger than 20x20 sqkm (above the size of a single S-1 burst size along track).
+
 .. NOTE:: You may directly insert the AOI in WKT format. SNAPPING processing area is limited to 60x60 sq. km. For larger AOIs, please contact the Operations Support team at Terradue (support at terradue.com).
 
 
@@ -205,12 +207,12 @@ Please note that the co-pol VV polarization is used by default in SNAPPING.
 .. NOTE:: Currently, SRTM 3 arc-second and 1 arc-second (default) are available for processing. The use of higher spatial resolution DEM is preferable both in terms of topographic phase correction and for accurate terrain geocoding.
 
 
-- Set **AOI-based Coregistration** option to define whether coregistration shall be performed over the entire Sentinel-1 swath or only considering bursts covering the AOI (Yes or No):
+- Set **AOI-based Coregistration** option ("Yes" or "No") to define whether coregistration shall be performed only considering bursts covering the AOI ("Yes") or else over the entire Sentinel-1 swath ("No"):
 
 	Yes
 	
 	
-.. NOTE:: Selecting AOI-based coregistration will speed up processing time, however, over relatively small AOIs (i.e. islands) dominated by vegetation or affected by abrupt motion (e.g. earthquakes), coregistration using the entire S-1 swath (option set to ‘No’) should avoid erroneous results.  
+.. NOTE:: Selecting AOI-based coregistration (option set to "Yes") will speed up processing time, however, over relatively small AOIs (i.e. islands) dominated by vegetation or affected by abrupt motion (e.g. earthquakes), coregistration using the entire S-1 swath (option set to "No") should avoid erroneous results.  
 When AOI is bound within a single Sentinel-1 burst, the service automatically adjusts the interferometric processing scheme. 
 
 
@@ -600,6 +602,7 @@ Current restriction of SNAPPING service
 
 
 **Version 1.0** (released Feb 2021)
+
 - Processing of Sentinel-1 VV polarization band 
 - Seamless processing of Sentinel-1 IW sub-swaths
 - Concatenation of consecutive acquisitions of the same date
