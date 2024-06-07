@@ -172,7 +172,7 @@ Run the job
         :width: 750px
         :align: center
 
-.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D6cae5280-99a9-4ab9-bd84-433682e31951%26key%3D7bc499ce-f65f-4ee0-b682-a022511674c3
+.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D6228aaf0-b00d-414c-b68e-4246d8044b4f%26key%3D2ecc8ba1-b7e2-4612-9292-549e5abbc040
 References
 ==========
 
