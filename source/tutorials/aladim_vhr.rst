@@ -170,7 +170,7 @@ Run the job
 
 .. _`F-scores`: https://en.wikipedia.org/wiki/F-score
 
-.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3Dcbb26b44-a6fa-43d9-b6e0-bed97ba50d6e%26key%3Dd5167026-6693-43e1-8309-10bf22345d14
+.. _`Job example`: https://geohazards-tep.eu/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eu%2Ft2api%2Fjob%2Fwps%2Fsearch%3Fid%3D3663ac61-9602-4584-bee7-beb20eaf1c32%26key%3D9a5e02a6-77ea-49fe-931b-56531cb6c8ee
 
 References
 ==========
